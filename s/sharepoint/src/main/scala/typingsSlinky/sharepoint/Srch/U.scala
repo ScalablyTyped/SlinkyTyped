@@ -3,7 +3,6 @@ package typingsSlinky.sharepoint.Srch
 import org.scalablytyped.runtime.StringDictionary
 import org.scalablytyped.runtime.TopLevel
 import org.scalajs.dom.raw.Element
-import org.scalajs.dom.raw.Event
 import typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Query.ResultTable
 import typingsSlinky.sharepoint.Microsoft.SharePoint.Client.Search.Query.ResultTableCollection
 import typingsSlinky.sharepoint.sharepointStrings.Body
@@ -45,6 +44,7 @@ import typingsSlinky.sharepoint.sharepointStrings._members
 import typingsSlinky.sharepoint.sharepointStrings._postInfo
 import typingsSlinky.sharepoint.sharepointStrings._replies
 import typingsSlinky.sharepoint.sharepointStrings._visualBestBet
+import typingsSlinky.std.Event_
 import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -109,9 +109,9 @@ object U extends js.Object {
   /** Appends specified parameter key and value string to the specified URL */
   def appendUrlParameter(url: String, keyAndValue: String): String = js.native
   /** Prevents default event action and stops further propagation of the event in the DOM */
-  def cancelEvent(e: Event): Unit = js.native
+  def cancelEvent(e: Event_): Unit = js.native
   /** Prevents default event action or/and stops further propagation of the event in the DOM */
-  def cancelEventEx(e: Event, preventDefault: Boolean, stopPropagation: Boolean): Unit = js.native
+  def cancelEventEx(e: Event_, preventDefault: Boolean, stopPropagation: Boolean): Unit = js.native
   /** Returns HTML for collapsible refiner title */
   def collapsibleRefinerTitle(
     propertyName: String,
@@ -317,7 +317,7 @@ object U extends js.Object {
   /** Safely sets field of an object (does nothing if either object or fieldName is null/empty); returns true if value was set */
   def setFieldOnObject(targetObject: js.Any, fieldName: String, fieldValue: js.Any): Boolean = js.native
   def setItemRenderWrapper(renderCtx: js.Any, itemRenderWrapperFunction: js.Any, templateFunction: js.Any): js.Any = js.native
-  def setPath(e: Event, el: Element, text: String, originalText: String): Unit = js.native
+  def setPath(e: Event_, el: Element, text: String, originalText: String): Unit = js.native
   def setResultObject(id: String, resultObject: js.Any): js.Any = js.native
   def shouldAnimate(dp: js.Any): Boolean = js.native
   def showElement(element: Element): Unit = js.native

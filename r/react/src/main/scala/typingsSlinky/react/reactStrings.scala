@@ -1,7 +1,7 @@
 package typingsSlinky.react
 
-import typingsSlinky.react.experimentalMod.reactMod.SuspenseListRevealOrder
-import typingsSlinky.react.experimentalMod.reactMod.SuspenseListTailMode
+import typingsSlinky.react.mod.SuspenseListRevealOrder
+import typingsSlinky.react.mod.SuspenseListTailMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ object reactStrings {
   sealed trait A extends js.Object
   
   @js.native
-  sealed trait Fn_TypeAny extends js.Object
+  sealed trait Fn1 extends js.Object
   
   @js.native
   sealed trait I extends js.Object
@@ -91,7 +91,7 @@ object reactStrings {
   @js.native
   sealed trait backwards
     extends SuspenseListRevealOrder
-       with typingsSlinky.react.reactMod.SuspenseListRevealOrder
+       with typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListRevealOrder
   
   @js.native
   sealed trait base extends js.Object
@@ -171,7 +171,7 @@ object reactStrings {
   @js.native
   sealed trait collapsed
     extends SuspenseListTailMode
-       with typingsSlinky.react.reactMod.SuspenseListTailMode
+       with typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListTailMode
   
   @js.native
   sealed trait copy extends js.Object
@@ -220,6 +220,9 @@ object reactStrings {
   
   @js.native
   sealed trait dt extends js.Object
+  
+  @js.native
+  sealed trait eager extends js.Object
   
   @js.native
   sealed trait ellipse extends js.Object
@@ -338,7 +341,7 @@ object reactStrings {
   @js.native
   sealed trait forwards
     extends SuspenseListRevealOrder
-       with typingsSlinky.react.reactMod.SuspenseListRevealOrder
+       with typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListRevealOrder
   
   @js.native
   sealed trait g extends js.Object
@@ -382,7 +385,7 @@ object reactStrings {
   @js.native
   sealed trait hidden
     extends SuspenseListTailMode
-       with typingsSlinky.react.reactMod.SuspenseListTailMode
+       with typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListTailMode
   
   @js.native
   sealed trait horizontal extends js.Object
@@ -437,6 +440,9 @@ object reactStrings {
   
   @js.native
   sealed trait label extends js.Object
+  
+  @js.native
+  sealed trait `lazy` extends js.Object
   
   @js.native
   sealed trait left extends js.Object
@@ -532,6 +538,9 @@ object reactStrings {
   sealed trait no extends js.Object
   
   @js.native
+  sealed trait `no-referrer` extends js.Object
+  
+  @js.native
   sealed trait noindex extends js.Object
   
   @js.native
@@ -563,6 +572,9 @@ object reactStrings {
   
   @js.native
   sealed trait option extends js.Object
+  
+  @js.native
+  sealed trait origin extends js.Object
   
   @js.native
   sealed trait other extends js.Object
@@ -771,7 +783,7 @@ object reactStrings {
   @js.native
   sealed trait together
     extends SuspenseListRevealOrder
-       with typingsSlinky.react.reactMod.SuspenseListRevealOrder
+       with typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListRevealOrder
   
   @js.native
   sealed trait top extends js.Object
@@ -796,6 +808,9 @@ object reactStrings {
   
   @js.native
   sealed trait ul extends js.Object
+  
+  @js.native
+  sealed trait `unsafe-url` extends js.Object
   
   @js.native
   sealed trait update extends js.Object
@@ -835,7 +850,7 @@ object reactStrings {
   @scala.inline
   def A: A = "A".asInstanceOf[A]
   @scala.inline
-  def Fn_TypeAny: Fn_TypeAny = "Fn_TypeAny".asInstanceOf[Fn_TypeAny]
+  def Fn1: Fn1 = "Fn1".asInstanceOf[Fn1]
   @scala.inline
   def I: I = "I".asInstanceOf[I]
   @scala.inline
@@ -970,6 +985,8 @@ object reactStrings {
   def dl: dl = "dl".asInstanceOf[dl]
   @scala.inline
   def dt: dt = "dt".asInstanceOf[dt]
+  @scala.inline
+  def eager: eager = "eager".asInstanceOf[eager]
   @scala.inline
   def ellipse: ellipse = "ellipse".asInstanceOf[ellipse]
   @scala.inline
@@ -1113,6 +1130,8 @@ object reactStrings {
   @scala.inline
   def label: label = "label".asInstanceOf[label]
   @scala.inline
+  def `lazy`: `lazy` = "lazy".asInstanceOf[`lazy`]
+  @scala.inline
   def left: left = "left".asInstanceOf[left]
   @scala.inline
   def legend: legend = "legend".asInstanceOf[legend]
@@ -1175,6 +1194,8 @@ object reactStrings {
   @scala.inline
   def no: no = "no".asInstanceOf[no]
   @scala.inline
+  def `no-referrer`: `no-referrer` = "no-referrer".asInstanceOf[`no-referrer`]
+  @scala.inline
   def noindex: noindex = "noindex".asInstanceOf[noindex]
   @scala.inline
   def none: none = "none".asInstanceOf[none]
@@ -1196,6 +1217,8 @@ object reactStrings {
   def optgroup: optgroup = "optgroup".asInstanceOf[optgroup]
   @scala.inline
   def option: option = "option".asInstanceOf[option]
+  @scala.inline
+  def origin: origin = "origin".asInstanceOf[origin]
   @scala.inline
   def other: other = "other".asInstanceOf[other]
   @scala.inline
@@ -1350,6 +1373,8 @@ object reactStrings {
   def u: u = "u".asInstanceOf[u]
   @scala.inline
   def ul: ul = "ul".asInstanceOf[ul]
+  @scala.inline
+  def `unsafe-url`: `unsafe-url` = "unsafe-url".asInstanceOf[`unsafe-url`]
   @scala.inline
   def update: update = "update".asInstanceOf[update]
   @scala.inline

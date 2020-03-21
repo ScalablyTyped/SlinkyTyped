@@ -26,11 +26,7 @@ class SVGPatternElementCls () extends SVGPatternElement {
   /* CompleteClass */
   override val previousElementSibling: org.scalajs.dom.raw.Element | Null = js.native
   /* CompleteClass */
-  override val requiredExtensions: org.scalajs.dom.raw.SVGStringList = js.native
-  /* CompleteClass */
   override val style: org.scalajs.dom.raw.CSSStyleDeclaration = js.native
-  /* CompleteClass */
-  override val systemLanguage: org.scalajs.dom.raw.SVGStringList = js.native
   /* CompleteClass */
   override val viewBox: org.scalajs.dom.raw.SVGAnimatedRect = js.native
 }

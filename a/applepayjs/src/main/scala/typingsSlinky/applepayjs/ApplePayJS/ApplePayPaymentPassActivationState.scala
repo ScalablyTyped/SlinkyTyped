@@ -8,11 +8,11 @@ import scala.scalajs.js.annotation._
   * Payment pass activation states.
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.applepayjs.applepayjsStrings.activated
-  - typings.applepayjs.applepayjsStrings.requiresActivation
-  - typings.applepayjs.applepayjsStrings.activating
-  - typings.applepayjs.applepayjsStrings.suspended
-  - typings.applepayjs.applepayjsStrings.deactivated
+  - typingsSlinky.applepayjs.applepayjsStrings.activated
+  - typingsSlinky.applepayjs.applepayjsStrings.requiresActivation
+  - typingsSlinky.applepayjs.applepayjsStrings.activating
+  - typingsSlinky.applepayjs.applepayjsStrings.suspended
+  - typingsSlinky.applepayjs.applepayjsStrings.deactivated
 */
 trait ApplePayPaymentPassActivationState extends js.Object
 

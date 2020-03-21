@@ -1,12 +1,12 @@
 package typingsSlinky.dojo.dijit.form
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.iconClass
 import typingsSlinky.dojo.dojoStrings.label
 import typingsSlinky.dojo.dojoStrings.showLabel
 import typingsSlinky.dojo.dojoStrings.value
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +19,9 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree     
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit.form._ButtonMixin because Inheritance from two classes. Inlined label, postCreate, onClick */ @JSGlobal("dijit.form.Button")
+- typingsSlinky.dojo.dijit.form.ButtonMixin because Inheritance from two classes. Inlined label, postCreate, onClick */ @JSGlobal("dijit.form.Button")
 @js.native
-class Button () extends _FormWidget {
+class Button () extends FormWidget {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -68,7 +68,7 @@ class Button () extends _FormWidget {
     * 
     * @param e             
     */
-  def onClick(event: Event): Boolean = js.native
+  def onClick(event: Event_): Boolean = js.native
   /**
     * Deprecated.  Use set('label', ...) instead.
     * 
@@ -92,7 +92,7 @@ class Button () extends _FormWidget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_label(
     property: label,
@@ -102,7 +102,7 @@ class Button () extends _FormWidget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_showLabel(
     property: showLabel,
@@ -112,6 +112,6 @@ class Button () extends _FormWidget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

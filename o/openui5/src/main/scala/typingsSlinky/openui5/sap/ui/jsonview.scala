@@ -23,7 +23,7 @@ object jsonview extends js.Object {
     * @returns the created JSONView instance
     */
   def apply(sId: String, vView: String): JSONView = js.native
-  def apply(sId: String, vView: js.Any): JSONView = js.native
+  def apply(sId: String, vView: js.Any): View = js.native
   //  Creates a JSON view of the given name and id.
   def apply(vView: js.Any): View = js.native
 }

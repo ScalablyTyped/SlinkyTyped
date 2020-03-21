@@ -13,13 +13,14 @@ trait SVGTextContentElement extends SVGGraphicsElement {
   val LENGTHADJUST_UNKNOWN: Double = js.native
   val lengthAdjust: org.scalajs.dom.raw.SVGAnimatedEnumeration = js.native
   val textLength: org.scalajs.dom.raw.SVGAnimatedLength = js.native
-  def getCharNumAtPosition(point: org.scalajs.dom.raw.SVGPoint): Double = js.native
+  def getCharNumAtPosition(): Double = js.native
+  def getCharNumAtPosition(point: DOMPointInit): Double = js.native
   def getComputedTextLength(): Double = js.native
-  def getEndPositionOfChar(charnum: Double): org.scalajs.dom.raw.SVGPoint = js.native
-  def getExtentOfChar(charnum: Double): org.scalajs.dom.raw.SVGRect = js.native
+  def getEndPositionOfChar(charnum: Double): DOMPoint = js.native
+  def getExtentOfChar(charnum: Double): DOMRect = js.native
   def getNumberOfChars(): Double = js.native
   def getRotationOfChar(charnum: Double): Double = js.native
-  def getStartPositionOfChar(charnum: Double): org.scalajs.dom.raw.SVGPoint = js.native
+  def getStartPositionOfChar(charnum: Double): DOMPoint = js.native
   def getSubStringLength(charnum: Double, nchars: Double): Double = js.native
   def selectSubString(charnum: Double, nchars: Double): Unit = js.native
 }

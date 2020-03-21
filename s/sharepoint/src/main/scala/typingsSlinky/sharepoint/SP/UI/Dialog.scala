@@ -1,7 +1,7 @@
 package typingsSlinky.sharepoint.SP.UI
 
 import org.scalajs.dom.raw.HTMLElement
-import org.scalajs.dom.raw.HTMLFrameElement
+import typingsSlinky.std.HTMLFrameElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

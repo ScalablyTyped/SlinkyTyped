@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 
 /* cl_profiling_info  */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1280`
-  - typings.webcl.webclNumbers.`0x1281`
-  - typings.webcl.webclNumbers.`0x1282`
-  - typings.webcl.webclNumbers.`0x1283`
+  - typingsSlinky.webcl.webclNumbers.`0x1280`
+  - typingsSlinky.webcl.webclNumbers.`0x1281`
+  - typingsSlinky.webcl.webclNumbers.`0x1282`
+  - typingsSlinky.webcl.webclNumbers.`0x1283`
 */
 trait ProfilingInfo extends js.Object
 

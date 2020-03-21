@@ -11,8 +11,8 @@ Move a file - Even works across devices
 | Full name          | move-file |
 | Keywords           | move, file, mv, fs, stream, file-system, ncp, fast, quick, data, content, contents, devices, partitions |
 | # releases         | 3 |
-| # dependents       | 21 |
-| # downloads        | 321750 |
+| # dependents       | 22 |
+| # downloads        | 409344 |
 | # stars            | 0 |
 
 ## Links

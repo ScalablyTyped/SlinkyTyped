@@ -5,12 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.default
-  - typings.std.stdStrings.`no-store`
-  - typings.std.stdStrings.reload
-  - typings.std.stdStrings.`no-cache`
-  - typings.std.stdStrings.`force-cache`
-  - typings.std.stdStrings.`only-if-cached`
+  - typingsSlinky.std.stdStrings.default
+  - typingsSlinky.std.stdStrings.`force-cache`
+  - typingsSlinky.std.stdStrings.`no-cache`
+  - typingsSlinky.std.stdStrings.`no-store`
+  - typingsSlinky.std.stdStrings.`only-if-cached`
+  - typingsSlinky.std.stdStrings.reload
 */
 trait RequestCache extends js.Object
 

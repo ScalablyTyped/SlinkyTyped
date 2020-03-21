@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.node.nodeStrings.latin1
-  - typings.node.nodeStrings.hex
-  - typings.node.nodeStrings.base64
+  - typingsSlinky.node.nodeStrings.latin1
+  - typingsSlinky.node.nodeStrings.hex
+  - typingsSlinky.node.nodeStrings.base64
 */
 trait HexBase64Latin1Encoding extends js.Object
 

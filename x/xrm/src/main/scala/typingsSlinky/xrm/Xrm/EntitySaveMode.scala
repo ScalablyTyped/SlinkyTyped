@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   * @see {@link Entity.save}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.saveandclose
-  - typings.xrm.xrmStrings.saveandnew
+  - typingsSlinky.xrm.xrmStrings.saveandclose
+  - typingsSlinky.xrm.xrmStrings.saveandnew
 */
 trait EntitySaveMode extends js.Object
 

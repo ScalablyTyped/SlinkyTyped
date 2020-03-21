@@ -1,13 +1,13 @@
 package typingsSlinky.spectacle
 
-import typingsSlinky.spectacle.spectacleMod.alignType
-import typingsSlinky.spectacle.spectacleMod.bulletStyleType
-import typingsSlinky.spectacle.spectacleMod.easeType
-import typingsSlinky.spectacle.spectacleMod.progressType
-import typingsSlinky.spectacle.spectacleMod.sType
-import typingsSlinky.spectacle.spectacleMod.targetType
-import typingsSlinky.spectacle.spectacleMod.themeType
-import typingsSlinky.spectacle.spectacleMod.transitionType
+import typingsSlinky.spectacle.mod.alignType
+import typingsSlinky.spectacle.mod.bulletStyleType
+import typingsSlinky.spectacle.mod.easeType
+import typingsSlinky.spectacle.mod.progressType
+import typingsSlinky.spectacle.mod.sType
+import typingsSlinky.spectacle.mod.targetType
+import typingsSlinky.spectacle.mod.themeType
+import typingsSlinky.spectacle.mod.transitionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

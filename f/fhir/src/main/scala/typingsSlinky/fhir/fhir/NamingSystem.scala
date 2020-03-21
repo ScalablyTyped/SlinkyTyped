@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * System of unique identification
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait NamingSystem extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait NamingSystem extends DomainResource {
   /**
     * Contains extended information for property 'date'.
     */

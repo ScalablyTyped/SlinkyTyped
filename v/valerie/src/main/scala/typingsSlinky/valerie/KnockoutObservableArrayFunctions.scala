@@ -1,6 +1,6 @@
 package typingsSlinky.valerie
 
-import typingsSlinky.valerie.Valerie.ValidatableModel
+import typingsSlinky.valerie.Valerie_.ValidatableModel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

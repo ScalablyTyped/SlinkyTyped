@@ -1,11 +1,10 @@
 package typingsSlinky.dojo.dijit.layout
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._Widget
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.Widget
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dijit.form.ToggleButton
 import typingsSlinky.dojo.dojoStrings.attachScope
 import typingsSlinky.dojo.dojoStrings.buttonWidgetCloseClass
@@ -15,6 +14,7 @@ import typingsSlinky.dojo.dojoStrings.searchContainerNode
 import typingsSlinky.dojo.dojoStrings.style
 import typingsSlinky.dojo.dojoStrings.templatePath
 import typingsSlinky.dojo.dojoStrings.templateString
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,11 +30,11 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree     
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit._AttachMixin because Inheritance from two classes. Inlined 
-- typings.dojo.dijit._Container because Inheritance from two classes. Inlined addChild, addChild, getIndexOfChild, hasChildren, removeChild, removeChild
-- typings.dojo.dijit._TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dijit.layout.StackController")
+- typingsSlinky.dojo.dijit.AttachMixin because Inheritance from two classes. Inlined 
+- typingsSlinky.dojo.dijit.Container because Inheritance from two classes. Inlined addChild, addChild, getIndexOfChild, hasChildren, removeChild, removeChild
+- typingsSlinky.dojo.dijit.TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dijit.layout.StackController")
 @js.native
-class StackController () extends _Widget {
+class StackController () extends Widget {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -93,8 +93,8 @@ class StackController () extends _Widget {
     * @param widget             
     * @param insertIndex               Optional            
     */
-  def addChild(widget: _WidgetBase): Unit = js.native
-  def addChild(widget: _WidgetBase, insertIndex: Double): Unit = js.native
+  def addChild(widget: WidgetBase): Unit = js.native
+  def addChild(widget: WidgetBase, insertIndex: Double): Unit = js.native
   /**
     * The button widget to create to correspond to each page
     * 
@@ -126,7 +126,7 @@ class StackController () extends _Widget {
     * 
     * @param child             
     */
-  def getIndexOfChild(child: _WidgetBase): js.Any = js.native
+  def getIndexOfChild(child: WidgetBase): js.Any = js.native
   @JSName("get")
   def get_attachScope(property: attachScope): js.Object = js.native
   @JSName("get")
@@ -183,7 +183,7 @@ class StackController () extends _Widget {
     * 
     * @param widget             
     */
-  def removeChild(widget: _WidgetBase): Unit = js.native
+  def removeChild(widget: WidgetBase): Unit = js.native
   @JSName("set")
   def set_attachScope(property: attachScope, value: js.Object): Unit = js.native
   @JSName("set")
@@ -207,7 +207,7 @@ class StackController () extends _Widget {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_buttonWidgetCloseClass(
     property: buttonWidgetCloseClass,
@@ -217,7 +217,7 @@ class StackController () extends _Widget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_containerId(
     property: containerId,
@@ -227,7 +227,7 @@ class StackController () extends _Widget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_searchContainerNode(
     property: searchContainerNode,
@@ -237,7 +237,7 @@ class StackController () extends _Widget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templatePath(
     property: templatePath,
@@ -247,7 +247,7 @@ class StackController () extends _Widget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templateString(
     property: templateString,
@@ -257,7 +257,7 @@ class StackController () extends _Widget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 
 @JSGlobal("dijit.layout.StackController")
@@ -281,7 +281,7 @@ object StackController extends js.Object {
       * 
       */
     var closeButton: Boolean = js.native
-    def buildRendering(evt: Event): Unit = js.native
+    def buildRendering(evt: Event_): Unit = js.native
     @JSName("get")
     def get_closeButton(property: closeButton): Boolean = js.native
     @JSName("set")
@@ -295,7 +295,7 @@ object StackController extends js.Object {
           /* newValue */ js.UndefOr[Boolean], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
   }
   
 }

@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webdriverio.webdriverioStrings.width
-  - typings.webdriverio.webdriverioStrings.height
+  - typingsSlinky.webdriverio.webdriverioStrings.width
+  - typingsSlinky.webdriverio.webdriverioStrings.height
 */
 trait SizeParam extends js.Object
 

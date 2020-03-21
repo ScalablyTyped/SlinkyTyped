@@ -1,0 +1,58 @@
+package typingsSlinky.astTypes.nodesMod
+
+import typingsSlinky.astTypes.astTypesStrings.`private`
+import typingsSlinky.astTypes.astTypesStrings.`protected`
+import typingsSlinky.astTypes.astTypesStrings.minus
+import typingsSlinky.astTypes.astTypesStrings.plus
+import typingsSlinky.astTypes.astTypesStrings.public
+import typingsSlinky.astTypes.kindsMod.CommentKind
+import typingsSlinky.astTypes.kindsMod.ExpressionKind
+import typingsSlinky.astTypes.kindsMod.PrivateNameKind
+import typingsSlinky.astTypes.kindsMod.SourceLocationKind
+import typingsSlinky.astTypes.kindsMod.TSTypeAnnotationKind
+import typingsSlinky.astTypes.kindsMod.TypeAnnotationKind
+import typingsSlinky.astTypes.kindsMod.VarianceKind
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/nodes.ClassProperty, 'type' | 'key' | 'value'> */
+trait ClassPrivateProperty extends ASTNode {
+  var access: js.UndefOr[public | `private` | `protected`] = js.undefined
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var computed: Boolean
+  var key: PrivateNameKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var static: Boolean
+  var `type`: typingsSlinky.astTypes.astTypesStrings.ClassPrivateProperty
+  var typeAnnotation: js.UndefOr[TypeAnnotationKind | TSTypeAnnotationKind] = js.undefined
+  var value: ExpressionKind | Null
+  var variance: js.UndefOr[VarianceKind | plus | minus] = js.undefined
+}
+
+object ClassPrivateProperty {
+  @scala.inline
+  def apply(
+    computed: Boolean,
+    key: PrivateNameKind,
+    static: Boolean,
+    `type`: typingsSlinky.astTypes.astTypesStrings.ClassPrivateProperty,
+    access: public | `private` | `protected` = null,
+    comments: js.Array[CommentKind] = null,
+    loc: SourceLocationKind = null,
+    typeAnnotation: TypeAnnotationKind | TSTypeAnnotationKind = null,
+    value: ExpressionKind = null,
+    variance: VarianceKind | plus | minus = null
+  ): ClassPrivateProperty = {
+    val __obj = js.Dynamic.literal(computed = computed.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], static = static.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (access != null) __obj.updateDynamic("access")(access.asInstanceOf[js.Any])
+    if (comments != null) __obj.updateDynamic("comments")(comments.asInstanceOf[js.Any])
+    if (loc != null) __obj.updateDynamic("loc")(loc.asInstanceOf[js.Any])
+    if (typeAnnotation != null) __obj.updateDynamic("typeAnnotation")(typeAnnotation.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    if (variance != null) __obj.updateDynamic("variance")(variance.asInstanceOf[js.Any])
+    __obj.asInstanceOf[ClassPrivateProperty]
+  }
+}
+

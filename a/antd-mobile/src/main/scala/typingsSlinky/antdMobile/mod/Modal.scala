@@ -1,0 +1,19 @@
+package typingsSlinky.antdMobile.mod
+
+import typingsSlinky.antdMobile.AnonAnimated
+import typingsSlinky.antdMobile.modalMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("antd-mobile", "Modal")
+@js.native
+class Modal () extends default
+
+/* static members */
+@JSImport("antd-mobile", "Modal")
+@js.native
+object Modal extends js.Object {
+  var defaultProps: AnonAnimated = js.native
+}
+

@@ -1,6 +1,6 @@
 package typingsSlinky.stampit
 
-import typingsSlinky.stampit.stampitMod.stampit.IsADescriptor
+import typingsSlinky.stampit.mod.stampit.IsADescriptor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

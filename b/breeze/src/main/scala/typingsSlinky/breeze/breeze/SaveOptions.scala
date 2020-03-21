@@ -1,6 +1,6 @@
 package typingsSlinky.breeze.breeze
 
-import typingsSlinky.breeze.Anon_AllowConcurrentSaves
+import typingsSlinky.breeze.AnonAllowConcurrentSaves
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("breeze.SaveOptions")
 @js.native
 class SaveOptions () extends js.Object {
-  def this(config: Anon_AllowConcurrentSaves) = this()
+  def this(config: AnonAllowConcurrentSaves) = this()
   var allowConcurrentSaves: Boolean = js.native
   var dataService: DataService = js.native
   var resourceName: String = js.native

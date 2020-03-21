@@ -22,23 +22,23 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.mfiles.mfilesNumbers.`0`
-  - typings.mfiles.mfilesNumbers.`1`
-  - typings.mfiles.mfilesNumbers.`2`
-  - typings.mfiles.mfilesNumbers.`4`
-  - typings.mfiles.mfilesNumbers.`8`
-  - typings.mfiles.mfilesNumbers.`16`
-  - typings.mfiles.mfilesNumbers.`32`
-  - typings.mfiles.mfilesNumbers.`64`
-  - typings.mfiles.mfilesNumbers.`128`
-  - typings.mfiles.mfilesNumbers.`256`
-  - typings.mfiles.mfilesNumbers.`512`
-  - typings.mfiles.mfilesNumbers.`1024`
-  - typings.mfiles.mfilesNumbers.`2048`
-  - typings.mfiles.mfilesNumbers.`4096`
-  - typings.mfiles.mfilesNumbers.`8192`
-  - typings.mfiles.mfilesNumbers.`16384`
-  - typings.mfiles.mfilesNumbers.`3078`
+  - typingsSlinky.mfiles.mfilesNumbers.`0`
+  - typingsSlinky.mfiles.mfilesNumbers.`1`
+  - typingsSlinky.mfiles.mfilesNumbers.`2`
+  - typingsSlinky.mfiles.mfilesNumbers.`4`
+  - typingsSlinky.mfiles.mfilesNumbers.`8`
+  - typingsSlinky.mfiles.mfilesNumbers.`16`
+  - typingsSlinky.mfiles.mfilesNumbers.`32`
+  - typingsSlinky.mfiles.mfilesNumbers.`64`
+  - typingsSlinky.mfiles.mfilesNumbers.`128`
+  - typingsSlinky.mfiles.mfilesNumbers.`256`
+  - typingsSlinky.mfiles.mfilesNumbers.`512`
+  - typingsSlinky.mfiles.mfilesNumbers.`1024`
+  - typingsSlinky.mfiles.mfilesNumbers.`2048`
+  - typingsSlinky.mfiles.mfilesNumbers.`4096`
+  - typingsSlinky.mfiles.mfilesNumbers.`8192`
+  - typingsSlinky.mfiles.mfilesNumbers.`16384`
+  - typingsSlinky.mfiles.mfilesNumbers.`3078`
 */
 trait MFUserAccountVaultRole extends js.Object
 

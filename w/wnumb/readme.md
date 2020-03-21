@@ -1,7 +1,7 @@
 
 # Scala.js typings for wnumb
 
-Typings are for version 1.0
+Typings are for version 1.2
 
 ## Library description:
 wNumb - JavaScript Number & Money formatting
@@ -12,7 +12,7 @@ wNumb - JavaScript Number & Money formatting
 | Keywords           | - |
 | # releases         | 2 |
 | # dependents       | 8 |
-| # downloads        | 473955 |
+| # downloads        | 481374 |
 | # stars            | 1 |
 
 ## Links

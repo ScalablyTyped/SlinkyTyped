@@ -1,7 +1,7 @@
 package typingsSlinky.bull
 
-import typingsSlinky.bull.bullMod.JobStatus
-import typingsSlinky.bull.bullMod.JobStatusClean
+import typingsSlinky.bull.mod.JobStatus
+import typingsSlinky.bull.mod.JobStatusClean
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

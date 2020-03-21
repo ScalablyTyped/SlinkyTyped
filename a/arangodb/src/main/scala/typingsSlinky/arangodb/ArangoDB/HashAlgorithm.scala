@@ -5,12 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.arangodb.arangodbStrings.sha512
-  - typings.arangodb.arangodbStrings.sha384
-  - typings.arangodb.arangodbStrings.sha256
-  - typings.arangodb.arangodbStrings.sha224
-  - typings.arangodb.arangodbStrings.sha1
-  - typings.arangodb.arangodbStrings.md5
+  - typingsSlinky.arangodb.arangodbStrings.sha512
+  - typingsSlinky.arangodb.arangodbStrings.sha384
+  - typingsSlinky.arangodb.arangodbStrings.sha256
+  - typingsSlinky.arangodb.arangodbStrings.sha224
+  - typingsSlinky.arangodb.arangodbStrings.sha1
+  - typingsSlinky.arangodb.arangodbStrings.md5
 */
 trait HashAlgorithm extends js.Object
 

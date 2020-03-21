@@ -5,18 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Chance {
-  import org.scalablytyped.runtime.StringDictionary
-  import typingsSlinky.chance.Anon_All
-  import typingsSlinky.chance.Anon_Array
-  import typingsSlinky.chance.Anon_Length
-
-  type MixinDescriptor = StringDictionary[js.Function1[/* repeated */ js.Any, js.Any]]
-  type NameOptions = FullNameOptions with FirstNameOptions with LastNameOptions with PrefixOptions
+  type MixinDescriptor = org.scalablytyped.runtime.StringDictionary[js.Function1[/* repeated */ js.Any, js.Any]]
   // A more rigorous approach might be to produce
   // the correct options interfaces for each method
-  type Options = StringDictionary[js.Any]
-  type PrefixOptions = Anon_All with SuffixOptions
-  type Seed = Double | String
-  type StringOptions = CharacterOptions with Anon_Length
-  type UniqueOptions[T] = Anon_Array[T] with Options
+  type Options = org.scalablytyped.runtime.StringDictionary[js.Any]
+  type Seed = scala.Double | java.lang.String
 }

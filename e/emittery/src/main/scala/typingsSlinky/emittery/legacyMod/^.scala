@@ -1,6 +1,6 @@
 package typingsSlinky.emittery.legacyMod
 
-import typingsSlinky.emittery.emitteryMod.Emittery
+import typingsSlinky.emittery.mod.Emittery
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

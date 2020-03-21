@@ -1,6 +1,6 @@
 package typingsSlinky.meteor.Accounts
 
-import typingsSlinky.meteor.Anon_Stop
+import typingsSlinky.meteor.AnonStop
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Accounts.onLoginFailure")
 @js.native
 object onLoginFailure extends js.Object {
-  def apply(func: js.Function): Anon_Stop = js.native
+  def apply(func: js.Function): AnonStop = js.native
 }
 

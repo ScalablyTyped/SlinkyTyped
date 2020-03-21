@@ -1,6 +1,6 @@
 package typingsSlinky.restify
 
-import typingsSlinky.restify.restifyMod.plugins._TMetricsCallback
+import typingsSlinky.restify.mod.plugins._TMetricsCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,20 +1,30 @@
 organization := "org.scalablytyped.slinky"
 name := "sc-hot-reboot"
-version := "1.0-dt-20190224Z-e4d549"
-scalaVersion := "2.12.10"
+version := "1.0-dt-20200205Z-1bf0e3"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "chokidar" % "3.3.1-0b5509",
-  "org.scalablytyped.slinky" %%% "jsonwebtoken" % "8.3-dt-20191015Z-47a415",
-  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
-  "org.scalablytyped.slinky" %%% "sc-auth" % "5.0-dt-20181130Z-9c42f9",
-  "org.scalablytyped.slinky" %%% "socketcluster" % "14.0-dt-20191126Z-0d878c",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "async" % "3.0-dt-20200225Z-476900",
+  "org.scalablytyped.slinky" %%% "async-iterable-stream" % "3.0-dt-20200205Z-0a6867",
+  "org.scalablytyped.slinky" %%% "chokidar" % "3.3.1-b8ec64",
+  "org.scalablytyped.slinky" %%% "consumable-stream" % "1.0-dt-20200205Z-7fc1af",
+  "org.scalablytyped.slinky" %%% "expirymanager" % "0.9-dt-20181130Z-157dc9",
+  "org.scalablytyped.slinky" %%% "fleximap" % "0.9-dt-20181205Z-8d93c2",
+  "org.scalablytyped.slinky" %%% "jsonwebtoken" % "8.3-dt-20200228Z-b23aae",
+  "org.scalablytyped.slinky" %%% "ncom" % "1.0-dt-20200205Z-561749",
+  "org.scalablytyped.slinky" %%% "node" % "13.7-dt-20200228Z-eb4e34",
+  "org.scalablytyped.slinky" %%% "sc-auth" % "5.0-dt-20181130Z-1619f6",
+  "org.scalablytyped.slinky" %%% "sc-broker" % "8.0-dt-20200205Z-24aa3b",
+  "org.scalablytyped.slinky" %%% "sc-broker-cluster" % "9.0-dt-20200205Z-753a90",
+  "org.scalablytyped.slinky" %%% "sc-channel" % "2.0-dt-20200205Z-548f6c",
+  "org.scalablytyped.slinky" %%% "socketcluster" % "14.0-dt-20200205Z-10c6f2",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f",
+  "org.scalablytyped.slinky" %%% "stream-demux" % "7.0-dt-20200205Z-6362ab",
+  "org.scalablytyped.slinky" %%% "writable-consumable-stream" % "1.1-dt-20200205Z-4b8817")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

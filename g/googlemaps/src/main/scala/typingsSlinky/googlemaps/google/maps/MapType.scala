@@ -1,7 +1,7 @@
 package typingsSlinky.googlemaps.google.maps
 
-import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
+import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,14 +15,14 @@ trait MapType extends js.Object {
   var projection: js.UndefOr[Projection] = js.undefined
   var radius: js.UndefOr[Double] = js.undefined
   var tileSize: js.UndefOr[Size] = js.undefined
-  def getTile(tileCoord: Point, zoom: Double, ownerDocument: Document): Element
+  def getTile(tileCoord: Point, zoom: Double, ownerDocument: Document_): Element
   def releaseTile(tile: Element): Unit
 }
 
 object MapType {
   @scala.inline
   def apply(
-    getTile: (Point, Double, Document) => Element,
+    getTile: (Point, Double, Document_) => Element,
     releaseTile: Element => Unit,
     alt: String = null,
     maxZoom: Int | Double = null,

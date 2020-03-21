@@ -1,0 +1,23 @@
+package typingsSlinky.octokitRest
+
+import typingsSlinky.octokitRest.mod.Octokit.Endpoint
+import typingsSlinky.octokitRest.mod.Octokit.EndpointOptions
+import typingsSlinky.octokitRest.mod.Octokit.ReposGetPagesBuildParams
+import typingsSlinky.octokitRest.mod.Octokit.ReposGetPagesBuildResponse
+import typingsSlinky.octokitRest.mod.Octokit.RequestOptions
+import typingsSlinky.octokitRest.mod.Octokit.Response
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Anon404 extends js.Object {
+  @JSName("endpoint")
+  var endpoint_Original: Endpoint = js.native
+  def apply(): js.Promise[Response[ReposGetPagesBuildResponse]] = js.native
+  def apply(params: RequestOptions with ReposGetPagesBuildParams): js.Promise[Response[ReposGetPagesBuildResponse]] = js.native
+  def endpoint(EndpointOptions: EndpointOptions): RequestOptions = js.native
+  def endpoint(Route: String): RequestOptions = js.native
+  def endpoint(Route: String, EndpointOptions: EndpointOptions): RequestOptions = js.native
+}
+

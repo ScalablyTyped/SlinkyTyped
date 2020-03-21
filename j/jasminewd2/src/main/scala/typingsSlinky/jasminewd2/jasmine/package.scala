@@ -5,14 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object jasmine {
-  import org.scalablytyped.runtime.StringDictionary
-  import typingsSlinky.jasmine.jasmine.CustomEqualityTester
-  import typingsSlinky.jasmine.jasmine.MatchersUtil
-
-  type AsyncCustomMatcherFactories = StringDictionary[AsyncCustomMatcherFactory]
+  type AsyncCustomMatcherFactories = org.scalablytyped.runtime.StringDictionary[typingsSlinky.jasminewd2.jasmine.AsyncCustomMatcherFactory]
   type AsyncCustomMatcherFactory = js.Function2[
-    /* util */ MatchersUtil, 
-    /* customEqualityTesters */ js.Array[CustomEqualityTester], 
-    AsyncCustomMatcher
+    /* util */ typingsSlinky.jasmine.jasmine.MatchersUtil_, 
+    /* customEqualityTesters */ js.Array[typingsSlinky.jasmine.jasmine.CustomEqualityTester], 
+    typingsSlinky.jasminewd2.jasmine.AsyncCustomMatcher
   ]
 }

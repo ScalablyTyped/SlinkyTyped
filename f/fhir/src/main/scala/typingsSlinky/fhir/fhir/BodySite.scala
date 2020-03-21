@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Specific and identified anatomical location
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait BodySite extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait BodySite extends DomainResource {
   /**
     * Contains extended information for property 'active'.
     */

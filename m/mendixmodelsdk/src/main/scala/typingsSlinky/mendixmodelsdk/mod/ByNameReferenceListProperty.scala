@@ -1,0 +1,21 @@
+package typingsSlinky.mendixmodelsdk.mod
+
+import typingsSlinky.mendixmodelsdk.elementsMod.IAbstractElement
+import typingsSlinky.mendixmodelsdk.structuresMod.IStructureClass
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("mendixmodelsdk", "ByNameReferenceListProperty")
+@js.native
+class ByNameReferenceListProperty[T /* <: IAbstractElement */] protected ()
+  extends typingsSlinky.mendixmodelsdk.propertiesMod.ByNameReferenceListProperty[T] {
+  def this(
+    declaredOn: IStructureClass,
+    parent: typingsSlinky.mendixmodelsdk.elementsMod.AbstractElement,
+    name: String,
+    value: js.Array[T],
+    _targetType: String
+  ) = this()
+}
+

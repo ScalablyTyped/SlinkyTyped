@@ -1,11 +1,11 @@
 package typingsSlinky.expo.components
 
-import typingsSlinky.expo.buildGlobalsDotWebMod.Icon.EvilIcons
+import typingsSlinky.expo.globalsWebMod.Icon.EvilIcons
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconEvilIcons extends SharedApply_IconProps_207471041[EvilIcons] {
+object IconEvilIcons extends SharedApply_IconProps_2082878668[EvilIcons] {
   @JSImport("expo/build/globals.web", "Icon.EvilIcons")
   @js.native
   object componentImport extends js.Object

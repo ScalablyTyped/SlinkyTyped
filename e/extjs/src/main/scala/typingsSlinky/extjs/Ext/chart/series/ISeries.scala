@@ -10,10 +10,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.extjs.Ext.IClass because Already inherited
-- typings.extjs.Ext.IBase because Already inherited
-- typings.extjs.Ext.chart.IHighlight because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, extend, getInitialConfig, inheritableStatics, initConfig, mixins, requires, self, singleton, statics, uses. Inlined highlight, highlightCfg, highlightItem, unHighlightItem
-- typings.extjs.Ext.chart.ILabel because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, extend, getInitialConfig, inheritableStatics, initConfig, mixins, requires, self, singleton, statics, uses. Inlined label, onCreateLabel, onPlaceLabel */ trait ISeries extends IObservable {
+- typingsSlinky.extjs.Ext.IClass because Already inherited
+- typingsSlinky.extjs.Ext.IBase because Already inherited
+- typingsSlinky.extjs.Ext.chart.IHighlight because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, extend, getInitialConfig, inheritableStatics, initConfig, mixins, requires, self, singleton, statics, uses. Inlined highlight, highlightCfg, highlightItem, unHighlightItem
+- typingsSlinky.extjs.Ext.chart.ILabel because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, extend, getInitialConfig, inheritableStatics, initConfig, mixins, requires, self, singleton, statics, uses. Inlined label, onCreateLabel, onPlaceLabel */ trait ISeries extends IObservable {
   /** [Method] Iterate over each of the records for this series
   		* @param fn Function The function to execute for each record.
   		* @param scope Object Scope for the fn.

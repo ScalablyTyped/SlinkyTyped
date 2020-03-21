@@ -1,14 +1,14 @@
 package typingsSlinky.dojo.dojox.mobile
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.badge
 import typingsSlinky.dojo.dojoStrings.icon1
 import typingsSlinky.dojo.dojoStrings.icon2
 import typingsSlinky.dojo.dojoStrings.iconPos1
 import typingsSlinky.dojo.dojoStrings.iconPos2
 import typingsSlinky.dojo.dojoStrings.tag
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.mobile.TabBarButton")
 @js.native
-class TabBarButton () extends _ItemBase {
+class TabBarButton () extends ItemBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -87,7 +87,7 @@ class TabBarButton () extends _ItemBase {
     *
     * @param e
     */
-  def onClick(e: Event): Unit = js.native
+  def onClick(e: Event_): Unit = js.native
   /**
     * Called when the parent is a dojox/mobile/TabBar whose closable property is true, and the user clicked the close button.
     *
@@ -100,7 +100,7 @@ class TabBarButton () extends _ItemBase {
     *
     * @param e
     */
-  def onCloseButtonClick(e: Event): Unit = js.native
+  def onCloseButtonClick(e: Event_): Unit = js.native
   @JSName("set")
   def set_badge(property: badge, value: String): Unit = js.native
   @JSName("set")
@@ -122,7 +122,7 @@ class TabBarButton () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_icon1(
     property: icon1,
@@ -132,7 +132,7 @@ class TabBarButton () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_icon2(
     property: icon2,
@@ -142,7 +142,7 @@ class TabBarButton () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_iconPos1(
     property: iconPos1,
@@ -152,7 +152,7 @@ class TabBarButton () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_iconPos2(
     property: iconPos2,
@@ -162,7 +162,7 @@ class TabBarButton () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_tag(
     property: tag,
@@ -172,6 +172,6 @@ class TabBarButton () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

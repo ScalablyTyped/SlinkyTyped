@@ -1,8 +1,8 @@
 package typingsSlinky.inversify
 
-import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.BindingScope
-import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.BindingType
-import typingsSlinky.inversify.dtsInterfacesInterfacesMod.interfaces.TargetType
+import typingsSlinky.inversify.interfacesMod.interfaces.BindingScope
+import typingsSlinky.inversify.interfacesMod.interfaces.BindingType
+import typingsSlinky.inversify.interfacesMod.interfaces.TargetType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

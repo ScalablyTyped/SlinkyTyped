@@ -1,9 +1,9 @@
 package typingsSlinky.antd
 
 import slinky.core.TagMod
-import typingsSlinky.antd.libStatisticUtilsMod.Formatter
-import typingsSlinky.antd.libStatisticUtilsMod.countdownValueType
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.statisticUtilsMod.Formatter
+import typingsSlinky.antd.statisticUtilsMod.countdownValueType
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

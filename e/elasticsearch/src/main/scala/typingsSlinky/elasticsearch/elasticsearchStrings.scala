@@ -1,11 +1,11 @@
 package typingsSlinky.elasticsearch
 
-import typingsSlinky.elasticsearch.elasticsearchMod.CatBytes
-import typingsSlinky.elasticsearch.elasticsearchMod.Conflicts
-import typingsSlinky.elasticsearch.elasticsearchMod.DefaultOperator
-import typingsSlinky.elasticsearch.elasticsearchMod.ExpandWildcards
-import typingsSlinky.elasticsearch.elasticsearchMod.VersionType
-import typingsSlinky.elasticsearch.elasticsearchMod._Refresh
+import typingsSlinky.elasticsearch.mod.CatBytes
+import typingsSlinky.elasticsearch.mod.Conflicts
+import typingsSlinky.elasticsearch.mod.DefaultOperator
+import typingsSlinky.elasticsearch.mod.ExpandWildcards
+import typingsSlinky.elasticsearch.mod.VersionType
+import typingsSlinky.elasticsearch.mod._Refresh
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

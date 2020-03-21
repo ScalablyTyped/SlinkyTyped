@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 object removeEventListener_drag extends js.Object {
   def apply(
     `type`: drag,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _]
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.DragEvent, _]
   ): Unit = js.native
   def apply(
     `type`: drag,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.DragEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   def apply(
     `type`: drag,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.DragEvent, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.DragEvent, _],
     options: EventListenerOptions
   ): Unit = js.native
 }

@@ -21,21 +21,21 @@ import scala.scalajs.js.annotation._
 
 /* cl_command_type */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x11F0`
-  - typings.webcl.webclNumbers.`0x11F1`
-  - typings.webcl.webclNumbers.`0x11F3`
-  - typings.webcl.webclNumbers.`0x11F4`
-  - typings.webcl.webclNumbers.`0x11F5`
-  - typings.webcl.webclNumbers.`0x11F6`
-  - typings.webcl.webclNumbers.`0x11F7`
-  - typings.webcl.webclNumbers.`0x11F8`
-  - typings.webcl.webclNumbers.`0x11F9`
-  - typings.webcl.webclNumbers.`0x11FA`
-  - typings.webcl.webclNumbers.`0x11FE`
-  - typings.webcl.webclNumbers.`0x1201`
-  - typings.webcl.webclNumbers.`0x1202`
-  - typings.webcl.webclNumbers.`0x1203`
-  - typings.webcl.webclNumbers.`0x1204`
+  - typingsSlinky.webcl.webclNumbers.`0x11F0`
+  - typingsSlinky.webcl.webclNumbers.`0x11F1`
+  - typingsSlinky.webcl.webclNumbers.`0x11F3`
+  - typingsSlinky.webcl.webclNumbers.`0x11F4`
+  - typingsSlinky.webcl.webclNumbers.`0x11F5`
+  - typingsSlinky.webcl.webclNumbers.`0x11F6`
+  - typingsSlinky.webcl.webclNumbers.`0x11F7`
+  - typingsSlinky.webcl.webclNumbers.`0x11F8`
+  - typingsSlinky.webcl.webclNumbers.`0x11F9`
+  - typingsSlinky.webcl.webclNumbers.`0x11FA`
+  - typingsSlinky.webcl.webclNumbers.`0x11FE`
+  - typingsSlinky.webcl.webclNumbers.`0x1201`
+  - typingsSlinky.webcl.webclNumbers.`0x1202`
+  - typingsSlinky.webcl.webclNumbers.`0x1203`
+  - typingsSlinky.webcl.webclNumbers.`0x1204`
 */
 trait CommandType extends js.Object
 

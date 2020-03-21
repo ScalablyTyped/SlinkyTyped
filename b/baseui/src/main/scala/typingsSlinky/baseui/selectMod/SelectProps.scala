@@ -1,22 +1,22 @@
 package typingsSlinky.baseui.selectMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
-import typingsSlinky.baseui.Anon_LabelKey
-import typingsSlinky.baseui.Anon_Option
-import typingsSlinky.baseui.Anon_Option_1721897024
+import typingsSlinky.baseui.AnonLabelKey
+import typingsSlinky.baseui.AnonOption
+import typingsSlinky.baseui.AnonOptionOption
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.search
 import typingsSlinky.baseui.baseuiStrings.select
-import typingsSlinky.react.reactMod.FocusEventHandler
-import typingsSlinky.react.reactMod.FormEventHandler
+import typingsSlinky.react.mod.FocusEventHandler
+import typingsSlinky.react.mod.FormEventHandler
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,13 +39,13 @@ trait SelectProps extends js.Object {
       /* options */ Value, 
       /* filterValue */ String, 
       /* excludeOptions */ js.UndefOr[Value], 
-      /* newProps */ js.UndefOr[Anon_LabelKey], 
+      /* newProps */ js.UndefOr[AnonLabelKey], 
       Value
     ]
   ] = js.undefined
   var filterOutSelected: js.UndefOr[Boolean] = js.undefined
-  var getOptionLabel: js.UndefOr[js.Function1[/* args */ Anon_Option, TagMod[Any]]] = js.undefined
-  var getValueLabel: js.UndefOr[js.Function1[/* args */ Anon_Option_1721897024, TagMod[Any]]] = js.undefined
+  var getOptionLabel: js.UndefOr[js.Function1[/* args */ AnonOption, TagMod[Any]]] = js.undefined
+  var getValueLabel: js.UndefOr[js.Function1[/* args */ AnonOptionOption, TagMod[Any]]] = js.undefined
   var id: js.UndefOr[String] = js.undefined
   var isLoading: js.UndefOr[Boolean] = js.undefined
   var labelKey: js.UndefOr[String] = js.undefined
@@ -53,7 +53,7 @@ trait SelectProps extends js.Object {
   var mountNode: js.UndefOr[HTMLElement] = js.undefined
   var multi: js.UndefOr[Boolean] = js.undefined
   var noResultsMsg: js.UndefOr[TagMod[Any]] = js.undefined
-  var onBlur: js.UndefOr[js.Function1[/* e */ Event, _]] = js.undefined
+  var onBlur: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.undefined
   var onBlurResetsInput: js.UndefOr[Boolean] = js.undefined
   var onChange: js.UndefOr[js.Function1[/* params */ OnChangeParams, _]] = js.undefined
   var onClose: js.UndefOr[js.Function0[_]] = js.undefined
@@ -91,10 +91,10 @@ object SelectProps {
     disabled: js.UndefOr[Boolean] = js.undefined,
     error: js.UndefOr[Boolean] = js.undefined,
     escapeClearsValue: js.UndefOr[Boolean] = js.undefined,
-    filterOptions: (/* options */ Value, /* filterValue */ String, /* excludeOptions */ js.UndefOr[Value], /* newProps */ js.UndefOr[Anon_LabelKey]) => Value = null,
+    filterOptions: (/* options */ Value, /* filterValue */ String, /* excludeOptions */ js.UndefOr[Value], /* newProps */ js.UndefOr[AnonLabelKey]) => Value = null,
     filterOutSelected: js.UndefOr[Boolean] = js.undefined,
-    getOptionLabel: /* args */ Anon_Option => TagMod[Any] = null,
-    getValueLabel: /* args */ Anon_Option_1721897024 => TagMod[Any] = null,
+    getOptionLabel: /* args */ AnonOption => TagMod[Any] = null,
+    getValueLabel: /* args */ AnonOptionOption => TagMod[Any] = null,
     id: String = null,
     isLoading: js.UndefOr[Boolean] = js.undefined,
     labelKey: String = null,
@@ -102,13 +102,13 @@ object SelectProps {
     mountNode: HTMLElement = null,
     multi: js.UndefOr[Boolean] = js.undefined,
     noResultsMsg: TagMod[Any] = null,
-    onBlur: /* e */ Event => _ = null,
+    onBlur: /* e */ Event_ => _ = null,
     onBlurResetsInput: js.UndefOr[Boolean] = js.undefined,
     onChange: /* params */ OnChangeParams => _ = null,
     onClose: () => _ = null,
     onCloseResetsInput: js.UndefOr[Boolean] = js.undefined,
     onFocus: SyntheticFocusEvent[HTMLElement] => Unit = null,
-    onInputChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onInputChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
     onOpen: () => _ = null,
     onSelectResetsInput: js.UndefOr[Boolean] = js.undefined,
     openOnClick: js.UndefOr[Boolean] = js.undefined,

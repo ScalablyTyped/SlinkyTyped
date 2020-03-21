@@ -5,11 +5,25 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object vpnProvider {
-  import typingsSlinky.chrome.chrome.events.Event
-
-  type VpnConfigCreationEvent = Event[js.Function3[/* id */ String, /* name */ String, /* data */ js.Object, Unit]]
-  type VpnConfigRemovalEvent = Event[js.Function1[/* id */ String, Unit]]
-  type VpnPacketReceptionEvent = Event[js.Function1[/* data */ scala.scalajs.js.typedarray.ArrayBuffer, Unit]]
-  type VpnPlatformMessageEvent = Event[js.Function3[/* id */ String, /* message */ String, /* error */ String, Unit]]
-  type VpnUiEvent = Event[js.Function2[/* event */ String, /* id */ js.UndefOr[String], Unit]]
+  type VpnConfigCreationEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function3[
+      /* id */ java.lang.String, 
+      /* name */ java.lang.String, 
+      /* data */ js.Object, 
+      scala.Unit
+    ]
+  ]
+  type VpnConfigRemovalEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* id */ java.lang.String, scala.Unit]]
+  type VpnPacketReceptionEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* data */ scala.scalajs.js.typedarray.ArrayBuffer, scala.Unit]]
+  type VpnPlatformMessageEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function3[
+      /* id */ java.lang.String, 
+      /* message */ java.lang.String, 
+      /* error */ java.lang.String, 
+      scala.Unit
+    ]
+  ]
+  type VpnUiEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function2[/* event */ java.lang.String, /* id */ js.UndefOr[java.lang.String], scala.Unit]
+  ]
 }

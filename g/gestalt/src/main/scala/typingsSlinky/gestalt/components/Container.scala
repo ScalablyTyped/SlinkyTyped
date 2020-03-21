@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Container
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Container] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Container] {
   @JSImport("gestalt", "Container")
   @js.native
   object componentImport extends js.Object

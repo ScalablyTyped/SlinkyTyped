@@ -1,7 +1,7 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.ReplaceFunction
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.ReplaceFunction
+import typingsSlinky.lodash.mod.__
 import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`

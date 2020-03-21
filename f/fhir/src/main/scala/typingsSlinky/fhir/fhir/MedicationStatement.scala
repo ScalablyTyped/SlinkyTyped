@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Record of medication being taken by a patient
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait MedicationStatement extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait MedicationStatement extends DomainResource {
   /**
     * Contains extended information for property 'dateAsserted'.
     */

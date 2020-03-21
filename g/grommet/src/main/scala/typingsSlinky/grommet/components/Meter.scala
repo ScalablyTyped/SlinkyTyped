@@ -5,9 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.grommet.Anon_ArgsColor
-import typingsSlinky.grommet.Anon_ColorOpacity
-import typingsSlinky.grommet.componentsMeterMod.MeterProps
+import typingsSlinky.grommet.AnonColorOpacity
+import typingsSlinky.grommet.AnonHighlight
 import typingsSlinky.grommet.grommetStrings.bar
 import typingsSlinky.grommet.grommetStrings.circle
 import typingsSlinky.grommet.grommetStrings.full
@@ -16,6 +15,7 @@ import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.small
 import typingsSlinky.grommet.grommetStrings.xlarge
 import typingsSlinky.grommet.grommetStrings.xsmall
+import typingsSlinky.grommet.meterMod.MeterProps
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
 import typingsSlinky.grommet.utilsMod.GridAreaType
@@ -25,7 +25,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Meter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.grommetMod.Meter] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.mod.Meter] {
   @JSImport("grommet", "Meter")
   @js.native
   object componentImport extends js.Object
@@ -34,7 +34,7 @@ object Meter
   def apply(
     a11yTitle: A11yTitleType = null,
     alignSelf: AlignSelfType = null,
-    background: String | Anon_ColorOpacity = null,
+    background: String | AnonColorOpacity = null,
     gridArea: GridAreaType = null,
     margin: MarginType = null,
     max: Int | Double = null,
@@ -42,9 +42,9 @@ object Meter
     size: xsmall | small | medium | large | xlarge | full | String = null,
     thickness: xsmall | small | medium | large | xlarge | String = null,
     `type`: bar | circle = null,
-    values: js.Array[Anon_ArgsColor] = null,
+    values: js.Array[AnonHighlight] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.grommet.grommetMod.Meter] = {
+  ): BuildingComponent[tag.type, typingsSlinky.grommet.mod.Meter] = {
     val __obj = js.Dynamic.literal()
     if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
     if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
@@ -60,7 +60,7 @@ object Meter
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.grommet.grommetMod.Meter] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.grommet.grommetMod.Meter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.grommet.mod.Meter] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.grommet.mod.Meter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = MeterProps
 }
 

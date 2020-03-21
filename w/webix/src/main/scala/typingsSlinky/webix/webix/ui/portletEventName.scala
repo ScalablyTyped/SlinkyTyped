@@ -5,11 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onAfterPortletMove
-  - typings.webix.webixStrings.onBeforePortletMove
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onViewShow
+  - typingsSlinky.webix.webixStrings.onAfterPortletMove
+  - typingsSlinky.webix.webixStrings.onBeforePortletMove
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onViewShow
 */
 trait portletEventName extends js.Object
 

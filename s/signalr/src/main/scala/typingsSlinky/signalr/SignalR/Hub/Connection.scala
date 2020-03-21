@@ -1,7 +1,7 @@
 package typingsSlinky.signalr.SignalR.Hub
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.signalr.Anon_Name
+import typingsSlinky.signalr.AnonName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 trait Connection
   extends typingsSlinky.signalr.SignalR.Connection {
   var proxies: StringDictionary[js.Any] = js.native
-  var transport: Anon_Name = js.native
+  var transport: AnonName = js.native
   /**
     * Creates a new proxy object for the given hub connection that can be used to invoke
     * methods on server hubs and handle client method invocation requests from the server.

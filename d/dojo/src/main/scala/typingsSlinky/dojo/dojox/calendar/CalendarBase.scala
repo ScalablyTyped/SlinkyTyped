@@ -1,10 +1,9 @@
 package typingsSlinky.dojo.dojox.calendar
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojo.store.api.Store
 import typingsSlinky.dojo.dojoStrings.allDayAttr
 import typingsSlinky.dojo.dojoStrings.animateRange
@@ -56,6 +55,7 @@ import typingsSlinky.dojo.dojoStrings.viewChangeDuration
 import typingsSlinky.dojo.dojoStrings.viewContainer
 import typingsSlinky.dojo.dojoStrings.views
 import typingsSlinky.dojo.dojoStrings.widgetsInTemplate
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -68,15 +68,15 @@ import scala.scalajs.js.annotation._
   * @param args
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dojo.Stateful because Already inherited
-- typings.dojo.dijit._AttachMixin because Inheritance from two classes. Inlined 
-- typings.dojo.dojox.widget.Selection because Inheritance from two classes. Inlined selectedItem, set_selectedItem, get_selectedItem, watch_selectedItem, selectedItems, set_selectedItems, get_selectedItems, watch_selectedItems, selectionMode, set_selectionMode, get_selectionMode, watch_selectionMode, dispatchChange, getIdentity, isItemSelected, selectFromEvent, setItemSelected, onChange
-- typings.dojo.dojox.widget._Invalidating because Inheritance from two classes. Inlined invalidatingProperties, set_invalidatingProperties, get_invalidatingProperties, watch_invalidatingProperties, invalidRendering, set_invalidRendering, get_invalidRendering, watch_invalidRendering, addInvalidatingProperties, invalidateRendering, refreshRendering, validateRendering
-- typings.dojo.dojox.calendar.StoreMixin because Inheritance from two classes. Inlined allDayAttr, set_allDayAttr, get_allDayAttr, watch_allDayAttr, cssClassFunc, set_cssClassFunc, get_cssClassFunc, watch_cssClassFunc, decodeDate, set_decodeDate, get_decodeDate, watch_decodeDate, displayedItemsInvalidated, set_displayedItemsInvalidated, get_displayedItemsInvalidated, watch_displayedItemsInvalidated, encodeDate, set_encodeDate, get_encodeDate, watch_encodeDate, endTimeAttr, set_endTimeAttr, get_endTimeAttr, watch_endTimeAttr, query, set_query, get_query, watch_query, queryOptions, set_queryOptions, get_queryOptions, watch_queryOptions, startTimeAttr, set_startTimeAttr, get_startTimeAttr, watch_startTimeAttr, store, set_store, get_store, watch_store, subColumnAttr, set_subColumnAttr, get_subColumnAttr, watch_subColumnAttr, summaryAttr, set_summaryAttr, get_summaryAttr, watch_summaryAttr, get, getItemStoreState, itemToRenderItem, postscript, renderItemToItem, set, watch
-- typings.dojo.dijit._WidgetsInTemplateMixin because Inheritance from two classes. Inlined contextRequire, widgetsInTemplate, startup
-- typings.dojo.dijit._TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.calendar.CalendarBase")
+- typingsSlinky.dojo.dojo.Stateful because Already inherited
+- typingsSlinky.dojo.dijit.AttachMixin because Inheritance from two classes. Inlined 
+- typingsSlinky.dojo.dojox.widget.Selection because Inheritance from two classes. Inlined selectedItem, set_selectedItem, get_selectedItem, watch_selectedItem, selectedItems, set_selectedItems, get_selectedItems, watch_selectedItems, selectionMode, set_selectionMode, get_selectionMode, watch_selectionMode, dispatchChange, getIdentity, isItemSelected, selectFromEvent, setItemSelected, onChange
+- typingsSlinky.dojo.dojox.widget.Invalidating because Inheritance from two classes. Inlined invalidatingProperties, set_invalidatingProperties, get_invalidatingProperties, watch_invalidatingProperties, invalidRendering, set_invalidRendering, get_invalidRendering, watch_invalidRendering, addInvalidatingProperties, invalidateRendering, refreshRendering, validateRendering
+- typingsSlinky.dojo.dojox.calendar.StoreMixin because Inheritance from two classes. Inlined allDayAttr, set_allDayAttr, get_allDayAttr, watch_allDayAttr, cssClassFunc, set_cssClassFunc, get_cssClassFunc, watch_cssClassFunc, decodeDate, set_decodeDate, get_decodeDate, watch_decodeDate, displayedItemsInvalidated, set_displayedItemsInvalidated, get_displayedItemsInvalidated, watch_displayedItemsInvalidated, encodeDate, set_encodeDate, get_encodeDate, watch_encodeDate, endTimeAttr, set_endTimeAttr, get_endTimeAttr, watch_endTimeAttr, query, set_query, get_query, watch_query, queryOptions, set_queryOptions, get_queryOptions, watch_queryOptions, startTimeAttr, set_startTimeAttr, get_startTimeAttr, watch_startTimeAttr, store, set_store, get_store, watch_store, subColumnAttr, set_subColumnAttr, get_subColumnAttr, watch_subColumnAttr, summaryAttr, set_summaryAttr, get_summaryAttr, watch_summaryAttr, get, getItemStoreState, itemToRenderItem, postscript, renderItemToItem, set, watch
+- typingsSlinky.dojo.dijit.WidgetsInTemplateMixin because Inheritance from two classes. Inlined contextRequire, widgetsInTemplate, startup
+- typingsSlinky.dojo.dijit.TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.calendar.CalendarBase")
 @js.native
-class CalendarBase protected () extends _WidgetBase {
+class CalendarBase protected () extends WidgetBase {
   def this(args: js.Object) = this()
   /**
     * The attribute of the store item that contains the all day state of
@@ -417,7 +417,7 @@ class CalendarBase protected () extends _WidgetBase {
     * @param renderer The visual renderer of the selected/deselected item.
     * @param triggerEvent The event that lead to the selection of the item.
     */
-  def dispatchChange(oldSelectedItem: js.Object, newSelectedItem: js.Object, renderer: js.Object, triggerEvent: Event): Unit = js.native
+  def dispatchChange(oldSelectedItem: js.Object, newSelectedItem: js.Object, renderer: js.Object, triggerEvent: Event_): Unit = js.native
   /**
     * floors the date to the unit.
     *
@@ -709,7 +709,7 @@ class CalendarBase protected () extends _WidgetBase {
     *
     * @param e Object that contains the oldView and newView properties.
     */
-  def onCurrentViewChange(e: Event): Unit = js.native
+  def onCurrentViewChange(e: Event_): Unit = js.native
   /**
     * Event dispatched when an expand renderer is clicked.
     *
@@ -909,7 +909,7 @@ class CalendarBase protected () extends _WidgetBase {
     * @param renderer The visual renderer of the selected/deselected item.
     * @param dispatch Whether an event must be dispatched or not.
     */
-  def selectFromEvent(e: Event, item: js.Object, renderer: js.Object, dispatch: Boolean): js.Any = js.native
+  def selectFromEvent(e: Event_, item: js.Object, renderer: js.Object, dispatch: Boolean): js.Any = js.native
   /**
     * Change the selection state of an item.
     *
@@ -1039,7 +1039,7 @@ class CalendarBase protected () extends _WidgetBase {
   def watch_allDayAttr(
     property: allDayAttr,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[String], js.UndefOr[String], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_animateRange(
     property: animateRange,
@@ -1049,7 +1049,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_animationRangeDuration(
     property: animationRangeDuration,
@@ -1059,7 +1059,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_attachScope(
     property: attachScope,
@@ -1069,7 +1069,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_columnView(
     property: columnView,
@@ -1079,7 +1079,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_columnViewProps(
     property: columnViewProps,
@@ -1089,7 +1089,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_contextRequire(
     property: contextRequire,
@@ -1099,7 +1099,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Function], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_createItemFunc(
     property: createItemFunc,
@@ -1109,7 +1109,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Function], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_createOnGridClick(
     property: createOnGridClick,
@@ -1119,12 +1119,12 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_cssClassFunc(
     property: cssClassFunc,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[js.Function], js.UndefOr[js.Function], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_currentView(
     property: currentView,
@@ -1134,7 +1134,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_date(
     property: date,
@@ -1144,7 +1144,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Date], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_dateInterval(
     property: dateInterval,
@@ -1154,7 +1154,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_dateIntervalSteps(
     property: dateIntervalSteps,
@@ -1164,7 +1164,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_datePackage(
     property: datePackage,
@@ -1174,17 +1174,17 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_decodeDate(
     property: decodeDate,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[js.Object], js.UndefOr[js.Object], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_displayedItemsInvalidated(
     property: displayedItemsInvalidated,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[Boolean], js.UndefOr[Boolean], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_editable(
     property: editable,
@@ -1194,12 +1194,12 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_encodeDate(
     property: encodeDate,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[js.Object], js.UndefOr[js.Object], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_endDate(
     property: endDate,
@@ -1209,12 +1209,12 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Date], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_endTimeAttr(
     property: endTimeAttr,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[String], js.UndefOr[String], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_firstDayOfWeek(
     property: firstDayOfWeek,
@@ -1224,7 +1224,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_formatItemTimeFunc(
     property: formatItemTimeFunc,
@@ -1234,7 +1234,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_hoveredItem(
     property: hoveredItem,
@@ -1244,17 +1244,17 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_invalidRendering(
     property: invalidRendering,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[Boolean], js.UndefOr[Boolean], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_invalidatingProperties(
     property: invalidatingProperties,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[js.Object], js.UndefOr[js.Object], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_matrixView(
     property: matrixView,
@@ -1264,7 +1264,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_matrixViewProps(
     property: matrixViewProps,
@@ -1274,7 +1274,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_maxDate(
     property: maxDate,
@@ -1284,7 +1284,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Date], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_minDate(
     property: minDate,
@@ -1294,7 +1294,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Date], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_moveEnabled(
     property: moveEnabled,
@@ -1304,17 +1304,17 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_query(
     property: query,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[js.Object], js.UndefOr[js.Object], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_queryOptions(
     property: queryOptions,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[js.Object], js.UndefOr[js.Object], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_resizeEnabled(
     property: resizeEnabled,
@@ -1324,7 +1324,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_searchContainerNode(
     property: searchContainerNode,
@@ -1334,22 +1334,22 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_selectedItem(
     property: selectedItem,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[js.Object], js.UndefOr[js.Object], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_selectedItems(
     property: selectedItems,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[js.Object], js.UndefOr[js.Object], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_selectionMode(
     property: selectionMode,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[String], js.UndefOr[String], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_startDate(
     property: startDate,
@@ -1359,27 +1359,27 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Date], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_startTimeAttr(
     property: startTimeAttr,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[String], js.UndefOr[String], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_store(
     property: store,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[js.Object], js.UndefOr[js.Object], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_subColumnAttr(
     property: subColumnAttr,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[String], js.UndefOr[String], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_summaryAttr(
     property: summaryAttr,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[String], js.UndefOr[String], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templatePath(
     property: templatePath,
@@ -1389,7 +1389,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templateString(
     property: templateString,
@@ -1399,7 +1399,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_viewChangeDuration(
     property: viewChangeDuration,
@@ -1409,7 +1409,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_viewContainer(
     property: viewContainer,
@@ -1419,7 +1419,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[HTMLElement], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_views(
     property: views,
@@ -1429,7 +1429,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_widgetsInTemplate(
     property: widgetsInTemplate,
@@ -1439,7 +1439,7 @@ class CalendarBase protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   /**
     * The action triggered when the week button is clicked.
     * By default, sets the dateInterval property to "week" and

@@ -6,15 +6,15 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.recharts.rechartsMod.AxisDomain
-import typingsSlinky.recharts.rechartsMod.AxisInterval
-import typingsSlinky.recharts.rechartsMod.ContentRenderer
-import typingsSlinky.recharts.rechartsMod.DataKey
-import typingsSlinky.recharts.rechartsMod.LabelProps
-import typingsSlinky.recharts.rechartsMod.RechartsFunction
-import typingsSlinky.recharts.rechartsMod.ScaleType
-import typingsSlinky.recharts.rechartsMod.YAxisProps
-import typingsSlinky.recharts.rechartsMod.YPadding
+import typingsSlinky.recharts.mod.AxisDomain
+import typingsSlinky.recharts.mod.AxisInterval
+import typingsSlinky.recharts.mod.ContentRenderer
+import typingsSlinky.recharts.mod.DataKey
+import typingsSlinky.recharts.mod.LabelProps
+import typingsSlinky.recharts.mod.RechartsFunction
+import typingsSlinky.recharts.mod.ScaleType
+import typingsSlinky.recharts.mod.YAxisProps
+import typingsSlinky.recharts.mod.YPadding
 import typingsSlinky.recharts.rechartsStrings.category
 import typingsSlinky.recharts.rechartsStrings.left
 import typingsSlinky.recharts.rechartsStrings.number
@@ -24,13 +24,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object YAxis
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.rechartsMod.YAxis] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.YAxis] {
   @JSImport("recharts", "YAxis")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: onClick, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, reversed */
+  /* The following DOM/SVG props were specified: reversed */
   def apply(
     allowDataOverflow: js.UndefOr[Boolean] = js.undefined,
     allowDecimals: js.UndefOr[Boolean] = js.undefined,
@@ -43,10 +43,22 @@ object YAxis
     height: Int | Double = null,
     hide: js.UndefOr[Boolean] = js.undefined,
     interval: AxisInterval = null,
-    label: String | Double | typingsSlinky.recharts.rechartsMod.Label | LabelProps = null,
+    label: String | Double | typingsSlinky.recharts.mod.Label | LabelProps = null,
     minTickGap: Int | Double = null,
     mirror: js.UndefOr[Boolean] = js.undefined,
     name: String | Double = null,
+    onClick: /* repeated */ js.Any => Unit = null,
+    onMouseDown: /* repeated */ js.Any => Unit = null,
+    onMouseEnter: /* repeated */ js.Any => Unit = null,
+    onMouseLeave: /* repeated */ js.Any => Unit = null,
+    onMouseMove: /* repeated */ js.Any => Unit = null,
+    onMouseOut: /* repeated */ js.Any => Unit = null,
+    onMouseOver: /* repeated */ js.Any => Unit = null,
+    onMouseUp: /* repeated */ js.Any => Unit = null,
+    onTouchCancel: /* repeated */ js.Any => Unit = null,
+    onTouchEnd: /* repeated */ js.Any => Unit = null,
+    onTouchMove: /* repeated */ js.Any => Unit = null,
+    onTouchStart: /* repeated */ js.Any => Unit = null,
     orientation: left | right = null,
     padding: YPadding = null,
     scale: ScaleType | RechartsFunction = null,
@@ -63,7 +75,7 @@ object YAxis
     width: Int | Double = null,
     yAxisId: String | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.YAxis] = {
+  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.YAxis] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(allowDataOverflow)) __obj.updateDynamic("allowDataOverflow")(allowDataOverflow.asInstanceOf[js.Any])
     if (!js.isUndefined(allowDecimals)) __obj.updateDynamic("allowDecimals")(allowDecimals.asInstanceOf[js.Any])
@@ -80,6 +92,18 @@ object YAxis
     if (minTickGap != null) __obj.updateDynamic("minTickGap")(minTickGap.asInstanceOf[js.Any])
     if (!js.isUndefined(mirror)) __obj.updateDynamic("mirror")(mirror.asInstanceOf[js.Any])
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
+    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
+    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
+    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
     if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
     if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
     if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
@@ -98,7 +122,7 @@ object YAxis
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.YAxis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.rechartsMod.YAxis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.YAxis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.YAxis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = YAxisProps
 }
 

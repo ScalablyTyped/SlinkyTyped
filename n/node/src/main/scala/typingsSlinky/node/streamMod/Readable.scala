@@ -1,6 +1,6 @@
 package typingsSlinky.node.streamMod
 
-import typingsSlinky.node.Anon_End
+import typingsSlinky.node.AnonEnd
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.node.NodeJS.WritableStream
@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
 @JSImport("stream", "Readable")
 @js.native
 class Readable ()
-  extends internal
+  extends Stream
      with ReadableStream {
   def this(opts: ReadableOptions) = this()
   var destroyed: Boolean = js.native
@@ -83,7 +83,7 @@ class Readable ()
   /* InferMemberOverrides */
   override def pipe[T /* <: WritableStream */](destination: T): T = js.native
   /* InferMemberOverrides */
-  override def pipe[T /* <: WritableStream */](destination: T, options: Anon_End): T = js.native
+  override def pipe[T /* <: WritableStream */](destination: T, options: AnonEnd): T = js.native
   @JSName("prependListener")
   def prependListener_close(event: close, listener: js.Function0[Unit]): this.type = js.native
   @JSName("prependListener")

@@ -1,12 +1,12 @@
 package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.dojo.dojo.keys
+import typingsSlinky.dojo.dojox.drawing.manager.keys
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("dojo/keys", JSImport.Namespace)
+@JSImport("dojox/drawing/manager/keys", JSImport.Namespace)
 @js.native
 object keysMod extends TopLevel[keys]
 

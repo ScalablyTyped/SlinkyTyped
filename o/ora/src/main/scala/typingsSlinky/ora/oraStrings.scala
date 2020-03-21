@@ -1,6 +1,6 @@
 package typingsSlinky.ora
 
-import typingsSlinky.ora.oraMod.Color
+import typingsSlinky.ora.mod.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

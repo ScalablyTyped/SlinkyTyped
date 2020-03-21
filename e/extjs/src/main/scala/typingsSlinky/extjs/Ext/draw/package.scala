@@ -5,8 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object draw {
-  import typingsSlinky.extjs.Ext.IBase
-
-  type IDraw = IBase
-  type IMatrix = IBase
+  type IDraw = typingsSlinky.extjs.Ext.IBase
+  type IMatrix = typingsSlinky.extjs.Ext.IBase
 }

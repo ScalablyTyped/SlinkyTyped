@@ -1,14 +1,11 @@
 package typingsSlinky.nssm
 
-import typingsSlinky.nssm.nssmMod.Command
+import typingsSlinky.nssm.mod.Command
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object nssmStrings {
-  @js.native
-  sealed trait Nssm extends js.Object
-  
   @js.native
   sealed trait continue extends Command
   
@@ -45,8 +42,6 @@ object nssmStrings {
   @js.native
   sealed trait stop extends Command
   
-  @scala.inline
-  def Nssm: Nssm = "Nssm".asInstanceOf[Nssm]
   @scala.inline
   def continue: continue = "continue".asInstanceOf[continue]
   @scala.inline

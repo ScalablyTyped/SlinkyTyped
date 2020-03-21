@@ -1,6 +1,6 @@
 package typingsSlinky.commangular
 
-import typingsSlinky.angular.angularMod.IPromise
+import typingsSlinky.angular.mod.IPromise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

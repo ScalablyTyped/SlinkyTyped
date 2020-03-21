@@ -1,11 +1,11 @@
 package typingsSlinky.expo.components
 
-import typingsSlinky.expo.buildGlobalsDotWebMod.Icon.Entypo.ToolbarAndroid
+import typingsSlinky.expo.globalsWebMod.Icon.Entypo.ToolbarAndroid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconEntypoToolbarAndroid extends SharedApply_ToolbarAndroidProps1090159515[ToolbarAndroid] {
+object IconEntypoToolbarAndroid extends SharedApply_ToolbarAndroidProps1442634308[ToolbarAndroid] {
   @JSImport("expo/build/globals.web", "Icon.Entypo.ToolbarAndroid")
   @js.native
   object componentImport extends js.Object

@@ -6,6 +6,7 @@ import typingsSlinky.node.dnsMod.LookupOneOptions
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.tlsMod.ConnectionOptions
 import typingsSlinky.node.tlsMod.KeyObject
+import typingsSlinky.node.tlsMod.PSKCallbackNegotation
 import typingsSlinky.node.tlsMod.PeerCertificate
 import typingsSlinky.node.tlsMod.PxfObject
 import typingsSlinky.node.tlsMod.SecureContext
@@ -15,7 +16,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.node.httpMod.AgentOptions because var conflicts: timeout. Inlined keepAlive, keepAliveMsecs, maxSockets, maxFreeSockets */ trait AgentOptions extends ConnectionOptions {
+- typingsSlinky.node.httpMod.AgentOptions because var conflicts: timeout. Inlined keepAlive, keepAliveMsecs, maxSockets, maxFreeSockets */ trait AgentOptions extends ConnectionOptions {
   /**
     * Keep sockets around in a pool to be used by other requests in the future. Default = false
     */
@@ -68,6 +69,7 @@ object AgentOptions {
     port: Int | Double = null,
     privateKeyEngine: String = null,
     privateKeyIdentifier: String = null,
+    pskCallback: /* hint */ String | Null => PSKCallbackNegotation | Null = null,
     rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
     requestCert: js.UndefOr[Boolean] = js.undefined,
     secureContext: SecureContext = null,
@@ -110,6 +112,7 @@ object AgentOptions {
     if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
     if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
     if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
+    if (pskCallback != null) __obj.updateDynamic("pskCallback")(js.Any.fromFunction1(pskCallback))
     if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.asInstanceOf[js.Any])
     if (!js.isUndefined(requestCert)) __obj.updateDynamic("requestCert")(requestCert.asInstanceOf[js.Any])
     if (secureContext != null) __obj.updateDynamic("secureContext")(secureContext.asInstanceOf[js.Any])

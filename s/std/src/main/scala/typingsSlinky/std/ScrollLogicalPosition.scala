@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.start
-  - typings.std.stdStrings.center
-  - typings.std.stdStrings.end
-  - typings.std.stdStrings.nearest
+  - typingsSlinky.std.stdStrings.center
+  - typingsSlinky.std.stdStrings.end
+  - typingsSlinky.std.stdStrings.nearest
+  - typingsSlinky.std.stdStrings.start
 */
 trait ScrollLogicalPosition extends js.Object
 

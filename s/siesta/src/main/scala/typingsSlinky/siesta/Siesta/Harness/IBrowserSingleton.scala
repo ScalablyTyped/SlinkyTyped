@@ -1,8 +1,8 @@
 package typingsSlinky.siesta.Siesta.Harness
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import typingsSlinky.siesta.Siesta.ITest
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -36,7 +36,7 @@ object IBrowserSingleton {
     isReadyTimeout: Double,
     keepNLastResults: Double,
     keepResults: Boolean,
-    listenters: StringDictionary[js.Function2[/* event */ Event, /* repeated */ js.Any, Unit]],
+    listenters: StringDictionary[js.Function2[/* event */ Event_, /* repeated */ js.Any, Unit]],
     maintainViewportSize: Boolean,
     maxThreads: Double,
     needDone: Boolean,

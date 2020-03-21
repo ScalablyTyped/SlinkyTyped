@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojo
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dojo._base.fx.Animation
+import typingsSlinky.dojo.dojo.base.fx.Animation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

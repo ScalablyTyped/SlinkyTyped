@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/type", "GraphQLIncludeDirective")
 @js.native
 object GraphQLIncludeDirective
-  extends TopLevel[typingsSlinky.graphql.typeDirectivesMod.GraphQLDirective]
+  extends TopLevel[typingsSlinky.graphql.directivesMod.GraphQLDirective]
 

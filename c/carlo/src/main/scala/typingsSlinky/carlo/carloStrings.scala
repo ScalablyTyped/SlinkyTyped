@@ -1,6 +1,6 @@
 package typingsSlinky.carlo
 
-import typingsSlinky.carlo.carloMod.AppEvent
+import typingsSlinky.carlo.mod.AppEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

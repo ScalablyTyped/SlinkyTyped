@@ -11,8 +11,8 @@ The URI implementation that is used by VS Code and its extensions
 | Full name          | vscode-uri |
 | Keywords           | - |
 | # releases         | 13 |
-| # dependents       | 110 |
-| # downloads        | 19304203 |
+| # dependents       | 113 |
+| # downloads        | 20412078 |
 | # stars            | 0 |
 
 ## Links

@@ -1,0 +1,15 @@
+package typingsSlinky.expressRateLimit
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object mod {
+  type MaxValueFn = js.Function0[scala.Double | js.Promise[scala.Double]]
+  type StoreIncrementCallback = js.Function3[
+    /* err */ js.UndefOr[js.Object], 
+    /* hits */ js.UndefOr[scala.Double], 
+    /* resetTime */ js.UndefOr[js.Date], 
+    scala.Unit
+  ]
+}

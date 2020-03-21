@@ -10,9 +10,9 @@ contain an image.
 | ------------------ | :-------------: |
 | Full name          | @jimp/plugin-contain |
 | Keywords           | - |
-| # releases         | 71 |
+| # releases         | 70 |
 | # dependents       | 1 |
-| # downloads        | 14021174 |
+| # downloads        | 14396112 |
 | # stars            | 0 |
 
 ## Links

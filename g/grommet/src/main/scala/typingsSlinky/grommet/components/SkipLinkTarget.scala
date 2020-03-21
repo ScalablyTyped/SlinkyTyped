@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.grommet.componentsSkipLinkTargetMod.SkipLinkTargetProps
+import typingsSlinky.grommet.skipLinkTargetMod.SkipLinkTargetProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

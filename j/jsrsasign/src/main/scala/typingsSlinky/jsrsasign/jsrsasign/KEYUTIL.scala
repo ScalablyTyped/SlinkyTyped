@@ -1,11 +1,11 @@
 package typingsSlinky.jsrsasign.jsrsasign
 
-import typingsSlinky.jsrsasign.Anon_Algoid
-import typingsSlinky.jsrsasign.Anon_AlgoidAlgparam
-import typingsSlinky.jsrsasign.Anon_E
-import typingsSlinky.jsrsasign.Anon_EN
-import typingsSlinky.jsrsasign.Anon_P8pubkeyhex
-import typingsSlinky.jsrsasign.Anon_PrvKeyObj
+import typingsSlinky.jsrsasign.AnonAlgoid
+import typingsSlinky.jsrsasign.AnonAlgparam
+import typingsSlinky.jsrsasign.AnonE
+import typingsSlinky.jsrsasign.AnonN
+import typingsSlinky.jsrsasign.AnonP8pubkeyhex
+import typingsSlinky.jsrsasign.AnonPrvKeyObj_
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.DSA
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto.ECDSA
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.jws.JWS.JsonWebKey
@@ -231,7 +231,7 @@ class KEYUTIL () extends js.Object {
     * - keyidx - string starting index of key in pkcs8PrvHex
     *
     */
-  def parsePlainPrivatePKCS8Hex(pkcs8PrvHex: String): Anon_Algoid = js.native
+  def parsePlainPrivatePKCS8Hex(pkcs8PrvHex: String): AnonAlgoid = js.native
   /**
     * parse hexadecimal string of PKCS#8 RSA/EC/DSA public key
     * @param pkcs8PubHex hexadecimal string of PKCS#8 public key
@@ -244,7 +244,7 @@ class KEYUTIL () extends js.Object {
     * - key - hexadecimal string of public key
     *
     */
-  def parsePublicPKCS8Hex(pkcs8PubHex: String): Anon_AlgoidAlgparam = js.native
+  def parsePublicPKCS8Hex(pkcs8PubHex: String): AnonAlgparam = js.native
   /**
     * parse hexadecimal string of plain PKCS#8 private key
     * @param pubRawRSAHex hexadecimal string of ASN.1 encoded PKCS#8 public key
@@ -256,7 +256,7 @@ class KEYUTIL () extends js.Object {
     * - e - hexadecimal string of public exponent
     *
     */
-  def parsePublicRawRSAKeyHex(pubRawRSAHex: String): Anon_EN = js.native
+  def parsePublicRawRSAKeyHex(pubRawRSAHex: String): AnonN = js.native
 }
 
 /* static members */
@@ -265,11 +265,11 @@ class KEYUTIL () extends js.Object {
 object KEYUTIL extends js.Object {
   val version: String = js.native
   @JSName("generateKeypair")
-  def generateKeypair_EC(alg: EC, keylenOrCurve: String): Anon_PrvKeyObj = js.native
+  def generateKeypair_EC(alg: EC, keylenOrCurve: String): AnonPrvKeyObj_ = js.native
   @JSName("generateKeypair")
-  def generateKeypair_EC(alg: EC, keylenOrCurve: Double): Anon_PrvKeyObj = js.native
+  def generateKeypair_EC(alg: EC, keylenOrCurve: Double): AnonPrvKeyObj_ = js.native
   @JSName("generateKeypair")
-  def generateKeypair_RSA(alg: RSA, keylenOrCurve: String): Anon_PrvKeyObj = js.native
+  def generateKeypair_RSA(alg: RSA, keylenOrCurve: String): AnonPrvKeyObj_ = js.native
   /**
     * @param alg 'RSA' or 'EC'
     * @param keylenOrCurve key length for RSA or curve name for EC
@@ -293,7 +293,7 @@ object KEYUTIL extends js.Object {
     *
     */
   @JSName("generateKeypair")
-  def generateKeypair_RSA(alg: RSA, keylenOrCurve: Double): Anon_PrvKeyObj = js.native
+  def generateKeypair_RSA(alg: RSA, keylenOrCurve: Double): AnonPrvKeyObj_ = js.native
   def getJWKFromKey(keyObj: DSA): JsonWebKey = js.native
   def getJWKFromKey(keyObj: ECDSA): JsonWebKey = js.native
   /**
@@ -320,10 +320,10 @@ object KEYUTIL extends js.Object {
   def getKey(param: String, passcode: String): RSAKey | DSA | ECDSA = js.native
   def getKey(param: String, passcode: String, hextype: String): RSAKey | DSA | ECDSA = js.native
   def getKey(param: String, passcode: Null, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: Anon_E): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: Anon_E, passcode: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: Anon_E, passcode: String, hextype: String): RSAKey | DSA | ECDSA = js.native
-  def getKey(param: Anon_E, passcode: Null, hextype: String): RSAKey | DSA | ECDSA = js.native
+  def getKey(param: AnonE): RSAKey | DSA | ECDSA = js.native
+  def getKey(param: AnonE, passcode: String): RSAKey | DSA | ECDSA = js.native
+  def getKey(param: AnonE, passcode: String, hextype: String): RSAKey | DSA | ECDSA = js.native
+  def getKey(param: AnonE, passcode: Null, hextype: String): RSAKey | DSA | ECDSA = js.native
   def getKey(param: ECCPrivateKey): RSAKey | DSA | ECDSA = js.native
   def getKey(param: ECCPrivateKey, passcode: String): RSAKey | DSA | ECDSA = js.native
   def getKey(param: ECCPrivateKey, passcode: String, hextype: String): RSAKey | DSA | ECDSA = js.native
@@ -513,6 +513,6 @@ object KEYUTIL extends js.Object {
     * - p8pubkeyhex - hexadecimal string of subject public key in PKCS#8
     *
     */
-  def parseCSRHex(csrHex: String): Anon_P8pubkeyhex = js.native
+  def parseCSRHex(csrHex: String): AnonP8pubkeyhex = js.native
 }
 

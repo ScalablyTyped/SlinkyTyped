@@ -1,0 +1,20 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesPullRequestAlreadyClosedExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.mergePullRequestByFastForwardExceptionsUnionMod.MergePullRequestByFastForwardExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestDescriptionExceptionsUnionMod.UpdatePullRequestDescriptionExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestTitleExceptionsUnionMod.UpdatePullRequestTitleExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait PullRequestAlreadyClosedException
+  extends ServiceException[PullRequestAlreadyClosedExceptionDetails]
+     with MergePullRequestByFastForwardExceptionsUnion
+     with UpdatePullRequestDescriptionExceptionsUnion
+     with UpdatePullRequestTitleExceptionsUnion {
+  @JSName("name")
+  var name_PullRequestAlreadyClosedException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.PullRequestAlreadyClosedException = js.native
+}
+

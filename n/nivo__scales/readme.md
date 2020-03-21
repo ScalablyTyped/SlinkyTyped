@@ -10,9 +10,9 @@ Typings are for version 0.59.3
 | ------------------ | :-------------: |
 | Full name          | @nivo/scales |
 | Keywords           | - |
-| # releases         | 18 |
+| # releases         | 20 |
 | # dependents       | 7 |
-| # downloads        | 630848 |
+| # downloads        | 687994 |
 | # stars            | 0 |
 
 ## Links

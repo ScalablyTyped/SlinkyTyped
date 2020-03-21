@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.form
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.blurDelay
 import typingsSlinky.dojo.dojoStrings.duration
 import typingsSlinky.dojo.dojoStrings.triggerEvent
@@ -118,7 +118,7 @@ class FileInputAuto () extends FileInput {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_duration(
     property: duration,
@@ -128,7 +128,7 @@ class FileInputAuto () extends FileInput {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_triggerEvent(
     property: triggerEvent,
@@ -138,7 +138,7 @@ class FileInputAuto () extends FileInput {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_uploadMessage(
     property: uploadMessage,
@@ -148,7 +148,7 @@ class FileInputAuto () extends FileInput {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_url(
     property: url,
@@ -158,6 +158,6 @@ class FileInputAuto () extends FileInput {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

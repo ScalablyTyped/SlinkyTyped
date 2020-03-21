@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.widget
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dijit.layout.ContentPane
 import typingsSlinky.dojo.dojoStrings.canGoBack
 import typingsSlinky.dojo.dojoStrings.doneFunction
@@ -69,7 +69,7 @@ class WizardPane () extends ContentPane {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_doneFunction(
     property: doneFunction,
@@ -79,7 +79,7 @@ class WizardPane () extends ContentPane {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_passFunction(
     property: passFunction,
@@ -89,6 +89,6 @@ class WizardPane () extends ContentPane {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

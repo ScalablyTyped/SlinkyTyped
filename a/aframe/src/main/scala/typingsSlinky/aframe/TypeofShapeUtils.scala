@@ -1,6 +1,6 @@
 package typingsSlinky.aframe
 
-import typingsSlinky.three.srcExtrasShapeUtilsMod.Vec2
+import typingsSlinky.three.shapeUtilsMod.Vec2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

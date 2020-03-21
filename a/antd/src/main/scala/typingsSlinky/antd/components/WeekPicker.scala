@@ -1,20 +1,14 @@
 package typingsSlinky.antd.components
 
-import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libDateDashPickerWeekPickerMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. QualifiedName(List(Name(scala), Name(scalajs), Name(js), Name(Any))) was not a @ScalaJSDefined trait */
-object WeekPicker
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
-  @JSImport("antd/lib/date-picker/WeekPicker", JSImport.Default)
+object WeekPicker extends SharedApply_PickPickPickerDatePropsMo1120493360 {
+  @JSImport("antd/lib/date-picker", "default.WeekPicker")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  type Props = js.Any
 }
 

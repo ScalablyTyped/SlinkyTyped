@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   * @see {@link Xrm.Attributes.IntegerAttributeFormat}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.duration
-  - typings.xrm.xrmStrings.none
+  - typingsSlinky.xrm.xrmStrings.duration
+  - typingsSlinky.xrm.xrmStrings.none
 */
 trait IntegerAttributeFormat extends js.Object
 

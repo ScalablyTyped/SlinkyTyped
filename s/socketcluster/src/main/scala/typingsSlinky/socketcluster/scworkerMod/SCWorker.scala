@@ -2,8 +2,9 @@ package typingsSlinky.socketcluster.scworkerMod
 
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.httpMod.Server
-import typingsSlinky.scDashAuth.scDashAuthMod.SCAuthEngine
-import typingsSlinky.socketcluster.Anon_ClientCount
+import typingsSlinky.scAuth.mod.SCAuthEngine
+import typingsSlinky.scBrokerCluster.mod.SCExchange
+import typingsSlinky.socketcluster.AnonClientCount
 import typingsSlinky.socketcluster.socketclusterStrings.connection
 import typingsSlinky.socketcluster.socketclusterStrings.error
 import typingsSlinky.socketcluster.socketclusterStrings.exit
@@ -25,7 +26,7 @@ trait SCWorker extends EventEmitter {
   val EVENT_WARNING: warning = js.native
   val MIDDLEWARE_START: start = js.native
   var auth: SCAuthEngine = js.native
-  var exchange: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify SCExchange */ js.Any = js.native
+  var exchange: SCExchange = js.native
   var httpServer: Server | typingsSlinky.node.httpsMod.Server = js.native
   var id: Double = js.native
   var isLeader: Boolean = js.native
@@ -38,7 +39,7 @@ trait SCWorker extends EventEmitter {
   def getHTTPServer(): Server | typingsSlinky.node.httpsMod.Server = js.native
   def getSCServer(): js.Any = js.native
   def getSocketPath(): String = js.native
-  def getStatus(): Anon_ClientCount = js.native
+  def getStatus(): AnonClientCount = js.native
   @JSName("on")
   def on_connection(
     event: connection,

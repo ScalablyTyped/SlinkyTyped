@@ -5,10 +5,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.HashRouterProps
-import typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomStrings.hashbang
-import typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomStrings.noslash
-import typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomStrings.slash
+import typingsSlinky.reactRouterDom.mod.HashRouterProps
+import typingsSlinky.reactRouterDom.reactRouterDomStrings.hashbang
+import typingsSlinky.reactRouterDom.reactRouterDomStrings.noslash
+import typingsSlinky.reactRouterDom.reactRouterDomStrings.slash
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

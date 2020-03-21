@@ -1,8 +1,8 @@
 package typingsSlinky.bip174
 
 import typingsSlinky.bip174.bip174Strings.`Leftcurlybracket masterFingerprintColon BufferSemicolon extendedPubkeyColon BufferSemicolon pathColon stringSemicolon Rightcurlybracket`
-import typingsSlinky.bip174.srcLibInterfacesMod.GlobalXpub
-import typingsSlinky.bip174.srcLibInterfacesMod.KeyValue
+import typingsSlinky.bip174.interfacesMod.GlobalXpub
+import typingsSlinky.bip174.interfacesMod.KeyValue
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`

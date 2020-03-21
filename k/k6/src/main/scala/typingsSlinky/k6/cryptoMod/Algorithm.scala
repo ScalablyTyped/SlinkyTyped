@@ -5,15 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.k6.k6Strings.md4
-  - typings.k6.k6Strings.md5
-  - typings.k6.k6Strings.sha1
-  - typings.k6.k6Strings.sha256
-  - typings.k6.k6Strings.sha384
-  - typings.k6.k6Strings.sha512
-  - typings.k6.k6Strings.sha512_224
-  - typings.k6.k6Strings.sha512_256
-  - typings.k6.k6Strings.ripemd160
+  - typingsSlinky.k6.k6Strings.md4
+  - typingsSlinky.k6.k6Strings.md5
+  - typingsSlinky.k6.k6Strings.sha1
+  - typingsSlinky.k6.k6Strings.sha256
+  - typingsSlinky.k6.k6Strings.sha384
+  - typingsSlinky.k6.k6Strings.sha512
+  - typingsSlinky.k6.k6Strings.sha512_224
+  - typingsSlinky.k6.k6Strings.sha512_256
+  - typingsSlinky.k6.k6Strings.ripemd160
 */
 trait Algorithm extends js.Object
 

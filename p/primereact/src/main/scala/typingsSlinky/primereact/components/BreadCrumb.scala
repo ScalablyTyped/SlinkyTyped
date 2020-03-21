@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsBreadcrumbBreadCrumbMod.BreadCrumbProps
-import typingsSlinky.primereact.componentsMenuitemMenuItemMod.MenuItem
+import typingsSlinky.primereact.breadcrumbBreadCrumbMod.BreadCrumbProps
+import typingsSlinky.primereact.menuItemMod.MenuItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

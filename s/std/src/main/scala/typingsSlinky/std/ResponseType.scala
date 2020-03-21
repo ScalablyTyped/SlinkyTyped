@@ -5,12 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.basic
-  - typings.std.stdStrings.cors
-  - typings.std.stdStrings.default
-  - typings.std.stdStrings.error
-  - typings.std.stdStrings.opaque
-  - typings.std.stdStrings.opaqueredirect
+  - typingsSlinky.std.stdStrings.basic
+  - typingsSlinky.std.stdStrings.cors
+  - typingsSlinky.std.stdStrings.default
+  - typingsSlinky.std.stdStrings.error
+  - typingsSlinky.std.stdStrings.opaque
+  - typingsSlinky.std.stdStrings.opaqueredirect
 */
 trait ResponseType extends js.Object
 

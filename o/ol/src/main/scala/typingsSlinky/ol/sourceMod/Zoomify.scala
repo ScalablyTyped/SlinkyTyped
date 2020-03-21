@@ -1,7 +1,7 @@
 package typingsSlinky.ol.sourceMod
 
-import typingsSlinky.ol.sourceZoomifyMod.Options
-import typingsSlinky.ol.sourceZoomifyMod.default
+import typingsSlinky.ol.zoomifyMod.Options
+import typingsSlinky.ol.zoomifyMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

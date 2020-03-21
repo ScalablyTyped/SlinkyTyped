@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
   * @see {@link XrmEnum.FormNotificationLevel}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.ERROR
-  - typings.xrm.xrmStrings.INFO
-  - typings.xrm.xrmStrings.WARNING
+  - typingsSlinky.xrm.xrmStrings.ERROR
+  - typingsSlinky.xrm.xrmStrings.INFO
+  - typingsSlinky.xrm.xrmStrings.WARNING
 */
 trait FormNotificationLevel extends js.Object
 

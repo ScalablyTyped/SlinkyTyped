@@ -1,0 +1,44 @@
+package typingsSlinky.awsSdkClientKinesisBrowser
+
+import typingsSlinky.awsSdkClientKinesisBrowser.inputTypesUnionMod.InputTypesUnion
+import typingsSlinky.awsSdkClientKinesisBrowser.kinesisConfigurationMod.KinesisResolvedConfiguration
+import typingsSlinky.awsSdkClientKinesisBrowser.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientKinesisBrowser.typesMergeShardsInputMod.MergeShardsInput
+import typingsSlinky.awsSdkClientKinesisBrowser.typesMergeShardsOutputMod.MergeShardsOutput
+import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
+import typingsSlinky.awsSdkTypes.commandMod.Command
+import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import typingsSlinky.std.Blob
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-kinesis-browser/commands/MergeShardsCommand", JSImport.Namespace)
+@js.native
+object mergeShardsCommandMod extends js.Object {
+  @js.native
+  class MergeShardsCommand protected () extends Command[
+          InputTypesUnion, 
+          MergeShardsInput, 
+          OutputTypesUnion, 
+          MergeShardsOutput, 
+          KinesisResolvedConfiguration, 
+          Blob
+        ] {
+    def this(input: MergeShardsInput) = this()
+    /* CompleteClass */
+    override val input: MergeShardsInput = js.native
+    val middlewareStack: MiddlewareStack[MergeShardsInput, MergeShardsOutput, org.scalajs.dom.raw.Blob] = js.native
+    def resolveMiddleware(
+      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: KinesisResolvedConfiguration
+    ): Handler[MergeShardsInput, MergeShardsOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: KinesisResolvedConfiguration
+    ): Handler[MergeShardsInput, MergeShardsOutput] = js.native
+  }
+  
+}
+

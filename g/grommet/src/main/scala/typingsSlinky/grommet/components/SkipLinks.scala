@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.grommet.Anon_SkipTo
-import typingsSlinky.grommet.componentsSkipLinksMod.SkipLinksProps
+import typingsSlinky.grommet.AnonSkipTo
+import typingsSlinky.grommet.skipLinksMod.SkipLinksProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ object SkipLinks
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  def apply(messages: Anon_SkipTo = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
+  def apply(messages: AnonSkipTo = null, _overrides: StringDictionary[js.Any] = null): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

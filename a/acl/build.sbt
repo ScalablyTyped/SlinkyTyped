@@ -1,27 +1,26 @@
 organization := "org.scalablytyped.slinky"
 name := "acl"
-version := "0.4-dt-20190524Z-6a1d83"
-scalaVersion := "2.12.10"
+version := "0.4-dt-20200226Z-bbac8b"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20191111Z-91d0a2",
-  "org.scalablytyped.slinky" %%% "body-parser" % "1.17-dt-20190819Z-ee62c5",
-  "org.scalablytyped.slinky" %%% "bson" % "4.0-dt-20191119Z-5586f3",
-  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20191217Z-4825ba",
-  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20191101Z-1aa7b6",
-  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20191220Z-040290",
-  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20191126Z-0f6108",
-  "org.scalablytyped.slinky" %%% "mongodb" % "3.3-dt-20191223Z-36c89f",
-  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
-  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-e91b01",
-  "org.scalablytyped.slinky" %%% "redis" % "2.8-dt-20190926Z-3f1ccb",
-  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20190819Z-2c1738",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20200302Z-a7b277",
+  "org.scalablytyped.slinky" %%% "body-parser" % "1.19-dt-20200210Z-ed4596",
+  "org.scalablytyped.slinky" %%% "bson" % "4.0-dt-20200225Z-c3747a",
+  "org.scalablytyped.slinky" %%% "connect" % "v3.4.0-dt-20200226Z-b2d5a0",
+  "org.scalablytyped.slinky" %%% "express" % "4.17-dt-20200227Z-17932f",
+  "org.scalablytyped.slinky" %%% "express-serve-static-core" % "4.17-dt-20200225Z-62466e",
+  "org.scalablytyped.slinky" %%% "mime" % "2.0-dt-20191126Z-e728ff",
+  "org.scalablytyped.slinky" %%% "mongodb" % "3.5-dt-20200302Z-10e7bd",
+  "org.scalablytyped.slinky" %%% "node" % "13.7-dt-20200228Z-eb4e34",
+  "org.scalablytyped.slinky" %%% "range-parser" % "1.2-dt-20181016Z-6f090d",
+  "org.scalablytyped.slinky" %%% "redis" % "2.8-dt-20200218Z-ae4bca",
+  "org.scalablytyped.slinky" %%% "serve-static" % "1.13-dt-20200227Z-3c94e9",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

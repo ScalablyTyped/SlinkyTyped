@@ -7,9 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.extjs.Ext.IClass because Already inherited
-- typings.extjs.Ext.IBase because Already inherited
-- typings.extjs.Ext.IQueryable because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, extend, getInitialConfig, inheritableStatics, initConfig, mixins, requires, self, singleton, statics, uses. Inlined child, down, query, queryBy, queryById */ trait IItem extends IComponent {
+- typingsSlinky.extjs.Ext.IClass because Already inherited
+- typingsSlinky.extjs.Ext.IBase because Already inherited
+- typingsSlinky.extjs.Ext.IQueryable because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, extend, getInitialConfig, inheritableStatics, initConfig, mixins, requires, self, singleton, statics, uses. Inlined child, down, query, queryBy, queryById */ trait IItem extends IComponent {
   /** [Property] (Boolean) */
   var activated: js.UndefOr[Boolean] = js.undefined
   /** [Config Option] (String) */

@@ -1,5 +1,6 @@
 package typingsSlinky.std
 
+import typingsSlinky.std.stdStrings.Event
 import typingsSlinky.std.stdStrings.Events
 import typingsSlinky.std.stdStrings.MouseEvents
 import typingsSlinky.std.stdStrings.MutationEvents
@@ -12,7 +13,7 @@ import scala.scalajs.js.annotation._
 
 @js.native
 trait DocumentEvent extends js.Object {
-  def createEvent(eventInterface: java.lang.String): org.scalajs.dom.raw.Event = js.native
+  def createEvent(eventInterface: java.lang.String): Event_ = js.native
   @JSName("createEvent")
   def createEvent_AnimationEvent(eventInterface: typingsSlinky.std.stdStrings.AnimationEvent): org.scalajs.dom.raw.AnimationEvent = js.native
   @JSName("createEvent")
@@ -40,9 +41,9 @@ trait DocumentEvent extends js.Object {
   @JSName("createEvent")
   def createEvent_ErrorEvent(eventInterface: typingsSlinky.std.stdStrings.ErrorEvent): org.scalajs.dom.raw.ErrorEvent = js.native
   @JSName("createEvent")
-  def createEvent_Event(eventInterface: typingsSlinky.std.stdStrings.Event): org.scalajs.dom.raw.Event = js.native
+  def createEvent_Event(eventInterface: Event): Event_ = js.native
   @JSName("createEvent")
-  def createEvent_Events(eventInterface: Events): org.scalajs.dom.raw.Event = js.native
+  def createEvent_Events(eventInterface: Events): Event_ = js.native
   @JSName("createEvent")
   def createEvent_FocusEvent(eventInterface: typingsSlinky.std.stdStrings.FocusEvent): org.scalajs.dom.raw.FocusEvent = js.native
   @JSName("createEvent")
@@ -76,7 +77,7 @@ trait DocumentEvent extends js.Object {
   @JSName("createEvent")
   def createEvent_MediaStreamErrorEvent(eventInterface: typingsSlinky.std.stdStrings.MediaStreamErrorEvent): MediaStreamErrorEvent = js.native
   @JSName("createEvent")
-  def createEvent_MediaStreamEvent(eventInterface: typingsSlinky.std.stdStrings.MediaStreamEvent): org.scalajs.dom.experimental.webrtc.MediaStreamEvent = js.native
+  def createEvent_MediaStreamEvent(eventInterface: typingsSlinky.std.stdStrings.MediaStreamEvent): MediaStreamEvent = js.native
   @JSName("createEvent")
   def createEvent_MediaStreamTrackEvent(eventInterface: typingsSlinky.std.stdStrings.MediaStreamTrackEvent): org.scalajs.dom.experimental.mediastream.MediaStreamTrackEvent = js.native
   @JSName("createEvent")
@@ -86,9 +87,9 @@ trait DocumentEvent extends js.Object {
   @JSName("createEvent")
   def createEvent_MouseEvents(eventInterface: MouseEvents): org.scalajs.dom.raw.MouseEvent = js.native
   @JSName("createEvent")
-  def createEvent_MutationEvent(eventInterface: typingsSlinky.std.stdStrings.MutationEvent): org.scalajs.dom.raw.MutationEvent = js.native
+  def createEvent_MutationEvent(eventInterface: typingsSlinky.std.stdStrings.MutationEvent): MutationEvent = js.native
   @JSName("createEvent")
-  def createEvent_MutationEvents(eventInterface: MutationEvents): org.scalajs.dom.raw.MutationEvent = js.native
+  def createEvent_MutationEvents(eventInterface: MutationEvents): MutationEvent = js.native
   @JSName("createEvent")
   def createEvent_OfflineAudioCompletionEvent(eventInterface: typingsSlinky.std.stdStrings.OfflineAudioCompletionEvent): org.scalajs.dom.raw.OfflineAudioCompletionEvent = js.native
   @JSName("createEvent")
@@ -132,15 +133,13 @@ trait DocumentEvent extends js.Object {
   @JSName("createEvent")
   def createEvent_RTCTrackEvent(eventInterface: typingsSlinky.std.stdStrings.RTCTrackEvent): RTCTrackEvent = js.native
   @JSName("createEvent")
-  def createEvent_SVGZoomEvent(eventInterface: typingsSlinky.std.stdStrings.SVGZoomEvent): org.scalajs.dom.raw.SVGZoomEvent = js.native
+  def createEvent_SVGZoomEvent(eventInterface: typingsSlinky.std.stdStrings.SVGZoomEvent): SVGZoomEvent = js.native
   @JSName("createEvent")
-  def createEvent_SVGZoomEvents(eventInterface: SVGZoomEvents): org.scalajs.dom.raw.SVGZoomEvent = js.native
+  def createEvent_SVGZoomEvents(eventInterface: SVGZoomEvents): SVGZoomEvent = js.native
   @JSName("createEvent")
   def createEvent_SecurityPolicyViolationEvent(eventInterface: typingsSlinky.std.stdStrings.SecurityPolicyViolationEvent): SecurityPolicyViolationEvent = js.native
   @JSName("createEvent")
-  def createEvent_ServiceWorkerMessageEvent(eventInterface: typingsSlinky.std.stdStrings.ServiceWorkerMessageEvent): org.scalajs.dom.experimental.serviceworkers.ServiceWorkerMessageEvent = js.native
-  @JSName("createEvent")
-  def createEvent_SpeechRecognitionError(eventInterface: typingsSlinky.std.stdStrings.SpeechRecognitionError): SpeechRecognitionError = js.native
+  def createEvent_ServiceWorkerMessageEvent(eventInterface: typingsSlinky.std.stdStrings.ServiceWorkerMessageEvent): ServiceWorkerMessageEvent = js.native
   @JSName("createEvent")
   def createEvent_SpeechRecognitionEvent(eventInterface: typingsSlinky.std.stdStrings.SpeechRecognitionEvent): SpeechRecognitionEvent = js.native
   @JSName("createEvent")

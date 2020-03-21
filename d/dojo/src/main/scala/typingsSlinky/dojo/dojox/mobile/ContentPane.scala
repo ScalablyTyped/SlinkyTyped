@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.mobile
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.`lazy`
 import typingsSlinky.dojo.dojoStrings.content
 import typingsSlinky.dojo.dojoStrings.executeScripts
@@ -26,8 +26,8 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dojox.mobile._ExecScriptMixin because Inheritance from two classes. Inlined 
-- typings.dojo.dojox.mobile._ContentPaneMixin because Inheritance from two classes. Inlined content, executeScripts, href, `lazy`, parseOnLoad, prog, errorHandler, execScript, load, loadHandler, onLoad */ @JSGlobal("dojox.mobile.ContentPane")
+- typingsSlinky.dojo.dojox.mobile.ExecScriptMixin because Inheritance from two classes. Inlined 
+- typingsSlinky.dojo.dojox.mobile.ContentPaneMixin because Inheritance from two classes. Inlined content, executeScripts, href, `lazy`, parseOnLoad, prog, errorHandler, execScript, load, loadHandler, onLoad */ @JSGlobal("dojox.mobile.ContentPane")
 @js.native
 class ContentPane () extends Container {
   def this(params: js.Object) = this()
@@ -127,7 +127,7 @@ class ContentPane () extends Container {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_executeScripts(
     property: executeScripts,
@@ -137,7 +137,7 @@ class ContentPane () extends Container {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_href(
     property: href,
@@ -147,7 +147,7 @@ class ContentPane () extends Container {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_lazy(
     property: `lazy`,
@@ -157,7 +157,7 @@ class ContentPane () extends Container {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_parseOnLoad(
     property: parseOnLoad,
@@ -167,7 +167,7 @@ class ContentPane () extends Container {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_prog(
     property: prog,
@@ -177,6 +177,6 @@ class ContentPane () extends Container {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

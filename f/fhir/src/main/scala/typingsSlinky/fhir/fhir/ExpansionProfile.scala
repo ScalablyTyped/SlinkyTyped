@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Defines behaviour and contraints on the ValueSet Expansion operation
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait ExpansionProfile extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait ExpansionProfile extends DomainResource {
   /**
     * Contains extended information for property 'activeOnly'.
     */

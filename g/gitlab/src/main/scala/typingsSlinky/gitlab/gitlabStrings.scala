@@ -1,10 +1,10 @@
 package typingsSlinky.gitlab
 
-import typingsSlinky.gitlab.distTypesCoreServicesJobsMod.JobScope
-import typingsSlinky.gitlab.distTypesCoreServicesNotificationSettingsMod.NotificationSettingLevel
-import typingsSlinky.gitlab.distTypesCoreServicesServicesMod.SupportedService
-import typingsSlinky.gitlab.distTypesCoreServicesSnippetsMod.SnippetVisibility
-import typingsSlinky.gitlab.distTypesCoreServicesUserImpersonationTokensMod.ImpersonationTokenScope
+import typingsSlinky.gitlab.jobsMod.JobScope
+import typingsSlinky.gitlab.notificationSettingsMod.NotificationSettingLevel
+import typingsSlinky.gitlab.servicesServicesMod.SupportedService
+import typingsSlinky.gitlab.snippetsMod.SnippetVisibility
+import typingsSlinky.gitlab.userImpersonationTokensMod.ImpersonationTokenScope
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

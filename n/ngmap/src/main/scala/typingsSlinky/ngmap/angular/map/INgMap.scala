@@ -3,7 +3,7 @@ package typingsSlinky.ngmap.angular.map
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.PositionOptions
-import typingsSlinky.angular.angularMod.IPromise
+import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.googlemaps.google.maps.LatLng
 import typingsSlinky.googlemaps.google.maps.Map
 import scala.scalajs.js

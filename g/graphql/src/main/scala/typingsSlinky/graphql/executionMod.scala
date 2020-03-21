@@ -1,16 +1,16 @@
 package typingsSlinky.graphql
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.executionExecuteMod.ExecutionArgs
-import typingsSlinky.graphql.executionExecuteMod.ExecutionResult
-import typingsSlinky.graphql.jsutilsPathMod.Path
-import typingsSlinky.graphql.jsutilsPromiseOrValueMod.PromiseOrValue
-import typingsSlinky.graphql.languageAstMod.DocumentNode
-import typingsSlinky.graphql.tsutilsMaybeMod.Maybe
-import typingsSlinky.graphql.typeDefinitionMod.GraphQLFieldResolver
-import typingsSlinky.graphql.typeDefinitionMod.GraphQLTypeResolver
-import typingsSlinky.graphql.typeDirectivesMod.GraphQLDirective
-import typingsSlinky.graphql.typeSchemaMod.GraphQLSchema
+import typingsSlinky.graphql.astMod.DocumentNode
+import typingsSlinky.graphql.definitionMod.GraphQLFieldResolver
+import typingsSlinky.graphql.definitionMod.GraphQLTypeResolver
+import typingsSlinky.graphql.directivesMod.GraphQLDirective
+import typingsSlinky.graphql.executeMod.ExecutionArgs
+import typingsSlinky.graphql.executeMod.ExecutionResult
+import typingsSlinky.graphql.maybeMod.Maybe
+import typingsSlinky.graphql.pathMod.Path
+import typingsSlinky.graphql.promiseOrValueMod.PromiseOrValue
+import typingsSlinky.graphql.schemaMod.GraphQLSchema
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -31,8 +31,8 @@ object executionMod extends js.Object {
     fieldResolver: js.UndefOr[Maybe[GraphQLFieldResolver[_, _, StringDictionary[_]]]],
     typeResolver: js.UndefOr[Maybe[GraphQLTypeResolver[_, _, StringDictionary[_]]]]
   ): PromiseOrValue[ExecutionResult[TData]] = js.native
-  def getDirectiveValues(directiveDef: GraphQLDirective, node: Anon_Directives): js.UndefOr[StringDictionary[js.Any]] = js.native
-  def getDirectiveValues(directiveDef: GraphQLDirective, node: Anon_Directives, variableValues: Maybe[StringDictionary[_]]): js.UndefOr[StringDictionary[js.Any]] = js.native
+  def getDirectiveValues(directiveDef: GraphQLDirective, node: AnonDirectives): js.UndefOr[StringDictionary[js.Any]] = js.native
+  def getDirectiveValues(directiveDef: GraphQLDirective, node: AnonDirectives, variableValues: Maybe[StringDictionary[_]]): js.UndefOr[StringDictionary[js.Any]] = js.native
   def responsePathAsArray(path: Path): js.Array[String | Double] = js.native
 }
 

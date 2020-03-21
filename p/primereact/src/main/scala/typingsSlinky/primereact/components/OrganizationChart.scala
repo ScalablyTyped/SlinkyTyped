@@ -5,15 +5,18 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_Node
-import typingsSlinky.primereact.componentsOrganizationchartOrganizationChartMod.OrganizationChartNodeData
-import typingsSlinky.primereact.componentsOrganizationchartOrganizationChartMod.OrganizationChartProps
+import typingsSlinky.primereact.AnonNode
+import typingsSlinky.primereact.organizationChartMod.OrganizationChartNodeData
+import typingsSlinky.primereact.organizationChartMod.OrganizationChartProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object OrganizationChart
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.organizationchartMod.OrganizationChart] {
+  extends ExternalComponentWithAttributesWithRefType[
+      tag.type, 
+      typingsSlinky.primereact.primereactOrganizationchartMod.OrganizationChart
+    ] {
   @JSImport("primereact/organizationchart", "OrganizationChart")
   @js.native
   object componentImport extends js.Object
@@ -22,15 +25,18 @@ object OrganizationChart
   /* The following DOM/SVG props were specified: className, id */
   def apply(
     nodeTemplate: /* node */ OrganizationChartNodeData => TagMod[Any] = null,
-    onNodeSelect: /* e */ Anon_Node => Unit = null,
-    onNodeUnselect: /* e */ Anon_Node => Unit = null,
+    onNodeSelect: /* e */ AnonNode => Unit = null,
+    onNodeUnselect: /* e */ AnonNode => Unit = null,
     selection: js.Any = null,
     selectionChange: /* data */ js.Any => Unit = null,
     selectionMode: String = null,
     style: js.Object = null,
     value: js.Array[OrganizationChartNodeData] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.organizationchartMod.OrganizationChart] = {
+  ): BuildingComponent[
+    tag.type, 
+    typingsSlinky.primereact.primereactOrganizationchartMod.OrganizationChart
+  ] = {
     val __obj = js.Dynamic.literal()
     if (nodeTemplate != null) __obj.updateDynamic("nodeTemplate")(js.Any.fromFunction1(nodeTemplate))
     if (onNodeSelect != null) __obj.updateDynamic("onNodeSelect")(js.Any.fromFunction1(onNodeSelect))
@@ -43,9 +49,12 @@ object OrganizationChart
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.organizationchartMod.OrganizationChart] = new slinky.core.BuildingComponent[
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[
+    tag.type, 
+    typingsSlinky.primereact.primereactOrganizationchartMod.OrganizationChart
+  ] = new slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.organizationchartMod.OrganizationChart](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  typingsSlinky.primereact.primereactOrganizationchartMod.OrganizationChart](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = OrganizationChartProps
 }
 

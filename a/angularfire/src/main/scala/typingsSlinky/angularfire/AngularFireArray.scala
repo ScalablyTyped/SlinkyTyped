@@ -1,7 +1,7 @@
 package typingsSlinky.angularfire
 
-import typingsSlinky.angular.angularMod.IHttpPromise
-import typingsSlinky.angular.angularMod.IPromise
+import typingsSlinky.angular.mod.IHttpPromise
+import typingsSlinky.angular.mod.IPromise
 import typingsSlinky.std.Array
 import scala.scalajs.js
 import scala.scalajs.js.`|`

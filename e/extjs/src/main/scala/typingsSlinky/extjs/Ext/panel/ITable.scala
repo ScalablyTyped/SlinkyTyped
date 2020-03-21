@@ -7,9 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.extjs.Ext.IClass because Already inherited
-- typings.extjs.Ext.IBase because Already inherited
-- typings.extjs.Ext.grid.locking.ILockable because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, extend, getInitialConfig, inheritableStatics, initConfig, mixins, requires, self, singleton, statics, uses. Inlined lockedGridConfig, lockedViewConfig, normalGridConfig, normalViewConfig, scrollDelta, subGridXType, syncRowHeight, syncRowHeights */ trait ITable extends IPanel {
+- typingsSlinky.extjs.Ext.IClass because Already inherited
+- typingsSlinky.extjs.Ext.IBase because Already inherited
+- typingsSlinky.extjs.Ext.grid.locking.ILockable because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, extend, getInitialConfig, inheritableStatics, initConfig, mixins, requires, self, singleton, statics, uses. Inlined lockedGridConfig, lockedViewConfig, normalGridConfig, normalViewConfig, scrollDelta, subGridXType, syncRowHeight, syncRowHeights */ trait ITable extends IPanel {
   /** [Method] Invoked after the Panel is Collapsed  */
   @JSName("afterCollapse")
   var afterCollapse_ITable: js.UndefOr[js.Function0[Unit]] = js.undefined

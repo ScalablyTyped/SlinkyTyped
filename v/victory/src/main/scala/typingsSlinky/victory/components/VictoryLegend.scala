@@ -6,39 +6,37 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.victory.Anon_Left
-import typingsSlinky.victory.Anon_Name
-import typingsSlinky.victory.Anon_XY
-import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.victoryMod.AnimatePropTypeInterface
-import typingsSlinky.victory.victoryMod.BlockProps
-import typingsSlinky.victory.victoryMod.CategoryPropType
-import typingsSlinky.victory.victoryMod.ColorScalePropType
-import typingsSlinky.victory.victoryMod.D3Scale
-import typingsSlinky.victory.victoryMod.DataGetterPropType
-import typingsSlinky.victory.victoryMod.DomainPropType
-import typingsSlinky.victory.victoryMod.EventPropTypeInterface
-import typingsSlinky.victory.victoryMod.Omit
-import typingsSlinky.victory.victoryMod.OrientationTypes
-import typingsSlinky.victory.victoryMod.PaddingProps
-import typingsSlinky.victory.victoryMod.ScalePropType
-import typingsSlinky.victory.victoryMod.StringOrNumberOrCallback
-import typingsSlinky.victory.victoryMod.VictoryLegendProps
-import typingsSlinky.victory.victoryMod.VictoryStyleInterface
-import typingsSlinky.victory.victoryMod.VictoryThemeDefinition
+import typingsSlinky.victory.Anon1
+import typingsSlinky.victory.AnonLeft
+import typingsSlinky.victory.AnonName
+import typingsSlinky.victory.AnonXBoolean
+import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.OmitBlockPropsleftright
+import typingsSlinky.victory.mod.AnimatePropTypeInterface
+import typingsSlinky.victory.mod.CategoryPropType
+import typingsSlinky.victory.mod.ColorScalePropType
+import typingsSlinky.victory.mod.D3Scale
+import typingsSlinky.victory.mod.DataGetterPropType
+import typingsSlinky.victory.mod.DomainPropType
+import typingsSlinky.victory.mod.EventPropTypeInterface
+import typingsSlinky.victory.mod.OrientationTypes
+import typingsSlinky.victory.mod.PaddingProps
+import typingsSlinky.victory.mod.ScalePropType
+import typingsSlinky.victory.mod.StringOrNumberOrCallback
+import typingsSlinky.victory.mod.VictoryLegendProps
+import typingsSlinky.victory.mod.VictoryStyleInterface
+import typingsSlinky.victory.mod.VictoryThemeDefinition
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.horizontal
 import typingsSlinky.victory.victoryStrings.labels
-import typingsSlinky.victory.victoryStrings.left
 import typingsSlinky.victory.victoryStrings.parent
-import typingsSlinky.victory.victoryStrings.right
 import typingsSlinky.victory.victoryStrings.vertical
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VictoryLegend
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.VictoryLegend] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryLegend] {
   @JSImport("victory", "VictoryLegend")
   @js.native
   object componentImport extends js.Object
@@ -53,25 +51,26 @@ object VictoryLegend
     centerTitle: js.UndefOr[Boolean] = js.undefined,
     colorScale: ColorScalePropType = null,
     containerComponent: ReactElement = null,
-    data: js.Array[Anon_Name] = null,
+    data: js.Array[AnonName] = null,
     dataComponent: ReactElement = null,
     domain: DomainPropType = null,
     eventKey: StringOrNumberOrCallback | js.Array[String] = null,
     events: js.Array[EventPropTypeInterface[data | labels | parent, StringOrNumberOrCallback]] = null,
     externalEventMutations: js.Array[_] = null,
     groupComponent: ReactElement = null,
-    gutter: Double | Anon_Left = null,
+    gutter: Double | AnonLeft = null,
     height: Int | Double = null,
     horizontal: js.UndefOr[Boolean] = js.undefined,
     itemsPerRow: Int | Double = null,
     label: String | (js.Function1[/* data */ js.Any, String]) = null,
     labelComponent: ReactElement = null,
-    maxDomain: Double | Anon_XY = null,
-    minDomain: Double | Anon_XY = null,
+    maxDomain: Double | AnonY = null,
+    minDomain: Double | AnonY = null,
     orientation: horizontal | vertical = null,
     padding: PaddingProps = null,
-    rowGutter: Double | (Omit[BlockProps, left | right]) = null,
-    scale: ScalePropType | D3Scale | Anon_XYD3Scale = null,
+    rowGutter: Double | OmitBlockPropsleftright = null,
+    scale: ScalePropType | D3Scale | Anon1 = null,
+    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
     standalone: js.UndefOr[Boolean] = js.undefined,
     style: VictoryStyleInterface = null,
     symbolSpacer: Int | Double = null,
@@ -84,7 +83,7 @@ object VictoryLegend
     y: Int | Double = null,
     y0: DataGetterPropType = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryLegend] = {
+  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryLegend] = {
     val __obj = js.Dynamic.literal()
     if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
     if (borderComponent != null) __obj.updateDynamic("borderComponent")(borderComponent.asInstanceOf[js.Any])
@@ -112,6 +111,7 @@ object VictoryLegend
     if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
     if (rowGutter != null) __obj.updateDynamic("rowGutter")(rowGutter.asInstanceOf[js.Any])
     if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
     if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (symbolSpacer != null) __obj.updateDynamic("symbolSpacer")(symbolSpacer.asInstanceOf[js.Any])
@@ -126,7 +126,7 @@ object VictoryLegend
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryLegend] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.VictoryLegend](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryLegend] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryLegend](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryLegendProps
 }
 

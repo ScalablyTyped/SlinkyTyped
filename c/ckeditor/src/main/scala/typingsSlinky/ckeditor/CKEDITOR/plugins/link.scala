@@ -1,7 +1,7 @@
 package typingsSlinky.ckeditor.CKEDITOR.plugins
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ckeditor.Anon_Key
+import typingsSlinky.ckeditor.AnonSet
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
 import typingsSlinky.ckeditor.CKEDITOR.editor
 import scala.scalajs.js
@@ -18,7 +18,7 @@ object link extends js.Object {
   // DEPRECATED 4.3.3
   val synAnchorSelector: Boolean = js.native
   def getEditorAnchors(editor: editor): js.Array[element] = js.native
-  def getLinkAttributes(editor: editor, data: StringDictionary[js.Any]): Anon_Key = js.native
+  def getLinkAttributes(editor: editor, data: StringDictionary[js.Any]): AnonSet = js.native
   def getSelectedLink(editor: editor): element | js.Array[element] = js.native
   def getSelectedLink(editor: editor, returnMultiple: Boolean): element | js.Array[element] = js.native
   def parseLinkAttributes(editor: editor, element: element): StringDictionary[js.Any] = js.native

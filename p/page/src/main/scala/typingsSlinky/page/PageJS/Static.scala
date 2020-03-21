@@ -1,6 +1,6 @@
 package typingsSlinky.page.PageJS
 
-import typingsSlinky.std.Partial
+import typingsSlinky.page.PartialOptions
 import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -47,7 +47,7 @@ trait Static extends js.Object {
     *
     * If you wish to load serve initial content from the server you likely will want to set dispatch to false.
     */
-  def apply(options: Partial[Options]): Unit = js.native
+  def apply(options: PartialOptions): Unit = js.native
   /**
     *  Navigate to the given path.
     *
@@ -167,7 +167,7 @@ trait Static extends js.Object {
     *
     * Identical to page([options]).
     */
-  def start(options: Partial[Options]): Unit = js.native
+  def start(options: PartialOptions): Unit = js.native
   /**
     * Unbind both the popstate and click handlers.
     */

@@ -1,8 +1,8 @@
 package typingsSlinky.ol
 
+import typingsSlinky.ol.circleMod.default
 import typingsSlinky.ol.coordinateMod.Coordinate
-import typingsSlinky.ol.geomCircleMod.default
-import typingsSlinky.ol.geomGeometryLayoutMod.GeometryLayout
+import typingsSlinky.ol.geometryLayoutMod.GeometryLayout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,26 +18,39 @@ object geomMod extends js.Object {
   }
   
   @js.native
-  class Geometry ()
-    extends typingsSlinky.ol.geomGeometryMod.default
+  abstract class Geometry ()
+    extends typingsSlinky.ol.geometryMod.default
+  
+  @js.native
+  class GeometryCollection ()
+    extends typingsSlinky.ol.geometryCollectionMod.default {
+    def this(opt_geometries: js.Array[typingsSlinky.ol.geometryMod.default]) = this()
+  }
   
   @js.native
   class LineString protected ()
-    extends typingsSlinky.ol.geomLineStringMod.default {
+    extends typingsSlinky.ol.lineStringMod.default {
+    def this(coordinates: js.Array[Coordinate | Double]) = this()
+    def this(coordinates: js.Array[Coordinate | Double], opt_layout: GeometryLayout) = this()
+  }
+  
+  @js.native
+  class LinearRing protected ()
+    extends typingsSlinky.ol.linearRingMod.default {
     def this(coordinates: js.Array[Coordinate | Double]) = this()
     def this(coordinates: js.Array[Coordinate | Double], opt_layout: GeometryLayout) = this()
   }
   
   @js.native
   class MultiLineString protected ()
-    extends typingsSlinky.ol.geomMultiLineStringMod.default {
-    def this(coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.geomLineStringMod.default]) = this()
+    extends typingsSlinky.ol.multiLineStringMod.default {
+    def this(coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.lineStringMod.default]) = this()
     def this(
-      coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.geomLineStringMod.default],
+      coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.lineStringMod.default],
       opt_layout: GeometryLayout
     ) = this()
     def this(
-      coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.geomLineStringMod.default],
+      coordinates: js.Array[js.Array[Coordinate] | Double | typingsSlinky.ol.lineStringMod.default],
       opt_layout: GeometryLayout,
       opt_ends: js.Array[Double]
     ) = this()
@@ -45,27 +58,21 @@ object geomMod extends js.Object {
   
   @js.native
   class MultiPoint protected ()
-    extends typingsSlinky.ol.geomMultiPointMod.default {
+    extends typingsSlinky.ol.multiPointMod.default {
     def this(coordinates: js.Array[Coordinate | Double]) = this()
     def this(coordinates: js.Array[Coordinate | Double], opt_layout: GeometryLayout) = this()
   }
   
   @js.native
   class MultiPolygon protected ()
-    extends typingsSlinky.ol.geomMultiPolygonMod.default {
-    def this(coordinates: js.Array[
-            js.Array[js.Array[Coordinate]] | Double | typingsSlinky.ol.geomPolygonMod.default
-          ]) = this()
+    extends typingsSlinky.ol.multiPolygonMod.default {
+    def this(coordinates: js.Array[js.Array[js.Array[Coordinate]] | Double | typingsSlinky.ol.polygonMod.default]) = this()
     def this(
-      coordinates: js.Array[
-            js.Array[js.Array[Coordinate]] | Double | typingsSlinky.ol.geomPolygonMod.default
-          ],
+      coordinates: js.Array[js.Array[js.Array[Coordinate]] | Double | typingsSlinky.ol.polygonMod.default],
       opt_layout: GeometryLayout
     ) = this()
     def this(
-      coordinates: js.Array[
-            js.Array[js.Array[Coordinate]] | Double | typingsSlinky.ol.geomPolygonMod.default
-          ],
+      coordinates: js.Array[js.Array[js.Array[Coordinate]] | Double | typingsSlinky.ol.polygonMod.default],
       opt_layout: GeometryLayout,
       opt_endss: js.Array[js.Array[Double]]
     ) = this()
@@ -73,14 +80,14 @@ object geomMod extends js.Object {
   
   @js.native
   class Point protected ()
-    extends typingsSlinky.ol.geomPointMod.default {
+    extends typingsSlinky.ol.pointMod.default {
     def this(coordinates: Coordinate) = this()
     def this(coordinates: Coordinate, opt_layout: GeometryLayout) = this()
   }
   
   @js.native
   class Polygon protected ()
-    extends typingsSlinky.ol.geomPolygonMod.default {
+    extends typingsSlinky.ol.polygonMod.default {
     def this(coordinates: js.Array[js.Array[Coordinate] | Double]) = this()
     def this(coordinates: js.Array[js.Array[Coordinate] | Double], opt_layout: GeometryLayout) = this()
     def this(

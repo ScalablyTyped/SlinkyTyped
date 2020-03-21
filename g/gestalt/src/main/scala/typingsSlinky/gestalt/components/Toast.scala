@@ -6,17 +6,17 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.gestaltMod.ToastProps
 import typingsSlinky.gestalt.gestaltStrings.`arrow-circle-forward`
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.orange
 import typingsSlinky.gestalt.gestaltStrings.red
+import typingsSlinky.gestalt.mod.ToastProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Toast
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Toast] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Toast] {
   @JSImport("gestalt", "Toast")
   @js.native
   object componentImport extends js.Object
@@ -28,7 +28,7 @@ object Toast
     text: String | js.Array[String] = null,
     thumbnail: ReactElement = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Toast] = {
+  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Toast] = {
     val __obj = js.Dynamic.literal()
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (icon != null) __obj.updateDynamic("icon")(icon.asInstanceOf[js.Any])
@@ -37,7 +37,7 @@ object Toast
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Toast] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.gestaltMod.Toast](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Toast] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.mod.Toast](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ToastProps
 }
 

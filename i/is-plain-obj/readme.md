@@ -1,7 +1,7 @@
 
 # Scala.js typings for is-plain-obj
 
-Typings are for version 2.0.0
+Typings are for version 2.1.0
 
 ## Library description:
 Check if a value is a plain object
@@ -11,8 +11,8 @@ Check if a value is a plain object
 | Full name          | is-plain-obj |
 | Keywords           | object, is, check, test, type, plain, vanilla, pure, simple |
 | # releases         | 2 |
-| # dependents       | 215 |
-| # downloads        | 252680888 |
+| # dependents       | 219 |
+| # downloads        | 272725028 |
 | # stars            | 3 |
 
 ## Links

@@ -1,6 +1,6 @@
 package typingsSlinky.ethers
 
-import typingsSlinky.ethers.distTypesUtilsTypesMod.SupportedAlgorithms
+import typingsSlinky.ethers.typesMod.SupportedAlgorithms
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

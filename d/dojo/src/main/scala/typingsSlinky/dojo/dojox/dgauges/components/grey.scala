@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.dgauges.components
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.animationDuration
 import typingsSlinky.dojo.dojoStrings.borderColor
 import typingsSlinky.dojo.dojoStrings.fillColor
@@ -32,7 +32,7 @@ object grey extends js.Object {
     * @param node
     */
   /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-  - typings.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
+  - typingsSlinky.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
   class CircularLinearGauge protected () extends CircularGauge {
     def this(args: js.Any, node: js.Any) = this()
     /**
@@ -172,7 +172,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_borderColor(
       property: borderColor,
@@ -182,7 +182,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_fillColor(
       property: fillColor,
@@ -192,7 +192,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_indicatorColor(
       property: indicatorColor,
@@ -202,7 +202,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_interactionArea(
       property: interactionArea,
@@ -212,7 +212,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[String], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_interactionMode(
       property: interactionMode,
@@ -222,7 +222,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[String], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_majorTickInterval(
       property: majorTickInterval,
@@ -232,7 +232,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_maximum(
       property: maximum,
@@ -242,7 +242,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minimum(
       property: minimum,
@@ -252,7 +252,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minorTickInterval(
       property: minorTickInterval,
@@ -262,7 +262,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minorTicksEnabled(
       property: minorTicksEnabled,
@@ -272,7 +272,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Boolean], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_snapInterval(
       property: snapInterval,
@@ -282,7 +282,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
   }
   
   /**
@@ -292,7 +292,7 @@ object grey extends js.Object {
     *
     */
   /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-  - typings.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
+  - typingsSlinky.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
   class HorizontalLinearGauge () extends RectangularGauge {
     /**
       * The duration of the value change animation in milliseconds. Default is 0.
@@ -427,7 +427,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_borderColor(
       property: borderColor,
@@ -437,7 +437,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_fillColor(
       property: fillColor,
@@ -447,7 +447,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_indicatorColor(
       property: indicatorColor,
@@ -457,7 +457,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_interactionArea(
       property: interactionArea,
@@ -467,7 +467,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[String], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_interactionMode(
       property: interactionMode,
@@ -477,7 +477,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[String], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_majorTickInterval(
       property: majorTickInterval,
@@ -487,7 +487,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_maximum(
       property: maximum,
@@ -497,7 +497,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minimum(
       property: minimum,
@@ -507,7 +507,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minorTickInterval(
       property: minorTickInterval,
@@ -517,7 +517,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minorTicksEnabled(
       property: minorTicksEnabled,
@@ -527,7 +527,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Boolean], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_snapInterval(
       property: snapInterval,
@@ -537,7 +537,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
   }
   
   /**
@@ -549,7 +549,7 @@ object grey extends js.Object {
     * @param node
     */
   /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-  - typings.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
+  - typingsSlinky.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
   class SemiCircularLinearGauge protected () extends CircularGauge {
     def this(args: js.Any, node: js.Any) = this()
     /**
@@ -689,7 +689,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_borderColor(
       property: borderColor,
@@ -699,7 +699,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_fillColor(
       property: fillColor,
@@ -709,7 +709,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_indicatorColor(
       property: indicatorColor,
@@ -719,7 +719,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_interactionArea(
       property: interactionArea,
@@ -729,7 +729,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[String], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_interactionMode(
       property: interactionMode,
@@ -739,7 +739,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[String], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_majorTickInterval(
       property: majorTickInterval,
@@ -749,7 +749,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_maximum(
       property: maximum,
@@ -759,7 +759,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minimum(
       property: minimum,
@@ -769,7 +769,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minorTickInterval(
       property: minorTickInterval,
@@ -779,7 +779,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minorTicksEnabled(
       property: minorTicksEnabled,
@@ -789,7 +789,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Boolean], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_snapInterval(
       property: snapInterval,
@@ -799,7 +799,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
   }
   
   /**
@@ -809,7 +809,7 @@ object grey extends js.Object {
     *
     */
   /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-  - typings.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
+  - typingsSlinky.dojo.dojox.dgauges.components.DefaultPropertiesMixin because Inheritance from two classes. Inlined animationDuration, interactionArea, interactionMode, majorTickInterval, maximum, minimum, minorTickInterval, minorTicksEnabled, snapInterval */ @js.native
   class VerticalLinearGauge () extends RectangularGauge {
     /**
       * The duration of the value change animation in milliseconds. Default is 0.
@@ -944,7 +944,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_borderColor(
       property: borderColor,
@@ -954,7 +954,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_fillColor(
       property: fillColor,
@@ -964,7 +964,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_indicatorColor(
       property: indicatorColor,
@@ -974,7 +974,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_interactionArea(
       property: interactionArea,
@@ -984,7 +984,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[String], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_interactionMode(
       property: interactionMode,
@@ -994,7 +994,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[String], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_majorTickInterval(
       property: majorTickInterval,
@@ -1004,7 +1004,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_maximum(
       property: maximum,
@@ -1014,7 +1014,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minimum(
       property: minimum,
@@ -1024,7 +1024,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minorTickInterval(
       property: minorTickInterval,
@@ -1034,7 +1034,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_minorTicksEnabled(
       property: minorTicksEnabled,
@@ -1044,7 +1044,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Boolean], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_snapInterval(
       property: snapInterval,
@@ -1054,7 +1054,7 @@ object grey extends js.Object {
           /* newValue */ js.UndefOr[Double], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
   }
   
 }

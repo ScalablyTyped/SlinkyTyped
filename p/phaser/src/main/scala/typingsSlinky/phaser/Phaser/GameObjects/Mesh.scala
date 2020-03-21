@@ -2,7 +2,6 @@ package typingsSlinky.phaser.Phaser.GameObjects
 
 import typingsSlinky.phaser.Phaser.GameObjects.Components.BlendMode
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Depth
-import typingsSlinky.phaser.Phaser.GameObjects.Components.GetBounds
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Mask
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Pipeline
 import typingsSlinky.phaser.Phaser.GameObjects.Components.ScrollFactor
@@ -26,7 +25,6 @@ class Mesh protected ()
   extends GameObject
      with BlendMode
      with Depth
-     with GetBounds
      with Mask
      with Pipeline
      with Size

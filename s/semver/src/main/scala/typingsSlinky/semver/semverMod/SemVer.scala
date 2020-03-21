@@ -1,5 +1,7 @@
 package typingsSlinky.semver.semverMod
 
+import typingsSlinky.semver.mod.Options
+import typingsSlinky.semver.mod.ReleaseType
 import typingsSlinky.semver.semverNumbers.`-1`
 import typingsSlinky.semver.semverNumbers.`0`
 import typingsSlinky.semver.semverNumbers.`1`
@@ -7,15 +9,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("semver", "SemVer")
 @js.native
-class SemVer protected () extends js.Object {
-  def this(version: String) = this()
-  def this(version: SemVer) = this()
-  def this(version: String, optionsOrLoose: Boolean) = this()
-  def this(version: String, optionsOrLoose: Options) = this()
-  def this(version: SemVer, optionsOrLoose: Boolean) = this()
-  def this(version: SemVer, optionsOrLoose: Options) = this()
+trait SemVer extends js.Object {
   var build: js.Array[String] = js.native
   var loose: Boolean = js.native
   var major: Double = js.native

@@ -1,10 +1,10 @@
 package typingsSlinky.mocha
 
-import typingsSlinky.mocha.Mocha.HookFunction
-import typingsSlinky.mocha.Mocha.PendingSuiteFunction
-import typingsSlinky.mocha.Mocha.PendingTestFunction
-import typingsSlinky.mocha.Mocha.SuiteFunction
-import typingsSlinky.mocha.Mocha.TestFunction
+import typingsSlinky.mocha.Mocha_.HookFunction
+import typingsSlinky.mocha.Mocha_.PendingSuiteFunction
+import typingsSlinky.mocha.Mocha_.PendingTestFunction
+import typingsSlinky.mocha.Mocha_.SuiteFunction
+import typingsSlinky.mocha.Mocha_.TestFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

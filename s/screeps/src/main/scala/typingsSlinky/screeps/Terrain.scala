@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation._
   */
 // Extras
 /* Rewritten from type alias, can be one of: 
-  - typings.screeps.screepsStrings.plain
-  - typings.screeps.screepsStrings.swamp
-  - typings.screeps.screepsStrings.wall
+  - typingsSlinky.screeps.screepsStrings.plain
+  - typingsSlinky.screeps.screepsStrings.swamp
+  - typingsSlinky.screeps.screepsStrings.wall
 */
 trait Terrain extends js.Object
 

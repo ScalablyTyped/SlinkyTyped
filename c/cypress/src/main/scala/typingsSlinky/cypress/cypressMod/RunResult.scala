@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.cypressMod
 
-import typingsSlinky.cypress.Anon_Absolute
-import typingsSlinky.cypress.Anon_Failures
+import typingsSlinky.cypress.AnonAbsolute
+import typingsSlinky.cypress.AnonFailures
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,11 +26,11 @@ trait RunResult extends js.Object {
   /**
     * information about the spec test file.
     */
-  var spec: Anon_Absolute
+  var spec: AnonAbsolute
   /**
     * Accurate test results collected by Cypress.
     */
-  var stats: Anon_Failures
+  var stats: AnonFailures
   var tests: js.Array[TestResult]
   var video: String | Null
 }
@@ -43,8 +43,8 @@ object RunResult {
     reporterStats: js.Object,
     screenshots: js.Array[ScreenshotInformation],
     shouldUploadVideo: Boolean,
-    spec: Anon_Absolute,
-    stats: Anon_Failures,
+    spec: AnonAbsolute,
+    stats: AnonFailures,
     tests: js.Array[TestResult],
     error: String = null,
     video: String = null

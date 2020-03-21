@@ -1,17 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "tensorflow-models__universal-sentence-encoder"
-version := "1.2.0-a5f25b"
-scalaVersion := "2.12.10"
+version := "1.2.0-d5c95d"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43",
-  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-converter" % "1.5.1-fa1c73",
-  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-core" % "1.5.1-8d3b8c")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f",
+  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-converter" % "1.5.2-3a3289",
+  "org.scalablytyped.slinky" %%% "tensorflow__tfjs-core" % "1.5.2-e23b5b")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

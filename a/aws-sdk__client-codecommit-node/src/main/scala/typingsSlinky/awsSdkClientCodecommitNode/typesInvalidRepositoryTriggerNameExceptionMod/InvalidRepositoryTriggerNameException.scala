@@ -1,0 +1,18 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryTriggerNameExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.putRepositoryTriggersExceptionsUnionMod.PutRepositoryTriggersExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.testRepositoryTriggersExceptionsUnionMod.TestRepositoryTriggersExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidRepositoryTriggerNameException
+  extends ServiceException[InvalidRepositoryTriggerNameExceptionDetails]
+     with PutRepositoryTriggersExceptionsUnion
+     with TestRepositoryTriggersExceptionsUnion {
+  @JSName("name")
+  var name_InvalidRepositoryTriggerNameException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidRepositoryTriggerNameException = js.native
+}
+

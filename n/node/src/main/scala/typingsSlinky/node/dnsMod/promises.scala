@@ -1,8 +1,8 @@
 package typingsSlinky.node.dnsMod
 
-import typingsSlinky.node.Anon_Hostname
-import typingsSlinky.node.Fn_A
-import typingsSlinky.node.Fn_Hostname
+import typingsSlinky.node.AnonHostname
+import typingsSlinky.node.FnCall
+import typingsSlinky.node.FnCallHostnameOptions
 import typingsSlinky.node.nodeStrings.A
 import typingsSlinky.node.nodeStrings.AAAA
 import typingsSlinky.node.nodeStrings.ANY
@@ -26,9 +26,9 @@ object promises extends js.Object {
     @JSName("getServers")
     var getServers_Original: js.Function0[js.Array[String]] = js.native
     @JSName("resolve4")
-    var resolve4_Original: Fn_Hostname = js.native
+    var resolve4_Original: FnCallHostnameOptions = js.native
     @JSName("resolve6")
-    var resolve6_Original: Fn_Hostname = js.native
+    var resolve6_Original: FnCallHostnameOptions = js.native
     @JSName("resolveAny")
     var resolveAny_Original: js.Function1[/* hostname */ String, js.Promise[js.Array[AnyRecord]]] = js.native
     @JSName("resolveCname")
@@ -48,7 +48,7 @@ object promises extends js.Object {
     @JSName("resolveTxt")
     var resolveTxt_Original: js.Function1[/* hostname */ String, js.Promise[js.Array[js.Array[String]]]] = js.native
     @JSName("resolve")
-    var resolve_Original: Fn_A = js.native
+    var resolve_Original: FnCall = js.native
     @JSName("reverse")
     var reverse_Original: js.Function1[/* ip */ String, js.Promise[js.Array[String]]] = js.native
     @JSName("setServers")
@@ -105,7 +105,7 @@ object promises extends js.Object {
   def lookup(hostname: String, options: LookupAllOptions): js.Promise[js.Array[LookupAddress]] = js.native
   def lookup(hostname: String, options: LookupOneOptions): js.Promise[LookupAddress] = js.native
   def lookup(hostname: String, options: LookupOptions): js.Promise[LookupAddress | js.Array[LookupAddress]] = js.native
-  def lookupService(address: String, port: Double): js.Promise[Anon_Hostname] = js.native
+  def lookupService(address: String, port: Double): js.Promise[AnonHostname] = js.native
   def resolve(hostname: String): js.Promise[js.Array[String]] = js.native
   def resolve(hostname: String, rrtype: String): js.Promise[
     (js.Array[AnyRecord | js.Array[String] | MxRecord | NaptrRecord | SrvRecord | String]) | SoaRecord

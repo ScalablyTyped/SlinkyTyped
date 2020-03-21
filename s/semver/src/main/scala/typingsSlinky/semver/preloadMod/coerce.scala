@@ -1,0 +1,25 @@
+package typingsSlinky.semver.preloadMod
+
+import typingsSlinky.semver.mod.CoerceOptions
+import typingsSlinky.semver.semverMod.^
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("semver/preload", "coerce")
+@js.native
+object coerce extends js.Object {
+  def apply(): ^  | Null = js.native
+  def apply(version: js.UndefOr[scala.Nothing], options: CoerceOptions): ^  | Null = js.native
+  /**
+    * Coerces a string to SemVer if possible
+    */
+  def apply(version: String): ^  | Null = js.native
+  def apply(version: String, options: CoerceOptions): ^  | Null = js.native
+  def apply(version: Double): ^  | Null = js.native
+  def apply(version: Double, options: CoerceOptions): ^  | Null = js.native
+  def apply(version: Null, options: CoerceOptions): ^  | Null = js.native
+  def apply(version: ^): ^  | Null = js.native
+  def apply(version: ^, options: CoerceOptions): ^  | Null = js.native
+}
+

@@ -1,8 +1,8 @@
 package typingsSlinky.jsforce
 
 import typingsSlinky.jsforce.connectionMod.Connection
-import typingsSlinky.jsforce.recordDashResultMod.RecordResult
-import typingsSlinky.jsforce.salesforceDashIdMod.SalesforceId
+import typingsSlinky.jsforce.recordResultMod.RecordResult
+import typingsSlinky.jsforce.salesforceIdMod.SalesforceId
 import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.std.Partial
 import scala.scalajs.js
@@ -37,6 +37,6 @@ object recordMod extends js.Object {
     ): js.Promise[RecordResult] = js.native
   }
   
-  type Record[T] = Anon_Id with T
+  type Record[T] = AnonId with T
 }
 

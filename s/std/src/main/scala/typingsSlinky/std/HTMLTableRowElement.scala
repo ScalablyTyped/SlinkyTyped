@@ -18,9 +18,7 @@ trait HTMLTableRowElement extends HTMLElement {
   /**
     * Retrieves a collection of all cells in the table row.
     */
-  val cells: HTMLCollectionOf[
-    org.scalajs.dom.raw.HTMLTableDataCellElement | org.scalajs.dom.raw.HTMLTableHeaderCellElement
-  ] = js.native
+  val cells: HTMLCollectionOf[HTMLTableDataCellElement | HTMLTableHeaderCellElement] = js.native
   /** @deprecated */
   var ch: java.lang.String = js.native
   /** @deprecated */
@@ -44,8 +42,8 @@ trait HTMLTableRowElement extends HTMLElement {
     * Creates a new cell in the table row, and adds the cell to the cells collection.
     * @param index Number that specifies where to insert the cell in the tr. The default value is -1, which appends the new cell to the end of the cells collection.
     */
-  def insertCell(): org.scalajs.dom.raw.HTMLTableDataCellElement = js.native
-  def insertCell(index: Double): org.scalajs.dom.raw.HTMLTableDataCellElement = js.native
+  def insertCell(): HTMLTableDataCellElement = js.native
+  def insertCell(index: Double): HTMLTableDataCellElement = js.native
 }
 
 @JSGlobal("HTMLTableRowElement")

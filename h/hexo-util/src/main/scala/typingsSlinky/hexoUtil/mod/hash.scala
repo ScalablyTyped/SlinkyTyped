@@ -1,0 +1,15 @@
+package typingsSlinky.hexoUtil.mod
+
+import typingsSlinky.node.Buffer
+import typingsSlinky.std.ArrayBufferView
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("hexo-util", "hash")
+@js.native
+object hash extends js.Object {
+  def apply(str: String): Buffer = js.native
+  def apply(str: ArrayBufferView): Buffer = js.native
+}
+

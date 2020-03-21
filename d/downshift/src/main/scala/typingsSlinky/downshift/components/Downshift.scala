@@ -6,13 +6,13 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.downshift.downshiftMod.A11yStatusMessageOptions
-import typingsSlinky.downshift.downshiftMod.ControllerStateAndHelpers
-import typingsSlinky.downshift.downshiftMod.DownshiftProps
-import typingsSlinky.downshift.downshiftMod.DownshiftState
-import typingsSlinky.downshift.downshiftMod.Environment
-import typingsSlinky.downshift.downshiftMod.StateChangeOptions
-import typingsSlinky.downshift.downshiftMod.default
+import typingsSlinky.downshift.mod.A11yStatusMessageOptions
+import typingsSlinky.downshift.mod.ControllerStateAndHelpers
+import typingsSlinky.downshift.mod.DownshiftProps
+import typingsSlinky.downshift.mod.DownshiftState
+import typingsSlinky.downshift.mod.Environment
+import typingsSlinky.downshift.mod.StateChangeOptions
+import typingsSlinky.downshift.mod.default
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -89,7 +89,7 @@ object Downshift
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.downshift.downshiftMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.downshift.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DownshiftProps[js.Any]
 }
 

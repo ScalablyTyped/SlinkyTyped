@@ -1,0 +1,15 @@
+package typingsSlinky.materialUiIcons.components
+
+import typingsSlinky.materialUiIcons.sportsRugbySharpMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object SportsRugbySharp extends SharedApply_SvgIconProps1442979138[default] {
+  @JSImport("@material-ui/icons/SportsRugbySharp", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+}
+

@@ -1,0 +1,9 @@
+package typingsSlinky.reactstrap
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object buttonMod {
+  type Button[T] = slinky.core.ReactComponentClass[typingsSlinky.reactstrap.buttonMod.ButtonProps]
+}

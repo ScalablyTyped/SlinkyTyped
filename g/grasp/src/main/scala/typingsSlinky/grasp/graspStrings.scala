@@ -1,6 +1,6 @@
 package typingsSlinky.grasp
 
-import typingsSlinky.grasp.graspMod.QueryEngineType
+import typingsSlinky.grasp.mod.QueryEngineType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

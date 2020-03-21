@@ -5,12 +5,13 @@ import org.scalajs.dom.raw.Blob
 import org.scalajs.dom.raw.File
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libUploadInterfaceMod.UploadFile
-import typingsSlinky.antd.libUploadInterfaceMod.UploadListProps
-import typingsSlinky.antd.libUploadInterfaceMod.UploadListType
-import typingsSlinky.antd.libUploadInterfaceMod.UploadLocale
-import typingsSlinky.antd.libUploadUploadListMod.default
+import typingsSlinky.antd.uploadInterfaceMod.UploadFile
+import typingsSlinky.antd.uploadInterfaceMod.UploadListProps
+import typingsSlinky.antd.uploadInterfaceMod.UploadListType
+import typingsSlinky.antd.uploadInterfaceMod.UploadLocale
+import typingsSlinky.antd.uploadListMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,6 +25,8 @@ object UploadList
   override val component: String | js.Object = this.componentImport
   def apply(
     locale: UploadLocale,
+    downloadIcon: TagMod[Any] = null,
+    iconRender: (/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any] = null,
     items: js.Array[UploadFile[_]] = null,
     listType: UploadListType = null,
     onDownload: /* file */ UploadFile[_] => Unit = null,
@@ -32,12 +35,15 @@ object UploadList
     prefixCls: String = null,
     previewFile: /* file */ File | Blob => js.Thenable[String] = null,
     progressAttr: js.Object = null,
+    removeIcon: TagMod[Any] = null,
     showDownloadIcon: js.UndefOr[Boolean] = js.undefined,
     showPreviewIcon: js.UndefOr[Boolean] = js.undefined,
     showRemoveIcon: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(locale = locale.asInstanceOf[js.Any])
+    if (downloadIcon != null) __obj.updateDynamic("downloadIcon")(downloadIcon.asInstanceOf[js.Any])
+    if (iconRender != null) __obj.updateDynamic("iconRender")(js.Any.fromFunction2(iconRender))
     if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     if (listType != null) __obj.updateDynamic("listType")(listType.asInstanceOf[js.Any])
     if (onDownload != null) __obj.updateDynamic("onDownload")(js.Any.fromFunction1(onDownload))
@@ -46,6 +52,7 @@ object UploadList
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (previewFile != null) __obj.updateDynamic("previewFile")(js.Any.fromFunction1(previewFile))
     if (progressAttr != null) __obj.updateDynamic("progressAttr")(progressAttr.asInstanceOf[js.Any])
+    if (removeIcon != null) __obj.updateDynamic("removeIcon")(removeIcon.asInstanceOf[js.Any])
     if (!js.isUndefined(showDownloadIcon)) __obj.updateDynamic("showDownloadIcon")(showDownloadIcon.asInstanceOf[js.Any])
     if (!js.isUndefined(showPreviewIcon)) __obj.updateDynamic("showPreviewIcon")(showPreviewIcon.asInstanceOf[js.Any])
     if (!js.isUndefined(showRemoveIcon)) __obj.updateDynamic("showRemoveIcon")(showRemoveIcon.asInstanceOf[js.Any])

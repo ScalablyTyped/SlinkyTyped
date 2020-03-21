@@ -1,6 +1,6 @@
 package typingsSlinky.spdy
 
-import typingsSlinky.spdy.spdyMod.server.Protocol
+import typingsSlinky.spdy.mod.server.Protocol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

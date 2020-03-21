@@ -1,8 +1,8 @@
 package typingsSlinky.angular
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.angular.angularMod.IScope
-import typingsSlinky.angular.angularMod.auto.IInjectorService
+import typingsSlinky.angular.mod.IScope
+import typingsSlinky.angular.mod.auto.IInjectorService
 import typingsSlinky.std.DocumentFragment
 import typingsSlinky.std.Element
 import typingsSlinky.std.Text
@@ -61,13 +61,7 @@ trait JQuery extends js.Object {
     * @see {@link https://api.jquery.com/append/#append-function}
     */
   def append(func: js.Function2[/* index */ Double, /* html */ String, String | Element | this.type]): this.type = js.native
-  /**
-    * Get the value of an attribute for the first element in the set of matched elements.
-    *
-    * @param attributeName The name of the attribute to get.
-    * @see {@link https://api.jquery.com/attr/#attr-attributeName}
-    */
-  def attr(attributeName: String): String = js.native
+  def attr(attributeName: String): this.type = js.native
   /**
     * Set one or more attributes for the set of matched elements.
     *
@@ -84,8 +78,14 @@ trait JQuery extends js.Object {
     * @see {@link https://api.jquery.com/attr/#attr-attributes}
     */
   def attr(attributes: js.Object): this.type = js.native
+  /**
+    * Get the value of an attribute for the first element in the set of matched elements.
+    *
+    * @param attributeName The name of the attribute to get.
+    * @see {@link https://api.jquery.com/attr/#attr-attributeName}
+    */
   @JSName("attr")
-  def attr_This(attributeName: String): this.type = js.native
+  def attr_String(attributeName: String): String = js.native
   /**
     * Attach a handler to an event for the elements.
     *

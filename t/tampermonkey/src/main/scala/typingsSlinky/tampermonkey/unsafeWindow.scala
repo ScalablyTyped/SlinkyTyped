@@ -1,7 +1,7 @@
 package typingsSlinky.tampermonkey
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.std.Window
+import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,5 +12,5 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("unsafeWindow")
 @js.native
-object unsafeWindow extends TopLevel[Window]
+object unsafeWindow extends TopLevel[Window_]
 

@@ -1,6 +1,6 @@
 package typingsSlinky.phonon
 
-import typingsSlinky.phonon.Phonon.PhononCustomWindowEvent
+import typingsSlinky.phonon.Phonon_.PhononCustomWindowEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

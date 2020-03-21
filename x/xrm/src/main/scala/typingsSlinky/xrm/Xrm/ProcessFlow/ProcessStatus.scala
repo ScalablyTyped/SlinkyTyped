@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
   * @see {@link XrmEnum.ProcessStatus}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.active
-  - typings.xrm.xrmStrings.aborted
-  - typings.xrm.xrmStrings.finished
+  - typingsSlinky.xrm.xrmStrings.active
+  - typingsSlinky.xrm.xrmStrings.aborted
+  - typingsSlinky.xrm.xrmStrings.finished
 */
 trait ProcessStatus extends js.Object
 

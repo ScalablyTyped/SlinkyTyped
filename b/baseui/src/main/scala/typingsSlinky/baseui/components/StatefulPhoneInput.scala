@@ -1,18 +1,18 @@
 package typingsSlinky.baseui.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.phoneDashInputMod.PhoneInputOverrides
-import typingsSlinky.baseui.phoneDashInputMod.State
-import typingsSlinky.baseui.phoneDashInputMod.StateChange
-import typingsSlinky.baseui.phoneDashInputMod.StatefulPhoneInputProps
+import slinky.web.html.input.tag
+import typingsSlinky.baseui.phoneInputMod.PhoneInputOverrides
+import typingsSlinky.baseui.phoneInputMod.State
+import typingsSlinky.baseui.phoneInputMod.StateChange
+import typingsSlinky.baseui.phoneInputMod.StatefulPhoneInputProps
 import typingsSlinky.baseui.selectMod.OnChangeParams
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ object StatefulPhoneInput
     initialState: State = null,
     mapIsoToLabel: /* iso */ String => String = null,
     onCountryChange: /* event */ OnChangeParams => _ = null,
-    onTextChange: /* event */ SyntheticEvent[Event, HTMLInputElement] => _ = null,
+    onTextChange: /* event */ SyntheticEvent[Event_, HTMLInputElement] => _ = null,
     overrides: PhoneInputOverrides = null,
     stateReducer: (/* type */ StateChange, /* nextState */ State, /* currentState */ State) => State = null,
     _overrides: StringDictionary[js.Any] = null
@@ -45,7 +45,7 @@ object StatefulPhoneInput
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.input.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = StatefulPhoneInputProps
 }
 

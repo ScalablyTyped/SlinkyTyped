@@ -4,9 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libTagCheckableTagMod.CheckableTagProps
-import typingsSlinky.antd.libTagCheckableTagMod.default
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.checkableTagMod.CheckableTagProps
+import typingsSlinky.antd.checkableTagMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,16 +17,16 @@ object CheckableTag
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, onChange */
+  /* The following DOM/SVG props were specified: className, style */
   def apply(
     checked: Boolean,
+    onChange: /* checked */ Boolean => Unit = null,
     prefixCls: String = null,
-    style: CSSProperties = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(checked = checked.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }

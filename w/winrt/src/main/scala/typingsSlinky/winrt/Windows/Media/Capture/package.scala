@@ -5,6 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Capture {
-  type MediaCaptureFailedEventHandler = js.Function2[/* sender */ MediaCapture, /* errorEventArgs */ MediaCaptureFailedEventArgs, Unit]
-  type RecordLimitationExceededEventHandler = js.Function1[/* sender */ MediaCapture, Unit]
+  type MediaCaptureFailedEventHandler = js.Function2[
+    /* sender */ typingsSlinky.winrt.Windows.Media.Capture.MediaCapture, 
+    /* errorEventArgs */ typingsSlinky.winrt.Windows.Media.Capture.MediaCaptureFailedEventArgs, 
+    scala.Unit
+  ]
+  type RecordLimitationExceededEventHandler = js.Function1[/* sender */ typingsSlinky.winrt.Windows.Media.Capture.MediaCapture, scala.Unit]
 }

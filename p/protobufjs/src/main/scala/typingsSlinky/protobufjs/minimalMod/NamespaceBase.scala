@@ -7,5 +7,5 @@ import scala.scalajs.js.annotation._
 @JSImport("protobufjs/minimal", "NamespaceBase")
 @js.native
 abstract class NamespaceBase ()
-  extends typingsSlinky.protobufjs.protobufjsMod.NamespaceBase
+  extends typingsSlinky.protobufjs.mod.NamespaceBase
 

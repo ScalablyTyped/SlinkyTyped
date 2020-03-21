@@ -10,9 +10,9 @@ A Node.JS Base64 <-> UInt8Array converter
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/util-base64-node |
 | Keywords           | - |
-| # releases         | 5 |
-| # dependents       | 185 |
-| # downloads        | 30096 |
+| # releases         | 6 |
+| # dependents       | 367 |
+| # downloads        | 30712 |
 | # stars            | 0 |
 
 ## Links

@@ -1,7 +1,7 @@
 
 # Scala.js typings for bip32
 
-Typings are for version 2.0.4
+Typings are for version 2.0.5
 
 ## Library description:
 A BIP32 compatible library
@@ -10,9 +10,9 @@ A BIP32 compatible library
 | ------------------ | :-------------: |
 | Full name          | bip32 |
 | Keywords           | bip32, bitcoinjs, bitcoin, secp256k1 |
-| # releases         | 13 |
-| # dependents       | 145 |
-| # downloads        | 861515 |
+| # releases         | 12 |
+| # dependents       | 149 |
+| # downloads        | 895566 |
 | # stars            | 0 |
 
 ## Links

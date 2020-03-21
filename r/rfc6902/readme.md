@@ -11,8 +11,8 @@ Complete implementation of RFC6902 (patch and diff)
 | Full name          | rfc6902 |
 | Keywords           | json, patch, diff, rfc6902 |
 | # releases         | 9 |
-| # dependents       | 27 |
-| # downloads        | 5726386 |
+| # dependents       | 29 |
+| # downloads        | 5893616 |
 | # stars            | 5 |
 
 ## Links

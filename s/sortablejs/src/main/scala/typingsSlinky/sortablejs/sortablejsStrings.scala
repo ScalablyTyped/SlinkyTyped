@@ -1,6 +1,6 @@
 package typingsSlinky.sortablejs
 
-import typingsSlinky.sortablejs.sortablejsMod.Direction
+import typingsSlinky.sortablejs.mod.Direction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

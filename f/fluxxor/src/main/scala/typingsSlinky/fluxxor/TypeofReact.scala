@@ -9,60 +9,61 @@ import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactRef
 import typingsSlinky.fluxxor.fluxxorStrings.input
-import typingsSlinky.react.Anon_Children
-import typingsSlinky.react.Anon_Default
-import typingsSlinky.react.experimentalMod.reactMod.SuspenseConfig
-import typingsSlinky.react.experimentalMod.reactMod.SuspenseListProps
-import typingsSlinky.react.experimentalMod.reactMod.TimeoutConfig
-import typingsSlinky.react.experimentalMod.reactMod.TransitionStartFunction
-import typingsSlinky.react.reactMod.Attributes
-import typingsSlinky.react.reactMod.CElement
-import typingsSlinky.react.reactMod.CFactory
-import typingsSlinky.react.reactMod.ClassAttributes
-import typingsSlinky.react.reactMod.ClassType
-import typingsSlinky.react.reactMod.ClassicComponent
-import typingsSlinky.react.reactMod.ClassicComponentClass
-import typingsSlinky.react.reactMod.ComponentClass
-import typingsSlinky.react.reactMod.ComponentProps
-import typingsSlinky.react.reactMod.ComponentState
-import typingsSlinky.react.reactMod.Context
-import typingsSlinky.react.reactMod.DOMAttributes
-import typingsSlinky.react.reactMod.DOMElement
-import typingsSlinky.react.reactMod.DOMFactory
-import typingsSlinky.react.reactMod.DependencyList
-import typingsSlinky.react.reactMod.DetailedReactHTMLElement
-import typingsSlinky.react.reactMod.Dispatch
-import typingsSlinky.react.reactMod.DispatchWithoutAction
-import typingsSlinky.react.reactMod.EffectCallback
-import typingsSlinky.react.reactMod.Factory
-import typingsSlinky.react.reactMod.ForwardRefExoticComponent
-import typingsSlinky.react.reactMod.FunctionComponent
-import typingsSlinky.react.reactMod.FunctionComponentElement
-import typingsSlinky.react.reactMod.FunctionComponentFactory
-import typingsSlinky.react.reactMod.HTMLAttributes
-import typingsSlinky.react.reactMod.HTMLFactory
-import typingsSlinky.react.reactMod.InputHTMLAttributes
-import typingsSlinky.react.reactMod.MutableRefObject
-import typingsSlinky.react.reactMod.ProfilerProps
-import typingsSlinky.react.reactMod.PropsWithChildren
-import typingsSlinky.react.reactMod.PropsWithoutRef
-import typingsSlinky.react.reactMod.ReactChildren
-import typingsSlinky.react.reactMod.ReactElement
-import typingsSlinky.react.reactMod.ReactHTMLElement
-import typingsSlinky.react.reactMod.ReactNode
-import typingsSlinky.react.reactMod.ReactSVGElement
-import typingsSlinky.react.reactMod.Reducer
-import typingsSlinky.react.reactMod.ReducerAction
-import typingsSlinky.react.reactMod.ReducerState
-import typingsSlinky.react.reactMod.ReducerStateWithoutAction
-import typingsSlinky.react.reactMod.ReducerWithoutAction
-import typingsSlinky.react.reactMod.Ref
-import typingsSlinky.react.reactMod.RefAttributes
-import typingsSlinky.react.reactMod.SFC
-import typingsSlinky.react.reactMod.SVGAttributes
-import typingsSlinky.react.reactMod.SVGFactory
-import typingsSlinky.react.reactMod.SetStateAction
-import typingsSlinky.react.reactMod.SuspenseProps
+import typingsSlinky.react.AnonChildren
+import typingsSlinky.react.AnonDefault
+import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseConfig
+import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListProps
+import typingsSlinky.react.experimentalMod.reactAugmentingMod.TimeoutConfig
+import typingsSlinky.react.experimentalMod.reactAugmentingMod.TransitionStartFunction
+import typingsSlinky.react.mod.Attributes
+import typingsSlinky.react.mod.CElement
+import typingsSlinky.react.mod.CFactory
+import typingsSlinky.react.mod.ClassAttributes
+import typingsSlinky.react.mod.ClassType
+import typingsSlinky.react.mod.ClassicComponent
+import typingsSlinky.react.mod.ClassicComponentClass
+import typingsSlinky.react.mod.ComponentClass
+import typingsSlinky.react.mod.ComponentProps
+import typingsSlinky.react.mod.ComponentState
+import typingsSlinky.react.mod.Context
+import typingsSlinky.react.mod.DOMAttributes
+import typingsSlinky.react.mod.DOMElement
+import typingsSlinky.react.mod.DOMFactory
+import typingsSlinky.react.mod.DependencyList
+import typingsSlinky.react.mod.DetailedReactHTMLElement
+import typingsSlinky.react.mod.Dispatch
+import typingsSlinky.react.mod.DispatchWithoutAction
+import typingsSlinky.react.mod.EffectCallback
+import typingsSlinky.react.mod.Factory
+import typingsSlinky.react.mod.ForwardRefExoticComponent
+import typingsSlinky.react.mod.ForwardRefRenderFunction
+import typingsSlinky.react.mod.FunctionComponent
+import typingsSlinky.react.mod.FunctionComponentElement
+import typingsSlinky.react.mod.FunctionComponentFactory
+import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.react.mod.HTMLFactory
+import typingsSlinky.react.mod.InputHTMLAttributes
+import typingsSlinky.react.mod.MutableRefObject
+import typingsSlinky.react.mod.ProfilerProps
+import typingsSlinky.react.mod.PropsWithChildren
+import typingsSlinky.react.mod.PropsWithoutRef
+import typingsSlinky.react.mod.ReactChildren
+import typingsSlinky.react.mod.ReactElement
+import typingsSlinky.react.mod.ReactHTMLElement
+import typingsSlinky.react.mod.ReactNode
+import typingsSlinky.react.mod.ReactSVGElement
+import typingsSlinky.react.mod.Reducer
+import typingsSlinky.react.mod.ReducerAction
+import typingsSlinky.react.mod.ReducerState
+import typingsSlinky.react.mod.ReducerStateWithoutAction
+import typingsSlinky.react.mod.ReducerWithoutAction
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
+import typingsSlinky.react.mod.SFC
+import typingsSlinky.react.mod.SVGAttributes
+import typingsSlinky.react.mod.SVGFactory
+import typingsSlinky.react.mod.SetStateAction
+import typingsSlinky.react.mod.SuspenseProps
 import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -73,11 +74,11 @@ trait TypeofReact extends js.Object {
   val Children: ReactChildren = js.native
   // Base component for plain JS classes
   // tslint:disable-next-line:no-empty-interface
-  var Component: TypeofClassComponent = js.native
-  val Fragment: ReactComponentClass[Anon_Children] = js.native
+  var Component: TypeofComponent = js.native
+  val Fragment: ReactComponentClass[AnonChildren] = js.native
   val Profiler: ReactComponentClass[ProfilerProps] = js.native
   var PureComponent: Instantiable0[ReactComponentClass[js.Object]] = js.native
-  val StrictMode: ReactComponentClass[Anon_Children] = js.native
+  val StrictMode: ReactComponentClass[AnonChildren] = js.native
   /**
     * This feature is not yet available for server-side rendering.
     * Suspense support will be added in a later release.
@@ -134,9 +135,10 @@ trait TypeofReact extends js.Object {
   def createElement[P /* <: js.Object */](`type`: ComponentClass[P, ComponentState]): slinky.core.facade.ReactElement = js.native
   def createElement[P /* <: js.Object */](`type`: ComponentClass[P, ComponentState], children: ReactNode*): slinky.core.facade.ReactElement = js.native
   def createElement[P /* <: js.Object */](`type`: ComponentClass[P, ComponentState], props: Attributes with P, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
-  def createElement[P /* <: js.Object */](`type`: FunctionComponent[P]): slinky.core.facade.ReactElement = js.native
-  def createElement[P /* <: js.Object */](`type`: FunctionComponent[P], children: ReactNode*): slinky.core.facade.ReactElement = js.native
-  def createElement[P /* <: js.Object */](`type`: FunctionComponent[P], props: Attributes with P, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
+  // Custom components
+  def createElement[P /* <: js.Object */](`type`: FunctionComponent[P]): FunctionComponentElement[P] = js.native
+  def createElement[P /* <: js.Object */](`type`: FunctionComponent[P], children: ReactNode*): FunctionComponentElement[P] = js.native
+  def createElement[P /* <: js.Object */](`type`: FunctionComponent[P], props: Attributes with P, children: TagMod[Any]*): FunctionComponentElement[P] = js.native
   def createElement[P /* <: DOMAttributes[T] */, T /* <: Element */](`type`: String, props: ClassAttributes[T] with P, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
   def createElement[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 55 */ js.Any): ReactSVGElement = js.native
   def createElement[P /* <: SVGAttributes[T] */, T /* <: SVGElement */](
@@ -168,13 +170,12 @@ trait TypeofReact extends js.Object {
     props: ClassAttributes[T] with P,
     children: TagMod[Any]*
   ): DetailedReactHTMLElement[P, T] = js.native
-  // Custom components
   @JSName("createElement")
-  def createElement_P_Object_FunctionComponentElement[P /* <: js.Object */](`type`: ReactComponentClass[P]): FunctionComponentElement[P] = js.native
+  def createElement_P_Object_ReactElement[P /* <: js.Object */](`type`: ReactComponentClass[P]): slinky.core.facade.ReactElement = js.native
   @JSName("createElement")
-  def createElement_P_Object_FunctionComponentElement[P /* <: js.Object */](`type`: ReactComponentClass[P], children: ReactNode*): FunctionComponentElement[P] = js.native
+  def createElement_P_Object_ReactElement[P /* <: js.Object */](`type`: ReactComponentClass[P], children: ReactNode*): slinky.core.facade.ReactElement = js.native
   @JSName("createElement")
-  def createElement_P_Object_FunctionComponentElement[P /* <: js.Object */](`type`: ReactComponentClass[P], props: Attributes with P, children: TagMod[Any]*): FunctionComponentElement[P] = js.native
+  def createElement_P_Object_ReactElement[P /* <: js.Object */](`type`: ReactComponentClass[P], props: Attributes with P, children: TagMod[Any]*): slinky.core.facade.ReactElement = js.native
   // DOM Elements
   // TODO: generalize this to everything in `keyof ReactHTML`, not just "input"
   @JSName("createElement")
@@ -201,10 +202,10 @@ trait TypeofReact extends js.Object {
   @JSName("createFactory")
   def createFactory_T_HTMLElement_HTMLFactory[T /* <: HTMLElement */](`type`: /* import warning: LimitUnionLength.leaveTypeRef Was union type with length 115 */ js.Any): HTMLFactory[T] = js.native
   def createRef[T](): ReactRef[T] = js.native
-  def forwardRef[T, P](Component: ReactComponentClass[T]): ForwardRefExoticComponent[PropsWithoutRef[P] with RefAttributes[T]] = js.native
+  def forwardRef[T, P](render: ForwardRefRenderFunction[T, P]): ForwardRefExoticComponent[PropsWithoutRef[P] with RefAttributes[T]] = js.native
   def isValidElement[P](): /* is react.react.ReactElement */ Boolean = js.native
   def isValidElement[P](`object`: js.Object): /* is react.react.ReactElement */ Boolean = js.native
-  def `lazy`[T /* <: ReactComponentClass[_] */](factory: js.Function0[js.Promise[Anon_Default[T]]]): ReactComponentClass[T] = js.native
+  def `lazy`[T /* <: ReactComponentClass[_] */](factory: js.Function0[js.Promise[AnonDefault[T]]]): ReactComponentClass[T] = js.native
   def memo[T /* <: ReactComponentClass[_] */](Component: T): ReactComponentClass[T] = js.native
   def memo[T /* <: ReactComponentClass[_] */](
     Component: T,
@@ -321,8 +322,30 @@ trait TypeofReact extends js.Object {
     * @version 16.8.0
     * @see https://reactjs.org/docs/hooks-reference.html#usereducer
     */
+  // I'm not sure if I keep this 2-ary or if I make it (2,3)-ary; it's currently (2,3)-ary.
+  // The Flow types do have an overload for 3-ary invocation with undefined initializer.
+  // NOTE: without the ReducerState indirection, TypeScript would reduce S to be the most common
+  // supertype between the reducer's return type and the initialState (or the initializer's return type),
+  // which would prevent autocompletion from ever working.
+  // TODO: double-check if this weird overload logic is necessary. It is possible it's either a bug
+  // in older versions, or a regression in newer versions of the typescript completion service.
+  def useReducer[R /* <: Reducer[_, _] */](reducer: R, initialState: ReducerState[R]): js.Tuple2[ReducerState[R], Dispatch[ReducerAction[R]]] = js.native
+  /**
+    * An alternative to `useState`.
+    *
+    * `useReducer` is usually preferable to `useState` when you have complex state logic that involves
+    * multiple sub-values. It also lets you optimize performance for components that trigger deep
+    * updates because you can pass `dispatch` down instead of callbacks.
+    *
+    * @version 16.8.0
+    * @see https://reactjs.org/docs/hooks-reference.html#usereducer
+    */
   // overload where dispatch could accept 0 arguments.
-  def useReducer[R /* <: ReducerWithoutAction[_] */](reducer: R, initializerArg: ReducerStateWithoutAction[R]): js.Tuple2[ReducerStateWithoutAction[R], DispatchWithoutAction] = js.native
+  def useReducer[R /* <: ReducerWithoutAction[_] */, I](
+    reducer: R,
+    initializerArg: I,
+    initializer: js.Function1[/* arg */ I, ReducerStateWithoutAction[R]]
+  ): js.Tuple2[ReducerStateWithoutAction[R], DispatchWithoutAction] = js.native
   /**
     * An alternative to `useState`.
     *
@@ -337,7 +360,8 @@ trait TypeofReact extends js.Object {
   // If "I" matches ReducerState<R> exactly then the last overload will allow initializer to be ommitted.
   // the last overload effectively behaves as if the identity function (x => x) is the initializer.
   // overload for free "I"; all goes as long as initializer converts it into "ReducerState<R>".
-  def useReducer[R /* <: Reducer[_, _] */, I](
+  @JSName("useReducer")
+  def useReducer_R_ReducerWildcardWildcardI[R /* <: Reducer[_, _] */, I](
     reducer: R,
     initializerArg: (I with ReducerState[R]) | I,
     initializer: js.Function1[(/* arg */ I with ReducerState[R]) | (/* arg */ I), ReducerState[R]]
@@ -352,32 +376,9 @@ trait TypeofReact extends js.Object {
     * @version 16.8.0
     * @see https://reactjs.org/docs/hooks-reference.html#usereducer
     */
-  // I'm not sure if I keep this 2-ary or if I make it (2,3)-ary; it's currently (2,3)-ary.
-  // The Flow types do have an overload for 3-ary invocation with undefined initializer.
-  // NOTE: without the ReducerState indirection, TypeScript would reduce S to be the most common
-  // supertype between the reducer's return type and the initialState (or the initializer's return type),
-  // which would prevent autocompletion from ever working.
-  // TODO: double-check if this weird overload logic is necessary. It is possible it's either a bug
-  // in older versions, or a regression in newer versions of the typescript completion service.
-  @JSName("useReducer")
-  def useReducer_R_ReducerWildcardWildcard[R /* <: Reducer[_, _] */](reducer: R, initialState: ReducerState[R]): js.Tuple2[ReducerState[R], Dispatch[ReducerAction[R]]] = js.native
-  /**
-    * An alternative to `useState`.
-    *
-    * `useReducer` is usually preferable to `useState` when you have complex state logic that involves
-    * multiple sub-values. It also lets you optimize performance for components that trigger deep
-    * updates because you can pass `dispatch` down instead of callbacks.
-    *
-    * @version 16.8.0
-    * @see https://reactjs.org/docs/hooks-reference.html#usereducer
-    */
   // overload where dispatch could accept 0 arguments.
   @JSName("useReducer")
-  def useReducer_R_ReducerWithoutActionWildcardI[R /* <: ReducerWithoutAction[_] */, I](
-    reducer: R,
-    initializerArg: I,
-    initializer: js.Function1[/* arg */ I, ReducerStateWithoutAction[R]]
-  ): js.Tuple2[ReducerStateWithoutAction[R], DispatchWithoutAction] = js.native
+  def useReducer_R_ReducerWithoutActionWildcard[R /* <: ReducerWithoutAction[_] */](reducer: R, initializerArg: ReducerStateWithoutAction[R]): js.Tuple2[ReducerStateWithoutAction[R], DispatchWithoutAction] = js.native
   def useRef[T](): ReactRef[T] = js.native
   // convenience overload for refs given as a ref prop as they typically start with a null value
   /**

@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
   * Discriminated union of possible effects on `effect`
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.screeps.NaturalEffect
-  - typings.screeps.PowerEffect
+  - typingsSlinky.screeps.NaturalEffect
+  - typingsSlinky.screeps.PowerEffect
 */
 trait RoomObjectEffect extends js.Object
 

@@ -1,7 +1,7 @@
 
 # Scala.js typings for autoprefixer
 
-Typings are for version 9.6
+Typings are for version 9.7
 
 ## Library description:
 Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use website
@@ -10,9 +10,9 @@ Parse CSS and add vendor prefixes to CSS rules using values from the Can I Use w
 | ------------------ | :-------------: |
 | Full name          | autoprefixer |
 | Keywords           | autoprefixer, css, prefix, postcss, postcss-plugin |
-| # releases         | 54 |
-| # dependents       | 5129 |
-| # downloads        | 391385854 |
+| # releases         | 52 |
+| # dependents       | 5154 |
+| # downloads        | 393051815 |
 | # stars            | 211 |
 
 ## Links

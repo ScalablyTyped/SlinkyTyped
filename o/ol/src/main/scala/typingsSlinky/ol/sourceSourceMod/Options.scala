@@ -1,7 +1,7 @@
 package typingsSlinky.ol.sourceSourceMod
 
 import typingsSlinky.ol.projMod.ProjectionLike
-import typingsSlinky.ol.sourceStateMod.State
+import typingsSlinky.ol.stateMod.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

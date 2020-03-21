@@ -1,6 +1,5 @@
 package typingsSlinky.baseui.inputMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -14,7 +13,8 @@ import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.left
 import typingsSlinky.baseui.baseuiStrings.none
 import typingsSlinky.baseui.baseuiStrings.right
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -46,7 +46,7 @@ object MaskedInputProps {
     min: Int | Double = null,
     name: String = null,
     onBlur: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
     onFocus: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
     onKeyDown: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,
     onKeyPress: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,

@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BodyRow
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.primereact.componentsDatatableBodyRowMod.BodyRow] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.primereact.bodyRowMod.BodyRow] {
   @JSImport("primereact/components/datatable/BodyRow", "BodyRow")
   @js.native
   object componentImport extends js.Object

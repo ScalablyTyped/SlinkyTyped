@@ -10,9 +10,9 @@ Search document types
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/documentsearch-extension |
 | Keywords           | - |
-| # releases         | 47 |
+| # releases         | 48 |
 | # dependents       | 1 |
-| # downloads        | 363616 |
+| # downloads        | 369831 |
 | # stars            | 0 |
 
 ## Links

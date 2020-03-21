@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 
 /* cl_meobject_type */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x10F0`
-  - typings.webcl.webclNumbers.`0x10F1`
-  - typings.webcl.webclNumbers.`0x10F2`
+  - typingsSlinky.webcl.webclNumbers.`0x10F0`
+  - typingsSlinky.webcl.webclNumbers.`0x10F1`
+  - typingsSlinky.webcl.webclNumbers.`0x10F2`
 */
 trait MemObjectType extends js.Object
 

@@ -1,7 +1,7 @@
 package typingsSlinky.phaser.Phaser.GameObjects
 
 import typingsSlinky.phaser.Phaser.Cameras.Scene2D.Camera
-import typingsSlinky.phaser.Phaser.GameObjects.Components.Alpha
+import typingsSlinky.phaser.Phaser.GameObjects.Components.AlphaSingle
 import typingsSlinky.phaser.Phaser.GameObjects.Components.BlendMode
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Depth
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Mask
@@ -66,7 +66,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Graphics protected ()
   extends GameObject
-     with Alpha
+     with AlphaSingle
      with BlendMode
      with Depth
      with Mask

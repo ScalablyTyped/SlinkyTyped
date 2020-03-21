@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.form
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dijit.form.ValidationTextBox
 import typingsSlinky.dojo.dojoStrings.autoWidth
 import typingsSlinky.dojo.dojoStrings.dropDown
@@ -25,8 +25,8 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified, replace srcNodeRef with my generated DOM tree.
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit._FocusMixin because Already inherited
-- typings.dojo.dijit._HasDropDown because Inheritance from two classes. Inlined autoWidth, dropDown, dropDownPosition, forceWidth, maxHeight, buildRendering, closeDropDown, destroy, isLoaded, loadAndOpenDropDown, loadDropDown, openDropDown, postCreate, toggleDropDown */ @JSGlobal("dojox.form.FilePickerTextBox")
+- typingsSlinky.dojo.dijit.FocusMixin because Already inherited
+- typingsSlinky.dojo.dijit.HasDropDown because Inheritance from two classes. Inlined autoWidth, dropDown, dropDownPosition, forceWidth, maxHeight, buildRendering, closeDropDown, destroy, isLoaded, loadAndOpenDropDown, loadDropDown, openDropDown, postCreate, toggleDropDown */ @JSGlobal("dojox.form.FilePickerTextBox")
 @js.native
 class FilePickerTextBox () extends ValidationTextBox {
   def this(params: js.Object) = this()
@@ -219,7 +219,7 @@ class FilePickerTextBox () extends ValidationTextBox {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_dropDown(
     property: dropDown,
@@ -229,7 +229,7 @@ class FilePickerTextBox () extends ValidationTextBox {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_dropDownPosition(
     property: dropDownPosition,
@@ -239,7 +239,7 @@ class FilePickerTextBox () extends ValidationTextBox {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_forceWidth(
     property: forceWidth,
@@ -249,7 +249,7 @@ class FilePickerTextBox () extends ValidationTextBox {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_maxHeight(
     property: maxHeight,
@@ -259,7 +259,7 @@ class FilePickerTextBox () extends ValidationTextBox {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_numPanes(
     property: numPanes,
@@ -269,7 +269,7 @@ class FilePickerTextBox () extends ValidationTextBox {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_searchDelay(
     property: searchDelay,
@@ -279,7 +279,7 @@ class FilePickerTextBox () extends ValidationTextBox {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_valueItem(
     property: valueItem,
@@ -289,6 +289,6 @@ class FilePickerTextBox () extends ValidationTextBox {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

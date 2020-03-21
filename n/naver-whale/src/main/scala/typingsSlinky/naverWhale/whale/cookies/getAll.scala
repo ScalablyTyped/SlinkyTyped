@@ -1,0 +1,15 @@
+package typingsSlinky.naverWhale.whale.cookies
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("chrome.cookies.getAll")
+@js.native
+object getAll extends js.Object {
+  def apply(
+    details: typingsSlinky.chrome.chrome.cookies.GetAllDetails,
+    callback: js.Function1[/* cookies */ js.Array[typingsSlinky.chrome.chrome.cookies.Cookie], Unit]
+  ): Unit = js.native
+}
+

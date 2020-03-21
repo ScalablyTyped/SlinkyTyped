@@ -12,7 +12,7 @@ Simplified high resolution timing
 | Keywords           | time, span, elapsed, process, hrtime, highres, timing, perf, performance, bench, benchmark, profiling, measure, seconds, milliseconds, nanoseconds |
 | # releases         | 3 |
 | # dependents       | 24 |
-| # downloads        | 460033 |
+| # downloads        | 462951 |
 | # stars            | 0 |
 
 ## Links

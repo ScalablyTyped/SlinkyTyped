@@ -2,7 +2,7 @@ package typingsSlinky.youtube.YT
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLIFrameElement
-import typingsSlinky.youtube.Anon_EndSeconds
+import typingsSlinky.youtube.AnonEndSeconds
 import typingsSlinky.youtube.youtubeStrings.onApiChange
 import typingsSlinky.youtube.youtubeStrings.onError
 import typingsSlinky.youtube.youtubeStrings.onPlaybackQualityChange
@@ -219,7 +219,7 @@ class Player protected () extends js.Object {
   		 *
   		 * @param args   Settings to play the video.
   		 */
-  def loadVideoByUrl(args: Anon_EndSeconds): Unit = js.native
+  def loadVideoByUrl(args: AnonEndSeconds): Unit = js.native
   /**
   		 * Loads a video by media content URL.
   		 *

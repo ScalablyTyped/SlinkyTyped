@@ -11,8 +11,8 @@ ssh2 sftp client for node
 | Full name          | ssh2-sftp-client |
 | Keywords           | sftp, nodejs, promises |
 | # releases         | 29 |
-| # dependents       | 101 |
-| # downloads        | 1584106 |
+| # dependents       | 102 |
+| # downloads        | 1643113 |
 | # stars            | 7 |
 
 ## Links

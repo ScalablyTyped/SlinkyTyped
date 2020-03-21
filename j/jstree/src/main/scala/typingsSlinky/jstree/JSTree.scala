@@ -1,7 +1,7 @@
 package typingsSlinky.jstree
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,7 +60,7 @@ trait JSTree extends JQuery {
     * @return {DOMElement}
     */
   def _firstChild(dom: HTMLElement): HTMLElement = js.native
-  def _kbevent_to_func(e: Event): js.Function1[/* e */ Event, Unit] = js.native
+  def _kbevent_to_func(e: Event_): js.Function1[/* e */ Event_, Unit] = js.native
   /**
     * handles the actual loading of a node. Used only internally.
     * @private

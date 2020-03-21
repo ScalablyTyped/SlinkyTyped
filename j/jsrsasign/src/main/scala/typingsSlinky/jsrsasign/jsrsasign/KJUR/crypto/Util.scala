@@ -1,8 +1,8 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.crypto
 
-import typingsSlinky.jsrsasign.Anon_Hmacmd5
-import typingsSlinky.jsrsasign.Anon_Md2
-import typingsSlinky.jsrsasign.Anon_Md5Ripemd160
+import typingsSlinky.jsrsasign.AnonHmacmd5
+import typingsSlinky.jsrsasign.AnonMd2
+import typingsSlinky.jsrsasign.AnonRipemd160
 import typingsSlinky.jsrsasign.jsrsasign.BigInteger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,11 +12,11 @@ import scala.scalajs.js.annotation._
 @JSGlobal("jsrsasign.KJUR.crypto.Util")
 @js.native
 object Util extends js.Object {
-  var CRYPTOJSMESSAGEDIGESTNAME: Anon_Md5Ripemd160 = js.native
+  var CRYPTOJSMESSAGEDIGESTNAME: AnonRipemd160 = js.native
   /** associative array of default provider name for each hash and signature algorithms */
-  var DEFAULTPROVIDER: Anon_Hmacmd5 = js.native
+  var DEFAULTPROVIDER: AnonHmacmd5 = js.native
   /** PKCS#1 DigestInfo heading hexadecimal bytes for each hash algorithms */
-  var DIGESTINFOHEAD: Anon_Md2 = js.native
+  var DIGESTINFOHEAD: AnonMd2 = js.native
   /**
     * get hexadecimal DigestInfo
     * @param hHash hexadecimal hash value

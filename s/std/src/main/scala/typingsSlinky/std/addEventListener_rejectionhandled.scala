@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 object addEventListener_rejectionhandled extends js.Object {
   def apply(
     `type`: rejectionhandled,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ PromiseRejectionEvent, _]
   ): Unit = js.native
   def apply(
     `type`: rejectionhandled,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ PromiseRejectionEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   def apply(
     `type`: rejectionhandled,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ PromiseRejectionEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
 }

@@ -5,16 +5,16 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.bizcharts.bizchartsMod.CoordProps
-import typingsSlinky.bizcharts.bizchartsMod.CoordType
 import typingsSlinky.bizcharts.bizchartsStrings.x
 import typingsSlinky.bizcharts.bizchartsStrings.y
+import typingsSlinky.bizcharts.mod.CoordProps
+import typingsSlinky.bizcharts.mod.CoordType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Coord
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.bizchartsMod.Coord] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.mod.Coord] {
   @JSImport("bizcharts", "Coord")
   @js.native
   object componentImport extends js.Object
@@ -31,7 +31,7 @@ object Coord
     transpose: js.UndefOr[Boolean] = js.undefined,
     `type`: CoordType = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Coord] = {
+  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Coord] = {
     val __obj = js.Dynamic.literal()
     if (endAngle != null) __obj.updateDynamic("endAngle")(endAngle.asInstanceOf[js.Any])
     if (innerRadius != null) __obj.updateDynamic("innerRadius")(innerRadius.asInstanceOf[js.Any])
@@ -45,7 +45,7 @@ object Coord
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Coord] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.bizchartsMod.Coord](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Coord] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Coord](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = CoordProps
 }
 

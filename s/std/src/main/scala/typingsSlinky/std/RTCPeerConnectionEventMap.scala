@@ -5,14 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait RTCPeerConnectionEventMap extends js.Object {
-  var connectionstatechange: org.scalajs.dom.raw.Event
+  var connectionstatechange: Event_
   var datachannel: org.scalajs.dom.experimental.webrtc.RTCDataChannelEvent
   var icecandidate: org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEvent
   var icecandidateerror: RTCPeerConnectionIceErrorEvent
-  var iceconnectionstatechange: org.scalajs.dom.raw.Event
-  var icegatheringstatechange: org.scalajs.dom.raw.Event
-  var negotiationneeded: org.scalajs.dom.raw.Event
-  var signalingstatechange: org.scalajs.dom.raw.Event
+  var iceconnectionstatechange: Event_
+  var icegatheringstatechange: Event_
+  var negotiationneeded: Event_
+  var signalingstatechange: Event_
   var statsended: RTCStatsEvent
   var track: RTCTrackEvent
 }
@@ -20,14 +20,14 @@ trait RTCPeerConnectionEventMap extends js.Object {
 object RTCPeerConnectionEventMap {
   @scala.inline
   def apply(
-    connectionstatechange: org.scalajs.dom.raw.Event,
+    connectionstatechange: Event_,
     datachannel: org.scalajs.dom.experimental.webrtc.RTCDataChannelEvent,
     icecandidate: org.scalajs.dom.experimental.webrtc.RTCPeerConnectionIceEvent,
     icecandidateerror: RTCPeerConnectionIceErrorEvent,
-    iceconnectionstatechange: org.scalajs.dom.raw.Event,
-    icegatheringstatechange: org.scalajs.dom.raw.Event,
-    negotiationneeded: org.scalajs.dom.raw.Event,
-    signalingstatechange: org.scalajs.dom.raw.Event,
+    iceconnectionstatechange: Event_,
+    icegatheringstatechange: Event_,
+    negotiationneeded: Event_,
+    signalingstatechange: Event_,
     statsended: RTCStatsEvent,
     track: RTCTrackEvent
   ): RTCPeerConnectionEventMap = {

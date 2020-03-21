@@ -32,7 +32,7 @@ import scala.scalajs.js.annotation._
   * Component. If you do not require animation then you can safely use Images to replace Sprites in all cases.
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @JSGlobal("Phaser.Physics.Impact.ImpactSprite")
+- typingsSlinky.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @JSGlobal("Phaser.Physics.Impact.ImpactSprite")
 @js.native
 class ImpactSprite protected ()
   extends Sprite

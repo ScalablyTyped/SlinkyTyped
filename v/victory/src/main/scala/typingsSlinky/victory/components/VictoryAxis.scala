@@ -6,17 +6,18 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.victory.Anon_AxisAxisLabel
-import typingsSlinky.victory.Anon_XY
-import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.victoryMod.AnimatePropTypeInterface
-import typingsSlinky.victory.victoryMod.D3Scale
-import typingsSlinky.victory.victoryMod.DomainPropType
-import typingsSlinky.victory.victoryMod.EventPropTypeInterface
-import typingsSlinky.victory.victoryMod.PaddingProps
-import typingsSlinky.victory.victoryMod.ScalePropType
-import typingsSlinky.victory.victoryMod.VictoryAxisProps
-import typingsSlinky.victory.victoryMod.VictoryThemeDefinition
+import typingsSlinky.victory.Anon1
+import typingsSlinky.victory.AnonAxisLabel
+import typingsSlinky.victory.AnonXBoolean
+import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.mod.AnimatePropTypeInterface
+import typingsSlinky.victory.mod.D3Scale
+import typingsSlinky.victory.mod.DomainPropType
+import typingsSlinky.victory.mod.EventPropTypeInterface
+import typingsSlinky.victory.mod.PaddingProps
+import typingsSlinky.victory.mod.ScalePropType
+import typingsSlinky.victory.mod.VictoryAxisProps
+import typingsSlinky.victory.mod.VictoryThemeDefinition
 import typingsSlinky.victory.victoryStrings.axis
 import typingsSlinky.victory.victoryStrings.axisLabel
 import typingsSlinky.victory.victoryStrings.bottom
@@ -32,7 +33,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VictoryAxis
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.VictoryAxis] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryAxis] {
   @JSImport("victory", "VictoryAxis")
   @js.native
   object componentImport extends js.Object
@@ -58,15 +59,16 @@ object VictoryAxis
     horizontal: js.UndefOr[Boolean] = js.undefined,
     invertAxis: js.UndefOr[Boolean] = js.undefined,
     label: js.Any = null,
-    maxDomain: Double | Anon_XY = null,
-    minDomain: Double | Anon_XY = null,
+    maxDomain: Double | AnonY = null,
+    minDomain: Double | AnonY = null,
     offsetX: Int | Double = null,
     offsetY: Int | Double = null,
     orientation: top | bottom | left | right = null,
     padding: PaddingProps = null,
-    scale: ScalePropType | D3Scale | Anon_XYD3Scale = null,
+    scale: ScalePropType | D3Scale | Anon1 = null,
+    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
     standalone: js.UndefOr[Boolean] = js.undefined,
-    style: Anon_AxisAxisLabel = null,
+    style: AnonAxisLabel = null,
     theme: VictoryThemeDefinition = null,
     tickComponent: ReactElement = null,
     tickCount: Int | Double = null,
@@ -75,7 +77,7 @@ object VictoryAxis
     tickValues: js.Array[_] = null,
     width: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryAxis] = {
+  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryAxis] = {
     val __obj = js.Dynamic.literal()
     if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
     if (axisComponent != null) __obj.updateDynamic("axisComponent")(axisComponent.asInstanceOf[js.Any])
@@ -100,6 +102,7 @@ object VictoryAxis
     if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
     if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
     if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
     if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
@@ -112,7 +115,7 @@ object VictoryAxis
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryAxis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.VictoryAxis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryAxis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryAxis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryAxisProps
 }
 

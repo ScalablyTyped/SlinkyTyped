@@ -1,0 +1,18 @@
+package typingsSlinky.raven
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object mod {
+  type CaptureCallback = js.Function2[/* sendErr */ js.UndefOr[js.Error | scala.Null], /* eventId */ js.Any, scala.Unit]
+  type DataCallback = js.Function1[/* data */ org.scalablytyped.runtime.StringDictionary[js.Any], js.Any]
+  type FatalErrorCallback = js.Function3[
+    /* err */ js.Error, 
+    /* sendErr */ js.UndefOr[js.Error | scala.Null], 
+    /* eventId */ java.lang.String, 
+    scala.Unit
+  ]
+  type ShouldSendCallback = js.Function1[/* data */ org.scalablytyped.runtime.StringDictionary[js.Any], scala.Boolean]
+  type parseUserCallback = js.Function1[/* req */ js.Any, js.Any]
+}

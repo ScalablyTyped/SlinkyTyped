@@ -5,19 +5,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object homeworks {
-  import typingsSlinky.homeworks.homeworksStrings.move
-  import typingsSlinky.homeworks.homeworksStrings.start
-
   /**
     * @since 1.0.0
     */
-  type RippleStartEventType = start
+  type RippleStartEventType = typingsSlinky.homeworks.homeworksStrings.start
   /**
     * @since 1.0.0
     */
-  type StepMoveEventType = move
+  type StepMoveEventType = typingsSlinky.homeworks.homeworksStrings.move
   /**
     * @since 1.0.0
     */
-  type TabMoveEventType = move
+  type TabMoveEventType = typingsSlinky.homeworks.homeworksStrings.move
 }

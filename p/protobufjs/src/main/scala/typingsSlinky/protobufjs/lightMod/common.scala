@@ -1,7 +1,7 @@
 package typingsSlinky.protobufjs.lightMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.protobufjs.protobufjsMod.INamespace
+import typingsSlinky.protobufjs.mod.INamespace
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

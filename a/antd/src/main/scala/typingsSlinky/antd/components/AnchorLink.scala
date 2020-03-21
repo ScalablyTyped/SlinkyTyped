@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libAnchorAnchorLinkMod.AnchorLinkProps
-import typingsSlinky.antd.libAnchorAnchorLinkMod.default
+import typingsSlinky.antd.anchorLinkMod.AnchorLinkProps
+import typingsSlinky.antd.anchorLinkMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.node.nodeStrings.TLSv1Dot3
-  - typings.node.nodeStrings.TLSv1Dot2
-  - typings.node.nodeStrings.TLSv1Dot1
-  - typings.node.nodeStrings.TLSv1
+  - typingsSlinky.node.nodeStrings.TLSv1Dot3
+  - typingsSlinky.node.nodeStrings.TLSv1Dot2
+  - typingsSlinky.node.nodeStrings.TLSv1Dot1
+  - typingsSlinky.node.nodeStrings.TLSv1
 */
 trait SecureVersion extends js.Object
 

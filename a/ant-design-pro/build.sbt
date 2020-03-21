@@ -1,28 +1,35 @@
 organization := "org.scalablytyped.slinky"
 name := "ant-design-pro"
-version := "2.3.2-d7268c"
-scalaVersion := "2.12.10"
+version := "2.3.2-6ff61f"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "ant-design__create-react-context" % "0.2.5-e1c9d3",
-  "org.scalablytyped.slinky" %%% "antd" % "3.26.5-e3dc89",
-  "org.scalablytyped.slinky" %%% "antv__g2" % "3.5.9-bb1a35",
-  "org.scalablytyped.slinky" %%% "bizcharts" % "3.5.6-4ac051",
-  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-f22bc8",
-  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20191126Z-50a366",
-  "org.scalablytyped.slinky" %%% "moment" % "2.24.0-9323e2",
-  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-1d231d",
-  "org.scalablytyped.slinky" %%% "rc-mentions" % "0.4.2-667fa7",
-  "org.scalablytyped.slinky" %%% "rc-menu" % "7.5.3-587b45",
-  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20191220Z-f02704",
-  "org.scalablytyped.slinky" %%% "react-router" % "5.1-dt-20191126Z-6ac541",
-  "org.scalablytyped.slinky" %%% "react-slick" % "0.23-dt-20190503Z-286e52",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "ant-design__react-slick" % "0.25.5-544b8e",
+  "org.scalablytyped.slinky" %%% "antd" % "4.0.0-dffcf3",
+  "org.scalablytyped.slinky" %%% "antv__g2" % "3.5.9-c30634",
+  "org.scalablytyped.slinky" %%% "bizcharts" % "3.5.6-6eb9c9",
+  "org.scalablytyped.slinky" %%% "csstype" % "2.6.6-89abae",
+  "org.scalablytyped.slinky" %%% "dayjs" % "1.8.20-d9f924",
+  "org.scalablytyped.slinky" %%% "history" % "4.7.2-dt-20200226Z-86a01d",
+  "org.scalablytyped.slinky" %%% "moment" % "2.24.0-ca8f54",
+  "org.scalablytyped.slinky" %%% "prop-types" % "15.7-dt-20190924Z-6bb503",
+  "org.scalablytyped.slinky" %%% "rc-field-form" % "1.0.1-138f3f",
+  "org.scalablytyped.slinky" %%% "rc-mentions" % "1.0.1-ec39dd",
+  "org.scalablytyped.slinky" %%% "rc-menu" % "8.0.2-12402e",
+  "org.scalablytyped.slinky" %%% "rc-notification" % "4.0.0-64785a",
+  "org.scalablytyped.slinky" %%% "rc-picker" % "1.1.2-cf5c25",
+  "org.scalablytyped.slinky" %%% "rc-select" % "v5.9.0-dt-20200226Z-61199d",
+  "org.scalablytyped.slinky" %%% "rc-table" % "7.0.0-6527b5",
+  "org.scalablytyped.slinky" %%% "rc-tree" % "1.11-dt-20190212Z-8c6dde",
+  "org.scalablytyped.slinky" %%% "rc-tree-select" % "3.0.2-b1053d",
+  "org.scalablytyped.slinky" %%% "react" % "16.9-dt-20200227Z-f18fda",
+  "org.scalablytyped.slinky" %%% "react-router" % "5.1-dt-20200227Z-b021f3",
+  "org.scalablytyped.slinky" %%% "scroll-into-view-if-needed" % "2.2.22-c48364",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

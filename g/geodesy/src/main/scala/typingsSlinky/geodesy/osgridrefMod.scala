@@ -1,9 +1,9 @@
 package typingsSlinky.geodesy
 
 import typingsSlinky.geodesy.dmsMod.Precision
-import typingsSlinky.geodesy.geodesyMod.Datum
-import typingsSlinky.geodesy.geodesyMod.Dp
-import typingsSlinky.geodesy.geodesyMod.Format
+import typingsSlinky.geodesy.mod.Datum
+import typingsSlinky.geodesy.mod.Dp
+import typingsSlinky.geodesy.mod.Format
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,14 +14,14 @@ object osgridrefMod extends js.Object {
   // tslint:disable-next-line no-unnecessary-class
   @js.native
   class Dms ()
-    extends typingsSlinky.geodesy.latlonDashEllipsoidalDashDatumMod.Dms
+    extends typingsSlinky.geodesy.latlonEllipsoidalDatumMod.Dms
   
   @js.native
-  class LatLon () extends LatLon_OsGridRef
+  class LatLon () extends LatLonOsGridRef
   
   @js.native
-  trait LatLon_OsGridRef
-    extends typingsSlinky.geodesy.latlonDashEllipsoidalDashDatumMod.default {
+  trait LatLonOsGridRef
+    extends typingsSlinky.geodesy.latlonEllipsoidalDatumMod.default {
     def toOsGrid(): OsGridRef = js.native
   }
   
@@ -29,8 +29,8 @@ object osgridrefMod extends js.Object {
   trait OsGridRef extends js.Object {
     var easting: Double = js.native
     var northing: Double = js.native
-    def toLatLon(): LatLon_OsGridRef = js.native
-    def toLatLon(datum: Datum): LatLon_OsGridRef = js.native
+    def toLatLon(): LatLonOsGridRef = js.native
+    def toLatLon(datum: Datum): LatLonOsGridRef = js.native
     def toString(digits: Double): String = js.native
   }
   

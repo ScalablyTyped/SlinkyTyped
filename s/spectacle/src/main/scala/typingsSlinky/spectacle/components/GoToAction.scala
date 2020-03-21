@@ -5,14 +5,14 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.spectacle.spectacleMod.CSSProperties
-import typingsSlinky.spectacle.spectacleMod.GoToActionProps
+import typingsSlinky.spectacle.mod.CSSProperties
+import typingsSlinky.spectacle.mod.GoToActionProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GoToAction
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.spectacleMod.GoToAction] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.mod.GoToAction] {
   @JSImport("spectacle", "GoToAction")
   @js.native
   object componentImport extends js.Object
@@ -25,7 +25,7 @@ object GoToAction
     slide: Double | String = null,
     style: CSSProperties = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.GoToAction] = {
+  ): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.GoToAction] = {
     val __obj = js.Dynamic.literal()
     if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
     if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
@@ -35,7 +35,7 @@ object GoToAction
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.GoToAction] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.spectacleMod.GoToAction](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.GoToAction] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.mod.GoToAction](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = GoToActionProps
 }
 

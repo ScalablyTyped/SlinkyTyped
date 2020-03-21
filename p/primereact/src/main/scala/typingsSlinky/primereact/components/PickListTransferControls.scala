@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_DirectionOriginalEvent
-import typingsSlinky.primereact.componentsPicklistPickListTransferControlsMod.PickListTransferControlsProps
+import typingsSlinky.primereact.AnonTarget
+import typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControlsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 object PickListTransferControls
   extends ExternalComponentWithAttributesWithRefType[
       tag.type, 
-      typingsSlinky.primereact.componentsPicklistPickListTransferControlsMod.PickListTransferControls
+      typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControls
     ] {
   @JSImport("primereact/components/picklist/PickListTransferControls", "PickListTransferControls")
   @js.native
@@ -22,7 +22,7 @@ object PickListTransferControls
   
   override val component: String | js.Object = this.componentImport
   def apply(
-    onTransfer: /* e */ Anon_DirectionOriginalEvent => Unit = null,
+    onTransfer: /* e */ AnonTarget => Unit = null,
     source: js.Array[_] = null,
     sourceSelection: js.Array[_] = null,
     target: js.Array[_] = null,
@@ -30,7 +30,7 @@ object PickListTransferControls
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[
     tag.type, 
-    typingsSlinky.primereact.componentsPicklistPickListTransferControlsMod.PickListTransferControls
+    typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControls
   ] = {
     val __obj = js.Dynamic.literal()
     if (onTransfer != null) __obj.updateDynamic("onTransfer")(js.Any.fromFunction1(onTransfer))
@@ -43,10 +43,10 @@ object PickListTransferControls
   }
   def apply(mods: TagMod[tag.type]*): BuildingComponent[
     tag.type, 
-    typingsSlinky.primereact.componentsPicklistPickListTransferControlsMod.PickListTransferControls
+    typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControls
   ] = new slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.componentsPicklistPickListTransferControlsMod.PickListTransferControls](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  typingsSlinky.primereact.pickListTransferControlsMod.PickListTransferControls](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PickListTransferControlsProps
 }
 

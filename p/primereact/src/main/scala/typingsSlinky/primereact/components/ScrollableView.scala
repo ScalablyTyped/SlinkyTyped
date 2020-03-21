@@ -5,16 +5,13 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsDatatableScrollableViewMod.ScrollableViewProps
+import typingsSlinky.primereact.scrollableViewMod.ScrollableViewProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ScrollableView
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.primereact.componentsDatatableScrollableViewMod.ScrollableView
-    ] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.scrollableViewMod.ScrollableView] {
   @JSImport("primereact/components/datatable/ScrollableView", "ScrollableView")
   @js.native
   object componentImport extends js.Object
@@ -33,10 +30,7 @@ object ScrollableView
     unfrozenWidth: String = null,
     virtualScroll: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.primereact.componentsDatatableScrollableViewMod.ScrollableView
-  ] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.scrollableViewMod.ScrollableView] = {
     val __obj = js.Dynamic.literal()
     if (body != null) __obj.updateDynamic("body")(body.asInstanceOf[js.Any])
     if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
@@ -51,12 +45,9 @@ object ScrollableView
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[
-    tag.type, 
-    typingsSlinky.primereact.componentsDatatableScrollableViewMod.ScrollableView
-  ] = new slinky.core.BuildingComponent[
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.scrollableViewMod.ScrollableView] = new slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.componentsDatatableScrollableViewMod.ScrollableView](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  typingsSlinky.primereact.scrollableViewMod.ScrollableView](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ScrollableViewProps
 }
 

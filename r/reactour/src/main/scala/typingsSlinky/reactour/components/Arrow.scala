@@ -6,8 +6,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.`*`.tag
-import typingsSlinky.reactour.reactourMod.ArrowProps
+import slinky.web.html.button.tag
+import typingsSlinky.reactour.mod.ArrowProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

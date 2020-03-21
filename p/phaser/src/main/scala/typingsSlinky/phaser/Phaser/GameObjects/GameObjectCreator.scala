@@ -13,6 +13,8 @@ import typingsSlinky.phaser.Phaser.Types.GameObjects.Sprite.SpriteConfig
 import typingsSlinky.phaser.Phaser.Types.GameObjects.TileSprite.TileSpriteConfig
 import typingsSlinky.phaser.Phaser.Types.Tilemaps.TilemapConfig
 import typingsSlinky.phaser.Phaser.Types.Tweens.TweenBuilderConfig
+import typingsSlinky.phaser.SpineGameObject
+import typingsSlinky.phaser.SpineGameObjectConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -48,8 +50,7 @@ class GameObjectCreator protected () extends js.Object {
   /**
     * A reference to the Scene Update List.
     */
-  @JSName("updateList;")
-  var updateListSemicolon: UpdateList = js.native
+  var updateList: UpdateList = js.native
   /**
     * Creates a new Bitmap Text Game Object and returns it.
     * 
@@ -157,6 +158,8 @@ class GameObjectCreator protected () extends js.Object {
     */
   def shader(config: js.Object): Shader = js.native
   def shader(config: js.Object, addToScene: Boolean): Shader = js.native
+  def spine(config: SpineGameObjectConfig): SpineGameObject = js.native
+  def spine(config: SpineGameObjectConfig, addToScene: Boolean): SpineGameObject = js.native
   /**
     * Creates a new Sprite Game Object and returns it.
     * 

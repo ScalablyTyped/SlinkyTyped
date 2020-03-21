@@ -1,6 +1,6 @@
 package typingsSlinky.qwest
 
-import typingsSlinky.qwest.Qwest.Static
+import typingsSlinky.qwest.Qwest_.Static
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

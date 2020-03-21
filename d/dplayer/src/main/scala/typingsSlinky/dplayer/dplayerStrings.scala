@@ -1,11 +1,11 @@
 package typingsSlinky.dplayer
 
-import typingsSlinky.dplayer.dplayerMod.DirectionType
-import typingsSlinky.dplayer.dplayerMod.FullScreenType
-import typingsSlinky.dplayer.dplayerMod.Lang
-import typingsSlinky.dplayer.dplayerMod.Preload
-import typingsSlinky.dplayer.dplayerMod.SubTitleType
-import typingsSlinky.dplayer.dplayerMod.VideoType
+import typingsSlinky.dplayer.mod.DirectionType
+import typingsSlinky.dplayer.mod.FullScreenType
+import typingsSlinky.dplayer.mod.Lang
+import typingsSlinky.dplayer.mod.Preload
+import typingsSlinky.dplayer.mod.SubTitleType
+import typingsSlinky.dplayer.mod.VideoType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

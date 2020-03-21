@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.widget
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dijit.layout.ContentPane
 import typingsSlinky.dojo.dojoStrings.portletIconClass
 import typingsSlinky.dojo.dojoStrings.portletIconHoverClass
@@ -60,7 +60,7 @@ class PortletSettings () extends ContentPane {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_portletIconHoverClass(
     property: portletIconHoverClass,
@@ -70,6 +70,6 @@ class PortletSettings () extends ContentPane {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

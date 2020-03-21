@@ -1,0 +1,11 @@
+package typingsSlinky.reactNative.mod.Animated
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("react-native", "Animated.AnimatedWithChildren")
+@js.native
+class AnimatedWithChildren ()
+  extends typingsSlinky.reactNative.mod.Animated.Animated
+

@@ -1,7 +1,7 @@
 package typingsSlinky.ol.sourceMod
 
-import typingsSlinky.ol.sourceImageMapGuideMod.Options
-import typingsSlinky.ol.sourceImageMapGuideMod.default
+import typingsSlinky.ol.imageMapGuideMod.Options
+import typingsSlinky.ol.imageMapGuideMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

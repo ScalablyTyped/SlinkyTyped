@@ -6,15 +6,14 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.antdBooleans.`false`
-import typingsSlinky.antd.libListMod.ListGridType
-import typingsSlinky.antd.libListMod.ListItemLayout
-import typingsSlinky.antd.libListMod.ListLocale
-import typingsSlinky.antd.libListMod.ListProps
-import typingsSlinky.antd.libListMod.ListSize
-import typingsSlinky.antd.libListMod.default
-import typingsSlinky.antd.libPaginationPaginationMod.PaginationConfig
-import typingsSlinky.antd.libSpinMod.SpinProps
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.listMod.ListGridType
+import typingsSlinky.antd.listMod.ListItemLayout
+import typingsSlinky.antd.listMod.ListLocale
+import typingsSlinky.antd.listMod.ListProps
+import typingsSlinky.antd.listMod.ListSize
+import typingsSlinky.antd.listMod.default
+import typingsSlinky.antd.paginationPaginationMod.PaginationConfig
+import typingsSlinky.antd.spinMod.SpinProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +25,7 @@ object List
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id */
+  /* The following DOM/SVG props were specified: className, id, style */
   def apply[T](
     bordered: js.UndefOr[Boolean] = js.undefined,
     dataSource: js.Array[T] = null,
@@ -44,7 +43,6 @@ object List
     rowKey: (js.Function1[T, String]) | String = null,
     size: ListSize = null,
     split: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default[js.Any]] = {
     val __obj = js.Dynamic.literal()
@@ -64,11 +62,10 @@ object List
     if (rowKey != null) __obj.updateDynamic("rowKey")(rowKey.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (!js.isUndefined(split)) __obj.updateDynamic("split")(split.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libListMod.default[js.Any]]]
+    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.listMod.default[js.Any]]]
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libListMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.listMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ListProps[js.Any]
 }
 

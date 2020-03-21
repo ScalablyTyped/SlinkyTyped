@@ -1,8 +1,8 @@
 package typingsSlinky.heremaps.H.ui
 
-import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.heremaps.H.util.EventTarget
+import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -79,7 +79,7 @@ object base extends js.Object {
       * @param element {Element} - this UI element's HTML representation
       * @param doc {Document} - the HTML document into which the element is currently being rendered
       */
-    def renderInternal(element: org.scalajs.dom.raw.Element, doc: Document): Unit = js.native
+    def renderInternal(element: org.scalajs.dom.raw.Element, doc: Document_): Unit = js.native
     /**
       * This method stores arbitrary data with this UI element.
       * @param data {*} - the data to be stored
@@ -148,7 +148,7 @@ object base extends js.Object {
       * @param element {Element} - this UI element's HTML representation
       * @param doc {Document} - the HTML document into which the element is currently being rendered
       */
-    def renderInternal(element: org.scalajs.dom.raw.Element, doc: Document): Unit = js.native
+    def renderInternal(element: org.scalajs.dom.raw.Element, doc: Document_): Unit = js.native
     /**
       * This method stores arbitrary data with this UI element.
       * @param data {*} - the data to be stored

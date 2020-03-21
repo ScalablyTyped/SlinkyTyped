@@ -8,7 +8,7 @@ import slinky.core.TagMod
 import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_Backdrop
+import typingsSlinky.baseui.AnonCloseSource
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.bottom
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -37,9 +37,10 @@ object Drawer
     isOpen: js.UndefOr[Boolean] = js.undefined,
     mountNode: HTMLElement = null,
     onBackdropClick: /* event */ SyntheticMouseEvent[HTMLElement] => _ = null,
-    onClose: /* args */ Anon_Backdrop => _ = null,
+    onClose: /* args */ AnonCloseSource => _ = null,
     onEscapeKeyDown: /* event */ SyntheticKeyboardEvent[HTMLElement] => _ = null,
     overrides: DrawerOverrides = null,
+    renderAll: js.UndefOr[Boolean] = js.undefined,
     showBackdrop: js.UndefOr[Boolean] = js.undefined,
     size: default_ | full | auto | String = null,
     _overrides: StringDictionary[js.Any] = null
@@ -54,6 +55,7 @@ object Drawer
     if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
     if (onEscapeKeyDown != null) __obj.updateDynamic("onEscapeKeyDown")(js.Any.fromFunction1(onEscapeKeyDown))
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderAll)) __obj.updateDynamic("renderAll")(renderAll.asInstanceOf[js.Any])
     if (!js.isUndefined(showBackdrop)) __obj.updateDynamic("showBackdrop")(showBackdrop.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

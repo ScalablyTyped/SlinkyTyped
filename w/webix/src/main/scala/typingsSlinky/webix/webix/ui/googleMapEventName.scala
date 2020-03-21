@@ -5,35 +5,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onAfterAdd
-  - typings.webix.webixStrings.onAfterDelete
-  - typings.webix.webixStrings.onAfterLoad
-  - typings.webix.webixStrings.onAfterScroll
-  - typings.webix.webixStrings.onAfterSort
-  - typings.webix.webixStrings.onBeforeAdd
-  - typings.webix.webixStrings.onBeforeDelete
-  - typings.webix.webixStrings.onBeforeLoad
-  - typings.webix.webixStrings.onBeforeSort
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onBlur
-  - typings.webix.webixStrings.onDataRequest
-  - typings.webix.webixStrings.onDataUpdate
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onEnter
-  - typings.webix.webixStrings.onFocus
-  - typings.webix.webixStrings.onHeatMapRender
-  - typings.webix.webixStrings.onKeyPress
-  - typings.webix.webixStrings.onLoadError
-  - typings.webix.webixStrings.onLongTouch
-  - typings.webix.webixStrings.onSwipeX
-  - typings.webix.webixStrings.onSwipeY
-  - typings.webix.webixStrings.onTabFocus
-  - typings.webix.webixStrings.onTimedKeyPress
-  - typings.webix.webixStrings.onTouchEnd
-  - typings.webix.webixStrings.onTouchMove
-  - typings.webix.webixStrings.onTouchStart
-  - typings.webix.webixStrings.onViewResize
-  - typings.webix.webixStrings.onViewShow
+  - typingsSlinky.webix.webixStrings.onAfterAdd
+  - typingsSlinky.webix.webixStrings.onAfterDelete
+  - typingsSlinky.webix.webixStrings.onAfterLoad
+  - typingsSlinky.webix.webixStrings.onAfterScroll
+  - typingsSlinky.webix.webixStrings.onAfterSort
+  - typingsSlinky.webix.webixStrings.onBeforeAdd
+  - typingsSlinky.webix.webixStrings.onBeforeDelete
+  - typingsSlinky.webix.webixStrings.onBeforeLoad
+  - typingsSlinky.webix.webixStrings.onBeforeSort
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onBlur
+  - typingsSlinky.webix.webixStrings.onDataRequest
+  - typingsSlinky.webix.webixStrings.onDataUpdate
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onEnter
+  - typingsSlinky.webix.webixStrings.onFocus
+  - typingsSlinky.webix.webixStrings.onHeatMapRender
+  - typingsSlinky.webix.webixStrings.onKeyPress
+  - typingsSlinky.webix.webixStrings.onLoadError
+  - typingsSlinky.webix.webixStrings.onLongTouch
+  - typingsSlinky.webix.webixStrings.onSwipeX
+  - typingsSlinky.webix.webixStrings.onSwipeY
+  - typingsSlinky.webix.webixStrings.onTabFocus
+  - typingsSlinky.webix.webixStrings.onTimedKeyPress
+  - typingsSlinky.webix.webixStrings.onTouchEnd
+  - typingsSlinky.webix.webixStrings.onTouchMove
+  - typingsSlinky.webix.webixStrings.onTouchStart
+  - typingsSlinky.webix.webixStrings.onViewResize
+  - typingsSlinky.webix.webixStrings.onViewShow
 */
 trait googleMapEventName extends js.Object
 

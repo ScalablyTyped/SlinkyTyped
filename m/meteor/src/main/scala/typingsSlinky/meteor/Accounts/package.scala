@@ -5,7 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Accounts {
-  import typingsSlinky.meteor.Anon_AlgorithmDigest
-
-  type Password = String | Anon_AlgorithmDigest
+  type Password = java.lang.String | typingsSlinky.meteor.AnonDigest
 }

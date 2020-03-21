@@ -1,0 +1,103 @@
+package typingsSlinky.gm.mod
+
+import typingsSlinky.gm.gmStrings.Xor_
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.gm.gmStrings.Add
+  - typingsSlinky.gm.gmStrings.And
+  - typingsSlinky.gm.gmStrings.Assign
+  - typingsSlinky.gm.gmStrings.Depth
+  - typingsSlinky.gm.gmStrings.Divide
+  - typingsSlinky.gm.gmStrings.Gamma
+  - typingsSlinky.gm.gmStrings.Negate
+  - typingsSlinky.gm.gmStrings.LShift
+  - typingsSlinky.gm.gmStrings.Log
+  - typingsSlinky.gm.gmStrings.Max
+  - typingsSlinky.gm.gmStrings.Min
+  - typingsSlinky.gm.gmStrings.Multiply
+  - typingsSlinky.gm.gmStrings.Or
+  - typingsSlinky.gm.gmStrings.Pow
+  - typingsSlinky.gm.gmStrings.RShift
+  - typingsSlinky.gm.gmStrings.Subtract
+  - typingsSlinky.gm.gmStrings.Threshold
+  - typingsSlinky.gm.gmStrings.`Threshold-White`
+  - typingsSlinky.gm.gmStrings.`Threshold-White-Negate`
+  - typingsSlinky.gm.gmStrings.`Threshold-Black`
+  - typingsSlinky.gm.gmStrings.`Threshold-Black-Negate`
+  - typingsSlinky.gm.gmStrings.Xor_
+  - typingsSlinky.gm.gmStrings.`Noise-Gaussian`
+  - typingsSlinky.gm.gmStrings.`Noise-Impulse`
+  - typingsSlinky.gm.gmStrings.`Noise-Laplacian`
+  - typingsSlinky.gm.gmStrings.`Noise-Multiplicative`
+  - typingsSlinky.gm.gmStrings.`Noise-Poisson`
+  - typingsSlinky.gm.gmStrings.`Noise-Random`
+  - typingsSlinky.gm.gmStrings.`Noise-Uniform`
+*/
+trait ChannelOperator extends js.Object
+
+object ChannelOperator {
+  @scala.inline
+  def Add: typingsSlinky.gm.gmStrings.Add = this.cast("Add")
+  @scala.inline
+  def And: typingsSlinky.gm.gmStrings.And = this.cast("And")
+  @scala.inline
+  def Assign: typingsSlinky.gm.gmStrings.Assign = this.cast("Assign")
+  @scala.inline
+  def Depth: typingsSlinky.gm.gmStrings.Depth = this.cast("Depth")
+  @scala.inline
+  def Divide: typingsSlinky.gm.gmStrings.Divide = this.cast("Divide")
+  @scala.inline
+  def Gamma: typingsSlinky.gm.gmStrings.Gamma = this.cast("Gamma")
+  @scala.inline
+  def LShift: typingsSlinky.gm.gmStrings.LShift = this.cast("LShift")
+  @scala.inline
+  def Log: typingsSlinky.gm.gmStrings.Log = this.cast("Log")
+  @scala.inline
+  def Max: typingsSlinky.gm.gmStrings.Max = this.cast("Max")
+  @scala.inline
+  def Min: typingsSlinky.gm.gmStrings.Min = this.cast("Min")
+  @scala.inline
+  def Multiply: typingsSlinky.gm.gmStrings.Multiply = this.cast("Multiply")
+  @scala.inline
+  def Negate: typingsSlinky.gm.gmStrings.Negate = this.cast("Negate")
+  @scala.inline
+  def `Noise-Gaussian`: typingsSlinky.gm.gmStrings.`Noise-Gaussian` = this.cast("Noise-Gaussian")
+  @scala.inline
+  def `Noise-Impulse`: typingsSlinky.gm.gmStrings.`Noise-Impulse` = this.cast("Noise-Impulse")
+  @scala.inline
+  def `Noise-Laplacian`: typingsSlinky.gm.gmStrings.`Noise-Laplacian` = this.cast("Noise-Laplacian")
+  @scala.inline
+  def `Noise-Multiplicative`: typingsSlinky.gm.gmStrings.`Noise-Multiplicative` = this.cast("Noise-Multiplicative")
+  @scala.inline
+  def `Noise-Poisson`: typingsSlinky.gm.gmStrings.`Noise-Poisson` = this.cast("Noise-Poisson")
+  @scala.inline
+  def `Noise-Random`: typingsSlinky.gm.gmStrings.`Noise-Random` = this.cast("Noise-Random")
+  @scala.inline
+  def `Noise-Uniform`: typingsSlinky.gm.gmStrings.`Noise-Uniform` = this.cast("Noise-Uniform")
+  @scala.inline
+  def Or: typingsSlinky.gm.gmStrings.Or = this.cast("Or")
+  @scala.inline
+  def Pow: typingsSlinky.gm.gmStrings.Pow = this.cast("Pow")
+  @scala.inline
+  def RShift: typingsSlinky.gm.gmStrings.RShift = this.cast("RShift")
+  @scala.inline
+  def Subtract: typingsSlinky.gm.gmStrings.Subtract = this.cast("Subtract")
+  @scala.inline
+  def Threshold: typingsSlinky.gm.gmStrings.Threshold = this.cast("Threshold")
+  @scala.inline
+  def `Threshold-Black`: typingsSlinky.gm.gmStrings.`Threshold-Black` = this.cast("Threshold-Black")
+  @scala.inline
+  def `Threshold-Black-Negate`: typingsSlinky.gm.gmStrings.`Threshold-Black-Negate` = this.cast("Threshold-Black-Negate")
+  @scala.inline
+  def `Threshold-White`: typingsSlinky.gm.gmStrings.`Threshold-White` = this.cast("Threshold-White")
+  @scala.inline
+  def `Threshold-White-Negate`: typingsSlinky.gm.gmStrings.`Threshold-White-Negate` = this.cast("Threshold-White-Negate")
+  @scala.inline
+  def Xor: Xor_ = this.cast("Xor")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+}
+

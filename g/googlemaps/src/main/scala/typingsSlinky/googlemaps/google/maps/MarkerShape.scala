@@ -14,9 +14,9 @@ import scala.scalajs.js.annotation._
   * @see {@link https://developers.google.com/maps/documentation/javascript/reference/marker#MarkerShape Maps JavaScript API}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.googlemaps.google.maps.MarkerShapeCircle
-  - typings.googlemaps.google.maps.MarkerShapeRect
-  - typings.googlemaps.google.maps.MarkerShapePoly
+  - typingsSlinky.googlemaps.google.maps.MarkerShapeCircle
+  - typingsSlinky.googlemaps.google.maps.MarkerShapeRect
+  - typingsSlinky.googlemaps.google.maps.MarkerShapePoly
 */
 trait MarkerShape extends js.Object
 

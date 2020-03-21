@@ -2,7 +2,7 @@ package typingsSlinky.antd.components
 
 import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libLayoutSiderMod.default
+import typingsSlinky.antd.siderMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

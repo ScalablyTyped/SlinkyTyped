@@ -1,11 +1,14 @@
 package typingsSlinky.waterline
 
-import typingsSlinky.waterline.waterlineMod.AttributeType
+import typingsSlinky.waterline.mod.AttributeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object waterlineStrings {
+  @js.native
+  sealed trait Object extends js.Object
+  
   @js.native
   sealed trait alter extends js.Object
   
@@ -51,6 +54,8 @@ object waterlineStrings {
   @js.native
   sealed trait time extends AttributeType
   
+  @scala.inline
+  def Object: Object = "Object".asInstanceOf[Object]
   @scala.inline
   def alter: alter = "alter".asInstanceOf[alter]
   @scala.inline

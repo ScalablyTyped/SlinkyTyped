@@ -1,6 +1,6 @@
 package typingsSlinky.fscreen
 
-import typingsSlinky.fscreen.fscreenMod.EventName
+import typingsSlinky.fscreen.mod.EventName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

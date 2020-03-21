@@ -1,6 +1,6 @@
 package typingsSlinky.ioredis
 
-import typingsSlinky.ioredis.ioredisMod.BooleanResponse
+import typingsSlinky.ioredis.mod.BooleanResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

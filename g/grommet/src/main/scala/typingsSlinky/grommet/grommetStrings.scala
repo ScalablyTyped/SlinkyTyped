@@ -1,9 +1,9 @@
 package typingsSlinky.grommet
 
-import typingsSlinky.grommet.componentsListMod.SideType
-import typingsSlinky.grommet.componentsListMod._PadSizeType
-import typingsSlinky.grommet.componentsListMod._SizeType
-import typingsSlinky.grommet.contextsAnnounceContextMod.AnnounceMode
+import typingsSlinky.grommet.announceContextMod.AnnounceMode
+import typingsSlinky.grommet.listMod.SideType
+import typingsSlinky.grommet.listMod._PadSizeType
+import typingsSlinky.grommet.listMod._SizeType
 import typingsSlinky.grommet.utilsMod.AlignContentType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
 import typingsSlinky.grommet.utilsMod.BoxSideType
@@ -530,9 +530,6 @@ object grommetStrings {
   sealed trait hr extends _PolymorphicType
   
   @js.native
-  sealed trait href extends js.Object
-  
-  @js.native
   sealed trait html extends _PolymorphicType
   
   @js.native
@@ -567,9 +564,6 @@ object grommetStrings {
   
   @js.native
   sealed trait `keep-all` extends js.Object
-  
-  @js.native
-  sealed trait key extends js.Object
   
   @js.native
   sealed trait keygen extends _PolymorphicType
@@ -780,9 +774,6 @@ object grommetStrings {
   
   @js.native
   sealed trait rectilinear extends js.Object
-  
-  @js.native
-  sealed trait ref extends js.Object
   
   @js.native
   sealed trait repeat extends js.Object
@@ -1399,8 +1390,6 @@ object grommetStrings {
   @scala.inline
   def hr: hr = "hr".asInstanceOf[hr]
   @scala.inline
-  def href: href = "href".asInstanceOf[href]
-  @scala.inline
   def html: html = "html".asInstanceOf[html]
   @scala.inline
   def i: i = "i".asInstanceOf[i]
@@ -1424,8 +1413,6 @@ object grommetStrings {
   def kbd: kbd = "kbd".asInstanceOf[kbd]
   @scala.inline
   def `keep-all`: `keep-all` = "keep-all".asInstanceOf[`keep-all`]
-  @scala.inline
-  def key: key = "key".asInstanceOf[key]
   @scala.inline
   def keygen: keygen = "keygen".asInstanceOf[keygen]
   @scala.inline
@@ -1550,8 +1537,6 @@ object grommetStrings {
   def rect: rect = "rect".asInstanceOf[rect]
   @scala.inline
   def rectilinear: rectilinear = "rectilinear".asInstanceOf[rectilinear]
-  @scala.inline
-  def ref: ref = "ref".asInstanceOf[ref]
   @scala.inline
   def repeat: repeat = "repeat".asInstanceOf[repeat]
   @scala.inline

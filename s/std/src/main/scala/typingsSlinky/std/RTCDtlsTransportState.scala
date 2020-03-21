@@ -5,11 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.`new`
-  - typings.std.stdStrings.connecting
-  - typings.std.stdStrings.connected
-  - typings.std.stdStrings.closed
-  - typings.std.stdStrings.failed
+  - typingsSlinky.std.stdStrings.closed
+  - typingsSlinky.std.stdStrings.connected
+  - typingsSlinky.std.stdStrings.connecting
+  - typingsSlinky.std.stdStrings.failed
+  - typingsSlinky.std.stdStrings.`new`
 */
 trait RTCDtlsTransportState extends js.Object
 

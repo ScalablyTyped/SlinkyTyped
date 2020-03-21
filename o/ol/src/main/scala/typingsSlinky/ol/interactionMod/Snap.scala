@@ -1,7 +1,7 @@
 package typingsSlinky.ol.interactionMod
 
-import typingsSlinky.ol.interactionSnapMod.Options
-import typingsSlinky.ol.interactionSnapMod.default
+import typingsSlinky.ol.snapMod.Options
+import typingsSlinky.ol.snapMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -12,7 +12,7 @@ Typings are for version 1.4
 | Keywords           | css, split, flexbox, tiny, split-layout |
 | # releases         | 14 |
 | # dependents       | 62 |
-| # downloads        | 641327 |
+| # downloads        | 659475 |
 | # stars            | 5 |
 
 ## Links

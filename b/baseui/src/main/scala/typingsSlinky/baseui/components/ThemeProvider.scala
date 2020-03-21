@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.baseuiMod.ThemeProviderProps
+import typingsSlinky.baseui.mod.ThemeProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

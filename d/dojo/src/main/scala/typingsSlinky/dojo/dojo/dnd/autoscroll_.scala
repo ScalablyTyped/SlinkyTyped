@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojo.dnd
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDocument
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   * drags near the edge of the viewport or a scrollable node
   *
   */
-@JSName("autoscroll")
 @js.native
 trait autoscroll_ extends js.Object {
   /**
@@ -38,14 +37,14 @@ trait autoscroll_ extends js.Object {
     *
     * @param e mousemove/touchmove event
     */
-  def autoScroll(e: Event): Unit = js.native
+  def autoScroll(e: Event_): Unit = js.native
   /**
     * a handler for mousemove and touchmove events, which scrolls the first available
     * Dom element, it falls back to exports.autoScroll()
     *
     * @param e mousemove/touchmove event
     */
-  def autoScrollNodes(e: Event): Unit = js.native
+  def autoScrollNodes(e: Event_): Unit = js.native
   /**
     * Called at the start of a drag.
     *

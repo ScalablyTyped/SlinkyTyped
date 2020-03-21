@@ -10,9 +10,9 @@ Slider component for React
 | ------------------ | :-------------: |
 | Full name          | react-slider |
 | Keywords           | react-component, react, slider, component |
-| # releases         | 10 |
+| # releases         | 9 |
 | # dependents       | 40 |
-| # downloads        | 977537 |
+| # downloads        | 980945 |
 | # stars            | 5 |
 
 ## Links

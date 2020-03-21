@@ -1,6 +1,6 @@
 package typingsSlinky.stripejs.tokenMod
 
-import typingsSlinky.stripejs.stripejsMod.StripeError
+import typingsSlinky.stripejs.mod.StripeError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

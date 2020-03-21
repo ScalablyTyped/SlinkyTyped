@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint
 
-import typingsSlinky.sharepoint.SPClientTemplates.RenderContext_FieldInForm
+import typingsSlinky.sharepoint.SPClientTemplates.RenderContextFieldInForm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSGlobal("SPClientPeoplePickerCSRTemplate")
 @js.native
 object SPClientPeoplePickerCSRTemplate extends js.Object {
-  def apply(ctx: RenderContext_FieldInForm): String = js.native
+  def apply(ctx: RenderContextFieldInForm): String = js.native
 }
 

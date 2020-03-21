@@ -4,9 +4,8 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TimePicker
-  extends SharedApply_TimePickerProps_1593011459[typingsSlinky.antd.antdMod.TimePicker] {
-  @JSImport("antd", "TimePicker")
+object TimePicker extends SharedApply_PickPickPickerTimePropsMo_624170012 {
+  @JSImport("antd/lib/date-picker", "default.TimePicker")
   @js.native
   object componentImport extends js.Object
   

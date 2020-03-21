@@ -2,8 +2,8 @@ package typingsSlinky.ionic.definitionsMod
 
 import typingsSlinky.node.NodeJS.ProcessEnv
 import typingsSlinky.node.NodeJS.WritableStream
-import typingsSlinky.node.childUnderscoreProcessMod.SerializationType
-import typingsSlinky.node.childUnderscoreProcessMod.StdioOptions
+import typingsSlinky.node.childProcessMod.SerializationType
+import typingsSlinky.node.childProcessMod.StdioOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.charm
 
-import typingsSlinky.charm.charmMod.CharmColorName
+import typingsSlinky.charm.mod.CharmColorName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

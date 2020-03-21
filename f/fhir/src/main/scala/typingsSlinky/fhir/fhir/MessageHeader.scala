@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A resource that describes a message that is exchanged between systems
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait MessageHeader extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait MessageHeader extends DomainResource {
   /**
     * Contains extended information for property 'timestamp'.
     */

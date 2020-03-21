@@ -1,8 +1,8 @@
 package typingsSlinky.nodegit.diffMod.Diff
 
 import typingsSlinky.nodegit.blobMod.Blob
-import typingsSlinky.nodegit.diffDashOptionsMod.DiffOptions
-import typingsSlinky.nodegit.indexUnderscoreMod.Index
+import typingsSlinky.nodegit.diffOptionsMod.DiffOptions
+import typingsSlinky.nodegit.indexMod.Index
 import typingsSlinky.nodegit.repositoryMod.Repository
 import typingsSlinky.nodegit.treeMod.Tree
 import scala.scalajs.js

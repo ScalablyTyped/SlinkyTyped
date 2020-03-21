@@ -8,12 +8,12 @@ import scala.scalajs.js.annotation._
 trait Globalization extends js.Object {
   def dateToString(
     date: js.Date,
-    successCallback: js.Function1[/* properties */ Anon_Value, Unit],
+    successCallback: js.Function1[/* properties */ AnonValue, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
   def dateToString(
     date: js.Date,
-    successCallback: js.Function1[/* properties */ Anon_Value, Unit],
+    successCallback: js.Function1[/* properties */ AnonValue, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit],
     options: GlobalizationDateOptions
   ): Unit = js.native
@@ -23,11 +23,11 @@ trait Globalization extends js.Object {
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
   def getDateNames(
-    successCallback: js.Function1[/* properties */ Anon_ValueArray, Unit],
+    successCallback: js.Function1[/* properties */ AnonValueArray, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
   def getDateNames(
-    successCallback: js.Function1[/* properties */ Anon_ValueArray, Unit],
+    successCallback: js.Function1[/* properties */ AnonValueArray, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit],
     options: GlobalizationDateNameOptions
   ): Unit = js.native
@@ -41,11 +41,11 @@ trait Globalization extends js.Object {
     options: GlobalizationDateOptions
   ): Unit = js.native
   def getFirstDayOfWeek(
-    successCallback: js.Function1[/* properties */ Anon_ValueNumber, Unit],
+    successCallback: js.Function1[/* properties */ AnonValueNumber, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
   def getLocaleName(
-    successCallback: js.Function1[/* properties */ Anon_Value, Unit],
+    successCallback: js.Function1[/* properties */ AnonValue, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
   def getNumberPattern(
@@ -58,22 +58,22 @@ trait Globalization extends js.Object {
     options: GlobalizationNumberOptions
   ): Unit = js.native
   def getPreferredLanguage(
-    successCallback: js.Function1[/* properties */ Anon_Value, Unit],
+    successCallback: js.Function1[/* properties */ AnonValue, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
   def isDayLightSavingsTime(
     date: js.Date,
-    successCallback: js.Function1[/* properties */ Anon_Dst, Unit],
+    successCallback: js.Function1[/* properties */ AnonDst, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
   def numberToString(
     number: Double,
-    successCallback: js.Function1[/* properties */ Anon_Value, Unit],
+    successCallback: js.Function1[/* properties */ AnonValue, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
   def numberToString(
     number: Double,
-    successCallback: js.Function1[/* properties */ Anon_Value, Unit],
+    successCallback: js.Function1[/* properties */ AnonValue, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit],
     options: GlobalizationNumberOptions
   ): Unit = js.native
@@ -90,12 +90,12 @@ trait Globalization extends js.Object {
   ): Unit = js.native
   def stringToNumber(
     string: String,
-    successCallback: js.Function1[/* properties */ Anon_ValueNumber, Unit],
+    successCallback: js.Function1[/* properties */ AnonValueNumber, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit]
   ): Unit = js.native
   def stringToNumber(
     string: String,
-    successCallback: js.Function1[/* properties */ Anon_ValueNumber, Unit],
+    successCallback: js.Function1[/* properties */ AnonValueNumber, Unit],
     errorCallback: js.Function1[/* error */ GlobalizationError, Unit],
     options: GlobalizationNumberOptions
   ): Unit = js.native

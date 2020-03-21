@@ -1,7 +1,7 @@
 package typingsSlinky.heremaps.H.mapevents
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.heremaps.H.Map
+import typingsSlinky.heremaps.H.Map_
 import typingsSlinky.heremaps.H.map.Object
 import typingsSlinky.heremaps.H.mapevents.Pointer.Button
 import typingsSlinky.heremaps.H.math.BitMask
@@ -42,9 +42,9 @@ class Pointer protected () extends js.Object {
     opt_buttons: BitMask
   ) = this()
   var button: Button = js.native
-  var dragTarget: Object | Map = js.native
+  var dragTarget: Object | Map_ = js.native
   var id: Double = js.native
-  var target: Object | Map = js.native
+  var target: Object | Map_ = js.native
   var `type`: String = js.native
   var viewportX: Double = js.native
   var viewportY: Double = js.native

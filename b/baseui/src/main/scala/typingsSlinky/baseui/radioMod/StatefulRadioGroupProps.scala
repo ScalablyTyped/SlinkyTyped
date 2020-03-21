@@ -4,8 +4,8 @@ import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.TagMod
 import typingsSlinky.baseui.baseuiStrings.horizontal
 import typingsSlinky.baseui.baseuiStrings.vertical
-import typingsSlinky.react.reactMod.ChangeEvent
-import typingsSlinky.react.reactMod.ChangeEventHandler
+import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.react.mod.ChangeEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

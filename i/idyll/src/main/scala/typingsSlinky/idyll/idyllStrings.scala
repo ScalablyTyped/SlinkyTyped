@@ -1,7 +1,7 @@
 package typingsSlinky.idyll
 
-import typingsSlinky.idyll.idyllMod.ComponentFiles
-import typingsSlinky.idyll.idyllMod.PredefinedFile
+import typingsSlinky.idyll.mod.ComponentFiles
+import typingsSlinky.idyll.mod.PredefinedFile
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

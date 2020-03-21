@@ -12,7 +12,7 @@ Strip UTF-8 byte order mark (BOM) from a buffer
 | Keywords           | strip, bom, byte, order, mark, unicode, utf8, utf-8, remove, delete, trim, text, buffer |
 | # releases         | 2 |
 | # dependents       | 15 |
-| # downloads        | 11364756 |
+| # downloads        | 11519369 |
 | # stars            | 0 |
 
 ## Links

@@ -5,19 +5,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.chrome.chromeStrings.main_frame
-  - typings.chrome.chromeStrings.sub_frame
-  - typings.chrome.chromeStrings.stylesheet
-  - typings.chrome.chromeStrings.script
-  - typings.chrome.chromeStrings.image
-  - typings.chrome.chromeStrings.font
-  - typings.chrome.chromeStrings.`object`
-  - typings.chrome.chromeStrings.xmlhttprequest
-  - typings.chrome.chromeStrings.ping
-  - typings.chrome.chromeStrings.csp_report
-  - typings.chrome.chromeStrings.media
-  - typings.chrome.chromeStrings.websocket
-  - typings.chrome.chromeStrings.other
+  - typingsSlinky.chrome.chromeStrings.main_frame
+  - typingsSlinky.chrome.chromeStrings.sub_frame
+  - typingsSlinky.chrome.chromeStrings.stylesheet
+  - typingsSlinky.chrome.chromeStrings.script
+  - typingsSlinky.chrome.chromeStrings.image
+  - typingsSlinky.chrome.chromeStrings.font
+  - typingsSlinky.chrome.chromeStrings.`object`
+  - typingsSlinky.chrome.chromeStrings.xmlhttprequest
+  - typingsSlinky.chrome.chromeStrings.ping
+  - typingsSlinky.chrome.chromeStrings.csp_report
+  - typingsSlinky.chrome.chromeStrings.media
+  - typingsSlinky.chrome.chromeStrings.websocket
+  - typingsSlinky.chrome.chromeStrings.other
 */
 trait ResourceType extends js.Object
 

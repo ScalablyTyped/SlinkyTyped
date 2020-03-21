@@ -3,8 +3,8 @@ package typingsSlinky.ol
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
-import typingsSlinky.ol.tileMod.LoadFunction
-import typingsSlinky.ol.tileMod.Options
+import typingsSlinky.ol.olTileMod.LoadFunction
+import typingsSlinky.ol.olTileMod.Options
 import typingsSlinky.ol.tileStateMod.TileState
 import typingsSlinky.ol.tilecoordMod.TileCoord
 import scala.scalajs.js
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
 object imageTileMod extends js.Object {
   @js.native
   trait ImageTile
-    extends typingsSlinky.ol.tileMod.default {
+    extends typingsSlinky.ol.olTileMod.default {
     def getImage(): HTMLCanvasElement | HTMLImageElement | HTMLVideoElement = js.native
   }
   

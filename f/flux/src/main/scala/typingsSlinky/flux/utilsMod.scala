@@ -1,11 +1,11 @@
 package typingsSlinky.flux
 
 import slinky.core.facade.ReactElement
-import typingsSlinky.flux.libFluxContainerMod.Component
-import typingsSlinky.flux.libFluxContainerMod.RealOptions
-import typingsSlinky.flux.libFluxMixinLegacyMod.Options
-import typingsSlinky.flux.libFluxReduceStoreMod.FluxReduceStore
-import typingsSlinky.flux.libFluxStoreMod.^
+import typingsSlinky.flux.fluxContainerMod.Component
+import typingsSlinky.flux.fluxContainerMod.RealOptions
+import typingsSlinky.flux.fluxMixinLegacyMod.Options
+import typingsSlinky.flux.fluxReduceStoreMod.FluxReduceStore
+import typingsSlinky.flux.fluxStoreMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ object utilsMod extends js.Object {
     /**
       * Constructs and registers an instance of this store with the given dispatcher.
       */
-    def this(dispatcher: typingsSlinky.flux.libDispatcherMod.^[TPayload]) = this()
+    def this(dispatcher: typingsSlinky.flux.dispatcherMod.^[TPayload]) = this()
   }
   
   @js.native

@@ -1,11 +1,11 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.Many
-import typingsSlinky.lodash.lodashMod.NotVoid
-import typingsSlinky.lodash.lodashMod.ValueIteratee
-import typingsSlinky.lodash.lodashMod.__
 import typingsSlinky.lodash.lodashStrings.asc
 import typingsSlinky.lodash.lodashStrings.desc
+import typingsSlinky.lodash.mod.Many
+import typingsSlinky.lodash.mod.NotVoid
+import typingsSlinky.lodash.mod.ValueIteratee
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,11 +14,12 @@ import scala.scalajs.js.annotation._
 trait LodashOrderBy3x4[T] extends js.Object {
   def apply(
     iteratees: Many[
-      ValueIteratee[
-        /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+      js.Function1[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
+        NotVoid
       ]
     ]
-  ): LodashOrderBy4x5[T] = js.native
+  ): LodashOrderBy3x5[T] = js.native
   def apply(
     iteratees: Many[
       (js.Function1[

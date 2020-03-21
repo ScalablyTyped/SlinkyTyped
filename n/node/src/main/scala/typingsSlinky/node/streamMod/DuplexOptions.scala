@@ -1,12 +1,12 @@
 package typingsSlinky.node.streamMod
 
-import typingsSlinky.node.Anon_Chunk
+import typingsSlinky.node.AnonChunk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.node.streamMod.WritableOptions because var conflicts: autoDestroy, destroy, highWaterMark, objectMode. Inlined decodeStrings, defaultEncoding, emitClose, write, writev, `final` */ trait DuplexOptions extends ReadableOptions {
+- typingsSlinky.node.streamMod.WritableOptions because var conflicts: autoDestroy, destroy, highWaterMark, objectMode. Inlined decodeStrings, defaultEncoding, emitClose, write, writev, `final` */ trait DuplexOptions extends ReadableOptions {
   var allowHalfOpen: js.UndefOr[Boolean] = js.undefined
   var decodeStrings: js.UndefOr[Boolean] = js.undefined
   var defaultEncoding: js.UndefOr[String] = js.undefined
@@ -46,7 +46,7 @@ import scala.scalajs.js.annotation._
   var writev: js.UndefOr[
     js.ThisFunction2[
       (/* this */ Duplex) | (/* this */ Writable), 
-      /* chunks */ js.Array[Anon_Chunk], 
+      /* chunks */ js.Array[AnonChunk], 
       /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
@@ -90,7 +90,7 @@ object DuplexOptions {
     ] = null,
     writev: js.ThisFunction2[
       (/* this */ Duplex) | (/* this */ Writable), 
-      /* chunks */ js.Array[Anon_Chunk], 
+      /* chunks */ js.Array[AnonChunk], 
       /* callback */ js.Function1[js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null

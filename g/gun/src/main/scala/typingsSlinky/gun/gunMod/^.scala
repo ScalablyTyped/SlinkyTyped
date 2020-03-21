@@ -1,15 +1,18 @@
 package typingsSlinky.gun.gunMod
 
+import org.scalablytyped.runtime.Instantiable0
+import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.gun.gunMod.Gun.ChainReference
-import typingsSlinky.gun.gunMod.Gun.Constructor
-import typingsSlinky.gun.gunMod.Gun.ConstructorOptions
+import typingsSlinky.gun.AnonDecrypt
+import typingsSlinky.gun.AnonIfy
 import typingsSlinky.gun.gunStrings.pre_root
+import typingsSlinky.gun.mod.Gun.ChainReference
+import typingsSlinky.gun.mod.Gun.ConstructorOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("gun", JSImport.Namespace)
+@JSImport("gun/gun", JSImport.Namespace)
 @js.native
 class ^[DataType] ()
   extends ChainReference[DataType, js.Any, pre_root] {
@@ -18,7 +21,27 @@ class ^[DataType] ()
   def this(options: ConstructorOptions) = this()
 }
 
-@JSImport("gun", JSImport.Namespace)
+@JSImport("gun/gun", JSImport.Namespace)
 @js.native
-object ^ extends TopLevel[Constructor]
+object ^
+  extends TopLevel[
+      (Instantiable0[ChainReference[js.Object, js.Any, pre_root]]) with (Instantiable1[/* options */ String, ChainReference[js.Object, js.Any, pre_root]]) with (Instantiable1[/* options */ js.Array[String], ChainReference[js.Object, js.Any, pre_root]]) with (Instantiable1[/* options */ ConstructorOptions, ChainReference[js.Object, js.Any, pre_root]])
+    ] {
+  val Gun: js.Any = js.native
+  /** @see https://gun.eco/docs/SEA */
+  var SEA: AnonDecrypt = js.native
+  var node: AnonIfy = js.native
+  /**
+    * @description
+    * no parameters creates a local datastore using the default persistence layer, either localStorage or Radisk.
+    * @param options
+    * passing a URL creates the above local datastore that also tries to sync with the URL.
+    *
+    * or you can pass in an array of URLs to sync with multiple peers.
+    */
+  def apply[DataType](): ChainReference[DataType, _, pre_root] = js.native
+  def apply[DataType](options: String): ChainReference[DataType, _, pre_root] = js.native
+  def apply[DataType](options: js.Array[String]): ChainReference[DataType, _, pre_root] = js.native
+  def apply[DataType](options: ConstructorOptions): ChainReference[DataType, _, pre_root] = js.native
+}
 

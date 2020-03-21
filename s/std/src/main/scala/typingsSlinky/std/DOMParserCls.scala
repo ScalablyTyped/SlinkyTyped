@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @js.native
 class DOMParserCls () extends DOMParser {
   /* CompleteClass */
-  override def parseFromString(str: java.lang.String, `type`: org.scalajs.dom.experimental.domparser.SupportedType): org.scalajs.dom.raw.Document = js.native
+  override def parseFromString(str: java.lang.String, `type`: org.scalajs.dom.experimental.domparser.SupportedType): Document_ = js.native
 }
 

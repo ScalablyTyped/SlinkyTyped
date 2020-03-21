@@ -10,9 +10,9 @@ Ethereum wallet library.
 | ------------------ | :-------------: |
 | Full name          | ethers |
 | Keywords           | ethereum, library, wallet |
-| # releases         | 136 |
-| # dependents       | 514 |
-| # downloads        | 4952201 |
+| # releases         | 138 |
+| # dependents       | 520 |
+| # downloads        | 4991412 |
 | # stars            | 2 |
 
 ## Links

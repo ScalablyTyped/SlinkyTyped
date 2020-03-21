@@ -1,0 +1,24 @@
+package typingsSlinky.firebase.mod.firestore
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.firebase.firebaseStrings.added
+  - typingsSlinky.firebase.firebaseStrings.removed
+  - typingsSlinky.firebase.firebaseStrings.modified
+*/
+trait DocumentChangeType extends js.Object
+
+object DocumentChangeType {
+  @scala.inline
+  def added: typingsSlinky.firebase.firebaseStrings.added = this.cast("added")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def modified: typingsSlinky.firebase.firebaseStrings.modified = this.cast("modified")
+  @scala.inline
+  def removed: typingsSlinky.firebase.firebaseStrings.removed = this.cast("removed")
+}
+

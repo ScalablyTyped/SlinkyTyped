@@ -7,8 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.realm.realmStrings.downloadBeforeOpen
-  - typings.realm.realmStrings.openImmediately
+  - typingsSlinky.realm.realmStrings.downloadBeforeOpen
+  - typingsSlinky.realm.realmStrings.openImmediately
 */
 trait OpenRealmBehaviorType extends js.Object
 

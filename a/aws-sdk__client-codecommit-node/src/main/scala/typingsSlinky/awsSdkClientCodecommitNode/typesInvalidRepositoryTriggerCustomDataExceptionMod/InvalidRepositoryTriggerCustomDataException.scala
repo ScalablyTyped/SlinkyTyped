@@ -1,0 +1,18 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryTriggerCustomDataExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.putRepositoryTriggersExceptionsUnionMod.PutRepositoryTriggersExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.testRepositoryTriggersExceptionsUnionMod.TestRepositoryTriggersExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidRepositoryTriggerCustomDataException
+  extends ServiceException[InvalidRepositoryTriggerCustomDataExceptionDetails]
+     with PutRepositoryTriggersExceptionsUnion
+     with TestRepositoryTriggersExceptionsUnion {
+  @JSName("name")
+  var name_InvalidRepositoryTriggerCustomDataException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidRepositoryTriggerCustomDataException = js.native
+}
+

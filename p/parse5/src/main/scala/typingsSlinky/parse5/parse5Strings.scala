@@ -1,6 +1,6 @@
 package typingsSlinky.parse5
 
-import typingsSlinky.parse5.parse5Mod.DocumentMode
+import typingsSlinky.parse5.mod.DocumentMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

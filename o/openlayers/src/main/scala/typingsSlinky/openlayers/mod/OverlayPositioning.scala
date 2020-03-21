@@ -1,0 +1,42 @@
+package typingsSlinky.openlayers.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.openlayers.openlayersStrings.`bottom-left`
+  - typingsSlinky.openlayers.openlayersStrings.`bottom-center`
+  - typingsSlinky.openlayers.openlayersStrings.`bottom-right`
+  - typingsSlinky.openlayers.openlayersStrings.`center-left`
+  - typingsSlinky.openlayers.openlayersStrings.`center-center`
+  - typingsSlinky.openlayers.openlayersStrings.`center-right`
+  - typingsSlinky.openlayers.openlayersStrings.`top-left`
+  - typingsSlinky.openlayers.openlayersStrings.`top-center`
+  - typingsSlinky.openlayers.openlayersStrings.`top-right`
+*/
+trait OverlayPositioning extends js.Object
+
+object OverlayPositioning {
+  @scala.inline
+  def `bottom-center`: typingsSlinky.openlayers.openlayersStrings.`bottom-center` = this.cast("bottom-center")
+  @scala.inline
+  def `bottom-left`: typingsSlinky.openlayers.openlayersStrings.`bottom-left` = this.cast("bottom-left")
+  @scala.inline
+  def `bottom-right`: typingsSlinky.openlayers.openlayersStrings.`bottom-right` = this.cast("bottom-right")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def `center-center`: typingsSlinky.openlayers.openlayersStrings.`center-center` = this.cast("center-center")
+  @scala.inline
+  def `center-left`: typingsSlinky.openlayers.openlayersStrings.`center-left` = this.cast("center-left")
+  @scala.inline
+  def `center-right`: typingsSlinky.openlayers.openlayersStrings.`center-right` = this.cast("center-right")
+  @scala.inline
+  def `top-center`: typingsSlinky.openlayers.openlayersStrings.`top-center` = this.cast("top-center")
+  @scala.inline
+  def `top-left`: typingsSlinky.openlayers.openlayersStrings.`top-left` = this.cast("top-left")
+  @scala.inline
+  def `top-right`: typingsSlinky.openlayers.openlayersStrings.`top-right` = this.cast("top-right")
+}
+

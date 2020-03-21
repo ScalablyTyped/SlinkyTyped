@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Measurements and simple assertions
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait Observation extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Observation extends DomainResource {
   /**
     * Contains extended information for property 'comment'.
     */

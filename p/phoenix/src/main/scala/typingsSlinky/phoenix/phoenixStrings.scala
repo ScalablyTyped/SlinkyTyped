@@ -1,7 +1,7 @@
 package typingsSlinky.phoenix
 
-import typingsSlinky.phoenix.phoenixMod.BinaryType
-import typingsSlinky.phoenix.phoenixMod.ConnectionState
+import typingsSlinky.phoenix.mod.BinaryType
+import typingsSlinky.phoenix.mod.ConnectionState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

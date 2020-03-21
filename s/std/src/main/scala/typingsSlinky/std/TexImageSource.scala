@@ -5,12 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.ImageBitmap
-  - typings.std.ImageData
-  - typings.std.HTMLImageElement
-  - typings.std.HTMLCanvasElement
-  - typings.std.HTMLVideoElement
-  - typings.std.OffscreenCanvas
+  - typingsSlinky.std.ImageBitmap
+  - typingsSlinky.std.ImageData
+  - typingsSlinky.std.HTMLImageElement
+  - typingsSlinky.std.HTMLCanvasElement
+  - typingsSlinky.std.HTMLVideoElement
+  - typingsSlinky.std.OffscreenCanvas
 */
 trait TexImageSource extends js.Object
 

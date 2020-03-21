@@ -1,6 +1,6 @@
 package typingsSlinky.watchpack.directoryWatcherMod
 
-import typingsSlinky.watchpack.watchpackMod.WatcherOptions
+import typingsSlinky.watchpack.mod.WatcherOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

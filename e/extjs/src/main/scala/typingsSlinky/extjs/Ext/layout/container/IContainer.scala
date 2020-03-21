@@ -12,9 +12,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.extjs.Ext.IClass because Already inherited
-- typings.extjs.Ext.IBase because Already inherited
-- typings.extjs.Ext.util.IElementContainer because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, extend, getInitialConfig, inheritableStatics, initConfig, mixins, requires, self, singleton, statics, uses. Inlined addChildEls, removeChildEls */ trait IContainer extends ILayout {
+- typingsSlinky.extjs.Ext.IClass because Already inherited
+- typingsSlinky.extjs.Ext.IBase because Already inherited
+- typingsSlinky.extjs.Ext.util.IElementContainer because var conflicts: alias, alternateClassName, callOverridden, callParent, callSuper, config, extend, getInitialConfig, inheritableStatics, initConfig, mixins, requires, self, singleton, statics, uses. Inlined addChildEls, removeChildEls */ trait IContainer extends ILayout {
   /** [Method] Adds each argument passed to this method to the childEls array  */
   var addChildEls: js.UndefOr[js.Function0[Unit]] = js.undefined
   /** [Method] Called before any calculation cycles to reset DOM values and prepare for calculation

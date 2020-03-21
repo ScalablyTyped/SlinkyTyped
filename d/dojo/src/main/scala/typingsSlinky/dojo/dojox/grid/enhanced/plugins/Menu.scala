@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.grid.enhanced.plugins
 
-import org.scalajs.dom.raw.Event
-import typingsSlinky.dojo.dojox.grid.enhanced._Plugin
+import typingsSlinky.dojo.dojox.grid.enhanced.Plugin
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.grid.enhanced.plugins.Menu")
 @js.native
-class Menu () extends _Plugin {
+class Menu () extends Plugin {
   /**
     * menu types
     *
@@ -26,6 +26,6 @@ class Menu () extends _Plugin {
     *
     * @param e
     */
-  def showMenu(e: Event): Unit = js.native
+  def showMenu(e: Event_): Unit = js.native
 }
 

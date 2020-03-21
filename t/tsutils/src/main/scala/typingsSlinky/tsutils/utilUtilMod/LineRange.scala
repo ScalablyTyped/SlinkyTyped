@@ -1,6 +1,6 @@
 package typingsSlinky.tsutils.utilUtilMod
 
-import typingsSlinky.typescript.typescriptMod.TextRange
+import typingsSlinky.typescript.mod.TextRange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

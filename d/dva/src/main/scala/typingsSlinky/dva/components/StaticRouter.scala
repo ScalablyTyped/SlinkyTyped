@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.reactDashRouter.reactDashRouterMod.StaticRouterContext
-import typingsSlinky.reactDashRouter.reactDashRouterMod.StaticRouterProps
+import typingsSlinky.reactRouter.mod.StaticRouterContext
+import typingsSlinky.reactRouter.mod.StaticRouterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

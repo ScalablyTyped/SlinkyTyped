@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A healthcare consumer's policy choices to permits or denies recipients or roles to perform actions for specific purposes and periods of time
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait Consent extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Consent extends DomainResource {
   /**
     * Contains extended information for property 'dateTime'.
     */

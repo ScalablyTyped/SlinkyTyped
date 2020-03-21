@@ -1,6 +1,6 @@
 package typingsSlinky.streamtest
 
-import typingsSlinky.streamtest.streamtestMod.VersionName
+import typingsSlinky.streamtest.mod.VersionName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

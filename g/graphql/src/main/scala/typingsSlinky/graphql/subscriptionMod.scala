@@ -1,12 +1,12 @@
 package typingsSlinky.graphql
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.graphql.executionExecuteMod.ExecutionResult
-import typingsSlinky.graphql.languageAstMod.DocumentNode
-import typingsSlinky.graphql.subscriptionSubscribeMod.SubscriptionArgs
-import typingsSlinky.graphql.tsutilsMaybeMod.Maybe
-import typingsSlinky.graphql.typeDefinitionMod.GraphQLFieldResolver
-import typingsSlinky.graphql.typeSchemaMod.GraphQLSchema
+import typingsSlinky.graphql.astMod.DocumentNode
+import typingsSlinky.graphql.definitionMod.GraphQLFieldResolver
+import typingsSlinky.graphql.executeMod.ExecutionResult
+import typingsSlinky.graphql.maybeMod.Maybe
+import typingsSlinky.graphql.schemaMod.GraphQLSchema
+import typingsSlinky.graphql.subscribeMod.SubscriptionArgs
 import typingsSlinky.std.AsyncIterable
 import typingsSlinky.std.AsyncIterableIterator
 import scala.scalajs.js

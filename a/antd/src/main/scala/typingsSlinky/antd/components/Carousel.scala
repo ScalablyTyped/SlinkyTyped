@@ -4,15 +4,15 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libCarouselMod.CarouselEffect
-import typingsSlinky.antd.libCarouselMod.CarouselProps
-import typingsSlinky.antd.libCarouselMod.DotPosition
-import typingsSlinky.antd.libCarouselMod.default
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.reactDashSlick.reactDashSlickMod.LazyLoadTypes
-import typingsSlinky.reactDashSlick.reactDashSlickMod.ResponsiveObject
-import typingsSlinky.reactDashSlick.reactDashSlickMod.SwipeDirection
+import typingsSlinky.antDesignReactSlick.mod.LazyLoadTypes
+import typingsSlinky.antDesignReactSlick.mod.ResponsiveObject
+import typingsSlinky.antDesignReactSlick.mod.SwipeDirection
+import typingsSlinky.antd.carouselMod.CarouselEffect
+import typingsSlinky.antd.carouselMod.CarouselProps
+import typingsSlinky.antd.carouselMod.DotPosition
+import typingsSlinky.antd.carouselMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,21 +24,21 @@ object Carousel
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, draggable, rows */
+  /* The following DOM/SVG props were specified: className, draggable, rows, style */
   def apply(
     accessibility: js.UndefOr[Boolean] = js.undefined,
     adaptiveHeight: js.UndefOr[Boolean] = js.undefined,
     afterChange: /* currentSlide */ Double => Unit = null,
-    appendDots: /* dots */ TagMod[Any] => typingsSlinky.react.reactMod._Global_.JSX.Element = null,
+    appendDots: /* dots */ TagMod[Any] => ReactElement = null,
     arrows: js.UndefOr[Boolean] = js.undefined,
-    asNavFor: typingsSlinky.reactDashSlick.reactDashSlickMod.Slider = null,
+    asNavFor: typingsSlinky.antDesignReactSlick.mod.Slider = null,
     autoplay: js.UndefOr[Boolean] = js.undefined,
     autoplaySpeed: Int | Double = null,
     beforeChange: (/* currentSlide */ Double, /* nextSlide */ Double) => Unit = null,
     centerMode: js.UndefOr[Boolean] = js.undefined,
     centerPadding: String = null,
     cssEase: String = null,
-    customPaging: /* index */ Double => typingsSlinky.react.reactMod._Global_.JSX.Element = null,
+    customPaging: /* index */ Double => ReactElement = null,
     dotPosition: DotPosition = null,
     dots: js.UndefOr[Boolean] = js.undefined,
     dotsClass: String = null,
@@ -50,7 +50,7 @@ object Carousel
     infinite: js.UndefOr[Boolean] = js.undefined,
     initialSlide: Int | Double = null,
     lazyLoad: LazyLoadTypes = null,
-    nextArrow: typingsSlinky.react.reactMod._Global_.JSX.Element = null,
+    nextArrow: ReactElement = null,
     onEdge: /* swipeDirection */ SwipeDirection => Unit = null,
     onInit: () => Unit = null,
     onLazyLoad: /* slidesToLoad */ js.Array[Double] => Unit = null,
@@ -60,7 +60,7 @@ object Carousel
     pauseOnFocus: js.UndefOr[Boolean] = js.undefined,
     pauseOnHover: js.UndefOr[Boolean] = js.undefined,
     prefixCls: String = null,
-    prevArrow: typingsSlinky.react.reactMod._Global_.JSX.Element = null,
+    prevArrow: ReactElement = null,
     responsive: js.Array[ResponsiveObject] = null,
     rtl: js.UndefOr[Boolean] = js.undefined,
     slickGoTo: Int | Double = null,
@@ -69,7 +69,6 @@ object Carousel
     slidesToScroll: Int | Double = null,
     slidesToShow: Int | Double = null,
     speed: Int | Double = null,
-    style: CSSProperties = null,
     swipe: js.UndefOr[Boolean] = js.undefined,
     swipeEvent: /* swipeDirection */ SwipeDirection => Unit = null,
     swipeToSlide: js.UndefOr[Boolean] = js.undefined,
@@ -127,7 +126,6 @@ object Carousel
     if (slidesToScroll != null) __obj.updateDynamic("slidesToScroll")(slidesToScroll.asInstanceOf[js.Any])
     if (slidesToShow != null) __obj.updateDynamic("slidesToShow")(slidesToShow.asInstanceOf[js.Any])
     if (speed != null) __obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(swipe)) __obj.updateDynamic("swipe")(swipe.asInstanceOf[js.Any])
     if (swipeEvent != null) __obj.updateDynamic("swipeEvent")(js.Any.fromFunction1(swipeEvent))
     if (!js.isUndefined(swipeToSlide)) __obj.updateDynamic("swipeToSlide")(swipeToSlide.asInstanceOf[js.Any])
@@ -142,7 +140,7 @@ object Carousel
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libCarouselMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.carouselMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = CarouselProps
 }
 

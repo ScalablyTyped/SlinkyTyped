@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.gsap.gsap.TweenLite
-  - typings.gsap.gsap.TweenMax
+  - typingsSlinky.gsap.gsap.TweenLite
+  - typingsSlinky.gsap.gsap.TweenMax
 */
 trait Tween extends js.Object
 

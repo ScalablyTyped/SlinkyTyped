@@ -1,15 +1,15 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandMetadataInput
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.Footnote
 import typingsSlinky.ionic.ionicStrings.global
 import typingsSlinky.ionic.ionicStrings.project
+import typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput
+import typingsSlinky.ionicCliFramework.definitionsMod.Footnote
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait CommandMetadata
-  extends typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandMetadata[CommandMetadataInput, CommandMetadataOption] {
+  extends typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadata[CommandMetadataInput, CommandMetadataOption] {
   var `type`: global | project
 }
 

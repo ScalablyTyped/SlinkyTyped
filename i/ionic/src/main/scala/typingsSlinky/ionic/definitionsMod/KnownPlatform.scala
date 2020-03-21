@@ -5,11 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.ionic.ionicStrings.ios
-  - typings.ionic.ionicStrings.android
-  - typings.ionic.ionicStrings.wp8
-  - typings.ionic.ionicStrings.windows
-  - typings.ionic.ionicStrings.browser
+  - typingsSlinky.ionic.ionicStrings.ios
+  - typingsSlinky.ionic.ionicStrings.android
+  - typingsSlinky.ionic.ionicStrings.wp8
+  - typingsSlinky.ionic.ionicStrings.windows
+  - typingsSlinky.ionic.ionicStrings.browser
 */
 trait KnownPlatform extends js.Object
 

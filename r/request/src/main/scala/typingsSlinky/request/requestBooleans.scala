@@ -1,13 +1,13 @@
 package typingsSlinky.request
 
-import typingsSlinky.request.requestMod._PoolOptions
+import typingsSlinky.request.mod.PoolOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object requestBooleans {
   @js.native
-  sealed trait `false` extends _PoolOptions
+  sealed trait `false` extends PoolOptions
   
   @js.native
   sealed trait `true` extends js.Object

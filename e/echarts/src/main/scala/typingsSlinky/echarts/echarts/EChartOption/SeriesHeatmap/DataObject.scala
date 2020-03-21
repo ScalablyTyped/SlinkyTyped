@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesHeatmap
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth
-import typingsSlinky.echarts.Anon_BorderColorBorderType
-import typingsSlinky.echarts.Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthAnonBorderColorBorderType
+import typingsSlinky.echarts.AnonBorderType
+import typingsSlinky.echarts.AnonDistance
+import typingsSlinky.echarts.AnonItemStyleAnonBorderTypeLabelAnonDistance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,9 +11,7 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-heatmap.data.emphasis
     */
-  var emphasis: js.UndefOr[
-    Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthAnonBorderColorBorderType
-  ] = js.undefined
+  var emphasis: js.UndefOr[AnonItemStyleAnonBorderTypeLabelAnonDistance] = js.undefined
   /**
     * Style of a single data point. It is valid with
     * [coordinateSystem](https://echarts.apache.org/en/option.html#series-heatmap.coordinateSystem)
@@ -22,7 +20,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.data.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderType] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderType] = js.undefined
   /**
     * It is valid with
     * [coordinateSystem](https://echarts.apache.org/en/option.html#series-heatmap.coordinateSystem)
@@ -31,7 +29,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.data.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth] = js.undefined
+  var label: js.UndefOr[AnonDistance] = js.undefined
   /**
     * Name of data item.
     *
@@ -51,9 +49,9 @@ trait DataObject extends js.Object {
 object DataObject {
   @scala.inline
   def apply(
-    emphasis: Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthAnonBorderColorBorderType = null,
-    itemStyle: Anon_BorderColorBorderType = null,
-    label: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth = null,
+    emphasis: AnonItemStyleAnonBorderTypeLabelAnonDistance = null,
+    itemStyle: AnonBorderType = null,
+    label: AnonDistance = null,
     name: String = null,
     value: js.Array[_] = null
   ): DataObject = {

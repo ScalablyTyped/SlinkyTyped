@@ -5,12 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait WindowConsole extends js.Object {
-  val console: org.scalajs.dom.raw.Console
+  val console: Console_
 }
 
 object WindowConsole {
   @scala.inline
-  def apply(console: org.scalajs.dom.raw.Console): WindowConsole = {
+  def apply(console: Console_): WindowConsole = {
     val __obj = js.Dynamic.literal(console = console.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[WindowConsole]

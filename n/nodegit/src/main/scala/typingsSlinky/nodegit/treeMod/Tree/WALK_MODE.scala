@@ -7,8 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.nodegit.nodegitNumbers.`0`
-  - typings.nodegit.nodegitNumbers.`1`
+  - typingsSlinky.nodegit.nodegitNumbers.`0`
+  - typingsSlinky.nodegit.nodegitNumbers.`1`
 */
 trait WALK_MODE extends js.Object
 

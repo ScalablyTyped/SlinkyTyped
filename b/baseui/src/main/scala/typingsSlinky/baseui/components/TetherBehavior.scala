@@ -22,7 +22,7 @@ import typingsSlinky.baseui.baseuiStrings.topRight
 import typingsSlinky.baseui.layerMod.NormalizedOffsets
 import typingsSlinky.baseui.layerMod.PopperDataObject
 import typingsSlinky.baseui.layerMod.TetherProps
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

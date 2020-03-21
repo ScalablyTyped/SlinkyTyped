@@ -1,9 +1,9 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.Dictionary
-import typingsSlinky.lodash.lodashMod.List
-import typingsSlinky.lodash.lodashMod.PropertyName
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.Dictionary
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.PropertyName
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

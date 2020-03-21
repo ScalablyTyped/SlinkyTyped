@@ -1,8 +1,8 @@
 package typingsSlinky.tilebelt.tilebelt
 
-import typingsSlinky.geojson.geojsonMod.Feature
-import typingsSlinky.geojson.geojsonMod.GeoJsonProperties
-import typingsSlinky.geojson.geojsonMod.Polygon
+import typingsSlinky.geojson.mod.Feature
+import typingsSlinky.geojson.mod.GeoJsonProperties
+import typingsSlinky.geojson.mod.Polygon
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

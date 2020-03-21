@@ -4,9 +4,9 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libTransferListMod.RenderedItem
-import typingsSlinky.antd.libTransferMod.TransferItem
-import typingsSlinky.antd.libTransferRenderListBodyMod.TransferListBodyProps
+import typingsSlinky.antd.renderListBodyMod.TransferListBodyProps
+import typingsSlinky.antd.transferListMod.RenderedItem
+import typingsSlinky.antd.transferMod.TransferItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

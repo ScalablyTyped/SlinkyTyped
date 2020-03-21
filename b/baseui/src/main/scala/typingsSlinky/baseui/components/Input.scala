@@ -16,7 +16,7 @@ import typingsSlinky.baseui.baseuiStrings.right
 import typingsSlinky.baseui.inputMod.InputOverrides
 import typingsSlinky.baseui.inputMod.InputProps
 import typingsSlinky.baseui.inputMod.SharedProps
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ object Input
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoComplete, autoFocus, disabled, id, name, onBlur, onChange, onFocus, onKeyDown, onKeyPress, onKeyUp, placeholder, required, rows, type */
+  /* The following DOM/SVG props were specified: autoComplete, autoFocus, disabled, id, name, onBlur, onChange, onFocus, onKeyDown, onKeyPress, onKeyUp, placeholder, required, type */
   def apply(
     adjoined: none | left | right | both = null,
     `aria-describedby`: String = null,
@@ -43,6 +43,7 @@ object Input
     min: Int | Double = null,
     overrides: InputOverrides = null,
     positive: js.UndefOr[Boolean] = js.undefined,
+    rows: Int | Double = null,
     size: default_ | compact | large_ = null,
     startEnhancer: (js.Function1[/* args */ SharedProps, TagMod[Any]]) | TagMod[Any] = null,
     value: String = null,
@@ -62,6 +63,7 @@ object Input
     if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
+    if (rows != null) __obj.updateDynamic("rows")(rows.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (startEnhancer != null) __obj.updateDynamic("startEnhancer")(startEnhancer.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])

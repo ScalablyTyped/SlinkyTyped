@@ -1,7 +1,7 @@
 
 # Scala.js typings for vue-template-compiler
 
-Typings are for version 2.6.10
+Typings are for version 2.6.11
 
 ## Library description:
 template compiler for Vue 2.0
@@ -10,9 +10,9 @@ template compiler for Vue 2.0
 | ------------------ | :-------------: |
 | Full name          | vue-template-compiler |
 | Keywords           | vue, compiler |
-| # releases         | 28 |
-| # dependents       | 1504 |
-| # downloads        | 47091039 |
+| # releases         | 27 |
+| # dependents       | 1547 |
+| # downloads        | 48760046 |
 | # stars            | 21 |
 
 ## Links

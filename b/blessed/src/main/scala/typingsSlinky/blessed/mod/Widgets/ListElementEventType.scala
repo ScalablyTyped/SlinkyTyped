@@ -1,0 +1,36 @@
+package typingsSlinky.blessed.mod.Widgets
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.blessed.blessedStrings.cancel
+  - typingsSlinky.blessed.blessedStrings.action
+  - typingsSlinky.blessed.blessedStrings.`create item`
+  - typingsSlinky.blessed.blessedStrings.`add item`
+  - typingsSlinky.blessed.blessedStrings.`remove item`
+  - typingsSlinky.blessed.blessedStrings.`insert item`
+  - typingsSlinky.blessed.blessedStrings.`set items`
+*/
+trait ListElementEventType extends js.Object
+
+object ListElementEventType {
+  @scala.inline
+  def action: typingsSlinky.blessed.blessedStrings.action = this.cast("action")
+  @scala.inline
+  def `add item`: typingsSlinky.blessed.blessedStrings.`add item` = this.cast("add item")
+  @scala.inline
+  def cancel: typingsSlinky.blessed.blessedStrings.cancel = this.cast("cancel")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def `create item`: typingsSlinky.blessed.blessedStrings.`create item` = this.cast("create item")
+  @scala.inline
+  def `insert item`: typingsSlinky.blessed.blessedStrings.`insert item` = this.cast("insert item")
+  @scala.inline
+  def `remove item`: typingsSlinky.blessed.blessedStrings.`remove item` = this.cast("remove item")
+  @scala.inline
+  def `set items`: typingsSlinky.blessed.blessedStrings.`set items` = this.cast("set items")
+}
+

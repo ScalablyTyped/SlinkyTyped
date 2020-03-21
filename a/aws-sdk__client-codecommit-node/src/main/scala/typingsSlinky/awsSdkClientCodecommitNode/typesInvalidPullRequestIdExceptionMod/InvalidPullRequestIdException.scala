@@ -1,0 +1,30 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPullRequestIdExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.describePullRequestEventsExceptionsUnionMod.DescribePullRequestEventsExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getCommentsForPullRequestExceptionsUnionMod.GetCommentsForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getPullRequestExceptionsUnionMod.GetPullRequestExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.mergePullRequestByFastForwardExceptionsUnionMod.MergePullRequestByFastForwardExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestDescriptionExceptionsUnionMod.UpdatePullRequestDescriptionExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestStatusExceptionsUnionMod.UpdatePullRequestStatusExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.updatePullRequestTitleExceptionsUnionMod.UpdatePullRequestTitleExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidPullRequestIdException
+  extends ServiceException[InvalidPullRequestIdExceptionDetails]
+     with DescribePullRequestEventsExceptionsUnion
+     with GetCommentsForPullRequestExceptionsUnion
+     with GetPullRequestExceptionsUnion
+     with MergePullRequestByFastForwardExceptionsUnion
+     with PostCommentForPullRequestExceptionsUnion
+     with UpdatePullRequestDescriptionExceptionsUnion
+     with UpdatePullRequestStatusExceptionsUnion
+     with UpdatePullRequestTitleExceptionsUnion {
+  @JSName("name")
+  var name_InvalidPullRequestIdException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidPullRequestIdException = js.native
+}
+

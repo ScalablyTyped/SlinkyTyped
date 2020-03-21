@@ -25,8 +25,19 @@ object inspect extends js.Object {
     extends /* color */ StringDictionary[js.UndefOr[js.Tuple2[Double, Double]]]
   
   @js.native
-  object styles
-    extends /* style */ StringDictionary[js.UndefOr[String]]
+  object styles extends js.Object {
+    var bigint: String = js.native
+    var boolean: String = js.native
+    var date: String = js.native
+    var module: String = js.native
+    var `null`: String = js.native
+    var number: String = js.native
+    var regexp: String = js.native
+    var special: String = js.native
+    var string: String = js.native
+    var symbol: String = js.native
+    var undefined: String = js.native
+  }
   
 }
 

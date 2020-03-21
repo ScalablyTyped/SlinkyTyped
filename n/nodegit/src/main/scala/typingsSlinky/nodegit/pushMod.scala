@@ -1,6 +1,6 @@
 package typingsSlinky.nodegit
 
-import typingsSlinky.nodegit.pushDashOptionsMod.PushOptions
+import typingsSlinky.nodegit.pushOptionsMod.PushOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

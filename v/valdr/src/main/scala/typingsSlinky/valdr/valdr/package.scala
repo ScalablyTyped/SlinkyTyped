@@ -5,9 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object valdr {
-  import org.scalablytyped.runtime.StringDictionary
-
-  type ValdrConstraintFieldName = StringDictionary[ValdrConstraintValidator]
-  type ValdrConstraintTypeName = StringDictionary[ValdrConstraintFieldName]
-  type ValdrConstraints = StringDictionary[ValdrConstraintTypeName]
+  type ValdrConstraintFieldName = org.scalablytyped.runtime.StringDictionary[typingsSlinky.valdr.valdr.ValdrConstraintValidator]
+  type ValdrConstraintTypeName = org.scalablytyped.runtime.StringDictionary[typingsSlinky.valdr.valdr.ValdrConstraintFieldName]
+  type ValdrConstraints = org.scalablytyped.runtime.StringDictionary[typingsSlinky.valdr.valdr.ValdrConstraintTypeName]
 }

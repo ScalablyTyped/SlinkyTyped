@@ -1,7 +1,7 @@
 package typingsSlinky.aframe
 
-import typingsSlinky.three.srcCoreBufferAttributeMod.BufferAttribute
-import typingsSlinky.three.srcCoreBufferGeometryMod.BufferGeometry
+import typingsSlinky.three.bufferAttributeMod.BufferAttribute
+import typingsSlinky.three.bufferGeometryMod.BufferGeometry
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

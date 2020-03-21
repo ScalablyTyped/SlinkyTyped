@@ -30,31 +30,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.mfiles.mfilesNumbers.`20`
-  - typings.mfiles.mfilesNumbers.`21`
-  - typings.mfiles.mfilesNumbers.`22`
-  - typings.mfiles.mfilesNumbers.`23`
-  - typings.mfiles.mfilesNumbers.`24`
-  - typings.mfiles.mfilesNumbers.`25`
-  - typings.mfiles.mfilesNumbers.`26`
-  - typings.mfiles.mfilesNumbers.`27`
-  - typings.mfiles.mfilesNumbers.`28`
-  - typings.mfiles.mfilesNumbers.`29`
-  - typings.mfiles.mfilesNumbers.`30`
-  - typings.mfiles.mfilesNumbers.`31`
-  - typings.mfiles.mfilesNumbers.`32`
-  - typings.mfiles.mfilesNumbers.`33`
-  - typings.mfiles.mfilesNumbers.`34`
-  - typings.mfiles.mfilesNumbers.`35`
-  - typings.mfiles.mfilesNumbers.`36`
-  - typings.mfiles.mfilesNumbers.`37`
-  - typings.mfiles.mfilesNumbers.`38`
-  - typings.mfiles.mfilesNumbers.`39`
-  - typings.mfiles.mfilesNumbers.`40`
-  - typings.mfiles.mfilesNumbers.`41`
-  - typings.mfiles.mfilesNumbers.`42`
-  - typings.mfiles.mfilesNumbers.`43`
-  - typings.mfiles.mfilesNumbers.`44`
+  - typingsSlinky.mfiles.mfilesNumbers.`20`
+  - typingsSlinky.mfiles.mfilesNumbers.`21`
+  - typingsSlinky.mfiles.mfilesNumbers.`22`
+  - typingsSlinky.mfiles.mfilesNumbers.`23`
+  - typingsSlinky.mfiles.mfilesNumbers.`24`
+  - typingsSlinky.mfiles.mfilesNumbers.`25`
+  - typingsSlinky.mfiles.mfilesNumbers.`26`
+  - typingsSlinky.mfiles.mfilesNumbers.`27`
+  - typingsSlinky.mfiles.mfilesNumbers.`28`
+  - typingsSlinky.mfiles.mfilesNumbers.`29`
+  - typingsSlinky.mfiles.mfilesNumbers.`30`
+  - typingsSlinky.mfiles.mfilesNumbers.`31`
+  - typingsSlinky.mfiles.mfilesNumbers.`32`
+  - typingsSlinky.mfiles.mfilesNumbers.`33`
+  - typingsSlinky.mfiles.mfilesNumbers.`34`
+  - typingsSlinky.mfiles.mfilesNumbers.`35`
+  - typingsSlinky.mfiles.mfilesNumbers.`36`
+  - typingsSlinky.mfiles.mfilesNumbers.`37`
+  - typingsSlinky.mfiles.mfilesNumbers.`38`
+  - typingsSlinky.mfiles.mfilesNumbers.`39`
+  - typingsSlinky.mfiles.mfilesNumbers.`40`
+  - typingsSlinky.mfiles.mfilesNumbers.`41`
+  - typingsSlinky.mfiles.mfilesNumbers.`42`
+  - typingsSlinky.mfiles.mfilesNumbers.`43`
+  - typingsSlinky.mfiles.mfilesNumbers.`44`
 */
 trait MenuLocation extends js.Object
 

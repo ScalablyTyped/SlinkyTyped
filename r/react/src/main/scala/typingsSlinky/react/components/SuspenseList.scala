@@ -5,9 +5,9 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.experimentalMod.reactMod.SuspenseListProps
-import typingsSlinky.react.experimentalMod.reactMod.SuspenseListRevealOrder
-import typingsSlinky.react.experimentalMod.reactMod.SuspenseListTailMode
+import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListProps
+import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListRevealOrder
+import typingsSlinky.react.experimentalMod.reactAugmentingMod.SuspenseListTailMode
 import typingsSlinky.react.reactStrings.backwards
 import typingsSlinky.react.reactStrings.forwards
 import typingsSlinky.std.Exclude

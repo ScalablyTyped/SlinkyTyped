@@ -4,15 +4,16 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_First
-import typingsSlinky.primereact.componentsDatascrollerDataScrollerMod.DataScrollerProps
+import typingsSlinky.primereact.AnonFirst
+import typingsSlinky.primereact.dataScrollerMod.DataScrollerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DataScroller
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.datascrollerMod.DataScroller] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactDatascrollerMod.DataScroller] {
   @JSImport("primereact/datascroller", "DataScroller")
   @js.native
   object componentImport extends js.Object
@@ -24,15 +25,15 @@ object DataScroller
     footer: js.Any = null,
     header: js.Any = null,
     `inline`: js.UndefOr[Boolean] = js.undefined,
-    itemTemplate: /* item */ js.Any => js.UndefOr[typingsSlinky.react.reactMod._Global_.JSX.Element] = null,
+    itemTemplate: /* item */ js.Any => js.UndefOr[ReactElement] = null,
     `lazy`: js.UndefOr[Boolean] = js.undefined,
     loader: js.Any = null,
-    onLazyLoad: /* e */ Anon_First => Unit = null,
+    onLazyLoad: /* e */ AnonFirst => Unit = null,
     scrollHeight: js.Any = null,
     style: js.Object = null,
     value: js.Array[_] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.datascrollerMod.DataScroller] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDatascrollerMod.DataScroller] = {
     val __obj = js.Dynamic.literal()
     if (buffer != null) __obj.updateDynamic("buffer")(buffer.asInstanceOf[js.Any])
     if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
@@ -48,9 +49,9 @@ object DataScroller
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.datascrollerMod.DataScroller] = new slinky.core.BuildingComponent[
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDatascrollerMod.DataScroller] = new slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.datascrollerMod.DataScroller](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  typingsSlinky.primereact.primereactDatascrollerMod.DataScroller](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DataScrollerProps
 }
 

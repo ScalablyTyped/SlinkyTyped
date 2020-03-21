@@ -1,0 +1,32 @@
+package typingsSlinky.agGrid.dateComponentMod
+
+import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.agGrid.iComponentMod.IAfterGuiAttachedParams
+import typingsSlinky.agGrid.iComponentMod.IComponent
+import typingsSlinky.agGrid.utilsMod.Promise
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait IDateComp
+  extends IComponent[IDateParams]
+     with IDate
+
+object IDateComp {
+  @scala.inline
+  def apply(
+    getDate: () => js.Date,
+    getGui: () => HTMLElement,
+    setDate: js.Date => Unit,
+    afterGuiAttached: /* params */ js.UndefOr[IAfterGuiAttachedParams] => Unit = null,
+    destroy: () => Unit = null,
+    init: IDateParams => Promise[Unit] | Unit = null
+  ): IDateComp = {
+    val __obj = js.Dynamic.literal(getDate = js.Any.fromFunction0(getDate), getGui = js.Any.fromFunction0(getGui), setDate = js.Any.fromFunction1(setDate))
+    if (afterGuiAttached != null) __obj.updateDynamic("afterGuiAttached")(js.Any.fromFunction1(afterGuiAttached))
+    if (destroy != null) __obj.updateDynamic("destroy")(js.Any.fromFunction0(destroy))
+    if (init != null) __obj.updateDynamic("init")(js.Any.fromFunction1(init))
+    __obj.asInstanceOf[IDateComp]
+  }
+}
+

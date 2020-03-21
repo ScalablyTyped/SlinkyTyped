@@ -1,0 +1,35 @@
+package typingsSlinky.formol.mod
+
+import slinky.core.TagMod
+import typingsSlinky.formol.AnonDictk
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait SwitchButtonProps extends js.Object {
+  var className: js.UndefOr[String] = js.undefined
+  var i18n: js.UndefOr[AnonDictk] = js.undefined
+  var leftLabel: js.UndefOr[TagMod[Any]] = js.undefined
+  var rightLabel: js.UndefOr[TagMod[Any]] = js.undefined
+  var `type`: js.UndefOr[String] = js.undefined
+}
+
+object SwitchButtonProps {
+  @scala.inline
+  def apply(
+    className: String = null,
+    i18n: AnonDictk = null,
+    leftLabel: TagMod[Any] = null,
+    rightLabel: TagMod[Any] = null,
+    `type`: String = null
+  ): SwitchButtonProps = {
+    val __obj = js.Dynamic.literal()
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (i18n != null) __obj.updateDynamic("i18n")(i18n.asInstanceOf[js.Any])
+    if (leftLabel != null) __obj.updateDynamic("leftLabel")(leftLabel.asInstanceOf[js.Any])
+    if (rightLabel != null) __obj.updateDynamic("rightLabel")(rightLabel.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SwitchButtonProps]
+  }
+}
+

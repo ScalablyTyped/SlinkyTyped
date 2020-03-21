@@ -20,9 +20,9 @@ import typingsSlinky.baseui.blockMod.JustifySelf
 import typingsSlinky.baseui.blockMod.Position
 import typingsSlinky.baseui.blockMod.Responsive
 import typingsSlinky.baseui.blockMod.Scale
-import typingsSlinky.baseui.flexDashGridMod.FlexGridProps
-import typingsSlinky.react.reactMod.Ref
-import typingsSlinky.styletronDashReact.styletronDashReactMod.$StyleProp
+import typingsSlinky.baseui.flexGridMod.FlexGridProps
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.styletronReact.mod.StyleProp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,9 +34,9 @@ object FlexGrid
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: height, src, width */
+  /* The following DOM/SVG props were specified: src */
   def apply(
-    $style: $StyleProp[BlockProps] = null,
+    $style: StyleProp[BlockProps] = null,
     alignContent: Responsive[AlignContent] = null,
     alignItems: Responsive[AlignItems] = null,
     alignSelf: Responsive[AlignSelf] = null,
@@ -70,6 +70,7 @@ object FlexGrid
     gridTemplateAreas: Responsive[String] = null,
     gridTemplateColumns: Responsive[String] = null,
     gridTemplateRows: Responsive[String] = null,
+    height: Responsive[Scale] = null,
     justifyContent: Responsive[JustifyContent] = null,
     justifyItems: Responsive[JustifyItems] = null,
     justifySelf: Responsive[JustifySelf] = null,
@@ -96,6 +97,7 @@ object FlexGrid
     position: Responsive[Position] = null,
     right: Responsive[Scale] = null,
     top: Responsive[Scale] = null,
+    width: Responsive[Scale] = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = {
     val __obj = js.Dynamic.literal()
@@ -133,6 +135,7 @@ object FlexGrid
     if (gridTemplateAreas != null) __obj.updateDynamic("gridTemplateAreas")(gridTemplateAreas.asInstanceOf[js.Any])
     if (gridTemplateColumns != null) __obj.updateDynamic("gridTemplateColumns")(gridTemplateColumns.asInstanceOf[js.Any])
     if (gridTemplateRows != null) __obj.updateDynamic("gridTemplateRows")(gridTemplateRows.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
     if (justifyContent != null) __obj.updateDynamic("justifyContent")(justifyContent.asInstanceOf[js.Any])
     if (justifyItems != null) __obj.updateDynamic("justifyItems")(justifyItems.asInstanceOf[js.Any])
     if (justifySelf != null) __obj.updateDynamic("justifySelf")(justifySelf.asInstanceOf[js.Any])
@@ -159,12 +162,11 @@ object FlexGrid
     if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     if (right != null) __obj.updateDynamic("right")(right.asInstanceOf[js.Any])
     if (top != null) __obj.updateDynamic("top")(top.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.react.reactMod.Ref[js.Any] with js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.react.mod.Ref[js.Any] with js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = FlexGridProps
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.nodegit.rebaseMod
 
-import typingsSlinky.nodegit.checkoutDashOptionsMod.CheckoutOptions
+import typingsSlinky.nodegit.checkoutOptionsMod.CheckoutOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

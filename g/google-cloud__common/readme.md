@@ -10,9 +10,9 @@ Common components for Cloud APIs Node.js Client Libraries
 | ------------------ | :-------------: |
 | Full name          | @google-cloud/common |
 | Keywords           | - |
-| # releases         | 60 |
+| # releases         | 59 |
 | # dependents       | 31 |
-| # downloads        | 68373587 |
+| # downloads        | 69114100 |
 | # stars            | 0 |
 
 ## Links

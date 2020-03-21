@@ -1,21 +1,57 @@
 package typingsSlinky.catalog.components
 
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.catalog.catalogMod.HtmlSpecimenProps
-import typingsSlinky.catalog.catalogMod.SpecimenProps
+import typingsSlinky.catalog.catalogNumbers.`1`
+import typingsSlinky.catalog.catalogNumbers.`2`
+import typingsSlinky.catalog.catalogNumbers.`3`
+import typingsSlinky.catalog.catalogNumbers.`4`
+import typingsSlinky.catalog.catalogNumbers.`5`
+import typingsSlinky.catalog.catalogNumbers.`6`
+import typingsSlinky.catalog.mod.HtmlSpecimenProps
+import typingsSlinky.catalog.mod.SpecimenProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. QualifiedName(List(Name(<intersection>))) was not a @ScalaJSDefined trait */
 object HtmlSpecimen
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.catalog.catalogMod.HtmlSpecimen] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.catalog.mod.HtmlSpecimen] {
   @JSImport("catalog", "HtmlSpecimen")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
+  def apply(
+    dark: js.UndefOr[Boolean] = js.undefined,
+    frame: js.UndefOr[Boolean] = js.undefined,
+    light: js.UndefOr[Boolean] = js.undefined,
+    noSource: js.UndefOr[Boolean] = js.undefined,
+    plain: js.UndefOr[Boolean] = js.undefined,
+    rawBody: String = null,
+    rawOptions: String = null,
+    responsive: Boolean | String | js.Array[String] = null,
+    showSource: js.UndefOr[Boolean] = js.undefined,
+    span: `1` | `2` | `3` | `4` | `5` | `6` = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, typingsSlinky.catalog.mod.HtmlSpecimen] = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(dark)) __obj.updateDynamic("dark")(dark.asInstanceOf[js.Any])
+    if (!js.isUndefined(frame)) __obj.updateDynamic("frame")(frame.asInstanceOf[js.Any])
+    if (!js.isUndefined(light)) __obj.updateDynamic("light")(light.asInstanceOf[js.Any])
+    if (!js.isUndefined(noSource)) __obj.updateDynamic("noSource")(noSource.asInstanceOf[js.Any])
+    if (!js.isUndefined(plain)) __obj.updateDynamic("plain")(plain.asInstanceOf[js.Any])
+    if (rawBody != null) __obj.updateDynamic("rawBody")(rawBody.asInstanceOf[js.Any])
+    if (rawOptions != null) __obj.updateDynamic("rawOptions")(rawOptions.asInstanceOf[js.Any])
+    if (responsive != null) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
+    if (!js.isUndefined(showSource)) __obj.updateDynamic("showSource")(showSource.asInstanceOf[js.Any])
+    if (span != null) __obj.updateDynamic("span")(span.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.catalog.mod.HtmlSpecimen] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.catalog.mod.HtmlSpecimen](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SpecimenProps with HtmlSpecimenProps
 }
 

@@ -5,15 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.chance.chanceStrings.nl
-  - typings.chance.chanceStrings.uk
-  - typings.chance.chanceStrings.de
-  - typings.chance.chanceStrings.jp
-  - typings.chance.chanceStrings.es
-  - typings.chance.chanceStrings.fr
-  - typings.chance.chanceStrings.Asterisk
-  - typings.chance.chanceStrings.en
-  - typings.chance.chanceStrings.it
+  - typingsSlinky.chance.chanceStrings.nl
+  - typingsSlinky.chance.chanceStrings.uk
+  - typingsSlinky.chance.chanceStrings.de
+  - typingsSlinky.chance.chanceStrings.jp
+  - typingsSlinky.chance.chanceStrings.es
+  - typingsSlinky.chance.chanceStrings.fr
+  - typingsSlinky.chance.chanceStrings.Asterisk
+  - typingsSlinky.chance.chanceStrings.en
+  - typingsSlinky.chance.chanceStrings.it
 */
 trait LastNameNationalities extends js.Object
 

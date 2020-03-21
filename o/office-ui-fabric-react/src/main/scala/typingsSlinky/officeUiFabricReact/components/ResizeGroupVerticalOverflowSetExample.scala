@@ -1,0 +1,20 @@
+package typingsSlinky.officeUiFabricReact.components
+
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object ResizeGroupVerticalOverflowSetExample
+  extends ExternalComponentNoPropsWithAttributesWithRefType[
+      tag.type, 
+      typingsSlinky.officeUiFabricReact.resizeGroupVerticalOverflowSetExampleMod.ResizeGroupVerticalOverflowSetExample
+    ] {
+  @JSImport("office-ui-fabric-react/lib/components/ResizeGroup/examples/ResizeGroup.VerticalOverflowSet.Example", "ResizeGroupVerticalOverflowSetExample")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+}
+

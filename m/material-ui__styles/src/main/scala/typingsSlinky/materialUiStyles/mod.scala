@@ -1,0 +1,118 @@
+package typingsSlinky.materialUiStyles
+
+import org.scalablytyped.runtime.TopLevel
+import slinky.core.ReactComponentClass
+import slinky.core.facade.ReactElement
+import typingsSlinky.jss.mod.GenerateId
+import typingsSlinky.jss.mod.JssOptions
+import typingsSlinky.materialUiStyles.createGenerateClassNameCreateGenerateClassNameMod.GenerateClassNameOptions
+import typingsSlinky.materialUiStyles.getThemePropsGetThemePropsMod.ThemeWithProps
+import typingsSlinky.materialUiStyles.getThemePropsGetThemePropsMod.ThemedProps
+import typingsSlinky.materialUiStyles.materialUiStylesStrings.withTheme
+import typingsSlinky.materialUiStyles.mergeClassesMergeClassesMod.Classes
+import typingsSlinky.materialUiStyles.mergeClassesMergeClassesMod.MergeClassesOption
+import typingsSlinky.materialUiStyles.serverStyleSheetsMod.default
+import typingsSlinky.materialUiStyles.styledStyledMod.ComponentCreator
+import typingsSlinky.materialUiStyles.stylesProviderStylesProviderMod.StylesOptions
+import typingsSlinky.materialUiStyles.stylesProviderStylesProviderMod.StylesProviderProps
+import typingsSlinky.materialUiStyles.themeProviderThemeProviderMod.ThemeProviderProps
+import typingsSlinky.materialUiStyles.withStylesWithStylesMod.ClassKeyOfStyles
+import typingsSlinky.materialUiStyles.withStylesWithStylesMod.ClassNameMap
+import typingsSlinky.materialUiStyles.withStylesWithStylesMod.PropsOfStyles
+import typingsSlinky.materialUiStyles.withStylesWithStylesMod.StyleRules
+import typingsSlinky.materialUiStyles.withStylesWithStylesMod.StyledComponentProps
+import typingsSlinky.materialUiStyles.withStylesWithStylesMod.Styles
+import typingsSlinky.materialUiStyles.withStylesWithStylesMod.ThemeOfStyles
+import typingsSlinky.materialUiStyles.withStylesWithStylesMod.WithStyles
+import typingsSlinky.materialUiStyles.withStylesWithStylesMod.WithStylesOptions
+import typingsSlinky.materialUiStyles.withThemeWithThemeMod.ThemedComponentProps
+import typingsSlinky.materialUiStyles.withThemeWithThemeMod.WithTheme
+import typingsSlinky.materialUiStyles.withThemeWithThemeMod.WithThemeCreatorOption
+import typingsSlinky.materialUiTypes.mod.ConsistentWith
+import typingsSlinky.materialUiTypes.mod.Omit
+import typingsSlinky.materialUiTypes.mod.PropInjector
+import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.ComponentClass
+import typingsSlinky.react.mod.ComponentProps
+import typingsSlinky.react.mod.ComponentState
+import typingsSlinky.react.mod.ComponentType
+import typingsSlinky.react.mod.Context
+import typingsSlinky.react.mod.FunctionComponent
+import typingsSlinky.react.mod._Global_.JSX.LibraryManagedAttributes
+import typingsSlinky.std.Partial
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@material-ui/styles", JSImport.Namespace)
+@js.native
+object mod extends js.Object {
+  @js.native
+  class ServerStyleSheets () extends default {
+    def this(options: js.Object) = this()
+  }
+  
+  @js.native
+  class StylesProvider protected ()
+    extends Component[StylesProviderProps, ComponentState, js.Any] {
+    def this(props: StylesProviderProps) = this()
+    def this(props: StylesProviderProps, context: js.Any) = this()
+  }
+  
+  val StylesContext: Context[StylesOptions] = js.native
+  def ThemeProvider[T](props: ThemeProviderProps[T]): ReactElement = js.native
+  def createGenerateClassName(): GenerateId = js.native
+  def createGenerateClassName(options: GenerateClassNameOptions): GenerateId = js.native
+  def createStyles[ClassKey /* <: String */, Props /* <: js.Object */](styles: StyleRules[Props, ClassKey]): StyleRules[Props, ClassKey] = js.native
+  def getThemeProps[Theme /* <: ThemeWithProps[_] */, Props, Name /* <: String */](params: AnonName[Props, Name, Theme]): Props with (ThemedProps[Theme, Name]) = js.native
+  def jssPreset(): JssOptions = js.native
+  def makeStyles[Theme, ClassKey /* <: String */](style: Styles[Theme, js.Object, ClassKey]): js.Function1[/* props */ js.UndefOr[js.Any], ClassNameMap[ClassKey]] = js.native
+  @JSName("makeStyles")
+  def makeStyles_ThemeProps_ObjectClassKey_String[Theme, Props /* <: js.Object */, ClassKey /* <: String */](styles: Styles[Theme, Props, ClassKey]): js.Function1[/* props */ Props, ClassNameMap[ClassKey]] = js.native
+  @JSName("makeStyles")
+  def makeStyles_withTheme[Theme, ClassKey /* <: String */](style: Styles[Theme, js.Object, ClassKey], options: Omit[WithStylesOptions[Theme], withTheme]): js.Function1[/* props */ js.UndefOr[js.Any], ClassNameMap[ClassKey]] = js.native
+  @JSName("makeStyles")
+  def makeStyles_withTheme_ThemeProps_ObjectClassKey_String[Theme, Props /* <: js.Object */, ClassKey /* <: String */](styles: Styles[Theme, Props, ClassKey], options: Omit[WithStylesOptions[Theme], withTheme]): js.Function1[/* props */ Props, ClassNameMap[ClassKey]] = js.native
+  def mergeClasses(): Classes = js.native
+  def mergeClasses(options: MergeClassesOption): Classes = js.native
+  def styled[Component /* <: ReactElement */](Component: Component): ComponentCreator[Component] = js.native
+  def useTheme[T](): T = js.native
+  def withStyles[StylesType /* <: Styles[_, _, String] */, Options /* <: WithStylesOptions[ThemeOfStyles[StylesType]] */](style: StylesType): PropInjector[
+    WithStyles[
+      StylesType, 
+      /* import warning: importer.ImportType#apply Failed type conversion: Options['withTheme'] */ js.Any
+    ], 
+    StyledComponentProps[ClassKeyOfStyles[StylesType]] with PropsOfStyles[StylesType]
+  ] = js.native
+  def withStyles[StylesType /* <: Styles[_, _, String] */, Options /* <: WithStylesOptions[ThemeOfStyles[StylesType]] */](style: StylesType, options: Options): PropInjector[
+    WithStyles[
+      StylesType, 
+      /* import warning: importer.ImportType#apply Failed type conversion: Options['withTheme'] */ js.Any
+    ], 
+    StyledComponentProps[ClassKeyOfStyles[StylesType]] with PropsOfStyles[StylesType]
+  ] = js.native
+  def withTheme[Theme](component: ComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]], ComponentState]): ReactComponentClass[
+    (Omit[
+      LibraryManagedAttributes[
+        ReactComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]]], 
+        ComponentProps[ReactComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]]]]
+      ], 
+      String
+    ]) with Partial[WithTheme[Theme]] with ThemedComponentProps
+  ] = js.native
+  def withTheme[Theme](component: FunctionComponent[ConsistentWith[ComponentProps[_], WithTheme[Theme]]]): ReactComponentClass[
+    (Omit[
+      LibraryManagedAttributes[
+        ReactComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]]], 
+        ComponentProps[ReactComponentClass[ConsistentWith[ComponentProps[_], WithTheme[Theme]]]]
+      ], 
+      String
+    ]) with Partial[WithTheme[Theme]] with ThemedComponentProps
+  ] = js.native
+  def withThemeCreator[Theme](): PropInjector[WithTheme[Theme], ThemedComponentProps] = js.native
+  def withThemeCreator[Theme](option: WithThemeCreatorOption[Theme]): PropInjector[WithTheme[Theme], ThemedComponentProps] = js.native
+  @js.native
+  object StylesProvider extends TopLevel[ComponentType[StylesProviderProps]]
+  
+}
+

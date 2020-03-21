@@ -6,16 +6,16 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.reactMod.DOMAttributes
-import typingsSlinky.victory.Anon_XY
-import typingsSlinky.victory.victoryMod.BlockProps
-import typingsSlinky.victory.victoryMod.VictoryClipContainerProps
+import typingsSlinky.react.mod.DOMAttributes
+import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.mod.BlockProps
+import typingsSlinky.victory.mod.VictoryClipContainerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VictoryClipContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.VictoryClipContainer] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryClipContainer] {
   @JSImport("victory", "VictoryClipContainer")
   @js.native
   object componentImport extends js.Object
@@ -31,14 +31,14 @@ object VictoryClipContainer
     clipWidth: Int | Double = null,
     events: DOMAttributes[_] = null,
     groupComponent: ReactElement = null,
-    origin: Anon_XY = null,
+    origin: AnonY = null,
     polar: js.UndefOr[Boolean] = js.undefined,
     radius: Int | Double = null,
     rectComponent: ReactElement = null,
     translateX: Int | Double = null,
     translateY: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryClipContainer] = {
+  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryClipContainer] = {
     val __obj = js.Dynamic.literal()
     if (circleComponent != null) __obj.updateDynamic("circleComponent")(circleComponent.asInstanceOf[js.Any])
     if (clipHeight != null) __obj.updateDynamic("clipHeight")(clipHeight.asInstanceOf[js.Any])
@@ -57,9 +57,7 @@ object VictoryClipContainer
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryClipContainer] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.victory.victoryMod.VictoryClipContainer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryClipContainer] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryClipContainer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryClipContainerProps
 }
 

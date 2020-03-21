@@ -1,19 +1,19 @@
 package typingsSlinky.primereact.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_Event
-import typingsSlinky.primereact.componentsPanelPanelMod.PanelProps
+import typingsSlinky.primereact.AnonEvent
+import typingsSlinky.primereact.panelMod.PanelProps
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Panel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.panelMod.Panel] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactPanelMod.Panel] {
   @JSImport("primereact/panel", "Panel")
   @js.native
   object componentImport extends js.Object
@@ -25,13 +25,13 @@ object Panel
     collapsed: js.UndefOr[Boolean] = js.undefined,
     expandIcon: String = null,
     header: js.Any = null,
-    onCollapse: /* event */ Event => Unit = null,
-    onExpand: /* event */ Event => Unit = null,
-    onToggle: /* e */ Anon_Event => Unit = null,
+    onCollapse: /* event */ Event_ => Unit = null,
+    onExpand: /* event */ Event_ => Unit = null,
+    onToggle: /* e */ AnonEvent => Unit = null,
     style: js.Object = null,
     toggleable: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.panelMod.Panel] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactPanelMod.Panel] = {
     val __obj = js.Dynamic.literal()
     if (collapseIcon != null) __obj.updateDynamic("collapseIcon")(collapseIcon.asInstanceOf[js.Any])
     if (!js.isUndefined(collapsed)) __obj.updateDynamic("collapsed")(collapsed.asInstanceOf[js.Any])
@@ -45,7 +45,7 @@ object Panel
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.panelMod.Panel] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.panelMod.Panel](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactPanelMod.Panel] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.primereactPanelMod.Panel](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PanelProps
 }
 

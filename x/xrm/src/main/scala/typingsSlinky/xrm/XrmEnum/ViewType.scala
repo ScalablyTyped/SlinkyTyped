@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
   * An enumeration for view types.
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmNumbers.`1039`
-  - typings.xrm.xrmNumbers.`4230`
+  - typingsSlinky.xrm.xrmNumbers.`1039`
+  - typingsSlinky.xrm.xrmNumbers.`4230`
 */
 trait ViewType extends js.Object
 

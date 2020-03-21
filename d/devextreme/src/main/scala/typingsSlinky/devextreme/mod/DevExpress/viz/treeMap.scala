@@ -1,0 +1,13 @@
+package typingsSlinky.devextreme.mod.DevExpress.viz
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("devextreme", "DevExpress.viz.treeMap")
+@js.native
+object treeMap extends js.Object {
+  type dxTreeMapOptions = typingsSlinky.devextreme.mod.DevExpress.viz.dxTreeMapOptions
+  type dxTreeMapTooltip = typingsSlinky.devextreme.mod.DevExpress.viz.dxTreeMapTooltip
+}
+

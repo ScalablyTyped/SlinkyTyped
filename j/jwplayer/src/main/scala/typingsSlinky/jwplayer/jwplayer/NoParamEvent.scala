@@ -5,14 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.jwplayer.jwplayerStrings.adBlock
-  - typings.jwplayer.jwplayerStrings.beforeComplete
-  - typings.jwplayer.jwplayerStrings.complete
-  - typings.jwplayer.jwplayerStrings.beforePlay
-  - typings.jwplayer.jwplayerStrings.displayClick
-  - typings.jwplayer.jwplayerStrings.playlistComplete
-  - typings.jwplayer.jwplayerStrings.seeked
-  - typings.jwplayer.jwplayerStrings.remove
+  - typingsSlinky.jwplayer.jwplayerStrings.adBlock
+  - typingsSlinky.jwplayer.jwplayerStrings.beforeComplete
+  - typingsSlinky.jwplayer.jwplayerStrings.complete
+  - typingsSlinky.jwplayer.jwplayerStrings.beforePlay
+  - typingsSlinky.jwplayer.jwplayerStrings.displayClick
+  - typingsSlinky.jwplayer.jwplayerStrings.playlistComplete
+  - typingsSlinky.jwplayer.jwplayerStrings.seeked
+  - typingsSlinky.jwplayer.jwplayerStrings.remove
 */
 trait NoParamEvent extends js.Object
 

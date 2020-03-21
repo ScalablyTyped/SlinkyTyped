@@ -1,6 +1,6 @@
 package typingsSlinky.revalidator
 
-import typingsSlinky.revalidator.Revalidator.RevalidatorStatic
+import typingsSlinky.revalidator.Revalidator_.RevalidatorStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

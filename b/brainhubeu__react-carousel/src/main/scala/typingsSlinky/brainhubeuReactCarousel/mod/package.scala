@@ -1,0 +1,9 @@
+package typingsSlinky.brainhubeuReactCarousel
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object mod {
+  type ImgProps = slinky.core.facade.ReactElement
+}

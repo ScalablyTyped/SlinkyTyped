@@ -6,13 +6,11 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libPopoverMod.PopoverProps
-import typingsSlinky.antd.libPopoverMod.default
-import typingsSlinky.antd.libTooltipMod.TooltipAlignConfig
-import typingsSlinky.antd.libTooltipMod.TooltipPlacement
-import typingsSlinky.antd.libTooltipMod.TooltipTrigger
-import typingsSlinky.antd.libTooltipPlacementsMod.AdjustOverflow
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.placementsMod.AdjustOverflow
+import typingsSlinky.antd.popoverMod.PopoverProps
+import typingsSlinky.antd.popoverMod.default
+import typingsSlinky.antd.tooltipMod.TooltipPlacement
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,12 +22,12 @@ object Popover
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
+  /* The following DOM/SVG props were specified: className, style */
   def apply(
-    align: TooltipAlignConfig = null,
+    align: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any = null,
     arrowPointAtCenter: js.UndefOr[Boolean] = js.undefined,
     autoAdjustOverflow: Boolean | AdjustOverflow = null,
-    builtinPlacements: js.Object = null,
+    builtinPlacements: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any = null,
     content: TagMod[Any] = null,
     defaultVisible: js.UndefOr[Boolean] = js.undefined,
     destroyTooltipOnHide: js.UndefOr[Boolean] = js.undefined,
@@ -43,10 +41,9 @@ object Popover
     overlayStyle: CSSProperties = null,
     placement: TooltipPlacement = null,
     prefixCls: String = null,
-    style: CSSProperties = null,
     title: TagMod[Any] = null,
     transitionName: String = null,
-    trigger: TooltipTrigger = null,
+    trigger: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionType */ js.Any = null,
     visible: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
@@ -68,7 +65,6 @@ object Popover
     if (overlayStyle != null) __obj.updateDynamic("overlayStyle")(overlayStyle.asInstanceOf[js.Any])
     if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
     if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
@@ -76,7 +72,7 @@ object Popover
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libPopoverMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.popoverMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PopoverProps
 }
 

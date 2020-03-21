@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.cropperjs.cropperjsStrings.crop
-  - typings.cropperjs.cropperjsStrings.move
-  - typings.cropperjs.cropperjsStrings.none
+  - typingsSlinky.cropperjs.cropperjsStrings.crop
+  - typingsSlinky.cropperjs.cropperjsStrings.move
+  - typingsSlinky.cropperjs.cropperjsStrings.none
 */
 trait DragMode extends js.Object
 

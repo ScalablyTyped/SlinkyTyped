@@ -1,7 +1,6 @@
 package typingsSlinky.muicss.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.BuildingComponent
@@ -10,10 +9,10 @@ import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.input.tag
-import typingsSlinky.muicss.libReactInputMod.default
+import typingsSlinky.muicss.inputMod.default
 import typingsSlinky.muicss.reactMod.InputProps
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -58,6 +57,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -69,10 +69,11 @@ object Input
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: accept, alt, autoComplete, autoFocus, capture, checked, className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, draggable, height, hidden, id, lang, list, max, min, multiple, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, pattern, placeholder, readOnly, required, size, spellCheck, src, step, suppressContentEditableWarning, tabIndex, type, value, width */
+  /* The following DOM/SVG props were specified: accept, autoComplete, autoFocus, capture, checked, className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, draggable, form, height, hidden, id, lang, list, max, min, multiple, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, pattern, placeholder, readOnly, required, size, spellCheck, src, step, style, suppressContentEditableWarning, tabIndex, title, type, value, width */
   def apply(
     about: String = null,
     accessKey: String = null,
+    alt: String = null,
     `aria-activedescendant`: String = null,
     `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
     `aria-autocomplete`: none | `inline` | list | both = null,
@@ -129,7 +130,6 @@ object Input
     crossOrigin: String = null,
     datatype: String = null,
     floatingLabel: js.UndefOr[Boolean] = js.undefined,
-    form: String = null,
     formAction: String = null,
     formEncType: String = null,
     formMethod: String = null,
@@ -150,9 +150,10 @@ object Input
     maxLength: Int | Double = null,
     minLength: Int | Double = null,
     onAuxClick: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
+    onChange: ChangeEvent[HTMLInputElement] => Unit = null,
     onLabelClick: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
     prefix: String = null,
     property: String = null,
     radioGroup: String = null,
@@ -161,9 +162,7 @@ object Input
     role: String = null,
     security: String = null,
     slot: String = null,
-    style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
     translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
@@ -173,6 +172,7 @@ object Input
     val __obj = js.Dynamic.literal()
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
     if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
     if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
     if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
@@ -229,7 +229,6 @@ object Input
     if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
     if (!js.isUndefined(floatingLabel)) __obj.updateDynamic("floatingLabel")(floatingLabel.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
     if (formAction != null) __obj.updateDynamic("formAction")(formAction.asInstanceOf[js.Any])
     if (formEncType != null) __obj.updateDynamic("formEncType")(formEncType.asInstanceOf[js.Any])
     if (formMethod != null) __obj.updateDynamic("formMethod")(formMethod.asInstanceOf[js.Any])
@@ -251,6 +250,7 @@ object Input
     if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
     if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
     if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onLabelClick != null) __obj.updateDynamic("onLabelClick")(js.Any.fromFunction1(onLabelClick))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
@@ -261,9 +261,7 @@ object Input
     if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
     if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
@@ -271,7 +269,7 @@ object Input
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.muicss.libReactInputMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.muicss.inputMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = InputProps
 }
 

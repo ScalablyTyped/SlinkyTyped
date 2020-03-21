@@ -1,0 +1,18 @@
+package typingsSlinky.i18nextXhrBackend
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object mod {
+  type AjaxRequestCallback = js.Function2[
+    /* response */ java.lang.String, 
+    /* x */ org.scalajs.dom.raw.XMLHttpRequest, 
+    scala.Unit
+  ]
+  type LoadPathOption = java.lang.String | (js.Function2[
+    /* lngs */ js.Array[java.lang.String], 
+    /* namespaces */ js.Array[java.lang.String], 
+    java.lang.String
+  ])
+}

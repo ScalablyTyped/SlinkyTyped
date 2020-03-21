@@ -6,12 +6,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webdriver.webdriverStrings.trace
-  - typings.webdriver.webdriverStrings.debug
-  - typings.webdriver.webdriverStrings.info_
-  - typings.webdriver.webdriverStrings.warn
-  - typings.webdriver.webdriverStrings.error
-  - typings.webdriver.webdriverStrings.silent
+  - typingsSlinky.webdriver.webdriverStrings.trace
+  - typingsSlinky.webdriver.webdriverStrings.debug
+  - typingsSlinky.webdriver.webdriverStrings.info_
+  - typingsSlinky.webdriver.webdriverStrings.warn
+  - typingsSlinky.webdriver.webdriverStrings.error
+  - typingsSlinky.webdriver.webdriverStrings.silent
 */
 trait WebDriverLogTypes extends js.Object
 

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A statement of system capabilities
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait CapabilityStatement extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait CapabilityStatement extends DomainResource {
   /**
     * Contains extended information for property 'acceptUnknown'.
     */

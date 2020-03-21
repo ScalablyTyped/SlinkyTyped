@@ -12,7 +12,7 @@ Node.js client for OAuth2
 | Keywords           | oauth2, authorization, password, client, credentials |
 | # releases         | 16 |
 | # dependents       | 150 |
-| # downloads        | 1662190 |
+| # downloads        | 1716027 |
 | # stars            | 27 |
 
 ## Links

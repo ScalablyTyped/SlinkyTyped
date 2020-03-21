@@ -1,9 +1,9 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.atIonicUtilsDashSubprocess.atIonicUtilsDashSubprocessMod.Subprocess
-import typingsSlinky.atIonicUtilsDashSubprocess.atIonicUtilsDashSubprocessMod.SubprocessOptions
-import typingsSlinky.atIonicUtilsDashSubprocess.atIonicUtilsDashSubprocessMod.WhichOptions
-import typingsSlinky.node.childUnderscoreProcessMod.ChildProcess
+import typingsSlinky.ionicUtilsSubprocess.mod.Subprocess
+import typingsSlinky.ionicUtilsSubprocess.mod.SubprocessOptions
+import typingsSlinky.ionicUtilsSubprocess.mod.WhichOptions
+import typingsSlinky.node.childProcessMod.ChildProcess
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

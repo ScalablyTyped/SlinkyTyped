@@ -5,15 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.baseui.baseuiStrings.visible
-  - typings.baseui.baseuiStrings.hidden
-  - typings.baseui.baseuiStrings.scroll
-  - typings.baseui.baseuiStrings.scrollX
-  - typings.baseui.baseuiStrings.scrollY
-  - typings.baseui.baseuiStrings.auto
-  - typings.baseui.baseuiStrings.inherit
-  - typings.baseui.baseuiStrings.initial
-  - typings.baseui.baseuiStrings.unset
+  - typingsSlinky.baseui.baseuiStrings.visible
+  - typingsSlinky.baseui.baseuiStrings.hidden
+  - typingsSlinky.baseui.baseuiStrings.scroll
+  - typingsSlinky.baseui.baseuiStrings.scrollX
+  - typingsSlinky.baseui.baseuiStrings.scrollY
+  - typingsSlinky.baseui.baseuiStrings.auto
+  - typingsSlinky.baseui.baseuiStrings.inherit
+  - typingsSlinky.baseui.baseuiStrings.initial
+  - typingsSlinky.baseui.baseuiStrings.unset
 */
 trait Overflow extends js.Object
 

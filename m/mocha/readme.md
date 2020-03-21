@@ -1,7 +1,7 @@
 
 # Scala.js typings for mocha
 
-Typings are for version 5.2
+Typings are for version 7.0
 
 ## Library description:
 simple, flexible, fun test framework
@@ -10,9 +10,9 @@ simple, flexible, fun test framework
 | ------------------ | :-------------: |
 | Full name          | mocha |
 | Keywords           | mocha, test, bdd, tdd, tap |
-| # releases         | 23 |
-| # dependents       | 5620 |
-| # downloads        | 147947557 |
+| # releases         | 24 |
+| # dependents       | 5630 |
+| # downloads        | 149021604 |
 | # stars            | 704 |
 
 ## Links

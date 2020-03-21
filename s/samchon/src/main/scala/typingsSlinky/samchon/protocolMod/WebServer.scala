@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation._
   * Default Constructor.
   */
 abstract class WebServer ()
-  extends typingsSlinky.samchon.protocolServerWebServerMod.WebServer
+  extends typingsSlinky.samchon.webServerMod.WebServer
 

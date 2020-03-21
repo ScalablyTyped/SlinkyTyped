@@ -7,8 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.realm.realmStrings.openLocalRealm
-  - typings.realm.realmStrings.throwException
+  - typingsSlinky.realm.realmStrings.openLocalRealm
+  - typingsSlinky.realm.realmStrings.throwException
 */
 trait OpenRealmTimeOutBehavior extends js.Object
 

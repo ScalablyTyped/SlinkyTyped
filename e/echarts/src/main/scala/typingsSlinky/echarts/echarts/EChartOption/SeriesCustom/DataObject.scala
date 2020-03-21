@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesCustom
 
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BorderColorBorderType
-import typingsSlinky.echarts.Anon_ItemStyleAnonBorderColorBorderType
+import typingsSlinky.echarts.AnonBorderType
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonItemStyleAnonBorderType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,11 +11,11 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-custom.data.emphasis
     */
-  var emphasis: js.UndefOr[Anon_ItemStyleAnonBorderColorBorderType] = js.undefined
+  var emphasis: js.UndefOr[AnonItemStyleAnonBorderType] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-custom.data.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderType] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderType] = js.undefined
   /**
     * Name of data item.
     *
@@ -29,7 +29,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-custom.data.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * Value of data item.
     *
@@ -42,10 +42,10 @@ trait DataObject extends js.Object {
 object DataObject {
   @scala.inline
   def apply(
-    emphasis: Anon_ItemStyleAnonBorderColorBorderType = null,
-    itemStyle: Anon_BorderColorBorderType = null,
+    emphasis: AnonItemStyleAnonBorderType = null,
+    itemStyle: AnonBorderType = null,
     name: String = null,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     value: Double | js.Array[Double] = null
   ): DataObject = {
     val __obj = js.Dynamic.literal()

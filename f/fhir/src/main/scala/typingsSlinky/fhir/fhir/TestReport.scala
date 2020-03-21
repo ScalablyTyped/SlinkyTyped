@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Describes the results of a TestScript execution
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait TestReport extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait TestReport extends DomainResource {
   /**
     * Contains extended information for property 'issued'.
     */

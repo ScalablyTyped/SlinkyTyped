@@ -1,0 +1,32 @@
+package typingsSlinky.next
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object utilsMod {
+  type AppTreeType = slinky.core.ReactComponentClass[typingsSlinky.next.AppInitialPropsnamestring]
+  type AppType = typingsSlinky.next.utilsMod.NextComponentType[
+    typingsSlinky.next.utilsMod.AppContextType[typingsSlinky.next.routerMod.NextRouter], 
+    typingsSlinky.next.utilsMod.AppInitialProps, 
+    typingsSlinky.next.utilsMod.AppPropsType[typingsSlinky.next.routerMod.NextRouter, js.Object]
+  ]
+  type ComponentsEnhancer = typingsSlinky.next.AnonEnhanceApp | (typingsSlinky.next.utilsMod.Enhancer[
+    typingsSlinky.next.utilsMod.NextComponentType[typingsSlinky.next.utilsMod.NextPageContext, js.Object, js.Object]
+  ])
+  type DocumentType = (typingsSlinky.next.utilsMod.NextComponentType[
+    typingsSlinky.next.utilsMod.DocumentContext, 
+    typingsSlinky.next.utilsMod.DocumentInitialProps, 
+    typingsSlinky.next.utilsMod.DocumentProps
+  ]) with typingsSlinky.next.AnonRenderDocument
+  type Enhancer[C] = js.Function1[/* Component */ C, C]
+  type NextComponentType[C /* <: typingsSlinky.next.utilsMod.BaseContext */, IP, P] = slinky.core.ReactComponentClass[P] with (typingsSlinky.next.AnonGetInitialProps[C, IP])
+  type RenderPage = js.Function1[
+    /* options */ js.UndefOr[typingsSlinky.next.utilsMod.ComponentsEnhancer], 
+    typingsSlinky.next.utilsMod.RenderPageResult | js.Promise[typingsSlinky.next.utilsMod.RenderPageResult]
+  ]
+  /**
+    * Send body of response
+    */
+  type Send[T] = js.Function1[/* body */ T, scala.Unit]
+}

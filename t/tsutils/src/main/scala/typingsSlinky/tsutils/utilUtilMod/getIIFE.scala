@@ -1,8 +1,8 @@
 package typingsSlinky.tsutils.utilUtilMod
 
-import typingsSlinky.typescript.typescriptMod.ArrowFunction
-import typingsSlinky.typescript.typescriptMod.CallExpression
-import typingsSlinky.typescript.typescriptMod.FunctionExpression
+import typingsSlinky.typescript.mod.ArrowFunction
+import typingsSlinky.typescript.mod.CallExpression
+import typingsSlinky.typescript.mod.FunctionExpression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

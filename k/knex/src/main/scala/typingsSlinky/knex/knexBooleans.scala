@@ -1,6 +1,6 @@
 package typingsSlinky.knex
 
-import typingsSlinky.knex.knexMod.AreKeysOf
+import typingsSlinky.knex.mod.AreKeysOf
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

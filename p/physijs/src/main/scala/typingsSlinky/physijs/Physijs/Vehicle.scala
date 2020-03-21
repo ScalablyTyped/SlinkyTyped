@@ -1,7 +1,7 @@
 package typingsSlinky.physijs.Physijs
 
-import typingsSlinky.three.threeMod.Geometry
-import typingsSlinky.three.threeMod.Vector3
+import typingsSlinky.three.mod.Geometry
+import typingsSlinky.three.mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation._
 class Vehicle protected () extends js.Object {
   def this(mesh: Mesh) = this()
   def this(mesh: Mesh, tuning: VehicleTuning) = this()
-  var mesh: typingsSlinky.three.threeMod.Mesh = js.native
-  var wheels: js.Array[typingsSlinky.three.threeMod.Mesh] = js.native
+  var mesh: typingsSlinky.three.mod.Mesh = js.native
+  var wheels: js.Array[typingsSlinky.three.mod.Mesh] = js.native
   def addWheel(
     wheel_geometry: Geometry,
-    wheel_material: typingsSlinky.three.threeMod.Material,
+    wheel_material: typingsSlinky.three.mod.Material,
     connection_point: Vector3,
     wheel_direction: Vector3,
     wheel_axle: Vector3,
@@ -25,7 +25,7 @@ class Vehicle protected () extends js.Object {
   ): Unit = js.native
   def addWheel(
     wheel_geometry: Geometry,
-    wheel_material: typingsSlinky.three.threeMod.Material,
+    wheel_material: typingsSlinky.three.mod.Material,
     connection_point: Vector3,
     wheel_direction: Vector3,
     wheel_axle: Vector3,
@@ -35,10 +35,10 @@ class Vehicle protected () extends js.Object {
     tuning: VehicleTuning
   ): Unit = js.native
   def applyEngineForce(amount: Double): Unit = js.native
-  def applyEngineForce(amount: Double, wheel: typingsSlinky.three.threeMod.Mesh): Unit = js.native
+  def applyEngineForce(amount: Double, wheel: typingsSlinky.three.mod.Mesh): Unit = js.native
   def setBrake(amount: Double): Unit = js.native
-  def setBrake(amount: Double, wheel: typingsSlinky.three.threeMod.Mesh): Unit = js.native
+  def setBrake(amount: Double, wheel: typingsSlinky.three.mod.Mesh): Unit = js.native
   def setSteering(amount: Double): Unit = js.native
-  def setSteering(amount: Double, wheel: typingsSlinky.three.threeMod.Mesh): Unit = js.native
+  def setSteering(amount: Double, wheel: typingsSlinky.three.mod.Mesh): Unit = js.native
 }
 

@@ -2,7 +2,7 @@ package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dijit.Tree._TreeNode
+import typingsSlinky.dojo.dijit.Tree_.TreeNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ trait TypeofTree extends js.Object {
   var _TreeNode: Instantiable2[
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
-    typingsSlinky.dojo.dijit.Tree._TreeNode
+    TreeNode
   ]
 }
 
@@ -30,7 +30,7 @@ object TypeofTree {
     _TreeNode: Instantiable2[
       js.UndefOr[/* params */ js.Object], 
       js.UndefOr[/* srcNodeRef */ HTMLElement], 
-      _TreeNode
+      TreeNode
     ]
   ): TypeofTree = {
     val __obj = js.Dynamic.literal(_TreeNode = _TreeNode.asInstanceOf[js.Any])

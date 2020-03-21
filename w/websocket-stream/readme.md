@@ -11,8 +11,8 @@ Use websockets with the node streams API. Works in browser and node
 | Full name          | websocket-stream |
 | Keywords           | websocket, websockets, stream, streams, realtime |
 | # releases         | 6 |
-| # dependents       | 186 |
-| # downloads        | 7026030 |
+| # dependents       | 190 |
+| # downloads        | 7288240 |
 | # stars            | 31 |
 
 ## Links

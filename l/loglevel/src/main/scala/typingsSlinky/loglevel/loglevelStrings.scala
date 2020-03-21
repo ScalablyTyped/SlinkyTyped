@@ -1,6 +1,6 @@
 package typingsSlinky.loglevel
 
-import typingsSlinky.loglevel.loglevelMod.LogLevelDesc
+import typingsSlinky.loglevel.mod.LogLevelDesc
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.papaparse
 
-import typingsSlinky.papaparse.papaparseMod._GuessableDelimiters
+import typingsSlinky.papaparse.mod._GuessableDelimiters
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

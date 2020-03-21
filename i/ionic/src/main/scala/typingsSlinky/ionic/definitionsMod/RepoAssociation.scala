@@ -8,9 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.ionic.definitionsMod.GithubRepoAssociation
-  - typings.ionic.definitionsMod.BitbucketCloudRepoAssociation
-  - typings.ionic.definitionsMod.BitbucketServerRepoAssociation
+  - typingsSlinky.ionic.definitionsMod.GithubRepoAssociation
+  - typingsSlinky.ionic.definitionsMod.BitbucketCloudRepoAssociation
+  - typingsSlinky.ionic.definitionsMod.BitbucketServerRepoAssociation
 */
 trait RepoAssociation extends js.Object
 

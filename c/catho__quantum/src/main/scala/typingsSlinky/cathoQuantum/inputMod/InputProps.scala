@@ -1,0 +1,75 @@
+package typingsSlinky.cathoQuantum.inputMod
+
+import org.scalajs.dom.raw.HTMLInputElement
+import slinky.web.SyntheticMouseEvent
+import typingsSlinky.cathoQuantum.AnonBaseFontSizeColors
+import typingsSlinky.cathoQuantum.cathoQuantumStrings.email
+import typingsSlinky.cathoQuantum.cathoQuantumStrings.number
+import typingsSlinky.cathoQuantum.cathoQuantumStrings.password
+import typingsSlinky.cathoQuantum.cathoQuantumStrings.search
+import typingsSlinky.cathoQuantum.cathoQuantumStrings.tel
+import typingsSlinky.cathoQuantum.cathoQuantumStrings.text
+import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.react.mod.ChangeEventHandler
+import typingsSlinky.react.mod.MouseEventHandler
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait InputProps extends js.Object {
+  var descriptionLabel: js.UndefOr[String] = js.undefined
+  var error: js.UndefOr[String] = js.undefined
+  var helperText: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var label: js.UndefOr[String] = js.undefined
+  var mask: js.UndefOr[Mask | js.Array[Mask]] = js.undefined
+  var name: js.UndefOr[String] = js.undefined
+  var onChange: js.UndefOr[ChangeEventHandler[HTMLInputElement]] = js.undefined
+  var onClean: js.UndefOr[MouseEventHandler[HTMLInputElement]] = js.undefined
+  var placeholder: js.UndefOr[String] = js.undefined
+  var required: js.UndefOr[Boolean] = js.undefined
+  var theme: js.UndefOr[AnonBaseFontSizeColors] = js.undefined
+  var `type`: js.UndefOr[email | text | tel | number | password | search] = js.undefined
+  var validate: js.UndefOr[Validate | CustomValidate | (js.Array[Validate | CustomValidate])] = js.undefined
+  var value: js.UndefOr[String] = js.undefined
+}
+
+object InputProps {
+  @scala.inline
+  def apply(
+    descriptionLabel: String = null,
+    error: String = null,
+    helperText: String = null,
+    id: String = null,
+    label: String = null,
+    mask: Mask | js.Array[Mask] = null,
+    name: String = null,
+    onChange: ChangeEvent[HTMLInputElement] => Unit = null,
+    onClean: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
+    placeholder: String = null,
+    required: js.UndefOr[Boolean] = js.undefined,
+    theme: AnonBaseFontSizeColors = null,
+    `type`: email | text | tel | number | password | search = null,
+    validate: Validate | CustomValidate | (js.Array[Validate | CustomValidate]) = null,
+    value: String = null
+  ): InputProps = {
+    val __obj = js.Dynamic.literal()
+    if (descriptionLabel != null) __obj.updateDynamic("descriptionLabel")(descriptionLabel.asInstanceOf[js.Any])
+    if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
+    if (helperText != null) __obj.updateDynamic("helperText")(helperText.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
+    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
+    if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onClean != null) __obj.updateDynamic("onClean")(js.Any.fromFunction1(onClean))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (!js.isUndefined(required)) __obj.updateDynamic("required")(required.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (validate != null) __obj.updateDynamic("validate")(validate.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
+    __obj.asInstanceOf[InputProps]
+  }
+}
+

@@ -1,6 +1,6 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.Anon_Max
+import typingsSlinky.echarts.AnonMax
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.DataObject
 import typingsSlinky.echarts.echarts.EChartOption.BasicComponents.CartesianAxis.Label
@@ -67,8 +67,8 @@ object YAxis {
     interval: Int | Double = null,
     inverse: js.UndefOr[Boolean] = js.undefined,
     logBase: Int | Double = null,
-    max: Double | String | (js.Function1[/* value */ Anon_Max, Double]) = null,
-    min: Double | String | (js.Function1[/* value */ Anon_Max, Double]) = null,
+    max: Double | String | (js.Function1[/* value */ AnonMax, Double]) = null,
+    min: Double | String | (js.Function1[/* value */ AnonMax, Double]) = null,
     minInterval: js.Any = null,
     name: String = null,
     nameGap: Int | Double = null,

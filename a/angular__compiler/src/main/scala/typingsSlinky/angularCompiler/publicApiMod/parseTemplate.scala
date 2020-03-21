@@ -1,0 +1,15 @@
+package typingsSlinky.angularCompiler.publicApiMod
+
+import typingsSlinky.angularCompiler.AnonErrors
+import typingsSlinky.angularCompiler.templateMod.ParseTemplateOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@angular/compiler/public_api", "parseTemplate")
+@js.native
+object parseTemplate extends js.Object {
+  def apply(template: String, templateUrl: String): AnonErrors = js.native
+  def apply(template: String, templateUrl: String, options: ParseTemplateOptions): AnonErrors = js.native
+}
+

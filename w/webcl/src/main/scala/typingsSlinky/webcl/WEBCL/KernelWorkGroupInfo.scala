@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation._
 
 /* cl_kernel_work_group_info */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x11B0`
-  - typings.webcl.webclNumbers.`0x11B1`
-  - typings.webcl.webclNumbers.`0x11B2`
-  - typings.webcl.webclNumbers.`0x11B3`
-  - typings.webcl.webclNumbers.`0x11B4`
+  - typingsSlinky.webcl.webclNumbers.`0x11B0`
+  - typingsSlinky.webcl.webclNumbers.`0x11B1`
+  - typingsSlinky.webcl.webclNumbers.`0x11B2`
+  - typingsSlinky.webcl.webclNumbers.`0x11B3`
+  - typingsSlinky.webcl.webclNumbers.`0x11B4`
 */
 trait KernelWorkGroupInfo extends js.Object
 

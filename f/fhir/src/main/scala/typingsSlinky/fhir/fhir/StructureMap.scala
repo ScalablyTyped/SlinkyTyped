@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A Map of relationships between 2 structures that can be used to transform data
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait StructureMap extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait StructureMap extends DomainResource {
   /**
     * Contains extended information for property 'copyright'.
     */

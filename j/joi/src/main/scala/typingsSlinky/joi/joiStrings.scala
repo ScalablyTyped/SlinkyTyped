@@ -1,7 +1,7 @@
 package typingsSlinky.joi
 
-import typingsSlinky.joi.joiMod.GuidVersions
-import typingsSlinky.joi.joiMod.Types
+import typingsSlinky.joi.mod.GuidVersions
+import typingsSlinky.joi.mod.Types
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

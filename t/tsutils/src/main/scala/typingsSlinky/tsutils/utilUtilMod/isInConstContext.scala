@@ -1,6 +1,6 @@
 package typingsSlinky.tsutils.utilUtilMod
 
-import typingsSlinky.typescript.typescriptMod.Expression
+import typingsSlinky.typescript.mod.Expression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

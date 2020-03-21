@@ -1,0 +1,22 @@
+package typingsSlinky.rcTreeSelect.treeSelectMod
+
+import slinky.core.ReactComponentClass
+import typingsSlinky.rcTreeSelect.treeNodeMod.TreeNodeProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("rc-tree-select/lib/TreeSelect", JSImport.Default)
+@js.native
+class default[ValueType] () extends TreeSelect[ValueType]
+
+/* static members */
+@JSImport("rc-tree-select/lib/TreeSelect", JSImport.Default)
+@js.native
+object default extends js.Object {
+  var SHOW_ALL: typingsSlinky.rcTreeSelect.rcTreeSelectStrings.SHOW_ALL = js.native
+  var SHOW_CHILD: typingsSlinky.rcTreeSelect.rcTreeSelectStrings.SHOW_CHILD = js.native
+  var SHOW_PARENT: typingsSlinky.rcTreeSelect.rcTreeSelectStrings.SHOW_PARENT = js.native
+  var TreeNode: ReactComponentClass[TreeNodeProps] = js.native
+}
+

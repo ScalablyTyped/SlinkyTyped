@@ -1,6 +1,6 @@
 package typingsSlinky.antd
 
-import typingsSlinky.antd.libListMod.ColumnCount
+import typingsSlinky.antd.listMod.ColumnCount
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,6 +11,9 @@ object antdNumbers {
   
   @js.native
   sealed trait `1` extends ColumnCount
+  
+  @js.native
+  sealed trait `10` extends js.Object
   
   @js.native
   sealed trait `12` extends ColumnCount
@@ -37,6 +40,8 @@ object antdNumbers {
   def `0`: `0` = 0.asInstanceOf[`0`]
   @scala.inline
   def `1`: `1` = 1.asInstanceOf[`1`]
+  @scala.inline
+  def `10`: `10` = 10.asInstanceOf[`10`]
   @scala.inline
   def `12`: `12` = 12.asInstanceOf[`12`]
   @scala.inline

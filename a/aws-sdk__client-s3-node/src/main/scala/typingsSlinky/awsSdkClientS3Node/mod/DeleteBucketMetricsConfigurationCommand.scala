@@ -1,0 +1,14 @@
+package typingsSlinky.awsSdkClientS3Node.mod
+
+import typingsSlinky.awsSdkClientS3Node.typesDeleteBucketMetricsConfigurationInputMod.DeleteBucketMetricsConfigurationInput
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-s3-node", "DeleteBucketMetricsConfigurationCommand")
+@js.native
+class DeleteBucketMetricsConfigurationCommand protected ()
+  extends typingsSlinky.awsSdkClientS3Node.deleteBucketMetricsConfigurationCommandMod.DeleteBucketMetricsConfigurationCommand {
+  def this(input: DeleteBucketMetricsConfigurationInput) = this()
+}
+

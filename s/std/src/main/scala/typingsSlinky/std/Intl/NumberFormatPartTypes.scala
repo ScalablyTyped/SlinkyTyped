@@ -5,17 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.currency
-  - typings.std.stdStrings.decimal
-  - typings.std.stdStrings.fraction
-  - typings.std.stdStrings.group
-  - typings.std.stdStrings.infinity
-  - typings.std.stdStrings.integer
-  - typings.std.stdStrings.literal
-  - typings.std.stdStrings.minusSign
-  - typings.std.stdStrings.nan
-  - typings.std.stdStrings.plusSign
-  - typings.std.stdStrings.percentSign
+  - typingsSlinky.std.stdStrings.currency
+  - typingsSlinky.std.stdStrings.decimal
+  - typingsSlinky.std.stdStrings.fraction
+  - typingsSlinky.std.stdStrings.group
+  - typingsSlinky.std.stdStrings.infinity
+  - typingsSlinky.std.stdStrings.integer
+  - typingsSlinky.std.stdStrings.literal
+  - typingsSlinky.std.stdStrings.minusSign
+  - typingsSlinky.std.stdStrings.nan
+  - typingsSlinky.std.stdStrings.plusSign
+  - typingsSlinky.std.stdStrings.percentSign
 */
 trait NumberFormatPartTypes extends js.Object
 

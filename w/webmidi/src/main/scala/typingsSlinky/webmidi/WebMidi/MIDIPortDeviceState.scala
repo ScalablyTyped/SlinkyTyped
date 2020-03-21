@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webmidi.webmidiStrings.disconnected
-  - typings.webmidi.webmidiStrings.connected
+  - typingsSlinky.webmidi.webmidiStrings.disconnected
+  - typingsSlinky.webmidi.webmidiStrings.connected
 */
 trait MIDIPortDeviceState extends js.Object
 

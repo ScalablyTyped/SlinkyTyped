@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.treemap
 
-import typingsSlinky.dojo.dijit._FocusMixin
+import typingsSlinky.dojo.dijit.FocusMixin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.treemap.Keyboard")
 @js.native
-class Keyboard () extends _FocusMixin {
+class Keyboard () extends FocusMixin {
   /**
     * Order fields are traversed when user hits the tab key
     *

@@ -5,11 +5,11 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libSkeletonAvatarMod.SkeletonAvatarProps
-import typingsSlinky.antd.libSkeletonMod.SkeletonProps
-import typingsSlinky.antd.libSkeletonMod.default
-import typingsSlinky.antd.libSkeletonParagraphMod.SkeletonParagraphProps
-import typingsSlinky.antd.libSkeletonTitleMod.SkeletonTitleProps
+import typingsSlinky.antd.paragraphMod.SkeletonParagraphProps
+import typingsSlinky.antd.skeletonMod.default
+import typingsSlinky.antd.skeletonSkeletonMod.SkeletonAvatarProps
+import typingsSlinky.antd.skeletonSkeletonMod.SkeletonProps
+import typingsSlinky.antd.titleMod.SkeletonTitleProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,7 +41,7 @@ object Skeleton
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libSkeletonMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.skeletonMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SkeletonProps
 }
 

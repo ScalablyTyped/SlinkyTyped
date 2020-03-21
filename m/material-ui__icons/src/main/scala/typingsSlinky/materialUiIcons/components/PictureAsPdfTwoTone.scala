@@ -1,0 +1,15 @@
+package typingsSlinky.materialUiIcons.components
+
+import typingsSlinky.materialUiIcons.pictureAsPdfTwoToneMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object PictureAsPdfTwoTone extends SharedApply_SvgIconProps1442979138[default] {
+  @JSImport("@material-ui/icons/PictureAsPdfTwoTone", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+}
+

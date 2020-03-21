@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.charting.axis2d
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dojo._base.Color
+import typingsSlinky.dojo.dojo.base.Color
 import typingsSlinky.dojo.dojox.charting.Chart
 import typingsSlinky.dojo.dojox.gfx.Text
 import scala.scalajs.js

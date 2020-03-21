@@ -6,15 +6,16 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.victory.Anon_XY
-import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.victoryMod.AnimatePropTypeInterface
-import typingsSlinky.victory.victoryMod.D3Scale
-import typingsSlinky.victory.victoryMod.FlyoutProps
-import typingsSlinky.victory.victoryMod.PaddingProps
-import typingsSlinky.victory.victoryMod.ScalePropType
-import typingsSlinky.victory.victoryMod.VictoryStyleObject
-import typingsSlinky.victory.victoryMod.VictoryThemeDefinition
+import typingsSlinky.victory.Anon1
+import typingsSlinky.victory.AnonXBoolean
+import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.mod.AnimatePropTypeInterface
+import typingsSlinky.victory.mod.D3Scale
+import typingsSlinky.victory.mod.FlyoutProps
+import typingsSlinky.victory.mod.PaddingProps
+import typingsSlinky.victory.mod.ScalePropType
+import typingsSlinky.victory.mod.VictoryStyleObject
+import typingsSlinky.victory.mod.VictoryThemeDefinition
 import typingsSlinky.victory.victoryStrings.bottom
 import typingsSlinky.victory.victoryStrings.left
 import typingsSlinky.victory.victoryStrings.right
@@ -24,7 +25,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Flyout
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.Flyout] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.Flyout] {
   @JSImport("victory", "Flyout")
   @js.native
   object componentImport extends js.Object
@@ -34,7 +35,7 @@ object Flyout
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,
     animate: Boolean | AnimatePropTypeInterface = null,
-    center: Anon_XY = null,
+    center: AnonY = null,
     containerComponent: ReactElement = null,
     cornerRadius: Int | Double = null,
     data: js.Array[_] = null,
@@ -47,8 +48,8 @@ object Flyout
     horizontal: js.UndefOr[Boolean] = js.undefined,
     id: String | Double = null,
     index: Int | Double = null,
-    maxDomain: Double | Anon_XY = null,
-    minDomain: Double | Anon_XY = null,
+    maxDomain: Double | AnonY = null,
+    minDomain: Double | AnonY = null,
     orientation: top | bottom | left | right = null,
     origin: js.Object = null,
     padding: PaddingProps = null,
@@ -57,8 +58,9 @@ object Flyout
     pointerWidth: Int | Double = null,
     polar: js.UndefOr[Boolean] = js.undefined,
     role: String = null,
-    scale: ScalePropType | D3Scale | Anon_XYD3Scale = null,
+    scale: ScalePropType | D3Scale | Anon1 = null,
     shapeRendering: String = null,
+    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
     standalone: js.UndefOr[Boolean] = js.undefined,
     style: VictoryStyleObject = null,
     theme: VictoryThemeDefinition = null,
@@ -67,7 +69,7 @@ object Flyout
     x: Int | Double = null,
     y: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.Flyout] = {
+  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.Flyout] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
     if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
@@ -96,6 +98,7 @@ object Flyout
     if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
     if (shapeRendering != null) __obj.updateDynamic("shapeRendering")(shapeRendering.asInstanceOf[js.Any])
+    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
     if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
@@ -106,7 +109,7 @@ object Flyout
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.Flyout] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.Flyout](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.Flyout] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.Flyout](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = FlyoutProps
 }
 

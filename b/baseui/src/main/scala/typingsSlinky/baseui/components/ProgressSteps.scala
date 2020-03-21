@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.progressDashStepsMod.ProgressStepsOverrides
-import typingsSlinky.baseui.progressDashStepsMod.ProgressStepsProps
+import typingsSlinky.baseui.progressStepsMod.ProgressStepsOverrides
+import typingsSlinky.baseui.progressStepsMod.ProgressStepsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

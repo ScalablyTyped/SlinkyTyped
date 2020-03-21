@@ -6,10 +6,10 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.rheostat.rheostatMod.Algorithm
-import typingsSlinky.rheostat.rheostatMod.Orientation
-import typingsSlinky.rheostat.rheostatMod.PublicState
-import typingsSlinky.rheostat.rheostatMod.default
+import typingsSlinky.rheostat.mod.Algorithm
+import typingsSlinky.rheostat.mod.Orientation
+import typingsSlinky.rheostat.mod.PublicState
+import typingsSlinky.rheostat.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ object Rheostat
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, onChange */
+  /* The following DOM/SVG props were specified: className, disabled */
   def apply(
     algorithm: Algorithm = null,
     autoAdjustVerticalPosition: js.UndefOr[Boolean] = js.undefined,
@@ -30,6 +30,7 @@ object Rheostat
     handle: ReactComponentClass[_] = null,
     max: Int | Double = null,
     min: Int | Double = null,
+    onChange: /* publicState */ PublicState => _ = null,
     onClick: () => _ = null,
     onKeyPress: () => _ = null,
     onSliderDragEnd: () => _ = null,
@@ -53,6 +54,7 @@ object Rheostat
     if (handle != null) __obj.updateDynamic("handle")(handle.asInstanceOf[js.Any])
     if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
     if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction0(onClick))
     if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction0(onKeyPress))
     if (onSliderDragEnd != null) __obj.updateDynamic("onSliderDragEnd")(js.Any.fromFunction0(onSliderDragEnd))
@@ -69,7 +71,7 @@ object Rheostat
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rheostat.rheostatMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.rheostat.rheostatMod.Props
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.rheostat.mod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = typingsSlinky.rheostat.mod.Props
 }
 

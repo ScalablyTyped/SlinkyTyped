@@ -1,7 +1,7 @@
 package typingsSlinky.winjs.WinJS.UI
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -91,27 +91,27 @@ class NavBar () extends js.Object {
     * Occurs immediately after the NavBar is closed.
     * @param eventInfo An object that contains information about the event.
     **/
-  def onafterclose(eventInfo: Event): Unit = js.native
+  def onafterclose(eventInfo: Event_): Unit = js.native
   /**
     * Raised after the NavBar is opened.
     * @param eventInfo An object that contains information about the event.
     **/
-  def onafteropen(eventInfo: Event): Unit = js.native
+  def onafteropen(eventInfo: Event_): Unit = js.native
   /**
     * Raised just before the NavBar is closed.
     * @param eventInfo An object that contains information about the event.
     **/
-  def onbeforeclose(eventInfo: Event): Unit = js.native
+  def onbeforeclose(eventInfo: Event_): Unit = js.native
   /**
     * Occurs before a closed NavBar is opened.
     * @param eventInfo An object that contains information about the event.
     **/
-  def onbeforeopen(eventInfo: Event): Unit = js.native
+  def onbeforeopen(eventInfo: Event_): Unit = js.native
   /**
     * Occurs after the NavBar has finished processing its child elements.
     * @param eventInfo An object that contains information about the event.
     **/
-  def onchildrenprocessed(eventInfo: Event): Unit = js.native
+  def onchildrenprocessed(eventInfo: Event_): Unit = js.native
   /**
     * Opens the NavBar
     **/

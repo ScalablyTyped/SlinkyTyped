@@ -4,14 +4,17 @@ import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.dnsMod.LookupOneOptions
 import typingsSlinky.node.netMod.Socket
+import typingsSlinky.node.nodeStrings.httpColon
+import typingsSlinky.node.nodeStrings.httpsColon
 import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.tlsMod.ConnectionOptions
 import typingsSlinky.node.tlsMod.KeyObject
+import typingsSlinky.node.tlsMod.PSKCallbackNegotation
 import typingsSlinky.node.tlsMod.PeerCertificate
 import typingsSlinky.node.tlsMod.PxfObject
 import typingsSlinky.node.tlsMod.SecureContext
 import typingsSlinky.node.tlsMod.SecureVersion
-import typingsSlinky.node.urlMod.URL
+import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +33,7 @@ object SecureClientSessionOptions {
     checkServerIdentity: (/* host */ String, /* cert */ PeerCertificate) => js.UndefOr[js.Error] = null,
     ciphers: String = null,
     clientCertEngine: String = null,
-    createConnection: (/* authority */ URL, /* option */ SessionOptions) => Duplex = null,
+    createConnection: (/* authority */ URL_, /* option */ SessionOptions) => Duplex = null,
     crl: String | Buffer | (js.Array[String | Buffer]) = null,
     dhparam: String | Buffer = null,
     ecdhCurve: String = null,
@@ -56,6 +59,8 @@ object SecureClientSessionOptions {
     port: Int | Double = null,
     privateKeyEngine: String = null,
     privateKeyIdentifier: String = null,
+    protocol: httpColon | httpsColon = null,
+    pskCallback: /* hint */ String | Null => PSKCallbackNegotation | Null = null,
     rejectUnauthorized: js.UndefOr[Boolean] = js.undefined,
     requestCert: js.UndefOr[Boolean] = js.undefined,
     secureContext: SecureContext = null,
@@ -104,6 +109,8 @@ object SecureClientSessionOptions {
     if (port != null) __obj.updateDynamic("port")(port.asInstanceOf[js.Any])
     if (privateKeyEngine != null) __obj.updateDynamic("privateKeyEngine")(privateKeyEngine.asInstanceOf[js.Any])
     if (privateKeyIdentifier != null) __obj.updateDynamic("privateKeyIdentifier")(privateKeyIdentifier.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
+    if (pskCallback != null) __obj.updateDynamic("pskCallback")(js.Any.fromFunction1(pskCallback))
     if (!js.isUndefined(rejectUnauthorized)) __obj.updateDynamic("rejectUnauthorized")(rejectUnauthorized.asInstanceOf[js.Any])
     if (!js.isUndefined(requestCert)) __obj.updateDynamic("requestCert")(requestCert.asInstanceOf[js.Any])
     if (secureContext != null) __obj.updateDynamic("secureContext")(secureContext.asInstanceOf[js.Any])

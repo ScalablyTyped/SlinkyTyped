@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 
 /* cl_context_properties */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1090`
-  - typings.webcl.webclNumbers.`0x1091`
-  - typings.webcl.webclNumbers.`0x1093`
+  - typingsSlinky.webcl.webclNumbers.`0x1090`
+  - typingsSlinky.webcl.webclNumbers.`0x1091`
+  - typingsSlinky.webcl.webclNumbers.`0x1093`
 */
 trait ContextProperties extends js.Object
 

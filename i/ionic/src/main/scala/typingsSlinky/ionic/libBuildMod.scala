@@ -1,17 +1,7 @@
 package typingsSlinky.ionic
 
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandLineInputs
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandLineOptions
-import typingsSlinky.atIonicCliDashFrameworkDashPrompts.atIonicCliDashFrameworkDashPromptsMod.PromptModule
-import typingsSlinky.atIonicCliDashFrameworkDashPrompts.atIonicCliDashFrameworkDashPromptsMod.PromptQuestionCheckbox
-import typingsSlinky.atIonicCliDashFrameworkDashPrompts.atIonicCliDashFrameworkDashPromptsMod.PromptQuestionConfirm
-import typingsSlinky.atIonicCliDashFrameworkDashPrompts.atIonicCliDashFrameworkDashPromptsMod.PromptQuestionOther
-import typingsSlinky.atIonicCliDashFrameworkDashPrompts.atIonicCliDashFrameworkDashPromptsMod.PromptValueCheckbox
-import typingsSlinky.atIonicCliDashFrameworkDashPrompts.atIonicCliDashFrameworkDashPromptsMod.PromptValueConfirm
-import typingsSlinky.atIonicCliDashFrameworkDashPrompts.atIonicCliDashFrameworkDashPromptsMod.PromptValueOther
 import typingsSlinky.ionic.definitionsMod.BaseBuildOptions
 import typingsSlinky.ionic.definitionsMod.BuildOptions
-import typingsSlinky.ionic.definitionsMod.CommandMetadata
 import typingsSlinky.ionic.definitionsMod.CommandMetadataOption
 import typingsSlinky.ionic.definitionsMod.IConfig
 import typingsSlinky.ionic.definitionsMod.ILogger
@@ -25,8 +15,16 @@ import typingsSlinky.ionic.ionicStrings.`npm CLI`
 import typingsSlinky.ionic.ionicStrings.ionicColonbuild
 import typingsSlinky.ionic.ionicStrings.npm
 import typingsSlinky.ionic.ionicStrings.yarn_
+import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineInputs
+import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineOptions
+import typingsSlinky.ionicCliFrameworkPrompts.mod.PromptModule
+import typingsSlinky.ionicCliFrameworkPrompts.mod.PromptQuestionCheckbox
+import typingsSlinky.ionicCliFrameworkPrompts.mod.PromptQuestionConfirm
+import typingsSlinky.ionicCliFrameworkPrompts.mod.PromptQuestionOther
+import typingsSlinky.ionicCliFrameworkPrompts.mod.PromptValueCheckbox
+import typingsSlinky.ionicCliFrameworkPrompts.mod.PromptValueConfirm
+import typingsSlinky.ionicCliFrameworkPrompts.mod.PromptValueOther
 import typingsSlinky.node.NodeJS.ProcessEnv
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -86,7 +84,7 @@ object libBuildMod extends js.Object {
     def createBaseOptionsFromCommandLine(inputs: CommandLineInputs, options: CommandLineOptions): BaseBuildOptions = js.native
     def createOptionsFromCommandLine(inputs: CommandLineInputs, options: CommandLineOptions): T = js.native
     def determineEngineFromCommandLine(options: CommandLineOptions): String = js.native
-    def getCommandMetadata(): js.Promise[Partial[CommandMetadata]] = js.native
+    def getCommandMetadata(): js.Promise[PartialCommandMetadata] = js.native
     def getPkgManagerBuildCLI(): PkgManagerBuildCLI = js.native
     /* CompleteClass */
     override def run(options: T): js.Promise[Unit] = js.native

@@ -1,0 +1,18 @@
+package typingsSlinky.angularCompiler.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@angular/compiler", "Conditional")
+@js.native
+class Conditional protected ()
+  extends typingsSlinky.angularCompiler.publicApiMod.Conditional {
+  def this(
+    span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    condition: typingsSlinky.angularCompiler.astMod.AST,
+    trueExp: typingsSlinky.angularCompiler.astMod.AST,
+    falseExp: typingsSlinky.angularCompiler.astMod.AST
+  ) = this()
+}
+

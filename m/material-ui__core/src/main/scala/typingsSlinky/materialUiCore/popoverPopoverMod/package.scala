@@ -1,0 +1,9 @@
+package typingsSlinky.materialUiCore
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object popoverPopoverMod {
+  type PopoverClassKey = typingsSlinky.materialUiCore.materialUiCoreStrings.paper
+}

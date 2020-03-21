@@ -5,17 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object service {
-  import org.scalablytyped.runtime.StringDictionary
-
-  type EnterpriseRoutingService = EnterpriseRoutingService_
-  type GeocodingService = GeocodingService_
-  type MapTileService = MapTileService_
-  type PlacesService = PlacesService_
-  type Platform = Platform_
-  type RoutingService = RoutingService_
+  type EnterpriseRoutingService = typingsSlinky.heremaps.H.service.EnterpriseRoutingService_
+  type GeocodingService = typingsSlinky.heremaps.H.service.GeocodingService_
+  type MapTileService = typingsSlinky.heremaps.H.service.MapTileService_
+  type PlacesService = typingsSlinky.heremaps.H.service.PlacesService_
+  type Platform = typingsSlinky.heremaps.H.service.Platform_
+  type RoutingService = typingsSlinky.heremaps.H.service.RoutingService_
   /**
     * This type encapsulates URL parameters to be sent to a HERE platform service.
     */
-  type ServiceParameters = StringDictionary[String]
-  type TrafficIncidentsService = TrafficIncidentsService_
+  type ServiceParameters = org.scalablytyped.runtime.StringDictionary[java.lang.String]
 }

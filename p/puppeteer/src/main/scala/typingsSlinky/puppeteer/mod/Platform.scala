@@ -1,0 +1,27 @@
+package typingsSlinky.puppeteer.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.puppeteer.puppeteerStrings.mac
+  - typingsSlinky.puppeteer.puppeteerStrings.win32
+  - typingsSlinky.puppeteer.puppeteerStrings.win64
+  - typingsSlinky.puppeteer.puppeteerStrings.linux
+*/
+trait Platform extends js.Object
+
+object Platform {
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def linux: typingsSlinky.puppeteer.puppeteerStrings.linux = this.cast("linux")
+  @scala.inline
+  def mac: typingsSlinky.puppeteer.puppeteerStrings.mac = this.cast("mac")
+  @scala.inline
+  def win32: typingsSlinky.puppeteer.puppeteerStrings.win32 = this.cast("win32")
+  @scala.inline
+  def win64: typingsSlinky.puppeteer.puppeteerStrings.win64 = this.cast("win64")
+}
+

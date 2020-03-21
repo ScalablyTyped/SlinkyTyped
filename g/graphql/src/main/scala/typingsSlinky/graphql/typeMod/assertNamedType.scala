@@ -1,6 +1,6 @@
 package typingsSlinky.graphql.typeMod
 
-import typingsSlinky.graphql.typeDefinitionMod.GraphQLNamedType
+import typingsSlinky.graphql.definitionMod.GraphQLNamedType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -10,9 +10,9 @@ JupyterLab - Shortcuts Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/shortcuts-extension |
 | Keywords           | - |
-| # releases         | 64 |
+| # releases         | 65 |
 | # dependents       | 1 |
-| # downloads        | 756046 |
+| # downloads        | 761260 |
 | # stars            | 0 |
 
 ## Links

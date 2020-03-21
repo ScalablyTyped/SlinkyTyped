@@ -5,21 +5,24 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsSpinnerSpinnerMod.SpinnerProps
-import typingsSlinky.primereact.componentsTooltipTooltipOptionsMod.TooltipOptions
+import typingsSlinky.primereact.Anon0
+import typingsSlinky.primereact.spinnerMod.SpinnerProps
+import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Spinner
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.spinnerMod.Spinner] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactSpinnerMod.Spinner] {
   @JSImport("primereact/spinner", "Spinner")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, name, onBlur, onChange, pattern, placeholder, required, size, tabIndex */
+  /* The following DOM/SVG props were specified: className, disabled, id, name, pattern, placeholder, required, size, tabIndex */
   def apply(
+    ariaLabelledBy: String = null,
     decimalSeparator: String = null,
     formatInput: js.UndefOr[Boolean] = js.undefined,
     inputClassName: String = null,
@@ -28,6 +31,8 @@ object Spinner
     max: Int | Double = null,
     maxlength: Int | Double = null,
     min: Int | Double = null,
+    onBlur: /* e */ Event_ => Unit = null,
+    onChange: /* e */ Anon0 => Unit = null,
     readonly: js.UndefOr[Boolean] = js.undefined,
     step: Int | Double = null,
     style: js.Object = null,
@@ -36,8 +41,9 @@ object Spinner
     tooltipOptions: TooltipOptions = null,
     value: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.spinnerMod.Spinner] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactSpinnerMod.Spinner] = {
     val __obj = js.Dynamic.literal()
+    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
     if (decimalSeparator != null) __obj.updateDynamic("decimalSeparator")(decimalSeparator.asInstanceOf[js.Any])
     if (!js.isUndefined(formatInput)) __obj.updateDynamic("formatInput")(formatInput.asInstanceOf[js.Any])
     if (inputClassName != null) __obj.updateDynamic("inputClassName")(inputClassName.asInstanceOf[js.Any])
@@ -46,6 +52,8 @@ object Spinner
     if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
     if (maxlength != null) __obj.updateDynamic("maxlength")(maxlength.asInstanceOf[js.Any])
     if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
     if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
@@ -56,7 +64,9 @@ object Spinner
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.spinnerMod.Spinner] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.spinnerMod.Spinner](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactSpinnerMod.Spinner] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactSpinnerMod.Spinner](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SpinnerProps
 }
 

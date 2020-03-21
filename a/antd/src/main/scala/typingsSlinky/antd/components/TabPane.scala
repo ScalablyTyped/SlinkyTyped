@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TabPane extends SharedApply_TabPaneProps_966106085 {
+object TabPane extends SharedApply_TabPaneProps_628754951 {
   @JSImport("antd/lib/tabs", "default.TabPane")
   @js.native
   object componentImport extends js.Object

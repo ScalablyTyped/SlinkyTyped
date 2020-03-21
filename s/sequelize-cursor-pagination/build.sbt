@@ -1,21 +1,20 @@
 organization := "org.scalablytyped.slinky"
 name := "sequelize-cursor-pagination"
-version := "1.2-dt-20190524Z-20914b"
-scalaVersion := "2.12.10"
+version := "1.2-dt-20190524Z-52fe9e"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20191111Z-91d0a2",
-  "org.scalablytyped.slinky" %%% "continuation-local-storage" % "3.2-dt-20191223Z-d9ef35",
-  "org.scalablytyped.slinky" %%% "lodash" % "4.14-dt-20191126Z-643ed0",
-  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
-  "org.scalablytyped.slinky" %%% "sequelize" % "4.28.0-dt-20191125Z-e48400",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43",
-  "org.scalablytyped.slinky" %%% "validator" % "12.0-dt-20191226Z-fcda48")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "bluebird" % "3.5-dt-20200302Z-a7b277",
+  "org.scalablytyped.slinky" %%% "continuation-local-storage" % "3.2-dt-20200225Z-56f432",
+  "org.scalablytyped.slinky" %%% "lodash" % "4.14-dt-20200302Z-29d3df",
+  "org.scalablytyped.slinky" %%% "node" % "13.7-dt-20200228Z-eb4e34",
+  "org.scalablytyped.slinky" %%% "sequelize" % "4.28.0-dt-20200225Z-957f01",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f",
+  "org.scalablytyped.slinky" %%% "validator" % "12.0-dt-20191226Z-b5141e")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

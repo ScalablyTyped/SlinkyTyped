@@ -1,0 +1,12 @@
+package typingsSlinky.reduxFirstRouting.mod
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.reduxFirstRouting.reduxFirstRoutingStrings.ROUTERSlashLOCATION_CHANGE
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("redux-first-routing", "LOCATION_CHANGE")
+@js.native
+object LOCATION_CHANGE extends TopLevel[ROUTERSlashLOCATION_CHANGE]
+

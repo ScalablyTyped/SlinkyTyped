@@ -1,6 +1,6 @@
 package typingsSlinky.qrcode
 
-import typingsSlinky.qrcode.qrcodeMod.QRCodeErrorCorrectionLevel
+import typingsSlinky.qrcode.mod.QRCodeErrorCorrectionLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

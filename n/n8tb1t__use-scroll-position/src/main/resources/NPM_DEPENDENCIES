@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@n8tb1t/use-scroll-position" : "1.0.43"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@n8tb1t/use-scroll-position" : "1.0.43"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

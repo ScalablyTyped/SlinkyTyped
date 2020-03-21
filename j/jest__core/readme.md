@@ -10,9 +10,9 @@ Delightful JavaScript Testing.
 | ------------------ | :-------------: |
 | Full name          | @jest/core |
 | Keywords           | ava, babel, coverage, easy, expect, facebook, immersive, instant, jasmine, jest, jsdom, mocha, mocking, painless, qunit, runner, sandboxed, snapshot, tap, tape, test, testing, typescript, watch |
-| # releases         | 13 |
+| # releases         | 12 |
 | # dependents       | 7 |
-| # downloads        | 101699880 |
+| # downloads        | 105280802 |
 | # stars            | 0 |
 
 ## Links

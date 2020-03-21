@@ -16,17 +16,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.vexflow.vexflowNumbers.`1`
-  - typings.vexflow.vexflowNumbers.`0`
-  - typings.vexflow.vexflowNumbers.`2`
-  - typings.vexflow.vexflowNumbers.`3`
-  - typings.vexflow.vexflowNumbers.`4`
-  - typings.vexflow.vexflowNumbers.`5`
-  - typings.vexflow.vexflowNumbers.`6`
-  - typings.vexflow.vexflowNumbers.`7`
-  - typings.vexflow.vexflowNumbers.`8`
-  - typings.vexflow.vexflowNumbers.`9`
-  - typings.vexflow.vexflowNumbers.`10`
+  - typingsSlinky.vexflow.vexflowNumbers.`1`
+  - typingsSlinky.vexflow.vexflowNumbers.`0`
+  - typingsSlinky.vexflow.vexflowNumbers.`2`
+  - typingsSlinky.vexflow.vexflowNumbers.`3`
+  - typingsSlinky.vexflow.vexflowNumbers.`4`
+  - typingsSlinky.vexflow.vexflowNumbers.`5`
+  - typingsSlinky.vexflow.vexflowNumbers.`6`
+  - typingsSlinky.vexflow.vexflowNumbers.`7`
+  - typingsSlinky.vexflow.vexflowNumbers.`8`
+  - typingsSlinky.vexflow.vexflowNumbers.`9`
+  - typingsSlinky.vexflow.vexflowNumbers.`10`
 */
 trait `type` extends js.Object
 

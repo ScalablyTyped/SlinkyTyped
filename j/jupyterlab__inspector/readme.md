@@ -10,9 +10,9 @@ JupyterLab - Code Inspector
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/inspector |
 | Keywords           | - |
-| # releases         | 64 |
+| # releases         | 65 |
 | # dependents       | 5 |
-| # downloads        | 757439 |
+| # downloads        | 762689 |
 | # stars            | 0 |
 
 ## Links

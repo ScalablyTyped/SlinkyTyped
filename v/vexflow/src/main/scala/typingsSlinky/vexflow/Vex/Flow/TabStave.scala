@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.Anon_Fillstyle
+import typingsSlinky.vexflow.AnonFillstyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class TabStave protected () extends Stave {
   def this(x: Double, y: Double, width: Double) = this()
-  def this(x: Double, y: Double, width: Double, options: Anon_Fillstyle) = this()
+  def this(x: Double, y: Double, width: Double, options: AnonFillstyle) = this()
   def addTabGlyph(): TabStave = js.native
 }
 

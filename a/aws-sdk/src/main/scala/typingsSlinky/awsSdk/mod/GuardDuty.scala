@@ -1,0 +1,17 @@
+package typingsSlinky.awsSdk.mod
+
+import typingsSlinky.awsSdk.guarddutyMod.ClientConfiguration
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("aws-sdk", "GuardDuty")
+@js.native
+/**
+  * Constructs a service object. This object has one method for each API operation.
+  */
+class GuardDuty ()
+  extends typingsSlinky.awsSdk.allMod.GuardDuty {
+  def this(options: ClientConfiguration) = this()
+}
+

@@ -22,10 +22,8 @@ object AltContainer
   
   override val component: String | js.Object = this.componentImport
   def apply(
-    actions: StringDictionary[js.Object] = null,
     component: ReactComponentClass[_] = null,
     flux: Alt = null,
-    inject: StringDictionary[js.Any] = null,
     render: /* repeated */ js.Any => ReactElement = null,
     shouldComponentUpdate: /* props */ js.Any => Boolean = null,
     store: AltStore[_] = null,
@@ -34,10 +32,8 @@ object AltContainer
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
-    if (actions != null) __obj.updateDynamic("actions")(actions.asInstanceOf[js.Any])
     if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
     if (flux != null) __obj.updateDynamic("flux")(flux.asInstanceOf[js.Any])
-    if (inject != null) __obj.updateDynamic("inject")(inject.asInstanceOf[js.Any])
     if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))
     if (shouldComponentUpdate != null) __obj.updateDynamic("shouldComponentUpdate")(js.Any.fromFunction1(shouldComponentUpdate))
     if (store != null) __obj.updateDynamic("store")(store.asInstanceOf[js.Any])

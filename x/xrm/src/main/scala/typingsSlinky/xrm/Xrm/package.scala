@@ -5,13 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Xrm {
-  import org.scalajs.dom.experimental.Response
-
-  type Device = Device_
+  type Device = typingsSlinky.xrm.Xrm.Device_
   /**
     * Interface for the WebAPI Execute request response
     */
-  type ExecuteResponse = Response
-  type Navigation = Navigation_
-  type Utility = Utility_
+  type ExecuteResponse = org.scalajs.dom.experimental.Response
+  type Navigation = typingsSlinky.xrm.Xrm.Navigation_
+  type Utility = typingsSlinky.xrm.Xrm.Utility_
 }

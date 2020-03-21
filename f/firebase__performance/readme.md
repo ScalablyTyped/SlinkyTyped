@@ -1,7 +1,7 @@
 
 # Scala.js typings for firebase__performance
 
-Typings are for version 0.2.28
+Typings are for version 0.2.32
 
 ## Library description:
 Firebase performance for web
@@ -10,9 +10,9 @@ Firebase performance for web
 | ------------------ | :-------------: |
 | Full name          | @firebase/performance |
 | Keywords           | - |
-| # releases         | 403 |
+| # releases         | 418 |
 | # dependents       | 4 |
-| # downloads        | 8121300 |
+| # downloads        | 8613236 |
 | # stars            | 0 |
 
 ## Links

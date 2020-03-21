@@ -1,8 +1,8 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.Comparator
-import typingsSlinky.lodash.lodashMod.List
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.Comparator
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,10 +15,10 @@ trait LodashPullAllWith extends js.Object {
   def apply[T](comparator: Comparator[T], values: List[T], array: List[T]): List[T] = js.native
   def apply[T](comparator: Comparator[T], values: __, array: js.Array[T]): LodashPullAllWith1x5[T] = js.native
   def apply[T](comparator: Comparator[T], values: __, array: List[T]): LodashPullAllWith2x5[T] = js.native
-  def apply[T](comparator: __, values: List[T]): LodashPullAllWith1x2[T] = js.native
+  def apply[T2](comparator: __, values: List[T2]): LodashPullAllWith3x2[T2] = js.native
   def apply[T](comparator: __, values: List[T], array: js.Array[T]): LodashPullAllWith1x6[T] = js.native
   def apply[T](comparator: __, values: List[T], array: List[T]): LodashPullAllWith2x6[T] = js.native
   def apply[T1](comparator: __, values: __, array: js.Array[T1]): LodashPullAllWith3x4[T1] = js.native
-  def apply[T1](comparator: __, values: __, array: List[T1]): LodashPullAllWith4x4[T1] = js.native
+  def apply[T](comparator: __, values: __, array: List[T]): LodashPullAllWith2x4[T] = js.native
 }
 

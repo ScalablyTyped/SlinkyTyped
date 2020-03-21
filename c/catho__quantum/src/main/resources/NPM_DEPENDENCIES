@@ -1,0 +1,16 @@
+{
+  "compile-dependencies" : [
+    {
+      "@catho/quantum" : "3.12.2"
+    }
+  ],
+  "test-dependencies" : [
+    {
+      "@catho/quantum" : "3.12.2"
+    }
+  ],
+  "compile-devDependencies" : [
+  ],
+  "test-devDependencies" : [
+  ]
+}

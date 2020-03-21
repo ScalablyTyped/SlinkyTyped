@@ -1,20 +1,20 @@
 package typingsSlinky.openlayers
 
-import typingsSlinky.openlayers.openlayersMod.OverlayPositioning
-import typingsSlinky.openlayers.openlayersMod.RasterOperationType
-import typingsSlinky.openlayers.openlayersMod.RendererType
-import typingsSlinky.openlayers.openlayersMod.control.ScaleLine.Units
-import typingsSlinky.openlayers.openlayersMod.format.IGCZ
-import typingsSlinky.openlayers.openlayersMod.geom.GeometryLayout
-import typingsSlinky.openlayers.openlayersMod.geom.GeometryType
-import typingsSlinky.openlayers.openlayersMod.layer.VectorTileRenderType
-import typingsSlinky.openlayers.openlayersMod.olx.layer.VectorRenderType
-import typingsSlinky.openlayers.openlayersMod.olx.style.TextPlacement
-import typingsSlinky.openlayers.openlayersMod.source.State
-import typingsSlinky.openlayers.openlayersMod.source.WMTSRequestEncoding
-import typingsSlinky.openlayers.openlayersMod.source.wms.ServerType
-import typingsSlinky.openlayers.openlayersMod.style.IconAnchorUnits
-import typingsSlinky.openlayers.openlayersMod.style.IconOrigin
+import typingsSlinky.openlayers.mod.OverlayPositioning
+import typingsSlinky.openlayers.mod.RasterOperationType
+import typingsSlinky.openlayers.mod.RendererType
+import typingsSlinky.openlayers.mod.control.ScaleLine.Units
+import typingsSlinky.openlayers.mod.format.IGCZ
+import typingsSlinky.openlayers.mod.geom.GeometryLayout
+import typingsSlinky.openlayers.mod.geom.GeometryType
+import typingsSlinky.openlayers.mod.layer.VectorTileRenderType
+import typingsSlinky.openlayers.mod.olx.layer.VectorRenderType
+import typingsSlinky.openlayers.mod.olx.style.TextPlacement
+import typingsSlinky.openlayers.mod.source.State
+import typingsSlinky.openlayers.mod.source.WMTSRequestEncoding
+import typingsSlinky.openlayers.mod.source.wms.ServerType
+import typingsSlinky.openlayers.mod.style.IconAnchorUnits
+import typingsSlinky.openlayers.mod.style.IconOrigin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -99,7 +99,7 @@ object openlayersStrings {
   @js.native
   sealed trait degrees
     extends Units
-       with typingsSlinky.openlayers.openlayersMod.proj.Units
+       with typingsSlinky.openlayers.mod.proj.Units
   
   @js.native
   sealed trait dom extends RendererType
@@ -112,7 +112,7 @@ object openlayersStrings {
   
   @js.native
   sealed trait ft
-    extends typingsSlinky.openlayers.openlayersMod.proj.Units
+    extends typingsSlinky.openlayers.mod.proj.Units
   
   @js.native
   sealed trait geoserver extends ServerType
@@ -140,7 +140,7 @@ object openlayersStrings {
   
   @js.native
   sealed trait m
-    extends typingsSlinky.openlayers.openlayersMod.proj.Units
+    extends typingsSlinky.openlayers.mod.proj.Units
   
   @js.native
   sealed trait mapserver extends ServerType
@@ -160,7 +160,7 @@ object openlayersStrings {
   @js.native
   sealed trait pixels
     extends IconAnchorUnits
-       with typingsSlinky.openlayers.openlayersMod.proj.Units
+       with typingsSlinky.openlayers.mod.proj.Units
   
   @js.native
   sealed trait point_ extends TextPlacement
@@ -173,7 +173,7 @@ object openlayersStrings {
   
   @js.native
   sealed trait `tile-pixels`
-    extends typingsSlinky.openlayers.openlayersMod.proj.Units
+    extends typingsSlinky.openlayers.mod.proj.Units
   
   @js.native
   sealed trait `top-center` extends OverlayPositioning
@@ -196,7 +196,7 @@ object openlayersStrings {
   
   @js.native
   sealed trait `us-ft`
-    extends typingsSlinky.openlayers.openlayersMod.proj.Units
+    extends typingsSlinky.openlayers.mod.proj.Units
   
   @js.native
   sealed trait vector

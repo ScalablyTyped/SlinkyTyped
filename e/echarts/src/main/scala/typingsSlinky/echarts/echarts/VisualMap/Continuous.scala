@@ -1,6 +1,6 @@
 package typingsSlinky.echarts.echarts.VisualMap
 
-import typingsSlinky.echarts.Anon_InRange
+import typingsSlinky.echarts.AnonInRange
 import typingsSlinky.echarts.echarts.EChartOption.BaseTextStyleWithRich
 import typingsSlinky.echarts.echartsStrings.auto
 import typingsSlinky.echarts.echartsStrings.bottom
@@ -23,7 +23,7 @@ trait Continuous
   var bottom: js.UndefOr[Double | String] = js.undefined
   var calculable: js.UndefOr[Boolean] = js.undefined
   var color: js.UndefOr[js.Array[String]] = js.undefined
-  var controller: js.UndefOr[Anon_InRange] = js.undefined
+  var controller: js.UndefOr[AnonInRange] = js.undefined
   var dimension: js.UndefOr[String | Double] = js.undefined
   var formatter: js.UndefOr[String | js.Function] = js.undefined
   var hoverLink: js.UndefOr[Boolean] = js.undefined
@@ -63,7 +63,7 @@ object Continuous {
     bottom: Double | String = null,
     calculable: js.UndefOr[Boolean] = js.undefined,
     color: js.Array[String] = null,
-    controller: Anon_InRange = null,
+    controller: AnonInRange = null,
     dimension: String | Double = null,
     formatter: String | js.Function = null,
     hoverLink: js.UndefOr[Boolean] = js.undefined,

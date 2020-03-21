@@ -8,23 +8,23 @@ import scala.scalajs.js.annotation._
   * A discriminated union on Structure.type of all owned structure types
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.screeps.StructureController
-  - typings.screeps.StructureExtension
-  - typings.screeps.StructureExtractor
-  - typings.screeps.StructureFactory
-  - typings.screeps.StructureInvaderCore
-  - typings.screeps.StructureKeeperLair
-  - typings.screeps.StructureLab
-  - typings.screeps.StructureLink
-  - typings.screeps.StructureNuker
-  - typings.screeps.StructureObserver
-  - typings.screeps.StructurePowerBank
-  - typings.screeps.StructurePowerSpawn
-  - typings.screeps.StructureRampart
-  - typings.screeps.StructureSpawn
-  - typings.screeps.StructureStorage
-  - typings.screeps.StructureTerminal
-  - typings.screeps.StructureTower
+  - typingsSlinky.screeps.StructureController
+  - typingsSlinky.screeps.StructureExtension
+  - typingsSlinky.screeps.StructureExtractor
+  - typingsSlinky.screeps.StructureFactory
+  - typingsSlinky.screeps.StructureInvaderCore
+  - typingsSlinky.screeps.StructureKeeperLair
+  - typingsSlinky.screeps.StructureLab
+  - typingsSlinky.screeps.StructureLink
+  - typingsSlinky.screeps.StructureNuker
+  - typingsSlinky.screeps.StructureObserver
+  - typingsSlinky.screeps.StructurePowerBank
+  - typingsSlinky.screeps.StructurePowerSpawn
+  - typingsSlinky.screeps.StructureRampart
+  - typingsSlinky.screeps.StructureSpawn
+  - typingsSlinky.screeps.StructureStorage
+  - typingsSlinky.screeps.StructureTerminal
+  - typingsSlinky.screeps.StructureTower
 */
 trait AnyOwnedStructure extends AnyStructure
 

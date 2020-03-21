@@ -1,7 +1,7 @@
 
 # Scala.js typings for storybook__ui
 
-Typings are for version 5.2.8
+Typings are for version 5.3.13
 
 ## Library description:
 Core Storybook UI
@@ -10,9 +10,9 @@ Core Storybook UI
 | ------------------ | :-------------: |
 | Full name          | @storybook/ui |
 | Keywords           | storybook |
-| # releases         | 420 |
+| # releases         | 419 |
 | # dependents       | 17 |
-| # downloads        | 42203791 |
+| # downloads        | 43327097 |
 | # stars            | 1 |
 
 ## Links

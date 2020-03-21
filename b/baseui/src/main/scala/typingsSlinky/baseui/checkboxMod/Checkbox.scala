@@ -3,7 +3,7 @@ package typingsSlinky.baseui.checkboxMod
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

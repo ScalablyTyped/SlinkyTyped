@@ -9,9 +9,9 @@ Typings are for version 0.1.0-preview.1
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/middleware-sdk-api-gateway |
 | Keywords           | - |
-| # releases         | 8 |
-| # dependents       | 2 |
-| # downloads        | 1302 |
+| # releases         | 12 |
+| # dependents       | 3 |
+| # downloads        | 1565 |
 | # stars            | 0 |
 
 ## Links

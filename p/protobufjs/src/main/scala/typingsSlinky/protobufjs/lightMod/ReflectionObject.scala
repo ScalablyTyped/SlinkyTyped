@@ -7,5 +7,5 @@ import scala.scalajs.js.annotation._
 @JSImport("protobufjs/light", "ReflectionObject")
 @js.native
 abstract class ReflectionObject ()
-  extends typingsSlinky.protobufjs.protobufjsMod.ReflectionObject
+  extends typingsSlinky.protobufjs.mod.ReflectionObject
 

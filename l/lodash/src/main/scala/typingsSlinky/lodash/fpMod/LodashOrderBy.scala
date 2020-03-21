@@ -1,12 +1,12 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.List
-import typingsSlinky.lodash.lodashMod.Many
-import typingsSlinky.lodash.lodashMod.NotVoid
-import typingsSlinky.lodash.lodashMod.ValueIteratee
-import typingsSlinky.lodash.lodashMod.__
 import typingsSlinky.lodash.lodashStrings.asc
 import typingsSlinky.lodash.lodashStrings.desc
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.Many
+import typingsSlinky.lodash.mod.NotVoid
+import typingsSlinky.lodash.mod.ValueIteratee
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ import scala.scalajs.js.annotation._
 trait LodashOrderBy extends js.Object {
   def apply(iteratees: __, orders: Many[Boolean | asc | desc]): LodashOrderBy1x2 = js.native
   def apply[T](iteratees: Many[js.Function1[/* value */ T, NotVoid]]): LodashOrderBy1x1[T] = js.native
-  def apply[T](iteratees: Many[ValueIteratee[T]], orders: Many[Boolean | asc | desc]): LodashOrderBy2x3[T] = js.native
+  def apply[T](iteratees: Many[js.Function1[/* value */ T, NotVoid]], orders: Many[Boolean | asc | desc]): LodashOrderBy1x3[T] = js.native
   def apply[T /* <: js.Object */](
     iteratees: Many[
       (js.Function1[
@@ -38,13 +38,14 @@ trait LodashOrderBy extends js.Object {
   def apply[T](iteratees: Many[js.Function1[/* value */ T, NotVoid]], orders: __): LodashOrderBy1x5[T] = js.native
   def apply[T /* <: js.Object */](
     iteratees: Many[
-      ValueIteratee[
-        /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+      js.Function1[
+        /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
+        NotVoid
       ]
     ],
     orders: __,
     collection: T
-  ): LodashOrderBy4x5[T] = js.native
+  ): LodashOrderBy3x5[T] = js.native
   def apply[T](iteratees: Many[js.Function1[/* value */ T, NotVoid]], orders: __, collection: List[T]): LodashOrderBy1x5[T] = js.native
   def apply[T /* <: js.Object */](iteratees: __, orders: Many[Boolean | asc | desc], collection: T): LodashOrderBy3x6[T] = js.native
   def apply[T](iteratees: __, orders: Many[Boolean | asc | desc], collection: List[T]): LodashOrderBy1x6[T] = js.native

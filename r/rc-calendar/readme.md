@@ -9,10 +9,10 @@ React Calendar
 |                    |                 |
 | ------------------ | :-------------: |
 | Full name          | rc-calendar |
-| Keywords           | calendar, component, react, react-calendar, react-component, ui, ui component |
+| Keywords           | react, react-calendar, react-component, calendar, ui component, ui, component |
 | # releases         | 56 |
-| # dependents       | 238 |
-| # downloads        | 11304923 |
+| # dependents       | 241 |
+| # downloads        | 11572981 |
 | # stars            | 10 |
 
 ## Links

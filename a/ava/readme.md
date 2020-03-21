@@ -10,9 +10,9 @@ Testing can be a drag. AVA helps you get it done.
 | ------------------ | :-------------: |
 | Full name          | ava |
 | Keywords           | 🦄, test, runner, testing, ava, concurrent, parallel, fast, tdd, cli-app, cli, jest, mocha, tape, tap, qunit, jasmine, babel, assert, assertion, promise, promises, async, function, await, generator, generators, yield, observable, observables, unit, snapshot, expect, typescript |
-| # releases         | 28 |
-| # dependents       | 276 |
-| # downloads        | 7371493 |
+| # releases         | 29 |
+| # dependents       | 277 |
+| # downloads        | 7407913 |
 | # stars            | 102 |
 
 ## Links

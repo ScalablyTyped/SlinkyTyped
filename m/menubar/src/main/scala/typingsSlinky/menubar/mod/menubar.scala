@@ -1,0 +1,15 @@
+package typingsSlinky.menubar.mod
+
+import typingsSlinky.menubar.PartialOptions
+import typingsSlinky.menubar.menubarMod.Menubar
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("menubar", "menubar")
+@js.native
+object menubar extends js.Object {
+  def apply(): Menubar = js.native
+  def apply(options: PartialOptions): Menubar = js.native
+}
+

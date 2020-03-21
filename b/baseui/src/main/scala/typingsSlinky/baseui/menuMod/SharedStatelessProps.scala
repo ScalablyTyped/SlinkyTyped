@@ -6,7 +6,7 @@ import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

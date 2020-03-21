@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.inputMod
 
 import slinky.web.SyntheticFocusEvent
-import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.mod.Component
 import typingsSlinky.std.HTMLInputElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`

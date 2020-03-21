@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint.SP.JsGrid
 
-import typingsSlinky.sharepoint.Anon_AnyChanges
+import typingsSlinky.sharepoint.AnonAnyChanges
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ object Internal extends js.Object {
             _
           ]
     ) = this()
-    var ExternalAPI: Anon_AnyChanges = js.native
+    var ExternalAPI: AnonAnyChanges = js.native
     def Clear(): Unit = js.native
     def NotifyRollbackChange(changeKey: IChangeKey): Unit = js.native
     def NotifySynchronizeToChange(changeKey: IChangeKey): Unit = js.native

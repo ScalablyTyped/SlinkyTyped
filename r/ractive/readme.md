@@ -1,7 +1,7 @@
 
 # Scala.js typings for ractive
 
-Typings are for version 1.3.8
+Typings are for version 1.3.10
 
 ## Library description:
 Next-generation DOM manipulation
@@ -10,9 +10,9 @@ Next-generation DOM manipulation
 | ------------------ | :-------------: |
 | Full name          | ractive |
 | Keywords           | binding, data binding, declarative, dom, handlebars, mustache, reactive, template, templates, templating, ui, view model |
-| # releases         | 195 |
+| # releases         | 193 |
 | # dependents       | 90 |
-| # downloads        | 332505 |
+| # downloads        | 329112 |
 | # stars            | 8 |
 
 ## Links

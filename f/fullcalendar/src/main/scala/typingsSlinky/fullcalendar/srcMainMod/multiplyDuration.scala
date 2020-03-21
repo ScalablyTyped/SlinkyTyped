@@ -1,6 +1,6 @@
 package typingsSlinky.fullcalendar.srcMainMod
 
-import typingsSlinky.moment.momentMod.Duration
+import typingsSlinky.moment.mod.Duration_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSImport("fullcalendar/src/main", "multiplyDuration")
 @js.native
 object multiplyDuration extends js.Object {
-  def apply(dur: js.Any, n: js.Any): Duration = js.native
+  def apply(dur: js.Any, n: js.Any): Duration_ = js.native
 }
 

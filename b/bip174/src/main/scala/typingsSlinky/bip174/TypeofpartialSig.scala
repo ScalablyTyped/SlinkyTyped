@@ -1,8 +1,8 @@
 package typingsSlinky.bip174
 
 import typingsSlinky.bip174.bip174Strings.`Leftcurlybracket pubkeyColon BufferSemicolon signatureColon BufferSemicolon Rightcurlybracket`
-import typingsSlinky.bip174.srcLibInterfacesMod.KeyValue
-import typingsSlinky.bip174.srcLibInterfacesMod.PartialSig
+import typingsSlinky.bip174.interfacesMod.KeyValue
+import typingsSlinky.bip174.interfacesMod.PartialSig
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`

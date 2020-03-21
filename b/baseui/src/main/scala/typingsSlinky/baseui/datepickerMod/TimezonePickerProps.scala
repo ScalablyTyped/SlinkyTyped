@@ -1,8 +1,8 @@
 package typingsSlinky.baseui.datepickerMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.Anon_Id
-import typingsSlinky.baseui.Anon_Select
+import typingsSlinky.baseui.AnonId
+import typingsSlinky.baseui.AnonSelect
 import typingsSlinky.baseui.selectMod.Option
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,8 +13,8 @@ trait TimezonePickerProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.undefined
   var error: js.UndefOr[Boolean] = js.undefined
   var mapLabels: js.UndefOr[js.Function1[/* args */ Option, TagMod[Any]]] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* value */ Anon_Id, _]] = js.undefined
-  var overrides: js.UndefOr[Anon_Select] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* value */ AnonId, _]] = js.undefined
+  var overrides: js.UndefOr[AnonSelect] = js.undefined
   var positive: js.UndefOr[Boolean] = js.undefined
   var value: js.UndefOr[String] = js.undefined
 }
@@ -26,8 +26,8 @@ object TimezonePickerProps {
     disabled: js.UndefOr[Boolean] = js.undefined,
     error: js.UndefOr[Boolean] = js.undefined,
     mapLabels: /* args */ Option => TagMod[Any] = null,
-    onChange: /* value */ Anon_Id => _ = null,
-    overrides: Anon_Select = null,
+    onChange: /* value */ AnonId => _ = null,
+    overrides: AnonSelect = null,
     positive: js.UndefOr[Boolean] = js.undefined,
     value: String = null
   ): TimezonePickerProps = {

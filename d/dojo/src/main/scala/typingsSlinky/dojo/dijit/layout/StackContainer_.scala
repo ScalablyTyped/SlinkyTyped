@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dijit.layout
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.ChildWidgetProperties
 import typingsSlinky.dojo.dojoStrings.doLayout
 import typingsSlinky.dojo.dojoStrings.persist
@@ -31,7 +31,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dijit.layout.StackContainer")
 @js.native
-class StackContainer_ () extends _LayoutWidget {
+class StackContainer_ () extends LayoutWidget {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -90,7 +90,7 @@ class StackContainer_ () extends _LayoutWidget {
     * @param page Reference to child widget or id of child widget             
     * @param animate             
     */
-  def selectChild(page: _WidgetBase, animate: Boolean): js.Any = js.native
+  def selectChild(page: WidgetBase, animate: Boolean): js.Any = js.native
   @JSName("set")
   def set_ChildWidgetProperties(property: ChildWidgetProperties, value: js.Object): Unit = js.native
   @JSName("set")
@@ -108,7 +108,7 @@ class StackContainer_ () extends _LayoutWidget {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_doLayout(
     property: doLayout,
@@ -118,7 +118,7 @@ class StackContainer_ () extends _LayoutWidget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_persist(
     property: persist,
@@ -128,7 +128,7 @@ class StackContainer_ () extends _LayoutWidget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_selectedChildWidget(
     property: selectedChildWidget,
@@ -138,6 +138,6 @@ class StackContainer_ () extends _LayoutWidget {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

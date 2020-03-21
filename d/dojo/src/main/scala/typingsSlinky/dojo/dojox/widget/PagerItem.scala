@@ -2,8 +2,8 @@ package typingsSlinky.dojo.dojox.widget
 
 import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.attachScope
 import typingsSlinky.dojo.dojoStrings.searchContainerNode
 import typingsSlinky.dojo.dojoStrings.style
@@ -21,10 +21,10 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit._AttachMixin because Inheritance from two classes. Inlined 
-- typings.dojo.dijit._TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.widget.PagerItem")
+- typingsSlinky.dojo.dijit.AttachMixin because Inheritance from two classes. Inlined 
+- typingsSlinky.dojo.dijit.TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.widget.PagerItem")
 @js.native
-class PagerItem () extends _WidgetBase {
+class PagerItem () extends WidgetBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -114,7 +114,7 @@ class PagerItem () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_searchContainerNode(
     property: searchContainerNode,
@@ -124,7 +124,7 @@ class PagerItem () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templatePath(
     property: templatePath,
@@ -134,7 +134,7 @@ class PagerItem () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templateString(
     property: templateString,
@@ -144,6 +144,6 @@ class PagerItem () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

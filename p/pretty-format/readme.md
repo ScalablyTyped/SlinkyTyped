@@ -10,9 +10,9 @@ Stringify any JavaScript value.
 | ------------------ | :-------------: |
 | Full name          | pretty-format |
 | Keywords           | - |
-| # releases         | 53 |
+| # releases         | 51 |
 | # dependents       | 227 |
-| # downloads        | 329120864 |
+| # downloads        | 332686232 |
 | # stars            | 11 |
 
 ## Links

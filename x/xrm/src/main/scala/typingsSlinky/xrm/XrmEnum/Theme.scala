@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation._
   * @remarks getCurrentTheme() does not work with Dynamics CRM for tablets or in the unified interface.
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.default
-  - typings.xrm.xrmStrings.Office12Blue
-  - typings.xrm.xrmStrings.Office14Silver
+  - typingsSlinky.xrm.xrmStrings.default
+  - typingsSlinky.xrm.xrmStrings.Office12Blue
+  - typingsSlinky.xrm.xrmStrings.Office14Silver
 */
 trait Theme extends js.Object
 

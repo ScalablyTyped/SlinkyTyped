@@ -5,15 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object ttsEngine {
-  import typingsSlinky.chrome.chrome.events.Event
-  import typingsSlinky.chrome.chrome.tts.TtsEvent
-
-  type TtsEngineSpeakEvent = Event[
+  type TtsEngineSpeakEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* utterance */ String, 
-      /* options */ SpeakOptions, 
-      /* sendTtsEvent */ js.Function1[/* event */ TtsEvent, Unit], 
-      Unit
+      /* utterance */ java.lang.String, 
+      /* options */ typingsSlinky.chrome.chrome.ttsEngine.SpeakOptions, 
+      /* sendTtsEvent */ js.Function1[/* event */ typingsSlinky.chrome.chrome.tts.TtsEvent, scala.Unit], 
+      scala.Unit
     ]
   ]
 }

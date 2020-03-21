@@ -12,7 +12,7 @@ A dead simple, responsive, a11y, dependency-free, vanilla JavaScript toast libra
 | Keywords           | javascript, plugin, notification, plugin, notify |
 | # releases         | 11 |
 | # dependents       | 1 |
-| # downloads        | 20768 |
+| # downloads        | 22795 |
 | # stars            | 0 |
 
 ## Links

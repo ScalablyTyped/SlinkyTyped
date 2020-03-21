@@ -5,22 +5,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.baseui.baseuiStrings.center
-  - typings.baseui.baseuiStrings.start
-  - typings.baseui.baseuiStrings.end
-  - typings.baseui.baseuiStrings.`flex-start`
-  - typings.baseui.baseuiStrings.`flex-end`
-  - typings.baseui.baseuiStrings.left
-  - typings.baseui.baseuiStrings.right
-  - typings.baseui.baseuiStrings.`space-between`
-  - typings.baseui.baseuiStrings.`space-around`
-  - typings.baseui.baseuiStrings.`space-evenly`
-  - typings.baseui.baseuiStrings.stretch
-  - typings.baseui.baseuiStrings.`safe center`
-  - typings.baseui.baseuiStrings.`unsafe center`
-  - typings.baseui.baseuiStrings.inherit
-  - typings.baseui.baseuiStrings.initial
-  - typings.baseui.baseuiStrings.unset
+  - typingsSlinky.baseui.baseuiStrings.center
+  - typingsSlinky.baseui.baseuiStrings.start
+  - typingsSlinky.baseui.baseuiStrings.end
+  - typingsSlinky.baseui.baseuiStrings.`flex-start`
+  - typingsSlinky.baseui.baseuiStrings.`flex-end`
+  - typingsSlinky.baseui.baseuiStrings.left
+  - typingsSlinky.baseui.baseuiStrings.right
+  - typingsSlinky.baseui.baseuiStrings.`space-between`
+  - typingsSlinky.baseui.baseuiStrings.`space-around`
+  - typingsSlinky.baseui.baseuiStrings.`space-evenly`
+  - typingsSlinky.baseui.baseuiStrings.stretch
+  - typingsSlinky.baseui.baseuiStrings.`safe center`
+  - typingsSlinky.baseui.baseuiStrings.`unsafe center`
+  - typingsSlinky.baseui.baseuiStrings.inherit
+  - typingsSlinky.baseui.baseuiStrings.initial
+  - typingsSlinky.baseui.baseuiStrings.unset
 */
 trait JustifyContent extends js.Object
 

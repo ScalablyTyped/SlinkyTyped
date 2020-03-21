@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.drawing.manager
 
-import org.scalajs.dom.raw.Event
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,25 +24,25 @@ class StencilUI protected () extends js.Object {
     *
     * @param obj
     */
-  def onOut(obj: Event): Unit = js.native
+  def onOut(obj: Event_): Unit = js.native
   /**
     * Event fired on mousedown on a stencil
     *
     * @param obj
     */
-  def onOver(obj: Event): Unit = js.native
+  def onOver(obj: Event_): Unit = js.native
   /**
     * Event fired on mousedown on a stencil
     *
     * @param obj
     */
-  def onUiDown(obj: Event): Unit = js.native
+  def onUiDown(obj: Event_): Unit = js.native
   /**
     * Event fired on mousedown on a stencil
     *
     * @param obj
     */
-  def onUiUp(obj: Event): Unit = js.native
+  def onUiUp(obj: Event_): Unit = js.native
   /**
     *
     * @param stencil

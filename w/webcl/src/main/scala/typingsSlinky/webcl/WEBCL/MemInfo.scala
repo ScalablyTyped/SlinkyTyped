@@ -12,12 +12,12 @@ import scala.scalajs.js.annotation._
 
 /* cl_meinfo */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1100`
-  - typings.webcl.webclNumbers.`0x1101`
-  - typings.webcl.webclNumbers.`0x1102`
-  - typings.webcl.webclNumbers.`0x1106`
-  - typings.webcl.webclNumbers.`0x1107`
-  - typings.webcl.webclNumbers.`0x1108`
+  - typingsSlinky.webcl.webclNumbers.`0x1100`
+  - typingsSlinky.webcl.webclNumbers.`0x1101`
+  - typingsSlinky.webcl.webclNumbers.`0x1102`
+  - typingsSlinky.webcl.webclNumbers.`0x1106`
+  - typingsSlinky.webcl.webclNumbers.`0x1107`
+  - typingsSlinky.webcl.webclNumbers.`0x1108`
 */
 trait MemInfo extends js.Object
 

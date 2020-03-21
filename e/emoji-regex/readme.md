@@ -11,8 +11,8 @@ A regular expression to match all Emoji-only symbols as per the Unicode Standard
 | Full name          | emoji-regex |
 | Keywords           | unicode, regex, regexp, regular expressions, code points, symbols, characters, emoji |
 | # releases         | 6 |
-| # dependents       | 121 |
-| # downloads        | 359409686 |
+| # dependents       | 120 |
+| # downloads        | 391468140 |
 | # stars            | 3 |
 
 ## Links

@@ -6,9 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.required_
-  - typings.std.stdStrings.preferred
-  - typings.std.stdStrings.discouraged
+  - typingsSlinky.std.stdStrings.discouraged
+  - typingsSlinky.std.stdStrings.preferred
+  - typingsSlinky.std.stdStrings.required_
 */
 trait UserVerificationRequirement extends js.Object
 

@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.node.nodeStrings.compressed
-  - typings.node.nodeStrings.uncompressed
-  - typings.node.nodeStrings.hybrid
+  - typingsSlinky.node.nodeStrings.compressed
+  - typingsSlinky.node.nodeStrings.uncompressed
+  - typingsSlinky.node.nodeStrings.hybrid
 */
 trait ECDHKeyFormat extends js.Object
 

@@ -1,6 +1,6 @@
 package typingsSlinky.cannon.CANNON
 
-import typingsSlinky.cannon.Anon_Broadphaser
+import typingsSlinky.cannon.AnonBroadphaser
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ class World () extends EventTarget {
   var materials: js.Array[Material] = js.native
   var narrowPhase: NarrowPhase = js.native
   var nextId: Double = js.native
-  var profile: Anon_Broadphaser = js.native
+  var profile: AnonBroadphaser = js.native
   var quatNormalizeFast: Boolean = js.native
   var quatNormalizeSkip: Double = js.native
   var removeBodyEvent: IBodyEvent = js.native

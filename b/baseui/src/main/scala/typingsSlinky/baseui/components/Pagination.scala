@@ -4,8 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_EventAny
-import typingsSlinky.baseui.Anon_NextPage
+import typingsSlinky.baseui.AnonEventAny
+import typingsSlinky.baseui.AnonNextPage
 import typingsSlinky.baseui.paginationMod.Labels
 import typingsSlinky.baseui.paginationMod.PaginationOverrides
 import typingsSlinky.baseui.paginationMod.PaginationProps
@@ -24,9 +24,9 @@ object Pagination
     currentPage: Double,
     numPages: Double,
     labels: Labels = null,
-    onNextClick: /* args */ Anon_EventAny => _ = null,
-    onPageChange: /* args */ Anon_NextPage => _ = null,
-    onPrevClick: /* args */ Anon_EventAny => _ = null,
+    onNextClick: /* args */ AnonEventAny => _ = null,
+    onPageChange: /* args */ AnonNextPage => _ = null,
+    onPrevClick: /* args */ AnonEventAny => _ = null,
     overrides: PaginationOverrides = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.baseui.paginationMod.Pagination] = {

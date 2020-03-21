@@ -1,0 +1,26 @@
+package typingsSlinky.elasticElasticsearch
+
+import typingsSlinky.elasticElasticsearch.mod.ApiMethod
+import typingsSlinky.elasticElasticsearch.mod.callbackFn
+import typingsSlinky.elasticElasticsearch.requestParamsMod.MigrationDeprecations
+import typingsSlinky.elasticElasticsearch.transportMod.ApiResponse
+import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestCallback
+import typingsSlinky.elasticElasticsearch.transportMod.TransportRequestOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait AnonDeprecations extends js.Object {
+  @JSName("deprecations")
+  var deprecations_Original: ApiMethod[MigrationDeprecations, _] = js.native
+  // Promise API
+  def deprecations(): js.Promise[ApiResponse[_, _]] = js.native
+  // Callback API
+  def deprecations(callback: callbackFn[_]): TransportRequestCallback = js.native
+  def deprecations(params: MigrationDeprecations): js.Promise[ApiResponse[_, _]] = js.native
+  def deprecations(params: MigrationDeprecations, callback: callbackFn[_]): TransportRequestCallback = js.native
+  def deprecations(params: MigrationDeprecations, options: TransportRequestOptions): js.Promise[ApiResponse[_, _]] = js.native
+  def deprecations(params: MigrationDeprecations, options: TransportRequestOptions, callback: callbackFn[_]): TransportRequestCallback = js.native
+}
+

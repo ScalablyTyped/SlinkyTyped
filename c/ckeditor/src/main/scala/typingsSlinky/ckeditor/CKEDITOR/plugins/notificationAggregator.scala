@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditor.CKEDITOR.plugins
 
-import typingsSlinky.ckeditor.Anon_Weight
+import typingsSlinky.ckeditor.AnonWeight
 import typingsSlinky.ckeditor.CKEDITOR.event
 import typingsSlinky.ckeditor.CKEDITOR.plugins.notificationAggregator.task
 import scala.scalajs.js
@@ -15,7 +15,7 @@ class notificationAggregator protected () extends event {
   val editor: typingsSlinky.ckeditor.CKEDITOR.editor = js.native
   val notification: typingsSlinky.ckeditor.CKEDITOR.plugins.notification = js.native
   def createTask(): task = js.native
-  def createTask(options: Anon_Weight): task = js.native
+  def createTask(options: AnonWeight): task = js.native
   def getDoneTaskCount(): Double = js.native
   def getPercentage(): Double = js.native
   def getTaskCount(): Double = js.native

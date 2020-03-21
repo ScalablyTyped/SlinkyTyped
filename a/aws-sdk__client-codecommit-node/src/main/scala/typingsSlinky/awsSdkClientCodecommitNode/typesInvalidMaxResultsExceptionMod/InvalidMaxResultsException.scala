@@ -1,0 +1,24 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesInvalidMaxResultsExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.describePullRequestEventsExceptionsUnionMod.DescribePullRequestEventsExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getCommentsForComparedCommitExceptionsUnionMod.GetCommentsForComparedCommitExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getCommentsForPullRequestExceptionsUnionMod.GetCommentsForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getDifferencesExceptionsUnionMod.GetDifferencesExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.listPullRequestsExceptionsUnionMod.ListPullRequestsExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidMaxResultsException
+  extends ServiceException[InvalidMaxResultsExceptionDetails]
+     with DescribePullRequestEventsExceptionsUnion
+     with GetCommentsForComparedCommitExceptionsUnion
+     with GetCommentsForPullRequestExceptionsUnion
+     with GetDifferencesExceptionsUnion
+     with ListPullRequestsExceptionsUnion {
+  @JSName("name")
+  var name_InvalidMaxResultsException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidMaxResultsException = js.native
+}
+

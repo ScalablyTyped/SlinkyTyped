@@ -5,33 +5,38 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsTogglebuttonToggleButtonMod.ToggleButtonProps
-import typingsSlinky.primereact.componentsTooltipTooltipOptionsMod.TooltipOptions
+import typingsSlinky.primereact.AnonValueBoolean
+import typingsSlinky.primereact.toggleButtonMod.ToggleButtonProps
+import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ToggleButton
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.togglebuttonMod.ToggleButton] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactTogglebuttonMod.ToggleButton] {
   @JSImport("primereact/togglebutton", "ToggleButton")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: checked, className, id, onChange, tabIndex */
+  /* The following DOM/SVG props were specified: checked, className, id, tabIndex */
   def apply(
+    ariaLabelledBy: String = null,
     offIcon: String = null,
     offLabel: String = null,
+    onChange: /* e */ AnonValueBoolean => Unit = null,
     onIcon: String = null,
     onLabel: String = null,
     style: js.Object = null,
     tooltip: js.Any = null,
     tooltipOptions: TooltipOptions = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.togglebuttonMod.ToggleButton] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTogglebuttonMod.ToggleButton] = {
     val __obj = js.Dynamic.literal()
+    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
     if (offIcon != null) __obj.updateDynamic("offIcon")(offIcon.asInstanceOf[js.Any])
     if (offLabel != null) __obj.updateDynamic("offLabel")(offLabel.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onIcon != null) __obj.updateDynamic("onIcon")(onIcon.asInstanceOf[js.Any])
     if (onLabel != null) __obj.updateDynamic("onLabel")(onLabel.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
@@ -40,9 +45,9 @@ object ToggleButton
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.togglebuttonMod.ToggleButton] = new slinky.core.BuildingComponent[
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTogglebuttonMod.ToggleButton] = new slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.togglebuttonMod.ToggleButton](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  typingsSlinky.primereact.primereactTogglebuttonMod.ToggleButton](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ToggleButtonProps
 }
 

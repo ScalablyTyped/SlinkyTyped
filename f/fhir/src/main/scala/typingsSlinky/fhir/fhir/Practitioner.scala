@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A person with a  formal responsibility in the provisioning of healthcare or related services
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait Practitioner extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Practitioner extends DomainResource {
   /**
     * Contains extended information for property 'active'.
     */

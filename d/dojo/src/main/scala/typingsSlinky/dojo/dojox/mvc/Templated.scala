@@ -2,8 +2,8 @@ package typingsSlinky.dojo.dojox.mvc
 
 import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.attachScope
 import typingsSlinky.dojo.dojoStrings.bindings
 import typingsSlinky.dojo.dojoStrings.contextRequire
@@ -25,11 +25,11 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit._AttachMixin because Inheritance from two classes. Inlined 
-- typings.dojo.dijit._WidgetsInTemplateMixin because Inheritance from two classes. Inlined contextRequire, widgetsInTemplate, startup
-- typings.dojo.dijit._TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.mvc.Templated")
+- typingsSlinky.dojo.dijit.AttachMixin because Inheritance from two classes. Inlined 
+- typingsSlinky.dojo.dijit.WidgetsInTemplateMixin because Inheritance from two classes. Inlined contextRequire, widgetsInTemplate, startup
+- typingsSlinky.dojo.dijit.TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.mvc.Templated")
 @js.native
-class Templated () extends _WidgetBase {
+class Templated () extends WidgetBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -137,7 +137,7 @@ class Templated () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_bindings(
     property: bindings,
@@ -147,7 +147,7 @@ class Templated () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_contextRequire(
     property: contextRequire,
@@ -157,7 +157,7 @@ class Templated () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Function], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_searchContainerNode(
     property: searchContainerNode,
@@ -167,7 +167,7 @@ class Templated () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templatePath(
     property: templatePath,
@@ -177,7 +177,7 @@ class Templated () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templateString(
     property: templateString,
@@ -187,7 +187,7 @@ class Templated () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_widgetsInTemplate(
     property: widgetsInTemplate,
@@ -197,6 +197,6 @@ class Templated () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

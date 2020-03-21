@@ -1,6 +1,6 @@
 package typingsSlinky.socketcluster
 
-import typingsSlinky.socketcluster.socketclusterMod.ColorCodes
+import typingsSlinky.socketcluster.mod.ColorCodes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

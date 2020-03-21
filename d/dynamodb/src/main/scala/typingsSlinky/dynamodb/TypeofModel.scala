@@ -1,7 +1,7 @@
 package typingsSlinky.dynamodb
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.bunyan.bunyanMod.^
+import typingsSlinky.bunyan.mod.^
 import typingsSlinky.dynamodb.callbackMod.Callback
 import typingsSlinky.dynamodb.modelMod.Model.OperationOptions
 import typingsSlinky.dynamodb.queryMod.Query
@@ -18,7 +18,7 @@ trait TypeofModel extends js.Object {
   val log: ^ = js.native
   def batchGetItems(hashKey: String, rangeKey: String, options: js.Any): js.Promise[_] | Unit = js.native
   def batchGetItems(hashKey: String, rangeKey: String, options: js.Any, callback: Callback): js.Promise[_] | Unit = js.native
-  def config(config: Anon_Dynamodb): js.Any = js.native
+  def config(config: AnonDynamodb): js.Any = js.native
   def create(doc: js.Any): js.Promise[_] = js.native
   def create(doc: js.Any, callback: Callback): Unit = js.native
   def create(doc: js.Any, params: OperationOptions): js.Promise[_] = js.native

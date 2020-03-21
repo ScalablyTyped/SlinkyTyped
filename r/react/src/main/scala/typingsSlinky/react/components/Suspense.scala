@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.reactMod.SuspenseProps
+import typingsSlinky.react.mod.SuspenseProps
 import typingsSlinky.std.NonNullable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

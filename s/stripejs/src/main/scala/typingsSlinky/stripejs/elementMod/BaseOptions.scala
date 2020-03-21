@@ -1,7 +1,7 @@
 package typingsSlinky.stripejs.elementMod
 
-import typingsSlinky.stripejs.Anon_BaseCompleteEmpty
-import typingsSlinky.stripejs.Anon_BaseCompleteEmptyInvalid
+import typingsSlinky.stripejs.AnonEmpty
+import typingsSlinky.stripejs.AnonInvalid
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ trait BaseOptions extends js.Object {
     * Set custom class names on the container DOM element when the Stripe Element is in a
     * particular state.
     */
-  var classes: js.UndefOr[Anon_BaseCompleteEmpty] = js.undefined
+  var classes: js.UndefOr[AnonEmpty] = js.undefined
   /**
     * Whether or not the input is disabled
     * @default false
@@ -25,16 +25,16 @@ trait BaseOptions extends js.Object {
   /**
     * Customize appearance using CSS properties
     */
-  var style: js.UndefOr[Anon_BaseCompleteEmptyInvalid] = js.undefined
+  var style: js.UndefOr[AnonInvalid] = js.undefined
 }
 
 object BaseOptions {
   @scala.inline
   def apply(
-    classes: Anon_BaseCompleteEmpty = null,
+    classes: AnonEmpty = null,
     disabled: js.UndefOr[Boolean] = js.undefined,
     hideIcon: js.UndefOr[Boolean] = js.undefined,
-    style: Anon_BaseCompleteEmptyInvalid = null
+    style: AnonInvalid = null
   ): BaseOptions = {
     val __obj = js.Dynamic.literal()
     if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])

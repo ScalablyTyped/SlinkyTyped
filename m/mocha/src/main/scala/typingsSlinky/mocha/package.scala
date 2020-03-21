@@ -5,13 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mocha {
-  import typingsSlinky.mocha.Mocha.Done
-
-  type Mocha = Mocha_
   // #endregion Browser augmentations
   // #region Deprecations
   /** @deprecated use `Mocha.Done` instead. */
-  type MochaDone = Done
+  type MochaDone = typingsSlinky.mocha.Mocha_.Done
+  type Mocha_ = typingsSlinky.mocha.Mocha__
   /** @deprecated use `Mocha.ReporterConstructor` instead. */
-  type ReporterConstructor = typingsSlinky.mocha.Mocha.ReporterConstructor
+  type ReporterConstructor = typingsSlinky.mocha.Mocha_.ReporterConstructor
 }

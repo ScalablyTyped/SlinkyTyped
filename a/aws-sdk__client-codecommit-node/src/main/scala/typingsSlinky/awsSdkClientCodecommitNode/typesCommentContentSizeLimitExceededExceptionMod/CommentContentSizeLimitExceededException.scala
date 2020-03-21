@@ -1,0 +1,22 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesCommentContentSizeLimitExceededExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExceptionsUnionMod.PostCommentForComparedCommitExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentReplyExceptionsUnionMod.PostCommentReplyExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.updateCommentExceptionsUnionMod.UpdateCommentExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CommentContentSizeLimitExceededException
+  extends ServiceException[CommentContentSizeLimitExceededExceptionDetails]
+     with PostCommentForComparedCommitExceptionsUnion
+     with PostCommentForPullRequestExceptionsUnion
+     with PostCommentReplyExceptionsUnion
+     with UpdateCommentExceptionsUnion {
+  @JSName("name")
+  var name_CommentContentSizeLimitExceededException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommentContentSizeLimitExceededException = js.native
+}
+

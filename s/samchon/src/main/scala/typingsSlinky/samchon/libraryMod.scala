@@ -1,6 +1,6 @@
 package typingsSlinky.samchon
 
-import typingsSlinky.tstl.tstlMod.Pair
+import typingsSlinky.tstl.mod.Pair
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object libraryMod extends js.Object {
   @js.native
   class CartesianProduct protected ()
-    extends typingsSlinky.samchon.libraryCaseUnderscoreGeneratorsCartesianProductMod.CartesianProduct {
+    extends typingsSlinky.samchon.cartesianProductMod.CartesianProduct {
     /**
       * Initializer Constructor.
       *
@@ -21,7 +21,7 @@ object libraryMod extends js.Object {
   
   @js.native
   class Factorial protected ()
-    extends typingsSlinky.samchon.libraryCaseUnderscoreGeneratorsFactorialMod.Factorial {
+    extends typingsSlinky.samchon.factorialMod.Factorial {
     /**
       * Construct from factorial size N.
       *
@@ -32,7 +32,7 @@ object libraryMod extends js.Object {
   
   @js.native
   class Permutation protected ()
-    extends typingsSlinky.samchon.libraryCaseUnderscoreGeneratorsPermutationMod.Permutation {
+    extends typingsSlinky.samchon.permutationMod.Permutation {
     /**
       * Construct from size of N and R.
       *
@@ -44,7 +44,7 @@ object libraryMod extends js.Object {
   
   @js.native
   class RepeatedPermutation protected ()
-    extends typingsSlinky.samchon.libraryCaseUnderscoreGeneratorsRepeatedPermutationMod.RepeatedPermutation {
+    extends typingsSlinky.samchon.repeatedPermutationMod.RepeatedPermutation {
     /**
       * Construct from size of N and R.
       *
@@ -56,7 +56,7 @@ object libraryMod extends js.Object {
   
   @js.native
   class StringUtil ()
-    extends typingsSlinky.samchon.libraryUtilsStringUtilMod.StringUtil
+    extends typingsSlinky.samchon.stringUtilMod.StringUtil
   
   /**
     * URLVariables class is for representing variables of HTTP.
@@ -74,7 +74,7 @@ object libraryMod extends js.Object {
     * Default Constructor.
     */
   class URLVariables ()
-    extends typingsSlinky.samchon.libraryURLVariablesMod.URLVariables {
+    extends typingsSlinky.samchon.urlvariablesMod.URLVariables {
     /**
       * Construct from a URL-encoded string.
       *
@@ -87,14 +87,14 @@ object libraryMod extends js.Object {
   
   @js.native
   class XML ()
-    extends typingsSlinky.samchon.libraryXMLMod.XML {
+    extends typingsSlinky.samchon.xmlMod.XML {
     def this(str: String) = this()
-    def this(xml: typingsSlinky.sxml.libXMLMod.XML) = this()
+    def this(xml: typingsSlinky.sxml.xmlMod.XML) = this()
   }
   
   @js.native
   class XMLList ()
-    extends typingsSlinky.sxml.libXMLListMod.XMLList
+    extends typingsSlinky.sxml.xmllistMod.XMLList
   
   /* static members */
   @js.native
@@ -280,10 +280,14 @@ object libraryMod extends js.Object {
       * @hidden
       */
     var _Repeat: js.Any = js.native
-    def decode_property(str: String): String = js.native
-    def decode_value(str: String): String = js.native
-    def encode_property(str: String): String = js.native
-    def encode_value(str: String): String = js.native
+    @JSName("decode_property")
+    def decodeProperty(str: String): String = js.native
+    @JSName("decode_value")
+    def decodeValue(str: String): String = js.native
+    @JSName("encode_property")
+    def encodeProperty(str: String): String = js.native
+    @JSName("encode_value")
+    def encodeValue(str: String): String = js.native
     def head(): String = js.native
     def head(encoding: String): String = js.native
   }

@@ -1,10 +1,11 @@
 package typingsSlinky.ionic
 
-import typingsSlinky.atIonicCliDashFramework.libConfigMod.BaseConfigOptions
 import typingsSlinky.ionic.definitionsMod.CommandMetadataOption
+import typingsSlinky.ionic.definitionsMod.ConfigFile
 import typingsSlinky.ionic.definitionsMod.IConfig
 import typingsSlinky.ionic.ionicStrings.configDotjson
-import typingsSlinky.minimist.minimistMod.ParsedArgs
+import typingsSlinky.ionicCliFramework.configMod.BaseConfigOptions
+import typingsSlinky.minimist.mod.ParsedArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +17,7 @@ object libConfigMod extends js.Object {
   class Config protected () extends IConfig {
     def this(p: String) = this()
     def this(p: String, options: BaseConfigOptions) = this()
+    def provideDefaults(config: PartialConfigFile): ConfigFile = js.native
   }
   
   val CONFIG_FILE: configDotjson = js.native

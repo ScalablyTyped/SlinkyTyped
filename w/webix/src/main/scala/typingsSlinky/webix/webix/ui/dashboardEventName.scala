@@ -5,15 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onAfterDrop
-  - typings.webix.webixStrings.onBeforeDrag
-  - typings.webix.webixStrings.onBeforeDragIn
-  - typings.webix.webixStrings.onBeforeDrop
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onChange
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onDragOut
-  - typings.webix.webixStrings.onViewShow
+  - typingsSlinky.webix.webixStrings.onAfterDrop
+  - typingsSlinky.webix.webixStrings.onBeforeDrag
+  - typingsSlinky.webix.webixStrings.onBeforeDragIn
+  - typingsSlinky.webix.webixStrings.onBeforeDrop
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onChange
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onDragOut
+  - typingsSlinky.webix.webixStrings.onViewShow
 */
 trait dashboardEventName extends js.Object
 

@@ -1,7 +1,7 @@
 package typingsSlinky.ol.sourceMod
 
-import typingsSlinky.ol.sourceTileImageMod.Options
-import typingsSlinky.ol.sourceTileImageMod.default
+import typingsSlinky.ol.tileImageMod.Options
+import typingsSlinky.ol.tileImageMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

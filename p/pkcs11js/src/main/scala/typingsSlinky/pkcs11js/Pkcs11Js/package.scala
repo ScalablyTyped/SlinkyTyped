@@ -5,8 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Pkcs11Js {
-  import typingsSlinky.node.Buffer
-
-  type Handle = Buffer
-  type Template = js.Array[Attribute]
+  type Handle = typingsSlinky.node.Buffer
+  type Template = js.Array[typingsSlinky.pkcs11js.Pkcs11Js.Attribute]
 }

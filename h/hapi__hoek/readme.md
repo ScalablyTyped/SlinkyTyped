@@ -1,7 +1,7 @@
 
 # Scala.js typings for hapi__hoek
 
-Typings are for version 6.2
+Typings are for version 9.0.3
 
 ## Library description:
 General purpose node utilities
@@ -10,9 +10,9 @@ General purpose node utilities
 | ------------------ | :-------------: |
 | Full name          | @hapi/hoek |
 | Keywords           | utilities |
-| # releases         | 25 |
-| # dependents       | 173 |
-| # downloads        | 74034210 |
+| # releases         | 26 |
+| # dependents       | 176 |
+| # downloads        | 76249811 |
 | # stars            | 0 |
 
 ## Links
@@ -24,7 +24,7 @@ General purpose node utilities
 
 
 ## Note
-This library has been generated from typescript code from [DefinitelyTyped](https://definitelytyped.org).
+This library has been generated from typescript code from first party type definitions.
 
 Provided with :purple_heart: from [ScalablyTyped](https://github.com/oyvindberg/ScalablyTyped)
 

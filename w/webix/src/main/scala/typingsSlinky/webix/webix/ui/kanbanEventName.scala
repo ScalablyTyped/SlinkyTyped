@@ -5,41 +5,41 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onAfterAdd
-  - typings.webix.webixStrings.onAfterCollapse
-  - typings.webix.webixStrings.onAfterCopy
-  - typings.webix.webixStrings.onAfterDelete
-  - typings.webix.webixStrings.onAfterEditorShow
-  - typings.webix.webixStrings.onAfterExpand
-  - typings.webix.webixStrings.onAfterLoad
-  - typings.webix.webixStrings.onAfterSort
-  - typings.webix.webixStrings.onAfterStatusChange
-  - typings.webix.webixStrings.onAvatarClick
-  - typings.webix.webixStrings.onBeforeAdd
-  - typings.webix.webixStrings.onBeforeCopy
-  - typings.webix.webixStrings.onBeforeDelete
-  - typings.webix.webixStrings.onBeforeEditorAction
-  - typings.webix.webixStrings.onBeforeEditorShow
-  - typings.webix.webixStrings.onBeforeLoad
-  - typings.webix.webixStrings.onBeforeSort
-  - typings.webix.webixStrings.onBeforeStatusChange
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onDataRequest
-  - typings.webix.webixStrings.onDataUpdate
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onListAfterContextMenu
-  - typings.webix.webixStrings.onListAfterDrop
-  - typings.webix.webixStrings.onListAfterSelect
-  - typings.webix.webixStrings.onListBeforeContextMenu
-  - typings.webix.webixStrings.onListBeforeDrag
-  - typings.webix.webixStrings.onListBeforeDragIn
-  - typings.webix.webixStrings.onListBeforeDrop
-  - typings.webix.webixStrings.onListBeforeSelect
-  - typings.webix.webixStrings.onListIconClick
-  - typings.webix.webixStrings.onListItemClick
-  - typings.webix.webixStrings.onListItemDblClick
-  - typings.webix.webixStrings.onLoadError
-  - typings.webix.webixStrings.onViewShow
+  - typingsSlinky.webix.webixStrings.onAfterAdd
+  - typingsSlinky.webix.webixStrings.onAfterCollapse
+  - typingsSlinky.webix.webixStrings.onAfterCopy
+  - typingsSlinky.webix.webixStrings.onAfterDelete
+  - typingsSlinky.webix.webixStrings.onAfterEditorShow
+  - typingsSlinky.webix.webixStrings.onAfterExpand
+  - typingsSlinky.webix.webixStrings.onAfterLoad
+  - typingsSlinky.webix.webixStrings.onAfterSort
+  - typingsSlinky.webix.webixStrings.onAfterStatusChange
+  - typingsSlinky.webix.webixStrings.onAvatarClick
+  - typingsSlinky.webix.webixStrings.onBeforeAdd
+  - typingsSlinky.webix.webixStrings.onBeforeCopy
+  - typingsSlinky.webix.webixStrings.onBeforeDelete
+  - typingsSlinky.webix.webixStrings.onBeforeEditorAction
+  - typingsSlinky.webix.webixStrings.onBeforeEditorShow
+  - typingsSlinky.webix.webixStrings.onBeforeLoad
+  - typingsSlinky.webix.webixStrings.onBeforeSort
+  - typingsSlinky.webix.webixStrings.onBeforeStatusChange
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onDataRequest
+  - typingsSlinky.webix.webixStrings.onDataUpdate
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onListAfterContextMenu
+  - typingsSlinky.webix.webixStrings.onListAfterDrop
+  - typingsSlinky.webix.webixStrings.onListAfterSelect
+  - typingsSlinky.webix.webixStrings.onListBeforeContextMenu
+  - typingsSlinky.webix.webixStrings.onListBeforeDrag
+  - typingsSlinky.webix.webixStrings.onListBeforeDragIn
+  - typingsSlinky.webix.webixStrings.onListBeforeDrop
+  - typingsSlinky.webix.webixStrings.onListBeforeSelect
+  - typingsSlinky.webix.webixStrings.onListIconClick
+  - typingsSlinky.webix.webixStrings.onListItemClick
+  - typingsSlinky.webix.webixStrings.onListItemDblClick
+  - typingsSlinky.webix.webixStrings.onLoadError
+  - typingsSlinky.webix.webixStrings.onViewShow
 */
 trait kanbanEventName extends js.Object
 

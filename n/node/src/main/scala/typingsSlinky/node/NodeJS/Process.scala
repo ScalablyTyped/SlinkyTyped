@@ -1,8 +1,8 @@
 package typingsSlinky.node.NodeJS
 
-import typingsSlinky.node.Anon_Debug
-import typingsSlinky.node.Anon_SwallowErrors
-import typingsSlinky.node.Anon_Targetdefaults
+import typingsSlinky.node.AnonDebug
+import typingsSlinky.node.AnonSwallowErrors
+import typingsSlinky.node.AnonTargetdefaults
 import typingsSlinky.node.nodeStrings.beforeExit
 import typingsSlinky.node.nodeStrings.disconnect
 import typingsSlinky.node.nodeStrings.exit
@@ -33,7 +33,7 @@ trait Process extends EventEmitter {
   var arch: String = js.native
   var argv: js.Array[String] = js.native
   var argv0: String = js.native
-  var config: Anon_Targetdefaults = js.native
+  var config: AnonTargetdefaults = js.native
   var connected: Boolean = js.native
   var debugPort: Double = js.native
   var domain: Domain = js.native
@@ -41,7 +41,7 @@ trait Process extends EventEmitter {
   var execArgv: js.Array[String] = js.native
   var execPath: String = js.native
   var exitCode: js.UndefOr[Double] = js.native
-  var features: Anon_Debug = js.native
+  var features: AnonDebug = js.native
   @JSName("hrtime")
   var hrtime_Original: HRTime = js.native
   var mainModule: js.UndefOr[Module] = js.native
@@ -58,7 +58,7 @@ trait Process extends EventEmitter {
     js.Function4[
       /* message */ js.Any, 
       /* sendHandle */ js.UndefOr[js.Any], 
-      /* options */ js.UndefOr[Anon_SwallowErrors], 
+      /* options */ js.UndefOr[AnonSwallowErrors], 
       /* callback */ js.UndefOr[js.Function1[/* error */ js.Error | Null, Unit]], 
       Boolean
     ]

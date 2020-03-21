@@ -1,6 +1,6 @@
 package typingsSlinky.ndarray
 
-import typingsSlinky.ndarray.ndarrayMod.DataType
+import typingsSlinky.ndarray.mod.DataType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

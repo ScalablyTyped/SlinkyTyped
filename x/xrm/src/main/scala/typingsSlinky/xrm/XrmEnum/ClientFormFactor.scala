@@ -9,10 +9,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmNumbers.`1`
-  - typings.xrm.xrmNumbers.`2`
-  - typings.xrm.xrmNumbers.`3`
-  - typings.xrm.xrmNumbers.`4`
+  - typingsSlinky.xrm.xrmNumbers.`1`
+  - typingsSlinky.xrm.xrmNumbers.`2`
+  - typingsSlinky.xrm.xrmNumbers.`3`
+  - typingsSlinky.xrm.xrmNumbers.`4`
 */
 trait ClientFormFactor extends js.Object
 

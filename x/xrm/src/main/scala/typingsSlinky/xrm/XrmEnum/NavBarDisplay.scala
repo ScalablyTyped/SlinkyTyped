@@ -12,9 +12,9 @@ import scala.scalajs.js.annotation._
   * @see {@link Xrm.Url.NavBarDisplay}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.entity
-  - typings.xrm.xrmStrings.on
-  - typings.xrm.xrmStrings.off
+  - typingsSlinky.xrm.xrmStrings.entity
+  - typingsSlinky.xrm.xrmStrings.on
+  - typingsSlinky.xrm.xrmStrings.off
 */
 trait NavBarDisplay extends js.Object
 

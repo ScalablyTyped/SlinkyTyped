@@ -1,6 +1,6 @@
 package typingsSlinky.tsutils.utilUtilMod
 
-import typingsSlinky.typescript.typescriptMod.CheckJsDirective
+import typingsSlinky.typescript.mod.CheckJsDirective
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

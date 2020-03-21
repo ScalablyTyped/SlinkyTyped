@@ -1,0 +1,28 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesInvalidPathExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.deleteFileExceptionsUnionMod.DeleteFileExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getDifferencesExceptionsUnionMod.GetDifferencesExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getFileExceptionsUnionMod.GetFileExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getFolderExceptionsUnionMod.GetFolderExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExceptionsUnionMod.PostCommentForComparedCommitExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.putFileExceptionsUnionMod.PutFileExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidPathException
+  extends ServiceException[InvalidPathExceptionDetails]
+     with DeleteFileExceptionsUnion
+     with GetDifferencesExceptionsUnion
+     with GetFileExceptionsUnion
+     with GetFolderExceptionsUnion
+     with PostCommentForComparedCommitExceptionsUnion
+     with PostCommentForPullRequestExceptionsUnion
+     with PutFileExceptionsUnion {
+  @JSName("name")
+  var name_InvalidPathException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidPathException = js.native
+}
+

@@ -1,0 +1,17 @@
+package typingsSlinky.protonNative.components
+
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object Menu
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.protonNative.mod.Menu] {
+  @JSImport("proton-native", "Menu")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+}
+

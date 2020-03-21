@@ -1,7 +1,7 @@
 package typingsSlinky.mithril
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.mithril.mithrilMod.Route
+import typingsSlinky.mithril.mod.Route
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,12 +1,12 @@
 package typingsSlinky.dojo.dojox.form
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit.form._FormWidget
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.form.FormWidget
 import typingsSlinky.dojo.dojoStrings.cancelText
 import typingsSlinky.dojo.dojoStrings.label
 import typingsSlinky.dojo.dojoStrings.value
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.form.FileInput")
 @js.native
-class FileInput () extends _FormWidget {
+class FileInput () extends FormWidget {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -53,7 +53,7 @@ class FileInput () extends _FormWidget {
     *
     * @param e
     */
-  def reset(e: Event): Unit = js.native
+  def reset(e: Event_): Unit = js.native
   /**
     * method to allow use to change button label
     *
@@ -76,7 +76,7 @@ class FileInput () extends _FormWidget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_label(
     property: label,
@@ -86,6 +86,6 @@ class FileInput () extends _FormWidget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

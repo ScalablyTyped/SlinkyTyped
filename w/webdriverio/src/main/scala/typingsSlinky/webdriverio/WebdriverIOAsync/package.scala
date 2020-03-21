@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object WebdriverIOAsync {
-  type TouchActions = String | TouchAction | js.Array[TouchAction]
+  type TouchActions = java.lang.String | typingsSlinky.webdriverio.WebdriverIOAsync.TouchAction | js.Array[typingsSlinky.webdriverio.WebdriverIOAsync.TouchAction]
 }

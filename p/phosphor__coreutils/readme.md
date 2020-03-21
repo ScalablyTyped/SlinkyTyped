@@ -11,8 +11,8 @@ PhosphorJS - Core Utilities
 | Full name          | @phosphor/coreutils |
 | Keywords           | - |
 | # releases         | 2 |
-| # dependents       | 312 |
-| # downloads        | 1634650 |
+| # dependents       | 318 |
+| # downloads        | 1662963 |
 | # stars            | 0 |
 
 ## Links

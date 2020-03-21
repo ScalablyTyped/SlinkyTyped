@@ -1,7 +1,7 @@
 package typingsSlinky.recompose
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.recompose.recomposeMod.InferableComponentEnhancer
+import typingsSlinky.recompose.mod.InferableComponentEnhancer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

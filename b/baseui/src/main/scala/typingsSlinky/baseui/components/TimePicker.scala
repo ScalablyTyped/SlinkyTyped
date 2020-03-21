@@ -5,9 +5,12 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_Select
+import typingsSlinky.baseui.AnonSelect
 import typingsSlinky.baseui.baseuiStrings.`12`
 import typingsSlinky.baseui.baseuiStrings.`24`
+import typingsSlinky.baseui.baseuiStrings.compact
+import typingsSlinky.baseui.baseuiStrings.default_
+import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.timepickerMod.TimePickerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -20,14 +23,16 @@ object TimePicker
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, onChange, placeholder */
+  /* The following DOM/SVG props were specified: disabled, placeholder */
   def apply(
     creatable: js.UndefOr[Boolean] = js.undefined,
     error: js.UndefOr[Boolean] = js.undefined,
     format: `12` | `24` = null,
     nullable: js.UndefOr[Boolean] = js.undefined,
-    overrides: Anon_Select = null,
+    onChange: /* args */ js.Date => _ = null,
+    overrides: AnonSelect = null,
     positive: js.UndefOr[Boolean] = js.undefined,
+    size: default_ | compact | large_ = null,
     step: Int | Double = null,
     value: js.Date = null,
     _overrides: StringDictionary[js.Any] = null
@@ -37,8 +42,10 @@ object TimePicker
     if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
     if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
     if (!js.isUndefined(nullable)) __obj.updateDynamic("nullable")(nullable.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

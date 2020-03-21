@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.normal
-  - typings.std.stdStrings.reverse
-  - typings.std.stdStrings.alternate
-  - typings.std.stdStrings.`alternate-reverse`
+  - typingsSlinky.std.stdStrings.alternate
+  - typingsSlinky.std.stdStrings.`alternate-reverse`
+  - typingsSlinky.std.stdStrings.normal
+  - typingsSlinky.std.stdStrings.reverse
 */
 trait PlaybackDirection extends js.Object
 

@@ -1,9 +1,9 @@
 package typingsSlinky.arangodb.Foxx
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.arangodb.Anon_AlgorithmDomain
-import typingsSlinky.arangodb.Anon_Cause
-import typingsSlinky.arangodb.Anon_LastModified
+import typingsSlinky.arangodb.AnonCause
+import typingsSlinky.arangodb.AnonDomain
+import typingsSlinky.arangodb.AnonLastModified
 import typingsSlinky.arangodb.ArangoDB.HttpStatus
 import typingsSlinky.node.Buffer
 import typingsSlinky.std.Error
@@ -20,7 +20,7 @@ trait Response extends js.Object {
   def attachment(): this.type = js.native
   def attachment(filename: String): this.type = js.native
   def cookie(name: String, value: String): this.type = js.native
-  def cookie(name: String, value: String, options: Anon_AlgorithmDomain): this.type = js.native
+  def cookie(name: String, value: String, options: AnonDomain): this.type = js.native
   def download(path: String): this.type = js.native
   def download(path: String, filename: String): this.type = js.native
   def getHeader(name: String): js.UndefOr[String] = js.native
@@ -32,7 +32,7 @@ trait Response extends js.Object {
   def send(data: js.Any): this.type = js.native
   def send(data: js.Any, `type`: String): this.type = js.native
   def sendFile(path: String): this.type = js.native
-  def sendFile(path: String, options: Anon_LastModified): this.type = js.native
+  def sendFile(path: String, options: AnonLastModified): this.type = js.native
   def sendStatus(status: Double): this.type = js.native
   def sendStatus(status: HttpStatus): this.type = js.native
   def set(headers: StringDictionary[String]): this.type = js.native
@@ -42,16 +42,16 @@ trait Response extends js.Object {
   def status(status: HttpStatus): this.type = js.native
   def `throw`(status: Double): scala.Nothing = js.native
   def `throw`(status: Double, error: Error): scala.Nothing = js.native
-  def `throw`(status: Double, options: Anon_Cause): scala.Nothing = js.native
+  def `throw`(status: Double, options: AnonCause): scala.Nothing = js.native
   def `throw`(status: Double, reason: String): scala.Nothing = js.native
   def `throw`(status: Double, reason: String, error: Error): scala.Nothing = js.native
-  def `throw`(status: Double, reason: String, options: Anon_Cause): scala.Nothing = js.native
+  def `throw`(status: Double, reason: String, options: AnonCause): scala.Nothing = js.native
   def `throw`(status: HttpStatus): scala.Nothing = js.native
   def `throw`(status: HttpStatus, error: Error): scala.Nothing = js.native
-  def `throw`(status: HttpStatus, options: Anon_Cause): scala.Nothing = js.native
+  def `throw`(status: HttpStatus, options: AnonCause): scala.Nothing = js.native
   def `throw`(status: HttpStatus, reason: String): scala.Nothing = js.native
   def `throw`(status: HttpStatus, reason: String, error: Error): scala.Nothing = js.native
-  def `throw`(status: HttpStatus, reason: String, options: Anon_Cause): scala.Nothing = js.native
+  def `throw`(status: HttpStatus, reason: String, options: AnonCause): scala.Nothing = js.native
   def `type`(): String = js.native
   def `type`(`type`: String): String = js.native
   def vary(names: String*): this.type = js.native

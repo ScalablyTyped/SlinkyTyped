@@ -4,15 +4,15 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.Anon_ActiveTabIndex
-import typingsSlinky.gestalt.Anon_Href
-import typingsSlinky.gestalt.gestaltMod.TabsProps
+import typingsSlinky.gestalt.AnonActiveTabIndex
+import typingsSlinky.gestalt.AnonHref
+import typingsSlinky.gestalt.mod.TabsProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tabs
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Tabs] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Tabs] {
   @JSImport("gestalt", "Tabs")
   @js.native
   object componentImport extends js.Object
@@ -20,11 +20,11 @@ object Tabs
   override val component: String | js.Object = this.componentImport
   def apply(
     activeTabIndex: Double,
-    onChange: Anon_ActiveTabIndex => Unit,
-    tabs: js.Array[Anon_Href],
+    onChange: AnonActiveTabIndex => Unit,
+    tabs: js.Array[AnonHref],
     wrap: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Tabs] = {
+  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Tabs] = {
     val __obj = js.Dynamic.literal(activeTabIndex = activeTabIndex.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange), tabs = tabs.asInstanceOf[js.Any])
     if (!js.isUndefined(wrap)) __obj.updateDynamic("wrap")(wrap.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

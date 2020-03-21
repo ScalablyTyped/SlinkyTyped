@@ -5,21 +5,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Position {
-  import org.scalajs.dom.raw.HTMLElement
-
   type Fn = js.Function5[
-    /* point */ js.Array[Double | String], 
+    /* point */ js.Array[scala.Double | java.lang.String], 
     /* params */ js.Object | js.Array[js.Object], 
-    /* element */ HTMLElement, 
+    /* element */ org.scalajs.dom.raw.HTMLElement, 
     /* rect */ js.Object, 
     /* size */ js.Object, 
-    (js.Array[Double | String]) | Obj
+    (js.Array[scala.Double | java.lang.String]) | typingsSlinky.echarts.echarts.EChartOption.Tooltip.Position.Obj
   ]
   /* Rewritten from type alias, can be one of: 
-    - typings.echarts.echarts.EChartOption.Tooltip.Position.Str
-    - typings.echarts.echarts.EChartOption.Tooltip.Position.Obj
+    - typingsSlinky.echarts.echarts.EChartOption.Tooltip.Position.Str
+    - typingsSlinky.echarts.echarts.EChartOption.Tooltip.Position.Obj
     - js.Array[scala.Double | java.lang.String]
-    - typings.echarts.echarts.EChartOption.Tooltip.Position.Fn
+    - typingsSlinky.echarts.echarts.EChartOption.Tooltip.Position.Fn
   */
-  type Type = _Type | (js.Array[Double | String]) | Fn
+  type Type = typingsSlinky.echarts.echarts.EChartOption.Tooltip.Position._Type | (js.Array[scala.Double | java.lang.String]) | typingsSlinky.echarts.echarts.EChartOption.Tooltip.Position.Fn
 }

@@ -1,6 +1,6 @@
 package typingsSlinky.mitm
 
-import typingsSlinky.mitm.mitmMod.Event
+import typingsSlinky.mitm.mod.Event
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,18 +4,16 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_EventValue
-import typingsSlinky.primereact.componentsPicklistPickListSubListMod.PickListSubListProps
+import typingsSlinky.primereact.AnonEventValue
+import typingsSlinky.primereact.pickListSubListMod.PickListSubListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object PickListSubList
-  extends ExternalComponentWithAttributesWithRefType[
-      tag.type, 
-      typingsSlinky.primereact.componentsPicklistPickListSubListMod.PickListSubList
-    ] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.pickListSubListMod.PickListSubList] {
   @JSImport("primereact/components/picklist/PickListSubList", "PickListSubList")
   @js.native
   object componentImport extends js.Object
@@ -24,20 +22,17 @@ object PickListSubList
   /* The following DOM/SVG props were specified: className */
   def apply(
     header: String = null,
-    itemTemplate: /* item */ js.Any => js.UndefOr[typingsSlinky.react.reactMod._Global_.JSX.Element] = null,
+    itemTemplate: /* item */ js.Any => js.UndefOr[ReactElement] = null,
     list: js.Array[_] = null,
     listClassName: String = null,
     metaKeySelection: js.UndefOr[Boolean] = js.undefined,
     onItemClick: () => Unit = null,
-    onSelectionChange: /* e */ Anon_EventValue => Unit = null,
+    onSelectionChange: /* e */ AnonEventValue => Unit = null,
     selection: js.Array[_] = null,
     showControls: js.UndefOr[Boolean] = js.undefined,
     style: js.Object = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[
-    tag.type, 
-    typingsSlinky.primereact.componentsPicklistPickListSubListMod.PickListSubList
-  ] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.pickListSubListMod.PickListSubList] = {
     val __obj = js.Dynamic.literal()
     if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
     if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(js.Any.fromFunction1(itemTemplate))
@@ -52,12 +47,9 @@ object PickListSubList
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[
-    tag.type, 
-    typingsSlinky.primereact.componentsPicklistPickListSubListMod.PickListSubList
-  ] = new slinky.core.BuildingComponent[
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.pickListSubListMod.PickListSubList] = new slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.componentsPicklistPickListSubListMod.PickListSubList](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  typingsSlinky.primereact.pickListSubListMod.PickListSubList](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PickListSubListProps
 }
 

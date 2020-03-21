@@ -1,19 +1,19 @@
 package typingsSlinky.mssql
 
-import typingsSlinky.mssql.mssqlMod.IIsolationLevel
-import typingsSlinky.mssql.mssqlMod.IMap
-import typingsSlinky.mssql.mssqlMod.IPool
-import typingsSlinky.mssql.mssqlMod.ISqlTypeFactoryWithLength
-import typingsSlinky.mssql.mssqlMod.ISqlTypeFactoryWithNoParams
-import typingsSlinky.mssql.mssqlMod.ISqlTypeFactoryWithPrecisionScale
-import typingsSlinky.mssql.mssqlMod.ISqlTypeFactoryWithScale
-import typingsSlinky.mssql.mssqlMod.ISqlTypeFactoryWithTvpType
-import typingsSlinky.mssql.mssqlMod.ISqlTypeWithLength
-import typingsSlinky.mssql.mssqlMod.ISqlTypeWithNoParams
-import typingsSlinky.mssql.mssqlMod.ISqlTypeWithPrecisionScale
-import typingsSlinky.mssql.mssqlMod.ISqlTypeWithScale
-import typingsSlinky.mssql.mssqlMod.ISqlTypeWithTvpType
-import typingsSlinky.mssql.mssqlMod.config
+import typingsSlinky.mssql.mod.IIsolationLevel
+import typingsSlinky.mssql.mod.IMap
+import typingsSlinky.mssql.mod.IPool
+import typingsSlinky.mssql.mod.ISqlTypeFactoryWithLength
+import typingsSlinky.mssql.mod.ISqlTypeFactoryWithNoParams
+import typingsSlinky.mssql.mod.ISqlTypeFactoryWithPrecisionScale
+import typingsSlinky.mssql.mod.ISqlTypeFactoryWithScale
+import typingsSlinky.mssql.mod.ISqlTypeFactoryWithTvpType
+import typingsSlinky.mssql.mod.ISqlTypeWithLength
+import typingsSlinky.mssql.mod.ISqlTypeWithNoParams
+import typingsSlinky.mssql.mod.ISqlTypeWithPrecisionScale
+import typingsSlinky.mssql.mod.ISqlTypeWithScale
+import typingsSlinky.mssql.mod.ISqlTypeWithTvpType
+import typingsSlinky.mssql.mod.config
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,14 +23,14 @@ import scala.scalajs.js.annotation._
 object msnodesqlv8Mod extends js.Object {
   @js.native
   class ConnectionError protected ()
-    extends typingsSlinky.mssql.mssqlMod.ConnectionError {
+    extends typingsSlinky.mssql.mod.ConnectionError {
     def this(message: String) = this()
     def this(message: String, code: js.Any) = this()
   }
   
   @js.native
   class ConnectionPool protected ()
-    extends typingsSlinky.mssql.mssqlMod.ConnectionPool {
+    extends typingsSlinky.mssql.mod.ConnectionPool {
     def this(config: config) = this()
     def this(connectionString: String) = this()
     def this(config: config, callback: js.Function1[/* err */ js.UndefOr[js.Any], Unit]) = this()
@@ -39,48 +39,48 @@ object msnodesqlv8Mod extends js.Object {
   
   @js.native
   class PreparedStatement ()
-    extends typingsSlinky.mssql.mssqlMod.PreparedStatement {
-    def this(connection: typingsSlinky.mssql.mssqlMod.ConnectionPool) = this()
-    def this(transaction: typingsSlinky.mssql.mssqlMod.Transaction) = this()
+    extends typingsSlinky.mssql.mod.PreparedStatement {
+    def this(connection: typingsSlinky.mssql.mod.ConnectionPool) = this()
+    def this(transaction: typingsSlinky.mssql.mod.Transaction) = this()
   }
   
   @js.native
   class PreparedStatementError protected ()
-    extends typingsSlinky.mssql.mssqlMod.PreparedStatementError {
+    extends typingsSlinky.mssql.mod.PreparedStatementError {
     def this(message: String) = this()
     def this(message: String, code: js.Any) = this()
   }
   
   @js.native
   class Request ()
-    extends typingsSlinky.mssql.mssqlMod.Request {
-    def this(connection: typingsSlinky.mssql.mssqlMod.ConnectionPool) = this()
-    def this(preparedStatement: typingsSlinky.mssql.mssqlMod.PreparedStatement) = this()
-    def this(transaction: typingsSlinky.mssql.mssqlMod.Transaction) = this()
+    extends typingsSlinky.mssql.mod.Request {
+    def this(connection: typingsSlinky.mssql.mod.ConnectionPool) = this()
+    def this(preparedStatement: typingsSlinky.mssql.mod.PreparedStatement) = this()
+    def this(transaction: typingsSlinky.mssql.mod.Transaction) = this()
   }
   
   @js.native
   class RequestError protected ()
-    extends typingsSlinky.mssql.mssqlMod.RequestError {
+    extends typingsSlinky.mssql.mod.RequestError {
     def this(message: String) = this()
     def this(message: String, code: js.Any) = this()
   }
   
   @js.native
   class Table ()
-    extends typingsSlinky.mssql.mssqlMod.Table {
+    extends typingsSlinky.mssql.mod.Table {
     def this(tableName: String) = this()
   }
   
   @js.native
   class Transaction ()
-    extends typingsSlinky.mssql.mssqlMod.Transaction {
-    def this(connection: typingsSlinky.mssql.mssqlMod.ConnectionPool) = this()
+    extends typingsSlinky.mssql.mod.Transaction {
+    def this(connection: typingsSlinky.mssql.mod.ConnectionPool) = this()
   }
   
   @js.native
   class TransactionError protected ()
-    extends typingsSlinky.mssql.mssqlMod.TransactionError {
+    extends typingsSlinky.mssql.mod.TransactionError {
     def this(message: String) = this()
     def this(message: String, code: js.Any) = this()
   }

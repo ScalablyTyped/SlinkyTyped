@@ -1,8 +1,8 @@
 package typingsSlinky.winjs.WinJS.UI
 
 import org.scalajs.dom.raw.CustomEvent
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,7 +72,7 @@ class Rating () extends js.Object {
     * Raised when the user finishes interacting with the rating control without committing a tentative rating.
     * @param eventInfo An object that contains information about the event.
     **/
-  def oncancel(eventInfo: Event): Unit = js.native
+  def oncancel(eventInfo: Event_): Unit = js.native
   /**
     * Raised when the user commits a change to the userRating.
     * @param eventInfo An object that contains information about the event. The detail property of this object contains the following sub-properties: detail.tentativeRating.

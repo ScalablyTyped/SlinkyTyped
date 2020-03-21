@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object storage {
-  import typingsSlinky.chrome.chrome.events.Event
-
-  type SystemStorageAttachedEvent = Event[js.Function1[/* info */ StorageUnitInfo, Unit]]
-  type SystemStorageDetachedEvent = Event[js.Function1[/* id */ String, Unit]]
+  type SystemStorageAttachedEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function1[/* info */ typingsSlinky.chrome.chrome.system.storage.StorageUnitInfo, scala.Unit]
+  ]
+  type SystemStorageDetachedEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* id */ java.lang.String, scala.Unit]]
 }

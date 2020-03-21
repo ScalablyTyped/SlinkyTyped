@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_Page
-import typingsSlinky.primereact.componentsCarouselCarouselMod.CarouselProps
+import typingsSlinky.primereact.AnonPage
+import typingsSlinky.primereact.carouselCarouselMod.CarouselProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ object Carousel
     itemTemplate: js.Any = null,
     numScroll: Int | Double = null,
     numVisible: Int | Double = null,
-    onPageChange: /* e */ Anon_Page => Unit = null,
+    onPageChange: /* e */ AnonPage => Unit = null,
     orientation: String = null,
     page: Int | Double = null,
     responsiveOptions: js.Any = null,

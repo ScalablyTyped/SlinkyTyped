@@ -11,8 +11,8 @@ Find and load configuration from a package.json property, rc file, or CommonJS m
 | Full name          | cosmiconfig |
 | Keywords           | load, configuration, config |
 | # releases         | 14 |
-| # dependents       | 680 |
-| # downloads        | 462803276 |
+| # dependents       | 707 |
+| # downloads        | 475547377 |
 | # stars            | 14 |
 
 ## Links

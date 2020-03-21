@@ -5,11 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object EChartOption {
-  import org.scalablytyped.runtime.StringDictionary
-  import typingsSlinky.echarts.echarts.EChartOption.DataZoom.Inside
-  import typingsSlinky.echarts.echarts.EChartOption.DataZoom.Slider
-
-  type Calendar = Calendar_
+  type Calendar = typingsSlinky.echarts.echarts.EChartOption.Calendar_
   /**
     * Color type for itemStyle / areaStyle etc.
     * [Color](https://echarts.apache.org/zh/option.html#series-line.areaStyle)
@@ -19,11 +15,11 @@ package object EChartOption {
     */
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
-    - typings.echarts.Anon_ColorStopsGlobalLinear
-    - typings.echarts.Anon_ColorStopsGlobalR
-    - typings.echarts.Anon_Image
+    - typingsSlinky.echarts.AnonType
+    - typingsSlinky.echarts.AnonX
+    - typingsSlinky.echarts.AnonImage
   */
-  type Color = _Color | String
+  type Color = typingsSlinky.echarts.echarts.EChartOption._Color | java.lang.String
   /**
     * Data zoom component of inside type.
     * Refer to dataZoom for more information.
@@ -38,34 +34,34 @@ package object EChartOption {
     * @see https://echarts.apache.org/en/option.html#dataZoom-inside
     * @see https://echarts.apache.org/en/option.html#dataZoom-slider
     */
-  type DataZoom = Inside | Slider
-  type Dataset = Dataset_
-  type Legend = Legend_
+  type DataZoom = typingsSlinky.echarts.echarts.EChartOption.DataZoom.Inside | typingsSlinky.echarts.echarts.EChartOption.DataZoom.Slider
+  type Dataset = typingsSlinky.echarts.echarts.EChartOption.Dataset_
+  type Legend = typingsSlinky.echarts.echarts.EChartOption.Legend_
   /**
     * @see https://echarts.apache.org/en/tutorial.html#Rich%20Text
     */
-  type RichStyle = StringDictionary[TextStyle]
-  type Series = SeriesLine | SeriesBar | SeriesPie | SeriesScatter | SeriesEffectScatter | SeriesRadar | SeriesTree | SeriesTreemap | SeriesSunburst | SeriesBoxplot | SeriesCandlestick | SeriesHeatmap | SeriesMap | SeriesParallel | SeriesLines | SeriesGraph | SeriesSankey | SeriesFunnel | SeriesGauge | SeriesPictorialBar | SeriesThemeRiver | SeriesCustom
-  type SeriesBar = SeriesBar_
-  type SeriesBoxplot = SeriesBoxplot_
-  type SeriesCandlestick = SeriesCandlestick_
-  type SeriesCustom = SeriesCustom_
-  type SeriesEffectScatter = SeriesEffectScatter_
-  type SeriesFunnel = SeriesFunnel_
-  type SeriesGraph = SeriesGraph_
-  type SeriesHeatmap = SeriesHeatmap_
-  type SeriesLine = SeriesLine_
-  type SeriesLines = SeriesLines_
-  type SeriesMap = SeriesMap_
-  type SeriesParallel = SeriesParallel_
-  type SeriesPictorialBar = SeriesPictorialBar_
-  type SeriesPie = SeriesPie_
-  type SeriesRadar = SeriesRadar_
-  type SeriesSankey = SeriesSankey_
-  type SeriesScatter = SeriesScatter_
-  type SeriesSunburst = SeriesSunburst_
-  type SeriesThemeRiver = SeriesThemeRiver_
-  type SeriesTree = SeriesTree_
-  type SeriesTreemap = SeriesTreemap_
-  type Tooltip = Tooltip_
+  type RichStyle = org.scalablytyped.runtime.StringDictionary[typingsSlinky.echarts.echarts.EChartOption.TextStyle]
+  type Series = typingsSlinky.echarts.echarts.EChartOption.SeriesLine | typingsSlinky.echarts.echarts.EChartOption.SeriesBar | typingsSlinky.echarts.echarts.EChartOption.SeriesPie | typingsSlinky.echarts.echarts.EChartOption.SeriesScatter | typingsSlinky.echarts.echarts.EChartOption.SeriesEffectScatter | typingsSlinky.echarts.echarts.EChartOption.SeriesRadar | typingsSlinky.echarts.echarts.EChartOption.SeriesTree | typingsSlinky.echarts.echarts.EChartOption.SeriesTreemap | typingsSlinky.echarts.echarts.EChartOption.SeriesSunburst | typingsSlinky.echarts.echarts.EChartOption.SeriesBoxplot | typingsSlinky.echarts.echarts.EChartOption.SeriesCandlestick | typingsSlinky.echarts.echarts.EChartOption.SeriesHeatmap | typingsSlinky.echarts.echarts.EChartOption.SeriesMap | typingsSlinky.echarts.echarts.EChartOption.SeriesParallel | typingsSlinky.echarts.echarts.EChartOption.SeriesLines | typingsSlinky.echarts.echarts.EChartOption.SeriesGraph | typingsSlinky.echarts.echarts.EChartOption.SeriesSankey | typingsSlinky.echarts.echarts.EChartOption.SeriesFunnel | typingsSlinky.echarts.echarts.EChartOption.SeriesGauge | typingsSlinky.echarts.echarts.EChartOption.SeriesPictorialBar | typingsSlinky.echarts.echarts.EChartOption.SeriesThemeRiver | typingsSlinky.echarts.echarts.EChartOption.SeriesCustom
+  type SeriesBar = typingsSlinky.echarts.echarts.EChartOption.SeriesBar_
+  type SeriesBoxplot = typingsSlinky.echarts.echarts.EChartOption.SeriesBoxplot_
+  type SeriesCandlestick = typingsSlinky.echarts.echarts.EChartOption.SeriesCandlestick_
+  type SeriesCustom = typingsSlinky.echarts.echarts.EChartOption.SeriesCustom_
+  type SeriesEffectScatter = typingsSlinky.echarts.echarts.EChartOption.SeriesEffectScatter_
+  type SeriesFunnel = typingsSlinky.echarts.echarts.EChartOption.SeriesFunnel_
+  type SeriesGraph = typingsSlinky.echarts.echarts.EChartOption.SeriesGraph_
+  type SeriesHeatmap = typingsSlinky.echarts.echarts.EChartOption.SeriesHeatmap_
+  type SeriesLine = typingsSlinky.echarts.echarts.EChartOption.SeriesLine_
+  type SeriesLines = typingsSlinky.echarts.echarts.EChartOption.SeriesLines_
+  type SeriesMap = typingsSlinky.echarts.echarts.EChartOption.SeriesMap_
+  type SeriesParallel = typingsSlinky.echarts.echarts.EChartOption.SeriesParallel_
+  type SeriesPictorialBar = typingsSlinky.echarts.echarts.EChartOption.SeriesPictorialBar_
+  type SeriesPie = typingsSlinky.echarts.echarts.EChartOption.SeriesPie_
+  type SeriesRadar = typingsSlinky.echarts.echarts.EChartOption.SeriesRadar_
+  type SeriesSankey = typingsSlinky.echarts.echarts.EChartOption.SeriesSankey_
+  type SeriesScatter = typingsSlinky.echarts.echarts.EChartOption.SeriesScatter_
+  type SeriesSunburst = typingsSlinky.echarts.echarts.EChartOption.SeriesSunburst_
+  type SeriesThemeRiver = typingsSlinky.echarts.echarts.EChartOption.SeriesThemeRiver_
+  type SeriesTree = typingsSlinky.echarts.echarts.EChartOption.SeriesTree_
+  type SeriesTreemap = typingsSlinky.echarts.echarts.EChartOption.SeriesTreemap_
+  type Tooltip = typingsSlinky.echarts.echarts.EChartOption.Tooltip_
 }

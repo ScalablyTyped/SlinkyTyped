@@ -3,7 +3,7 @@ package typingsSlinky.ol
 import org.scalajs.dom.raw.HTMLCanvasElement
 import typingsSlinky.ol.coordinateMod.Coordinate
 import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.ol.projProjectionMod.default
+import typingsSlinky.ol.projectionMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ object reprojMod extends js.Object {
     sourceExtent: Extent,
     targetResolution: Double,
     targetExtent: Extent,
-    triangulation: typingsSlinky.ol.reprojTriangulationMod.default,
+    triangulation: typingsSlinky.ol.triangulationMod.default,
     sources: js.Array[_],
     gutter: Double
   ): HTMLCanvasElement = js.native
@@ -32,7 +32,7 @@ object reprojMod extends js.Object {
     sourceExtent: Extent,
     targetResolution: Double,
     targetExtent: Extent,
-    triangulation: typingsSlinky.ol.reprojTriangulationMod.default,
+    triangulation: typingsSlinky.ol.triangulationMod.default,
     sources: js.Array[_],
     gutter: Double,
     opt_renderEdges: Boolean

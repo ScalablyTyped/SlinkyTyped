@@ -1,6 +1,6 @@
 package typingsSlinky.halogenium
 
-import typingsSlinky.halogenium.halogeniumMod.VerticalAlign
+import typingsSlinky.halogenium.mod.VerticalAlign
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

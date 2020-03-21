@@ -1,0 +1,17 @@
+package typingsSlinky.tensorflowTfjsConverter
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object typesMod {
+  type NamedTensorMap = org.scalablytyped.runtime.StringDictionary[
+    typingsSlinky.tensorflowTfjsCore.mod.Tensor_[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+  ]
+  type NamedTensorsMap = org.scalablytyped.runtime.StringDictionary[
+    js.Array[
+      typingsSlinky.tensorflowTfjsCore.mod.Tensor_[typingsSlinky.tensorflowTfjsCore.distTypesMod.Rank]
+    ]
+  ]
+  type TensorArrayMap = org.scalablytyped.runtime.NumberDictionary[typingsSlinky.tensorflowTfjsConverter.tensorArrayMod.TensorArray]
+}

@@ -1,6 +1,6 @@
 package typingsSlinky.tampermonkey
 
-import org.scalajs.dom.raw.Window
+import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +12,6 @@ object ^ extends js.Object {
     * The unsafeWindow object provides full access to the pages javascript
     * functions and variables
     */
-  var unsafeWindow: Window = js.native
+  var unsafeWindow: Window_ = js.native
 }
 

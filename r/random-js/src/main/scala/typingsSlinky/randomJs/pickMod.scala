@@ -1,0 +1,16 @@
+package typingsSlinky.randomJs
+
+import typingsSlinky.randomJs.typesMod.Engine
+import typingsSlinky.std.ArrayLike
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("random-js/dist/distribution/pick", JSImport.Namespace)
+@js.native
+object pickMod extends js.Object {
+  def pick[T](engine: Engine, source: ArrayLike[T]): T = js.native
+  def pick[T](engine: Engine, source: ArrayLike[T], begin: Double): T = js.native
+  def pick[T](engine: Engine, source: ArrayLike[T], begin: Double, end: Double): T = js.native
+}
+

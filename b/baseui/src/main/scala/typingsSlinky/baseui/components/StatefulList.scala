@@ -5,10 +5,11 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
+import typingsSlinky.baseui.AnonNewIndex
 import typingsSlinky.baseui.baseuiStrings.change_
-import typingsSlinky.baseui.dndDashListMod.ListOverrides
-import typingsSlinky.baseui.dndDashListMod.State
-import typingsSlinky.baseui.dndDashListMod.StatefulListProps
+import typingsSlinky.baseui.dndListMod.ListOverrides
+import typingsSlinky.baseui.dndListMod.State
+import typingsSlinky.baseui.dndListMod.StatefulListProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,9 +21,9 @@ object StatefulList
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: onChange */
   def apply(
     initialState: State = null,
+    onChange: /* params */ AnonNewIndex => _ = null,
     overrides: ListOverrides = null,
     removable: js.UndefOr[Boolean] = js.undefined,
     removableByMove: js.UndefOr[Boolean] = js.undefined,
@@ -31,6 +32,7 @@ object StatefulList
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     if (!js.isUndefined(removable)) __obj.updateDynamic("removable")(removable.asInstanceOf[js.Any])
     if (!js.isUndefined(removableByMove)) __obj.updateDynamic("removableByMove")(removableByMove.asInstanceOf[js.Any])

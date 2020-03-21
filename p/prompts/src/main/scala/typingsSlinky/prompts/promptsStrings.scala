@@ -1,6 +1,6 @@
 package typingsSlinky.prompts
 
-import typingsSlinky.prompts.promptsMod.PromptType
+import typingsSlinky.prompts.mod.PromptType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

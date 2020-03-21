@@ -1,11 +1,11 @@
 package typingsSlinky.dojo.dojox.mobile
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.closeOnAction
 import typingsSlinky.dojo.dojoStrings.selColor
 import typingsSlinky.dojo.dojoStrings.tag
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.mobile.IconMenuItem")
 @js.native
-class IconMenuItem () extends _ItemBase {
+class IconMenuItem () extends ItemBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -53,7 +53,7 @@ class IconMenuItem () extends _ItemBase {
     *
     * @param e
     */
-  def onClick(e: Event): Unit = js.native
+  def onClick(e: Event_): Unit = js.native
   @JSName("set")
   def set_closeOnAction(property: closeOnAction, value: Boolean): Unit = js.native
   @JSName("set")
@@ -69,7 +69,7 @@ class IconMenuItem () extends _ItemBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_selColor(
     property: selColor,
@@ -79,7 +79,7 @@ class IconMenuItem () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_tag(
     property: tag,
@@ -89,6 +89,6 @@ class IconMenuItem () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

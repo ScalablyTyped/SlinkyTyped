@@ -1,0 +1,14 @@
+package typingsSlinky.naja
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object mod {
+  type NajaEventListener[T /* <: typingsSlinky.std.Event_ */] = (js.Function1[/* event */ T, js.Promise[scala.Unit] | scala.Unit]) | typingsSlinky.naja.Anon0[T]
+  type RequestData = scala.Null | java.lang.String | scala.Double | js.Array[js.Any] | js.Object | scala.scalajs.js.typedarray.ArrayBuffer | org.scalajs.dom.raw.Blob | org.scalajs.dom.raw.FormData
+  type SnippetUpdateListener = (js.Function1[
+    /* event */ typingsSlinky.naja.mod.SnippetUpdateEvent, 
+    js.Promise[scala.Unit] | scala.Unit
+  ]) | typingsSlinky.naja.AnonHandleEvent
+}

@@ -10,9 +10,9 @@ A cross-platform Base64 <-> UInt8Array converter
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/util-base64-universal |
 | Keywords           | - |
-| # releases         | 5 |
+| # releases         | 6 |
 | # dependents       | 0 |
-| # downloads        | 224 |
+| # downloads        | 247 |
 | # stars            | 0 |
 
 ## Links

@@ -1,6 +1,6 @@
 package typingsSlinky.leadfoot.commandMod
 
-import typingsSlinky.dojo.promiseThenableMod.Thenable
+import typingsSlinky.dojo.thenableMod.Thenable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

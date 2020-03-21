@@ -10,9 +10,9 @@ The Material Components for the web menu component
 | ------------------ | :-------------: |
 | Full name          | @material/menu |
 | Keywords           | material components, material design, menu |
-| # releases         | 121 |
+| # releases         | 165 |
 | # dependents       | 46 |
-| # downloads        | 1548111 |
+| # downloads        | 1581137 |
 | # stars            | 0 |
 
 ## Links

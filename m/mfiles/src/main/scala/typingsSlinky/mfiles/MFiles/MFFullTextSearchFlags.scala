@@ -11,12 +11,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.mfiles.mfilesNumbers.`0`
-  - typings.mfiles.mfilesNumbers.`4`
-  - typings.mfiles.mfilesNumbers.`131072`
-  - typings.mfiles.mfilesNumbers.`262144`
-  - typings.mfiles.mfilesNumbers.`268435456`
-  - typings.mfiles.mfilesNumbers.`536870912`
+  - typingsSlinky.mfiles.mfilesNumbers.`0`
+  - typingsSlinky.mfiles.mfilesNumbers.`4`
+  - typingsSlinky.mfiles.mfilesNumbers.`131072`
+  - typingsSlinky.mfiles.mfilesNumbers.`262144`
+  - typingsSlinky.mfiles.mfilesNumbers.`268435456`
+  - typingsSlinky.mfiles.mfilesNumbers.`536870912`
 */
 trait MFFullTextSearchFlags extends js.Object
 

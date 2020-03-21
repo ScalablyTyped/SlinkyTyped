@@ -5,28 +5,28 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.echarts.echartsStrings.line
-  - typings.echarts.echartsStrings.bar
-  - typings.echarts.echartsStrings.pie
-  - typings.echarts.echartsStrings.scatter
-  - typings.echarts.echartsStrings.effectScatter
-  - typings.echarts.echartsStrings.radar
-  - typings.echarts.echartsStrings.tree
-  - typings.echarts.echartsStrings.treemap
-  - typings.echarts.echartsStrings.sunburst
-  - typings.echarts.echartsStrings.boxplot
-  - typings.echarts.echartsStrings.candlestick
-  - typings.echarts.echartsStrings.heatmap
-  - typings.echarts.echartsStrings.map
-  - typings.echarts.echartsStrings.parallel
-  - typings.echarts.echartsStrings.lines
-  - typings.echarts.echartsStrings.graph
-  - typings.echarts.echartsStrings.sankey
-  - typings.echarts.echartsStrings.funnel
-  - typings.echarts.echartsStrings.gauge
-  - typings.echarts.echartsStrings.pictorialBar
-  - typings.echarts.echartsStrings.themeRiver
-  - typings.echarts.echartsStrings.custom
+  - typingsSlinky.echarts.echartsStrings.line
+  - typingsSlinky.echarts.echartsStrings.bar
+  - typingsSlinky.echarts.echartsStrings.pie
+  - typingsSlinky.echarts.echartsStrings.scatter
+  - typingsSlinky.echarts.echartsStrings.effectScatter
+  - typingsSlinky.echarts.echartsStrings.radar
+  - typingsSlinky.echarts.echartsStrings.tree
+  - typingsSlinky.echarts.echartsStrings.treemap
+  - typingsSlinky.echarts.echartsStrings.sunburst
+  - typingsSlinky.echarts.echartsStrings.boxplot
+  - typingsSlinky.echarts.echartsStrings.candlestick
+  - typingsSlinky.echarts.echartsStrings.heatmap
+  - typingsSlinky.echarts.echartsStrings.map
+  - typingsSlinky.echarts.echartsStrings.parallel
+  - typingsSlinky.echarts.echartsStrings.lines
+  - typingsSlinky.echarts.echartsStrings.graph
+  - typingsSlinky.echarts.echartsStrings.sankey
+  - typingsSlinky.echarts.echartsStrings.funnel
+  - typingsSlinky.echarts.echartsStrings.gauge
+  - typingsSlinky.echarts.echartsStrings.pictorialBar
+  - typingsSlinky.echarts.echartsStrings.themeRiver
+  - typingsSlinky.echarts.echartsStrings.custom
 */
 trait EChartsSeriesType extends js.Object
 

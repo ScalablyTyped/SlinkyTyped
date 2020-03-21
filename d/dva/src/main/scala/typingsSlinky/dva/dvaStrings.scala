@@ -1,6 +1,6 @@
 package typingsSlinky.dva
 
-import typingsSlinky.dva.dvaMod.EffectType
+import typingsSlinky.dva.mod.EffectType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

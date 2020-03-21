@@ -2,12 +2,12 @@ package typingsSlinky.baseui.drawerMod
 
 import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.TagMod
-import typingsSlinky.baseui.Anon_Children
+import typingsSlinky.baseui.SharedStylePropsArgchildr
 import typingsSlinky.baseui.baseuiStrings.backdrop
 import typingsSlinky.baseui.baseuiStrings.closeButton
 import typingsSlinky.baseui.baseuiStrings.escape_
-import typingsSlinky.react.reactMod.Component
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ class Drawer ()
   def disableMountNodeScroll(): Unit = js.native
   def getChildren(): TagMod[Any] = js.native
   def getRef(component: String): Ref[_] = js.native
-  def getSharedProps(): SharedStylePropsArg with Anon_Children = js.native
+  def getSharedProps(): SharedStylePropsArgchildr = js.native
   def onBackdropClick(): Unit = js.native
   def onCloseClick(): Unit = js.native
   def onDocumentKeyPress(event: KeyboardEvent): Unit = js.native

@@ -1,7 +1,7 @@
 package typingsSlinky.mocha
 
-import typingsSlinky.mocha.Mocha.Interface
-import typingsSlinky.mocha.Mocha.Reporter
+import typingsSlinky.mocha.Mocha_.Interface
+import typingsSlinky.mocha.Mocha_.Reporter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -143,7 +143,13 @@ object mochaStrings {
   sealed trait qunit extends Interface
   
   @js.native
+  sealed trait ready extends js.Object
+  
+  @js.native
   sealed trait require extends js.Object
+  
+  @js.native
+  sealed trait retry extends js.Object
   
   @js.native
   sealed trait run extends js.Object
@@ -272,7 +278,11 @@ object mochaStrings {
   @scala.inline
   def qunit: qunit = "qunit".asInstanceOf[qunit]
   @scala.inline
+  def ready: ready = "ready".asInstanceOf[ready]
+  @scala.inline
   def require: require = "require".asInstanceOf[require]
+  @scala.inline
+  def retry: retry = "retry".asInstanceOf[retry]
   @scala.inline
   def run: run = "run".asInstanceOf[run]
   @scala.inline

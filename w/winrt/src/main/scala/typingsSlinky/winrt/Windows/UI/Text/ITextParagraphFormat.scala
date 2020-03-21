@@ -1,6 +1,6 @@
 package typingsSlinky.winrt.Windows.UI.Text
 
-import typingsSlinky.winrt.Anon_Align
+import typingsSlinky.winrt.AnonAlign
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -32,7 +32,7 @@ trait ITextParagraphFormat extends js.Object {
   def clearAllTabs(): Unit
   def deleteTab(position: Double): Unit
   def getClone(): ITextParagraphFormat
-  def getTab(index: Double): Anon_Align
+  def getTab(index: Double): AnonAlign
   def isEqual(format: ITextParagraphFormat): Boolean
   def setClone(format: ITextParagraphFormat): Unit
   def setIndents(start: Double, left: Double, right: Double): Unit
@@ -48,7 +48,7 @@ object ITextParagraphFormat {
     deleteTab: Double => Unit,
     firstLineIndent: Double,
     getClone: () => ITextParagraphFormat,
-    getTab: Double => Anon_Align,
+    getTab: Double => AnonAlign,
     isEqual: ITextParagraphFormat => Boolean,
     keepTogether: FormatEffect,
     keepWithNext: FormatEffect,

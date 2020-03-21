@@ -1,11 +1,11 @@
 package typingsSlinky.expo.components
 
-import typingsSlinky.expo.buildGlobalsDotWebMod.Icon.Feather
+import typingsSlinky.expo.globalsWebMod.Icon.Feather
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconFeather extends SharedApply_IconProps_207471041[Feather] {
+object IconFeather extends SharedApply_IconProps_2082878668[Feather] {
   @JSImport("expo/build/globals.web", "Icon.Feather")
   @js.native
   object componentImport extends js.Object

@@ -1,15 +1,22 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.List
-import typingsSlinky.lodash.lodashMod.ValueIterateeCustom
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.ValueIterateeCustom
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LodashReject extends js.Object {
-  def apply[T](predicate: ValueIterateeCustom[T, Boolean]): LodashReject1x1[T] = js.native
+  def apply[T /* <: js.Object */](
+    predicate: ValueIterateeCustom[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 
+      Boolean
+    ]
+  ): js.Array[
+    /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+  ] = js.native
   def apply[T /* <: js.Object */](
     predicate: ValueIterateeCustom[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 

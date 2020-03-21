@@ -2,7 +2,7 @@ package typingsSlinky.ol.sourceImageMod
 
 import typingsSlinky.ol.projMod.ProjectionLike
 import typingsSlinky.ol.sourceSourceMod.AttributionLike
-import typingsSlinky.ol.sourceStateMod.State
+import typingsSlinky.ol.stateMod.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

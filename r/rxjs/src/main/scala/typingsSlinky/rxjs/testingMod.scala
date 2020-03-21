@@ -1,7 +1,7 @@
 package typingsSlinky.rxjs
 
-import typingsSlinky.rxjs.internalTestingSubscriptionLogMod.SubscriptionLog
-import typingsSlinky.rxjs.internalTestingTestMessageMod.TestMessage
+import typingsSlinky.rxjs.subscriptionLogMod.SubscriptionLog
+import typingsSlinky.rxjs.testMessageMod.TestMessage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 object testingMod extends js.Object {
   @js.native
   class TestScheduler protected ()
-    extends typingsSlinky.rxjs.internalTestingTestSchedulerMod.TestScheduler {
+    extends typingsSlinky.rxjs.testSchedulerMod.TestScheduler {
     def this(assertDeepEqual: js.Function2[/* actual */ js.Any, /* expected */ js.Any, Boolean | Unit]) = this()
   }
   

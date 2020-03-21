@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.realm.realmStrings.download
-  - typings.realm.realmStrings.upload
+  - typingsSlinky.realm.realmStrings.download
+  - typingsSlinky.realm.realmStrings.upload
 */
 trait ProgressDirection extends js.Object
 

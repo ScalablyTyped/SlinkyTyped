@@ -1,11 +1,11 @@
 package typingsSlinky.dojo.dojox.mobile
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.refId
 import typingsSlinky.dojo.dojoStrings.style
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,9 +23,9 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit._Contained because Inheritance from two classes. Inlined getIndexInParent, getNextSibling, getPreviousSibling */ @JSGlobal("dojox.mobile.PageIndicator")
+- typingsSlinky.dojo.dijit.Contained because Inheritance from two classes. Inlined getIndexInParent, getNextSibling, getPreviousSibling */ @JSGlobal("dojox.mobile.PageIndicator")
 @js.native
-class PageIndicator () extends _WidgetBase {
+class PageIndicator () extends WidgetBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -89,7 +89,7 @@ class PageIndicator () extends _WidgetBase {
     *
     * @param e
     */
-  def onClick(e: Event): Unit = js.native
+  def onClick(e: Event_): Unit = js.native
   /**
     * Track specified handles and remove/destroy them when this instance is destroyed, unless they were
     * already removed/destroyed manually.
@@ -114,6 +114,6 @@ class PageIndicator () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

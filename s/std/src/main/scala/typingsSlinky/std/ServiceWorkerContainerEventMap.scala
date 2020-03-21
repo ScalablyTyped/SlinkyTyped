@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ServiceWorkerContainerEventMap extends js.Object {
-  var controllerchange: org.scalajs.dom.raw.Event
+  var controllerchange: Event_
   var message: org.scalajs.dom.raw.MessageEvent
   var messageerror: org.scalajs.dom.raw.MessageEvent
 }
@@ -13,7 +13,7 @@ trait ServiceWorkerContainerEventMap extends js.Object {
 object ServiceWorkerContainerEventMap {
   @scala.inline
   def apply(
-    controllerchange: org.scalajs.dom.raw.Event,
+    controllerchange: Event_,
     message: org.scalajs.dom.raw.MessageEvent,
     messageerror: org.scalajs.dom.raw.MessageEvent
   ): ServiceWorkerContainerEventMap = {

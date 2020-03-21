@@ -10,9 +10,9 @@ invert an image.
 | ------------------ | :-------------: |
 | Full name          | @jimp/plugin-invert |
 | Keywords           | - |
-| # releases         | 66 |
+| # releases         | 65 |
 | # dependents       | 1 |
-| # downloads        | 14017233 |
+| # downloads        | 14392278 |
 | # stars            | 0 |
 
 ## Links

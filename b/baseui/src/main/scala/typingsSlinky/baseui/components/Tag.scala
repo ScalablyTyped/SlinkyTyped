@@ -1,7 +1,6 @@
 package typingsSlinky.baseui.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
@@ -18,6 +17,7 @@ import typingsSlinky.baseui.baseuiStrings.solid
 import typingsSlinky.baseui.baseuiStrings.warning
 import typingsSlinky.baseui.tagMod.TagOverrides
 import typingsSlinky.baseui.tagMod.TagProps
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,15 +29,17 @@ object Tag
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, onClick, onKeyDown */
+  /* The following DOM/SVG props were specified: disabled, title */
   def apply(
     closeable: js.UndefOr[Boolean] = js.undefined,
     color: String = null,
     isFocused: js.UndefOr[Boolean] = js.undefined,
     isHovered: js.UndefOr[Boolean] = js.undefined,
     kind: custom_ | accent | primary | neutral | positive | warning | negative = null,
-    onActionClick: (/* e */ Event, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
-    onActionKeyDown: (/* e */ Event, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
+    onActionClick: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
+    onActionKeyDown: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
+    onClick: /* event */ Event_ => _ = null,
+    onKeyDown: /* event */ Event_ => _ = null,
     overrides: TagOverrides = null,
     variant: solid | light | outlined = null,
     _overrides: StringDictionary[js.Any] = null
@@ -50,6 +52,8 @@ object Tag
     if (kind != null) __obj.updateDynamic("kind")(kind.asInstanceOf[js.Any])
     if (onActionClick != null) __obj.updateDynamic("onActionClick")(js.Any.fromFunction2(onActionClick))
     if (onActionKeyDown != null) __obj.updateDynamic("onActionKeyDown")(js.Any.fromFunction2(onActionKeyDown))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

@@ -1,7 +1,7 @@
 package typingsSlinky.sharepoint.SP.UI
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.microsoftDashAjax.Sys.UI.Control
+import typingsSlinky.microsoftAjax.Sys.UI.Control
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

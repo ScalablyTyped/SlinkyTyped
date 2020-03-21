@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object branchMod {
-  type Branch = Branch_
+  type Branch = typingsSlinky.nodegit.branchMod.Branch_
 }

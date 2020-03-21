@@ -14,8 +14,10 @@ object ^ extends js.Object {
   var FilterQueryOp: typingsSlinky.breeze.breeze.FilterQueryOp = js.native
   var MergeStrategy: typingsSlinky.breeze.breeze.MergeStrategy = js.native
   var metadataVersion: String = js.native
-  var remoteAccess_odata: String = js.native
-  var remoteAccess_webApi: String = js.native
+  @JSName("remoteAccess_odata")
+  var remoteAccessOdata: String = js.native
+  @JSName("remoteAccess_webApi")
+  var remoteAccessWebApi: String = js.native
   var version: String = js.native
 }
 

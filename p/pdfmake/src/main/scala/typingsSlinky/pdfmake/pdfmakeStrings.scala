@@ -1,6 +1,6 @@
 package typingsSlinky.pdfmake
 
-import typingsSlinky.pdfmake.buildPdfmakeMod._Alignment
+import typingsSlinky.pdfmake.mod._Alignment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

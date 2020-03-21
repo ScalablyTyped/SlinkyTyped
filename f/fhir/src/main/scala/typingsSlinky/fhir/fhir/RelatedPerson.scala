@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * An person that is related to a patient, but who is not a direct target of care
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait RelatedPerson extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait RelatedPerson extends DomainResource {
   /**
     * Contains extended information for property 'active'.
     */

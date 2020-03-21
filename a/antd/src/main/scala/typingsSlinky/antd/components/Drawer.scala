@@ -7,11 +7,11 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.antdBooleans.`false`
-import typingsSlinky.antd.libDrawerMod.DrawerProps
-import typingsSlinky.antd.libDrawerMod.EventType
-import typingsSlinky.antd.libDrawerMod.getContainerFunc
-import typingsSlinky.antd.libDrawerMod.placementType
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.drawerMod.DrawerProps
+import typingsSlinky.antd.drawerMod.EventType
+import typingsSlinky.antd.drawerMod.getContainerFunc
+import typingsSlinky.antd.drawerMod.placementType
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,13 +23,15 @@ object Drawer
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, height, width */
+  /* The following DOM/SVG props were specified: className, height, style, width */
   def apply(
     afterVisibleChange: /* visible */ Boolean => Unit = null,
     bodyStyle: CSSProperties = null,
     closable: js.UndefOr[Boolean] = js.undefined,
     destroyOnClose: js.UndefOr[Boolean] = js.undefined,
     drawerStyle: CSSProperties = null,
+    footer: TagMod[Any] = null,
+    footerStyle: CSSProperties = null,
     getContainer: String | HTMLElement | getContainerFunc | `false` = null,
     handler: TagMod[Any] = null,
     headerStyle: CSSProperties = null,
@@ -41,10 +43,8 @@ object Drawer
     placement: placementType = null,
     prefixCls: String = null,
     push: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
     title: TagMod[Any] = null,
     visible: js.UndefOr[Boolean] = js.undefined,
-    wrapClassName: String = null,
     zIndex: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
@@ -54,6 +54,8 @@ object Drawer
     if (!js.isUndefined(closable)) __obj.updateDynamic("closable")(closable.asInstanceOf[js.Any])
     if (!js.isUndefined(destroyOnClose)) __obj.updateDynamic("destroyOnClose")(destroyOnClose.asInstanceOf[js.Any])
     if (drawerStyle != null) __obj.updateDynamic("drawerStyle")(drawerStyle.asInstanceOf[js.Any])
+    if (footer != null) __obj.updateDynamic("footer")(footer.asInstanceOf[js.Any])
+    if (footerStyle != null) __obj.updateDynamic("footerStyle")(footerStyle.asInstanceOf[js.Any])
     if (getContainer != null) __obj.updateDynamic("getContainer")(getContainer.asInstanceOf[js.Any])
     if (handler != null) __obj.updateDynamic("handler")(handler.asInstanceOf[js.Any])
     if (headerStyle != null) __obj.updateDynamic("headerStyle")(headerStyle.asInstanceOf[js.Any])
@@ -65,10 +67,8 @@ object Drawer
     if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (!js.isUndefined(push)) __obj.updateDynamic("push")(push.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
-    if (wrapClassName != null) __obj.updateDynamic("wrapClassName")(wrapClassName.asInstanceOf[js.Any])
     if (zIndex != null) __obj.updateDynamic("zIndex")(zIndex.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])

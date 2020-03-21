@@ -1,12 +1,12 @@
 package typingsSlinky.algoliasearch
 
-import typingsSlinky.algoliasearch.algoliasearchMod.BrowseParameters
-import typingsSlinky.algoliasearch.algoliasearchMod.BrowseResponse
-import typingsSlinky.algoliasearch.algoliasearchMod.ClientOptions
-import typingsSlinky.algoliasearch.algoliasearchMod.MultiResponse
-import typingsSlinky.algoliasearch.algoliasearchMod.QueryParameters
-import typingsSlinky.algoliasearch.algoliasearchMod.SearchForFacetValues.Parameters
-import typingsSlinky.algoliasearch.algoliasearchMod.SearchForFacetValues.Response
+import typingsSlinky.algoliasearch.mod.BrowseParameters
+import typingsSlinky.algoliasearch.mod.BrowseResponse
+import typingsSlinky.algoliasearch.mod.ClientOptions
+import typingsSlinky.algoliasearch.mod.MultiResponse
+import typingsSlinky.algoliasearch.mod.QueryParameters
+import typingsSlinky.algoliasearch.mod.SearchForFacetValues.Parameters
+import typingsSlinky.algoliasearch.mod.SearchForFacetValues.Response
 import typingsSlinky.std.Error
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -42,19 +42,19 @@ object liteMod extends js.Object {
       * Query on multiple index
       * https://github.com/algolia/algoliasearch-client-js#multiple-queries---multiplequeries
       */
-    def search[T](queries: js.Array[Anon_IndexName]): js.Promise[MultiResponse[T]] = js.native
+    def search[T](queries: js.Array[AnonIndexName]): js.Promise[MultiResponse[T]] = js.native
     /**
       * Query on multiple index
       * https://github.com/algolia/algoliasearch-client-js#multiple-queries---multiplequeries
       */
     def search[T](
-      queries: js.Array[Anon_IndexName],
+      queries: js.Array[AnonIndexName],
       cb: js.Function2[/* err */ js.Error, /* res */ MultiResponse[T], Unit]
     ): Unit = js.native
     /**
       * Query for facet values of a specific facet
       */
-    def searchForFacetValues(queries: js.Array[Anon_IndexNameParams]): js.Promise[js.Array[Response]] = js.native
+    def searchForFacetValues(queries: js.Array[AnonParams]): js.Promise[js.Array[Response]] = js.native
     /**
       * Add a header to be sent with all upcoming requests
       */
@@ -108,7 +108,7 @@ object liteMod extends js.Object {
     def clearCache(): Unit = js.native
     /**
       * Gets specific attributes from an object
-      * https://github.com/algolia/algoliasearch-client-js#find-by-ids---getobjects
+      * https://algolia.com/doc/api-reference/api-methods/get-objects/#retrieve-only-one-object
       */
     def getObject(
       objectID: String,
@@ -117,35 +117,37 @@ object liteMod extends js.Object {
     ): Unit = js.native
     /**
       * Gets a specific object
-      * https://github.com/algolia/algoliasearch-client-js#find-by-ids---getobjects
+      * https://algolia.com/doc/api-reference/api-methods/get-objects/#retrieve-only-one-object
       */
     def getObject(objectID: String, cb: js.Function2[/* err */ Error, /* res */ js.Object, Unit]): Unit = js.native
     /**
-      * Gets a list of objects
-      * https://github.com/algolia/algoliasearch-client-js#find-by-ids---getobjects
+      * Gets specific attributes from an object
+      * https://algolia.com/doc/api-reference/api-methods/get-objects/#retrieve-only-one-object
       */
-    def getObjects(objectIDs: js.Array[String]): js.Promise[Anon_Results] = js.native
+    def getObject[T](objectID: String): js.Promise[T] = js.native
+    def getObject[T](objectID: String, attributes: js.Array[String]): js.Promise[T] = js.native
     /**
       * Gets a list of objects
       * https://github.com/algolia/algoliasearch-client-js#find-by-ids---getobjects
       */
-    def getObjects(objectIDs: js.Array[String], cb: js.Function2[/* err */ js.Error, /* res */ Anon_Results, Unit]): Unit = js.native
+    def getObjects(objectIDs: js.Array[String]): js.Promise[AnonResults] = js.native
+    /**
+      * Gets a list of objects
+      * https://github.com/algolia/algoliasearch-client-js#find-by-ids---getobjects
+      */
+    def getObjects(objectIDs: js.Array[String], cb: js.Function2[/* err */ js.Error, /* res */ AnonResults, Unit]): Unit = js.native
     /**
       * Search in an index
       * https://github.com/algolia/algoliasearch-client-js#search-in-an-index---search
       */
-    def search[T](params: QueryParameters): js.Promise[typingsSlinky.algoliasearch.algoliasearchMod.Response[T]] = js.native
+    def search[T](params: QueryParameters): js.Promise[typingsSlinky.algoliasearch.mod.Response[T]] = js.native
     /**
       * Search in an index
       * https://github.com/algolia/algoliasearch-client-js#search-in-an-index---search
       */
     def search[T](
       params: QueryParameters,
-      cb: js.Function2[
-          /* err */ js.Error, 
-          /* res */ typingsSlinky.algoliasearch.algoliasearchMod.Response[T], 
-          Unit
-        ]
+      cb: js.Function2[/* err */ js.Error, /* res */ typingsSlinky.algoliasearch.mod.Response[T], Unit]
     ): Unit = js.native
     /**
       * Search in an index

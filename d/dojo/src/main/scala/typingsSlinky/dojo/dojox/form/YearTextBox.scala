@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.form
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dojo.date.locale.__FormatOptions
+import typingsSlinky.dojo.dojo.date.locale.FormatOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ class YearTextBox () extends DateTextBox {
     * @param value
     * @param constraints
     */
-  def parse(value: String, constraints: __FormatOptions): String = js.native
+  def parse(value: String, constraints: FormatOptions): String = js.native
   /**
     * Builds the regular needed to parse a localized date
     *

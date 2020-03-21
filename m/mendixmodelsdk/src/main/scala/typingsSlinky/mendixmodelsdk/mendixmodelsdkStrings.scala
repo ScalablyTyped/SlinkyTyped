@@ -1,12 +1,12 @@
 package typingsSlinky.mendixmodelsdk
 
-import typingsSlinky.mendixmodelsdk.distSdkInternalDeltasTransactionManagerMod.TransactionType
-import typingsSlinky.mendixmodelsdk.distSdkInternalStructuresMod.StructureState
-import typingsSlinky.mendixmodelsdk.distSdkInternalTransportInterfacesMod.CannotFixAppState
-import typingsSlinky.mendixmodelsdk.distSdkInternalTransportInterfacesMod.IUpdateAppJobStatus
-import typingsSlinky.mendixmodelsdk.distSdkInternalTransportInterfacesMod.LockType
-import typingsSlinky.mendixmodelsdk.distSdkInternalTransportInterfacesMod.SuccessAppState
-import typingsSlinky.mendixmodelsdk.distSdkInternalTransportationMod.RequestMethod
+import typingsSlinky.mendixmodelsdk.structuresMod.StructureState
+import typingsSlinky.mendixmodelsdk.transactionManagerMod.TransactionType
+import typingsSlinky.mendixmodelsdk.transportInterfacesMod.CannotFixAppState
+import typingsSlinky.mendixmodelsdk.transportInterfacesMod.IUpdateAppJobStatus
+import typingsSlinky.mendixmodelsdk.transportInterfacesMod.LockType
+import typingsSlinky.mendixmodelsdk.transportInterfacesMod.SuccessAppState
+import typingsSlinky.mendixmodelsdk.transportationMod.RequestMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -127,6 +127,9 @@ object mendixmodelsdkStrings {
   sealed trait deleted extends StructureState
   
   @js.native
+  sealed trait deltas extends js.Object
+  
+  @js.native
   sealed trait detached extends StructureState
   
   @js.native
@@ -143,6 +146,9 @@ object mendixmodelsdkStrings {
   
   @js.native
   sealed trait fast extends js.Object
+  
+  @js.native
+  sealed trait fileChanges extends js.Object
   
   @js.native
   sealed trait full extends js.Object
@@ -266,6 +272,8 @@ object mendixmodelsdkStrings {
   @scala.inline
   def deleted: deleted = "deleted".asInstanceOf[deleted]
   @scala.inline
+  def deltas: deltas = "deltas".asInstanceOf[deltas]
+  @scala.inline
   def detached: detached = "detached".asInstanceOf[detached]
   @scala.inline
   def edit: edit = "edit".asInstanceOf[edit]
@@ -277,6 +285,8 @@ object mendixmodelsdkStrings {
   def failed_ : failed_ = "failed".asInstanceOf[failed_]
   @scala.inline
   def fast: fast = "fast".asInstanceOf[fast]
+  @scala.inline
+  def fileChanges: fileChanges = "fileChanges".asInstanceOf[fileChanges]
   @scala.inline
   def full: full = "full".asInstanceOf[full]
   @scala.inline

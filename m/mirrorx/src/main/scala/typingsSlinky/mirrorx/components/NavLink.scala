@@ -1,7 +1,6 @@
 package typingsSlinky.mirrorx.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLAnchorElement
 import slinky.core.BuildingComponent
@@ -9,11 +8,11 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.a.tag
-import typingsSlinky.history.historyMod.Location
-import typingsSlinky.history.historyMod.LocationDescriptor
-import typingsSlinky.history.historyMod.LocationState
-import typingsSlinky.mirrorx.mirrorxMod.NavLinkProps
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.history.mod.Location
+import typingsSlinky.history.mod.LocationDescriptor
+import typingsSlinky.history.mod.LocationState
+import typingsSlinky.mirrorx.mod.NavLinkProps
+import typingsSlinky.react.mod.CSSProperties
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -58,19 +57,20 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.reactDashRouter.reactDashRouterMod.`match`
+import typingsSlinky.reactRouter.mod.`match`
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object NavLink
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mirrorx.mirrorxMod.NavLink] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mirrorx.mod.NavLink] {
   @JSImport("mirrorx", "NavLink")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, download, draggable, hidden, href, id, lang, media, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, rel, spellCheck, suppressContentEditableWarning, tabIndex, target, type */
+  /* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, dir, download, draggable, hidden, href, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, rel, spellCheck, style, suppressContentEditableWarning, tabIndex, target, title, type */
   def apply(
     to: LocationDescriptor[LocationState],
     about: String = null,
@@ -131,6 +131,8 @@ object NavLink
     color: String = null,
     contextMenu: String = null,
     datatype: String = null,
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    defaultValue: String | Double | js.Array[String] = null,
     exact: js.UndefOr[Boolean] = js.undefined,
     hrefLang: String = null,
     inlist: js.Any = null,
@@ -143,10 +145,12 @@ object NavLink
     itemScope: js.UndefOr[Boolean] = js.undefined,
     itemType: String = null,
     location: Location[LocationState] = null,
+    media: String = null,
     onAuxClick: SyntheticMouseEvent[HTMLAnchorElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with HTMLAnchorElement, Event] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with HTMLAnchorElement, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLAnchorElement, Event_] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLAnchorElement, Event_] => Unit = null,
     ping: String = null,
+    placeholder: String = null,
     prefix: String = null,
     property: String = null,
     radioGroup: String = null,
@@ -158,15 +162,13 @@ object NavLink
     security: String = null,
     slot: String = null,
     strict: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
     translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
     vocab: String = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.mirrorx.mirrorxMod.NavLink] = {
+  ): BuildingComponent[tag.type, typingsSlinky.mirrorx.mod.NavLink] = {
     val __obj = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
@@ -226,6 +228,8 @@ object NavLink
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
     if (!js.isUndefined(exact)) __obj.updateDynamic("exact")(exact.asInstanceOf[js.Any])
     if (hrefLang != null) __obj.updateDynamic("hrefLang")(hrefLang.asInstanceOf[js.Any])
     if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
@@ -238,10 +242,12 @@ object NavLink
     if (!js.isUndefined(itemScope)) __obj.updateDynamic("itemScope")(itemScope.asInstanceOf[js.Any])
     if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
     if (location != null) __obj.updateDynamic("location")(location.asInstanceOf[js.Any])
+    if (media != null) __obj.updateDynamic("media")(media.asInstanceOf[js.Any])
     if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
     if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
     if (ping != null) __obj.updateDynamic("ping")(ping.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
     if (radioGroup != null) __obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])
@@ -253,9 +259,7 @@ object NavLink
     if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
     if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
     if (!js.isUndefined(strict)) __obj.updateDynamic("strict")(strict.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])

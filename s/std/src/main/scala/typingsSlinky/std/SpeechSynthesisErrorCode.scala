@@ -5,17 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.canceled
-  - typings.std.stdStrings.interrupted
-  - typings.std.stdStrings.`audio-busy`
-  - typings.std.stdStrings.`audio-hardware`
-  - typings.std.stdStrings.network
-  - typings.std.stdStrings.`synthesis-unavailable`
-  - typings.std.stdStrings.`synthesis-failed`
-  - typings.std.stdStrings.`language-unavailable`
-  - typings.std.stdStrings.`voice-unavailable`
-  - typings.std.stdStrings.`text-too-long`
-  - typings.std.stdStrings.`invalid-argument`
+  - typingsSlinky.std.stdStrings.`audio-busy`
+  - typingsSlinky.std.stdStrings.`audio-hardware`
+  - typingsSlinky.std.stdStrings.canceled
+  - typingsSlinky.std.stdStrings.interrupted
+  - typingsSlinky.std.stdStrings.`invalid-argument`
+  - typingsSlinky.std.stdStrings.`language-unavailable`
+  - typingsSlinky.std.stdStrings.network
+  - typingsSlinky.std.stdStrings.`not-allowed`
+  - typingsSlinky.std.stdStrings.`synthesis-failed`
+  - typingsSlinky.std.stdStrings.`synthesis-unavailable`
+  - typingsSlinky.std.stdStrings.`text-too-long`
+  - typingsSlinky.std.stdStrings.`voice-unavailable`
 */
 trait SpeechSynthesisErrorCode extends js.Object
 
@@ -36,6 +37,8 @@ object SpeechSynthesisErrorCode {
   def `language-unavailable`: typingsSlinky.std.stdStrings.`language-unavailable` = this.cast("language-unavailable")
   @scala.inline
   def network: typingsSlinky.std.stdStrings.network = this.cast("network")
+  @scala.inline
+  def `not-allowed`: typingsSlinky.std.stdStrings.`not-allowed` = this.cast("not-allowed")
   @scala.inline
   def `synthesis-failed`: typingsSlinky.std.stdStrings.`synthesis-failed` = this.cast("synthesis-failed")
   @scala.inline

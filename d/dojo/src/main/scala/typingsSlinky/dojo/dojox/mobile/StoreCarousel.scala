@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.mobile
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojo.store.api.Store
 import typingsSlinky.dojo.dojoStrings.childrenProperty
 import typingsSlinky.dojo.dojoStrings.labelProperty
@@ -23,7 +23,7 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dojox.mobile._StoreMixin because Inheritance from two classes. Inlined childrenProperty, labelProperty, query, queryOptions, store, destroy, refresh, setQuery, setStore, onAdd, onComplete, onDelete, onError, onUpdate */ @JSGlobal("dojox.mobile.StoreCarousel")
+- typingsSlinky.dojo.dojox.mobile.StoreMixin because Inheritance from two classes. Inlined childrenProperty, labelProperty, query, queryOptions, store, destroy, refresh, setQuery, setStore, onAdd, onComplete, onDelete, onError, onUpdate */ @JSGlobal("dojox.mobile.StoreCarousel")
 @js.native
 class StoreCarousel () extends Carousel {
   def this(params: js.Object) = this()
@@ -138,7 +138,7 @@ class StoreCarousel () extends Carousel {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_labelProperty(
     property: labelProperty,
@@ -148,7 +148,7 @@ class StoreCarousel () extends Carousel {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_query(
     property: query,
@@ -158,7 +158,7 @@ class StoreCarousel () extends Carousel {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_queryOptions(
     property: queryOptions,
@@ -168,7 +168,7 @@ class StoreCarousel () extends Carousel {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_store(
     property: store,
@@ -178,6 +178,6 @@ class StoreCarousel () extends Carousel {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

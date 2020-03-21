@@ -1,9 +1,9 @@
 package typingsSlinky.dojo.dojox.mobile
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.style
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.mobile.Overlay")
 @js.native
-class Overlay () extends _WidgetBase {
+class Overlay () extends WidgetBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -33,7 +33,7 @@ class Overlay () extends _WidgetBase {
     *
     */
   def hide(): Unit = js.native
-  def onBlur(e: Event): Unit = js.native
+  def onBlur(e: Event_): Unit = js.native
   /**
     * Track specified handles and remove/destroy them when this instance is destroyed, unless they were
     * already removed/destroyed manually.

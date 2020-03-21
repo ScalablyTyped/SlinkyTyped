@@ -1,7 +1,7 @@
 package typingsSlinky.pacote
 
-import typingsSlinky.pacote.pacoteMod.Manifest
-import typingsSlinky.pacote.pacoteMod.Options
+import typingsSlinky.pacote.mod.Manifest_
+import typingsSlinky.pacote.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ object manifestMod extends js.Object {
     * present. For example, packages from `registry.npmjs.org` have additional
     * metadata appended by the registry.
     */
-  def apply(spec: String): js.Promise[Manifest] = js.native
-  def apply(spec: String, opts: Options): js.Promise[Manifest] = js.native
+  def apply(spec: String): js.Promise[Manifest_] = js.native
+  def apply(spec: String, opts: Options): js.Promise[Manifest_] = js.native
 }
 

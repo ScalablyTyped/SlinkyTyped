@@ -7,7 +7,7 @@ import typingsSlinky.node.httpMod.ServerResponse
 import typingsSlinky.node.netMod.Socket
 import typingsSlinky.node.streamMod.Duplex
 import typingsSlinky.node.streamMod.ReadableOptions
-import typingsSlinky.node.urlMod.URL
+import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ object ServerSessionOptions {
       Http2ServerRequest
     ] = null,
     Http2ServerResponse: Instantiable1[/* stream */ ServerHttp2Stream, Http2ServerResponse] = null,
-    createConnection: (/* authority */ URL, ServerSessionOptions) => Duplex = null,
+    createConnection: (/* authority */ URL_, ServerSessionOptions) => Duplex = null,
     maxDeflateDynamicTableSize: Int | Double = null,
     maxHeaderListPairs: Int | Double = null,
     maxOutstandingPings: Int | Double = null,

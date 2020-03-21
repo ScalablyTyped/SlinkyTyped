@@ -11,16 +11,16 @@ import scala.scalajs.js.annotation._
 object reprojTileMod extends js.Object {
   @js.native
   trait ReprojTile
-    extends typingsSlinky.ol.tileMod.default {
+    extends typingsSlinky.ol.olTileMod.default {
     def getImage(): HTMLCanvasElement = js.native
   }
   
   @js.native
   class default protected () extends ReprojTile {
     def this(
-      sourceProj: typingsSlinky.ol.projProjectionMod.default,
+      sourceProj: typingsSlinky.ol.projectionMod.default,
       sourceTileGrid: typingsSlinky.ol.tilegridTileGridMod.default,
-      targetProj: typingsSlinky.ol.projProjectionMod.default,
+      targetProj: typingsSlinky.ol.projectionMod.default,
       targetTileGrid: typingsSlinky.ol.tilegridTileGridMod.default,
       tileCoord: TileCoord,
       wrappedTileCoord: TileCoord,
@@ -29,9 +29,9 @@ object reprojTileMod extends js.Object {
       getTileFunction: FunctionType
     ) = this()
     def this(
-      sourceProj: typingsSlinky.ol.projProjectionMod.default,
+      sourceProj: typingsSlinky.ol.projectionMod.default,
       sourceTileGrid: typingsSlinky.ol.tilegridTileGridMod.default,
-      targetProj: typingsSlinky.ol.projProjectionMod.default,
+      targetProj: typingsSlinky.ol.projectionMod.default,
       targetTileGrid: typingsSlinky.ol.tilegridTileGridMod.default,
       tileCoord: TileCoord,
       wrappedTileCoord: TileCoord,
@@ -41,9 +41,9 @@ object reprojTileMod extends js.Object {
       opt_errorThreshold: Double
     ) = this()
     def this(
-      sourceProj: typingsSlinky.ol.projProjectionMod.default,
+      sourceProj: typingsSlinky.ol.projectionMod.default,
       sourceTileGrid: typingsSlinky.ol.tilegridTileGridMod.default,
-      targetProj: typingsSlinky.ol.projProjectionMod.default,
+      targetProj: typingsSlinky.ol.projectionMod.default,
       targetTileGrid: typingsSlinky.ol.tilegridTileGridMod.default,
       tileCoord: TileCoord,
       wrappedTileCoord: TileCoord,
@@ -60,7 +60,7 @@ object reprojTileMod extends js.Object {
     /* p1 */ Double, 
     /* p2 */ Double, 
     /* p3 */ Double, 
-    typingsSlinky.ol.tileMod.default
+    typingsSlinky.ol.olTileMod.default
   ]
 }
 

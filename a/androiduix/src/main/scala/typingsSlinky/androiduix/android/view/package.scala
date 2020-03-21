@@ -5,13 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object view {
-  type GestureDetector = GestureDetector_
-  type KeyEvent = KeyEvent_
-  type Menu = Menu_
-  type MenuItem = MenuItem_
-  type ScaleGestureDetector = ScaleGestureDetector_
-  type View = View_
-  type ViewGroup = ViewGroup_
-  type ViewTreeObserver = ViewTreeObserver_
-  type Window = Window_
+  type GestureDetector = typingsSlinky.androiduix.android.view.GestureDetector_
+  type KeyEvent = typingsSlinky.androiduix.android.view.KeyEvent_
+  type MenuItem = typingsSlinky.androiduix.android.view.MenuItem_
+  type Menu_ = typingsSlinky.androiduix.android.view.Menu__
+  type ScaleGestureDetector = typingsSlinky.androiduix.android.view.ScaleGestureDetector_
+  type View = typingsSlinky.androiduix.android.view.View_
+  type ViewGroup = typingsSlinky.androiduix.android.view.ViewGroup_
+  type ViewTreeObserver = typingsSlinky.androiduix.android.view.ViewTreeObserver_
+  type Window = typingsSlinky.androiduix.android.view.Window_
 }

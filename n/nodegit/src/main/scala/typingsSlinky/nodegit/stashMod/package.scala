@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object stashMod {
-  type Stash = Stash_
+  type Stash = typingsSlinky.nodegit.stashMod.Stash_
 }

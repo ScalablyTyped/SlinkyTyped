@@ -2,13 +2,13 @@ package typingsSlinky.ckeditor.CKEDITOR.plugins
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.DataTransfer
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.File
 import typingsSlinky.ckeditor.CKEDITOR.dom.domObject
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
 import typingsSlinky.ckeditor.CKEDITOR.dom.event
 import typingsSlinky.ckeditor.CKEDITOR.dom.range
 import typingsSlinky.ckeditor.CKEDITOR.editor
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -51,7 +51,7 @@ object clipboard extends js.Object {
   def addPasteButton(editor: editor, name: String, definition: StringDictionary[js.Any]): Unit = js.native
   def canClipboardApiBeTrusted(dataTransfer: dataTransfer, editor: editor): Boolean = js.native
   def getDropTarget(editor: editor): domObject = js.native
-  def getRangeAtDropPosition(domEvent: Event, editor: editor): range = js.native
+  def getRangeAtDropPosition(domEvent: Event_, editor: editor): range = js.native
   def initDragDataTransfer(): Unit = js.native
   def initDragDataTransfer(evt: event): Unit = js.native
   def initDragDataTransfer(evt: event, editor: editor): Unit = js.native

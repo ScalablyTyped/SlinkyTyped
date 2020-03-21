@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dojox.mvc
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.exprchar
 import typingsSlinky.dojo.dojoStrings.style
 import scala.scalajs.js
@@ -31,7 +31,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.mvc.Output")
 @js.native
-class Output () extends _WidgetBase {
+class Output () extends WidgetBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -75,6 +75,6 @@ class Output () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

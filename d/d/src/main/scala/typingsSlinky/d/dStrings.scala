@@ -1,7 +1,7 @@
 package typingsSlinky.d
 
-import typingsSlinky.d.dMod.Flags
-import typingsSlinky.d.dMod.GetSetFlags
+import typingsSlinky.d.mod.Flags
+import typingsSlinky.d.mod.GetSetFlags
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

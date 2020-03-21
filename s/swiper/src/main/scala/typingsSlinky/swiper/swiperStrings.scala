@@ -1,18 +1,15 @@
 package typingsSlinky.swiper
 
-import typingsSlinky.swiper.swiperMod.AutoplayEvent
-import typingsSlinky.swiper.swiperMod.CommonEvent
-import typingsSlinky.swiper.swiperMod.LazyLoadingEvent
-import typingsSlinky.swiper.swiperMod.PaginationEvent
-import typingsSlinky.swiper.swiperMod.SwiperEvent
+import typingsSlinky.swiper.mod.AutoplayEvent
+import typingsSlinky.swiper.mod.CommonEvent
+import typingsSlinky.swiper.mod.LazyLoadingEvent
+import typingsSlinky.swiper.mod.PaginationEvent
+import typingsSlinky.swiper.mod.SwiperEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object swiperStrings {
-  @js.native
-  sealed trait SwiperOptions extends js.Object
-  
   @js.native
   sealed trait auto extends js.Object
   
@@ -231,8 +228,6 @@ object swiperStrings {
   @js.native
   sealed trait wrapper extends js.Object
   
-  @scala.inline
-  def SwiperOptions: SwiperOptions = "SwiperOptions".asInstanceOf[SwiperOptions]
   @scala.inline
   def auto: auto = "auto".asInstanceOf[auto]
   @scala.inline

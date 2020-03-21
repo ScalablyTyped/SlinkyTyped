@@ -1,9 +1,8 @@
 package typingsSlinky.dojo.dojox.mobile
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.`aria-label`
 import typingsSlinky.dojo.dojoStrings.`type`
 import typingsSlinky.dojo.dojoStrings.alt
@@ -16,6 +15,7 @@ import typingsSlinky.dojo.dojoStrings.scrollOnFocus
 import typingsSlinky.dojo.dojoStrings.style
 import typingsSlinky.dojo.dojoStrings.tabIndex
 import typingsSlinky.dojo.dojoStrings.value
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,10 +34,10 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit.form._ButtonMixin because Inheritance from two classes. Inlined label, postCreate, onClick
-- typings.dojo.dijit.form._FormWidgetMixin because Inheritance from two classes. Inlined alt, `aria-label`, disabled, intermediateChanges, name, scrollOnFocus, tabIndex, `type`, value, compare, create, destroy, focus, isFocusable, onChange */ @JSGlobal("dojox.mobile.Button")
+- typingsSlinky.dojo.dijit.form.ButtonMixin because Inheritance from two classes. Inlined label, postCreate, onClick
+- typingsSlinky.dojo.dijit.form.FormWidgetMixin because Inheritance from two classes. Inlined alt, `aria-label`, disabled, intermediateChanges, name, scrollOnFocus, tabIndex, `type`, value, compare, create, destroy, focus, isFocusable, onChange */ @JSGlobal("dojox.mobile.Button")
 @js.native
-class Button () extends _WidgetBase {
+class Button () extends WidgetBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -153,11 +153,10 @@ class Button () extends _WidgetBase {
   @JSName("get")
   def get_value(property: value): String = js.native
   /**
-    * Tells if this widget is focusable or not.  Used internally by dijit.
-    * 
+    *
     */
   @JSName("isFocusable")
-  def isFocusable_Any(): js.Any = js.native
+  def isFocusable_Boolean(): Boolean = js.native
   /**
     * Callback when this widget's value is changed.
     *
@@ -181,7 +180,7 @@ class Button () extends _WidgetBase {
     * 
     * @param e             
     */
-  def onClick(e: Event): Boolean = js.native
+  def onClick(e: Event_): Boolean = js.native
   /**
     * Track specified handles and remove/destroy them when this instance is destroyed, unless they were
     * already removed/destroyed manually.
@@ -221,7 +220,7 @@ class Button () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_arialabel(
     property: `aria-label`,
@@ -231,7 +230,7 @@ class Button () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_disabled(
     property: disabled,
@@ -241,7 +240,7 @@ class Button () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_duration(
     property: duration,
@@ -251,7 +250,7 @@ class Button () extends _WidgetBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_intermediateChanges(
     property: intermediateChanges,
@@ -261,7 +260,7 @@ class Button () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_label(
     property: label,
@@ -271,7 +270,7 @@ class Button () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_name(
     property: name,
@@ -281,7 +280,7 @@ class Button () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_scrollOnFocus(
     property: scrollOnFocus,
@@ -291,7 +290,7 @@ class Button () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_tabIndex(
     property: tabIndex,
@@ -301,7 +300,7 @@ class Button () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_type(
     property: `type`,
@@ -311,7 +310,7 @@ class Button () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_value(
     property: value,
@@ -321,6 +320,6 @@ class Button () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

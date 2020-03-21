@@ -1,6 +1,6 @@
 package typingsSlinky.phaser.Phaser.Types.Physics.Matter
 
-import typingsSlinky.phaser.MatterJS.Body
+import typingsSlinky.phaser.MatterJS.BodyType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait MatterTileOptions extends js.Object {
   /**
     * An existing Matter body to be used instead of creating a new one.
     */
-  var body: js.UndefOr[Body] = js.undefined
+  var body: js.UndefOr[BodyType] = js.undefined
   /**
     * Whether or not the newly created body should be made static. This defaults to true since typically tiles should not be moved.
     */
@@ -24,7 +24,7 @@ object MatterTileOptions {
   @scala.inline
   def apply(
     addToWorld: js.UndefOr[Boolean] = js.undefined,
-    body: Body = null,
+    body: BodyType = null,
     isStatic: js.UndefOr[Boolean] = js.undefined
   ): MatterTileOptions = {
     val __obj = js.Dynamic.literal()

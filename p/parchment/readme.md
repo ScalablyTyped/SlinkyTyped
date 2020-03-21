@@ -11,8 +11,8 @@ A document model for rich text editors
 | Full name          | parchment |
 | Keywords           | - |
 | # releases         | 3 |
-| # dependents       | 47 |
-| # downloads        | 10673372 |
+| # dependents       | 48 |
+| # downloads        | 10975423 |
 | # stars            | 1 |
 
 ## Links

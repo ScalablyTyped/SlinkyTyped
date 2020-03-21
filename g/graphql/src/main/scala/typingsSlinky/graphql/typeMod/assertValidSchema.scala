@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/type", "assertValidSchema")
 @js.native
 object assertValidSchema extends js.Object {
-  def apply(schema: typingsSlinky.graphql.typeSchemaMod.GraphQLSchema): Unit = js.native
+  def apply(schema: typingsSlinky.graphql.schemaMod.GraphQLSchema): Unit = js.native
 }
 

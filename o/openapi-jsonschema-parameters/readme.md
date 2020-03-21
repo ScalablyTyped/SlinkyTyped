@@ -12,7 +12,7 @@ Converts openapi parameters to a jsonschema format.
 | Keywords           | openapi, parameters, jsonschema, convert, converter |
 | # releases         | 15 |
 | # dependents       | 6 |
-| # downloads        | 471281 |
+| # downloads        | 499042 |
 | # stars            | 0 |
 
 ## Links

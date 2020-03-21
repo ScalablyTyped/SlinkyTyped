@@ -1,8 +1,8 @@
 package typingsSlinky.tslint
 
-import typingsSlinky.tslint.libRulesStrictBooleanExpressionsRuleMod.TypeFailure
-import typingsSlinky.tslint.libRulesStrictComparisonsRuleMod.TypeKind
-import typingsSlinky.tslint.libRunnerMod.Status
+import typingsSlinky.tslint.runnerMod.Status
+import typingsSlinky.tslint.strictBooleanExpressionsRuleMod.TypeFailure
+import typingsSlinky.tslint.strictComparisonsRuleMod.TypeKind
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

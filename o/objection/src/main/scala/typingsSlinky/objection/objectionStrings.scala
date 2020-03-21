@@ -1,7 +1,7 @@
 package typingsSlinky.objection
 
-import typingsSlinky.objection.objectionMod.JsonSchemaFormatType
-import typingsSlinky.objection.objectionMod.ValidationErrorType
+import typingsSlinky.objection.mod.JsonSchemaFormatType
+import typingsSlinky.objection.mod.ValidationErrorType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

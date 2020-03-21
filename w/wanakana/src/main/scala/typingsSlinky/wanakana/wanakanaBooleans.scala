@@ -1,6 +1,6 @@
 package typingsSlinky.wanakana
 
-import typingsSlinky.wanakana.wanakanaMod.IMEModes
+import typingsSlinky.wanakana.mod.IMEModes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

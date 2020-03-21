@@ -10,9 +10,9 @@ JupyterLab - Default Dark Theme
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/theme-dark-extension |
 | Keywords           | - |
-| # releases         | 67 |
+| # releases         | 68 |
 | # dependents       | 1 |
-| # downloads        | 750089 |
+| # downloads        | 755352 |
 | # stars            | 0 |
 
 ## Links

@@ -11,8 +11,8 @@ Retry a request.
 | Full name          | retry-request |
 | Keywords           | request, retry, stream |
 | # releases         | 5 |
-| # dependents       | 15 |
-| # downloads        | 65016257 |
+| # dependents       | 16 |
+| # downloads        | 66821699 |
 | # stars            | 1 |
 
 ## Links

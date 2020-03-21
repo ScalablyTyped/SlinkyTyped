@@ -3,20 +3,20 @@ package typingsSlinky.backbone
 import org.scalablytyped.runtime.Instantiable0
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.backbone.backboneMod.Collection
-import typingsSlinky.backbone.backboneMod.History
-import typingsSlinky.backbone.backboneMod.Model
-import typingsSlinky.jquery.JQuery
-import typingsSlinky.jquery.JQuery.PlainObject
-import typingsSlinky.jquery.JQuery.Selector
-import typingsSlinky.jquery.JQuery.htmlString
+import typingsSlinky.backbone.mod.Collection
+import typingsSlinky.backbone.mod.History_
+import typingsSlinky.backbone.mod.Model
 import typingsSlinky.jquery.JQueryAjaxSettings
 import typingsSlinky.jquery.JQueryStatic
 import typingsSlinky.jquery.JQueryXHR
+import typingsSlinky.jquery.JQuery_
+import typingsSlinky.jquery.JQuery_.PlainObject
+import typingsSlinky.jquery.JQuery_.Selector
+import typingsSlinky.jquery.JQuery_.htmlString
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Document
+import typingsSlinky.std.Document_
 import typingsSlinky.std.HTMLSelectElement
-import typingsSlinky.std.Window
+import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,8 +25,8 @@ import scala.scalajs.js.annotation._
 trait Typeofbackbone extends js.Object {
   @JSName("$")
   var $_Original: JQueryStatic = js.native
-  var Collection: TypeofClassCollection = js.native
-  val Events: typingsSlinky.backbone.backboneMod.Events = js.native
+  var Collection: TypeofCollection = js.native
+  val Events: typingsSlinky.backbone.mod.Events = js.native
   /**
     * Helper to avoid code repetition in type declarations.
     * Backbone.Events cannot be extended, hence a separate abstract
@@ -37,15 +37,15 @@ trait Typeofbackbone extends js.Object {
     * class, and for actual class definitions, please see the
     * Events_* interfaces above.
     */
-  var EventsMixin: Instantiable0[typingsSlinky.backbone.backboneMod.EventsMixin] = js.native
-  var History: TypeofClassHistory = js.native
-  var Model: TypeofClassModel = js.native
-  var ModelBase: Instantiable0[typingsSlinky.backbone.backboneMod.ModelBase] = js.native
-  var Router: TypeofClassRouter = js.native
-  var View: TypeofClassView = js.native
+  var EventsMixin: Instantiable0[typingsSlinky.backbone.mod.EventsMixin] = js.native
+  var History: TypeofHistory = js.native
+  var Model: TypeofModel = js.native
+  var ModelBase: Instantiable0[typingsSlinky.backbone.mod.ModelBase] = js.native
+  var Router: TypeofRouter = js.native
+  var View: TypeofView = js.native
   var emulateHTTP: Boolean = js.native
   var emulateJSON: Boolean = js.native
-  var history: History = js.native
+  var history: History_ = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param element A DOM element to wrap in a jQuery object.
@@ -58,11 +58,11 @@ trait Typeofbackbone extends js.Object {
     */
   // NOTE: `HTMLSelectElement` is both an Element and an Array-Like Object but jQuery treats it as an Element.
   @JSName("$")
-  def $(element: HTMLSelectElement): JQuery[org.scalajs.dom.raw.HTMLSelectElement] = js.native
+  def $(element: HTMLSelectElement): JQuery_[org.scalajs.dom.raw.HTMLSelectElement] = js.native
   // HACK: This is the factory function returned when importing jQuery without a DOM. Declaring it separately breaks using the type parameter on JQueryStatic.
   // HACK: The discriminator parameter handles the edge case of passing a Window object to JQueryStatic. It doesn't actually exist on the factory function.
   @JSName("$")
-  def $(window: Window, discriminator: Boolean): JQueryStatic = js.native
+  def $(window: Window_, discriminator: Boolean): JQueryStatic = js.native
   /**
     * Returns an empty jQuery set.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
@@ -70,7 +70,7 @@ trait Typeofbackbone extends js.Object {
     */
   // tslint:disable-next-line:no-unnecessary-generics
   @JSName("$")
-  def $[TElement](): JQuery[TElement] = js.native
+  def $[TElement](): JQuery_[TElement] = js.native
   /**
     * Binds a function to be executed when the DOM has finished loading.
     * @param callback The function to execute when the DOM is ready.
@@ -91,19 +91,64 @@ trait Typeofbackbone extends js.Object {
     */
   // tslint:disable-next-line:no-unnecessary-generics unified-signatures
   @JSName("$")
-  def $[TElement](callback: js.ThisFunction1[/* this */ Document, /* $ */ this.type, Unit]): JQuery[TElement] = js.native
-  @JSName("$")
-  def $[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery[T] = js.native
-  @JSName("$")
-  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
+  def $[TElement](callback: js.ThisFunction1[/* this */ Document_, /* $ */ this.type, Unit]): JQuery_[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param object A plain object to wrap in a jQuery object.
+    * @param element_elementArray _&#x40;param_ `element_elementArray`
+    * <br>
+    * * `element` — A DOM element to wrap in a jQuery object. <br>
+    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
+    * @example ​ ````Set the background color of the page to black.
+  ```javascript
+  $( document.body ).css( "background", "black" );
+  ```
+    * @example ​ ````Hide all the input elements within a form.
+  ```javascript
+  $( myForm.elements ).hide();
+  ```
     */
   @JSName("$")
-  def $[T /* <: PlainObject[_] */](`object`: T): JQuery[T] = js.native
+  def $[T /* <: Element */](element_elementArray: T): JQuery_[T] = js.native
+  @JSName("$")
+  def $[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery_[T] = js.native
+  /**
+    * Creates DOM elements on the fly from the provided string of raw HTML.
+    * @param html _&#x40;param_ `html`
+    * <br>
+    * * `html (ownerDocument)` — A string of HTML to create on the fly. Note that this parses HTML, not XML. <br>
+    * * `html (attributes)` — A string defining a single, standalone, HTML element (e.g. &lt;div/&gt; or &lt;div&gt;&lt;/div&gt;).
+    * @param ownerDocument_attributes _&#x40;param_ `ownerDocument_attributes`
+    * <br>
+    * * `ownerDocument` — A document in which the new elements will be created. <br>
+    * * `attributes` — An object of attributes, events, and methods to call on the newly-created element.
+    * @see \`{@link https://api.jquery.com/jQuery/ }\`
+    * @since 1.0
+    * @since 1.4
+    * @example ​ ````Create a div element (and all of its contents) dynamically and append it to the body element. Internally, an element is created and its innerHTML property set to the given markup.
+  ```javascript
+  $( "<div><p>Hello</p></div>" ).appendTo( "body" )
+  ```
+    * @example ​ ````Create some DOM elements.
+  ```javascript
+  $( "<div/>", {
+    "class": "test",
+    text: "Click me!",
+    click: function() {
+    $( this ).toggleClass( "test" );
+    }
+  })
+    .appendTo( "body" );
+  ```
+    */
+  // tslint:disable-next-line:no-unnecessary-generics
+  @JSName("$")
+  def $[TElement /* <: HTMLElement */](html: htmlString): JQuery_[TElement] = js.native
+  @JSName("$")
+  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery_[TElement] = js.native
+  @JSName("$")
+  def $[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: Document_): JQuery_[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param selection An existing jQuery object to clone.
@@ -111,11 +156,17 @@ trait Typeofbackbone extends js.Object {
     * @since 1.0
     */
   @JSName("$")
-  def $[T](selection: JQuery[T]): JQuery[T] = js.native
+  def $[T](selection: JQuery_[T]): JQuery_[T] = js.native
+  @JSName("$")
+  def $[TElement /* <: Element */](selector: Selector, context: JQuery_[typingsSlinky.std.HTMLElement]): JQuery_[TElement] = js.native
+  @JSName("$")
+  def $[TElement /* <: Element */](selector: Selector, context: Selector): JQuery_[TElement] = js.native
+  @JSName("$")
+  def $[TElement /* <: Element */](selector: Selector, context: typingsSlinky.std.Element): JQuery_[TElement] = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     * @param selector A string containing a selector expression
-    * @param context A DOM Element, Document, or jQuery to use as context
+    * @param context A DOM Element, Document, Selector or jQuery to use as context
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
     * @example ​ ````Find all p elements that are children of a div element and apply a border to them.
@@ -151,66 +202,17 @@ trait Typeofbackbone extends js.Object {
     */
   // tslint:disable-next-line:no-unnecessary-generics
   @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector): JQuery[TElement] = js.native
+  def $_TElement_Element[TElement /* <: Element */](selector: Selector): JQuery_[TElement] = js.native
   @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector, context: JQuery[typingsSlinky.std.HTMLElement]): JQuery[TElement] = js.native
-  @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector, context: Document): JQuery[TElement] = js.native
-  @JSName("$")
-  def $[TElement /* <: Element */](selector: Selector, context: typingsSlinky.std.Element): JQuery[TElement] = js.native
-  /**
-    * Creates DOM elements on the fly from the provided string of raw HTML.
-    * @param html _&#x40;param_ `html`
-    * <br>
-    * * `html (ownerDocument)` — A string of HTML to create on the fly. Note that this parses HTML, not XML. <br>
-    * * `html (attributes)` — A string defining a single, standalone, HTML element (e.g. &lt;div/&gt; or &lt;div&gt;&lt;/div&gt;).
-    * @param ownerDocument_attributes _&#x40;param_ `ownerDocument_attributes`
-    * <br>
-    * * `ownerDocument` — A document in which the new elements will be created. <br>
-    * * `attributes` — An object of attributes, events, and methods to call on the newly-created element.
-    * @see \`{@link https://api.jquery.com/jQuery/ }\`
-    * @since 1.0
-    * @since 1.4
-    * @example ​ ````Create a div element (and all of its contents) dynamically and append it to the body element. Internally, an element is created and its innerHTML property set to the given markup.
-  ```javascript
-  $( "<div><p>Hello</p></div>" ).appendTo( "body" )
-  ```
-    * @example ​ ````Create some DOM elements.
-  ```javascript
-  $( "<div/>", {
-    "class": "test",
-    text: "Click me!",
-    click: function() {
-    $( this ).toggleClass( "test" );
-    }
-  })
-    .appendTo( "body" );
-  ```
-    */
-  // tslint:disable-next-line:no-unnecessary-generics
-  @JSName("$")
-  def $_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString): JQuery[TElement] = js.native
-  @JSName("$")
-  def $_TElement_HTMLElement[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: org.scalajs.dom.raw.Document): JQuery[TElement] = js.native
+  def $_TElement_Element[TElement /* <: Element */](selector: Selector, context: Document_): JQuery_[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param element_elementArray _&#x40;param_ `element_elementArray`
-    * <br>
-    * * `element` — A DOM element to wrap in a jQuery object. <br>
-    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
+    * @param object A plain object to wrap in a jQuery object.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
-    * @example ​ ````Set the background color of the page to black.
-  ```javascript
-  $( document.body ).css( "background", "black" );
-  ```
-    * @example ​ ````Hide all the input elements within a form.
-  ```javascript
-  $( myForm.elements ).hide();
-  ```
     */
   @JSName("$")
-  def $_T_Element[T /* <: Element */](element_elementArray: T): JQuery[T] = js.native
+  def $_T_PlainObjectWildcard[T /* <: PlainObject[_] */](`object`: T): JQuery_[T] = js.native
   def ajax(): JQueryXHR = js.native
   def ajax(options: JQueryAjaxSettings): JQueryXHR = js.native
   // Utility

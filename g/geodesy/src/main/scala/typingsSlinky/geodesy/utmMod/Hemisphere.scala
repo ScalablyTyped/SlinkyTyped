@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.geodesy.geodesyStrings.N
-  - typings.geodesy.geodesyStrings.S
+  - typingsSlinky.geodesy.geodesyStrings.N
+  - typingsSlinky.geodesy.geodesyStrings.S
 */
 trait Hemisphere extends js.Object
 

@@ -5,15 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object checkboxMod {
-  import org.scalajs.dom.raw.Event
-  import org.scalajs.dom.raw.HTMLInputElement
-  import slinky.core.SyntheticEvent
-
   type StateReducer = js.Function4[
-    /* stateType */ String, 
-    /* nextState */ CheckboxState, 
-    /* currentState */ CheckboxState, 
-    /* event */ SyntheticEvent[Event, HTMLInputElement], 
-    CheckboxState
+    /* stateType */ java.lang.String, 
+    /* nextState */ typingsSlinky.baseui.checkboxMod.CheckboxState, 
+    /* currentState */ typingsSlinky.baseui.checkboxMod.CheckboxState, 
+    /* event */ slinky.core.SyntheticEvent[typingsSlinky.std.Event_, org.scalajs.dom.raw.HTMLInputElement], 
+    typingsSlinky.baseui.checkboxMod.CheckboxState
   ]
 }

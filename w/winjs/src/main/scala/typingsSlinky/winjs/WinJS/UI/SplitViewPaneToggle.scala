@@ -1,8 +1,8 @@
 package typingsSlinky.winjs.WinJS.UI
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLButtonElement
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -53,7 +53,7 @@ class SplitViewPaneToggle () extends js.Object {
     * Raised when the SplitViewPaneToggle is invoked.
     * @param eventInfo An object that contains information about the event.
     **/
-  def oninvoked(eventInfo: Event): Unit = js.native
+  def oninvoked(eventInfo: Event_): Unit = js.native
   /**
     * Removes an event handler that the addEventListener method registered.
     * @param eventName The name of the event that the event handler is registered for.

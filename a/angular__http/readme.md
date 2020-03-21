@@ -1,7 +1,7 @@
 
 # Scala.js typings for angular__http
 
-Typings are for version 7.2.15
+Typings are for version 7.2.16
 
 ## Library description:
 Angular - the http service
@@ -10,9 +10,9 @@ Angular - the http service
 | ------------------ | :-------------: |
 | Full name          | @angular/http |
 | Keywords           | - |
-| # releases         | 114 |
-| # dependents       | 5047 |
-| # downloads        | 32217083 |
+| # releases         | 111 |
+| # dependents       | 5089 |
+| # downloads        | 31811513 |
 | # stars            | 10 |
 
 ## Links

@@ -1,0 +1,42 @@
+package typingsSlinky.reactOverlays.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
+import slinky.web.html.`*`.tag
+import typingsSlinky.reactOverlays.dropdownMenuMod.DropdownMenuProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object DropdownMenu
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactOverlays.mod.DropdownMenu] {
+  @JSImport("react-overlays", "DropdownMenu")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  def apply(
+    alignEnd: js.UndefOr[Boolean] = js.undefined,
+    flip: js.UndefOr[Boolean] = js.undefined,
+    popperConfig: js.Object = null,
+    rootCloseEvent: String = null,
+    show: js.UndefOr[Boolean] = js.undefined,
+    usePopper: js.UndefOr[Boolean] = js.undefined,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.DropdownMenu] = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(alignEnd)) __obj.updateDynamic("alignEnd")(alignEnd.asInstanceOf[js.Any])
+    if (!js.isUndefined(flip)) __obj.updateDynamic("flip")(flip.asInstanceOf[js.Any])
+    if (popperConfig != null) __obj.updateDynamic("popperConfig")(popperConfig.asInstanceOf[js.Any])
+    if (rootCloseEvent != null) __obj.updateDynamic("rootCloseEvent")(rootCloseEvent.asInstanceOf[js.Any])
+    if (!js.isUndefined(show)) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
+    if (!js.isUndefined(usePopper)) __obj.updateDynamic("usePopper")(usePopper.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactOverlays.mod.DropdownMenu] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactOverlays.mod.DropdownMenu](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = DropdownMenuProps
+}
+

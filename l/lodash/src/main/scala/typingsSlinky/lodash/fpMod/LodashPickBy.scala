@@ -1,11 +1,11 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.Dictionary
-import typingsSlinky.lodash.lodashMod.NumericDictionary
-import typingsSlinky.lodash.lodashMod.PartialObject
-import typingsSlinky.lodash.lodashMod.ValueKeyIteratee
-import typingsSlinky.lodash.lodashMod.ValueKeyIterateeTypeGuard
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.Dictionary
+import typingsSlinky.lodash.mod.NumericDictionary
+import typingsSlinky.lodash.mod.PartialObject
+import typingsSlinky.lodash.mod.ValueKeyIteratee
+import typingsSlinky.lodash.mod.ValueKeyIterateeTypeGuard
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait LodashPickBy extends js.Object {
   ): PartialObject[T] = js.native
   def apply[T](predicate: ValueKeyIteratee[T], `object`: Dictionary[T]): Dictionary[T] = js.native
   def apply[T](predicate: ValueKeyIteratee[T], `object`: NumericDictionary[T]): NumericDictionary[T] = js.native
-  def apply[T /* <: js.Object */](predicate: __): LodashPickBy5x2[T] = js.native
+  def apply[T](predicate: __): LodashPickBy1x2[T] = js.native
   def apply[T /* <: js.Object */](predicate: __, `object`: T): LodashPickBy5x2[T] = js.native
   def apply[T](predicate: __, `object`: Dictionary[T]): LodashPickBy1x2[T] = js.native
   def apply[T](predicate: __, `object`: NumericDictionary[T]): LodashPickBy2x2[T] = js.native

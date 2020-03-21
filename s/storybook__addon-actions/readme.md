@@ -1,7 +1,7 @@
 
 # Scala.js typings for storybook__addon-actions
 
-Typings are for version 5.2.8
+Typings are for version 5.3.13
 
 ## Library description:
 Action Logger addon for storybook
@@ -10,15 +10,14 @@ Action Logger addon for storybook
 | ------------------ | :-------------: |
 | Full name          | @storybook/addon-actions |
 | Keywords           | storybook |
-| # releases         | 420 |
-| # dependents       | 177 |
-| # downloads        | 36969373 |
+| # releases         | 419 |
+| # dependents       | 180 |
+| # downloads        | 37833848 |
 | # stars            | 1 |
 
 ## Links
 - [Homepage](https://github.com/storybookjs/storybook/tree/master/addons/actions)
 - [Bugs](https://github.com/storybookjs/storybook/issues)
-- [Repository](https://github.com/storybookjs/storybook)
 - [Npm](https://www.npmjs.com/package/%40storybook%2Faddon-actions)
     
 

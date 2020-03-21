@@ -2,8 +2,8 @@ package typingsSlinky.winjs.WinJS.UI
 
 import org.scalajs.dom.raw.CustomEvent
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.winjs.Anon_Bottom
-import typingsSlinky.winjs.Anon_Compact
+import typingsSlinky.winjs.AnonBottom
+import typingsSlinky.winjs.AnonCompact
 import typingsSlinky.winjs.WinJS.Binding.List
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -131,11 +131,11 @@ object AppBar extends js.Object {
   /**
     * Display options for the AppBar when closed.
     **/
-  var ClosedDisplayMode: Anon_Compact = js.native
+  var ClosedDisplayMode: AnonCompact = js.native
   /**
     * Display options for AppBar placement in relation to the main view.
     */
-  var Placement: Anon_Bottom = js.native
+  var Placement: AnonBottom = js.native
   /**
     * Indicates that the object is compatibile with declarative processing.
     **/

@@ -1,7 +1,7 @@
 
 # Scala.js typings for sc-channel
 
-Typings are for version 1.2
+Typings are for version 2.0
 
 ## Library description:
 Channel object for SocketCluster
@@ -12,7 +12,7 @@ Channel object for SocketCluster
 | Keywords           | channel, socketcluster, pubsub, publish, subscribe |
 | # releases         | 2 |
 | # dependents       | 7 |
-| # downloads        | 3275471 |
+| # downloads        | 3230275 |
 | # stars            | 0 |
 
 ## Links

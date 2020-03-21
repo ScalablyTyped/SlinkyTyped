@@ -12,7 +12,7 @@ Command Line Interface and library for Communications with Espruino JavaScript M
 | Keywords           | espruino, microcontroller, uc, embedded |
 | # releases         | 29 |
 | # dependents       | 5 |
-| # downloads        | 7120 |
+| # downloads        | 6949 |
 | # stars            | 3 |
 
 ## Links

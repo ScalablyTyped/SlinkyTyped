@@ -11,8 +11,8 @@ Encode & decode XML/HTML entities with ease
 | Full name          | entities |
 | Keywords           | html, xml, entity, decoding, encoding |
 | # releases         | 3 |
-| # dependents       | 310 |
-| # downloads        | 391833240 |
+| # dependents       | 317 |
+| # downloads        | 408675904 |
 | # stars            | 19 |
 
 ## Links

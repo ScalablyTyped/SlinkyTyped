@@ -5,7 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object reactMod {
-  import slinky.core.ReactComponentClass
-
-  type Linkify = ReactComponentClass[LinkifyProps]
+  type Linkify = slinky.core.ReactComponentClass[typingsSlinky.linkifyjs.reactMod.LinkifyProps]
 }

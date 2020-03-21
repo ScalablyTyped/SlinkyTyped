@@ -6,19 +6,21 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.victory.Anon_XY
-import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.victoryMod.AnimatePropTypeInterface
-import typingsSlinky.victory.victoryMod.ColorScalePropType
-import typingsSlinky.victory.victoryMod.D3Scale
-import typingsSlinky.victory.victoryMod.DataGetterPropType
-import typingsSlinky.victory.victoryMod.EventPropTypeInterface
-import typingsSlinky.victory.victoryMod.PaddingProps
-import typingsSlinky.victory.victoryMod.ScalePropType
-import typingsSlinky.victory.victoryMod.StringOrNumberOrCallback
-import typingsSlinky.victory.victoryMod.VictoryPieProps
-import typingsSlinky.victory.victoryMod.VictoryStyleInterface
-import typingsSlinky.victory.victoryMod.VictoryThemeDefinition
+import typingsSlinky.victory.Anon1
+import typingsSlinky.victory.AnonXBoolean
+import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.mod.AnimatePropTypeInterface
+import typingsSlinky.victory.mod.ColorScalePropType
+import typingsSlinky.victory.mod.D3Scale
+import typingsSlinky.victory.mod.DataGetterPropType
+import typingsSlinky.victory.mod.EventPropTypeInterface
+import typingsSlinky.victory.mod.PaddingProps
+import typingsSlinky.victory.mod.ScalePropType
+import typingsSlinky.victory.mod.StringOrNumberOrCallback
+import typingsSlinky.victory.mod.VictoryPieProps
+import typingsSlinky.victory.mod.VictorySliceProps
+import typingsSlinky.victory.mod.VictoryStyleInterface
+import typingsSlinky.victory.mod.VictoryThemeDefinition
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.labels
 import typingsSlinky.victory.victoryStrings.parent
@@ -27,7 +29,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VictoryPie
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.VictoryPie] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryPie] {
   @JSImport("victory", "VictoryPie")
   @js.native
   object componentImport extends js.Object
@@ -49,16 +51,17 @@ object VictoryPie
     groupComponent: ReactElement = null,
     height: Int | Double = null,
     horizontal: js.UndefOr[Boolean] = js.undefined,
-    innerRadius: Int | Double = null,
+    innerRadius: Double | (js.Function1[/* props */ VictorySliceProps, Double]) = null,
     labelComponent: ReactElement = null,
     labelRadius: Int | Double = null,
     labels: js.Array[String] | (js.Function1[/* data */ js.Any, String]) = null,
-    maxDomain: Double | Anon_XY = null,
-    minDomain: Double | Anon_XY = null,
+    maxDomain: Double | AnonY = null,
+    minDomain: Double | AnonY = null,
     padAngle: Int | Double = null,
     padding: PaddingProps = null,
     radius: Int | Double = null,
-    scale: ScalePropType | D3Scale | Anon_XYD3Scale = null,
+    scale: ScalePropType | D3Scale | Anon1 = null,
+    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
     standalone: js.UndefOr[Boolean] = js.undefined,
     startAngle: Int | Double = null,
     style: VictoryStyleInterface = null,
@@ -67,7 +70,7 @@ object VictoryPie
     x: DataGetterPropType = null,
     y: DataGetterPropType = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryPie] = {
+  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryPie] = {
     val __obj = js.Dynamic.literal()
     if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
     if (colorScale != null) __obj.updateDynamic("colorScale")(colorScale.asInstanceOf[js.Any])
@@ -91,6 +94,7 @@ object VictoryPie
     if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
     if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
     if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
     if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
     if (startAngle != null) __obj.updateDynamic("startAngle")(startAngle.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
@@ -101,7 +105,7 @@ object VictoryPie
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryPie] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.VictoryPie](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryPie] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryPie](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryPieProps
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.beanstalkd
 
-import typingsSlinky.beanstalkd.beanstalkdMod.BeanstalkdJobState
+import typingsSlinky.beanstalkd.mod.BeanstalkdJobState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

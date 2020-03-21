@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object mode {
-  type CBC = IBlockCipherModeImpl
-  type CFB = IBlockCipherModeImpl
-  type CTR = IBlockCipherModeImpl
-  type CTRGladman = IBlockCipherModeImpl
-  type ECB = IBlockCipherModeImpl
-  type OFB = IBlockCipherModeImpl
+  type CBC = typingsSlinky.cryptojs.CryptoJS.mode.IBlockCipherModeImpl
+  type CFB = typingsSlinky.cryptojs.CryptoJS.mode.IBlockCipherModeImpl
+  type CTR = typingsSlinky.cryptojs.CryptoJS.mode.IBlockCipherModeImpl
+  type CTRGladman = typingsSlinky.cryptojs.CryptoJS.mode.IBlockCipherModeImpl
+  type ECB = typingsSlinky.cryptojs.CryptoJS.mode.IBlockCipherModeImpl
+  type OFB = typingsSlinky.cryptojs.CryptoJS.mode.IBlockCipherModeImpl
 }

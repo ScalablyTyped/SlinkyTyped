@@ -1,11 +1,11 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesRadar
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth
-import typingsSlinky.echarts.Anon_AreaStyleItemStyle
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BarBorderColorBarBorderWidth
-import typingsSlinky.echarts.Anon_ColorOpacity
-import typingsSlinky.echarts.Anon_ColorOpacityShadowBlur
+import typingsSlinky.echarts.AnonAreaStyleItemStyle
+import typingsSlinky.echarts.AnonBarBorderWidth
+import typingsSlinky.echarts.AnonDistance
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonOpacity
+import typingsSlinky.echarts.AnonShadowBlur
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,32 +17,32 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-radar.data.areaStyle
     */
-  var areaStyle: js.UndefOr[Anon_ColorOpacity] = js.undefined
+  var areaStyle: js.UndefOr[AnonOpacity] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-radar.data.emphasis
     */
-  var emphasis: js.UndefOr[Anon_AreaStyleItemStyle] = js.undefined
+  var emphasis: js.UndefOr[AnonAreaStyleItemStyle] = js.undefined
   /**
     * Style setting of the symbol on single inflection point.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-radar.data.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BarBorderColorBarBorderWidth] = js.undefined
+  var itemStyle: js.UndefOr[AnonBarBorderWidth] = js.undefined
   /**
     * Style setting of the text on single inflection point.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-radar.data.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth] = js.undefined
+  var label: js.UndefOr[AnonDistance] = js.undefined
   /**
     * Line style of a single item.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-radar.data.lineStyle
     */
-  var lineStyle: js.UndefOr[Anon_ColorOpacityShadowBlur] = js.undefined
+  var lineStyle: js.UndefOr[AnonShadowBlur] = js.undefined
   /**
     * Data item name
     *
@@ -150,7 +150,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-radar.data.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * Numerical value of a single data item.
     *
@@ -163,18 +163,18 @@ trait DataObject extends js.Object {
 object DataObject {
   @scala.inline
   def apply(
-    areaStyle: Anon_ColorOpacity = null,
-    emphasis: Anon_AreaStyleItemStyle = null,
-    itemStyle: Anon_BarBorderColorBarBorderWidth = null,
-    label: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth = null,
-    lineStyle: Anon_ColorOpacityShadowBlur = null,
+    areaStyle: AnonOpacity = null,
+    emphasis: AnonAreaStyleItemStyle = null,
+    itemStyle: AnonBarBorderWidth = null,
+    label: AnonDistance = null,
+    lineStyle: AnonShadowBlur = null,
     name: String = null,
     symbol: String = null,
     symbolKeepAspect: js.UndefOr[Boolean] = js.undefined,
     symbolOffset: js.Array[_] = null,
     symbolRotate: Int | Double = null,
     symbolSize: js.Array[_] | Double = null,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     value: Double | js.Array[Double] = null
   ): DataObject = {
     val __obj = js.Dynamic.literal()

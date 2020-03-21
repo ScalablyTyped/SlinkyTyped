@@ -10,9 +10,9 @@ JupyterLab - Vega 4 and Vega-Lite 2 Mime Renderer Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/vega4-extension |
 | Keywords           | - |
-| # releases         | 41 |
+| # releases         | 40 |
 | # dependents       | 1 |
-| # downloads        | 711134 |
+| # downloads        | 719692 |
 | # stars            | 0 |
 
 ## Links

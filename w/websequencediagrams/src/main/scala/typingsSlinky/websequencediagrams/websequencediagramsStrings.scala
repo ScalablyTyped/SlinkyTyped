@@ -1,7 +1,7 @@
 package typingsSlinky.websequencediagrams
 
-import typingsSlinky.websequencediagrams.websequencediagramsMod.OutputType
-import typingsSlinky.websequencediagrams.websequencediagramsMod.Style
+import typingsSlinky.websequencediagrams.mod.OutputType
+import typingsSlinky.websequencediagrams.mod.Style
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

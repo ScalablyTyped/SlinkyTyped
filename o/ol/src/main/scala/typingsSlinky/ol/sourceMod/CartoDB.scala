@@ -1,7 +1,7 @@
 package typingsSlinky.ol.sourceMod
 
-import typingsSlinky.ol.sourceCartoDBMod.Options
-import typingsSlinky.ol.sourceCartoDBMod.default
+import typingsSlinky.ol.cartoDBMod.Options
+import typingsSlinky.ol.cartoDBMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

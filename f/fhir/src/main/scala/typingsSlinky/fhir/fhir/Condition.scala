@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Detailed information about conditions, problems or diagnoses
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait Condition extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Condition extends DomainResource {
   /**
     * Contains extended information for property 'abatementBoolean'.
     */

@@ -1,35 +1,35 @@
 package typingsSlinky.ethers.ethersMod
 
-import typingsSlinky.ethers.Anon_From
-import typingsSlinky.ethers.distTypesUtilsTypesMod.Arrayish
-import typingsSlinky.ethers.distTypesUtilsTypesMod.BigNumber
-import typingsSlinky.ethers.distTypesUtilsTypesMod.BigNumberish
-import typingsSlinky.ethers.distTypesUtilsTypesMod.CoerceFunc
-import typingsSlinky.ethers.distTypesUtilsTypesMod.ConnectionInfo
-import typingsSlinky.ethers.distTypesUtilsTypesMod.EventFragment
-import typingsSlinky.ethers.distTypesUtilsTypesMod.FunctionFragment
-import typingsSlinky.ethers.distTypesUtilsTypesMod.Network
-import typingsSlinky.ethers.distTypesUtilsTypesMod.Networkish
-import typingsSlinky.ethers.distTypesUtilsTypesMod.ParamType
-import typingsSlinky.ethers.distTypesUtilsTypesMod.Signature
-import typingsSlinky.ethers.distTypesUtilsTypesMod.Transaction
-import typingsSlinky.ethers.distTypesUtilsTypesMod.UnsignedTransaction
-import typingsSlinky.ethers.distTypesUtilsUtf8Mod.UnicodeNormalizationForm
+import typingsSlinky.ethers.AnonFrom
 import typingsSlinky.ethers.ethersStrings.Ξ
+import typingsSlinky.ethers.typesMod.Arrayish
+import typingsSlinky.ethers.typesMod.BigNumber
+import typingsSlinky.ethers.typesMod.BigNumberish
+import typingsSlinky.ethers.typesMod.CoerceFunc
+import typingsSlinky.ethers.typesMod.ConnectionInfo
+import typingsSlinky.ethers.typesMod.EventFragment
+import typingsSlinky.ethers.typesMod.FunctionFragment
+import typingsSlinky.ethers.typesMod.Network
+import typingsSlinky.ethers.typesMod.Networkish
+import typingsSlinky.ethers.typesMod.ParamType
+import typingsSlinky.ethers.typesMod.Signature
+import typingsSlinky.ethers.typesMod.Transaction
+import typingsSlinky.ethers.typesMod.UnsignedTransaction
+import typingsSlinky.ethers.utf8Mod.UnicodeNormalizationForm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("ethers", "utils")
+@JSImport("ethers/dist/types/ethers", "utils")
 @js.native
 object utils extends js.Object {
   @js.native
   class AbiCoder ()
-    extends typingsSlinky.ethers.distTypesEthersMod.utils.AbiCoder {
+    extends typingsSlinky.ethers.utilsMod.AbiCoder {
     def this(coerceFunc: CoerceFunc) = this()
   }
   
-  val defaultAbiCoder: typingsSlinky.ethers.distTypesUtilsAbiDashCoderMod.AbiCoder = js.native
+  val defaultAbiCoder: typingsSlinky.ethers.abiCoderMod.AbiCoder = js.native
   val etherSymbol: Ξ = js.native
   def arrayify(value: Arrayish): scala.scalajs.js.typedarray.Uint8Array = js.native
   def arrayify(value: BigNumber): scala.scalajs.js.typedarray.Uint8Array = js.native
@@ -52,7 +52,7 @@ object utils extends js.Object {
   def formatUnits(value: BigNumberish, unitType: Double): String = js.native
   def formatUnits(value: BigNumberish, unitType: Double, options: js.Any): String = js.native
   def getAddress(address: String): String = js.native
-  def getContractAddress(transaction: Anon_From): String = js.native
+  def getContractAddress(transaction: AnonFrom): String = js.native
   def getIcapAddress(address: String): String = js.native
   def getJsonWalletAddress(json: String): String = js.native
   def getNetwork(network: Networkish): Network = js.native
@@ -144,23 +144,23 @@ object utils extends js.Object {
   object types extends js.Object {
     @js.native
     abstract class BigNumber ()
-      extends typingsSlinky.ethers.distTypesUtilsTypesMod.BigNumber
+      extends typingsSlinky.ethers.typesMod.BigNumber
     
     @js.native
     abstract class HDNode ()
-      extends typingsSlinky.ethers.distTypesUtilsTypesMod.HDNode
+      extends typingsSlinky.ethers.typesMod.HDNode
     
     @js.native
     abstract class Indexed ()
-      extends typingsSlinky.ethers.distTypesUtilsTypesMod.Indexed
+      extends typingsSlinky.ethers.typesMod.Indexed
     
     @js.native
     abstract class MinimalProvider ()
-      extends typingsSlinky.ethers.distTypesUtilsTypesMod.MinimalProvider
+      extends typingsSlinky.ethers.typesMod.MinimalProvider
     
     @js.native
     abstract class Signer ()
-      extends typingsSlinky.ethers.distTypesUtilsTypesMod.Signer
+      extends typingsSlinky.ethers.typesMod.Signer
     
   }
   

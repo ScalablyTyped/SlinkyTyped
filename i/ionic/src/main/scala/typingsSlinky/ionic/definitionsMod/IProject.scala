@@ -1,12 +1,12 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.atIonicCliDashFramework.atIonicCliDashFrameworkMod.BaseConfig
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.PackageJson
+import typingsSlinky.ionic.RequiredProjectIntegratio
 import typingsSlinky.ionic.libBuildMod.BuildRunner
 import typingsSlinky.ionic.libGenerateMod.GenerateRunner
 import typingsSlinky.ionic.libProjectMod.ProjectDetailsResult
 import typingsSlinky.ionic.libServeMod.ServeRunner
-import typingsSlinky.std.Required
+import typingsSlinky.ionicCliFramework.definitionsMod.PackageJson
+import typingsSlinky.ionicCliFramework.mod.BaseConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait IProject extends js.Object {
   def getDocsUrl(): js.Promise[String] = js.native
   def getGenerateRunner(): js.Promise[js.UndefOr[GenerateRunner[_]]] = js.native
   def getInfo(): js.Promise[js.Array[InfoItem]] = js.native
-  def getIntegration(name: IntegrationName): js.UndefOr[Required[ProjectIntegration]] = js.native
+  def getIntegration(name: IntegrationName): js.UndefOr[RequiredProjectIntegratio] = js.native
   def getPackageJson(): js.Promise[js.Tuple2[js.UndefOr[PackageJson], js.UndefOr[String]]] = js.native
   def getPackageJson(pkgName: String): js.Promise[js.Tuple2[js.UndefOr[PackageJson], js.UndefOr[String]]] = js.native
   def getServeRunner(): js.Promise[js.UndefOr[ServeRunner[_]]] = js.native
@@ -38,7 +38,7 @@ trait IProject extends js.Object {
   def requireAppflowId(): js.Promise[String] = js.native
   def requireBuildRunner(): js.Promise[BuildRunner[_]] = js.native
   def requireGenerateRunner(): js.Promise[GenerateRunner[_]] = js.native
-  def requireIntegration(name: IntegrationName): Required[ProjectIntegration] = js.native
+  def requireIntegration(name: IntegrationName): RequiredProjectIntegratio = js.native
   def requirePackageJson(): js.Promise[PackageJson] = js.native
   def requirePackageJson(pkgName: String): js.Promise[PackageJson] = js.native
   def requireServeRunner(): js.Promise[ServeRunner[_]] = js.native

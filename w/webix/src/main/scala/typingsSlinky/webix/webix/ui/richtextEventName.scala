@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onChange
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onViewShow
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onChange
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onViewShow
 */
 trait richtextEventName extends js.Object
 

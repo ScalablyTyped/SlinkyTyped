@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.dgauges
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.endThickness
 import typingsSlinky.dojo.dojoStrings.fill
 import typingsSlinky.dojo.dojoStrings.radius
@@ -85,7 +85,7 @@ class CircularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_fill(
     property: fill,
@@ -95,7 +95,7 @@ class CircularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_radius(
     property: radius,
@@ -105,7 +105,7 @@ class CircularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_start(
     property: start,
@@ -115,7 +115,7 @@ class CircularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_startThickness(
     property: startThickness,
@@ -125,7 +125,7 @@ class CircularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_stroke(
     property: stroke,
@@ -135,6 +135,6 @@ class CircularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

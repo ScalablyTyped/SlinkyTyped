@@ -5,24 +5,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.baseui.baseuiStrings.auto
-  - typings.baseui.baseuiStrings.normal
-  - typings.baseui.baseuiStrings.center
-  - typings.baseui.baseuiStrings.start
-  - typings.baseui.baseuiStrings.end
-  - typings.baseui.baseuiStrings.`self-start`
-  - typings.baseui.baseuiStrings.`self-end`
-  - typings.baseui.baseuiStrings.`flex-start`
-  - typings.baseui.baseuiStrings.`flex-end`
-  - typings.baseui.baseuiStrings.baseline
-  - typings.baseui.baseuiStrings.`first baseline`
-  - typings.baseui.baseuiStrings.`last baseline`
-  - typings.baseui.baseuiStrings.stretch
-  - typings.baseui.baseuiStrings.`safe center`
-  - typings.baseui.baseuiStrings.`unsafe center`
-  - typings.baseui.baseuiStrings.inherit
-  - typings.baseui.baseuiStrings.initial
-  - typings.baseui.baseuiStrings.unset
+  - typingsSlinky.baseui.baseuiStrings.auto
+  - typingsSlinky.baseui.baseuiStrings.normal
+  - typingsSlinky.baseui.baseuiStrings.center
+  - typingsSlinky.baseui.baseuiStrings.start
+  - typingsSlinky.baseui.baseuiStrings.end
+  - typingsSlinky.baseui.baseuiStrings.`self-start`
+  - typingsSlinky.baseui.baseuiStrings.`self-end`
+  - typingsSlinky.baseui.baseuiStrings.`flex-start`
+  - typingsSlinky.baseui.baseuiStrings.`flex-end`
+  - typingsSlinky.baseui.baseuiStrings.baseline
+  - typingsSlinky.baseui.baseuiStrings.`first baseline`
+  - typingsSlinky.baseui.baseuiStrings.`last baseline`
+  - typingsSlinky.baseui.baseuiStrings.stretch
+  - typingsSlinky.baseui.baseuiStrings.`safe center`
+  - typingsSlinky.baseui.baseuiStrings.`unsafe center`
+  - typingsSlinky.baseui.baseuiStrings.inherit
+  - typingsSlinky.baseui.baseuiStrings.initial
+  - typingsSlinky.baseui.baseuiStrings.unset
 */
 trait AlignSelf extends js.Object
 

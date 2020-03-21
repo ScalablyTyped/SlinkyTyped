@@ -1,6 +1,6 @@
 package typingsSlinky.heremaps.H.ui.ZoomRectangle
 
-import typingsSlinky.heremaps.H.Map
+import typingsSlinky.heremaps.H.Map_
 import typingsSlinky.heremaps.H.ui.LayoutAlignment
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,13 +12,13 @@ import scala.scalajs.js.annotation._
   * bounding rectangle into the view port.
   */
 trait Options extends js.Object {
-  var adjustZoom: js.UndefOr[js.Function2[/* n */ Double, /* m */ Map, Double]] = js.undefined
+  var adjustZoom: js.UndefOr[js.Function2[/* n */ Double, /* m */ Map_, Double]] = js.undefined
   var alignment: js.UndefOr[LayoutAlignment] = js.undefined
 }
 
 object Options {
   @scala.inline
-  def apply(adjustZoom: (/* n */ Double, /* m */ Map) => Double = null, alignment: LayoutAlignment = null): Options = {
+  def apply(adjustZoom: (/* n */ Double, /* m */ Map_) => Double = null, alignment: LayoutAlignment = null): Options = {
     val __obj = js.Dynamic.literal()
     if (adjustZoom != null) __obj.updateDynamic("adjustZoom")(js.Any.fromFunction2(adjustZoom))
     if (alignment != null) __obj.updateDynamic("alignment")(alignment.asInstanceOf[js.Any])

@@ -1,6 +1,6 @@
 package typingsSlinky.ftpd
 
-import typingsSlinky.ftpd.ftpdMod.LogLevel
+import typingsSlinky.ftpd.mod.LogLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

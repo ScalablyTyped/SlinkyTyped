@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.linkifyjs.linkifyjsMod.Options
+import typingsSlinky.linkifyjs.mod.Options
 import typingsSlinky.linkifyjs.reactMod.LinkifyProps
 import typingsSlinky.linkifyjs.reactMod.default
 import scala.scalajs.js

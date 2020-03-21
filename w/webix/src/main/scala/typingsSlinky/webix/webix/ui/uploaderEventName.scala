@@ -5,30 +5,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onAfterFileAdd
-  - typings.webix.webixStrings.onAfterRender
-  - typings.webix.webixStrings.onAfterScroll
-  - typings.webix.webixStrings.onBeforeFileAdd
-  - typings.webix.webixStrings.onBeforeRender
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onBlur
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onEnter
-  - typings.webix.webixStrings.onFileUpload
-  - typings.webix.webixStrings.onFileUploadError
-  - typings.webix.webixStrings.onFocus
-  - typings.webix.webixStrings.onItemClick
-  - typings.webix.webixStrings.onKeyPress
-  - typings.webix.webixStrings.onLongTouch
-  - typings.webix.webixStrings.onSwipeX
-  - typings.webix.webixStrings.onSwipeY
-  - typings.webix.webixStrings.onTimedKeyPress
-  - typings.webix.webixStrings.onTouchEnd
-  - typings.webix.webixStrings.onTouchMove
-  - typings.webix.webixStrings.onTouchStart
-  - typings.webix.webixStrings.onUploadComplete
-  - typings.webix.webixStrings.onViewResize
-  - typings.webix.webixStrings.onViewShow
+  - typingsSlinky.webix.webixStrings.onAfterFileAdd
+  - typingsSlinky.webix.webixStrings.onAfterRender
+  - typingsSlinky.webix.webixStrings.onAfterScroll
+  - typingsSlinky.webix.webixStrings.onBeforeFileAdd
+  - typingsSlinky.webix.webixStrings.onBeforeRender
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onBlur
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onEnter
+  - typingsSlinky.webix.webixStrings.onFileUpload
+  - typingsSlinky.webix.webixStrings.onFileUploadError
+  - typingsSlinky.webix.webixStrings.onFocus
+  - typingsSlinky.webix.webixStrings.onItemClick
+  - typingsSlinky.webix.webixStrings.onKeyPress
+  - typingsSlinky.webix.webixStrings.onLongTouch
+  - typingsSlinky.webix.webixStrings.onSwipeX
+  - typingsSlinky.webix.webixStrings.onSwipeY
+  - typingsSlinky.webix.webixStrings.onTimedKeyPress
+  - typingsSlinky.webix.webixStrings.onTouchEnd
+  - typingsSlinky.webix.webixStrings.onTouchMove
+  - typingsSlinky.webix.webixStrings.onTouchStart
+  - typingsSlinky.webix.webixStrings.onUploadComplete
+  - typingsSlinky.webix.webixStrings.onViewResize
+  - typingsSlinky.webix.webixStrings.onViewShow
 */
 trait uploaderEventName extends js.Object
 

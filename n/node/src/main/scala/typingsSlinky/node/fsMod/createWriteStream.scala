@@ -1,6 +1,6 @@
 package typingsSlinky.node.fsMod
 
-import typingsSlinky.node.Anon_AutoCloseEncoding
+import typingsSlinky.node.AnonEmitClose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ object createWriteStream extends js.Object {
     */
   def apply(path: PathLike): WriteStream = js.native
   def apply(path: PathLike, options: String): WriteStream = js.native
-  def apply(path: PathLike, options: Anon_AutoCloseEncoding): WriteStream = js.native
+  def apply(path: PathLike, options: AnonEmitClose): WriteStream = js.native
 }
 

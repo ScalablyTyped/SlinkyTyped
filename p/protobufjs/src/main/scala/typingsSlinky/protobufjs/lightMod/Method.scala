@@ -1,7 +1,7 @@
 package typingsSlinky.protobufjs.lightMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.protobufjs.protobufjsMod.IMethod
+import typingsSlinky.protobufjs.mod.IMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("protobufjs/light", "Method")
 @js.native
 class Method protected ()
-  extends typingsSlinky.protobufjs.protobufjsMod.Method {
+  extends typingsSlinky.protobufjs.mod.Method {
   def this(name: String, `type`: js.UndefOr[scala.Nothing], requestType: String, responseType: String) = this()
   /**
     * Constructs a new service method instance.
@@ -274,6 +274,6 @@ object Method extends js.Object {
     * @returns Created method
     * @throws {TypeError} If arguments are invalid
     */
-  def fromJSON(name: String, json: IMethod): typingsSlinky.protobufjs.protobufjsMod.Method = js.native
+  def fromJSON(name: String, json: IMethod): typingsSlinky.protobufjs.mod.Method = js.native
 }
 

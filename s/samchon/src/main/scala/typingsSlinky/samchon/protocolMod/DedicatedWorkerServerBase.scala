@@ -1,6 +1,6 @@
 package typingsSlinky.samchon.protocolMod
 
-import typingsSlinky.samchon.protocolServerIServerMod.IServer
+import typingsSlinky.samchon.iserverMod.IServer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("samchon/protocol", "DedicatedWorkerServerBase")
 @js.native
 class DedicatedWorkerServerBase protected ()
-  extends typingsSlinky.samchon.protocolServerBaseDedicatedWorkerServerBaseMod.DedicatedWorkerServerBase {
+  extends typingsSlinky.samchon.dedicatedWorkerServerBaseMod.DedicatedWorkerServerBase {
   /**
     * Construct from a *hooker*.
     *

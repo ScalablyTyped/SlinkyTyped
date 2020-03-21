@@ -1,8 +1,8 @@
 package typingsSlinky.ckeditor.CKEDITOR
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ckeditor.Anon_Callback
-import typingsSlinky.ckeditor.Anon_Title
+import typingsSlinky.ckeditor.AnonCallback
+import typingsSlinky.ckeditor.AnonTitle
 import typingsSlinky.ckeditor.CKEDITOR.dom.documentFragment
 import typingsSlinky.ckeditor.CKEDITOR.dom.node
 import typingsSlinky.ckeditor.CKEDITOR.dom.range
@@ -108,7 +108,7 @@ class editor_ () extends event {
     callbackOrOptions: js.Function1[/* data */ js.Any, Unit],
     callback: js.Function1[/* data */ js.Any, Unit]
   ): Unit = js.native
-  def getClipboardData(callbackOrOptions: Anon_Title, callback: js.Function1[/* data */ js.Any, Unit]): Unit = js.native
+  def getClipboardData(callbackOrOptions: AnonTitle, callback: js.Function1[/* data */ js.Any, Unit]): Unit = js.native
   def getColorFromDialog(callback: js.Function1[/* color */ String, Unit]): Unit = js.native
   def getColorFromDialog(callback: js.Function1[/* color */ String, Unit], scope: StringDictionary[js.Any]): Unit = js.native
   def getCommand(commandName: String): command = js.native
@@ -118,10 +118,10 @@ class editor_ () extends event {
   def getData(internal: Boolean): String = js.native
   def getMenuItem(name: String): IMenuItemDefinition = js.native
   def getResizable(forContents: Boolean): typingsSlinky.ckeditor.CKEDITOR.dom.element = js.native
-  def getSelectedHtml(): documentFragment | String = js.native
+  def getSelectedHtml(): documentFragment = js.native
   def getSelectedHtml(toString: Boolean): documentFragment | String = js.native
   @JSName("getSelectedHtml")
-  def getSelectedHtml_documentFragment(): documentFragment = js.native
+  def getSelectedHtml_Union(): documentFragment | String = js.native
   @JSName("getSelectedHtml")
   def getSelectedHtml_false(toString: `false`): documentFragment = js.native
   @JSName("getSelectedHtml")
@@ -173,7 +173,7 @@ class editor_ () extends event {
   def setActiveEnterMode(enterMode: Double, shiftEnterMode: Double): Unit = js.native
   def setActiveFilter(filter: typingsSlinky.ckeditor.CKEDITOR.filter): Unit = js.native
   def setData(data: String): Unit = js.native
-  def setData(data: String, options: Anon_Callback): Unit = js.native
+  def setData(data: String, options: AnonCallback): Unit = js.native
   def setKeystroke(keystroke: js.Array[js.Tuple2[Double, String | Boolean]]): Unit = js.native
   def setKeystroke(keystroke: Double, behavior: String): Unit = js.native
   def setKeystroke(keystroke: Double, behavior: Boolean): Unit = js.native

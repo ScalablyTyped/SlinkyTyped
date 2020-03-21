@@ -1,8 +1,7 @@
 package typingsSlinky.dojo.dojox.mobile
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.ChildWidgetProperties
 import typingsSlinky.dojo.dojoStrings.anchorLabel
 import typingsSlinky.dojo.dojoStrings.arrowClass
@@ -21,6 +20,7 @@ import typingsSlinky.dojo.dojoStrings.rightText
 import typingsSlinky.dojo.dojoStrings.tag
 import typingsSlinky.dojo.dojoStrings.uncheckClass
 import typingsSlinky.dojo.dojoStrings.variableHeight
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -42,7 +42,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.mobile.ListItem")
 @js.native
-class ListItem_ () extends _ItemBase {
+class ListItem_ () extends ItemBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -203,7 +203,7 @@ class ListItem_ () extends _ItemBase {
     *
     * @param e
     */
-  def onClick(e: Event): Unit = js.native
+  def onClick(e: Event_): Unit = js.native
   /**
     *
     */
@@ -258,7 +258,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_anchorLabel(
     property: anchorLabel,
@@ -268,7 +268,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_arrowClass(
     property: arrowClass,
@@ -278,7 +278,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_busy(
     property: busy,
@@ -288,7 +288,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_checkClass(
     property: checkClass,
@@ -298,7 +298,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_checked(
     property: checked,
@@ -308,7 +308,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_deleteIcon(
     property: deleteIcon,
@@ -318,7 +318,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_header(
     property: header,
@@ -328,7 +328,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_noArrow(
     property: noArrow,
@@ -338,7 +338,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_progStyle(
     property: progStyle,
@@ -348,7 +348,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rightIcon(
     property: rightIcon,
@@ -358,7 +358,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rightIcon2(
     property: rightIcon2,
@@ -368,7 +368,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rightIcon2Title(
     property: rightIcon2Title,
@@ -378,7 +378,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rightIconTitle(
     property: rightIconTitle,
@@ -388,7 +388,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rightText(
     property: rightText,
@@ -398,7 +398,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_tag(
     property: tag,
@@ -408,7 +408,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_uncheckClass(
     property: uncheckClass,
@@ -418,7 +418,7 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_variableHeight(
     property: variableHeight,
@@ -428,6 +428,6 @@ class ListItem_ () extends _ItemBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

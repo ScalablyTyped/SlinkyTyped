@@ -14,15 +14,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.nodegit.nodegitNumbers.`32`
-  - typings.nodegit.nodegitNumbers.`43`
-  - typings.nodegit.nodegitNumbers.`45`
-  - typings.nodegit.nodegitNumbers.`61`
-  - typings.nodegit.nodegitNumbers.`62`
-  - typings.nodegit.nodegitNumbers.`60`
-  - typings.nodegit.nodegitNumbers.`70`
-  - typings.nodegit.nodegitNumbers.`72`
-  - typings.nodegit.nodegitNumbers.`66`
+  - typingsSlinky.nodegit.nodegitNumbers.`32`
+  - typingsSlinky.nodegit.nodegitNumbers.`43`
+  - typingsSlinky.nodegit.nodegitNumbers.`45`
+  - typingsSlinky.nodegit.nodegitNumbers.`61`
+  - typingsSlinky.nodegit.nodegitNumbers.`62`
+  - typingsSlinky.nodegit.nodegitNumbers.`60`
+  - typingsSlinky.nodegit.nodegitNumbers.`70`
+  - typingsSlinky.nodegit.nodegitNumbers.`72`
+  - typingsSlinky.nodegit.nodegitNumbers.`66`
 */
 trait LINE extends js.Object
 

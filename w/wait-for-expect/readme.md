@@ -1,7 +1,7 @@
 
 # Scala.js typings for wait-for-expect
 
-Typings are for version 3.0.1
+Typings are for version 3.0.2
 
 ## Library description:
 Wait for expectation to be true, useful for integration and end to end testing
@@ -12,7 +12,7 @@ Wait for expectation to be true, useful for integration and end to end testing
 | Keywords           | jest, expect, wait, async, await, promise, integration, testing, unit |
 | # releases         | 22 |
 | # dependents       | 15 |
-| # downloads        | 20898206 |
+| # downloads        | 25916951 |
 | # stars            | 0 |
 
 ## Links

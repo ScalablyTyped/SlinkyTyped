@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/type", "assertScalarType")
 @js.native
 object assertScalarType extends js.Object {
-  def apply(`type`: js.Any): typingsSlinky.graphql.typeDefinitionMod.GraphQLScalarType = js.native
+  def apply(`type`: js.Any): typingsSlinky.graphql.definitionMod.GraphQLScalarType = js.native
 }
 

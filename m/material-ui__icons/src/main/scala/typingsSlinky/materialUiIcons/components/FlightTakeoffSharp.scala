@@ -1,0 +1,15 @@
+package typingsSlinky.materialUiIcons.components
+
+import typingsSlinky.materialUiIcons.flightTakeoffSharpMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object FlightTakeoffSharp extends SharedApply_SvgIconProps1442979138[default] {
+  @JSImport("@material-ui/icons/FlightTakeoffSharp", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+}
+

@@ -10,9 +10,9 @@ Typings are for version 0.59.2
 | ------------------ | :-------------: |
 | Full name          | @nivo/geo |
 | Keywords           | nivo, dataviz, react, d3, charts, geo, map |
-| # releases         | 12 |
+| # releases         | 14 |
 | # dependents       | 0 |
-| # downloads        | 6398 |
+| # downloads        | 7375 |
 | # stars            | 0 |
 
 ## Links

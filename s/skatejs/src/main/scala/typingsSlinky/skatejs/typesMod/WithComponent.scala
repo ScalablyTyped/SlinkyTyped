@@ -11,26 +11,26 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.std.EventTarget because Already inherited
-- typings.std.Node because Already inherited
-- typings.std.Slotable because Already inherited
-- typings.std.ParentNode because Already inherited
-- typings.std.NonDocumentTypeChildNode because Already inherited
-- typings.std.InnerHTML because Already inherited
-- typings.std.Animatable because Already inherited
-- typings.std.ChildNode because Already inherited
-- typings.std.HTMLOrSVGElement because Already inherited
-- typings.std.GlobalEventHandlers because Already inherited
-- typings.std.ElementContentEditable because Already inherited
-- typings.std.ElementCSSInlineStyle because Already inherited
-- typings.std.DocumentAndElementEventHandlers because Already inherited
-- typings.std.Element because Already inherited
-- typings.std.HTMLElement because Already inherited
-- typings.skatejs.typesMod.WithContext because Inheritance from two classes. Inlined context
-- typings.skatejs.typesMod.WithUpdate because Inheritance from two classes. Inlined props, state, updating, updating, updating, shouldUpdate, shouldUpdate, shouldUpdate, triggerUpdate
-- typings.skatejs.typesMod.WithRenderer because Inheritance from two classes. Inlined renderRoot, updated, updated, updated, rendering, render, render, render, renderer, renderer, renderer, rendered
-- typings.skatejs.typesMod.WithLifecycle because Inheritance from two classes. Inlined connecting, connected, disconnecting, disconnected
-- typings.skatejs.typesMod.WithChildren because Inheritance from two classes. Inlined childrenUpdated */ @JSImport("skatejs/types", "WithComponent")
+- typingsSlinky.std.EventTarget because Already inherited
+- typingsSlinky.std.Node because Already inherited
+- typingsSlinky.std.Slotable because Already inherited
+- typingsSlinky.std.ParentNode because Already inherited
+- typingsSlinky.std.NonDocumentTypeChildNode because Already inherited
+- typingsSlinky.std.InnerHTML because Already inherited
+- typingsSlinky.std.Animatable because Already inherited
+- typingsSlinky.std.ChildNode because Already inherited
+- typingsSlinky.std.HTMLOrSVGElement because Already inherited
+- typingsSlinky.std.GlobalEventHandlers because Already inherited
+- typingsSlinky.std.ElementContentEditable because Already inherited
+- typingsSlinky.std.ElementCSSInlineStyle because Already inherited
+- typingsSlinky.std.DocumentAndElementEventHandlers because Already inherited
+- typingsSlinky.std.Element because Already inherited
+- typingsSlinky.std.HTMLElement because Already inherited
+- typingsSlinky.skatejs.typesMod.WithContext because Inheritance from two classes. Inlined context
+- typingsSlinky.skatejs.typesMod.WithUpdate because Inheritance from two classes. Inlined props, state, updating, updating, updating, shouldUpdate, shouldUpdate, shouldUpdate, triggerUpdate
+- typingsSlinky.skatejs.typesMod.WithRenderer because Inheritance from two classes. Inlined renderRoot, updated, updated, updated, rendering, render, render, render, renderer, renderer, renderer, rendered
+- typingsSlinky.skatejs.typesMod.WithLifecycle because Inheritance from two classes. Inlined connecting, connected, disconnecting, disconnected
+- typingsSlinky.skatejs.typesMod.WithChildren because Inheritance from two classes. Inlined childrenUpdated */ @JSImport("skatejs/types", "WithComponent")
 @js.native
 class WithComponent[P, S, C] ()
   extends CustomElement
@@ -48,6 +48,19 @@ class WithComponent[P, S, C] ()
   // called before render
   var rendering: js.UndefOr[js.Function0[Unit]] = js.native
   var state: S = js.native
+  /**
+    * Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
+    * 
+    * The options argument sets listener-specific options. For compatibility this can be a boolean, in which case the method behaves exactly as if the value was specified as options's capture.
+    * 
+    * When set to true, options's capture prevents callback from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not present), callback will not be invoked when event's eventPhase attribute value is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase attribute value is AT_TARGET.
+    * 
+    * When set to true, options's passive indicates that the callback will not cancel the event by invoking preventDefault(). This is used to enable performance optimizations described in § 2.8 Observing event listeners.
+    * 
+    * When set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.
+    * 
+    * The event listener is appended to target's event listener list and is not appended if it has the same type, callback, and capture.
+    */
   /* InferMemberOverrides */
   override def addEventListener(`type`: String, listener: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
@@ -59,12 +72,15 @@ class WithComponent[P, S, C] ()
   def connecting(): Unit = js.native
   def disconnected(): Unit = js.native
   def disconnecting(): Unit = js.native
+  /**
+    * Removes the event listener in target's event listener list with the same type, callback, and options.
+    */
   /* InferMemberOverrides */
-  override def removeEventListener(`type`: String, listener: EventListenerOrEventListenerObject): Unit = js.native
+  override def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject): Unit = js.native
   /* InferMemberOverrides */
-  override def removeEventListener(`type`: String, listener: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
+  override def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject, options: Boolean): Unit = js.native
   /* InferMemberOverrides */
-  override def removeEventListener(`type`: String, listener: EventListenerOrEventListenerObject, options: EventListenerOptions): Unit = js.native
+  override def removeEventListener(`type`: String, callback: EventListenerOrEventListenerObject, options: EventListenerOptions): Unit = js.native
   def render(): Mixed | Null = js.native
   def render(props: Mixed): Mixed | Null = js.native
   def render(props: Mixed, state: Mixed): Mixed | Null = js.native

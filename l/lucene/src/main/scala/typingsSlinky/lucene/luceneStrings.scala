@@ -1,6 +1,6 @@
 package typingsSlinky.lucene
 
-import typingsSlinky.lucene.luceneMod.Operator
+import typingsSlinky.lucene.mod.Operator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

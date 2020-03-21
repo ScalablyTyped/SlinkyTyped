@@ -1,6 +1,6 @@
 package typingsSlinky.tsutils.utilUtilMod
 
-import typingsSlinky.tsutils.utilConvertDashAstMod.NodeWrap
+import typingsSlinky.tsutils.convertAstMod.NodeWrap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

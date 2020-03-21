@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.arangodb.arangodbStrings.traditional
-  - typings.arangodb.arangodbStrings.autoincrement
+  - typingsSlinky.arangodb.arangodbStrings.traditional
+  - typingsSlinky.arangodb.arangodbStrings.autoincrement
 */
 trait KeyGeneratorType extends js.Object
 

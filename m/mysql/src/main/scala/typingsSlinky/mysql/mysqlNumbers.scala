@@ -1,6 +1,6 @@
 package typingsSlinky.mysql
 
-import typingsSlinky.mysql.mysqlMod.Types
+import typingsSlinky.mysql.mod.Types
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,0 +1,12 @@
+package typingsSlinky.xmldsigjs.algorithmsMod
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.xmldsigjs.xmldsigjsStrings.`SHA-384`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("xmldsigjs/build/types/algorithms", "SHA384")
+@js.native
+object SHA384_ extends TopLevel[`SHA-384`]
+

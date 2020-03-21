@@ -1,6 +1,6 @@
 package typingsSlinky.strange.treeMod
 
-import typingsSlinky.strange.strangeMod.Range
+import typingsSlinky.strange.mod.Range
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

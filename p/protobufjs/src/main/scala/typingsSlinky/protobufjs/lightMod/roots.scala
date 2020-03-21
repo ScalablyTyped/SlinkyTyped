@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("protobufjs/light", "roots")
 @js.native
 object roots
-  extends /* k */ StringDictionary[typingsSlinky.protobufjs.protobufjsMod.Root]
+  extends /* k */ StringDictionary[typingsSlinky.protobufjs.mod.Root]
 

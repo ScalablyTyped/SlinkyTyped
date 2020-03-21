@@ -1,9 +1,9 @@
 package typingsSlinky.browserfs
 
-import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.BFSOneArgCallback
-import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.FileSystem
-import typingsSlinky.browserfs.distNodeCoreFileUnderscoreSystemMod.FileSystemConstructor
-import typingsSlinky.browserfs.distNodeCoreUtilMod.Arrayish
+import typingsSlinky.browserfs.fileSystemMod.BFSOneArgCallback
+import typingsSlinky.browserfs.fileSystemMod.FileSystem
+import typingsSlinky.browserfs.fileSystemMod.FileSystemConstructor
+import typingsSlinky.browserfs.utilMod.Arrayish
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`

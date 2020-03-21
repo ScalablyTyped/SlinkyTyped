@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.remarkable.libMod._Token because Already inherited */ trait FootnoteBlockOpenToken extends TagToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait FootnoteBlockOpenToken extends TagToken {
   @JSName("type")
   var type_FootnoteBlockOpenToken: footnote_block_open
 }

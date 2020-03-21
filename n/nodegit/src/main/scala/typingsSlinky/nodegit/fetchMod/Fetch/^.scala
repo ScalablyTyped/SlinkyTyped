@@ -1,6 +1,6 @@
 package typingsSlinky.nodegit.fetchMod.Fetch
 
-import typingsSlinky.nodegit.fetchDashOptionsMod.FetchOptions
+import typingsSlinky.nodegit.fetchOptionsMod.FetchOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

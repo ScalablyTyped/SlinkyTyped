@@ -31,32 +31,32 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.mfiles.mfilesNumbers.`0`
-  - typings.mfiles.mfilesNumbers.`1`
-  - typings.mfiles.mfilesNumbers.`2`
-  - typings.mfiles.mfilesNumbers.`4`
-  - typings.mfiles.mfilesNumbers.`8`
-  - typings.mfiles.mfilesNumbers.`16`
-  - typings.mfiles.mfilesNumbers.`32`
-  - typings.mfiles.mfilesNumbers.`64`
-  - typings.mfiles.mfilesNumbers.`128`
-  - typings.mfiles.mfilesNumbers.`256`
-  - typings.mfiles.mfilesNumbers.`1024`
-  - typings.mfiles.mfilesNumbers.`2048`
-  - typings.mfiles.mfilesNumbers.`8192`
-  - typings.mfiles.mfilesNumbers.`16384`
-  - typings.mfiles.mfilesNumbers.`65536`
-  - typings.mfiles.mfilesNumbers.`131072`
-  - typings.mfiles.mfilesNumbers.`262144`
-  - typings.mfiles.mfilesNumbers.`524288`
-  - typings.mfiles.mfilesNumbers.`1048576`
-  - typings.mfiles.mfilesNumbers.`4194304`
-  - typings.mfiles.mfilesNumbers.`8388608`
-  - typings.mfiles.mfilesNumbers.`16777216`
-  - typings.mfiles.mfilesNumbers.`33554432`
-  - typings.mfiles.mfilesNumbers.`134217728`
-  - typings.mfiles.mfilesNumbers.`268435456`
-  - typings.mfiles.mfilesNumbers.`536870912`
+  - typingsSlinky.mfiles.mfilesNumbers.`0`
+  - typingsSlinky.mfiles.mfilesNumbers.`1`
+  - typingsSlinky.mfiles.mfilesNumbers.`2`
+  - typingsSlinky.mfiles.mfilesNumbers.`4`
+  - typingsSlinky.mfiles.mfilesNumbers.`8`
+  - typingsSlinky.mfiles.mfilesNumbers.`16`
+  - typingsSlinky.mfiles.mfilesNumbers.`32`
+  - typingsSlinky.mfiles.mfilesNumbers.`64`
+  - typingsSlinky.mfiles.mfilesNumbers.`128`
+  - typingsSlinky.mfiles.mfilesNumbers.`256`
+  - typingsSlinky.mfiles.mfilesNumbers.`1024`
+  - typingsSlinky.mfiles.mfilesNumbers.`2048`
+  - typingsSlinky.mfiles.mfilesNumbers.`8192`
+  - typingsSlinky.mfiles.mfilesNumbers.`16384`
+  - typingsSlinky.mfiles.mfilesNumbers.`65536`
+  - typingsSlinky.mfiles.mfilesNumbers.`131072`
+  - typingsSlinky.mfiles.mfilesNumbers.`262144`
+  - typingsSlinky.mfiles.mfilesNumbers.`524288`
+  - typingsSlinky.mfiles.mfilesNumbers.`1048576`
+  - typingsSlinky.mfiles.mfilesNumbers.`4194304`
+  - typingsSlinky.mfiles.mfilesNumbers.`8388608`
+  - typingsSlinky.mfiles.mfilesNumbers.`16777216`
+  - typingsSlinky.mfiles.mfilesNumbers.`33554432`
+  - typingsSlinky.mfiles.mfilesNumbers.`134217728`
+  - typingsSlinky.mfiles.mfilesNumbers.`268435456`
+  - typingsSlinky.mfiles.mfilesNumbers.`536870912`
 */
 trait MFVaultAccess extends js.Object
 

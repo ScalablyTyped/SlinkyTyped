@@ -1,7 +1,7 @@
 package typingsSlinky.googlemaps.google.maps
 
-import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.Element
+import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ class ImageMapType protected ()
   var tileSize_ImageMapType: Size = js.native
   def getOpacity(): Double = js.native
   /* CompleteClass */
-  override def getTile(tileCoord: Point, zoom: Double, ownerDocument: Document): Element = js.native
+  override def getTile(tileCoord: Point, zoom: Double, ownerDocument: Document_): Element = js.native
   /* CompleteClass */
   override def releaseTile(tile: Element): Unit = js.native
   def setOpacity(opacity: Double): Unit = js.native

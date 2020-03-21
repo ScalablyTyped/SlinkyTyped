@@ -1,6 +1,6 @@
 package typingsSlinky.ol.tilegridMod
 
-import typingsSlinky.ol.projProjectionMod.default
+import typingsSlinky.ol.projectionMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

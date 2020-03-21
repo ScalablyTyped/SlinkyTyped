@@ -1,7 +1,7 @@
 package typingsSlinky.winjs.WinJS.UI
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -74,7 +74,7 @@ class ToggleSwitch () extends js.Object {
     * Occurs when the ToggleSwitch control is flipped to on (checked == true) or off (checked == false).
     * @param eventInfo An object that contains information about the event.
     **/
-  def onchange(eventInfo: Event): Unit = js.native
+  def onchange(eventInfo: Event_): Unit = js.native
   /**
     * Removes an event handler that the addEventListener method registered.
     * @param eventName The name of the event that the event handler is registered for.

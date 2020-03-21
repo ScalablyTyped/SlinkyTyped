@@ -13,13 +13,13 @@ import scala.scalajs.js.annotation._
 
 /* cl_device_fp_config - bitfield */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1`
-  - typings.webcl.webclNumbers.`0x2`
-  - typings.webcl.webclNumbers.`0x4`
-  - typings.webcl.webclNumbers.`0x8`
-  - typings.webcl.webclNumbers.`0x10`
-  - typings.webcl.webclNumbers.`0x20`
-  - typings.webcl.webclNumbers.`0x40`
+  - typingsSlinky.webcl.webclNumbers.`0x1`
+  - typingsSlinky.webcl.webclNumbers.`0x2`
+  - typingsSlinky.webcl.webclNumbers.`0x4`
+  - typingsSlinky.webcl.webclNumbers.`0x8`
+  - typingsSlinky.webcl.webclNumbers.`0x10`
+  - typingsSlinky.webcl.webclNumbers.`0x20`
+  - typingsSlinky.webcl.webclNumbers.`0x40`
 */
 trait DeviceFPConfigBits extends js.Object
 

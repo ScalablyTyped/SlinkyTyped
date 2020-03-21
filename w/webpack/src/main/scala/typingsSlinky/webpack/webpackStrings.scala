@@ -1,9 +1,9 @@
 package typingsSlinky.webpack
 
-import typingsSlinky.webpack.webpackMod.LibraryTarget
-import typingsSlinky.webpack.webpackMod.Options._Devtool
-import typingsSlinky.webpack.webpackMod.Stats.ReasonType
-import typingsSlinky.webpack.webpackMod.Stats._Preset
+import typingsSlinky.webpack.mod.LibraryTarget
+import typingsSlinky.webpack.mod.Options._Devtool
+import typingsSlinky.webpack.mod.Stats.ReasonType
+import typingsSlinky.webpack.mod.Stats._Preset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -38,9 +38,6 @@ object webpackStrings {
   
   @js.native
   sealed trait `@source-map` extends _Devtool
-  
-  @js.native
-  sealed trait AuxiliaryCommentObject extends js.Object
   
   @js.native
   sealed trait `Numbersign@cheap-eval-source-map` extends _Devtool
@@ -182,6 +179,9 @@ object webpackStrings {
   
   @js.native
   sealed trait `electron-main` extends js.Object
+  
+  @js.native
+  sealed trait `electron-preload` extends js.Object
   
   @js.native
   sealed trait `electron-renderer` extends js.Object
@@ -438,8 +438,6 @@ object webpackStrings {
   @scala.inline
   def `@source-map`: `@source-map` = "@source-map".asInstanceOf[`@source-map`]
   @scala.inline
-  def AuxiliaryCommentObject: AuxiliaryCommentObject = "AuxiliaryCommentObject".asInstanceOf[AuxiliaryCommentObject]
-  @scala.inline
   def `Numbersign@cheap-eval-source-map`: `Numbersign@cheap-eval-source-map` = "#@cheap-eval-source-map".asInstanceOf[`Numbersign@cheap-eval-source-map`]
   @scala.inline
   def `Numbersign@cheap-module-eval-source-map`: `Numbersign@cheap-module-eval-source-map` = "#@cheap-module-eval-source-map".asInstanceOf[`Numbersign@cheap-module-eval-source-map`]
@@ -533,6 +531,8 @@ object webpackStrings {
   def electron: electron = "electron".asInstanceOf[electron]
   @scala.inline
   def `electron-main`: `electron-main` = "electron-main".asInstanceOf[`electron-main`]
+  @scala.inline
+  def `electron-preload`: `electron-preload` = "electron-preload".asInstanceOf[`electron-preload`]
   @scala.inline
   def `electron-renderer`: `electron-renderer` = "electron-renderer".asInstanceOf[`electron-renderer`]
   @scala.inline

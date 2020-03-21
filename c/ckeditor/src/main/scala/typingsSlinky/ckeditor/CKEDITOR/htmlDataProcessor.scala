@@ -1,6 +1,6 @@
 package typingsSlinky.ckeditor.CKEDITOR
 
-import typingsSlinky.ckeditor.Anon_Context
+import typingsSlinky.ckeditor.AnonContext
 import typingsSlinky.ckeditor.CKEDITOR.htmlParser.basicWriter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -14,7 +14,7 @@ class htmlDataProcessor protected () extends dataProcessor {
   var htmlFilter: typingsSlinky.ckeditor.CKEDITOR.htmlParser.filter = js.native
   var writer: basicWriter = js.native
   def toDataFormat(html: String): String = js.native
-  def toDataFormat(html: String, options: Anon_Context): String = js.native
+  def toDataFormat(html: String, options: AnonContext): String = js.native
   def toHtml(data: String, options: htmlDataProcessorOptions): String = js.native
 }
 

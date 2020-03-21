@@ -1,11 +1,11 @@
 package typingsSlinky.baseui.radioMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import typingsSlinky.react.reactMod.ChangeEvent
-import typingsSlinky.react.reactMod.ChangeEventHandler
+import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.react.mod.ChangeEventHandler
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ trait StatefulContainerProps extends js.Object {
 object StatefulContainerProps {
   @scala.inline
   def apply(
-    stateReducer: (/* stateType */ String, /* nextState */ State, /* currentState */ State, /* event */ SyntheticEvent[Event, HTMLInputElement]) => State,
+    stateReducer: (/* stateType */ String, /* nextState */ State, /* currentState */ State, /* event */ SyntheticEvent[Event_, HTMLInputElement]) => State,
     autoFocus: js.UndefOr[Boolean] = js.undefined,
     children: TagMod[Any] = null,
     initialState: State = null,

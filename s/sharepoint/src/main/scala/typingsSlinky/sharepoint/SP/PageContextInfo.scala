@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
-import typingsSlinky.sharepoint.Anon_High
+import typingsSlinky.sharepoint.AnonHigh
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ object PageContextInfo extends js.Object {
   def get_webAbsoluteUrl(): String = js.native
   def get_webLanguage(): Double = js.native
   def get_webLogoUrl(): String = js.native
-  def get_webPermMasks(): Anon_High = js.native
+  def get_webPermMasks(): AnonHigh = js.native
   def get_webServerRelativeUrl(): String = js.native
   def get_webTemplate(): String = js.native
   def get_webTitle(): String = js.native

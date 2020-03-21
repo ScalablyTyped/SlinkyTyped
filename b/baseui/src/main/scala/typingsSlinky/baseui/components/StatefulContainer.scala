@@ -5,7 +5,7 @@ import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_EventItem
+import typingsSlinky.baseui.AnonItem
 import typingsSlinky.baseui.baseuiStrings.click
 import typingsSlinky.baseui.baseuiStrings.focus
 import typingsSlinky.baseui.baseuiStrings.mouseEnter
@@ -16,7 +16,7 @@ import typingsSlinky.baseui.menuMod.ItemsT
 import typingsSlinky.baseui.menuMod.RenderItemProps
 import typingsSlinky.baseui.menuMod.StatefulContainerProps
 import typingsSlinky.baseui.menuMod.StatefulContainerState
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -35,7 +35,7 @@ object StatefulContainer
     getParentMenu: /* ref */ Ref[HTMLElement] => Unit = null,
     getRequiredItemProps: (/* item */ js.Any, /* index */ Double) => RenderItemProps = null,
     initialState: StatefulContainerState = null,
-    onItemSelect: /* args */ Anon_EventItem => js.Any = null,
+    onItemSelect: /* args */ AnonItem => js.Any = null,
     removeMenuFromNesting: /* ref */ Ref[HTMLElement] => Unit = null,
     rootRef: Ref[_] = null,
     stateReducer: (/* changeType */ moveDown | moveUp | reset | click | focus | mouseEnter, /* changes */ StatefulContainerState, /* currentState */ StatefulContainerState) => StatefulContainerState = null,

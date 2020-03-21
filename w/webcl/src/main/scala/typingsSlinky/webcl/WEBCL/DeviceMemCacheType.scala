@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 
 /* cl_device_MEM_CACHE_type */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x0`
-  - typings.webcl.webclNumbers.`0x1`
-  - typings.webcl.webclNumbers.`0x2`
+  - typingsSlinky.webcl.webclNumbers.`0x0`
+  - typingsSlinky.webcl.webclNumbers.`0x1`
+  - typingsSlinky.webcl.webclNumbers.`0x2`
 */
 trait DeviceMemCacheType extends js.Object
 

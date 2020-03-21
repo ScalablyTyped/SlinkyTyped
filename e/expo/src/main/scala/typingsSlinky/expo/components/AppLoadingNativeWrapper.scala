@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.expo.buildLaunchAppLoadingNativeWrapperMod.default
+import typingsSlinky.expo.appLoadingNativeWrapperMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ object AppLoadingNativeWrapper
   }
   def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
-  typingsSlinky.expo.buildLaunchAppLoadingNativeWrapperMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = typingsSlinky.expo.buildLaunchAppLoadingNativeWrapperMod.Props
+  typingsSlinky.expo.appLoadingNativeWrapperMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = typingsSlinky.expo.appLoadingNativeWrapperMod.Props
 }
 

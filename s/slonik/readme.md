@@ -1,7 +1,7 @@
 
 # Scala.js typings for slonik
 
-Typings are for version 21.4
+Typings are for version 22.1
 
 ## Library description:
 A PostgreSQL client with strict types, detailed logging and assertions.
@@ -10,9 +10,9 @@ A PostgreSQL client with strict types, detailed logging and assertions.
 | ------------------ | :-------------: |
 | Full name          | slonik |
 | Keywords           | postgresql, promise, types |
-| # releases         | 185 |
+| # releases         | 183 |
 | # dependents       | 12 |
-| # downloads        | 110735 |
+| # downloads        | 128178 |
 | # stars            | 0 |
 
 ## Links

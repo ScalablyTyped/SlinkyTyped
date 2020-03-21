@@ -1,14 +1,14 @@
 package typingsSlinky.baseui.popoverMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
 import org.scalajs.dom.raw.MouseEvent
 import slinky.core.TagMod
-import typingsSlinky.baseui.Anon_ArrowOffset
-import typingsSlinky.baseui.Anon_ChildrenReactNode
+import typingsSlinky.baseui.AnonArrowOffset
+import typingsSlinky.baseui.SharedStylePropsArgchildrArrowOffset
 import typingsSlinky.baseui.layerMod.NormalizedOffsets
 import typingsSlinky.baseui.layerMod.PopperDataObject
-import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.mod.Component
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,16 +24,16 @@ class Popover ()
   def getAnchorFromChildren(): TagMod[Any] = js.native
   def getAnchorIdAttr(): String | Null = js.native
   def getAnchorProps(): js.Object = js.native
-  def getDefaultState(props: PopoverProps): Anon_ArrowOffset = js.native
+  def getDefaultState(props: PopoverProps): AnonArrowOffset = js.native
   def getPopoverBodyProps(): js.Object = js.native
   def getPopoverIdAttr(): String | Null = js.native
-  def getSharedProps(): SharedStylePropsArg with Anon_ChildrenReactNode = js.native
+  def getSharedProps(): SharedStylePropsArgchildrArrowOffset = js.native
   def init(prevProps: PopoverProps, prevState: PopoverPrivateState): Unit = js.native
   def isAccessibilityTypeMenu(): Boolean = js.native
   def isAccessibilityTypeTooltip(): Boolean = js.native
   def isClickTrigger(): Boolean = js.native
   def isHoverTrigger(): Boolean = js.native
-  def onAnchorClick(e: Event): Unit = js.native
+  def onAnchorClick(e: Event_): Unit = js.native
   def onAnchorMouseEnter(): Unit = js.native
   def onAnchorMouseLeave(): Unit = js.native
   def onDocumentClick(evt: MouseEvent): Unit = js.native

@@ -1,9 +1,9 @@
 package typingsSlinky.ol
 
 import typingsSlinky.ol.coordinateMod.Coordinate
-import typingsSlinky.ol.extentCornerMod.Corner
-import typingsSlinky.ol.extentRelationshipMod.Relationship
+import typingsSlinky.ol.cornerMod.Corner
 import typingsSlinky.ol.projMod.TransformFunction
+import typingsSlinky.ol.relationshipMod.Relationship
 import typingsSlinky.ol.sizeMod.Size
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -44,8 +44,7 @@ object extentMod extends js.Object {
   def extendFlatCoordinates(extent: Extent, flatCoordinates: js.Array[Double], offset: Double, end: Double, stride: Double): Extent = js.native
   def extendRings(extent: Extent, rings: js.Array[js.Array[Coordinate]]): Extent = js.native
   def extendXY(extent: Extent, x: Double, y: Double): Unit = js.native
-  def forEachCorner[S, T](extent: Extent, callback: js.ThisFunction1[/* this */ T, /* p0 */ Coordinate, S]): S | Boolean = js.native
-  def forEachCorner[S, T](extent: Extent, callback: js.ThisFunction1[/* this */ T, /* p0 */ Coordinate, S], opt_this: T): S | Boolean = js.native
+  def forEachCorner[S](extent: Extent, callback: js.Function1[/* p0 */ Coordinate, S]): S | Boolean = js.native
   def getArea(extent: Extent): Double = js.native
   def getBottomLeft(extent: Extent): Coordinate = js.native
   def getBottomRight(extent: Extent): Coordinate = js.native
@@ -69,6 +68,6 @@ object extentMod extends js.Object {
   def returnOrUpdate(extent: Extent): Extent = js.native
   def returnOrUpdate(extent: Extent, opt_extent: Extent): Extent = js.native
   def scaleFromCenter(extent: Extent, value: Double): Unit = js.native
-  type Extent = js.Array[Double]
+  type Extent = js.Tuple4[Double, Double, Double, Double]
 }
 

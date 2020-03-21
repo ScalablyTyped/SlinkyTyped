@@ -4,9 +4,10 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_Checked
-import typingsSlinky.primereact.componentsCheckboxCheckboxMod.CheckboxProps
-import typingsSlinky.primereact.componentsTooltipTooltipOptionsMod.TooltipOptions
+import typingsSlinky.primereact.AnonChecked
+import typingsSlinky.primereact.checkboxCheckboxMod.CheckboxProps
+import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,10 +19,13 @@ object Checkbox
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: checked, className, disabled, id, name, onContextMenu, onMouseDown, readOnly, required */
+  /* The following DOM/SVG props were specified: checked, className, disabled, id, name, readOnly, required */
   def apply(
-    onChange: Anon_Checked => Unit,
+    onChange: AnonChecked => Unit,
+    ariaLabelledBy: String = null,
     inputId: String = null,
+    onContextMenu: /* event */ Event_ => Unit = null,
+    onMouseDown: /* event */ Event_ => Unit = null,
     style: js.Object = null,
     tooltip: js.Any = null,
     tooltipOptions: TooltipOptions = null,
@@ -29,7 +33,10 @@ object Checkbox
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.primereact.checkboxMod.Checkbox] = {
     val __obj = js.Dynamic.literal(onChange = js.Any.fromFunction1(onChange))
+    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
     if (inputId != null) __obj.updateDynamic("inputId")(inputId.asInstanceOf[js.Any])
+    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
     if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])

@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Divider
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Divider] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Divider] {
   @JSImport("gestalt", "Divider")
   @js.native
   object componentImport extends js.Object

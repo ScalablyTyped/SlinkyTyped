@@ -1,0 +1,177 @@
+package typingsSlinky.apostrophe.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-admin-bar`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-any-page-manager`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-areas`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-assets`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-attachments`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-browser-utils`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-caches`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-custom-pages`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-db`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-doc-type-manager`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-docs`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-email`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-express`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-files`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-files-widgets`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-global`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-groups`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-html-widgets`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-i18n`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-images`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-images-widgets`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-jobs`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-launder`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-locks`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-login`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-migrations`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-modal`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-module`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-notifications`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-oembed`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-pager`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-pages`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-permissions`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-pieces`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-pieces-pages`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-pieces-widgets`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-polymorphic-manager`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-push`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-rich-text-widgets`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-schemas`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-search`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-service-bridge`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-soft-redirects`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-tags`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-tasks`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-templates`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-ui`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-urls`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-users`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-utils`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-versions`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-video-fields`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-video-widgets`
+  - typingsSlinky.apostrophe.apostropheStrings.`apostrophe-widgets`
+*/
+trait AposCoreModules extends js.Object
+
+object AposCoreModules {
+  @scala.inline
+  def `apostrophe-admin-bar`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-admin-bar` = this.cast("apostrophe-admin-bar")
+  @scala.inline
+  def `apostrophe-any-page-manager`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-any-page-manager` = this.cast("apostrophe-any-page-manager")
+  @scala.inline
+  def `apostrophe-areas`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-areas` = this.cast("apostrophe-areas")
+  @scala.inline
+  def `apostrophe-assets`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-assets` = this.cast("apostrophe-assets")
+  @scala.inline
+  def `apostrophe-attachments`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-attachments` = this.cast("apostrophe-attachments")
+  @scala.inline
+  def `apostrophe-browser-utils`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-browser-utils` = this.cast("apostrophe-browser-utils")
+  @scala.inline
+  def `apostrophe-caches`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-caches` = this.cast("apostrophe-caches")
+  @scala.inline
+  def `apostrophe-custom-pages`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-custom-pages` = this.cast("apostrophe-custom-pages")
+  @scala.inline
+  def `apostrophe-db`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-db` = this.cast("apostrophe-db")
+  @scala.inline
+  def `apostrophe-doc-type-manager`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-doc-type-manager` = this.cast("apostrophe-doc-type-manager")
+  @scala.inline
+  def `apostrophe-docs`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-docs` = this.cast("apostrophe-docs")
+  @scala.inline
+  def `apostrophe-email`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-email` = this.cast("apostrophe-email")
+  @scala.inline
+  def `apostrophe-express`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-express` = this.cast("apostrophe-express")
+  @scala.inline
+  def `apostrophe-files`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-files` = this.cast("apostrophe-files")
+  @scala.inline
+  def `apostrophe-files-widgets`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-files-widgets` = this.cast("apostrophe-files-widgets")
+  @scala.inline
+  def `apostrophe-global`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-global` = this.cast("apostrophe-global")
+  @scala.inline
+  def `apostrophe-groups`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-groups` = this.cast("apostrophe-groups")
+  @scala.inline
+  def `apostrophe-html-widgets`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-html-widgets` = this.cast("apostrophe-html-widgets")
+  @scala.inline
+  def `apostrophe-i18n`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-i18n` = this.cast("apostrophe-i18n")
+  @scala.inline
+  def `apostrophe-images`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-images` = this.cast("apostrophe-images")
+  @scala.inline
+  def `apostrophe-images-widgets`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-images-widgets` = this.cast("apostrophe-images-widgets")
+  @scala.inline
+  def `apostrophe-jobs`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-jobs` = this.cast("apostrophe-jobs")
+  @scala.inline
+  def `apostrophe-launder`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-launder` = this.cast("apostrophe-launder")
+  @scala.inline
+  def `apostrophe-locks`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-locks` = this.cast("apostrophe-locks")
+  @scala.inline
+  def `apostrophe-login`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-login` = this.cast("apostrophe-login")
+  @scala.inline
+  def `apostrophe-migrations`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-migrations` = this.cast("apostrophe-migrations")
+  @scala.inline
+  def `apostrophe-modal`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-modal` = this.cast("apostrophe-modal")
+  @scala.inline
+  def `apostrophe-module`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-module` = this.cast("apostrophe-module")
+  @scala.inline
+  def `apostrophe-notifications`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-notifications` = this.cast("apostrophe-notifications")
+  @scala.inline
+  def `apostrophe-oembed`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-oembed` = this.cast("apostrophe-oembed")
+  @scala.inline
+  def `apostrophe-pager`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-pager` = this.cast("apostrophe-pager")
+  @scala.inline
+  def `apostrophe-pages`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-pages` = this.cast("apostrophe-pages")
+  @scala.inline
+  def `apostrophe-permissions`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-permissions` = this.cast("apostrophe-permissions")
+  @scala.inline
+  def `apostrophe-pieces`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-pieces` = this.cast("apostrophe-pieces")
+  @scala.inline
+  def `apostrophe-pieces-pages`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-pieces-pages` = this.cast("apostrophe-pieces-pages")
+  @scala.inline
+  def `apostrophe-pieces-widgets`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-pieces-widgets` = this.cast("apostrophe-pieces-widgets")
+  @scala.inline
+  def `apostrophe-polymorphic-manager`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-polymorphic-manager` = this.cast("apostrophe-polymorphic-manager")
+  @scala.inline
+  def `apostrophe-push`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-push` = this.cast("apostrophe-push")
+  @scala.inline
+  def `apostrophe-rich-text-widgets`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-rich-text-widgets` = this.cast("apostrophe-rich-text-widgets")
+  @scala.inline
+  def `apostrophe-schemas`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-schemas` = this.cast("apostrophe-schemas")
+  @scala.inline
+  def `apostrophe-search`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-search` = this.cast("apostrophe-search")
+  @scala.inline
+  def `apostrophe-service-bridge`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-service-bridge` = this.cast("apostrophe-service-bridge")
+  @scala.inline
+  def `apostrophe-soft-redirects`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-soft-redirects` = this.cast("apostrophe-soft-redirects")
+  @scala.inline
+  def `apostrophe-tags`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-tags` = this.cast("apostrophe-tags")
+  @scala.inline
+  def `apostrophe-tasks`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-tasks` = this.cast("apostrophe-tasks")
+  @scala.inline
+  def `apostrophe-templates`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-templates` = this.cast("apostrophe-templates")
+  @scala.inline
+  def `apostrophe-ui`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-ui` = this.cast("apostrophe-ui")
+  @scala.inline
+  def `apostrophe-urls`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-urls` = this.cast("apostrophe-urls")
+  @scala.inline
+  def `apostrophe-users`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-users` = this.cast("apostrophe-users")
+  @scala.inline
+  def `apostrophe-utils`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-utils` = this.cast("apostrophe-utils")
+  @scala.inline
+  def `apostrophe-versions`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-versions` = this.cast("apostrophe-versions")
+  @scala.inline
+  def `apostrophe-video-fields`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-video-fields` = this.cast("apostrophe-video-fields")
+  @scala.inline
+  def `apostrophe-video-widgets`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-video-widgets` = this.cast("apostrophe-video-widgets")
+  @scala.inline
+  def `apostrophe-widgets`: typingsSlinky.apostrophe.apostropheStrings.`apostrophe-widgets` = this.cast("apostrophe-widgets")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+}
+

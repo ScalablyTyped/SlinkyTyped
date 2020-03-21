@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
   * Constant Enum: Settings for {@link GlobalContext.getAdvancedConfigSetting globalContext.getAdvancedConfigSetting(setting)}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.MaxChildIncidentNumber
-  - typings.xrm.xrmStrings.MaxIncidentMergeNumber
+  - typingsSlinky.xrm.xrmStrings.MaxChildIncidentNumber
+  - typingsSlinky.xrm.xrmStrings.MaxIncidentMergeNumber
 */
 trait AdvancedConfigSettingOption extends js.Object
 

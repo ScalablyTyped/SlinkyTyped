@@ -1,29 +1,29 @@
 package typingsSlinky.nodegit.repositoryMod
 
 import typingsSlinky.node.Buffer
-import typingsSlinky.nodegit.annotatedDashCommitMod.AnnotatedCommit
+import typingsSlinky.nodegit.annotatedCommitMod.AnnotatedCommit
 import typingsSlinky.nodegit.blobMod.Blob
 import typingsSlinky.nodegit.bufMod.Buf
-import typingsSlinky.nodegit.checkoutDashOptionsMod.CheckoutOptions
+import typingsSlinky.nodegit.checkoutOptionsMod.CheckoutOptions
 import typingsSlinky.nodegit.commitMod.Commit
 import typingsSlinky.nodegit.configMod.Config
-import typingsSlinky.nodegit.diffDashLineMod.DiffLine
-import typingsSlinky.nodegit.fetchDashOptionsMod.FetchOptions
-import typingsSlinky.nodegit.indexUnderscoreMod.Index
-import typingsSlinky.nodegit.mergeDashOptionsMod.MergeOptions
+import typingsSlinky.nodegit.diffLineMod.DiffLine
+import typingsSlinky.nodegit.fetchOptionsMod.FetchOptions
+import typingsSlinky.nodegit.indexMod.Index
 import typingsSlinky.nodegit.mergeMod.Merge.PREFERENCE
+import typingsSlinky.nodegit.mergeOptionsMod.MergeOptions
 import typingsSlinky.nodegit.odbMod.Odb
 import typingsSlinky.nodegit.oidMod.Oid
-import typingsSlinky.nodegit.refDashDbMod.Refdb
+import typingsSlinky.nodegit.refDbMod.Refdb
 import typingsSlinky.nodegit.referenceMod.Reference
 import typingsSlinky.nodegit.referenceMod.Reference.TYPE
 import typingsSlinky.nodegit.remoteMod.Remote
-import typingsSlinky.nodegit.revDashWalkMod.Revwalk
+import typingsSlinky.nodegit.revWalkMod.Revwalk
 import typingsSlinky.nodegit.signatureMod.Signature
-import typingsSlinky.nodegit.statusDashFileMod.StatusFile
-import typingsSlinky.nodegit.statusDashOptionsMod.StatusOptions
+import typingsSlinky.nodegit.statusFileMod.StatusFile
+import typingsSlinky.nodegit.statusOptionsMod.StatusOptions
 import typingsSlinky.nodegit.tagMod.Tag
-import typingsSlinky.nodegit.treeDashBuilderMod.Treebuilder
+import typingsSlinky.nodegit.treeBuilderMod.Treebuilder
 import typingsSlinky.nodegit.treeMod.Tree
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -205,7 +205,7 @@ class Repository () extends js.Object {
   /**
     * Lookup references for a repository.
     */
-  def getReferences(`type`: TYPE): js.Promise[js.Array[Reference]] = js.native
+  def getReferences(): js.Promise[js.Array[Reference]] = js.native
   /**
     * Gets a remote from the repo
     */

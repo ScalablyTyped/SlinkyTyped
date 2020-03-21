@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.k6.k6Strings.hex
-  - typings.k6.k6Strings.base64
-  - typings.k6.k6Strings.base64url
-  - typings.k6.k6Strings.base64rawurl
+  - typingsSlinky.k6.k6Strings.hex
+  - typingsSlinky.k6.k6Strings.base64
+  - typingsSlinky.k6.k6Strings.base64url
+  - typingsSlinky.k6.k6Strings.base64rawurl
 */
 trait StringEncoding extends js.Object
 

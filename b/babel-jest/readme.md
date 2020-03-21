@@ -10,9 +10,9 @@ Jest plugin to use babel for transformation.
 | ------------------ | :-------------: |
 | Full name          | babel-jest |
 | Keywords           | - |
-| # releases         | 60 |
-| # dependents       | 3790 |
-| # downloads        | 256469389 |
+| # releases         | 59 |
+| # dependents       | 3802 |
+| # downloads        | 258209711 |
 | # stars            | 5 |
 
 ## Links

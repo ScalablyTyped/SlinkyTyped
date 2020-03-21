@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("protobufjs/light", "Reader")
 @js.native
 class Reader protected ()
-  extends typingsSlinky.protobufjs.protobufjsMod.Reader {
+  extends typingsSlinky.protobufjs.mod.Reader {
   /**
     * Constructs a new reader instance using the specified buffer.
     * @param buffer Buffer to read from
@@ -25,6 +25,6 @@ object Reader extends js.Object {
     * @returns A {@link BufferReader} if `buffer` is a Buffer, otherwise a {@link Reader}
     * @throws {Error} If `buffer` is not a valid buffer
     */
-  def create(buffer: scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8Array): typingsSlinky.protobufjs.protobufjsMod.Reader | typingsSlinky.protobufjs.protobufjsMod.BufferReader = js.native
+  def create(buffer: scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8Array): typingsSlinky.protobufjs.mod.Reader | typingsSlinky.protobufjs.mod.BufferReader = js.native
 }
 

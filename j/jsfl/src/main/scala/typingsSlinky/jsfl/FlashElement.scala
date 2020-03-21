@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.jsfl.FlashSymbolInstance because var conflicts: accName, actionScript, description, forceSimple, shortcut, silent, tabIndex. Inlined backgroundColor, bitmapRenderMode, blendMode, buttonTracking, cacheAsBitmap, colorAlphaAmount, colorAlphaPercent, colorBlueAmount, colorBluePercent, colorGreenAmount, colorGreenPercent, colorMode, colorRedAmount, colorRedPercent, filters, firstFrame, loop, symbolType, useBackgroundColor, visible */ trait FlashElement
+- typingsSlinky.jsfl.FlashSymbolInstance because var conflicts: accName, actionScript, description, forceSimple, shortcut, silent, tabIndex. Inlined backgroundColor, bitmapRenderMode, blendMode, buttonTracking, cacheAsBitmap, colorAlphaAmount, colorAlphaPercent, colorBlueAmount, colorBluePercent, colorGreenAmount, colorGreenPercent, colorMode, colorRedAmount, colorRedPercent, filters, firstFrame, loop, symbolType, useBackgroundColor, visible */ trait FlashElement
   extends FlashShape
      with FlashInstance
      with FlashBitmapInstance
@@ -96,7 +96,7 @@ object FlashElement {
     filters: js.Array[FlashFilter],
     firstFrame: Double,
     forceSimple: Boolean,
-    getBits: () => _FlashBitmap,
+    getBits: () => FlashBitmap,
     getCubicSegmentPoints: Double => js.Array[FlashPoint],
     getPersistentData: String => js.Any,
     getTransformationPoint: () => FlashPoint,
@@ -122,7 +122,7 @@ object FlashElement {
     scaleX: Double,
     scaleY: Double,
     selected: Boolean,
-    setBits: _FlashBitmap => Unit,
+    setBits: FlashBitmap => Unit,
     setPersistentData: (String, String, js.Any) => Unit,
     setTransformationPoint: FlashPoint => Unit,
     shortcut: String,

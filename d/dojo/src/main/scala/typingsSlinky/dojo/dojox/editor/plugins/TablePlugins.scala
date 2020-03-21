@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.editor.plugins
 
-import typingsSlinky.dojo.dijit._editor._Plugin
+import typingsSlinky.dojo.dijit._editor.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.editor.plugins.TablePlugins")
 @js.native
-class TablePlugins () extends _Plugin {
+class TablePlugins () extends Plugin {
   def this(args: js.Object) = this()
   /**
     *

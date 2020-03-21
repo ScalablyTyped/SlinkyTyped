@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object filterMod {
-  type Filter = Filter_
+  type Filter = typingsSlinky.nodegit.filterMod.Filter_
 }

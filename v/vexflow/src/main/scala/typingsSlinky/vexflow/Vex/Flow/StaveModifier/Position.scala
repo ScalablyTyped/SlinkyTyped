@@ -12,12 +12,12 @@ import scala.scalajs.js.annotation._
 
 // @see https://github.com/0xfe/vexflow/blob/master/src/stavemodifier.js#L9
 /* Rewritten from type alias, can be one of: 
-  - typings.vexflow.vexflowNumbers.`1`
-  - typings.vexflow.vexflowNumbers.`2`
-  - typings.vexflow.vexflowNumbers.`3`
-  - typings.vexflow.vexflowNumbers.`4`
-  - typings.vexflow.vexflowNumbers.`5`
-  - typings.vexflow.vexflowNumbers.`6`
+  - typingsSlinky.vexflow.vexflowNumbers.`1`
+  - typingsSlinky.vexflow.vexflowNumbers.`2`
+  - typingsSlinky.vexflow.vexflowNumbers.`3`
+  - typingsSlinky.vexflow.vexflowNumbers.`4`
+  - typingsSlinky.vexflow.vexflowNumbers.`5`
+  - typingsSlinky.vexflow.vexflowNumbers.`6`
 */
 trait Position extends js.Object
 

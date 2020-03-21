@@ -1,17 +1,21 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.Dictionary
-import typingsSlinky.lodash.lodashMod.List
-import typingsSlinky.lodash.lodashMod.NumericDictionary
-import typingsSlinky.lodash.lodashMod.ValueIteratee
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.Dictionary
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.NumericDictionary
+import typingsSlinky.lodash.mod.ValueIteratee
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LodashInvertBy extends js.Object {
-  def apply[T](interatee: ValueIteratee[T]): Dictionary[js.Array[String]] = js.native
+  def apply[T /* <: js.Object */](
+    interatee: ValueIteratee[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any
+    ]
+  ): Dictionary[js.Array[String]] = js.native
   def apply[T /* <: js.Object */](
     interatee: ValueIteratee[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any

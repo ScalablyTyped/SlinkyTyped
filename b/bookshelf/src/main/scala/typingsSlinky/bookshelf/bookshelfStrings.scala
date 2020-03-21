@@ -1,6 +1,6 @@
 package typingsSlinky.bookshelf
 
-import typingsSlinky.bookshelf.bookshelfMod.SortOrder
+import typingsSlinky.bookshelf.mod.SortOrder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,17 +1,16 @@
 organization := "org.scalablytyped.slinky"
 name := "handsontable"
-version := "7.3.0-87f03b"
-scalaVersion := "2.12.10"
+version := "7.4.0-7899d5"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "moment" % "2.24.0-9323e2",
-  "org.scalablytyped.slinky" %%% "pikaday" % "1.7-dt-20190224Z-c7a0b3",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "moment" % "2.24.0-ca8f54",
+  "org.scalablytyped.slinky" %%% "pikaday" % "1.7-dt-20200225Z-dc28c3",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

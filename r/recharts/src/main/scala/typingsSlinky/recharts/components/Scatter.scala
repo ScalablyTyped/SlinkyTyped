@@ -6,19 +6,39 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.recharts.rechartsMod.AnimationEasingType
-import typingsSlinky.recharts.rechartsMod.ContentRenderer
-import typingsSlinky.recharts.rechartsMod.DataKey
-import typingsSlinky.recharts.rechartsMod.LegendType
-import typingsSlinky.recharts.rechartsMod.LineType
-import typingsSlinky.recharts.rechartsMod.RechartsFunction
-import typingsSlinky.recharts.rechartsMod.ScatterPoint
-import typingsSlinky.recharts.rechartsMod.ScatterProps
+import typingsSlinky.recharts.mod.AnimationEasingType
+import typingsSlinky.recharts.mod.ContentRenderer
+import typingsSlinky.recharts.mod.DataKey
+import typingsSlinky.recharts.mod.LegendType
+import typingsSlinky.recharts.mod.LineType
+import typingsSlinky.recharts.mod.RechartsFunction
+import typingsSlinky.recharts.mod.ScatterPoint
+import typingsSlinky.recharts.mod.ScatterProps
+import typingsSlinky.recharts.rechartsNumbers.`100`
+import typingsSlinky.recharts.rechartsNumbers.`200`
+import typingsSlinky.recharts.rechartsNumbers.`300`
+import typingsSlinky.recharts.rechartsNumbers.`400`
+import typingsSlinky.recharts.rechartsNumbers.`500`
+import typingsSlinky.recharts.rechartsNumbers.`600`
+import typingsSlinky.recharts.rechartsNumbers.`700`
+import typingsSlinky.recharts.rechartsNumbers.`800`
+import typingsSlinky.recharts.rechartsNumbers.`900`
+import typingsSlinky.recharts.rechartsStrings.auto
+import typingsSlinky.recharts.rechartsStrings.bold
+import typingsSlinky.recharts.rechartsStrings.bolder
 import typingsSlinky.recharts.rechartsStrings.circle
+import typingsSlinky.recharts.rechartsStrings.crispEdges
 import typingsSlinky.recharts.rechartsStrings.cross
 import typingsSlinky.recharts.rechartsStrings.diamond
 import typingsSlinky.recharts.rechartsStrings.fitting
+import typingsSlinky.recharts.rechartsStrings.geometricPrecision
+import typingsSlinky.recharts.rechartsStrings.inherit
 import typingsSlinky.recharts.rechartsStrings.joint
+import typingsSlinky.recharts.rechartsStrings.lighter
+import typingsSlinky.recharts.rechartsStrings.normal
+import typingsSlinky.recharts.rechartsStrings.optimizeLegibility
+import typingsSlinky.recharts.rechartsStrings.optimizeQuality
+import typingsSlinky.recharts.rechartsStrings.optimizeSpeed
 import typingsSlinky.recharts.rechartsStrings.square
 import typingsSlinky.recharts.rechartsStrings.star
 import typingsSlinky.recharts.rechartsStrings.triangle
@@ -28,63 +48,231 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Scatter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.rechartsMod.Scatter] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.Scatter] {
   @JSImport("recharts", "Scatter")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id, onAnimationEnd, onAnimationStart, onClick, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart */
+  /* The following DOM/SVG props were specified: id */
   def apply(
     activeIndex: Int | Double = null,
     activeShape: js.Object | RechartsFunction | ReactElement = null,
+    alignmentBaseline: String = null,
+    angle: Int | Double = null,
     animationBegin: Int | Double = null,
     animationDuration: Int | Double = null,
     animationEasing: AnimationEasingType = null,
     animationId: Int | Double = null,
+    baselineShift: String = null,
+    clip: String = null,
+    clipPath: String = null,
+    clipRule: String = null,
+    color: String = null,
+    colorInterpolation: String = null,
+    colorInterpolationFilters: String = null,
+    colorProfile: String = null,
+    colorRendering: String = null,
+    cursor: String = null,
     data: js.Array[js.Object] = null,
     dataKey: DataKey = null,
+    direction: String = null,
+    display: String = null,
+    dominantBaseline: String = null,
+    dx: Int | Double = null,
+    dy: Int | Double = null,
+    enableBackground: String = null,
+    fill: String = null,
+    fillOpacity: Double | String = null,
+    fillRule: String = null,
+    filter: String = null,
+    floodColor: String = null,
+    floodOpacity: String = null,
+    font: String = null,
+    fontFamily: String = null,
+    fontSize: Double | String = null,
+    fontSizeAdjust: Double | String = null,
+    fontStretch: String = null,
+    fontStyle: String = null,
+    fontVariant: String = null,
+    fontWeight: normal | bold | bolder | lighter | `100` | `200` | `300` | `400` | `500` | `600` | `700` | `800` | `900` | inherit = null,
+    glyphOrientationHorizontal: String = null,
+    glyphOrientationVertical: String = null,
+    height: Int | Double = null,
     hide: js.UndefOr[Boolean] = js.undefined,
+    imageRendering: auto | optimizeSpeed | optimizeQuality | inherit = null,
     isAnimationActive: js.UndefOr[Boolean] = js.undefined,
     isUpdateAnimationActive: js.UndefOr[Boolean] = js.undefined,
+    kerning: Double | String = null,
     legendType: LegendType = null,
+    letterSpacing: String = null,
+    lightingColor: String = null,
     line: Boolean | js.Object | RechartsFunction | ReactElement = null,
     lineJointType: LineType = null,
     lineType: joint | fitting = null,
+    markerEnd: String = null,
+    markerMid: String = null,
+    markerStart: String = null,
+    mask: String = null,
     name: String | Double = null,
+    onAnimationEnd: /* repeated */ js.Any => Unit = null,
+    onAnimationStart: /* repeated */ js.Any => Unit = null,
+    onClick: /* repeated */ js.Any => Unit = null,
+    onMouseDown: /* repeated */ js.Any => Unit = null,
+    onMouseEnter: /* repeated */ js.Any => Unit = null,
+    onMouseLeave: /* repeated */ js.Any => Unit = null,
+    onMouseMove: /* repeated */ js.Any => Unit = null,
+    onMouseOut: /* repeated */ js.Any => Unit = null,
+    onMouseOver: /* repeated */ js.Any => Unit = null,
+    onMouseUp: /* repeated */ js.Any => Unit = null,
+    onTouchCancel: /* repeated */ js.Any => Unit = null,
+    onTouchEnd: /* repeated */ js.Any => Unit = null,
+    onTouchMove: /* repeated */ js.Any => Unit = null,
+    onTouchStart: /* repeated */ js.Any => Unit = null,
+    opacity: Double | String = null,
+    overflow: String = null,
+    pointerEvents: String = null,
     points: js.Array[ScatterPoint] = null,
+    r: Int | Double = null,
     shape: circle | cross | diamond | square | star | triangle | wye | ReactElement | ContentRenderer[_] = null,
+    shapeRendering: auto | optimizeSpeed | crispEdges | geometricPrecision | inherit = null,
+    stopColor: String = null,
+    stopOpacity: Double | String = null,
+    stroke: Double | String = null,
+    strokeDasharray: String = null,
+    strokeDashoffset: Double | String = null,
+    strokeLinecap: String = null,
+    strokeLinejoin: String = null,
+    strokeMiterlimit: Double | String = null,
+    strokeOpacity: Double | String = null,
+    strokeWidth: Double | String = null,
+    style: js.Object = null,
+    textAnchor: String = null,
+    textDecoration: String = null,
+    textRendering: auto | optimizeSpeed | optimizeLegibility | geometricPrecision | inherit = null,
+    transform: String = null,
+    unicodeBidi: String = null,
+    visibility: String = null,
+    width: Int | Double = null,
+    wordSpacing: Double | String = null,
+    writingMode: String = null,
+    x: Int | Double = null,
     xAxisId: String | Double = null,
+    y: Int | Double = null,
     yAxisId: String | Double = null,
     zAxisId: String | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.Scatter] = {
+  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Scatter] = {
     val __obj = js.Dynamic.literal()
     if (activeIndex != null) __obj.updateDynamic("activeIndex")(activeIndex.asInstanceOf[js.Any])
     if (activeShape != null) __obj.updateDynamic("activeShape")(activeShape.asInstanceOf[js.Any])
+    if (alignmentBaseline != null) __obj.updateDynamic("alignmentBaseline")(alignmentBaseline.asInstanceOf[js.Any])
+    if (angle != null) __obj.updateDynamic("angle")(angle.asInstanceOf[js.Any])
     if (animationBegin != null) __obj.updateDynamic("animationBegin")(animationBegin.asInstanceOf[js.Any])
     if (animationDuration != null) __obj.updateDynamic("animationDuration")(animationDuration.asInstanceOf[js.Any])
     if (animationEasing != null) __obj.updateDynamic("animationEasing")(animationEasing.asInstanceOf[js.Any])
     if (animationId != null) __obj.updateDynamic("animationId")(animationId.asInstanceOf[js.Any])
+    if (baselineShift != null) __obj.updateDynamic("baselineShift")(baselineShift.asInstanceOf[js.Any])
+    if (clip != null) __obj.updateDynamic("clip")(clip.asInstanceOf[js.Any])
+    if (clipPath != null) __obj.updateDynamic("clipPath")(clipPath.asInstanceOf[js.Any])
+    if (clipRule != null) __obj.updateDynamic("clipRule")(clipRule.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (colorInterpolation != null) __obj.updateDynamic("colorInterpolation")(colorInterpolation.asInstanceOf[js.Any])
+    if (colorInterpolationFilters != null) __obj.updateDynamic("colorInterpolationFilters")(colorInterpolationFilters.asInstanceOf[js.Any])
+    if (colorProfile != null) __obj.updateDynamic("colorProfile")(colorProfile.asInstanceOf[js.Any])
+    if (colorRendering != null) __obj.updateDynamic("colorRendering")(colorRendering.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
     if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
     if (dataKey != null) __obj.updateDynamic("dataKey")(dataKey.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
+    if (dominantBaseline != null) __obj.updateDynamic("dominantBaseline")(dominantBaseline.asInstanceOf[js.Any])
+    if (dx != null) __obj.updateDynamic("dx")(dx.asInstanceOf[js.Any])
+    if (dy != null) __obj.updateDynamic("dy")(dy.asInstanceOf[js.Any])
+    if (enableBackground != null) __obj.updateDynamic("enableBackground")(enableBackground.asInstanceOf[js.Any])
+    if (fill != null) __obj.updateDynamic("fill")(fill.asInstanceOf[js.Any])
+    if (fillOpacity != null) __obj.updateDynamic("fillOpacity")(fillOpacity.asInstanceOf[js.Any])
+    if (fillRule != null) __obj.updateDynamic("fillRule")(fillRule.asInstanceOf[js.Any])
+    if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
+    if (floodColor != null) __obj.updateDynamic("floodColor")(floodColor.asInstanceOf[js.Any])
+    if (floodOpacity != null) __obj.updateDynamic("floodOpacity")(floodOpacity.asInstanceOf[js.Any])
+    if (font != null) __obj.updateDynamic("font")(font.asInstanceOf[js.Any])
+    if (fontFamily != null) __obj.updateDynamic("fontFamily")(fontFamily.asInstanceOf[js.Any])
+    if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
+    if (fontSizeAdjust != null) __obj.updateDynamic("fontSizeAdjust")(fontSizeAdjust.asInstanceOf[js.Any])
+    if (fontStretch != null) __obj.updateDynamic("fontStretch")(fontStretch.asInstanceOf[js.Any])
+    if (fontStyle != null) __obj.updateDynamic("fontStyle")(fontStyle.asInstanceOf[js.Any])
+    if (fontVariant != null) __obj.updateDynamic("fontVariant")(fontVariant.asInstanceOf[js.Any])
+    if (fontWeight != null) __obj.updateDynamic("fontWeight")(fontWeight.asInstanceOf[js.Any])
+    if (glyphOrientationHorizontal != null) __obj.updateDynamic("glyphOrientationHorizontal")(glyphOrientationHorizontal.asInstanceOf[js.Any])
+    if (glyphOrientationVertical != null) __obj.updateDynamic("glyphOrientationVertical")(glyphOrientationVertical.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
     if (!js.isUndefined(hide)) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
+    if (imageRendering != null) __obj.updateDynamic("imageRendering")(imageRendering.asInstanceOf[js.Any])
     if (!js.isUndefined(isAnimationActive)) __obj.updateDynamic("isAnimationActive")(isAnimationActive.asInstanceOf[js.Any])
     if (!js.isUndefined(isUpdateAnimationActive)) __obj.updateDynamic("isUpdateAnimationActive")(isUpdateAnimationActive.asInstanceOf[js.Any])
+    if (kerning != null) __obj.updateDynamic("kerning")(kerning.asInstanceOf[js.Any])
     if (legendType != null) __obj.updateDynamic("legendType")(legendType.asInstanceOf[js.Any])
+    if (letterSpacing != null) __obj.updateDynamic("letterSpacing")(letterSpacing.asInstanceOf[js.Any])
+    if (lightingColor != null) __obj.updateDynamic("lightingColor")(lightingColor.asInstanceOf[js.Any])
     if (line != null) __obj.updateDynamic("line")(line.asInstanceOf[js.Any])
     if (lineJointType != null) __obj.updateDynamic("lineJointType")(lineJointType.asInstanceOf[js.Any])
     if (lineType != null) __obj.updateDynamic("lineType")(lineType.asInstanceOf[js.Any])
+    if (markerEnd != null) __obj.updateDynamic("markerEnd")(markerEnd.asInstanceOf[js.Any])
+    if (markerMid != null) __obj.updateDynamic("markerMid")(markerMid.asInstanceOf[js.Any])
+    if (markerStart != null) __obj.updateDynamic("markerStart")(markerStart.asInstanceOf[js.Any])
+    if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
+    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
+    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
+    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
+    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
+    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
+    if (opacity != null) __obj.updateDynamic("opacity")(opacity.asInstanceOf[js.Any])
+    if (overflow != null) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
+    if (pointerEvents != null) __obj.updateDynamic("pointerEvents")(pointerEvents.asInstanceOf[js.Any])
     if (points != null) __obj.updateDynamic("points")(points.asInstanceOf[js.Any])
+    if (r != null) __obj.updateDynamic("r")(r.asInstanceOf[js.Any])
     if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
+    if (shapeRendering != null) __obj.updateDynamic("shapeRendering")(shapeRendering.asInstanceOf[js.Any])
+    if (stopColor != null) __obj.updateDynamic("stopColor")(stopColor.asInstanceOf[js.Any])
+    if (stopOpacity != null) __obj.updateDynamic("stopOpacity")(stopOpacity.asInstanceOf[js.Any])
+    if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
+    if (strokeDasharray != null) __obj.updateDynamic("strokeDasharray")(strokeDasharray.asInstanceOf[js.Any])
+    if (strokeDashoffset != null) __obj.updateDynamic("strokeDashoffset")(strokeDashoffset.asInstanceOf[js.Any])
+    if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
+    if (strokeLinejoin != null) __obj.updateDynamic("strokeLinejoin")(strokeLinejoin.asInstanceOf[js.Any])
+    if (strokeMiterlimit != null) __obj.updateDynamic("strokeMiterlimit")(strokeMiterlimit.asInstanceOf[js.Any])
+    if (strokeOpacity != null) __obj.updateDynamic("strokeOpacity")(strokeOpacity.asInstanceOf[js.Any])
+    if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (textAnchor != null) __obj.updateDynamic("textAnchor")(textAnchor.asInstanceOf[js.Any])
+    if (textDecoration != null) __obj.updateDynamic("textDecoration")(textDecoration.asInstanceOf[js.Any])
+    if (textRendering != null) __obj.updateDynamic("textRendering")(textRendering.asInstanceOf[js.Any])
+    if (transform != null) __obj.updateDynamic("transform")(transform.asInstanceOf[js.Any])
+    if (unicodeBidi != null) __obj.updateDynamic("unicodeBidi")(unicodeBidi.asInstanceOf[js.Any])
+    if (visibility != null) __obj.updateDynamic("visibility")(visibility.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
+    if (wordSpacing != null) __obj.updateDynamic("wordSpacing")(wordSpacing.asInstanceOf[js.Any])
+    if (writingMode != null) __obj.updateDynamic("writingMode")(writingMode.asInstanceOf[js.Any])
+    if (x != null) __obj.updateDynamic("x")(x.asInstanceOf[js.Any])
     if (xAxisId != null) __obj.updateDynamic("xAxisId")(xAxisId.asInstanceOf[js.Any])
+    if (y != null) __obj.updateDynamic("y")(y.asInstanceOf[js.Any])
     if (yAxisId != null) __obj.updateDynamic("yAxisId")(yAxisId.asInstanceOf[js.Any])
     if (zAxisId != null) __obj.updateDynamic("zAxisId")(zAxisId.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.Scatter] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.rechartsMod.Scatter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Scatter] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.Scatter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ScatterProps
 }
 

@@ -1,0 +1,35 @@
+package typingsSlinky.semanticUiReact.components
+
+import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.HTMLElement
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
+import slinky.web.html.`*`.tag
+import typingsSlinky.semanticUiReact.mountNodeMod.default
+import typingsSlinky.semanticUiReact.mountNodeMountNodeMod.MountNodeProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object MountNode
+  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+  @JSImport("semantic-ui-react/dist/commonjs/addons/MountNode", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: className */
+  def apply(
+    node: HTMLElement | typingsSlinky.react.mod.Ref[_] = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, default] = {
+    val __obj = js.Dynamic.literal()
+    if (node != null) __obj.updateDynamic("node")(node.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.semanticUiReact.mountNodeMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = MountNodeProps
+}
+

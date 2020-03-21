@@ -8,7 +8,7 @@ import typingsSlinky.antd.antdStrings.process
 import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.wait
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

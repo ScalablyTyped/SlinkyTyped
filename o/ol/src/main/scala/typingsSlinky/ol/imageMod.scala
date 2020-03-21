@@ -1,44 +1,21 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.extentMod.Extent
-import typingsSlinky.std.HTMLCanvasElement
-import typingsSlinky.std.HTMLImageElement
-import typingsSlinky.std.HTMLVideoElement
+import typingsSlinky.ol.baseImageMod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("ol/Image", JSImport.Namespace)
+@JSImport("ol/layer/Image", JSImport.Namespace)
 @js.native
 object imageMod extends js.Object {
   @js.native
-  trait ImageWrapper
-    extends typingsSlinky.ol.imageBaseMod.default {
-    def setImage(image: HTMLCanvasElement): Unit = js.native
-    def setImage(image: HTMLImageElement): Unit = js.native
-    def setImage(image: HTMLVideoElement): Unit = js.native
-  }
+  trait ImageLayer
+    extends typingsSlinky.ol.baseImageMod.default
   
   @js.native
-  class default protected () extends ImageWrapper {
-    def this(
-      extent: Extent,
-      resolution: js.UndefOr[scala.Nothing],
-      pixelRatio: Double,
-      src: String,
-      crossOrigin: String,
-      imageLoadFunction: LoadFunction
-    ) = this()
-    def this(
-      extent: Extent,
-      resolution: Double,
-      pixelRatio: Double,
-      src: String,
-      crossOrigin: String,
-      imageLoadFunction: LoadFunction
-    ) = this()
+  class default () extends ImageLayer {
+    def this(opt_options: Options) = this()
   }
   
-  type LoadFunction = js.Function2[/* p0 */ ImageWrapper, /* p1 */ String, Unit]
 }
 

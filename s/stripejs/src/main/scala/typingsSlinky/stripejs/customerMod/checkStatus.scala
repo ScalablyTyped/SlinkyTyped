@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.stripejs.stripejsStrings.pass
-  - typings.stripejs.stripejsStrings.fail
-  - typings.stripejs.stripejsStrings.unavailable
-  - typings.stripejs.stripejsStrings.unchecked
+  - typingsSlinky.stripejs.stripejsStrings.pass
+  - typingsSlinky.stripejs.stripejsStrings.fail
+  - typingsSlinky.stripejs.stripejsStrings.unavailable
+  - typingsSlinky.stripejs.stripejsStrings.unchecked
 */
 trait checkStatus extends js.Object
 

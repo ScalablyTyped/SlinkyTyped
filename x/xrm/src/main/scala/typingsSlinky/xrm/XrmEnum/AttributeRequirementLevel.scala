@@ -13,9 +13,9 @@ import scala.scalajs.js.annotation._
   * @see {@link Xrm.Attributes.RequirementLevel}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.none
-  - typings.xrm.xrmStrings.recommended
-  - typings.xrm.xrmStrings.required
+  - typingsSlinky.xrm.xrmStrings.none
+  - typingsSlinky.xrm.xrmStrings.recommended
+  - typingsSlinky.xrm.xrmStrings.required
 */
 trait AttributeRequirementLevel extends js.Object
 

@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
   * @see {@link XrmEnum.ClientState}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.Online
-  - typings.xrm.xrmStrings.Offline
+  - typingsSlinky.xrm.xrmStrings.Online
+  - typingsSlinky.xrm.xrmStrings.Offline
 */
 trait ClientState extends js.Object
 

@@ -1,0 +1,17 @@
+package typingsSlinky.qIo.QioFS
+
+import typingsSlinky.node.Buffer
+import typingsSlinky.q.mod.Promise
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("QioFS.append")
+@js.native
+object append extends js.Object {
+  def apply(path: String, content: String): Promise[Unit] = js.native
+  def apply(path: String, content: String, options: js.Any): Promise[Unit] = js.native
+  def apply(path: String, content: Buffer): Promise[Unit] = js.native
+  def apply(path: String, content: Buffer, options: js.Any): Promise[Unit] = js.native
+}
+

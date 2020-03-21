@@ -6,14 +6,12 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libTooltipMod.RenderFunction
-import typingsSlinky.antd.libTooltipMod.TooltipAlignConfig
-import typingsSlinky.antd.libTooltipMod.TooltipPlacement
-import typingsSlinky.antd.libTooltipMod.TooltipProps
-import typingsSlinky.antd.libTooltipMod.TooltipTrigger
-import typingsSlinky.antd.libTooltipMod.default
-import typingsSlinky.antd.libTooltipPlacementsMod.AdjustOverflow
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.placementsMod.AdjustOverflow
+import typingsSlinky.antd.tooltipMod.RenderFunction
+import typingsSlinky.antd.tooltipMod.TooltipPlacement
+import typingsSlinky.antd.tooltipMod.TooltipProps
+import typingsSlinky.antd.tooltipMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,12 +23,13 @@ object Tooltip
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: className, style */
   def TooltipPropsWithTitle(
     title: TagMod[Any] | RenderFunction,
-    align: TooltipAlignConfig = null,
+    align: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any = null,
     arrowPointAtCenter: js.UndefOr[Boolean] = js.undefined,
     autoAdjustOverflow: Boolean | AdjustOverflow = null,
-    builtinPlacements: js.Object = null,
+    builtinPlacements: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any = null,
     defaultVisible: js.UndefOr[Boolean] = js.undefined,
     destroyTooltipOnHide: js.UndefOr[Boolean] = js.undefined,
     getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
@@ -44,9 +43,8 @@ object Tooltip
     overlayStyle: CSSProperties = null,
     placement: TooltipPlacement = null,
     prefixCls: String = null,
-    style: CSSProperties = null,
     transitionName: String = null,
-    trigger: TooltipTrigger = null,
+    trigger: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionType */ js.Any = null,
     visible: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
@@ -68,19 +66,19 @@ object Tooltip
     if (overlayStyle != null) __obj.updateDynamic("overlayStyle")(overlayStyle.asInstanceOf[js.Any])
     if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
     if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])
     if (!js.isUndefined(visible)) __obj.updateDynamic("visible")(visible.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
+  /* The following DOM/SVG props were specified: className, style */
   def TooltipPropsWithOverlay(
     overlay: TagMod[Any] | RenderFunction,
-    align: TooltipAlignConfig = null,
+    align: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify AlignType */ js.Any = null,
     arrowPointAtCenter: js.UndefOr[Boolean] = js.undefined,
     autoAdjustOverflow: Boolean | AdjustOverflow = null,
-    builtinPlacements: js.Object = null,
+    builtinPlacements: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify BuildInPlacements */ js.Any = null,
     defaultVisible: js.UndefOr[Boolean] = js.undefined,
     destroyTooltipOnHide: js.UndefOr[Boolean] = js.undefined,
     getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
@@ -93,10 +91,9 @@ object Tooltip
     overlayStyle: CSSProperties = null,
     placement: TooltipPlacement = null,
     prefixCls: String = null,
-    style: CSSProperties = null,
     title: TagMod[Any] | RenderFunction = null,
     transitionName: String = null,
-    trigger: TooltipTrigger = null,
+    trigger: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ActionType */ js.Any = null,
     visible: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
@@ -117,7 +114,6 @@ object Tooltip
     if (overlayStyle != null) __obj.updateDynamic("overlayStyle")(overlayStyle.asInstanceOf[js.Any])
     if (placement != null) __obj.updateDynamic("placement")(placement.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (transitionName != null) __obj.updateDynamic("transitionName")(transitionName.asInstanceOf[js.Any])
     if (trigger != null) __obj.updateDynamic("trigger")(trigger.asInstanceOf[js.Any])

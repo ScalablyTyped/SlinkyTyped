@@ -1,0 +1,510 @@
+package typingsSlinky.ionicReact.components
+
+import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLElement
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.SyntheticEvent
+import slinky.web.SyntheticAnimationEvent
+import slinky.web.SyntheticClipboardEvent
+import slinky.web.SyntheticCompositionEvent
+import slinky.web.SyntheticFocusEvent
+import slinky.web.SyntheticKeyboardEvent
+import slinky.web.SyntheticMouseEvent
+import slinky.web.SyntheticPointerEvent
+import slinky.web.SyntheticTouchEvent
+import slinky.web.SyntheticTransitionEvent
+import slinky.web.SyntheticUIEvent
+import slinky.web.SyntheticWheelEvent
+import slinky.web.html.`*`.tag
+import typingsSlinky.ionicCore.componentsMod._Global_.HTMLIonVirtualScrollElement
+import typingsSlinky.ionicCore.virtualScrollInterfaceMod.Cell
+import typingsSlinky.ionicReact.IonVirtualScrollPickHTMLA
+import typingsSlinky.ionicReact.ionicReactStrings.`additions text`
+import typingsSlinky.ionicReact.ionicReactStrings.`inline`
+import typingsSlinky.ionicReact.ionicReactStrings.additions
+import typingsSlinky.ionicReact.ionicReactStrings.all
+import typingsSlinky.ionicReact.ionicReactStrings.ascending
+import typingsSlinky.ionicReact.ionicReactStrings.assertive
+import typingsSlinky.ionicReact.ionicReactStrings.both
+import typingsSlinky.ionicReact.ionicReactStrings.copy
+import typingsSlinky.ionicReact.ionicReactStrings.date
+import typingsSlinky.ionicReact.ionicReactStrings.decimal
+import typingsSlinky.ionicReact.ionicReactStrings.descending
+import typingsSlinky.ionicReact.ionicReactStrings.dialog
+import typingsSlinky.ionicReact.ionicReactStrings.email
+import typingsSlinky.ionicReact.ionicReactStrings.execute
+import typingsSlinky.ionicReact.ionicReactStrings.grammar
+import typingsSlinky.ionicReact.ionicReactStrings.grid
+import typingsSlinky.ionicReact.ionicReactStrings.horizontal
+import typingsSlinky.ionicReact.ionicReactStrings.inherit
+import typingsSlinky.ionicReact.ionicReactStrings.link
+import typingsSlinky.ionicReact.ionicReactStrings.list
+import typingsSlinky.ionicReact.ionicReactStrings.listbox
+import typingsSlinky.ionicReact.ionicReactStrings.location
+import typingsSlinky.ionicReact.ionicReactStrings.menu
+import typingsSlinky.ionicReact.ionicReactStrings.mixed
+import typingsSlinky.ionicReact.ionicReactStrings.move
+import typingsSlinky.ionicReact.ionicReactStrings.no
+import typingsSlinky.ionicReact.ionicReactStrings.none
+import typingsSlinky.ionicReact.ionicReactStrings.numeric
+import typingsSlinky.ionicReact.ionicReactStrings.off
+import typingsSlinky.ionicReact.ionicReactStrings.other
+import typingsSlinky.ionicReact.ionicReactStrings.page
+import typingsSlinky.ionicReact.ionicReactStrings.polite
+import typingsSlinky.ionicReact.ionicReactStrings.popup
+import typingsSlinky.ionicReact.ionicReactStrings.removals
+import typingsSlinky.ionicReact.ionicReactStrings.search
+import typingsSlinky.ionicReact.ionicReactStrings.spelling
+import typingsSlinky.ionicReact.ionicReactStrings.step
+import typingsSlinky.ionicReact.ionicReactStrings.tel
+import typingsSlinky.ionicReact.ionicReactStrings.text
+import typingsSlinky.ionicReact.ionicReactStrings.time
+import typingsSlinky.ionicReact.ionicReactStrings.tree
+import typingsSlinky.ionicReact.ionicReactStrings.url
+import typingsSlinky.ionicReact.ionicReactStrings.vertical
+import typingsSlinky.ionicReact.ionicReactStrings.yes
+import typingsSlinky.react.mod.Booleanish
+import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.std.Event_
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object IonVirtualScroll
+  extends ExternalComponentWithAttributesWithRefType[tag.type, Ref[js.Any] with js.Object] {
+  @JSImport("@ionic/react", "IonVirtualScroll")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: className, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, draggable, hidden, id, lang, placeholder, spellCheck, suppressContentEditableWarning, tabIndex, title */
+  def apply(
+    onAbortCapture: js.Any,
+    onAnimationEndCapture: js.Any,
+    onAnimationIterationCapture: js.Any,
+    onAnimationStartCapture: js.Any,
+    onAuxClickCapture: js.Any,
+    onBeforeInputCapture: js.Any,
+    onBlurCapture: js.Any,
+    onCanPlayCapture: js.Any,
+    onCanPlayThroughCapture: js.Any,
+    onChangeCapture: js.Any,
+    onClickCapture: js.Any,
+    onCompositionEndCapture: js.Any,
+    onCompositionStartCapture: js.Any,
+    onCompositionUpdateCapture: js.Any,
+    onContextMenuCapture: js.Any,
+    onCopyCapture: js.Any,
+    onCutCapture: js.Any,
+    onDoubleClickCapture: js.Any,
+    onDragCapture: js.Any,
+    onDragEndCapture: js.Any,
+    onDragEnterCapture: js.Any,
+    onDragExitCapture: js.Any,
+    onDragLeaveCapture: js.Any,
+    onDragOverCapture: js.Any,
+    onDragStartCapture: js.Any,
+    onDropCapture: js.Any,
+    onDurationChangeCapture: js.Any,
+    onEmptiedCapture: js.Any,
+    onEncryptedCapture: js.Any,
+    onEndedCapture: js.Any,
+    onErrorCapture: js.Any,
+    onFocusCapture: js.Any,
+    onGotPointerCapture: js.Any,
+    onGotPointerCaptureCapture: js.Any,
+    onInputCapture: js.Any,
+    onInvalidCapture: js.Any,
+    onKeyDownCapture: js.Any,
+    onKeyPressCapture: js.Any,
+    onKeyUpCapture: js.Any,
+    onLoadCapture: js.Any,
+    onLoadStartCapture: js.Any,
+    onLoadedDataCapture: js.Any,
+    onLoadedMetadataCapture: js.Any,
+    onLostPointerCapture: js.Any,
+    onLostPointerCaptureCapture: js.Any,
+    onMouseDownCapture: js.Any,
+    onMouseMoveCapture: js.Any,
+    onMouseOutCapture: js.Any,
+    onMouseOverCapture: js.Any,
+    onMouseUpCapture: js.Any,
+    onPasteCapture: js.Any,
+    onPauseCapture: js.Any,
+    onPlayCapture: js.Any,
+    onPlayingCapture: js.Any,
+    onPointerCancelCapture: js.Any,
+    onPointerDownCapture: js.Any,
+    onPointerEnterCapture: js.Any,
+    onPointerLeaveCapture: js.Any,
+    onPointerMoveCapture: js.Any,
+    onPointerOutCapture: js.Any,
+    onPointerOverCapture: js.Any,
+    onPointerUpCapture: js.Any,
+    onProgressCapture: js.Any,
+    onRateChangeCapture: js.Any,
+    onResetCapture: js.Any,
+    onScrollCapture: js.Any,
+    onSeekedCapture: js.Any,
+    onSeekingCapture: js.Any,
+    onSelectCapture: js.Any,
+    onStalledCapture: js.Any,
+    onSubmitCapture: js.Any,
+    onSuspendCapture: js.Any,
+    onTimeUpdateCapture: js.Any,
+    onTouchCancelCapture: js.Any,
+    onTouchEndCapture: js.Any,
+    onTouchMoveCapture: js.Any,
+    onTouchStartCapture: js.Any,
+    onTransitionEndCapture: js.Any,
+    onVolumeChangeCapture: js.Any,
+    onWaitingCapture: js.Any,
+    onWheelCapture: js.Any,
+    about: String = null,
+    accessKey: String = null,
+    approxFooterHeight: Int | Double = null,
+    approxHeaderHeight: Int | Double = null,
+    approxItemHeight: Int | Double = null,
+    `aria-activedescendant`: String = null,
+    `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
+    `aria-autocomplete`: none | `inline` | list | both = null,
+    `aria-busy`: js.UndefOr[Boolean] = js.undefined,
+    `aria-checked`: Boolean | mixed = null,
+    `aria-colcount`: Int | Double = null,
+    `aria-colindex`: Int | Double = null,
+    `aria-colspan`: Int | Double = null,
+    `aria-controls`: String = null,
+    `aria-current`: Boolean | page | step | location | date | time = null,
+    `aria-describedby`: String = null,
+    `aria-details`: String = null,
+    `aria-disabled`: js.UndefOr[Boolean] = js.undefined,
+    `aria-dropeffect`: none | copy | execute | link | move | popup = null,
+    `aria-errormessage`: String = null,
+    `aria-expanded`: js.UndefOr[Boolean] = js.undefined,
+    `aria-flowto`: String = null,
+    `aria-grabbed`: js.UndefOr[Boolean] = js.undefined,
+    `aria-haspopup`: Boolean | menu | listbox | tree | grid | dialog = null,
+    `aria-hidden`: js.UndefOr[Boolean] = js.undefined,
+    `aria-invalid`: Boolean | grammar | spelling = null,
+    `aria-keyshortcuts`: String = null,
+    `aria-label`: String = null,
+    `aria-labelledby`: String = null,
+    `aria-level`: Int | Double = null,
+    `aria-live`: off | assertive | polite = null,
+    `aria-modal`: js.UndefOr[Boolean] = js.undefined,
+    `aria-multiline`: js.UndefOr[Boolean] = js.undefined,
+    `aria-multiselectable`: js.UndefOr[Boolean] = js.undefined,
+    `aria-orientation`: horizontal | vertical = null,
+    `aria-owns`: String = null,
+    `aria-placeholder`: String = null,
+    `aria-posinset`: Int | Double = null,
+    `aria-pressed`: Boolean | mixed = null,
+    `aria-readonly`: js.UndefOr[Boolean] = js.undefined,
+    `aria-relevant`: additions | (`additions text`) | all | removals | text = null,
+    `aria-required`: js.UndefOr[Boolean] = js.undefined,
+    `aria-roledescription`: String = null,
+    `aria-rowcount`: Int | Double = null,
+    `aria-rowindex`: Int | Double = null,
+    `aria-rowspan`: Int | Double = null,
+    `aria-selected`: js.UndefOr[Boolean] = js.undefined,
+    `aria-setsize`: Int | Double = null,
+    `aria-sort`: none | ascending | descending | other = null,
+    `aria-valuemax`: Int | Double = null,
+    `aria-valuemin`: Int | Double = null,
+    `aria-valuenow`: Int | Double = null,
+    `aria-valuetext`: String = null,
+    autoCapitalize: String = null,
+    autoCorrect: String = null,
+    autoSave: String = null,
+    `class`: String = null,
+    color: String = null,
+    contentEditable: Booleanish | inherit = null,
+    contextMenu: String = null,
+    datatype: String = null,
+    footerFn: (/* item */ js.Any, /* index */ Double, /* items */ js.Array[js.Any]) => js.UndefOr[String | Null] = null,
+    footerHeight: (/* item */ js.Any, /* index */ Double) => Double = null,
+    headerFn: (/* item */ js.Any, /* index */ Double, /* items */ js.Array[js.Any]) => js.UndefOr[String | Null] = null,
+    headerHeight: (/* item */ js.Any, /* index */ Double) => Double = null,
+    inlist: js.Any = null,
+    inputMode: none | text | tel | url | email | numeric | decimal | search = null,
+    is: String = null,
+    itemHeight: (/* item */ js.Any, /* index */ Double) => Double = null,
+    itemID: String = null,
+    itemProp: String = null,
+    itemRef: String = null,
+    itemScope: js.UndefOr[Boolean] = js.undefined,
+    itemType: String = null,
+    items: js.Array[_] = null,
+    nodeRender: (/* el */ HTMLElement | Null, /* cell */ Cell, /* domIndex */ Double) => HTMLElement = null,
+    onAbort: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onAnimationEnd: SyntheticAnimationEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onAnimationIteration: SyntheticAnimationEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onAnimationStart: SyntheticAnimationEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onAuxClick: SyntheticMouseEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLIonVirtualScrollElement, Event_] => Unit = null,
+    onBlur: SyntheticFocusEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onCanPlay: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onCanPlayThrough: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onChange: SyntheticEvent[EventTarget with HTMLIonVirtualScrollElement, Event_] => Unit = null,
+    onClick: SyntheticMouseEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onCompositionEnd: SyntheticCompositionEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onCompositionStart: SyntheticCompositionEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onCompositionUpdate: SyntheticCompositionEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onContextMenu: SyntheticMouseEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onCopy: SyntheticClipboardEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onCut: SyntheticClipboardEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onDoubleClick: SyntheticMouseEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onDrag: DragEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onDragEnd: DragEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onDragEnter: DragEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onDragExit: DragEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onDragLeave: DragEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onDragOver: DragEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onDragStart: DragEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onDrop: DragEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onDurationChange: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onEmptied: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onEncrypted: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onEnded: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onError: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onFocus: SyntheticFocusEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onInput: SyntheticEvent[EventTarget with HTMLIonVirtualScrollElement, Event_] => Unit = null,
+    onInvalid: SyntheticEvent[EventTarget with HTMLIonVirtualScrollElement, Event_] => Unit = null,
+    onKeyDown: SyntheticKeyboardEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onKeyPress: SyntheticKeyboardEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onKeyUp: SyntheticKeyboardEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onLoad: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onLoadStart: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onLoadedData: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onLoadedMetadata: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onMouseDown: SyntheticMouseEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onMouseEnter: SyntheticMouseEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onMouseLeave: SyntheticMouseEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onMouseMove: SyntheticMouseEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onMouseOut: SyntheticMouseEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onMouseOver: SyntheticMouseEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onMouseUp: SyntheticMouseEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onPaste: SyntheticClipboardEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onPause: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onPlay: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onPlaying: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onPointerCancel: SyntheticPointerEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onPointerDown: SyntheticPointerEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onPointerEnter: SyntheticPointerEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onPointerLeave: SyntheticPointerEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onPointerMove: SyntheticPointerEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onPointerOut: SyntheticPointerEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onPointerOver: SyntheticPointerEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onPointerUp: SyntheticPointerEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onProgress: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onRateChange: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLIonVirtualScrollElement, Event_] => Unit = null,
+    onScroll: SyntheticUIEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onSeeked: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onSeeking: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onSelect: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onStalled: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onSubmit: SyntheticEvent[EventTarget with HTMLIonVirtualScrollElement, Event_] => Unit = null,
+    onSuspend: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onTimeUpdate: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onTouchCancel: SyntheticTouchEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onTouchEnd: SyntheticTouchEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onTouchMove: SyntheticTouchEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onTouchStart: SyntheticTouchEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onTransitionEnd: SyntheticTransitionEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    onVolumeChange: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onWaiting: SyntheticEvent[Event_, HTMLIonVirtualScrollElement] => Unit = null,
+    onWheel: SyntheticWheelEvent[HTMLIonVirtualScrollElement] => Unit = null,
+    prefix: String = null,
+    property: String = null,
+    radioGroup: String = null,
+    renderFooter: (/* item */ js.Any, /* index */ Double) => _ = null,
+    renderHeader: (/* item */ js.Any, /* index */ Double) => _ = null,
+    renderItem: (/* item */ js.Any, /* index */ Double) => _ = null,
+    resource: String = null,
+    results: Int | Double = null,
+    role: String = null,
+    security: String = null,
+    slot: String = null,
+    suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
+    translate: yes | no = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = {
+    val __obj = js.Dynamic.literal(onAbortCapture = onAbortCapture.asInstanceOf[js.Any], onAnimationEndCapture = onAnimationEndCapture.asInstanceOf[js.Any], onAnimationIterationCapture = onAnimationIterationCapture.asInstanceOf[js.Any], onAnimationStartCapture = onAnimationStartCapture.asInstanceOf[js.Any], onAuxClickCapture = onAuxClickCapture.asInstanceOf[js.Any], onBeforeInputCapture = onBeforeInputCapture.asInstanceOf[js.Any], onBlurCapture = onBlurCapture.asInstanceOf[js.Any], onCanPlayCapture = onCanPlayCapture.asInstanceOf[js.Any], onCanPlayThroughCapture = onCanPlayThroughCapture.asInstanceOf[js.Any], onChangeCapture = onChangeCapture.asInstanceOf[js.Any], onClickCapture = onClickCapture.asInstanceOf[js.Any], onCompositionEndCapture = onCompositionEndCapture.asInstanceOf[js.Any], onCompositionStartCapture = onCompositionStartCapture.asInstanceOf[js.Any], onCompositionUpdateCapture = onCompositionUpdateCapture.asInstanceOf[js.Any], onContextMenuCapture = onContextMenuCapture.asInstanceOf[js.Any], onCopyCapture = onCopyCapture.asInstanceOf[js.Any], onCutCapture = onCutCapture.asInstanceOf[js.Any], onDoubleClickCapture = onDoubleClickCapture.asInstanceOf[js.Any], onDragCapture = onDragCapture.asInstanceOf[js.Any], onDragEndCapture = onDragEndCapture.asInstanceOf[js.Any], onDragEnterCapture = onDragEnterCapture.asInstanceOf[js.Any], onDragExitCapture = onDragExitCapture.asInstanceOf[js.Any], onDragLeaveCapture = onDragLeaveCapture.asInstanceOf[js.Any], onDragOverCapture = onDragOverCapture.asInstanceOf[js.Any], onDragStartCapture = onDragStartCapture.asInstanceOf[js.Any], onDropCapture = onDropCapture.asInstanceOf[js.Any], onDurationChangeCapture = onDurationChangeCapture.asInstanceOf[js.Any], onEmptiedCapture = onEmptiedCapture.asInstanceOf[js.Any], onEncryptedCapture = onEncryptedCapture.asInstanceOf[js.Any], onEndedCapture = onEndedCapture.asInstanceOf[js.Any], onErrorCapture = onErrorCapture.asInstanceOf[js.Any], onFocusCapture = onFocusCapture.asInstanceOf[js.Any], onGotPointerCapture = onGotPointerCapture.asInstanceOf[js.Any], onGotPointerCaptureCapture = onGotPointerCaptureCapture.asInstanceOf[js.Any], onInputCapture = onInputCapture.asInstanceOf[js.Any], onInvalidCapture = onInvalidCapture.asInstanceOf[js.Any], onKeyDownCapture = onKeyDownCapture.asInstanceOf[js.Any], onKeyPressCapture = onKeyPressCapture.asInstanceOf[js.Any], onKeyUpCapture = onKeyUpCapture.asInstanceOf[js.Any], onLoadCapture = onLoadCapture.asInstanceOf[js.Any], onLoadStartCapture = onLoadStartCapture.asInstanceOf[js.Any], onLoadedDataCapture = onLoadedDataCapture.asInstanceOf[js.Any], onLoadedMetadataCapture = onLoadedMetadataCapture.asInstanceOf[js.Any], onLostPointerCapture = onLostPointerCapture.asInstanceOf[js.Any], onLostPointerCaptureCapture = onLostPointerCaptureCapture.asInstanceOf[js.Any], onMouseDownCapture = onMouseDownCapture.asInstanceOf[js.Any], onMouseMoveCapture = onMouseMoveCapture.asInstanceOf[js.Any], onMouseOutCapture = onMouseOutCapture.asInstanceOf[js.Any], onMouseOverCapture = onMouseOverCapture.asInstanceOf[js.Any], onMouseUpCapture = onMouseUpCapture.asInstanceOf[js.Any], onPasteCapture = onPasteCapture.asInstanceOf[js.Any], onPauseCapture = onPauseCapture.asInstanceOf[js.Any], onPlayCapture = onPlayCapture.asInstanceOf[js.Any], onPlayingCapture = onPlayingCapture.asInstanceOf[js.Any], onPointerCancelCapture = onPointerCancelCapture.asInstanceOf[js.Any], onPointerDownCapture = onPointerDownCapture.asInstanceOf[js.Any], onPointerEnterCapture = onPointerEnterCapture.asInstanceOf[js.Any], onPointerLeaveCapture = onPointerLeaveCapture.asInstanceOf[js.Any], onPointerMoveCapture = onPointerMoveCapture.asInstanceOf[js.Any], onPointerOutCapture = onPointerOutCapture.asInstanceOf[js.Any], onPointerOverCapture = onPointerOverCapture.asInstanceOf[js.Any], onPointerUpCapture = onPointerUpCapture.asInstanceOf[js.Any], onProgressCapture = onProgressCapture.asInstanceOf[js.Any], onRateChangeCapture = onRateChangeCapture.asInstanceOf[js.Any], onResetCapture = onResetCapture.asInstanceOf[js.Any], onScrollCapture = onScrollCapture.asInstanceOf[js.Any], onSeekedCapture = onSeekedCapture.asInstanceOf[js.Any], onSeekingCapture = onSeekingCapture.asInstanceOf[js.Any], onSelectCapture = onSelectCapture.asInstanceOf[js.Any], onStalledCapture = onStalledCapture.asInstanceOf[js.Any], onSubmitCapture = onSubmitCapture.asInstanceOf[js.Any], onSuspendCapture = onSuspendCapture.asInstanceOf[js.Any], onTimeUpdateCapture = onTimeUpdateCapture.asInstanceOf[js.Any], onTouchCancelCapture = onTouchCancelCapture.asInstanceOf[js.Any], onTouchEndCapture = onTouchEndCapture.asInstanceOf[js.Any], onTouchMoveCapture = onTouchMoveCapture.asInstanceOf[js.Any], onTouchStartCapture = onTouchStartCapture.asInstanceOf[js.Any], onTransitionEndCapture = onTransitionEndCapture.asInstanceOf[js.Any], onVolumeChangeCapture = onVolumeChangeCapture.asInstanceOf[js.Any], onWaitingCapture = onWaitingCapture.asInstanceOf[js.Any], onWheelCapture = onWheelCapture.asInstanceOf[js.Any])
+    if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (approxFooterHeight != null) __obj.updateDynamic("approxFooterHeight")(approxFooterHeight.asInstanceOf[js.Any])
+    if (approxHeaderHeight != null) __obj.updateDynamic("approxHeaderHeight")(approxHeaderHeight.asInstanceOf[js.Any])
+    if (approxItemHeight != null) __obj.updateDynamic("approxItemHeight")(approxItemHeight.asInstanceOf[js.Any])
+    if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
+    if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-busy`)) __obj.updateDynamic("aria-busy")(`aria-busy`.asInstanceOf[js.Any])
+    if (`aria-checked` != null) __obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
+    if (`aria-colcount` != null) __obj.updateDynamic("aria-colcount")(`aria-colcount`.asInstanceOf[js.Any])
+    if (`aria-colindex` != null) __obj.updateDynamic("aria-colindex")(`aria-colindex`.asInstanceOf[js.Any])
+    if (`aria-colspan` != null) __obj.updateDynamic("aria-colspan")(`aria-colspan`.asInstanceOf[js.Any])
+    if (`aria-controls` != null) __obj.updateDynamic("aria-controls")(`aria-controls`.asInstanceOf[js.Any])
+    if (`aria-current` != null) __obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+    if (`aria-describedby` != null) __obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
+    if (`aria-details` != null) __obj.updateDynamic("aria-details")(`aria-details`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-disabled`)) __obj.updateDynamic("aria-disabled")(`aria-disabled`.asInstanceOf[js.Any])
+    if (`aria-dropeffect` != null) __obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+    if (`aria-errormessage` != null) __obj.updateDynamic("aria-errormessage")(`aria-errormessage`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-expanded`)) __obj.updateDynamic("aria-expanded")(`aria-expanded`.asInstanceOf[js.Any])
+    if (`aria-flowto` != null) __obj.updateDynamic("aria-flowto")(`aria-flowto`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-grabbed`)) __obj.updateDynamic("aria-grabbed")(`aria-grabbed`.asInstanceOf[js.Any])
+    if (`aria-haspopup` != null) __obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-hidden`)) __obj.updateDynamic("aria-hidden")(`aria-hidden`.asInstanceOf[js.Any])
+    if (`aria-invalid` != null) __obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+    if (`aria-keyshortcuts` != null) __obj.updateDynamic("aria-keyshortcuts")(`aria-keyshortcuts`.asInstanceOf[js.Any])
+    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
+    if (`aria-level` != null) __obj.updateDynamic("aria-level")(`aria-level`.asInstanceOf[js.Any])
+    if (`aria-live` != null) __obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-modal`)) __obj.updateDynamic("aria-modal")(`aria-modal`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-multiline`)) __obj.updateDynamic("aria-multiline")(`aria-multiline`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-multiselectable`)) __obj.updateDynamic("aria-multiselectable")(`aria-multiselectable`.asInstanceOf[js.Any])
+    if (`aria-orientation` != null) __obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
+    if (`aria-owns` != null) __obj.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
+    if (`aria-placeholder` != null) __obj.updateDynamic("aria-placeholder")(`aria-placeholder`.asInstanceOf[js.Any])
+    if (`aria-posinset` != null) __obj.updateDynamic("aria-posinset")(`aria-posinset`.asInstanceOf[js.Any])
+    if (`aria-pressed` != null) __obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-readonly`)) __obj.updateDynamic("aria-readonly")(`aria-readonly`.asInstanceOf[js.Any])
+    if (`aria-relevant` != null) __obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-required`)) __obj.updateDynamic("aria-required")(`aria-required`.asInstanceOf[js.Any])
+    if (`aria-roledescription` != null) __obj.updateDynamic("aria-roledescription")(`aria-roledescription`.asInstanceOf[js.Any])
+    if (`aria-rowcount` != null) __obj.updateDynamic("aria-rowcount")(`aria-rowcount`.asInstanceOf[js.Any])
+    if (`aria-rowindex` != null) __obj.updateDynamic("aria-rowindex")(`aria-rowindex`.asInstanceOf[js.Any])
+    if (`aria-rowspan` != null) __obj.updateDynamic("aria-rowspan")(`aria-rowspan`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-selected`)) __obj.updateDynamic("aria-selected")(`aria-selected`.asInstanceOf[js.Any])
+    if (`aria-setsize` != null) __obj.updateDynamic("aria-setsize")(`aria-setsize`.asInstanceOf[js.Any])
+    if (`aria-sort` != null) __obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+    if (`aria-valuemax` != null) __obj.updateDynamic("aria-valuemax")(`aria-valuemax`.asInstanceOf[js.Any])
+    if (`aria-valuemin` != null) __obj.updateDynamic("aria-valuemin")(`aria-valuemin`.asInstanceOf[js.Any])
+    if (`aria-valuenow` != null) __obj.updateDynamic("aria-valuenow")(`aria-valuenow`.asInstanceOf[js.Any])
+    if (`aria-valuetext` != null) __obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
+    if (autoCapitalize != null) __obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
+    if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
+    if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
+    if (`class` != null) __obj.updateDynamic("class")(`class`.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
+    if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
+    if (footerFn != null) __obj.updateDynamic("footerFn")(js.Any.fromFunction3(footerFn))
+    if (footerHeight != null) __obj.updateDynamic("footerHeight")(js.Any.fromFunction2(footerHeight))
+    if (headerFn != null) __obj.updateDynamic("headerFn")(js.Any.fromFunction3(headerFn))
+    if (headerHeight != null) __obj.updateDynamic("headerHeight")(js.Any.fromFunction2(headerHeight))
+    if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
+    if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
+    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
+    if (itemHeight != null) __obj.updateDynamic("itemHeight")(js.Any.fromFunction2(itemHeight))
+    if (itemID != null) __obj.updateDynamic("itemID")(itemID.asInstanceOf[js.Any])
+    if (itemProp != null) __obj.updateDynamic("itemProp")(itemProp.asInstanceOf[js.Any])
+    if (itemRef != null) __obj.updateDynamic("itemRef")(itemRef.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemScope)) __obj.updateDynamic("itemScope")(itemScope.asInstanceOf[js.Any])
+    if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
+    if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
+    if (nodeRender != null) __obj.updateDynamic("nodeRender")(js.Any.fromFunction3(nodeRender))
+    if (onAbort != null) __obj.updateDynamic("onAbort")(js.Any.fromFunction1(onAbort))
+    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
+    if (onAnimationIteration != null) __obj.updateDynamic("onAnimationIteration")(js.Any.fromFunction1(onAnimationIteration))
+    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
+    if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
+    if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onCanPlay != null) __obj.updateDynamic("onCanPlay")(js.Any.fromFunction1(onCanPlay))
+    if (onCanPlayThrough != null) __obj.updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(onCanPlayThrough))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onCompositionEnd != null) __obj.updateDynamic("onCompositionEnd")(js.Any.fromFunction1(onCompositionEnd))
+    if (onCompositionStart != null) __obj.updateDynamic("onCompositionStart")(js.Any.fromFunction1(onCompositionStart))
+    if (onCompositionUpdate != null) __obj.updateDynamic("onCompositionUpdate")(js.Any.fromFunction1(onCompositionUpdate))
+    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
+    if (onCopy != null) __obj.updateDynamic("onCopy")(js.Any.fromFunction1(onCopy))
+    if (onCut != null) __obj.updateDynamic("onCut")(js.Any.fromFunction1(onCut))
+    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(js.Any.fromFunction1(onDoubleClick))
+    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction1(onDrag))
+    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
+    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(js.Any.fromFunction1(onDragEnter))
+    if (onDragExit != null) __obj.updateDynamic("onDragExit")(js.Any.fromFunction1(onDragExit))
+    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(js.Any.fromFunction1(onDragLeave))
+    if (onDragOver != null) __obj.updateDynamic("onDragOver")(js.Any.fromFunction1(onDragOver))
+    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
+    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction1(onDrop))
+    if (onDurationChange != null) __obj.updateDynamic("onDurationChange")(js.Any.fromFunction1(onDurationChange))
+    if (onEmptied != null) __obj.updateDynamic("onEmptied")(js.Any.fromFunction1(onEmptied))
+    if (onEncrypted != null) __obj.updateDynamic("onEncrypted")(js.Any.fromFunction1(onEncrypted))
+    if (onEnded != null) __obj.updateDynamic("onEnded")(js.Any.fromFunction1(onEnded))
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onInput != null) __obj.updateDynamic("onInput")(js.Any.fromFunction1(onInput))
+    if (onInvalid != null) __obj.updateDynamic("onInvalid")(js.Any.fromFunction1(onInvalid))
+    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
+    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
+    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
+    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
+    if (onLoadStart != null) __obj.updateDynamic("onLoadStart")(js.Any.fromFunction1(onLoadStart))
+    if (onLoadedData != null) __obj.updateDynamic("onLoadedData")(js.Any.fromFunction1(onLoadedData))
+    if (onLoadedMetadata != null) __obj.updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(onLoadedMetadata))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
+    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
+    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
+    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
+    if (onPaste != null) __obj.updateDynamic("onPaste")(js.Any.fromFunction1(onPaste))
+    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
+    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
+    if (onPlaying != null) __obj.updateDynamic("onPlaying")(js.Any.fromFunction1(onPlaying))
+    if (onPointerCancel != null) __obj.updateDynamic("onPointerCancel")(js.Any.fromFunction1(onPointerCancel))
+    if (onPointerDown != null) __obj.updateDynamic("onPointerDown")(js.Any.fromFunction1(onPointerDown))
+    if (onPointerEnter != null) __obj.updateDynamic("onPointerEnter")(js.Any.fromFunction1(onPointerEnter))
+    if (onPointerLeave != null) __obj.updateDynamic("onPointerLeave")(js.Any.fromFunction1(onPointerLeave))
+    if (onPointerMove != null) __obj.updateDynamic("onPointerMove")(js.Any.fromFunction1(onPointerMove))
+    if (onPointerOut != null) __obj.updateDynamic("onPointerOut")(js.Any.fromFunction1(onPointerOut))
+    if (onPointerOver != null) __obj.updateDynamic("onPointerOver")(js.Any.fromFunction1(onPointerOver))
+    if (onPointerUp != null) __obj.updateDynamic("onPointerUp")(js.Any.fromFunction1(onPointerUp))
+    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
+    if (onRateChange != null) __obj.updateDynamic("onRateChange")(js.Any.fromFunction1(onRateChange))
+    if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
+    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
+    if (onSeeked != null) __obj.updateDynamic("onSeeked")(js.Any.fromFunction1(onSeeked))
+    if (onSeeking != null) __obj.updateDynamic("onSeeking")(js.Any.fromFunction1(onSeeking))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+    if (onStalled != null) __obj.updateDynamic("onStalled")(js.Any.fromFunction1(onStalled))
+    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction1(onSubmit))
+    if (onSuspend != null) __obj.updateDynamic("onSuspend")(js.Any.fromFunction1(onSuspend))
+    if (onTimeUpdate != null) __obj.updateDynamic("onTimeUpdate")(js.Any.fromFunction1(onTimeUpdate))
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
+    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction1(onTransitionEnd))
+    if (onVolumeChange != null) __obj.updateDynamic("onVolumeChange")(js.Any.fromFunction1(onVolumeChange))
+    if (onWaiting != null) __obj.updateDynamic("onWaiting")(js.Any.fromFunction1(onWaiting))
+    if (onWheel != null) __obj.updateDynamic("onWheel")(js.Any.fromFunction1(onWheel))
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
+    if (radioGroup != null) __obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])
+    if (renderFooter != null) __obj.updateDynamic("renderFooter")(js.Any.fromFunction2(renderFooter))
+    if (renderHeader != null) __obj.updateDynamic("renderHeader")(js.Any.fromFunction2(renderHeader))
+    if (renderItem != null) __obj.updateDynamic("renderItem")(js.Any.fromFunction2(renderItem))
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
+    if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  type Props = IonVirtualScrollPickHTMLA
+}
+

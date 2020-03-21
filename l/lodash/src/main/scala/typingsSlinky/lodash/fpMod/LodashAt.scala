@@ -1,11 +1,11 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.Dictionary
-import typingsSlinky.lodash.lodashMod.List
-import typingsSlinky.lodash.lodashMod.Many
-import typingsSlinky.lodash.lodashMod.NumericDictionary
-import typingsSlinky.lodash.lodashMod.PropertyPath
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.Dictionary
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.Many
+import typingsSlinky.lodash.mod.NumericDictionary
+import typingsSlinky.lodash.mod.PropertyPath
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ trait LodashAt extends js.Object {
   def apply[T](props: PropertyPath, `object`: Dictionary[T]): js.Array[T] = js.native
   def apply[T](props: PropertyPath, `object`: List[T]): js.Array[T] = js.native
   def apply[T](props: PropertyPath, `object`: NumericDictionary[T]): js.Array[T] = js.native
-  def apply[T](props: __): LodashAt1x2[T] = js.native
+  def apply[T /* <: js.Object */](props: __): LodashAt2x2[T] = js.native
   def apply[T /* <: js.Object */](props: __, `object`: T): LodashAt2x2[T] = js.native
   def apply[T](props: __, `object`: Dictionary[T]): LodashAt1x2[T] = js.native
   def apply[T](props: __, `object`: List[T]): LodashAt1x2[T] = js.native

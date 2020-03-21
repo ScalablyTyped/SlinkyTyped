@@ -5,7 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_Select
+import typingsSlinky.baseui.AnonId
+import typingsSlinky.baseui.AnonSelect
 import typingsSlinky.baseui.datepickerMod.TimezonePickerProps
 import typingsSlinky.baseui.selectMod.Option
 import scala.scalajs.js
@@ -19,12 +20,13 @@ object TimezonePicker
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, onChange */
+  /* The following DOM/SVG props were specified: disabled */
   def apply(
     date: js.Date = null,
     error: js.UndefOr[Boolean] = js.undefined,
     mapLabels: /* args */ Option => TagMod[Any] = null,
-    overrides: Anon_Select = null,
+    onChange: /* value */ AnonId => _ = null,
+    overrides: AnonSelect = null,
     positive: js.UndefOr[Boolean] = js.undefined,
     value: String = null,
     _overrides: StringDictionary[js.Any] = null
@@ -33,6 +35,7 @@ object TimezonePicker
     if (date != null) __obj.updateDynamic("date")(date.asInstanceOf[js.Any])
     if (!js.isUndefined(error)) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
     if (mapLabels != null) __obj.updateDynamic("mapLabels")(js.Any.fromFunction1(mapLabels))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])

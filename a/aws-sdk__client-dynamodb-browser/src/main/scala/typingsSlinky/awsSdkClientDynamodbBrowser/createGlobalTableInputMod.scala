@@ -1,0 +1,13 @@
+package typingsSlinky.awsSdkClientDynamodbBrowser
+
+import typingsSlinky.awsSdkTypes.protocolMod.Structure
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-dynamodb-browser/model/CreateGlobalTableInput", JSImport.Namespace)
+@js.native
+object createGlobalTableInputMod extends js.Object {
+  val CreateGlobalTableInput: Structure = js.native
+}
+

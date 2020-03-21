@@ -1,7 +1,7 @@
 package typingsSlinky.dropboxjs.Dropbox
 
 import org.scalajs.dom.raw.XMLHttpRequest
-import typingsSlinky.dropboxjs.Anon_Cancelable
+import typingsSlinky.dropboxjs.AnonCancelable
 import typingsSlinky.std.ArrayBuffer
 import typingsSlinky.std.Blob
 import scala.scalajs.js
@@ -13,7 +13,7 @@ import scala.scalajs.js.annotation._
 object Util extends js.Object {
   @js.native
   class EventSource protected () extends js.Object {
-    def this(options: Anon_Cancelable) = this()
+    def this(options: AnonCancelable) = this()
     def addListener(listener: js.Function1[/* event */ js.Any, Unit]): EventSource = js.native
     def dispatch(event: js.Object): Boolean = js.native
     def removeListener(listener: js.Function1[/* event */ js.Any, Unit]): EventSource = js.native

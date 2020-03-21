@@ -1,6 +1,6 @@
 package typingsSlinky.radix64
 
-import typingsSlinky.radix64.radix64Mod.MethodsString
+import typingsSlinky.radix64.mod.MethodsString
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

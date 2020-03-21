@@ -1,6 +1,6 @@
 package typingsSlinky.mockingoose
 
-import typingsSlinky.mockingoose.mockingooseMod.Ops
+import typingsSlinky.mockingoose.mod.Ops
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

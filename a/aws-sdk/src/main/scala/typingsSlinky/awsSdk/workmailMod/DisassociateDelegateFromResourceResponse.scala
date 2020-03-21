@@ -1,0 +1,9 @@
+package typingsSlinky.awsSdk.workmailMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait DisassociateDelegateFromResourceResponse extends js.Object
+

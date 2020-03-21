@@ -1,16 +1,16 @@
 package typingsSlinky.node.fsMod
 
-import typingsSlinky.node.Anon_BufferBytesWritten
-import typingsSlinky.node.Anon_BufferBytesWrittenDataView
-import typingsSlinky.node.Anon_BufferBytesWrittenFloat32Array
-import typingsSlinky.node.Anon_BufferBytesWrittenFloat64Array
-import typingsSlinky.node.Anon_BufferBytesWrittenInt16Array
-import typingsSlinky.node.Anon_BufferBytesWrittenInt32Array
-import typingsSlinky.node.Anon_BufferBytesWrittenInt8Array
-import typingsSlinky.node.Anon_BufferBytesWrittenNumber
-import typingsSlinky.node.Anon_BufferBytesWrittenNumberString
-import typingsSlinky.node.Anon_BufferBytesWrittenNumberUint16Array
-import typingsSlinky.node.Anon_BufferBytesWrittenNumberUint32Array
+import typingsSlinky.node.AnonBuffer
+import typingsSlinky.node.AnonBufferBytesWritten
+import typingsSlinky.node.AnonBufferDataView
+import typingsSlinky.node.AnonBufferFloat32Array
+import typingsSlinky.node.AnonBufferFloat64Array
+import typingsSlinky.node.AnonBufferInt16Array
+import typingsSlinky.node.AnonBufferInt32Array
+import typingsSlinky.node.AnonBufferInt8Array
+import typingsSlinky.node.AnonBufferString
+import typingsSlinky.node.AnonBufferUint32Array
+import typingsSlinky.node.AnonBytesWritten
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.std.DataView
 import typingsSlinky.std.Float32Array
@@ -1173,47 +1173,88 @@ object write extends js.Object {
     * @param length The number of bytes to write. If not supplied, defaults to `buffer.length - offset`.
     * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
     */
-  def __promisify__(fd: Double): js.Promise[Anon_BufferBytesWritten] = js.native
-  def __promisify__(fd: Double, buffer: DataView): js.Promise[Anon_BufferBytesWrittenDataView] = js.native
-  def __promisify__(fd: Double, buffer: DataView, offset: Double): js.Promise[Anon_BufferBytesWrittenDataView] = js.native
-  def __promisify__(fd: Double, buffer: DataView, offset: Double, length: Double): js.Promise[Anon_BufferBytesWrittenDataView] = js.native
-  def __promisify__(fd: Double, buffer: DataView, offset: Double, length: Double, position: Double): js.Promise[Anon_BufferBytesWrittenDataView] = js.native
-  def __promisify__(fd: Double, buffer: Float32Array): js.Promise[Anon_BufferBytesWrittenFloat32Array] = js.native
-  def __promisify__(fd: Double, buffer: Float32Array, offset: Double): js.Promise[Anon_BufferBytesWrittenFloat32Array] = js.native
-  def __promisify__(fd: Double, buffer: Float32Array, offset: Double, length: Double): js.Promise[Anon_BufferBytesWrittenFloat32Array] = js.native
-  def __promisify__(fd: Double, buffer: Float32Array, offset: Double, length: Double, position: Double): js.Promise[Anon_BufferBytesWrittenFloat32Array] = js.native
-  def __promisify__(fd: Double, buffer: Float64Array): js.Promise[Anon_BufferBytesWrittenFloat64Array] = js.native
-  def __promisify__(fd: Double, buffer: Float64Array, offset: Double): js.Promise[Anon_BufferBytesWrittenFloat64Array] = js.native
-  def __promisify__(fd: Double, buffer: Float64Array, offset: Double, length: Double): js.Promise[Anon_BufferBytesWrittenFloat64Array] = js.native
-  def __promisify__(fd: Double, buffer: Float64Array, offset: Double, length: Double, position: Double): js.Promise[Anon_BufferBytesWrittenFloat64Array] = js.native
-  def __promisify__(fd: Double, buffer: Int16Array): js.Promise[Anon_BufferBytesWrittenInt16Array] = js.native
-  def __promisify__(fd: Double, buffer: Int16Array, offset: Double): js.Promise[Anon_BufferBytesWrittenInt16Array] = js.native
-  def __promisify__(fd: Double, buffer: Int16Array, offset: Double, length: Double): js.Promise[Anon_BufferBytesWrittenInt16Array] = js.native
-  def __promisify__(fd: Double, buffer: Int16Array, offset: Double, length: Double, position: Double): js.Promise[Anon_BufferBytesWrittenInt16Array] = js.native
-  def __promisify__(fd: Double, buffer: Int32Array): js.Promise[Anon_BufferBytesWrittenInt32Array] = js.native
-  def __promisify__(fd: Double, buffer: Int32Array, offset: Double): js.Promise[Anon_BufferBytesWrittenInt32Array] = js.native
-  def __promisify__(fd: Double, buffer: Int32Array, offset: Double, length: Double): js.Promise[Anon_BufferBytesWrittenInt32Array] = js.native
-  def __promisify__(fd: Double, buffer: Int32Array, offset: Double, length: Double, position: Double): js.Promise[Anon_BufferBytesWrittenInt32Array] = js.native
-  def __promisify__(fd: Double, buffer: Int8Array): js.Promise[Anon_BufferBytesWrittenInt8Array] = js.native
-  def __promisify__(fd: Double, buffer: Int8Array, offset: Double): js.Promise[Anon_BufferBytesWrittenInt8Array] = js.native
-  def __promisify__(fd: Double, buffer: Int8Array, offset: Double, length: Double): js.Promise[Anon_BufferBytesWrittenInt8Array] = js.native
-  def __promisify__(fd: Double, buffer: Int8Array, offset: Double, length: Double, position: Double): js.Promise[Anon_BufferBytesWrittenInt8Array] = js.native
-  def __promisify__(fd: Double, buffer: Uint16Array): js.Promise[Anon_BufferBytesWrittenNumberUint16Array] = js.native
-  def __promisify__(fd: Double, buffer: Uint16Array, offset: Double): js.Promise[Anon_BufferBytesWrittenNumberUint16Array] = js.native
-  def __promisify__(fd: Double, buffer: Uint16Array, offset: Double, length: Double): js.Promise[Anon_BufferBytesWrittenNumberUint16Array] = js.native
-  def __promisify__(fd: Double, buffer: Uint16Array, offset: Double, length: Double, position: Double): js.Promise[Anon_BufferBytesWrittenNumberUint16Array] = js.native
-  def __promisify__(fd: Double, buffer: Uint32Array): js.Promise[Anon_BufferBytesWrittenNumberUint32Array] = js.native
-  def __promisify__(fd: Double, buffer: Uint32Array, offset: Double): js.Promise[Anon_BufferBytesWrittenNumberUint32Array] = js.native
-  def __promisify__(fd: Double, buffer: Uint32Array, offset: Double, length: Double): js.Promise[Anon_BufferBytesWrittenNumberUint32Array] = js.native
-  def __promisify__(fd: Double, buffer: Uint32Array, offset: Double, length: Double, position: Double): js.Promise[Anon_BufferBytesWrittenNumberUint32Array] = js.native
-  def __promisify__(fd: Double, buffer: Uint8Array): js.Promise[Anon_BufferBytesWritten] = js.native
-  def __promisify__(fd: Double, buffer: Uint8Array, offset: Double): js.Promise[Anon_BufferBytesWritten] = js.native
-  def __promisify__(fd: Double, buffer: Uint8Array, offset: Double, length: Double): js.Promise[Anon_BufferBytesWritten] = js.native
-  def __promisify__(fd: Double, buffer: Uint8Array, offset: Double, length: Double, position: Double): js.Promise[Anon_BufferBytesWritten] = js.native
-  def __promisify__(fd: Double, buffer: Uint8ClampedArray): js.Promise[Anon_BufferBytesWrittenNumber] = js.native
-  def __promisify__(fd: Double, buffer: Uint8ClampedArray, offset: Double): js.Promise[Anon_BufferBytesWrittenNumber] = js.native
-  def __promisify__(fd: Double, buffer: Uint8ClampedArray, offset: Double, length: Double): js.Promise[Anon_BufferBytesWrittenNumber] = js.native
-  def __promisify__(fd: Double, buffer: Uint8ClampedArray, offset: Double, length: Double, position: Double): js.Promise[Anon_BufferBytesWrittenNumber] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double): js.Promise[AnonBuffer] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: DataView): js.Promise[AnonBufferDataView] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: DataView, offset: Double): js.Promise[AnonBufferDataView] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: DataView, offset: Double, length: Double): js.Promise[AnonBufferDataView] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: DataView, offset: Double, length: Double, position: Double): js.Promise[AnonBufferDataView] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Float32Array): js.Promise[AnonBufferFloat32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Float32Array, offset: Double): js.Promise[AnonBufferFloat32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Float32Array, offset: Double, length: Double): js.Promise[AnonBufferFloat32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Float32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferFloat32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Float64Array): js.Promise[AnonBufferFloat64Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Float64Array, offset: Double): js.Promise[AnonBufferFloat64Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Float64Array, offset: Double, length: Double): js.Promise[AnonBufferFloat64Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Float64Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferFloat64Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int16Array): js.Promise[AnonBufferInt16Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int16Array, offset: Double): js.Promise[AnonBufferInt16Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int16Array, offset: Double, length: Double): js.Promise[AnonBufferInt16Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int16Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt16Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int32Array): js.Promise[AnonBufferInt32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int32Array, offset: Double): js.Promise[AnonBufferInt32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int32Array, offset: Double, length: Double): js.Promise[AnonBufferInt32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int8Array): js.Promise[AnonBufferInt8Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int8Array, offset: Double): js.Promise[AnonBufferInt8Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int8Array, offset: Double, length: Double): js.Promise[AnonBufferInt8Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Int8Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferInt8Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint16Array): js.Promise[AnonBufferBytesWritten] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint16Array, offset: Double): js.Promise[AnonBufferBytesWritten] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint16Array, offset: Double, length: Double): js.Promise[AnonBufferBytesWritten] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint16Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferBytesWritten] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint32Array): js.Promise[AnonBufferUint32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint32Array, offset: Double): js.Promise[AnonBufferUint32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint32Array, offset: Double, length: Double): js.Promise[AnonBufferUint32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint32Array, offset: Double, length: Double, position: Double): js.Promise[AnonBufferUint32Array] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint8Array): js.Promise[AnonBuffer] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint8Array, offset: Double): js.Promise[AnonBuffer] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint8Array, offset: Double, length: Double): js.Promise[AnonBuffer] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint8Array, offset: Double, length: Double, position: Double): js.Promise[AnonBuffer] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint8ClampedArray): js.Promise[AnonBytesWritten] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint8ClampedArray, offset: Double): js.Promise[AnonBytesWritten] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint8ClampedArray, offset: Double, length: Double): js.Promise[AnonBytesWritten] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, buffer: Uint8ClampedArray, offset: Double, length: Double, position: Double): js.Promise[AnonBytesWritten] = js.native
   /**
     * Asynchronously writes `string` to the file referenced by the supplied file descriptor.
     * @param fd A file descriptor.
@@ -1221,9 +1262,13 @@ object write extends js.Object {
     * @param position The offset from the beginning of the file where this data should be written. If not supplied, defaults to the current position.
     * @param encoding The expected string encoding.
     */
-  def __promisify__(fd: Double, string: js.Any): js.Promise[Anon_BufferBytesWrittenNumberString] = js.native
-  def __promisify__(fd: Double, string: js.Any, position: Double): js.Promise[Anon_BufferBytesWrittenNumberString] = js.native
-  def __promisify__(fd: Double, string: js.Any, position: Double, encoding: String): js.Promise[Anon_BufferBytesWrittenNumberString] = js.native
-  def __promisify__(fd: Double, string: js.Any, position: Null, encoding: String): js.Promise[Anon_BufferBytesWrittenNumberString] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, string: js.Any): js.Promise[AnonBufferString] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, string: js.Any, position: Double): js.Promise[AnonBufferString] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, string: js.Any, position: Double, encoding: String): js.Promise[AnonBufferString] = js.native
+  @JSName("__promisify__")
+  def promisify(fd: Double, string: js.Any, position: Null, encoding: String): js.Promise[AnonBufferString] = js.native
 }
 

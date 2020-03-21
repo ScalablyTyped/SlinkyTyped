@@ -1,12 +1,12 @@
 package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.dojo.dojo.main
+import typingsSlinky.dojo.dijit.main
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("dojo/main", JSImport.Namespace)
+@JSImport("dijit/main", JSImport.Namespace)
 @js.native
 object mainMod extends TopLevel[main]
 

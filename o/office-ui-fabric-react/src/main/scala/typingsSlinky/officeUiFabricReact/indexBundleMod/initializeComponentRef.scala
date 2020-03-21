@@ -1,0 +1,14 @@
+package typingsSlinky.officeUiFabricReact.indexBundleMod
+
+import slinky.core.ReactComponentClass
+import typingsSlinky.uifabricUtilities.baseComponentTypesMod.IBaseProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("office-ui-fabric-react/lib/index.bundle", "initializeComponentRef")
+@js.native
+object initializeComponentRef extends js.Object {
+  def apply[TProps /* <: IBaseProps[_] */, TState](obj: ReactComponentClass[TProps]): Unit = js.native
+}
+

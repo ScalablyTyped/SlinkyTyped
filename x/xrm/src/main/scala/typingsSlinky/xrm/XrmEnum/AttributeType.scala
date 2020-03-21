@@ -20,17 +20,17 @@ import scala.scalajs.js.annotation._
   * @see {@link Xrm.Attributes.AttributeType}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.boolean
-  - typings.xrm.xrmStrings.datetime
-  - typings.xrm.xrmStrings.decimal
-  - typings.xrm.xrmStrings.double
-  - typings.xrm.xrmStrings.integer
-  - typings.xrm.xrmStrings.lookup
-  - typings.xrm.xrmStrings.memo
-  - typings.xrm.xrmStrings.money
-  - typings.xrm.xrmStrings.multioptionset
-  - typings.xrm.xrmStrings.optionset
-  - typings.xrm.xrmStrings.string
+  - typingsSlinky.xrm.xrmStrings.boolean
+  - typingsSlinky.xrm.xrmStrings.datetime
+  - typingsSlinky.xrm.xrmStrings.decimal
+  - typingsSlinky.xrm.xrmStrings.double
+  - typingsSlinky.xrm.xrmStrings.integer
+  - typingsSlinky.xrm.xrmStrings.lookup
+  - typingsSlinky.xrm.xrmStrings.memo
+  - typingsSlinky.xrm.xrmStrings.money
+  - typingsSlinky.xrm.xrmStrings.multioptionset
+  - typingsSlinky.xrm.xrmStrings.optionset
+  - typingsSlinky.xrm.xrmStrings.string
 */
 trait AttributeType extends js.Object
 

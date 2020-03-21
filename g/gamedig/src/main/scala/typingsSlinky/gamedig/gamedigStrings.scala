@@ -1,6 +1,6 @@
 package typingsSlinky.gamedig
 
-import typingsSlinky.gamedig.gamedigMod.Type
+import typingsSlinky.gamedig.mod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

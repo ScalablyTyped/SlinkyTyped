@@ -4,6 +4,8 @@ import typingsSlinky.chrome.chrome.devtools.inspectedWindow.Resource
 import typingsSlinky.chrome.chrome.devtools.panels.ElementsPanel
 import typingsSlinky.chrome.chrome.devtools.panels.ExtensionPanel
 import typingsSlinky.chrome.chrome.devtools.panels.SourcesPanel
+import typingsSlinky.chrome.chromeStrings.dark
+import typingsSlinky.chrome.chromeStrings.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,6 +14,7 @@ import scala.scalajs.js.annotation._
 trait Typeofpanels extends js.Object {
   var elements: ElementsPanel = js.native
   var sources: SourcesPanel = js.native
+  var themeName: default | dark = js.native
   def create(title: String, iconPath: String, pagePath: String): Unit = js.native
   def create(
     title: String,

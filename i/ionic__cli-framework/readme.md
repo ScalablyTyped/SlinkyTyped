@@ -1,7 +1,7 @@
 
 # Scala.js typings for ionic__cli-framework
 
-Typings are for version 3.0.5
+Typings are for version 3.0.6
 
 ## Library description:
 The foundation framework of the Ionic CLI
@@ -10,9 +10,9 @@ The foundation framework of the Ionic CLI
 | ------------------ | :-------------: |
 | Full name          | @ionic/cli-framework |
 | Keywords           | - |
-| # releases         | 121 |
+| # releases         | 119 |
 | # dependents       | 8 |
-| # downloads        | 3364920 |
+| # downloads        | 3374969 |
 | # stars            | 0 |
 
 ## Links

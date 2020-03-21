@@ -1,13 +1,16 @@
 package typingsSlinky.tstl.tstlMod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.tstl.baseContainerSetContainerMod.SetContainer
-import typingsSlinky.tstl.iteratorIForwardIteratorMod.IForwardIterator
+import typingsSlinky.tstl.IteratoranyanyanyEquals
+import typingsSlinky.tstl.binaryPredicatorMod.BinaryPredicator
+import typingsSlinky.tstl.hasherMod.Hasher
+import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
+import typingsSlinky.tstl.setContainerMod.SetContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("tstl", "HashMultiSet")
+@JSImport("tstl/container", "HashMultiSet")
 @js.native
 /**
   * Default Constructor.
@@ -16,8 +19,8 @@ import scala.scalajs.js.annotation._
   * @param equal A binary function predicates two arguments are equal. Default is {@link equal_to}.
   */
 class HashMultiSet[Key] ()
-  extends typingsSlinky.tstl.containerMod.HashMultiSet[Key] {
-  def this(hash: js.Function1[/* key */ Key, Double]) = this()
+  extends typingsSlinky.tstl.hashMultiSetMod.HashMultiSet[Key] {
+  def this(hash: Hasher[Key]) = this()
   /**
     * Initializer Constructor.
     *
@@ -31,7 +34,7 @@ class HashMultiSet[Key] ()
     *
     * @param obj Object to copy.
     */
-  def this(obj: typingsSlinky.tstl.containerHashMultiSetMod.HashMultiSet[Key]) = this()
+  def this(obj: typingsSlinky.tstl.hashMultiSetMod.HashMultiSet[Key]) = this()
   /**
     * Range Constructor.
     *
@@ -44,43 +47,35 @@ class HashMultiSet[Key] ()
     first: IForwardIterator[Key, IForwardIterator[Key, _]],
     last: IForwardIterator[Key, IForwardIterator[Key, _]]
   ) = this()
-  def this(hash: js.Function1[/* key */ Key, Double], equal: js.Function2[/* x */ Key, /* y */ Key, Boolean]) = this()
-  def this(items: js.Array[Key], hash: js.Function1[/* key */ Key, Double]) = this()
+  def this(hash: Hasher[Key], equal: BinaryPredicator[Key, Key]) = this()
+  def this(items: js.Array[Key], hash: Hasher[Key]) = this()
   def this(
     first: IForwardIterator[Key, IForwardIterator[Key, _]],
     last: IForwardIterator[Key, IForwardIterator[Key, _]],
-    hash: js.Function1[/* key */ Key, Double]
+    hash: Hasher[Key]
   ) = this()
-  def this(
-    items: js.Array[Key],
-    hash: js.Function1[/* key */ Key, Double],
-    equal: js.Function2[/* x */ Key, /* y */ Key, Boolean]
-  ) = this()
+  def this(items: js.Array[Key], hash: Hasher[Key], equal: BinaryPredicator[Key, Key]) = this()
   def this(
     first: IForwardIterator[Key, IForwardIterator[Key, _]],
     last: IForwardIterator[Key, IForwardIterator[Key, _]],
-    hash: js.Function1[/* key */ Key, Double],
-    equal: js.Function2[/* x */ Key, /* y */ Key, Boolean]
+    hash: Hasher[Key],
+    equal: BinaryPredicator[Key, Key]
   ) = this()
 }
 
-@JSImport("tstl", "HashMultiSet")
+@JSImport("tstl/container", "HashMultiSet")
 @js.native
 object HashMultiSet extends js.Object {
   val Iterator: Instantiable0[
-    typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
+    typingsSlinky.tstl.setElementListMod.SetElementList.Iterator[
       js.Object, 
       Boolean, 
       SetContainer[
         /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-          /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
-        ], 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
+        IteratoranyanyanyEquals, 
+        typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
           /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
@@ -89,61 +84,15 @@ object HashMultiSet extends js.Object {
     ]
   ] = js.native
   val ReverseIterator: Instantiable0[
-    typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
+    typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
       js.Object, 
       Boolean, 
       SetContainer[
         /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-          /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
-        ], 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
-          /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
-        ]
-      ]
-    ]
-  ] = js.native
-  val iterator: Instantiable0[
-    typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-      js.Object, 
-      Boolean, 
-      SetContainer[
-        /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-          /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
-        ], 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
-          /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
-        ]
-      ]
-    ]
-  ] = js.native
-  val reverse_iterator: Instantiable0[
-    typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
-      js.Object, 
-      Boolean, 
-      SetContainer[
-        /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-          /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
-        ], 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
+        IteratoranyanyanyEquals, 
+        typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
           /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any

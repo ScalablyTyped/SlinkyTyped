@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesSunburst
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistance
-import typingsSlinky.echarts.Anon_BorderColorBorderType
-import typingsSlinky.echarts.Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistance
+import typingsSlinky.echarts.AnonBorderType
+import typingsSlinky.echarts.AnonLabelAnonMinAngle
+import typingsSlinky.echarts.AnonMinAngle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,9 +26,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.downplay
     */
-  var downplay: js.UndefOr[
-    Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistance
-  ] = js.undefined
+  var downplay: js.UndefOr[AnonLabelAnonMinAngle] = js.undefined
   /**
     * Item style when mouse is hovering. See
     * [highlightPolicy](https://echarts.apache.org/en/option.html#series-sunburst.highlightPolicy)
@@ -37,9 +35,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.emphasis
     */
-  var emphasis: js.UndefOr[
-    Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistance
-  ] = js.undefined
+  var emphasis: js.UndefOr[AnonLabelAnonMinAngle] = js.undefined
   /**
     * Item style when mouse is hovering related items. See
     * [highlightPolicy](https://echarts.apache.org/en/option.html#series-sunburst.highlightPolicy)
@@ -48,9 +44,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.highlight
     */
-  var highlight: js.UndefOr[
-    Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistance
-  ] = js.undefined
+  var highlight: js.UndefOr[AnonLabelAnonMinAngle] = js.undefined
   /**
     * Style of Sunburst sectors.
     *
@@ -86,7 +80,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderType] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderType] = js.undefined
   /**
     * `label` sets the text style for every sectors.
     *
@@ -108,7 +102,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-sunburst.data.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistance] = js.undefined
+  var label: js.UndefOr[AnonMinAngle] = js.undefined
   /**
     * Link address that redirects to when this sector is clicked.
     * Only useful when
@@ -157,11 +151,11 @@ object DataObject {
   @scala.inline
   def apply(
     children: js.Array[DataObject] = null,
-    downplay: Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistance = null,
-    emphasis: Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistance = null,
-    highlight: Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistance = null,
-    itemStyle: Anon_BorderColorBorderType = null,
-    label: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistance = null,
+    downplay: AnonLabelAnonMinAngle = null,
+    emphasis: AnonLabelAnonMinAngle = null,
+    highlight: AnonLabelAnonMinAngle = null,
+    itemStyle: AnonBorderType = null,
+    label: AnonMinAngle = null,
     link: String = null,
     name: String = null,
     target: String = null,

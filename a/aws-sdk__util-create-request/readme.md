@@ -10,9 +10,9 @@ Typings are for version 0.1.0-preview.2
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/util-create-request |
 | Keywords           | - |
-| # releases         | 6 |
+| # releases         | 10 |
 | # dependents       | 1 |
-| # downloads        | 778 |
+| # downloads        | 1108 |
 | # stars            | 0 |
 
 ## Links

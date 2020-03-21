@@ -1,8 +1,8 @@
 package typingsSlinky.nodegit.checkoutMod.Checkout
 
-import typingsSlinky.nodegit.checkoutDashOptionsMod.CheckoutOptions
+import typingsSlinky.nodegit.checkoutOptionsMod.CheckoutOptions
 import typingsSlinky.nodegit.commitMod.Commit
-import typingsSlinky.nodegit.nodegitMod.Index
+import typingsSlinky.nodegit.mod.Index
 import typingsSlinky.nodegit.oidMod.Oid
 import typingsSlinky.nodegit.referenceMod.Reference
 import typingsSlinky.nodegit.repositoryMod.Repository

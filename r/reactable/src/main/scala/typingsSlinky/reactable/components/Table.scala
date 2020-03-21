@@ -5,15 +5,15 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.reactable.Anon_Column
-import typingsSlinky.reactable.reactableMod.ColumnsType
-import typingsSlinky.reactable.reactableMod.TableComponentProperties
+import typingsSlinky.reactable.AnonColumn
+import typingsSlinky.reactable.mod.ColumnsType
+import typingsSlinky.reactable.mod.TableComponentProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Table
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactable.reactableMod.Table[js.Any]] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactable.mod.Table[js.Any]] {
   @JSImport("reactable", "Table")
   @js.native
   object componentImport extends js.Object
@@ -24,7 +24,7 @@ object Table
     columns: js.Array[ColumnsType] = null,
     currentPage: Int | Double = null,
     data: js.Array[T] = null,
-    defaultSort: Anon_Column = null,
+    defaultSort: AnonColumn = null,
     filterBy: String = null,
     filterable: js.Array[String] = null,
     hideFilterInput: js.UndefOr[Boolean] = js.undefined,
@@ -35,7 +35,7 @@ object Table
     sortBy: js.UndefOr[Boolean] = js.undefined,
     sortable: js.Array[String] | Boolean = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactable.reactableMod.Table[js.Any]] = {
+  ): BuildingComponent[tag.type, typingsSlinky.reactable.mod.Table[js.Any]] = {
     val __obj = js.Dynamic.literal()
     if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
     if (currentPage != null) __obj.updateDynamic("currentPage")(currentPage.asInstanceOf[js.Any])
@@ -51,9 +51,9 @@ object Table
     if (!js.isUndefined(sortBy)) __obj.updateDynamic("sortBy")(sortBy.asInstanceOf[js.Any])
     if (sortable != null) __obj.updateDynamic("sortable")(sortable.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactable.reactableMod.Table[js.Any]]]
+    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactable.mod.Table[js.Any]]]
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactable.reactableMod.Table[js.Any]] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactable.reactableMod.Table[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactable.mod.Table[js.Any]] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactable.mod.Table[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TableComponentProperties[js.Any]
 }
 

@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation._
 
 /* cl_device_type - bitfield */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1`
-  - typings.webcl.webclNumbers.`0x2`
-  - typings.webcl.webclNumbers.`0x4`
-  - typings.webcl.webclNumbers.`0x8`
-  - typings.webcl.webclNumbers._0xFFFFFFFF
+  - typingsSlinky.webcl.webclNumbers.`0x1`
+  - typingsSlinky.webcl.webclNumbers.`0x2`
+  - typingsSlinky.webcl.webclNumbers.`0x4`
+  - typingsSlinky.webcl.webclNumbers.`0x8`
+  - typingsSlinky.webcl.webclNumbers._0xFFFFFFFF
 */
 trait DeviceTypeBits extends js.Object
 

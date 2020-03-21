@@ -1,7 +1,7 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandLineInputs
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandLineOptions
+import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineInputs
+import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

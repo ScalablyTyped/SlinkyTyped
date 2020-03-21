@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Item containing charge code(s) associated with the provision of healthcare provider products
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait ChargeItem extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait ChargeItem extends DomainResource {
   /**
     * Contains extended information for property 'definition'.
     */

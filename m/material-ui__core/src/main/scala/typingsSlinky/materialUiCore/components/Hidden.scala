@@ -1,0 +1,69 @@
+package typingsSlinky.materialUiCore.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
+import slinky.core.facade.ReactRef
+import slinky.web.html.`*`.tag
+import typingsSlinky.materialUiCore.createBreakpointsMod.Breakpoint
+import typingsSlinky.materialUiCore.hiddenHiddenMod.HiddenProps
+import typingsSlinky.materialUiCore.hiddenMod.default
+import typingsSlinky.materialUiCore.materialUiCoreStrings.css
+import typingsSlinky.materialUiCore.materialUiCoreStrings.js_
+import typingsSlinky.materialUiCore.withStylesMod.ClassNameMap
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.std.Partial
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object Hidden
+  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+  @JSImport("@material-ui/core/Hidden", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: className, style */
+  def apply(
+    classes: Partial[ClassNameMap[scala.Nothing]] = null,
+    implementation: js_ | css = null,
+    initialWidth: Breakpoint = null,
+    innerRef: Ref[_] | ReactRef[_] = null,
+    lgDown: js.UndefOr[Boolean] = js.undefined,
+    lgUp: js.UndefOr[Boolean] = js.undefined,
+    mdDown: js.UndefOr[Boolean] = js.undefined,
+    mdUp: js.UndefOr[Boolean] = js.undefined,
+    only: Breakpoint | js.Array[Breakpoint] = null,
+    smDown: js.UndefOr[Boolean] = js.undefined,
+    smUp: js.UndefOr[Boolean] = js.undefined,
+    xlDown: js.UndefOr[Boolean] = js.undefined,
+    xlUp: js.UndefOr[Boolean] = js.undefined,
+    xsDown: js.UndefOr[Boolean] = js.undefined,
+    xsUp: js.UndefOr[Boolean] = js.undefined,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, default] = {
+    val __obj = js.Dynamic.literal()
+    if (classes != null) __obj.updateDynamic("classes")(classes.asInstanceOf[js.Any])
+    if (implementation != null) __obj.updateDynamic("implementation")(implementation.asInstanceOf[js.Any])
+    if (initialWidth != null) __obj.updateDynamic("initialWidth")(initialWidth.asInstanceOf[js.Any])
+    if (innerRef != null) __obj.updateDynamic("innerRef")(innerRef.asInstanceOf[js.Any])
+    if (!js.isUndefined(lgDown)) __obj.updateDynamic("lgDown")(lgDown.asInstanceOf[js.Any])
+    if (!js.isUndefined(lgUp)) __obj.updateDynamic("lgUp")(lgUp.asInstanceOf[js.Any])
+    if (!js.isUndefined(mdDown)) __obj.updateDynamic("mdDown")(mdDown.asInstanceOf[js.Any])
+    if (!js.isUndefined(mdUp)) __obj.updateDynamic("mdUp")(mdUp.asInstanceOf[js.Any])
+    if (only != null) __obj.updateDynamic("only")(only.asInstanceOf[js.Any])
+    if (!js.isUndefined(smDown)) __obj.updateDynamic("smDown")(smDown.asInstanceOf[js.Any])
+    if (!js.isUndefined(smUp)) __obj.updateDynamic("smUp")(smUp.asInstanceOf[js.Any])
+    if (!js.isUndefined(xlDown)) __obj.updateDynamic("xlDown")(xlDown.asInstanceOf[js.Any])
+    if (!js.isUndefined(xlUp)) __obj.updateDynamic("xlUp")(xlUp.asInstanceOf[js.Any])
+    if (!js.isUndefined(xsDown)) __obj.updateDynamic("xsDown")(xsDown.asInstanceOf[js.Any])
+    if (!js.isUndefined(xsUp)) __obj.updateDynamic("xsUp")(xsUp.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.materialUiCore.hiddenMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = HiddenProps
+}
+

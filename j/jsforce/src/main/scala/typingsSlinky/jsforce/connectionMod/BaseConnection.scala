@@ -1,16 +1,16 @@
 package typingsSlinky.jsforce.connectionMod
 
-import typingsSlinky.jsforce.Anon_Callback
-import typingsSlinky.jsforce.Anon_CallbackClear
-import typingsSlinky.jsforce.describeDashResultMod.DescribeGlobalResult
-import typingsSlinky.jsforce.describeDashResultMod.DescribeSObjectResult
-import typingsSlinky.jsforce.httpDashApiMod.HttpApiOptions
+import typingsSlinky.jsforce.AnonCall
+import typingsSlinky.jsforce.AnonClear
+import typingsSlinky.jsforce.describeResultMod.DescribeGlobalResult
+import typingsSlinky.jsforce.describeResultMod.DescribeSObjectResult
+import typingsSlinky.jsforce.httpApiMod.HttpApiOptions
 import typingsSlinky.jsforce.queryMod.ExecuteOptions
 import typingsSlinky.jsforce.queryMod.Query
 import typingsSlinky.jsforce.queryMod.QueryResult
-import typingsSlinky.jsforce.recordDashResultMod.RecordResult
 import typingsSlinky.jsforce.recordMod.Record
-import typingsSlinky.jsforce.salesforceDashObjectMod.SObject
+import typingsSlinky.jsforce.recordResultMod.RecordResult
+import typingsSlinky.jsforce.salesforceObjectMod.SObject
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.std.Error
 import scala.scalajs.js
@@ -21,9 +21,9 @@ import scala.scalajs.js.annotation._
 @js.native
 abstract class BaseConnection () extends EventEmitter {
   @JSName("describe$")
-  var describe$_Original: Anon_Callback = js.native
+  var describe$_Original: AnonCall = js.native
   @JSName("describeGlobal$")
-  var describeGlobal$_Original: Anon_CallbackClear = js.native
+  var describeGlobal$_Original: AnonClear = js.native
   def _baseUrl(): String = js.native
   def create[T](records: js.Array[Record[T]]): js.Promise[RecordResult | js.Array[RecordResult]] = js.native
   def create[T](records: js.Array[Record[T]], options: RestApiOptions): js.Promise[RecordResult | js.Array[RecordResult]] = js.native

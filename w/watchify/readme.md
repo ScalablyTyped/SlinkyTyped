@@ -1,7 +1,7 @@
 
 # Scala.js typings for watchify
 
-Typings are for version v3.7.0
+Typings are for version 3.11
 
 ## Library description:
 watch mode for browserify builds
@@ -11,8 +11,8 @@ watch mode for browserify builds
 | Full name          | watchify |
 | Keywords           | browserify, browserify-tool, watch, bundle, build, browser |
 | # releases         | 4 |
-| # dependents       | 600 |
-| # downloads        | 9396618 |
+| # dependents       | 608 |
+| # downloads        | 9576357 |
 | # stars            | 128 |
 
 ## Links

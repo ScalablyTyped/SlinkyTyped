@@ -10,9 +10,9 @@ Delightful JavaScript Testing.
 | ------------------ | :-------------: |
 | Full name          | jest-watcher |
 | Keywords           | - |
-| # releases         | 29 |
+| # releases         | 28 |
 | # dependents       | 12 |
-| # downloads        | 176597904 |
+| # downloads        | 179516120 |
 | # stars            | 0 |
 
 ## Links

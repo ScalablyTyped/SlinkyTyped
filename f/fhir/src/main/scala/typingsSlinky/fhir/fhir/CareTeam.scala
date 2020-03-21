@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Planned participants in the coordination and delivery of care for a patient or group
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait CareTeam extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait CareTeam extends DomainResource {
   /**
     * Contains extended information for property 'name'.
     */

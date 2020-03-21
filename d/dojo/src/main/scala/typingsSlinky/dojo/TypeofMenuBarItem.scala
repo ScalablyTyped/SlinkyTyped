@@ -1,7 +1,7 @@
 package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.dojo.dijit.MenuBarItem._MenuBarItemMixin
+import typingsSlinky.dojo.dijit.MenuBarItem.MenuBarItemMixin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait TypeofMenuBarItem extends js.Object {
     *
     * 
     */
-  var _MenuBarItemMixin: Instantiable0[typingsSlinky.dojo.dijit.MenuBarItem._MenuBarItemMixin]
+  var _MenuBarItemMixin: Instantiable0[MenuBarItemMixin]
 }
 
 object TypeofMenuBarItem {
   @scala.inline
-  def apply(_MenuBarItemMixin: Instantiable0[_MenuBarItemMixin]): TypeofMenuBarItem = {
+  def apply(_MenuBarItemMixin: Instantiable0[MenuBarItemMixin]): TypeofMenuBarItem = {
     val __obj = js.Dynamic.literal(_MenuBarItemMixin = _MenuBarItemMixin.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[TypeofMenuBarItem]

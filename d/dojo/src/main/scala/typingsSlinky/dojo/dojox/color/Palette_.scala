@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.color
 
-import typingsSlinky.dojo.dojo._base.Color
+import typingsSlinky.dojo.dojo.base.Color
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,6 @@ import scala.scalajs.js.annotation._
   *
   * @param base
   */
-@JSName("Palette")
 @js.native
 trait Palette_ extends js.Object {
   def apply(base: String): Unit = js.native

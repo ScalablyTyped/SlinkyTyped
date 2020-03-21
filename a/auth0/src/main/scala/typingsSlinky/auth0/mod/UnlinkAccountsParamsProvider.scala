@@ -1,0 +1,189 @@
+package typingsSlinky.auth0.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.auth0.auth0Strings.ad
+  - typingsSlinky.auth0.auth0Strings.adfs
+  - typingsSlinky.auth0.auth0Strings.amazon
+  - typingsSlinky.auth0.auth0Strings.dropbox
+  - typingsSlinky.auth0.auth0Strings.bitbucket
+  - typingsSlinky.auth0.auth0Strings.aol
+  - typingsSlinky.auth0.auth0Strings.`auth0-adldap`
+  - typingsSlinky.auth0.auth0Strings.`auth0-oidc`
+  - typingsSlinky.auth0.auth0Strings.auth0
+  - typingsSlinky.auth0.auth0Strings.baidu
+  - typingsSlinky.auth0.auth0Strings.bitly
+  - typingsSlinky.auth0.auth0Strings.box
+  - typingsSlinky.auth0.auth0Strings.custom
+  - typingsSlinky.auth0.auth0Strings.dwolla
+  - typingsSlinky.auth0.auth0Strings.email
+  - typingsSlinky.auth0.auth0Strings.`evernote-sandbox`
+  - typingsSlinky.auth0.auth0Strings.evernote
+  - typingsSlinky.auth0.auth0Strings.exact
+  - typingsSlinky.auth0.auth0Strings.facebook
+  - typingsSlinky.auth0.auth0Strings.fitbit
+  - typingsSlinky.auth0.auth0Strings.flickr
+  - typingsSlinky.auth0.auth0Strings.github
+  - typingsSlinky.auth0.auth0Strings.`google-apps`
+  - typingsSlinky.auth0.auth0Strings.`google-oauth2`
+  - typingsSlinky.auth0.auth0Strings.guardian
+  - typingsSlinky.auth0.auth0Strings.instagram
+  - typingsSlinky.auth0.auth0Strings.ip
+  - typingsSlinky.auth0.auth0Strings.linkedin
+  - typingsSlinky.auth0.auth0Strings.miicard
+  - typingsSlinky.auth0.auth0Strings.oauth1
+  - typingsSlinky.auth0.auth0Strings.oauth2
+  - typingsSlinky.auth0.auth0Strings.office365
+  - typingsSlinky.auth0.auth0Strings.paypal
+  - typingsSlinky.auth0.auth0Strings.`paypal-sandbox`
+  - typingsSlinky.auth0.auth0Strings.pingfederate
+  - typingsSlinky.auth0.auth0Strings.planningcenter
+  - typingsSlinky.auth0.auth0Strings.renren
+  - typingsSlinky.auth0.auth0Strings.`salesforce-community`
+  - typingsSlinky.auth0.auth0Strings.`salesforce-sandbox`
+  - typingsSlinky.auth0.auth0Strings.salesforce
+  - typingsSlinky.auth0.auth0Strings.samlp
+  - typingsSlinky.auth0.auth0Strings.sharepoint
+  - typingsSlinky.auth0.auth0Strings.shopify
+  - typingsSlinky.auth0.auth0Strings.sms
+  - typingsSlinky.auth0.auth0Strings.soundcloud
+  - typingsSlinky.auth0.auth0Strings.`thecity-sandbox`
+  - typingsSlinky.auth0.auth0Strings.thecity
+  - typingsSlinky.auth0.auth0Strings.thirtysevensignals
+  - typingsSlinky.auth0.auth0Strings.twitter
+  - typingsSlinky.auth0.auth0Strings.untappd
+  - typingsSlinky.auth0.auth0Strings.vkontakte
+  - typingsSlinky.auth0.auth0Strings.waad
+  - typingsSlinky.auth0.auth0Strings.weibo
+  - typingsSlinky.auth0.auth0Strings.windowslive
+  - typingsSlinky.auth0.auth0Strings.wordpress
+  - typingsSlinky.auth0.auth0Strings.yahoo
+  - typingsSlinky.auth0.auth0Strings.yammer
+  - typingsSlinky.auth0.auth0Strings.yandex
+*/
+trait UnlinkAccountsParamsProvider extends js.Object
+
+object UnlinkAccountsParamsProvider {
+  @scala.inline
+  def ad: typingsSlinky.auth0.auth0Strings.ad = this.cast("ad")
+  @scala.inline
+  def adfs: typingsSlinky.auth0.auth0Strings.adfs = this.cast("adfs")
+  @scala.inline
+  def amazon: typingsSlinky.auth0.auth0Strings.amazon = this.cast("amazon")
+  @scala.inline
+  def aol: typingsSlinky.auth0.auth0Strings.aol = this.cast("aol")
+  @scala.inline
+  def auth0: typingsSlinky.auth0.auth0Strings.auth0 = this.cast("auth0")
+  @scala.inline
+  def `auth0-adldap`: typingsSlinky.auth0.auth0Strings.`auth0-adldap` = this.cast("auth0-adldap")
+  @scala.inline
+  def `auth0-oidc`: typingsSlinky.auth0.auth0Strings.`auth0-oidc` = this.cast("auth0-oidc")
+  @scala.inline
+  def baidu: typingsSlinky.auth0.auth0Strings.baidu = this.cast("baidu")
+  @scala.inline
+  def bitbucket: typingsSlinky.auth0.auth0Strings.bitbucket = this.cast("bitbucket")
+  @scala.inline
+  def bitly: typingsSlinky.auth0.auth0Strings.bitly = this.cast("bitly")
+  @scala.inline
+  def box: typingsSlinky.auth0.auth0Strings.box = this.cast("box")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def custom: typingsSlinky.auth0.auth0Strings.custom = this.cast("custom")
+  @scala.inline
+  def dropbox: typingsSlinky.auth0.auth0Strings.dropbox = this.cast("dropbox")
+  @scala.inline
+  def dwolla: typingsSlinky.auth0.auth0Strings.dwolla = this.cast("dwolla")
+  @scala.inline
+  def email: typingsSlinky.auth0.auth0Strings.email = this.cast("email")
+  @scala.inline
+  def evernote: typingsSlinky.auth0.auth0Strings.evernote = this.cast("evernote")
+  @scala.inline
+  def `evernote-sandbox`: typingsSlinky.auth0.auth0Strings.`evernote-sandbox` = this.cast("evernote-sandbox")
+  @scala.inline
+  def exact: typingsSlinky.auth0.auth0Strings.exact = this.cast("exact")
+  @scala.inline
+  def facebook: typingsSlinky.auth0.auth0Strings.facebook = this.cast("facebook")
+  @scala.inline
+  def fitbit: typingsSlinky.auth0.auth0Strings.fitbit = this.cast("fitbit")
+  @scala.inline
+  def flickr: typingsSlinky.auth0.auth0Strings.flickr = this.cast("flickr")
+  @scala.inline
+  def github: typingsSlinky.auth0.auth0Strings.github = this.cast("github")
+  @scala.inline
+  def `google-apps`: typingsSlinky.auth0.auth0Strings.`google-apps` = this.cast("google-apps")
+  @scala.inline
+  def `google-oauth2`: typingsSlinky.auth0.auth0Strings.`google-oauth2` = this.cast("google-oauth2")
+  @scala.inline
+  def guardian: typingsSlinky.auth0.auth0Strings.guardian = this.cast("guardian")
+  @scala.inline
+  def instagram: typingsSlinky.auth0.auth0Strings.instagram = this.cast("instagram")
+  @scala.inline
+  def ip: typingsSlinky.auth0.auth0Strings.ip = this.cast("ip")
+  @scala.inline
+  def linkedin: typingsSlinky.auth0.auth0Strings.linkedin = this.cast("linkedin")
+  @scala.inline
+  def miicard: typingsSlinky.auth0.auth0Strings.miicard = this.cast("miicard")
+  @scala.inline
+  def oauth1: typingsSlinky.auth0.auth0Strings.oauth1 = this.cast("oauth1")
+  @scala.inline
+  def oauth2: typingsSlinky.auth0.auth0Strings.oauth2 = this.cast("oauth2")
+  @scala.inline
+  def office365: typingsSlinky.auth0.auth0Strings.office365 = this.cast("office365")
+  @scala.inline
+  def paypal: typingsSlinky.auth0.auth0Strings.paypal = this.cast("paypal")
+  @scala.inline
+  def `paypal-sandbox`: typingsSlinky.auth0.auth0Strings.`paypal-sandbox` = this.cast("paypal-sandbox")
+  @scala.inline
+  def pingfederate: typingsSlinky.auth0.auth0Strings.pingfederate = this.cast("pingfederate")
+  @scala.inline
+  def planningcenter: typingsSlinky.auth0.auth0Strings.planningcenter = this.cast("planningcenter")
+  @scala.inline
+  def renren: typingsSlinky.auth0.auth0Strings.renren = this.cast("renren")
+  @scala.inline
+  def salesforce: typingsSlinky.auth0.auth0Strings.salesforce = this.cast("salesforce")
+  @scala.inline
+  def `salesforce-community`: typingsSlinky.auth0.auth0Strings.`salesforce-community` = this.cast("salesforce-community")
+  @scala.inline
+  def `salesforce-sandbox`: typingsSlinky.auth0.auth0Strings.`salesforce-sandbox` = this.cast("salesforce-sandbox")
+  @scala.inline
+  def samlp: typingsSlinky.auth0.auth0Strings.samlp = this.cast("samlp")
+  @scala.inline
+  def sharepoint: typingsSlinky.auth0.auth0Strings.sharepoint = this.cast("sharepoint")
+  @scala.inline
+  def shopify: typingsSlinky.auth0.auth0Strings.shopify = this.cast("shopify")
+  @scala.inline
+  def sms: typingsSlinky.auth0.auth0Strings.sms = this.cast("sms")
+  @scala.inline
+  def soundcloud: typingsSlinky.auth0.auth0Strings.soundcloud = this.cast("soundcloud")
+  @scala.inline
+  def thecity: typingsSlinky.auth0.auth0Strings.thecity = this.cast("thecity")
+  @scala.inline
+  def `thecity-sandbox`: typingsSlinky.auth0.auth0Strings.`thecity-sandbox` = this.cast("thecity-sandbox")
+  @scala.inline
+  def thirtysevensignals: typingsSlinky.auth0.auth0Strings.thirtysevensignals = this.cast("thirtysevensignals")
+  @scala.inline
+  def twitter: typingsSlinky.auth0.auth0Strings.twitter = this.cast("twitter")
+  @scala.inline
+  def untappd: typingsSlinky.auth0.auth0Strings.untappd = this.cast("untappd")
+  @scala.inline
+  def vkontakte: typingsSlinky.auth0.auth0Strings.vkontakte = this.cast("vkontakte")
+  @scala.inline
+  def waad: typingsSlinky.auth0.auth0Strings.waad = this.cast("waad")
+  @scala.inline
+  def weibo: typingsSlinky.auth0.auth0Strings.weibo = this.cast("weibo")
+  @scala.inline
+  def windowslive: typingsSlinky.auth0.auth0Strings.windowslive = this.cast("windowslive")
+  @scala.inline
+  def wordpress: typingsSlinky.auth0.auth0Strings.wordpress = this.cast("wordpress")
+  @scala.inline
+  def yahoo: typingsSlinky.auth0.auth0Strings.yahoo = this.cast("yahoo")
+  @scala.inline
+  def yammer: typingsSlinky.auth0.auth0Strings.yammer = this.cast("yammer")
+  @scala.inline
+  def yandex: typingsSlinky.auth0.auth0Strings.yandex = this.cast("yandex")
+}
+

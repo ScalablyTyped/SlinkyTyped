@@ -1,12 +1,12 @@
 package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.dojo.dojo.uacss
+import typingsSlinky.dojo.dojox.mobile.uacss
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("dojo/uacss", JSImport.Namespace)
+@JSImport("dojox/mobile/uacss", JSImport.Namespace)
 @js.native
 object uacssMod extends TopLevel[uacss]
 

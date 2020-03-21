@@ -1,6 +1,6 @@
 package typingsSlinky.lightpick
 
-import typingsSlinky.lightpick.lightpickMod.Options.DayOfWeek
+import typingsSlinky.lightpick.mod.Options.DayOfWeek
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

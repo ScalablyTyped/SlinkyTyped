@@ -7,7 +7,7 @@ import typingsSlinky.nodegit.objectMod.Object
 import typingsSlinky.nodegit.oidMod.Oid
 import typingsSlinky.nodegit.repositoryMod.Repository
 import typingsSlinky.nodegit.signatureMod.Signature
-import typingsSlinky.nodegit.treeDashEntryMod.TreeEntry
+import typingsSlinky.nodegit.treeEntryMod.TreeEntry
 import typingsSlinky.nodegit.treeMod.Tree
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -15,12 +15,12 @@ import scala.scalajs.js.annotation._
   * @see {@link Xrm.Attributes.StringAttributeFormat}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.email
-  - typings.xrm.xrmStrings.phone
-  - typings.xrm.xrmStrings.text
-  - typings.xrm.xrmStrings.textarea
-  - typings.xrm.xrmStrings.tickersymbol
-  - typings.xrm.xrmStrings.url
+  - typingsSlinky.xrm.xrmStrings.email
+  - typingsSlinky.xrm.xrmStrings.phone
+  - typingsSlinky.xrm.xrmStrings.text
+  - typingsSlinky.xrm.xrmStrings.textarea
+  - typingsSlinky.xrm.xrmStrings.tickersymbol
+  - typingsSlinky.xrm.xrmStrings.url
 */
 trait StringAttributeFormat extends js.Object
 

@@ -1,6 +1,6 @@
 package typingsSlinky.winrt.Windows.Data.Json
 
-import typingsSlinky.winrt.Anon_ResultSucceeded
+import typingsSlinky.winrt.AnonSucceeded
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrt.Windows.Foundation.Collections.IKeyValuePair
 import typingsSlinky.winrt.Windows.Foundation.Collections.IMap
@@ -65,6 +65,6 @@ class JsonObject ()
 @js.native
 object JsonObject extends js.Object {
   def parse(input: String): JsonObject = js.native
-  def tryParse(input: String): Anon_ResultSucceeded = js.native
+  def tryParse(input: String): AnonSucceeded = js.native
 }
 

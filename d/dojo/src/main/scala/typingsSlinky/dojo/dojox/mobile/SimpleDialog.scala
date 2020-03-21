@@ -1,14 +1,14 @@
 package typingsSlinky.dojo.dojox.mobile
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.closeButton
 import typingsSlinky.dojo.dojoStrings.closeButtonClass
 import typingsSlinky.dojo.dojoStrings.left
 import typingsSlinky.dojo.dojoStrings.modal
 import typingsSlinky.dojo.dojoStrings.tabIndex
 import typingsSlinky.dojo.dojoStrings.top
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -104,7 +104,7 @@ class SimpleDialog () extends Pane {
     *
     * @param e
     */
-  def onCloseButtonClick(e: Event): Unit = js.native
+  def onCloseButtonClick(e: Event_): Unit = js.native
   /**
     * Refreshes the layout of the dialog.
     *
@@ -141,7 +141,7 @@ class SimpleDialog () extends Pane {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_closeButtonClass(
     property: closeButtonClass,
@@ -151,7 +151,7 @@ class SimpleDialog () extends Pane {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_left(
     property: left,
@@ -161,7 +161,7 @@ class SimpleDialog () extends Pane {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_modal(
     property: modal,
@@ -171,7 +171,7 @@ class SimpleDialog () extends Pane {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_tabIndex(
     property: tabIndex,
@@ -181,7 +181,7 @@ class SimpleDialog () extends Pane {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_top(
     property: top,
@@ -191,6 +191,6 @@ class SimpleDialog () extends Pane {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

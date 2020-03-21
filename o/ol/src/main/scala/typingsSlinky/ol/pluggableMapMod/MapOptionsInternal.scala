@@ -1,8 +1,8 @@
 package typingsSlinky.ol.pluggableMapMod
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Document
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait MapOptionsInternal extends js.Object {
   var interactions: js.UndefOr[
     typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.interactionInteractionMod.default]
   ] = js.undefined
-  var keyboardEventTarget: HTMLElement | Document
+  var keyboardEventTarget: HTMLElement | Document_
   var overlays: typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.overlayMod.default]
   var values: StringDictionary[js.Any]
 }
@@ -22,7 +22,7 @@ trait MapOptionsInternal extends js.Object {
 object MapOptionsInternal {
   @scala.inline
   def apply(
-    keyboardEventTarget: HTMLElement | Document,
+    keyboardEventTarget: HTMLElement | Document_,
     overlays: typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.overlayMod.default],
     values: StringDictionary[js.Any],
     controls: typingsSlinky.ol.collectionMod.default[typingsSlinky.ol.controlControlMod.default] = null,

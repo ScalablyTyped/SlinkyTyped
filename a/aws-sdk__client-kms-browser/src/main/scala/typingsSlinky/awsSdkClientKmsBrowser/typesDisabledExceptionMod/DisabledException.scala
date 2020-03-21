@@ -1,0 +1,30 @@
+package typingsSlinky.awsSdkClientKmsBrowser.typesDisabledExceptionMod
+
+import typingsSlinky.awsSdkClientKmsBrowser.createGrantExceptionsUnionMod.CreateGrantExceptionsUnion
+import typingsSlinky.awsSdkClientKmsBrowser.decryptExceptionsUnionMod.DecryptExceptionsUnion
+import typingsSlinky.awsSdkClientKmsBrowser.disableKeyRotationExceptionsUnionMod.DisableKeyRotationExceptionsUnion
+import typingsSlinky.awsSdkClientKmsBrowser.enableKeyRotationExceptionsUnionMod.EnableKeyRotationExceptionsUnion
+import typingsSlinky.awsSdkClientKmsBrowser.encryptExceptionsUnionMod.EncryptExceptionsUnion
+import typingsSlinky.awsSdkClientKmsBrowser.generateDataKeyExceptionsUnionMod.GenerateDataKeyExceptionsUnion
+import typingsSlinky.awsSdkClientKmsBrowser.generateDataKeyWithoutPlaintextExceptionsUnionMod.GenerateDataKeyWithoutPlaintextExceptionsUnion
+import typingsSlinky.awsSdkClientKmsBrowser.reEncryptExceptionsUnionMod.ReEncryptExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait DisabledException
+  extends ServiceException[DisabledExceptionDetails]
+     with CreateGrantExceptionsUnion
+     with DecryptExceptionsUnion
+     with DisableKeyRotationExceptionsUnion
+     with EnableKeyRotationExceptionsUnion
+     with EncryptExceptionsUnion
+     with GenerateDataKeyExceptionsUnion
+     with GenerateDataKeyWithoutPlaintextExceptionsUnion
+     with ReEncryptExceptionsUnion {
+  @JSName("name")
+  var name_DisabledException: typingsSlinky.awsSdkClientKmsBrowser.awsSdkClientKmsBrowserStrings.DisabledException = js.native
+}
+

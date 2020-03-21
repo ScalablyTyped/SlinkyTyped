@@ -1,7 +1,7 @@
 package typingsSlinky.shelljs.makeMod._Global_
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.shelljs.shelljsMod.ShellStringConstructor
+import typingsSlinky.shelljs.mod.ShellStringConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.cypress
 
-import typingsSlinky.cypress.Mocha.Interface
-import typingsSlinky.cypress.Mocha.MochaOptions
+import typingsSlinky.cypress.Mocha_.Interface
+import typingsSlinky.cypress.Mocha_.MochaOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,7 +34,7 @@ object MochaSetupOptions {
     ignoreLeaks: js.UndefOr[Boolean] = js.undefined,
     inlineDiffs: js.UndefOr[Boolean] = js.undefined,
     noHighlighting: js.UndefOr[Boolean] = js.undefined,
-    reporter: String | typingsSlinky.cypress.Mocha.ReporterConstructor = null,
+    reporter: String | typingsSlinky.cypress.Mocha_.ReporterConstructor = null,
     reporterOptions: js.Any = null,
     require: js.Array[String] = null,
     retries: Int | Double = null,

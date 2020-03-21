@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.dgauges
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.paddingBottom
 import typingsSlinky.dojo.dojoStrings.paddingLeft
 import typingsSlinky.dojo.dojoStrings.paddingRight
@@ -75,7 +75,7 @@ class RectangularScale () extends ScaleBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_paddingLeft(
     property: paddingLeft,
@@ -85,7 +85,7 @@ class RectangularScale () extends ScaleBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_paddingRight(
     property: paddingRight,
@@ -95,7 +95,7 @@ class RectangularScale () extends ScaleBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_paddingTop(
     property: paddingTop,
@@ -105,6 +105,6 @@ class RectangularScale () extends ScaleBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

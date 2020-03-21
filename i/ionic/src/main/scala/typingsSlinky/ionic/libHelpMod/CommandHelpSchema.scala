@@ -1,14 +1,14 @@
 package typingsSlinky.ionic.libHelpMod
 
-import typingsSlinky.atIonicCliDashFramework.libHelpMod.CommandHelpSchemaFootnote
-import typingsSlinky.atIonicCliDashFramework.libHelpMod.CommandHelpSchemaInput
-import typingsSlinky.atIonicCliDashFramework.libHelpMod.CommandHelpSchemaOption
+import typingsSlinky.ionicCliFramework.helpMod.CommandHelpSchemaFootnote
+import typingsSlinky.ionicCliFramework.helpMod.CommandHelpSchemaInput
+import typingsSlinky.ionicCliFramework.helpMod.CommandHelpSchemaOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait CommandHelpSchema
-  extends typingsSlinky.atIonicCliDashFramework.libHelpMod.CommandHelpSchema {
+  extends typingsSlinky.ionicCliFramework.helpMod.CommandHelpSchema {
   var `type`: String
 }
 

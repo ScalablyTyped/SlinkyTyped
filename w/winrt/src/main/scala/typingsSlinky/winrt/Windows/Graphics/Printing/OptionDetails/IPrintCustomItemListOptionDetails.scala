@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.winrt.Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails because Already inherited
-- typings.winrt.Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails because var conflicts: errorText, optionId, optionType, state, value. Inlined displayName */ trait IPrintCustomItemListOptionDetails extends IPrintItemListOptionDetails {
+- typingsSlinky.winrt.Windows.Graphics.Printing.OptionDetails.IPrintOptionDetails because Already inherited
+- typingsSlinky.winrt.Windows.Graphics.Printing.OptionDetails.IPrintCustomOptionDetails because var conflicts: errorText, optionId, optionType, state, value. Inlined displayName */ trait IPrintCustomItemListOptionDetails extends IPrintItemListOptionDetails {
   var displayName: String
   def addItem(itemId: String, displayName: String): Unit
 }

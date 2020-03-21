@@ -1,7 +1,7 @@
 
 # Scala.js typings for arg
 
-Typings are for version 4.1.2
+Typings are for version 4.1.3
 
 ## Library description:
 Another simple argument parser
@@ -10,10 +10,10 @@ Another simple argument parser
 | ------------------ | :-------------: |
 | Full name          | arg |
 | Keywords           | - |
-| # releases         | 9 |
-| # dependents       | 403 |
-| # downloads        | 55143077 |
-| # stars            | 0 |
+| # releases         | 8 |
+| # dependents       | 415 |
+| # downloads        | 56951991 |
+| # stars            | 1 |
 
 ## Links
 - [Homepage](https://github.com/zeit/arg#readme)

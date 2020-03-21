@@ -5,8 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object dijit {
-  import org.scalajs.dom.raw.HTMLElement
-
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/BackgroundIframe.html
     *
@@ -18,8 +16,7 @@ package object dijit {
     * 
     * @param node     
     */
-  type BackgroundIframe = js.Function1[/* node */ HTMLElement, Unit]
-  type Dialog = Dialog_
+  type BackgroundIframe = js.Function1[/* node */ org.scalajs.dom.raw.HTMLElement, scala.Unit]
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/_BidiSupport.html
     *
@@ -27,10 +24,20 @@ package object dijit {
     * has("dojo-bidi") to return true, rather than manually requiring this module.
     * 
     */
-  type _BidiSupport = js.Function0[Unit]
-  type _OnDijitClickMixin = _OnDijitClickMixin_
-  type _TemplatedMixin = _TemplatedMixin_
-  type _base = _base_
+  type BidiSupport = js.Function0[scala.Unit]
+  type Calendar = typingsSlinky.dojo.dijit.Calendar_
+  type CalendarLite = typingsSlinky.dojo.dijit.CalendarLite_
+  type ColorPalette = typingsSlinky.dojo.dijit.ColorPalette_
+  type Dialog = typingsSlinky.dojo.dijit.Dialog_
+  type InlineEditBox = typingsSlinky.dojo.dijit.InlineEditBox_
+  type MenuBarItem = typingsSlinky.dojo.dijit.MenuBarItem_
+  type OnDijitClickMixin = typingsSlinky.dojo.dijit.OnDijitClickMixin_
+  type PaletteMixin = typingsSlinky.dojo.dijit.PaletteMixin_
+  type TemplatedMixin = typingsSlinky.dojo.dijit.TemplatedMixin_
+  type TimePicker = typingsSlinky.dojo.dijit.TimePicker_
+  type Tooltip = typingsSlinky.dojo.dijit.Tooltip_
+  type Tree_ = typingsSlinky.dojo.dijit.Tree__
+  type base = typingsSlinky.dojo.dijit.base_
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/hccss.html
     *
@@ -38,8 +45,8 @@ package object dijit {
     * Deprecated, use dojo/hccss instead.
     * 
     */
-  type hccss = js.Function0[Unit]
-  type main = main_
-  type place = place_
-  type registry = registry_
+  type hccss = js.Function0[scala.Unit]
+  type main = typingsSlinky.dojo.dijit.main_
+  type place = typingsSlinky.dojo.dijit.place_
+  type registry = typingsSlinky.dojo.dijit.registry_
 }

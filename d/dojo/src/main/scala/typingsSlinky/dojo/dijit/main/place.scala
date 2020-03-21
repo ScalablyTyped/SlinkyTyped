@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dijit.main
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dijit.place.__Position
-import typingsSlinky.dojo.dijit.place.__Rectangle
+import typingsSlinky.dojo.dijit.place.Position
+import typingsSlinky.dojo.dijit.place.Rectangle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,7 +30,7 @@ trait place extends js.Object {
     */
   def around(
     node: HTMLElement,
-    anchor: __Rectangle,
+    anchor: Rectangle,
     positions: js.Array[String],
     leftToRight: Boolean,
     layoutNode: js.Function
@@ -67,12 +67,6 @@ trait place extends js.Object {
     * @param padding               OptionalOptional param to set padding, to put some buffer around the element you want to position.Defaults to zero.             
     * @param layoutNode For things like tooltip, they are displayed differently (and have different dimensions)based on their orientation relative to the parent.  This adjusts the popup based on orientation.             
     */
-  def at(
-    node: HTMLElement,
-    pos: __Position,
-    corners: js.Array[String],
-    padding: __Position,
-    layoutNode: js.Any
-  ): js.Any = js.native
+  def at(node: HTMLElement, pos: Position, corners: js.Array[String], padding: Position, layoutNode: js.Any): js.Any = js.native
 }
 

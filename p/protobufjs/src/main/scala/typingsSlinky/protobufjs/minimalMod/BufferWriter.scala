@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Constructs a new buffer writer instance. */
 class BufferWriter ()
-  extends typingsSlinky.protobufjs.protobufjsMod.BufferWriter
+  extends typingsSlinky.protobufjs.mod.BufferWriter
 
 /* static members */
 @JSImport("protobufjs/minimal", "BufferWriter")

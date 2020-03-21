@@ -1,0 +1,11 @@
+package typingsSlinky.jsdom
+
+import org.scalablytyped.runtime.Instantiable0
+import typingsSlinky.std.HTMLDirectoryElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait AnonInstantiableHTMLDirectoryElement extends Instantiable0[HTMLDirectoryElement]
+

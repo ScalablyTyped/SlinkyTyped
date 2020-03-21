@@ -1,6 +1,6 @@
 package typingsSlinky.gtin
 
-import typingsSlinky.gtin.gtinMod.GtinFormat
+import typingsSlinky.gtin.mod.GtinFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

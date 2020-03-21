@@ -1,13 +1,13 @@
 package typingsSlinky.expo
 
-import typingsSlinky.expo.buildLogsRemoteLoggingMod.LogLevel
+import typingsSlinky.expo.remoteLoggingMod.LogLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object expoStrings {
   @js.native
-  sealed trait Anon_BlendShapes extends js.Object
+  sealed trait FaceAnchor extends js.Object
   
   @js.native
   sealed trait __expoConsoleLog extends js.Object
@@ -76,7 +76,7 @@ object expoStrings {
   sealed trait year extends js.Object
   
   @scala.inline
-  def Anon_BlendShapes: Anon_BlendShapes = "Anon_BlendShapes".asInstanceOf[Anon_BlendShapes]
+  def FaceAnchor: FaceAnchor = "FaceAnchor".asInstanceOf[FaceAnchor]
   @scala.inline
   def __expoConsoleLog: __expoConsoleLog = "__expoConsoleLog".asInstanceOf[__expoConsoleLog]
   @scala.inline

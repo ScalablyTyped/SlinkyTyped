@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   * @see {@link Xrm.Attributes.DateAttributeFormat}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.date
-  - typings.xrm.xrmStrings.datetime
+  - typingsSlinky.xrm.xrmStrings.date
+  - typingsSlinky.xrm.xrmStrings.datetime
 */
 trait DateAttributeFormat extends js.Object
 

@@ -1,18 +1,18 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorFontFamily
-import typingsSlinky.echarts.Anon_AnimationAnimationDelay
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdate
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDuration
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BorderColorBorderTypeBorderWidthColor
-import typingsSlinky.echarts.Anon_ColorCurvenessOpacity
-import typingsSlinky.echarts.Anon_EdgeLabel
-import typingsSlinky.echarts.Anon_EdgeLength
-import typingsSlinky.echarts.Anon_EmphasisItemStyle
-import typingsSlinky.echarts.Anon_EmphasisLabel
-import typingsSlinky.echarts.Anon_RotateLabel
+import typingsSlinky.echarts.AnonAnimationDelay
+import typingsSlinky.echarts.AnonAnimationDelayUpdate
+import typingsSlinky.echarts.AnonAnimationDuration
+import typingsSlinky.echarts.AnonBorderRadius
+import typingsSlinky.echarts.AnonEdgeLabel
+import typingsSlinky.echarts.AnonEdgeLength
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonFontStyle
+import typingsSlinky.echarts.AnonRotateLabel
+import typingsSlinky.echarts.AnonShadowColor
+import typingsSlinky.echarts.AnonShadowOffsetY
+import typingsSlinky.echarts.AnonSource
+import typingsSlinky.echarts.AnonSymbolOffset
 import typingsSlinky.echarts.echarts.EChartOption.SeriesGraph.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -41,7 +41,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-graph
   */
-@JSName("SeriesGraph")
 trait SeriesGraph_ extends js.Object {
   /**
     * Whether to enable animation.
@@ -178,14 +177,14 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.categories
     */
-  var categories: js.UndefOr[Anon_EmphasisItemStyle] = js.undefined
+  var categories: js.UndefOr[AnonSymbolOffset] = js.undefined
   /**
     * Configuration about circular layout.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.circular
     */
-  var circular: js.UndefOr[Anon_RotateLabel] = js.undefined
+  var circular: js.UndefOr[AnonRotateLabel] = js.undefined
   /**
     * The coordinate used in the series, whose options are:
     *
@@ -252,7 +251,7 @@ trait SeriesGraph_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.edgeLabel
     */
-  var edgeLabel: js.UndefOr[Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorFontFamily] = js.undefined
+  var edgeLabel: js.UndefOr[AnonFontStyle] = js.undefined
   /**
     * Symbol of two ends of edge line.
     *
@@ -294,7 +293,7 @@ trait SeriesGraph_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-graph.emphasis
     */
-  var emphasis: js.UndefOr[Anon_EdgeLabel] = js.undefined
+  var emphasis: js.UndefOr[AnonEdgeLabel] = js.undefined
   /**
     * Whether to focus/highlight the hover node and it's adjacencies.
     *
@@ -320,7 +319,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.force
     */
-  var force: js.UndefOr[Anon_EdgeLength] = js.undefined
+  var force: js.UndefOr[AnonEdgeLength] = js.undefined
   /**
     * Index of
     * [geographic coordinate](https://echarts.apache.org/en/option.html#geo)
@@ -364,7 +363,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderTypeBorderWidthColor] = js.undefined
+  var itemStyle: js.UndefOr[AnonShadowOffsetY] = js.undefined
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -376,7 +375,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColor] = js.undefined
+  var label: js.UndefOr[AnonBorderRadius] = js.undefined
   /**
     * Graph layout.
     *
@@ -441,7 +440,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.lineStyle
     */
-  var lineStyle: js.UndefOr[Anon_ColorCurvenessOpacity] = js.undefined
+  var lineStyle: js.UndefOr[AnonShadowColor] = js.undefined
   /**
     * Relational data between nodes. Example:
     *
@@ -450,7 +449,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.links
     */
-  var links: js.UndefOr[Anon_EmphasisLabel] = js.undefined
+  var links: js.UndefOr[AnonSource] = js.undefined
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -458,21 +457,21 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.markArea
     */
-  var markArea: js.UndefOr[Anon_AnimationAnimationDelayAnimationDelayUpdate] = js.undefined
+  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.undefined
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.markLine
     */
-  var markLine: js.UndefOr[Anon_AnimationAnimationDelay] = js.undefined
+  var markLine: js.UndefOr[AnonAnimationDelay] = js.undefined
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.markPoint
     */
-  var markPoint: js.UndefOr[Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDuration] = js.undefined
+  var markPoint: js.UndefOr[AnonAnimationDuration] = js.undefined
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -658,7 +657,7 @@ trait SeriesGraph_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-graph.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * Distance between component and the top side of the container.
     *
@@ -756,33 +755,33 @@ object SeriesGraph_ {
     animationThreshold: Int | Double = null,
     bottom: Double | String = null,
     calendarIndex: Int | Double = null,
-    categories: Anon_EmphasisItemStyle = null,
-    circular: Anon_RotateLabel = null,
+    categories: AnonSymbolOffset = null,
+    circular: AnonRotateLabel = null,
     coordinateSystem: String = null,
     cursor: String = null,
     data: js.Array[DataObject] = null,
     draggable: js.UndefOr[Boolean] = js.undefined,
-    edgeLabel: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorFontFamily = null,
+    edgeLabel: AnonFontStyle = null,
     edgeSymbol: js.Array[_] | String = null,
     edgeSymbolSize: js.Array[_] | Double = null,
     edges: js.Array[_] = null,
-    emphasis: Anon_EdgeLabel = null,
+    emphasis: AnonEdgeLabel = null,
     focusNodeAdjacency: js.UndefOr[Boolean] = js.undefined,
-    force: Anon_EdgeLength = null,
+    force: AnonEdgeLength = null,
     geoIndex: Int | Double = null,
     height: Double | String = null,
     hoverAnimation: js.UndefOr[Boolean] = js.undefined,
     id: String = null,
-    itemStyle: Anon_BorderColorBorderTypeBorderWidthColor = null,
-    label: Anon_AlignBackgroundColorBorderColor = null,
+    itemStyle: AnonShadowOffsetY = null,
+    label: AnonBorderRadius = null,
     layout: String = null,
     left: Double | String = null,
     legendHoverLink: js.UndefOr[Boolean] = js.undefined,
-    lineStyle: Anon_ColorCurvenessOpacity = null,
-    links: Anon_EmphasisLabel = null,
-    markArea: Anon_AnimationAnimationDelayAnimationDelayUpdate = null,
-    markLine: Anon_AnimationAnimationDelay = null,
-    markPoint: Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDuration = null,
+    lineStyle: AnonShadowColor = null,
+    links: AnonSource = null,
+    markArea: AnonAnimationDelayUpdate = null,
+    markLine: AnonAnimationDelay = null,
+    markPoint: AnonAnimationDuration = null,
     name: String = null,
     nodeScaleRatio: Int | Double = null,
     nodes: js.Array[_] = null,
@@ -795,7 +794,7 @@ object SeriesGraph_ {
     symbolOffset: js.Array[_] = null,
     symbolRotate: Int | Double = null,
     symbolSize: js.Array[_] | js.Function | Double = null,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     top: Double | String = null,
     `type`: String = null,
     width: Double | String = null,

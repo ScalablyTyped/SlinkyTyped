@@ -1,7 +1,7 @@
 package typingsSlinky.gestalt
 
-import typingsSlinky.gestalt.gestaltMod.SignedUpTo12
-import typingsSlinky.gestalt.gestaltMod.UnsignedUpTo12
+import typingsSlinky.gestalt.mod.SignedUpTo12
+import typingsSlinky.gestalt.mod.UnsignedUpTo12
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

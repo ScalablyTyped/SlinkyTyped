@@ -1,0 +1,48 @@
+package typingsSlinky.reactDragtastic.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
+import slinky.web.html.`*`.tag
+import typingsSlinky.reactDragtastic.mod.DraggableProps
+import typingsSlinky.reactDragtastic.mod.Id
+import typingsSlinky.reactDragtastic.mod.Type
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object Draggable
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactDragtastic.mod.Draggable] {
+  @JSImport("react-dragtastic", "Draggable")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  def apply(
+    data: js.Any = null,
+    delay: Int | Double = null,
+    id: Id = null,
+    onDrag: () => Unit = null,
+    onDragEnd: /* data */ js.Any => Unit = null,
+    onDragStart: /* data */ js.Any => Unit = null,
+    subscribeTo: js.Array[String] = null,
+    `type`: Type = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, typingsSlinky.reactDragtastic.mod.Draggable] = {
+    val __obj = js.Dynamic.literal()
+    if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
+    if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction0(onDrag))
+    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
+    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
+    if (subscribeTo != null) __obj.updateDynamic("subscribeTo")(subscribeTo.asInstanceOf[js.Any])
+    if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.reactDragtastic.mod.Draggable] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.reactDragtastic.mod.Draggable](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = DraggableProps
+}
+

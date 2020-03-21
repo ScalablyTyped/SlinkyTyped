@@ -6,9 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.realm.realmStrings.available
-  - typings.realm.realmStrings.change
-  - typings.realm.realmStrings.delete_
+  - typingsSlinky.realm.realmStrings.available
+  - typingsSlinky.realm.realmStrings.change
+  - typingsSlinky.realm.realmStrings.delete_
 */
 trait RealmListenerEventName extends js.Object
 

@@ -1,0 +1,51 @@
+package typingsSlinky.antd
+
+import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.Instantiable2
+import slinky.core.ReactComponentClass
+import typingsSlinky.antd.layoutLayoutMod.BasicProps
+import typingsSlinky.antd.siderMod.SiderProps
+import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.ComponentState
+import typingsSlinky.react.mod.Context
+import typingsSlinky.react.mod.GetDerivedStateFromError
+import typingsSlinky.react.mod.GetDerivedStateFromProps
+import typingsSlinky.react.mod.ValidationMap
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("antd/lib/layout", JSImport.Namespace)
+@js.native
+object layoutMod extends js.Object {
+  @js.native
+  class default protected ()
+    extends Component[BasicProps, ComponentState, js.Any] {
+    def this(props: BasicProps) = this()
+    def this(props: BasicProps, context: js.Any) = this()
+  }
+  
+  @js.native
+  object default
+    extends Instantiable1[/* props */ BasicProps, Component[BasicProps, ComponentState, js.Any]]
+       with Instantiable2[
+          /* props */ BasicProps, 
+          /* context */ js.Any, 
+          Component[BasicProps, ComponentState, js.Any]
+        ] {
+    var Content: ReactComponentClass[BasicProps] = js.native
+    var Footer: ReactComponentClass[BasicProps] = js.native
+    var Header: ReactComponentClass[BasicProps] = js.native
+    var Sider: ReactComponentClass[SiderProps] = js.native
+    var childContextTypes: js.UndefOr[ValidationMap[_]] = js.native
+    var contextType: js.UndefOr[Context[_]] = js.native
+    var contextTypes: js.UndefOr[ValidationMap[_]] = js.native
+    var defaultProps: js.UndefOr[PartialBasicProps] = js.native
+    var displayName: js.UndefOr[String] = js.native
+    var getDerivedStateFromError: js.UndefOr[GetDerivedStateFromError[BasicProps, js.Object]] = js.native
+    var getDerivedStateFromProps: js.UndefOr[GetDerivedStateFromProps[BasicProps, js.Object]] = js.native
+    var propTypes: js.UndefOr[WeakValidationMapBasicPro] = js.native
+  }
+  
+}
+

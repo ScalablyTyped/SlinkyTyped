@@ -1,7 +1,6 @@
 package typingsSlinky.behavior3.b3
 
-import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.behavior3.Anon_Name
+import typingsSlinky.behavior3.AnonName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,10 +16,6 @@ import scala.scalajs.js.annotation._
   * Creates an instance of Condition.
   */
 class Condition () extends BaseNode {
-  def this(hasNameTitleProperties: Anon_Name) = this()
+  def this(hasNameTitleProperties: AnonName) = this()
 }
-
-@JSGlobal("b3.CONDITION")
-@js.native
-object CONDITION extends TopLevel[String]
 

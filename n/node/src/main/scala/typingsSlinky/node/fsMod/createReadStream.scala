@@ -1,6 +1,6 @@
 package typingsSlinky.node.fsMod
 
-import typingsSlinky.node.Anon_AutoClose
+import typingsSlinky.node.AnonAutoClose
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ object createReadStream extends js.Object {
     */
   def apply(path: PathLike): ReadStream = js.native
   def apply(path: PathLike, options: String): ReadStream = js.native
-  def apply(path: PathLike, options: Anon_AutoClose): ReadStream = js.native
+  def apply(path: PathLike, options: AnonAutoClose): ReadStream = js.native
 }
 

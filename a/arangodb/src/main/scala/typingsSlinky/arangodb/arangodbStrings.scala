@@ -29,9 +29,6 @@ object arangodbStrings {
   sealed trait Document extends js.Object
   
   @js.native
-  sealed trait DocumentData extends js.Object
-  
-  @js.native
   sealed trait ERROR_AGENCY_CANNOT_REBUILD_DBS extends ErrorName
   
   @js.native
@@ -1229,6 +1226,9 @@ object arangodbStrings {
   sealed trait traditional extends KeyGeneratorType
   
   @js.native
+  sealed trait ttl extends IndexType
+  
+  @js.native
   sealed trait unauthorized extends HttpStatus
   
   @js.native
@@ -1263,8 +1263,6 @@ object arangodbStrings {
   def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]
   @scala.inline
   def Document: Document = "Document".asInstanceOf[Document]
-  @scala.inline
-  def DocumentData: DocumentData = "DocumentData".asInstanceOf[DocumentData]
   @scala.inline
   def ERROR_AGENCY_CANNOT_REBUILD_DBS: ERROR_AGENCY_CANNOT_REBUILD_DBS = "ERROR_AGENCY_CANNOT_REBUILD_DBS".asInstanceOf[ERROR_AGENCY_CANNOT_REBUILD_DBS]
   @scala.inline
@@ -2063,6 +2061,8 @@ object arangodbStrings {
   def `too many requests`: `too many requests` = "too many requests".asInstanceOf[`too many requests`]
   @scala.inline
   def traditional: traditional = "traditional".asInstanceOf[traditional]
+  @scala.inline
+  def ttl: ttl = "ttl".asInstanceOf[ttl]
   @scala.inline
   def unauthorized: unauthorized = "unauthorized".asInstanceOf[unauthorized]
   @scala.inline

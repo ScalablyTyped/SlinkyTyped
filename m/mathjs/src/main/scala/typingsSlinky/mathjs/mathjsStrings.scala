@@ -1,6 +1,6 @@
 package typingsSlinky.mathjs
 
-import typingsSlinky.mathjs.mathjsMod.MathJsFunctionName
+import typingsSlinky.mathjs.mod.MathJsFunctionName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

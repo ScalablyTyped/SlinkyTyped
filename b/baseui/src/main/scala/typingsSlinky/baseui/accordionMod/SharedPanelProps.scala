@@ -1,10 +1,10 @@
 package typingsSlinky.baseui.accordionMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.TagMod
-import typingsSlinky.baseui.Anon_ExpandedBoolean
-import typingsSlinky.react.reactMod.Key
+import typingsSlinky.baseui.AnonExpandedBoolean
+import typingsSlinky.react.mod.Key
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,8 +13,8 @@ trait SharedPanelProps extends js.Object {
   var children: TagMod[Any]
   var disabled: js.UndefOr[Boolean] = js.undefined
   var key: js.UndefOr[Key] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* args */ Anon_ExpandedBoolean, _]] = js.undefined
-  var onClick: js.UndefOr[js.Function1[/* e */ Event, _]] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* args */ AnonExpandedBoolean, _]] = js.undefined
+  var onClick: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.undefined
   var onKeyDown: js.UndefOr[js.Function1[/* e */ KeyboardEvent, _]] = js.undefined
   var overrides: js.UndefOr[PanelOverrides[SharedProps]] = js.undefined
   var renderAll: js.UndefOr[Boolean] = js.undefined
@@ -28,8 +28,8 @@ object SharedPanelProps {
     children: TagMod[Any],
     disabled: js.UndefOr[Boolean] = js.undefined,
     key: Key = null,
-    onChange: /* args */ Anon_ExpandedBoolean => _ = null,
-    onClick: /* e */ Event => _ = null,
+    onChange: /* args */ AnonExpandedBoolean => _ = null,
+    onClick: /* e */ Event_ => _ = null,
     onKeyDown: /* e */ KeyboardEvent => _ = null,
     overrides: PanelOverrides[SharedProps] = null,
     renderAll: js.UndefOr[Boolean] = js.undefined,

@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 
 /* cl_event_info  */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x11D0`
-  - typings.webcl.webclNumbers.`0x11D1`
-  - typings.webcl.webclNumbers.`0x11D3`
-  - typings.webcl.webclNumbers.`0x11D4`
+  - typingsSlinky.webcl.webclNumbers.`0x11D0`
+  - typingsSlinky.webcl.webclNumbers.`0x11D1`
+  - typingsSlinky.webcl.webclNumbers.`0x11D3`
+  - typingsSlinky.webcl.webclNumbers.`0x11D4`
 */
 trait EventInfo extends js.Object
 

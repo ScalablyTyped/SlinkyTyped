@@ -10,9 +10,9 @@ mongodb query style array filtering
 | ------------------ | :-------------: |
 | Full name          | sift |
 | Keywords           | - |
-| # releases         | 21 |
-| # dependents       | 239 |
-| # downloads        | 22969824 |
+| # releases         | 24 |
+| # dependents       | 241 |
+| # downloads        | 23298694 |
 | # stars            | 13 |
 
 ## Links

@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 object removeEventListener_resize extends js.Object {
   def apply(
     `type`: resize,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _]
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.UIEvent, _]
   ): Unit = js.native
   def apply(
     `type`: resize,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.UIEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   def apply(
     `type`: resize,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.UIEvent, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.UIEvent, _],
     options: EventListenerOptions
   ): Unit = js.native
 }

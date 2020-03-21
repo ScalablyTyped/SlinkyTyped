@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.widget
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.parent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -13,10 +13,10 @@ import scala.scalajs.js.annotation._
   *
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dojox.widget._CalendarMonthYear because Inheritance from two classes. Inlined 
-- typings.dojo.dojox.widget._CalendarDay because Inheritance from two classes. Inlined parent */ @JSGlobal("dojox.widget.Calendar2Pane")
+- typingsSlinky.dojo.dojox.widget.CalendarMonthYear because Inheritance from two classes. Inlined 
+- typingsSlinky.dojo.dojox.widget.CalendarDay because Inheritance from two classes. Inlined parent */ @JSGlobal("dojox.widget.Calendar2Pane")
 @js.native
-class Calendar2Pane () extends _CalendarBase {
+class Calendar2Pane () extends CalendarBase {
   /**
     *
     */
@@ -34,6 +34,6 @@ class Calendar2Pane () extends _CalendarBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

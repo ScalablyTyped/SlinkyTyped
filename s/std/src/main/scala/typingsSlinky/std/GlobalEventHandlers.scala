@@ -37,7 +37,6 @@ import typingsSlinky.std.stdStrings.keyup
 import typingsSlinky.std.stdStrings.load
 import typingsSlinky.std.stdStrings.loadeddata
 import typingsSlinky.std.stdStrings.loadedmetadata
-import typingsSlinky.std.stdStrings.loadend
 import typingsSlinky.std.stdStrings.loadstart
 import typingsSlinky.std.stdStrings.lostpointercapture
 import typingsSlinky.std.stdStrings.mousedown
@@ -105,30 +104,30 @@ trait GlobalEventHandlers extends js.Object {
     * @param ev The focus event.
     */
   var onblur: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.FocusEvent, _]) | Null = js.native
-  var oncancel: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var oncancel: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs when playback is possible, but would require further buffering.
     * @param ev The event.
     */
-  var oncanplay: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var oncanplaythrough: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var oncanplay: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var oncanplaythrough: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Fires when the contents of the object or selection have changed.
     * @param ev The event.
     */
-  var onchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onchange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Fires when the user clicks the left mouse button on the object
     * @param ev The mouse event.
     */
   var onclick: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MouseEvent, _]) | Null = js.native
-  var onclose: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onclose: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Fires when the user clicks the right mouse button in the client area, opening the context menu.
     * @param ev The mouse event.
     */
   var oncontextmenu: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.MouseEvent, _]) | Null = js.native
-  var oncuechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var oncuechange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Fires when the user double-clicks the object.
     * @param ev The mouse event.
@@ -149,7 +148,7 @@ trait GlobalEventHandlers extends js.Object {
     * @param ev The drag event.
     */
   var ondragenter: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.DragEvent, _]) | Null = js.native
-  var ondragexit: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var ondragexit: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Fires on the target object when the user moves the mouse out of a valid drop target during a drag operation.
     * @param ev The drag event.
@@ -170,17 +169,17 @@ trait GlobalEventHandlers extends js.Object {
     * Occurs when the duration attribute is updated.
     * @param ev The event.
     */
-  var ondurationchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var ondurationchange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs when the media element is reset to its initial state.
     * @param ev The event.
     */
-  var onemptied: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onemptied: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs when the end of playback is reached.
     * @param ev The event
     */
-  var onended: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onended: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Fires when an error occurs during object loading.
     * @param ev The event.
@@ -192,8 +191,8 @@ trait GlobalEventHandlers extends js.Object {
     */
   var onfocus: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.FocusEvent, _]) | Null = js.native
   var ongotpointercapture: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.PointerEvent, _]) | Null = js.native
-  var oninput: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var oninvalid: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var oninput: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var oninvalid: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Fires when the user presses a key.
     * @param ev The keyboard event
@@ -213,23 +212,22 @@ trait GlobalEventHandlers extends js.Object {
     * Fires immediately after the browser loads the object.
     * @param ev The event.
     */
-  var onload: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onload: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs when media data is loaded at the current playback position.
     * @param ev The event.
     */
-  var onloadeddata: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onloadeddata: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs when the duration and dimensions of the media have been determined.
     * @param ev The event.
     */
-  var onloadedmetadata: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onloadend: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _]) | Null = js.native
+  var onloadedmetadata: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs when Internet Explorer begins looking for media data.
     * @param ev The event.
     */
-  var onloadstart: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onloadstart: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   var onlostpointercapture: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.PointerEvent, _]) | Null = js.native
   /**
     * Fires when the user clicks the object with either mouse button.
@@ -262,17 +260,17 @@ trait GlobalEventHandlers extends js.Object {
     * Occurs when playback is paused.
     * @param ev The event.
     */
-  var onpause: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onpause: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs when the play method is requested.
     * @param ev The event.
     */
-  var onplay: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onplay: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs when the audio or video has started playing.
     * @param ev The event.
     */
-  var onplaying: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onplaying: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   var onpointercancel: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.PointerEvent, _]) | Null = js.native
   var onpointerdown: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.PointerEvent, _]) | Null = js.native
   var onpointerenter: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.PointerEvent, _]) | Null = js.native
@@ -290,57 +288,65 @@ trait GlobalEventHandlers extends js.Object {
     * Occurs when the playback rate is increased or decreased.
     * @param ev The event.
     */
-  var onratechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onratechange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Fires when the user resets a form.
     * @param ev The event.
     */
-  var onreset: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onreset: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   var onresize: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.UIEvent, _]) | Null = js.native
   /**
     * Fires when the user repositions the scroll box in the scroll bar on the object.
     * @param ev The event.
     */
-  var onscroll: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onscroll: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   var onsecuritypolicyviolation: (js.ThisFunction1[/* this */ this.type, /* ev */ SecurityPolicyViolationEvent, _]) | Null = js.native
   /**
     * Occurs when the seek operation ends.
     * @param ev The event.
     */
-  var onseeked: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onseeked: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs when the current playback position is moved.
     * @param ev The event.
     */
-  var onseeking: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onseeking: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Fires when the current selection changes.
     * @param ev The event.
     */
-  var onselect: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onselectionchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onselectstart: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onselect: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var onselectionchange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var onselectstart: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs when the download has stopped.
     * @param ev The event.
     */
-  var onstalled: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onsubmit: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onstalled: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var onsubmit: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs if the load operation has been intentionally halted.
     * @param ev The event.
     */
-  var onsuspend: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onsuspend: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs to indicate the current playback position.
     * @param ev The event.
     */
-  var ontimeupdate: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var ontoggle: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var ontouchcancel: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TouchEvent, _]) | Null = js.native
-  var ontouchend: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TouchEvent, _]) | Null = js.native
-  var ontouchmove: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TouchEvent, _]) | Null = js.native
-  var ontouchstart: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TouchEvent, _]) | Null = js.native
+  var ontimeupdate: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var ontoggle: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var ontouchcancel: js.UndefOr[
+    (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TouchEvent, _]) | Null
+  ] = js.native
+  var ontouchend: js.UndefOr[
+    (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TouchEvent, _]) | Null
+  ] = js.native
+  var ontouchmove: js.UndefOr[
+    (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TouchEvent, _]) | Null
+  ] = js.native
+  var ontouchstart: js.UndefOr[
+    (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TouchEvent, _]) | Null
+  ] = js.native
   var ontransitioncancel: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TransitionEvent, _]) | Null = js.native
   var ontransitionend: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TransitionEvent, _]) | Null = js.native
   var ontransitionrun: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TransitionEvent, _]) | Null = js.native
@@ -349,12 +355,12 @@ trait GlobalEventHandlers extends js.Object {
     * Occurs when the volume is changed, or playback is muted or unmuted.
     * @param ev The event.
     */
-  var onvolumechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onvolumechange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /**
     * Occurs when playback stops because the next frame of a video resource is not available.
     * @param ev The event.
     */
-  var onwaiting: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onwaiting: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   var onwheel: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.WheelEvent, _]) | Null = js.native
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject): Unit = js.native
   def addEventListener(`type`: java.lang.String, listener: EventListenerOrEventListenerObject, options: scala.Boolean): Unit = js.native
@@ -483,71 +489,59 @@ trait GlobalEventHandlers extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_cancel(
-    `type`: cancel,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_cancel(`type`: cancel, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cancel(
     `type`: cancel,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cancel(
     `type`: cancel,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_canplay(
-    `type`: canplay,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_canplay(`type`: canplay, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplay(
     `type`: canplay,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplay(
     `type`: canplay,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_canplaythrough(
-    `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_canplaythrough(`type`: canplaythrough, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplaythrough(
     `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_canplaythrough(
     `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_change(
-    `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -570,18 +564,18 @@ trait GlobalEventHandlers extends js.Object {
   @JSName("addEventListener")
   def addEventListener_close(
     `type`: typingsSlinky.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_close(
     `type`: typingsSlinky.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_close(
     `type`: typingsSlinky.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -602,20 +596,17 @@ trait GlobalEventHandlers extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_cuechange(
-    `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_cuechange(`type`: cuechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -687,20 +678,17 @@ trait GlobalEventHandlers extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_dragexit(
-    `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_dragexit(`type`: dragexit, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragexit(
     `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_dragexit(
     `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -772,54 +760,45 @@ trait GlobalEventHandlers extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_durationchange(
-    `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_durationchange(`type`: durationchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_durationchange(
     `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_durationchange(
     `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_emptied(
-    `type`: emptied,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_emptied(`type`: emptied, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_emptied(
     `type`: emptied,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_emptied(
     `type`: emptied,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_ended(
-    `type`: ended,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_ended(`type`: ended, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ended(
     `type`: ended,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ended(
     `type`: ended,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -908,37 +887,31 @@ trait GlobalEventHandlers extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_input(
-    `type`: input,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_input(`type`: input, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_input(
     `type`: input,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_input(
     `type`: input,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_invalid(
-    `type`: invalid,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_invalid(`type`: invalid, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_invalid(
     `type`: invalid,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_invalid(
     `type`: invalid,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -993,88 +966,59 @@ trait GlobalEventHandlers extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_load(
-    `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loadeddata(
-    `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_loadeddata(`type`: loadeddata, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadeddata(
     `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadeddata(
     `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loadedmetadata(
-    `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadedmetadata(
     `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadedmetadata(
     `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_loadend(
-    `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_loadend(
-    `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: scala.Boolean
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_loadend(
-    `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: AddEventListenerOptions
-  ): Unit = js.native
+  def addEventListener_loadstart(`type`: loadstart, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
-  @JSName("addEventListener")
-  def addEventListener_loadstart(
-    `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1214,54 +1158,45 @@ trait GlobalEventHandlers extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_pause(
-    `type`: pause,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pause(
     `type`: pause,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_pause(
     `type`: pause,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_play(
-    `type`: play,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_play(`type`: play, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_play(
     `type`: play,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_play(
     `type`: play,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_playing(
-    `type`: playing,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_playing(`type`: playing, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_playing(
     `type`: playing,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_playing(
     `type`: playing,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1418,37 +1353,31 @@ trait GlobalEventHandlers extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_ratechange(
-    `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_ratechange(`type`: ratechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ratechange(
     `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_ratechange(
     `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_reset(
-    `type`: reset,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_reset(`type`: reset, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_reset(
     `type`: reset,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_reset(
     `type`: reset,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1471,18 +1400,18 @@ trait GlobalEventHandlers extends js.Object {
   @JSName("addEventListener")
   def addEventListener_scroll(
     `type`: typingsSlinky.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_scroll(
     `type`: typingsSlinky.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_scroll(
     `type`: typingsSlinky.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1503,173 +1432,143 @@ trait GlobalEventHandlers extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_seeked(
-    `type`: seeked,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_seeked(`type`: seeked, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeked(
     `type`: seeked,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeked(
     `type`: seeked,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_seeking(
-    `type`: seeking,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_seeking(`type`: seeking, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeking(
     `type`: seeking,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_seeking(
     `type`: seeking,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_select(
-    `type`: select,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_select(`type`: select, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_select(
     `type`: select,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_select(
     `type`: select,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_selectionchange(
-    `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_selectionchange(`type`: selectionchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectionchange(
     `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectionchange(
     `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_selectstart(
-    `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_selectstart(`type`: selectstart, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectstart(
     `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_selectstart(
     `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_stalled(
-    `type`: stalled,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_stalled(`type`: stalled, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_stalled(
     `type`: stalled,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_stalled(
     `type`: stalled,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_submit(
-    `type`: submit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_submit(`type`: submit, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_submit(
     `type`: submit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_submit(
     `type`: submit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_suspend(
-    `type`: suspend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_suspend(`type`: suspend, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_suspend(
     `type`: suspend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_suspend(
     `type`: suspend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_timeupdate(
-    `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_timeupdate(`type`: timeupdate, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_timeupdate(
     `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_timeupdate(
     `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_toggle(
-    `type`: toggle,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_toggle(`type`: toggle, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_toggle(
     `type`: toggle,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_toggle(
     `type`: toggle,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1809,37 +1708,31 @@ trait GlobalEventHandlers extends js.Object {
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_volumechange(
-    `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_volumechange(`type`: volumechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_volumechange(
     `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_volumechange(
     `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_waiting(
-    `type`: waiting,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_waiting(`type`: waiting, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_waiting(
     `type`: waiting,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_waiting(
     `type`: waiting,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -1986,71 +1879,59 @@ trait GlobalEventHandlers extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_cancel(
-    `type`: cancel,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_cancel(`type`: cancel, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cancel(
     `type`: cancel,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cancel(
     `type`: cancel,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_canplay(
-    `type`: canplay,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_canplay(`type`: canplay, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplay(
     `type`: canplay,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplay(
     `type`: canplay,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_canplaythrough(
-    `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_canplaythrough(`type`: canplaythrough, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplaythrough(
     `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_canplaythrough(
     `type`: canplaythrough,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_change(
-    `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2073,18 +1954,18 @@ trait GlobalEventHandlers extends js.Object {
   @JSName("removeEventListener")
   def removeEventListener_close(
     `type`: typingsSlinky.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
     `type`: typingsSlinky.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_close(
     `type`: typingsSlinky.std.stdStrings.close,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2105,20 +1986,17 @@ trait GlobalEventHandlers extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_cuechange(
-    `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_cuechange(`type`: cuechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_cuechange(
     `type`: cuechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2190,20 +2068,17 @@ trait GlobalEventHandlers extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_dragexit(
-    `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_dragexit(`type`: dragexit, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragexit(
     `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_dragexit(
     `type`: dragexit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2275,54 +2150,45 @@ trait GlobalEventHandlers extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_durationchange(
-    `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_durationchange(`type`: durationchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_durationchange(
     `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_durationchange(
     `type`: durationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_emptied(
-    `type`: emptied,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_emptied(`type`: emptied, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_emptied(
     `type`: emptied,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_emptied(
     `type`: emptied,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_ended(
-    `type`: ended,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_ended(`type`: ended, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ended(
     `type`: ended,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ended(
     `type`: ended,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2411,37 +2277,31 @@ trait GlobalEventHandlers extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_input(
-    `type`: input,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_input(`type`: input, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_input(
     `type`: input,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_input(
     `type`: input,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_invalid(
-    `type`: invalid,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_invalid(`type`: invalid, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_invalid(
     `type`: invalid,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_invalid(
     `type`: invalid,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2496,88 +2356,59 @@ trait GlobalEventHandlers extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_load(
-    `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_load(`type`: load, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_load(
     `type`: load,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_loadeddata(
-    `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_loadeddata(`type`: loadeddata, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadeddata(
     `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadeddata(
     `type`: loadeddata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_loadedmetadata(
-    `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_loadedmetadata(`type`: loadedmetadata, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadedmetadata(
     `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadedmetadata(
     `type`: loadedmetadata,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_loadend(
-    `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _]
-  ): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_loadend(
-    `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: scala.Boolean
-  ): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_loadend(
-    `type`: loadend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.ProgressEvent, _],
-    options: EventListenerOptions
-  ): Unit = js.native
+  def removeEventListener_loadstart(`type`: loadstart, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
-  @JSName("removeEventListener")
-  def removeEventListener_loadstart(
-    `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_loadstart(
     `type`: loadstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2717,54 +2548,45 @@ trait GlobalEventHandlers extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_pause(
-    `type`: pause,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_pause(`type`: pause, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pause(
     `type`: pause,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_pause(
     `type`: pause,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_play(
-    `type`: play,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_play(`type`: play, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_play(
     `type`: play,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_play(
     `type`: play,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_playing(
-    `type`: playing,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_playing(`type`: playing, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_playing(
     `type`: playing,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_playing(
     `type`: playing,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2921,37 +2743,31 @@ trait GlobalEventHandlers extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_ratechange(
-    `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_ratechange(`type`: ratechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ratechange(
     `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_ratechange(
     `type`: ratechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_reset(
-    `type`: reset,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_reset(`type`: reset, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_reset(
     `type`: reset,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_reset(
     `type`: reset,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -2974,18 +2790,18 @@ trait GlobalEventHandlers extends js.Object {
   @JSName("removeEventListener")
   def removeEventListener_scroll(
     `type`: typingsSlinky.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_scroll(
     `type`: typingsSlinky.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_scroll(
     `type`: typingsSlinky.std.stdStrings.scroll,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -3006,173 +2822,143 @@ trait GlobalEventHandlers extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_seeked(
-    `type`: seeked,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_seeked(`type`: seeked, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeked(
     `type`: seeked,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeked(
     `type`: seeked,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_seeking(
-    `type`: seeking,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_seeking(`type`: seeking, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeking(
     `type`: seeking,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_seeking(
     `type`: seeking,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_select(
-    `type`: select,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_select(`type`: select, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_select(
     `type`: select,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_select(
     `type`: select,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_selectionchange(
-    `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_selectionchange(`type`: selectionchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectionchange(
     `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectionchange(
     `type`: selectionchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_selectstart(
-    `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_selectstart(`type`: selectstart, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectstart(
     `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_selectstart(
     `type`: selectstart,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_stalled(
-    `type`: stalled,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_stalled(`type`: stalled, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_stalled(
     `type`: stalled,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_stalled(
     `type`: stalled,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_submit(
-    `type`: submit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_submit(`type`: submit, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_submit(
     `type`: submit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_submit(
     `type`: submit,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_suspend(
-    `type`: suspend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_suspend(`type`: suspend, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_suspend(
     `type`: suspend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_suspend(
     `type`: suspend,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_timeupdate(
-    `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_timeupdate(`type`: timeupdate, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_timeupdate(
     `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_timeupdate(
     `type`: timeupdate,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_toggle(
-    `type`: toggle,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_toggle(`type`: toggle, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_toggle(
     `type`: toggle,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_toggle(
     `type`: toggle,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
@@ -3312,37 +3098,31 @@ trait GlobalEventHandlers extends js.Object {
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_volumechange(
-    `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_volumechange(`type`: volumechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_volumechange(
     `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_volumechange(
     `type`: volumechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_waiting(
-    `type`: waiting,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_waiting(`type`: waiting, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_waiting(
     `type`: waiting,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_waiting(
     `type`: waiting,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")

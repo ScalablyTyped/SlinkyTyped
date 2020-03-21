@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.mvc
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojo.store.api.Store.PutDirectives
 import typingsSlinky.dojo.dojo.store.api.Store.QueryOptions
 import typingsSlinky.dojo.dojoStrings.getStatefulOptions
@@ -90,7 +90,7 @@ class StoreRefController () extends ModelRefController {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_store(
     property: store,
@@ -100,6 +100,6 @@ class StoreRefController () extends ModelRefController {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

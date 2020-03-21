@@ -1,6 +1,6 @@
 package typingsSlinky.jws
 
-import typingsSlinky.jws.jwsMod.Algorithm
+import typingsSlinky.jws.mod.Algorithm
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.select
-  - typings.std.stdStrings.start
-  - typings.std.stdStrings.end
-  - typings.std.stdStrings.preserve
+  - typingsSlinky.std.stdStrings.end
+  - typingsSlinky.std.stdStrings.preserve
+  - typingsSlinky.std.stdStrings.select
+  - typingsSlinky.std.stdStrings.start
 */
 trait SelectionMode extends js.Object
 

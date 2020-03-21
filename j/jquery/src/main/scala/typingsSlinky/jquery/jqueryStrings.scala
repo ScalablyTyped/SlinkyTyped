@@ -1,10 +1,10 @@
 package typingsSlinky.jquery
 
-import typingsSlinky.jquery.JQuery.Ajax.ErrorTextStatus
-import typingsSlinky.jquery.JQuery.Ajax.SuccessTextStatus
-import typingsSlinky.jquery.JQuery.Ajax.TextStatus
-import typingsSlinky.jquery.JQuery._Duration
-import typingsSlinky.jquery.JQuery.__Falsy
+import typingsSlinky.jquery.JQuery_.Ajax.ErrorTextStatus
+import typingsSlinky.jquery.JQuery_.Ajax.SuccessTextStatus
+import typingsSlinky.jquery.JQuery_.Ajax.TextStatus
+import typingsSlinky.jquery.JQuery_._Duration
+import typingsSlinky.jquery.JQuery_._Falsy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,15 +14,15 @@ object jqueryStrings {
   sealed trait Promise extends js.Object
   
   @js.native
-  sealed trait _TypeEventHandlers extends js.Object
-  
-  @js.native
-  sealed trait _empty extends __Falsy
+  sealed trait _empty extends _Falsy
   
   @js.native
   sealed trait abort
     extends ErrorTextStatus
        with TextStatus
+  
+  @js.native
+  sealed trait `applicationSlashx-www-form-urlencoded` extends js.Object
   
   @js.native
   sealed trait array extends js.Object
@@ -114,9 +114,6 @@ object jqueryStrings {
   sealed trait keyup extends js.Object
   
   @js.native
-  sealed trait left extends js.Object
-  
-  @js.native
   sealed trait mousedown extends js.Object
   
   @js.native
@@ -136,6 +133,9 @@ object jqueryStrings {
   
   @js.native
   sealed trait mouseup extends js.Object
+  
+  @js.native
+  sealed trait `multipartSlashform-data` extends js.Object
   
   @js.native
   sealed trait nocontent
@@ -209,12 +209,12 @@ object jqueryStrings {
   sealed trait text extends js.Object
   
   @js.native
+  sealed trait textSlashplain extends js.Object
+  
+  @js.native
   sealed trait timeout
     extends ErrorTextStatus
        with TextStatus
-  
-  @js.native
-  sealed trait top extends js.Object
   
   @js.native
   sealed trait touchcancel extends js.Object
@@ -237,11 +237,11 @@ object jqueryStrings {
   @scala.inline
   def Promise: Promise = "Promise".asInstanceOf[Promise]
   @scala.inline
-  def _TypeEventHandlers: _TypeEventHandlers = "_TypeEventHandlers".asInstanceOf[_TypeEventHandlers]
-  @scala.inline
   def _empty: _empty = "".asInstanceOf[_empty]
   @scala.inline
   def abort: abort = "abort".asInstanceOf[abort]
+  @scala.inline
+  def `applicationSlashx-www-form-urlencoded`: `applicationSlashx-www-form-urlencoded` = "application/x-www-form-urlencoded".asInstanceOf[`applicationSlashx-www-form-urlencoded`]
   @scala.inline
   def array: array = "array".asInstanceOf[array]
   @scala.inline
@@ -301,8 +301,6 @@ object jqueryStrings {
   @scala.inline
   def keyup: keyup = "keyup".asInstanceOf[keyup]
   @scala.inline
-  def left: left = "left".asInstanceOf[left]
-  @scala.inline
   def mousedown: mousedown = "mousedown".asInstanceOf[mousedown]
   @scala.inline
   def mouseenter: mouseenter = "mouseenter".asInstanceOf[mouseenter]
@@ -316,6 +314,8 @@ object jqueryStrings {
   def mouseover: mouseover = "mouseover".asInstanceOf[mouseover]
   @scala.inline
   def mouseup: mouseup = "mouseup".asInstanceOf[mouseup]
+  @scala.inline
+  def `multipartSlashform-data`: `multipartSlashform-data` = "multipart/form-data".asInstanceOf[`multipartSlashform-data`]
   @scala.inline
   def nocontent: nocontent = "nocontent".asInstanceOf[nocontent]
   @scala.inline
@@ -359,9 +359,9 @@ object jqueryStrings {
   @scala.inline
   def text: text = "text".asInstanceOf[text]
   @scala.inline
-  def timeout: timeout = "timeout".asInstanceOf[timeout]
+  def textSlashplain: textSlashplain = "text/plain".asInstanceOf[textSlashplain]
   @scala.inline
-  def top: top = "top".asInstanceOf[top]
+  def timeout: timeout = "timeout".asInstanceOf[timeout]
   @scala.inline
   def touchcancel: touchcancel = "touchcancel".asInstanceOf[touchcancel]
   @scala.inline

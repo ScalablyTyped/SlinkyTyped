@@ -1,0 +1,18 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryTriggerBranchNameExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.putRepositoryTriggersExceptionsUnionMod.PutRepositoryTriggersExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.testRepositoryTriggersExceptionsUnionMod.TestRepositoryTriggersExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidRepositoryTriggerBranchNameException
+  extends ServiceException[InvalidRepositoryTriggerBranchNameExceptionDetails]
+     with PutRepositoryTriggersExceptionsUnion
+     with TestRepositoryTriggersExceptionsUnion {
+  @JSName("name")
+  var name_InvalidRepositoryTriggerBranchNameException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidRepositoryTriggerBranchNameException = js.native
+}
+

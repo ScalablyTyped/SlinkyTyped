@@ -12,7 +12,7 @@ URLVariables class for TypeScript
 | Keywords           | URLVariables, url, variables, encode, decode |
 | # releases         | 9 |
 | # dependents       | 1 |
-| # downloads        | 3766 |
+| # downloads        | 3663 |
 | # stars            | 0 |
 
 ## Links

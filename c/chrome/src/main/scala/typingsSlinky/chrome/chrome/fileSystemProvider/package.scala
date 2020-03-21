@@ -5,117 +5,126 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object fileSystemProvider {
-  import typingsSlinky.chrome.chrome.events.Event
-
-  type DirectoryPathRecursiveRequestedEvent = Event[
+  type DirectoryPathRecursiveRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ DirectoryPathRecursiveRequestedEventOptions, 
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.DirectoryPathRecursiveRequestedEventOptions, 
       /* successCallback */ js.Function, 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type DirectoryPathRequestedEvent = Event[
+  type DirectoryPathRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ DirectoryPathRequestedEventOptions, 
-      /* successCallback */ js.Function2[/* entries */ js.Array[EntryMetadata], /* hasMore */ Boolean, Unit], 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.DirectoryPathRequestedEventOptions, 
+      /* successCallback */ js.Function2[
+        /* entries */ js.Array[typingsSlinky.chrome.chrome.fileSystemProvider.EntryMetadata], 
+        /* hasMore */ scala.Boolean, 
+        scala.Unit
+      ], 
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type EntryPathRecursiveRequestedEvent = Event[
+  type EntryPathRecursiveRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ EntryPathRecursiveRequestedEventOptions, 
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.EntryPathRecursiveRequestedEventOptions, 
       /* successCallback */ js.Function, 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type FilePathLengthRequestedEvent = Event[
+  type FilePathLengthRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ FilePathLengthRequestedEventOptions, 
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.FilePathLengthRequestedEventOptions, 
       /* successCallback */ js.Function, 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type FilePathRequestedEvent = Event[
+  type FilePathRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ FilePathRequestedEventOptions, 
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.FilePathRequestedEventOptions, 
       /* successCallback */ js.Function, 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type MetadataRequestedEvent = Event[
+  type MetadataRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ MetadataRequestedEventOptions, 
-      /* successCallback */ js.Function1[/* metadata */ EntryMetadata, Unit], 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.MetadataRequestedEventOptions, 
+      /* successCallback */ js.Function1[
+        /* metadata */ typingsSlinky.chrome.chrome.fileSystemProvider.EntryMetadata, 
+        scala.Unit
+      ], 
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type OpenFileRequestedEvent = Event[
+  type OpenFileRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ OpenFileRequestedEventOptions, 
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.OpenFileRequestedEventOptions, 
       /* successCallback */ js.Function, 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type OpenedFileIoRequestedEvent = Event[
+  type OpenedFileIoRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ OpenedFileIoRequestedEventOptions, 
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.OpenedFileIoRequestedEventOptions, 
       /* successCallback */ js.Function, 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type OpenedFileOffsetRequestedEvent = Event[
+  type OpenedFileOffsetRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ OpenedFileOffsetRequestedEventOptions, 
-      /* successCallback */ js.Function2[/* data */ scala.scalajs.js.typedarray.ArrayBuffer, /* hasMore */ Boolean, Unit], 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.OpenedFileOffsetRequestedEventOptions, 
+      /* successCallback */ js.Function2[
+        /* data */ scala.scalajs.js.typedarray.ArrayBuffer, 
+        /* hasMore */ scala.Boolean, 
+        scala.Unit
+      ], 
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type OpenedFileRequestedEvent = Event[
+  type OpenedFileRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ OpenedFileRequestedEventOptions, 
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.OpenedFileRequestedEventOptions, 
       /* successCallback */ js.Function, 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type OperationRequestedEvent = Event[
+  type OperationRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ OperationRequestedEventOptions, 
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.OperationRequestedEventOptions, 
       /* successCallback */ js.Function, 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type OptionlessRequestedEvent = Event[
+  type OptionlessRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
       /* successCallback */ js.Function, 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type RequestedEvent = Event[
+  type RequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ RequestedEventOptions, 
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.RequestedEventOptions, 
       /* successCallback */ js.Function, 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
-  type SourceTargetPathRequestedEvent = Event[
+  type SourceTargetPathRequestedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
-      /* options */ SourceTargetPathRequestedEventOptions, 
+      /* options */ typingsSlinky.chrome.chrome.fileSystemProvider.SourceTargetPathRequestedEventOptions, 
       /* successCallback */ js.Function, 
-      /* errorCallback */ js.Function1[/* error */ String, Unit], 
-      Unit
+      /* errorCallback */ js.Function1[/* error */ java.lang.String, scala.Unit], 
+      scala.Unit
     ]
   ]
 }

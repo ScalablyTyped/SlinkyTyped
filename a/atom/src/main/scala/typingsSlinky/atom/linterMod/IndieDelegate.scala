@@ -1,6 +1,6 @@
 package typingsSlinky.atom.linterMod
 
-import typingsSlinky.atom.atomMod.Disposable
+import typingsSlinky.atom.mod.Disposable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

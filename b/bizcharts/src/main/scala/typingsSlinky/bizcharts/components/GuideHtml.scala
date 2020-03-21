@@ -5,10 +5,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.bizcharts.bizchartsMod.AlignXType
-import typingsSlinky.bizcharts.bizchartsMod.AlignYType
-import typingsSlinky.bizcharts.bizchartsMod.Guide.Html
-import typingsSlinky.bizcharts.bizchartsMod.Guide.HtmlProps
+import typingsSlinky.bizcharts.mod.AlignXType
+import typingsSlinky.bizcharts.mod.AlignYType
+import typingsSlinky.bizcharts.mod.Guide.Html
+import typingsSlinky.bizcharts.mod.Guide.HtmlProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,7 +41,7 @@ object GuideHtml
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Html] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.bizchartsMod.Guide.Html](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Html] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Guide.Html](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = HtmlProps
 }
 

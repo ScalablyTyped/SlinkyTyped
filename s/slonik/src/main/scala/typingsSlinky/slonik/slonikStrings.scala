@@ -1,9 +1,9 @@
 package typingsSlinky.slonik
 
-import typingsSlinky.slonik.slonikMod.ComparisonOperatorType
-import typingsSlinky.slonik.slonikMod.ConnectionTypeType
-import typingsSlinky.slonik.slonikMod.LogicalBooleanOperatorType
-import typingsSlinky.slonik.slonikMod.TypeNameIdentifierType
+import typingsSlinky.slonik.mod.ComparisonOperatorType
+import typingsSlinky.slonik.mod.ConnectionTypeType
+import typingsSlinky.slonik.mod.LogicalBooleanOperatorType
+import typingsSlinky.slonik.mod.TypeNameIdentifierType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +14,9 @@ object slonikStrings {
   
   @js.native
   sealed trait DELETE extends js.Object
+  
+  @js.native
+  sealed trait DISABLE_TIMEOUT extends js.Object
   
   @js.native
   sealed trait EXPLICIT extends ConnectionTypeType
@@ -87,10 +90,15 @@ object slonikStrings {
   @js.native
   sealed trait timestamptz extends TypeNameIdentifierType
   
+  @js.native
+  sealed trait uuid extends TypeNameIdentifierType
+  
   @scala.inline
   def AND: AND = "AND".asInstanceOf[AND]
   @scala.inline
   def DELETE: DELETE = "DELETE".asInstanceOf[DELETE]
+  @scala.inline
+  def DISABLE_TIMEOUT: DISABLE_TIMEOUT = "DISABLE_TIMEOUT".asInstanceOf[DISABLE_TIMEOUT]
   @scala.inline
   def EXPLICIT: EXPLICIT = "EXPLICIT".asInstanceOf[EXPLICIT]
   @scala.inline
@@ -139,5 +147,7 @@ object slonikStrings {
   def text: text = "text".asInstanceOf[text]
   @scala.inline
   def timestamptz: timestamptz = "timestamptz".asInstanceOf[timestamptz]
+  @scala.inline
+  def uuid: uuid = "uuid".asInstanceOf[uuid]
 }
 

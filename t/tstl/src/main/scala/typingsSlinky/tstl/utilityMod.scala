@@ -1,6 +1,5 @@
 package typingsSlinky.tstl
 
-import org.scalablytyped.runtime.Instantiable2
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +9,7 @@ import scala.scalajs.js.annotation._
 object utilityMod extends js.Object {
   @js.native
   class Entry[Key, T] protected ()
-    extends typingsSlinky.tstl.utilityEntryMod.Entry[Key, T] {
+    extends typingsSlinky.tstl.entryMod.Entry[Key, T] {
     /**
       * Intializer Constructor.
       *
@@ -22,7 +21,7 @@ object utilityMod extends js.Object {
   
   @js.native
   class Pair[First, Second] protected ()
-    extends typingsSlinky.tstl.utilityPairMod.Pair[First, Second] {
+    extends typingsSlinky.tstl.pairMod.Pair[First, Second] {
     /**
       * Initializer Constructor.
       *
@@ -32,12 +31,9 @@ object utilityMod extends js.Object {
     def this(first: First, second: Second) = this()
   }
   
-  val pair: Instantiable2[
-    /* import warning: RewrittenClass.unapply cls was tparam First */ /* first */ js.Any, 
-    /* import warning: RewrittenClass.unapply cls was tparam Second */ /* second */ js.Any, 
-    typingsSlinky.tstl.utilityPairMod.Pair[js.Object, js.Object]
-  ] = js.native
-  def is_node(): Boolean = js.native
-  def make_pair[First, Second](first: First, second: Second): typingsSlinky.tstl.utilityPairMod.Pair[First, Second] = js.native
+  @JSName("is_node")
+  def isNode(): Boolean = js.native
+  @JSName("make_pair")
+  def makePair[First, Second](first: First, second: Second): typingsSlinky.tstl.pairMod.Pair[First, Second] = js.native
 }
 

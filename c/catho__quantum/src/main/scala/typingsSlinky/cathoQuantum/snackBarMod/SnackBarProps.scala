@@ -1,0 +1,55 @@
+package typingsSlinky.cathoQuantum.snackBarMod
+
+import org.scalajs.dom.raw.HTMLButtonElement
+import slinky.web.SyntheticMouseEvent
+import typingsSlinky.cathoQuantum.AnonBaseFontSizeBreakpoints
+import typingsSlinky.cathoQuantum.AnonCallbackFn
+import typingsSlinky.cathoQuantum.cathoQuantumStrings.error
+import typingsSlinky.cathoQuantum.cathoQuantumStrings.neutral
+import typingsSlinky.cathoQuantum.cathoQuantumStrings.primary
+import typingsSlinky.cathoQuantum.cathoQuantumStrings.success
+import typingsSlinky.cathoQuantum.cathoQuantumStrings.warning
+import typingsSlinky.react.mod.MouseEventHandler
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait SnackBarProps extends js.Object {
+  var actionTrigger: js.UndefOr[AnonCallbackFn] = js.undefined
+  var closeButtonAriaLabel: js.UndefOr[String] = js.undefined
+  var id: js.UndefOr[String] = js.undefined
+  var inverted: js.UndefOr[Boolean] = js.undefined
+  var onClose: js.UndefOr[MouseEventHandler[HTMLButtonElement]] = js.undefined
+  var secondsToClose: js.UndefOr[Double] = js.undefined
+  var skin: js.UndefOr[primary | success | error | neutral | warning] = js.undefined
+  var text: js.UndefOr[String] = js.undefined
+  var theme: js.UndefOr[AnonBaseFontSizeBreakpoints] = js.undefined
+}
+
+object SnackBarProps {
+  @scala.inline
+  def apply(
+    actionTrigger: AnonCallbackFn = null,
+    closeButtonAriaLabel: String = null,
+    id: String = null,
+    inverted: js.UndefOr[Boolean] = js.undefined,
+    onClose: SyntheticMouseEvent[HTMLButtonElement] => Unit = null,
+    secondsToClose: Int | Double = null,
+    skin: primary | success | error | neutral | warning = null,
+    text: String = null,
+    theme: AnonBaseFontSizeBreakpoints = null
+  ): SnackBarProps = {
+    val __obj = js.Dynamic.literal()
+    if (actionTrigger != null) __obj.updateDynamic("actionTrigger")(actionTrigger.asInstanceOf[js.Any])
+    if (closeButtonAriaLabel != null) __obj.updateDynamic("closeButtonAriaLabel")(closeButtonAriaLabel.asInstanceOf[js.Any])
+    if (id != null) __obj.updateDynamic("id")(id.asInstanceOf[js.Any])
+    if (!js.isUndefined(inverted)) __obj.updateDynamic("inverted")(inverted.asInstanceOf[js.Any])
+    if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
+    if (secondsToClose != null) __obj.updateDynamic("secondsToClose")(secondsToClose.asInstanceOf[js.Any])
+    if (skin != null) __obj.updateDynamic("skin")(skin.asInstanceOf[js.Any])
+    if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
+    if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
+    __obj.asInstanceOf[SnackBarProps]
+  }
+}
+

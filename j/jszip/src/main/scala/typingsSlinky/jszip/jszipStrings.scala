@@ -1,8 +1,8 @@
 package typingsSlinky.jszip
 
-import typingsSlinky.jszip.jszipMod.Compression
-import typingsSlinky.jszip.jszipMod.InputType
-import typingsSlinky.jszip.jszipMod.OutputType
+import typingsSlinky.jszip.mod.Compression
+import typingsSlinky.jszip.mod.InputType
+import typingsSlinky.jszip.mod.OutputType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -55,7 +55,9 @@ object jszipStrings {
   sealed trait stream extends InputType
   
   @js.native
-  sealed trait string extends InputType
+  sealed trait string
+    extends InputType
+       with OutputType
   
   @js.native
   sealed trait text

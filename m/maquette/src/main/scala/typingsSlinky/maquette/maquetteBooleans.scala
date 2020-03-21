@@ -1,6 +1,6 @@
 package typingsSlinky.maquette
 
-import typingsSlinky.maquette.distInterfacesMod._VNodeChild
+import typingsSlinky.maquette.interfacesMod._VNodeChild
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

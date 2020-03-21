@@ -12,7 +12,7 @@ JavaScript parser, mangler/compressor and beautifier toolkit
 | Keywords           | cli, compress, compressor, ecma, ecmascript, es, es5, javascript, js, jsmin, min, minification, minifier, minify, optimize, optimizer, pack, packer, parse, parser, uglifier, uglify |
 | # releases         | 65 |
 | # dependents       | 3177 |
-| # downloads        | 679764294 |
+| # downloads        | 681832376 |
 | # stars            | 267 |
 
 ## Links

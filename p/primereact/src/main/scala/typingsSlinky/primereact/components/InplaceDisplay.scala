@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InplaceDisplay
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.primereact.inplaceMod.InplaceDisplay] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactInplaceMod.InplaceDisplay] {
   @JSImport("primereact/inplace", "InplaceDisplay")
   @js.native
   object componentImport extends js.Object

@@ -1,7 +1,7 @@
 package typingsSlinky.jsoneditoronline
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,10 +13,10 @@ class JSONEditorSearchBox protected () extends js.Object {
   def clearDelay(): Unit = js.native
   def focusActiveResult(): Unit = js.native
   def next(): Unit = js.native
-  def onDelayedSearch(event: Event): Unit = js.native
-  def onKeyDown(event: Event): Unit = js.native
-  def onKeyUp(event: Event): Unit = js.native
-  def onSearch(event: Event, forcedSearch: Boolean): Unit = js.native
+  def onDelayedSearch(event: Event_): Unit = js.native
+  def onKeyDown(event: Event_): Unit = js.native
+  def onKeyUp(event: Event_): Unit = js.native
+  def onSearch(event: Event_, forcedSearch: Boolean): Unit = js.native
   def previous(): Unit = js.native
   def setActiveResult(index: Double): Unit = js.native
 }

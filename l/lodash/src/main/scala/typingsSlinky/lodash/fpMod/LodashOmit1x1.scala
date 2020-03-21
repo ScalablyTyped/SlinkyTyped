@@ -1,6 +1,6 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.AnyKindOfDictionary
+import typingsSlinky.lodash.mod.AnyKindOfDictionary
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

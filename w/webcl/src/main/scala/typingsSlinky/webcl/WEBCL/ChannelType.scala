@@ -21,21 +21,21 @@ import scala.scalajs.js.annotation._
 
 /* cl_channel_type */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x10D0`
-  - typings.webcl.webclNumbers.`0x10D1`
-  - typings.webcl.webclNumbers.`0x10D2`
-  - typings.webcl.webclNumbers.`0x10D3`
-  - typings.webcl.webclNumbers.`0x10D4`
-  - typings.webcl.webclNumbers.`0x10D5`
-  - typings.webcl.webclNumbers.`0x10D6`
-  - typings.webcl.webclNumbers.`0x10D7`
-  - typings.webcl.webclNumbers.`0x10D8`
-  - typings.webcl.webclNumbers.`0x10D9`
-  - typings.webcl.webclNumbers.`0x10DA`
-  - typings.webcl.webclNumbers.`0x10DB`
-  - typings.webcl.webclNumbers.`0x10DC`
-  - typings.webcl.webclNumbers.`0x10DD`
-  - typings.webcl.webclNumbers.`0x10DE`
+  - typingsSlinky.webcl.webclNumbers.`0x10D0`
+  - typingsSlinky.webcl.webclNumbers.`0x10D1`
+  - typingsSlinky.webcl.webclNumbers.`0x10D2`
+  - typingsSlinky.webcl.webclNumbers.`0x10D3`
+  - typingsSlinky.webcl.webclNumbers.`0x10D4`
+  - typingsSlinky.webcl.webclNumbers.`0x10D5`
+  - typingsSlinky.webcl.webclNumbers.`0x10D6`
+  - typingsSlinky.webcl.webclNumbers.`0x10D7`
+  - typingsSlinky.webcl.webclNumbers.`0x10D8`
+  - typingsSlinky.webcl.webclNumbers.`0x10D9`
+  - typingsSlinky.webcl.webclNumbers.`0x10DA`
+  - typingsSlinky.webcl.webclNumbers.`0x10DB`
+  - typingsSlinky.webcl.webclNumbers.`0x10DC`
+  - typingsSlinky.webcl.webclNumbers.`0x10DD`
+  - typingsSlinky.webcl.webclNumbers.`0x10DE`
 */
 trait ChannelType extends js.Object
 

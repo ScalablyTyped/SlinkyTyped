@@ -12,7 +12,7 @@ a promise-based sftp client for node.js
 | Keywords           | sftp, client, promise, node |
 | # releases         | 3 |
 | # dependents       | 5 |
-| # downloads        | 243307 |
+| # downloads        | 248097 |
 | # stars            | 1 |
 
 ## Links

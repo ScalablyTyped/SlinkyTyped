@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-tag-autocomplete
 
-Typings are for version 5.6
+Typings are for version 5.12
 
 ## Library description:
 React Tag Autocomplete is a simple tagging component ready to drop in your React projects.
@@ -10,9 +10,9 @@ React Tag Autocomplete is a simple tagging component ready to drop in your React
 | ------------------ | :-------------: |
 | Full name          | react-tag-autocomplete |
 | Keywords           | react, tags, tag input, react-component, autosuggest, autocomplete |
-| # releases         | 17 |
+| # releases         | 16 |
 | # dependents       | 9 |
-| # downloads        | 554139 |
+| # downloads        | 627936 |
 | # stars            | 0 |
 
 ## Links

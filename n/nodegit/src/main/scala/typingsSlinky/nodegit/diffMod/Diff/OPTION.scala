@@ -34,35 +34,35 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.nodegit.nodegitNumbers.`0`
-  - typings.nodegit.nodegitNumbers.`1`
-  - typings.nodegit.nodegitNumbers.`2`
-  - typings.nodegit.nodegitNumbers.`4`
-  - typings.nodegit.nodegitNumbers.`8`
-  - typings.nodegit.nodegitNumbers.`16`
-  - typings.nodegit.nodegitNumbers.`32`
-  - typings.nodegit.nodegitNumbers.`64`
-  - typings.nodegit.nodegitNumbers.`128`
-  - typings.nodegit.nodegitNumbers.`256`
-  - typings.nodegit.nodegitNumbers.`512`
-  - typings.nodegit.nodegitNumbers.`1024`
-  - typings.nodegit.nodegitNumbers.`2048`
-  - typings.nodegit.nodegitNumbers.`4096`
-  - typings.nodegit.nodegitNumbers.`8192`
-  - typings.nodegit.nodegitNumbers.`16384`
-  - typings.nodegit.nodegitNumbers.`32768`
-  - typings.nodegit.nodegitNumbers.`65536`
-  - typings.nodegit.nodegitNumbers.`131072`
-  - typings.nodegit.nodegitNumbers.`1048576`
-  - typings.nodegit.nodegitNumbers.`2097152`
-  - typings.nodegit.nodegitNumbers.`4194304`
-  - typings.nodegit.nodegitNumbers.`8388608`
-  - typings.nodegit.nodegitNumbers.`16777216`
-  - typings.nodegit.nodegitNumbers.`33554432`
-  - typings.nodegit.nodegitNumbers.`67108864`
-  - typings.nodegit.nodegitNumbers.`268435456`
-  - typings.nodegit.nodegitNumbers.`536870912`
-  - typings.nodegit.nodegitNumbers.`1073741824`
+  - typingsSlinky.nodegit.nodegitNumbers.`0`
+  - typingsSlinky.nodegit.nodegitNumbers.`1`
+  - typingsSlinky.nodegit.nodegitNumbers.`2`
+  - typingsSlinky.nodegit.nodegitNumbers.`4`
+  - typingsSlinky.nodegit.nodegitNumbers.`8`
+  - typingsSlinky.nodegit.nodegitNumbers.`16`
+  - typingsSlinky.nodegit.nodegitNumbers.`32`
+  - typingsSlinky.nodegit.nodegitNumbers.`64`
+  - typingsSlinky.nodegit.nodegitNumbers.`128`
+  - typingsSlinky.nodegit.nodegitNumbers.`256`
+  - typingsSlinky.nodegit.nodegitNumbers.`512`
+  - typingsSlinky.nodegit.nodegitNumbers.`1024`
+  - typingsSlinky.nodegit.nodegitNumbers.`2048`
+  - typingsSlinky.nodegit.nodegitNumbers.`4096`
+  - typingsSlinky.nodegit.nodegitNumbers.`8192`
+  - typingsSlinky.nodegit.nodegitNumbers.`16384`
+  - typingsSlinky.nodegit.nodegitNumbers.`32768`
+  - typingsSlinky.nodegit.nodegitNumbers.`65536`
+  - typingsSlinky.nodegit.nodegitNumbers.`131072`
+  - typingsSlinky.nodegit.nodegitNumbers.`1048576`
+  - typingsSlinky.nodegit.nodegitNumbers.`2097152`
+  - typingsSlinky.nodegit.nodegitNumbers.`4194304`
+  - typingsSlinky.nodegit.nodegitNumbers.`8388608`
+  - typingsSlinky.nodegit.nodegitNumbers.`16777216`
+  - typingsSlinky.nodegit.nodegitNumbers.`33554432`
+  - typingsSlinky.nodegit.nodegitNumbers.`67108864`
+  - typingsSlinky.nodegit.nodegitNumbers.`268435456`
+  - typingsSlinky.nodegit.nodegitNumbers.`536870912`
+  - typingsSlinky.nodegit.nodegitNumbers.`1073741824`
 */
 trait OPTION extends js.Object
 

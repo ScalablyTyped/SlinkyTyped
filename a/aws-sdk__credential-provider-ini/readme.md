@@ -10,9 +10,9 @@ AWS credential provider that sources credentials from ~/.aws/credentials and ~/.
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/credential-provider-ini |
 | Keywords           | aws, credentials |
-| # releases         | 8 |
+| # releases         | 9 |
 | # dependents       | 2 |
-| # downloads        | 38712 |
+| # downloads        | 39442 |
 | # stars            | 0 |
 
 ## Links

@@ -1,22 +1,21 @@
 organization := "org.scalablytyped.slinky"
 name := "babelify"
-version := "v7.3.0-dt-20190322Z-2e1739"
-scalaVersion := "2.12.10"
+version := "v7.3.0-dt-20200225Z-b6f276"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "babel-core" % "6.25-dt-20190212Z-d0a90c",
-  "org.scalablytyped.slinky" %%% "babel-generator" % "6.25-dt-20190212Z-c7b1e2",
-  "org.scalablytyped.slinky" %%% "babel-template" % "6.25-dt-20190212Z-e7b009",
-  "org.scalablytyped.slinky" %%% "babel-traverse" % "6.25-dt-20190212Z-bd55a1",
-  "org.scalablytyped.slinky" %%% "babel-types" % "7.0-dt-20190424Z-4c84f3",
-  "org.scalablytyped.slinky" %%% "babylon" % "6.16-dt-20190212Z-359dd7",
-  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "babel-core" % "6.25-dt-20200226Z-544ca1",
+  "org.scalablytyped.slinky" %%% "babel-generator" % "6.25-dt-20200226Z-3dde5d",
+  "org.scalablytyped.slinky" %%% "babel-template" % "6.25-dt-20200226Z-705f46",
+  "org.scalablytyped.slinky" %%% "babel-traverse" % "6.25-dt-20190212Z-ea109e",
+  "org.scalablytyped.slinky" %%% "babel-types" % "7.0-dt-20190424Z-7d07c4",
+  "org.scalablytyped.slinky" %%% "babylon" % "6.16-dt-20200226Z-c2b6b5",
+  "org.scalablytyped.slinky" %%% "node" % "13.7-dt-20200228Z-eb4e34",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

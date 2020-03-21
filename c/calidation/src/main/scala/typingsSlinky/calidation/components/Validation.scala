@@ -4,16 +4,16 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.calidation.calidationMod.Dictionary
-import typingsSlinky.calidation.calidationMod.FieldsConfig
-import typingsSlinky.calidation.calidationMod.Transforms
-import typingsSlinky.calidation.calidationMod.ValidationProps
+import typingsSlinky.calidation.mod.Dictionary
+import typingsSlinky.calidation.mod.FieldsConfig
+import typingsSlinky.calidation.mod.Transforms
+import typingsSlinky.calidation.mod.ValidationProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Validation
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.calidation.calidationMod.Validation] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.calidation.mod.Validation] {
   @JSImport("calidation", "Validation")
   @js.native
   object componentImport extends js.Object
@@ -24,7 +24,7 @@ object Validation
     initialValues: Dictionary[_] = null,
     transforms: Transforms = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.calidation.calidationMod.Validation] = {
+  ): BuildingComponent[tag.type, typingsSlinky.calidation.mod.Validation] = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any])
     if (initialValues != null) __obj.updateDynamic("initialValues")(initialValues.asInstanceOf[js.Any])
     if (transforms != null) __obj.updateDynamic("transforms")(transforms.asInstanceOf[js.Any])

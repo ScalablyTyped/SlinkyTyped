@@ -1,20 +1,77 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.pluggableMapMod.MapOptions
+import typingsSlinky.ol.coordinateMod.Coordinate
+import typingsSlinky.ol.olFeatureMod.FeatureLike
+import typingsSlinky.ol.pixelMod.Pixel
+import typingsSlinky.ol.pluggableMapMod.FrameState
+import typingsSlinky.ol.renderEventTypeMod.EventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("ol/Map", JSImport.Namespace)
+@JSImport("ol/renderer/Map", JSImport.Namespace)
 @js.native
 object mapMod extends js.Object {
   @js.native
-  trait Map
-    extends typingsSlinky.ol.pluggableMapMod.default
+  trait MapRenderer
+    extends typingsSlinky.ol.disposableMod.default {
+    /* protected */ def calculateMatrices2D(frameState: FrameState): Unit = js.native
+    def dispatchRenderEvent(`type`: EventType, frameState: FrameState): Unit = js.native
+    def forEachFeatureAtCoordinate[S, T, U](
+      coordinate: Coordinate,
+      frameState: FrameState,
+      hitTolerance: Double,
+      checkWrapped: Boolean,
+      callback: js.ThisFunction2[
+          /* this */ S, 
+          /* p0 */ FeatureLike, 
+          /* p1 */ typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default], 
+          T
+        ],
+      thisArg: S,
+      layerFilter: js.ThisFunction1[
+          /* this */ U, 
+          /* p0 */ typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default], 
+          Boolean
+        ],
+      thisArg2: U
+    ): T = js.native
+    def forEachLayerAtPixel[S, T, U](
+      pixel: Pixel,
+      frameState: FrameState,
+      hitTolerance: Double,
+      callback: js.ThisFunction2[
+          /* this */ S, 
+          /* p0 */ typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default], 
+          /* p1 */ scala.scalajs.js.typedarray.Uint8ClampedArray | scala.scalajs.js.typedarray.Uint8Array, 
+          T
+        ],
+      layerFilter: js.ThisFunction1[
+          /* this */ U, 
+          /* p0 */ typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default], 
+          Boolean
+        ]
+    ): T = js.native
+    def getMap(): typingsSlinky.ol.pluggableMapMod.default = js.native
+    def hasFeatureAtCoordinate[U](
+      coordinate: Coordinate,
+      frameState: FrameState,
+      hitTolerance: Double,
+      checkWrapped: Boolean,
+      layerFilter: js.ThisFunction1[
+          /* this */ U, 
+          /* p0 */ typingsSlinky.ol.layerLayerMod.default[typingsSlinky.ol.sourceSourceMod.default], 
+          Boolean
+        ],
+      thisArg: U
+    ): Boolean = js.native
+    def renderFrame(frameState: FrameState): Unit = js.native
+    /* protected */ def scheduleExpireIconCache(frameState: FrameState): Unit = js.native
+  }
   
   @js.native
-  class default protected () extends Map {
-    def this(options: MapOptions) = this()
+  abstract class default protected () extends MapRenderer {
+    def this(map: typingsSlinky.ol.pluggableMapMod.default) = this()
   }
   
 }

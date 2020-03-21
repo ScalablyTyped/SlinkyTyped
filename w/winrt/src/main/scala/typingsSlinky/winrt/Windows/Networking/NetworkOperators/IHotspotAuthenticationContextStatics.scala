@@ -1,17 +1,17 @@
 package typingsSlinky.winrt.Windows.Networking.NetworkOperators
 
-import typingsSlinky.winrt.Anon_Context
+import typingsSlinky.winrt.AnonContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait IHotspotAuthenticationContextStatics extends js.Object {
-  def tryGetAuthenticationContext(evenToken: String): Anon_Context
+  def tryGetAuthenticationContext(evenToken: String): AnonContext
 }
 
 object IHotspotAuthenticationContextStatics {
   @scala.inline
-  def apply(tryGetAuthenticationContext: String => Anon_Context): IHotspotAuthenticationContextStatics = {
+  def apply(tryGetAuthenticationContext: String => AnonContext): IHotspotAuthenticationContextStatics = {
     val __obj = js.Dynamic.literal(tryGetAuthenticationContext = js.Any.fromFunction1(tryGetAuthenticationContext))
   
     __obj.asInstanceOf[IHotspotAuthenticationContextStatics]

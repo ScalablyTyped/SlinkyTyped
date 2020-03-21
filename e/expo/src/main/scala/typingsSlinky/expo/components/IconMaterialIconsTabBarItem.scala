@@ -1,11 +1,11 @@
 package typingsSlinky.expo.components
 
-import typingsSlinky.expo.buildGlobalsDotWebMod.Icon.MaterialIcons.TabBarItem
+import typingsSlinky.expo.globalsWebMod.Icon.MaterialIcons.TabBarItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconMaterialIconsTabBarItem extends SharedApply_TabBarItemIOSProps1445960788[TabBarItem] {
+object IconMaterialIconsTabBarItem extends SharedApply_TabBarItemIOSProps_176246593[TabBarItem] {
   @JSImport("expo/build/globals.web", "Icon.MaterialIcons.TabBarItem")
   @js.native
   object componentImport extends js.Object

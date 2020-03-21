@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * The definition of a plan for a series of actions, independent of any specific patient or context
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait PlanDefinition extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait PlanDefinition extends DomainResource {
   /**
     * Contains extended information for property 'approvalDate'.
     */

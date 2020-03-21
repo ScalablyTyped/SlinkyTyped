@@ -1,7 +1,7 @@
 package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.dojo.dojo.dnd.Moveable.__MoveableArgs
+import typingsSlinky.dojo.dojo.dnd.Moveable.MoveableArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,12 +12,12 @@ trait TypeofMoveable extends js.Object {
     *
     *
     */
-  var __MoveableArgs: Instantiable0[typingsSlinky.dojo.dojo.dnd.Moveable.__MoveableArgs]
+  var __MoveableArgs: Instantiable0[MoveableArgs]
 }
 
 object TypeofMoveable {
   @scala.inline
-  def apply(__MoveableArgs: Instantiable0[__MoveableArgs]): TypeofMoveable = {
+  def apply(__MoveableArgs: Instantiable0[MoveableArgs]): TypeofMoveable = {
     val __obj = js.Dynamic.literal(__MoveableArgs = __MoveableArgs.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[TypeofMoveable]

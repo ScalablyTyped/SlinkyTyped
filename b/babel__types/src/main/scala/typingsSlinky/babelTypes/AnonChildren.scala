@@ -1,0 +1,31 @@
+package typingsSlinky.babelTypes
+
+import typingsSlinky.babelTypes.mod.JSXElement_
+import typingsSlinky.babelTypes.mod.JSXEmptyExpression_
+import typingsSlinky.babelTypes.mod.JSXExpressionContainer_
+import typingsSlinky.babelTypes.mod.JSXFragment_
+import typingsSlinky.babelTypes.mod.JSXSpreadChild_
+import typingsSlinky.babelTypes.mod.JSXText_
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait AnonChildren extends js.Object {
+  var children: js.Array[
+    JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | JSXFragment_ | JSXEmptyExpression_
+  ]
+}
+
+object AnonChildren {
+  @scala.inline
+  def apply(
+    children: js.Array[
+      JSXText_ | JSXExpressionContainer_ | JSXSpreadChild_ | JSXElement_ | JSXFragment_ | JSXEmptyExpression_
+    ]
+  ): AnonChildren = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[AnonChildren]
+  }
+}
+

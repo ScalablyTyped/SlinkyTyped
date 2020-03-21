@@ -1,7 +1,7 @@
 package typingsSlinky.ol.sourceMod
 
-import typingsSlinky.ol.sourceRasterMod.Options
-import typingsSlinky.ol.sourceRasterMod.default
+import typingsSlinky.ol.rasterMod.Options
+import typingsSlinky.ol.rasterMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,110 +1,140 @@
 package typingsSlinky.tstl
 
-import typingsSlinky.tstl.functionalIPointerMod.IPointer.ValueType
-import typingsSlinky.tstl.iteratorIBidirectionalIteratorMod.IBidirectionalIterator
-import typingsSlinky.tstl.iteratorIFakeMod.General
-import typingsSlinky.tstl.iteratorIFakeMod.Writeonly
-import typingsSlinky.tstl.iteratorIForwardIteratorMod.IForwardIterator
+import typingsSlinky.tstl.comparatorMod.Comparator
+import typingsSlinky.tstl.ibidirectionalcontainerMod.IBidirectionalContainer
+import typingsSlinky.tstl.ibidirectionalcontainerMod.IBidirectionalContainer.IteratorType
+import typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer
+import typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer.ValueType
+import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
+import typingsSlinky.tstl.writeonlyMod.Writeonly
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("tstl/algorithm/merge", JSImport.Namespace)
+@JSImport("tstl/ranges/algorithm/merge", JSImport.Namespace)
 @js.native
 object algorithmMergeMod extends js.Object {
-  def includes[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */](first1: InputIterator1, last1: InputIterator1, first2: InputIterator2, last2: InputIterator2): Boolean = js.native
-  def includes[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */](
-    first1: InputIterator1,
-    last1: InputIterator1,
-    first2: InputIterator2,
-    last2: InputIterator2,
-    comp: js.Function2[/* x */ ValueType[InputIterator1], /* y */ ValueType[InputIterator1], Boolean]
+  def includes[Range1 /* <: js.Array[_] | IForwardContainer[_] */](range1: Range1, range2: js.Array[ValueType[Range1]]): Boolean = js.native
+  def includes[Range1 /* <: js.Array[_] | IForwardContainer[_] */](
+    range1: Range1,
+    range2: js.Array[ValueType[Range1]],
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
   ): Boolean = js.native
-  def inplace_merge[BidirectionalIterator /* <: General[IBidirectionalIterator[ValueType[BidirectionalIterator], BidirectionalIterator]] */](first: BidirectionalIterator, middle: BidirectionalIterator, last: BidirectionalIterator): Unit = js.native
-  def inplace_merge[BidirectionalIterator /* <: General[IBidirectionalIterator[ValueType[BidirectionalIterator], BidirectionalIterator]] */](
-    first: BidirectionalIterator,
-    middle: BidirectionalIterator,
-    last: BidirectionalIterator,
-    comp: js.Function2[
-      /* x */ ValueType[BidirectionalIterator], 
-      /* y */ ValueType[BidirectionalIterator], 
-      Boolean
-    ]
-  ): Unit = js.native
-  def merge[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator1], OutputIterator]] */](
-    first1: InputIterator1,
-    last1: InputIterator1,
-    first2: InputIterator2,
-    last2: InputIterator2,
+  def includes[Range1 /* <: js.Array[_] | IForwardContainer[_] */](range1: Range1, range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]]): Boolean = js.native
+  def includes[Range1 /* <: js.Array[_] | IForwardContainer[_] */](
+    range1: Range1,
+    range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]],
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
+  ): Boolean = js.native
+  @JSName("inplace_merge")
+  def inplaceMerge[Range /* <: js.Array[_] | (IBidirectionalContainer[_, _]) */](range: Range, middle: IteratorType[Range]): Unit = js.native
+  @JSName("inplace_merge")
+  def inplaceMerge[Range /* <: js.Array[_] | (IBidirectionalContainer[_, _]) */](range: Range, middle: IteratorType[Range], comp: Comparator[ValueType[Range], ValueType[Range]]): Unit = js.native
+  def merge[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](range1: Range1, range2: js.Array[ValueType[Range1]], output: OutputIterator): OutputIterator = js.native
+  def merge[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: js.Array[ValueType[Range1]],
+    output: OutputIterator,
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
+  ): OutputIterator = js.native
+  def merge[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]],
     output: OutputIterator
   ): OutputIterator = js.native
-  def merge[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator1], OutputIterator]] */](
-    first1: InputIterator1,
-    last1: InputIterator1,
-    first2: InputIterator2,
-    last2: InputIterator2,
+  def merge[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]],
     output: OutputIterator,
-    comp: js.Function2[/* x */ ValueType[InputIterator1], /* y */ ValueType[InputIterator1], Boolean]
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
   ): OutputIterator = js.native
-  def set_difference[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator1], OutputIterator]] */](
-    first1: InputIterator1,
-    last1: InputIterator1,
-    first2: InputIterator2,
-    last2: InputIterator2,
+  @JSName("set_difference")
+  def setDifference[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](range1: Range1, range2: js.Array[ValueType[Range1]], output: OutputIterator): OutputIterator = js.native
+  @JSName("set_difference")
+  def setDifference[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: js.Array[ValueType[Range1]],
+    output: OutputIterator,
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
+  ): OutputIterator = js.native
+  @JSName("set_difference")
+  def setDifference[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]],
     output: OutputIterator
   ): OutputIterator = js.native
-  def set_difference[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator1], OutputIterator]] */](
-    first1: InputIterator1,
-    last1: InputIterator1,
-    first2: InputIterator2,
-    last2: InputIterator2,
+  @JSName("set_difference")
+  def setDifference[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]],
     output: OutputIterator,
-    comp: js.Function2[/* x */ ValueType[InputIterator1], /* y */ ValueType[InputIterator1], Boolean]
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
   ): OutputIterator = js.native
-  def set_intersection[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator1], OutputIterator]] */](
-    first1: InputIterator1,
-    last1: InputIterator1,
-    first2: InputIterator2,
-    last2: InputIterator2,
+  @JSName("set_intersection")
+  def setIntersection[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](range1: Range1, range2: js.Array[ValueType[Range1]], output: OutputIterator): OutputIterator = js.native
+  @JSName("set_intersection")
+  def setIntersection[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: js.Array[ValueType[Range1]],
+    output: OutputIterator,
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
+  ): OutputIterator = js.native
+  @JSName("set_intersection")
+  def setIntersection[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]],
     output: OutputIterator
   ): OutputIterator = js.native
-  def set_intersection[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator1], OutputIterator]] */](
-    first1: InputIterator1,
-    last1: InputIterator1,
-    first2: InputIterator2,
-    last2: InputIterator2,
+  @JSName("set_intersection")
+  def setIntersection[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]],
     output: OutputIterator,
-    comp: js.Function2[/* x */ ValueType[InputIterator1], /* y */ ValueType[InputIterator1], Boolean]
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
   ): OutputIterator = js.native
-  def set_symmetric_difference[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator1], OutputIterator]] */](
-    first1: InputIterator1,
-    last1: InputIterator1,
-    first2: InputIterator2,
-    last2: InputIterator2,
+  @JSName("set_symmetric_difference")
+  def setSymmetricDifference[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](range1: Range1, range2: js.Array[ValueType[Range1]], output: OutputIterator): OutputIterator = js.native
+  @JSName("set_symmetric_difference")
+  def setSymmetricDifference[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: js.Array[ValueType[Range1]],
+    output: OutputIterator,
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
+  ): OutputIterator = js.native
+  @JSName("set_symmetric_difference")
+  def setSymmetricDifference[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]],
     output: OutputIterator
   ): OutputIterator = js.native
-  def set_symmetric_difference[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator1], OutputIterator]] */](
-    first1: InputIterator1,
-    last1: InputIterator1,
-    first2: InputIterator2,
-    last2: InputIterator2,
+  @JSName("set_symmetric_difference")
+  def setSymmetricDifference[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]],
     output: OutputIterator,
-    comp: js.Function2[/* x */ ValueType[InputIterator1], /* y */ ValueType[InputIterator1], Boolean]
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
   ): OutputIterator = js.native
-  def set_union[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator1], OutputIterator]] */](
-    first1: InputIterator1,
-    last1: InputIterator1,
-    first2: InputIterator2,
-    last2: InputIterator2,
+  @JSName("set_union")
+  def setUnion[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](range1: Range1, range2: js.Array[ValueType[Range1]], output: OutputIterator): OutputIterator = js.native
+  @JSName("set_union")
+  def setUnion[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: js.Array[ValueType[Range1]],
+    output: OutputIterator,
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
+  ): OutputIterator = js.native
+  @JSName("set_union")
+  def setUnion[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]],
     output: OutputIterator
   ): OutputIterator = js.native
-  def set_union[InputIterator1 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator1] */, InputIterator2 /* <: IForwardIterator[ValueType[InputIterator1], InputIterator2] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator1], OutputIterator]] */](
-    first1: InputIterator1,
-    last1: InputIterator1,
-    first2: InputIterator2,
-    last2: InputIterator2,
+  @JSName("set_union")
+  def setUnion[Range1 /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[Range1], OutputIterator]] */](
+    range1: Range1,
+    range2: IForwardContainer[IForwardIterator[ValueType[Range1], _]],
     output: OutputIterator,
-    comp: js.Function2[/* x */ ValueType[InputIterator1], /* y */ ValueType[InputIterator1], Boolean]
+    comp: Comparator[ValueType[Range1], ValueType[Range1]]
   ): OutputIterator = js.native
 }
 

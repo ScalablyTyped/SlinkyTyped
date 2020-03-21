@@ -1,19 +1,19 @@
 package typingsSlinky.primereact.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_Map
-import typingsSlinky.primereact.componentsGmapGMapMod.GMapProps
+import typingsSlinky.primereact.AnonMap
+import typingsSlinky.primereact.gmapMod.GMapProps
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object GMap
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.gmapMod.GMap] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactGmapMod.GMap] {
   @JSImport("primereact/gmap", "GMap")
   @js.native
   object componentImport extends js.Object
@@ -21,19 +21,19 @@ object GMap
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className */
   def apply(
-    onMapClick: /* event */ Event => Unit = null,
+    onMapClick: /* event */ Event_ => Unit = null,
     onMapDragEnd: () => Unit = null,
     onMapReady: /* map */ js.Any => Unit = null,
-    onOverlayClick: /* e */ Anon_Map => Unit = null,
-    onOverlayDrag: /* event */ Event => Unit = null,
-    onOverlayDragEnd: /* event */ Event => Unit = null,
-    onOverlayDragStart: /* event */ Event => Unit = null,
+    onOverlayClick: /* e */ AnonMap => Unit = null,
+    onOverlayDrag: /* event */ Event_ => Unit = null,
+    onOverlayDragEnd: /* event */ Event_ => Unit = null,
+    onOverlayDragStart: /* event */ Event_ => Unit = null,
     onZoomChanged: () => Unit = null,
     options: js.Object = null,
     overlays: js.Array[_] = null,
     style: js.Object = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.gmapMod.GMap] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactGmapMod.GMap] = {
     val __obj = js.Dynamic.literal()
     if (onMapClick != null) __obj.updateDynamic("onMapClick")(js.Any.fromFunction1(onMapClick))
     if (onMapDragEnd != null) __obj.updateDynamic("onMapDragEnd")(js.Any.fromFunction0(onMapDragEnd))
@@ -49,7 +49,7 @@ object GMap
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.gmapMod.GMap] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.gmapMod.GMap](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactGmapMod.GMap] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.primereactGmapMod.GMap](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = GMapProps
 }
 

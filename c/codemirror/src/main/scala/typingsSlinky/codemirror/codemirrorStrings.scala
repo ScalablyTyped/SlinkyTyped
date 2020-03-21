@@ -1,8 +1,8 @@
 package typingsSlinky.codemirror
 
-import typingsSlinky.codemirror.codemirrorMod.CoordsMode
-import typingsSlinky.codemirror.codemirrorMod.DOMEvent
-import typingsSlinky.codemirror.codemirrorMod.InputStyle
+import typingsSlinky.codemirror.mod.CoordsMode
+import typingsSlinky.codemirror.mod.DOMEvent
+import typingsSlinky.codemirror.mod.InputStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,6 +34,9 @@ object codemirrorStrings {
   
   @js.native
   sealed trait autoCloseTags extends js.Object
+  
+  @js.native
+  sealed trait autoRefresh extends js.Object
   
   @js.native
   sealed trait autofocus extends js.Object
@@ -268,9 +271,6 @@ object codemirrorStrings {
   
   @js.native
   sealed trait loadedmetadata extends js.Object
-  
-  @js.native
-  sealed trait loadend extends js.Object
   
   @js.native
   sealed trait loadstart extends js.Object
@@ -546,6 +546,8 @@ object codemirrorStrings {
   @scala.inline
   def autoCloseTags: autoCloseTags = "autoCloseTags".asInstanceOf[autoCloseTags]
   @scala.inline
+  def autoRefresh: autoRefresh = "autoRefresh".asInstanceOf[autoRefresh]
+  @scala.inline
   def autofocus: autofocus = "autofocus".asInstanceOf[autofocus]
   @scala.inline
   def auxclick: auxclick = "auxclick".asInstanceOf[auxclick]
@@ -701,8 +703,6 @@ object codemirrorStrings {
   def loadeddata: loadeddata = "loadeddata".asInstanceOf[loadeddata]
   @scala.inline
   def loadedmetadata: loadedmetadata = "loadedmetadata".asInstanceOf[loadedmetadata]
-  @scala.inline
-  def loadend: loadend = "loadend".asInstanceOf[loadend]
   @scala.inline
   def loadstart: loadstart = "loadstart".asInstanceOf[loadstart]
   @scala.inline

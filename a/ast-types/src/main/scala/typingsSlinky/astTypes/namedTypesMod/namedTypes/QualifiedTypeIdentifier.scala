@@ -1,0 +1,30 @@
+package typingsSlinky.astTypes.namedTypesMod.namedTypes
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.astTypes.kindsMod.CommentKind
+import typingsSlinky.astTypes.kindsMod.IdentifierKind
+import typingsSlinky.astTypes.kindsMod.NodeKind
+import typingsSlinky.astTypes.kindsMod.PrintableKind
+import typingsSlinky.astTypes.kindsMod.QualifiedTypeIdentifierKind
+import typingsSlinky.astTypes.kindsMod.SourceLocationKind
+import typingsSlinky.astTypes.typesMod.Type
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Inlined parent ast-types.ast-types/types.Omit<ast-types.ast-types/gen/namedTypes.namedTypes.Node, 'type'> */
+trait QualifiedTypeIdentifier
+  extends ASTNode
+     with NodeKind
+     with PrintableKind {
+  var comments: js.UndefOr[js.Array[CommentKind]] = js.undefined
+  var id: IdentifierKind
+  var loc: js.UndefOr[SourceLocationKind] = js.undefined
+  var qualification: IdentifierKind | QualifiedTypeIdentifierKind
+  var `type`: typingsSlinky.astTypes.astTypesStrings.QualifiedTypeIdentifier
+}
+
+@JSImport("ast-types/gen/namedTypes", "namedTypes.QualifiedTypeIdentifier")
+@js.native
+object QualifiedTypeIdentifier extends TopLevel[Type[QualifiedTypeIdentifier]]
+

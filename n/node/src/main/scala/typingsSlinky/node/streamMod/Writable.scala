@@ -1,6 +1,6 @@
 package typingsSlinky.node.streamMod
 
-import typingsSlinky.node.Anon_Chunk
+import typingsSlinky.node.AnonChunk
 import typingsSlinky.node.NodeJS.WritableStream
 import typingsSlinky.node.nodeStrings.close
 import typingsSlinky.node.nodeStrings.drain
@@ -16,12 +16,12 @@ import scala.scalajs.js.annotation._
 @JSImport("stream", "Writable")
 @js.native
 class Writable ()
-  extends internal
+  extends Stream
      with WritableStream {
   def this(opts: WritableOptions) = this()
   var _writev: js.UndefOr[
     js.Function2[
-      /* chunks */ js.Array[Anon_Chunk], 
+      /* chunks */ js.Array[AnonChunk], 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]

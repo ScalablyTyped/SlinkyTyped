@@ -1,0 +1,32 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesCommitDoesNotExistExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.createBranchExceptionsUnionMod.CreateBranchExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getCommentsForComparedCommitExceptionsUnionMod.GetCommentsForComparedCommitExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getCommentsForPullRequestExceptionsUnionMod.GetCommentsForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getDifferencesExceptionsUnionMod.GetDifferencesExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getFileExceptionsUnionMod.GetFileExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getFolderExceptionsUnionMod.GetFolderExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getMergeConflictsExceptionsUnionMod.GetMergeConflictsExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExceptionsUnionMod.PostCommentForComparedCommitExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CommitDoesNotExistException
+  extends ServiceException[CommitDoesNotExistExceptionDetails]
+     with CreateBranchExceptionsUnion
+     with GetCommentsForComparedCommitExceptionsUnion
+     with GetCommentsForPullRequestExceptionsUnion
+     with GetDifferencesExceptionsUnion
+     with GetFileExceptionsUnion
+     with GetFolderExceptionsUnion
+     with GetMergeConflictsExceptionsUnion
+     with PostCommentForComparedCommitExceptionsUnion
+     with PostCommentForPullRequestExceptionsUnion {
+  @JSName("name")
+  var name_CommitDoesNotExistException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommitDoesNotExistException = js.native
+}
+

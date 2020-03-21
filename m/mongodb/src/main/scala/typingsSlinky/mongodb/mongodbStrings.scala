@@ -1,9 +1,9 @@
 package typingsSlinky.mongodb
 
-import typingsSlinky.mongodb.mongodbMod.BSONTypeAlias
-import typingsSlinky.mongodb.mongodbMod.ProfilingLevel
-import typingsSlinky.mongodb.mongodbMod.ReadConcernLevel
-import typingsSlinky.mongodb.mongodbMod.ReadPreferenceMode
+import typingsSlinky.mongodb.mod.BSONTypeAlias
+import typingsSlinky.mongodb.mod.ProfilingLevel
+import typingsSlinky.mongodb.mod.ReadConcernLevel
+import typingsSlinky.mongodb.mod.ReadPreferenceMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

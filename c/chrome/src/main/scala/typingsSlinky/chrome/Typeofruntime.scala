@@ -3,7 +3,7 @@ package typingsSlinky.chrome
 import typingsSlinky.chrome.chrome.runtime.ConnectInfo
 import typingsSlinky.chrome.chrome.runtime.ExtensionConnectEvent
 import typingsSlinky.chrome.chrome.runtime.ExtensionMessageEvent
-import typingsSlinky.chrome.chrome.runtime.LastError
+import typingsSlinky.chrome.chrome.runtime.LastError_
 import typingsSlinky.chrome.chrome.runtime.Manifest
 import typingsSlinky.chrome.chrome.runtime.MessageOptions
 import typingsSlinky.chrome.chrome.runtime.PlatformInfo
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Typeofruntime extends js.Object {
   var id: String = js.native
-  var lastError: js.UndefOr[LastError] = js.native
+  var lastError: js.UndefOr[LastError_] = js.native
   var onBrowserUpdateAvailable: RuntimeEvent = js.native
   var onConnect: ExtensionConnectEvent = js.native
   var onConnectExternal: ExtensionConnectEvent = js.native

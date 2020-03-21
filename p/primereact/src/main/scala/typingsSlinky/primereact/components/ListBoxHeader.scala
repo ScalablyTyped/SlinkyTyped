@@ -5,14 +5,14 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_OriginalEventValue
-import typingsSlinky.primereact.componentsListboxListBoxHeaderMod.ListBoxHeaderProps
+import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListBoxHeader
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.componentsListboxListBoxHeaderMod.ListBoxHeader] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeader] {
   @JSImport("primereact/components/listbox/ListBoxHeader", "ListBoxHeader")
   @js.native
   object componentImport extends js.Object
@@ -21,18 +21,18 @@ object ListBoxHeader
   /* The following DOM/SVG props were specified: disabled */
   def apply(
     filter: String = null,
-    onFilter: /* e */ Anon_OriginalEventValue => Unit = null,
+    onFilter: /* e */ AnonValue => Unit = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.componentsListboxListBoxHeaderMod.ListBoxHeader] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeader] = {
     val __obj = js.Dynamic.literal()
     if (filter != null) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
     if (onFilter != null) __obj.updateDynamic("onFilter")(js.Any.fromFunction1(onFilter))
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.componentsListboxListBoxHeaderMod.ListBoxHeader] = new slinky.core.BuildingComponent[
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeader] = new slinky.core.BuildingComponent[
   slinky.web.html.`*`.tag.type, 
-  typingsSlinky.primereact.componentsListboxListBoxHeaderMod.ListBoxHeader](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  typingsSlinky.primereact.listBoxHeaderMod.ListBoxHeader](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ListBoxHeaderProps
 }
 

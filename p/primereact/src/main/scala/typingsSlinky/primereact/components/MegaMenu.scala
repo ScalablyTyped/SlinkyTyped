@@ -5,14 +5,14 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsMegamenuMegaMenuMod.MegaMenuProps
-import typingsSlinky.primereact.componentsMenuitemMenuItemMod.MenuItem
+import typingsSlinky.primereact.megaMenuMod.MegaMenuProps
+import typingsSlinky.primereact.menuItemMod.MenuItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object MegaMenu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.megamenuMod.MegaMenu] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactMegamenuMod.MegaMenu] {
   @JSImport("primereact/megamenu", "MegaMenu")
   @js.native
   object componentImport extends js.Object
@@ -24,7 +24,7 @@ object MegaMenu
     orientation: String = null,
     style: js.Object = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.megamenuMod.MegaMenu] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactMegamenuMod.MegaMenu] = {
     val __obj = js.Dynamic.literal()
     if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
     if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
@@ -32,7 +32,9 @@ object MegaMenu
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.megamenuMod.MegaMenu] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.megamenuMod.MegaMenu](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactMegamenuMod.MegaMenu] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactMegamenuMod.MegaMenu](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = MegaMenuProps
 }
 

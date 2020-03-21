@@ -5,24 +5,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onAfterAdd
-  - typings.webix.webixStrings.onAfterCursorChange
-  - typings.webix.webixStrings.onAfterDelete
-  - typings.webix.webixStrings.onAfterLoad
-  - typings.webix.webixStrings.onAfterSort
-  - typings.webix.webixStrings.onBeforeAdd
-  - typings.webix.webixStrings.onBeforeCursorChange
-  - typings.webix.webixStrings.onBeforeDelete
-  - typings.webix.webixStrings.onBeforeLoad
-  - typings.webix.webixStrings.onBeforeSort
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onBindUpdate
-  - typings.webix.webixStrings.onDataRequest
-  - typings.webix.webixStrings.onDataUpdate
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onLoadError
-  - typings.webix.webixStrings.onValidationError
-  - typings.webix.webixStrings.onValidationSuccess
+  - typingsSlinky.webix.webixStrings.onAfterAdd
+  - typingsSlinky.webix.webixStrings.onAfterCursorChange
+  - typingsSlinky.webix.webixStrings.onAfterDelete
+  - typingsSlinky.webix.webixStrings.onAfterLoad
+  - typingsSlinky.webix.webixStrings.onAfterSort
+  - typingsSlinky.webix.webixStrings.onBeforeAdd
+  - typingsSlinky.webix.webixStrings.onBeforeCursorChange
+  - typingsSlinky.webix.webixStrings.onBeforeDelete
+  - typingsSlinky.webix.webixStrings.onBeforeLoad
+  - typingsSlinky.webix.webixStrings.onBeforeSort
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onBindUpdate
+  - typingsSlinky.webix.webixStrings.onDataRequest
+  - typingsSlinky.webix.webixStrings.onDataUpdate
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onLoadError
+  - typingsSlinky.webix.webixStrings.onValidationError
+  - typingsSlinky.webix.webixStrings.onValidationSuccess
 */
 trait DataCollectionEventName extends js.Object
 

@@ -1,7 +1,7 @@
 package typingsSlinky.tsutils.utilUtilMod
 
-import typingsSlinky.typescript.typescriptMod.Symbol
-import typingsSlinky.typescript.typescriptMod.SymbolFlags
+import typingsSlinky.typescript.mod.Symbol
+import typingsSlinky.typescript.mod.SymbolFlags
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

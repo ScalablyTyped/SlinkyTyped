@@ -4,16 +4,16 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.cavy.cavyMod.TestHookStore
-import typingsSlinky.cavy.cavyMod.TestReport
-import typingsSlinky.cavy.cavyMod.TestScope
-import typingsSlinky.cavy.cavyMod.TesterProps
+import typingsSlinky.cavy.mod.TestHookStore
+import typingsSlinky.cavy.mod.TestReport
+import typingsSlinky.cavy.mod.TestScope
+import typingsSlinky.cavy.mod.TesterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tester
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.cavy.cavyMod.Tester] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.cavy.mod.Tester] {
   @JSImport("cavy", "Tester")
   @js.native
   object componentImport extends js.Object
@@ -28,7 +28,7 @@ object Tester
     startDelay: Int | Double = null,
     waitTime: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.cavy.cavyMod.Tester] = {
+  ): BuildingComponent[tag.type, typingsSlinky.cavy.mod.Tester] = {
     val __obj = js.Dynamic.literal(specs = specs.asInstanceOf[js.Any], store = store.asInstanceOf[js.Any])
     if (!js.isUndefined(clearAsyncStorage)) __obj.updateDynamic("clearAsyncStorage")(clearAsyncStorage.asInstanceOf[js.Any])
     if (reporter != null) __obj.updateDynamic("reporter")(js.Any.fromFunction1(reporter))

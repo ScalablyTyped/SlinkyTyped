@@ -9,9 +9,9 @@ Typings are for version 0.1.0-preview.1
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/hash-node |
 | Keywords           | - |
-| # releases         | 9 |
-| # dependents       | 188 |
-| # downloads        | 37992 |
+| # releases         | 10 |
+| # dependents       | 370 |
+| # downloads        | 38655 |
 | # stars            | 0 |
 
 ## Links

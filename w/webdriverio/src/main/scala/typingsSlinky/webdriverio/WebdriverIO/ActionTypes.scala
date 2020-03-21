@@ -5,12 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webdriverio.webdriverioStrings.press
-  - typings.webdriverio.webdriverioStrings.longPress
-  - typings.webdriverio.webdriverioStrings.tap
-  - typings.webdriverio.webdriverioStrings.moveTo
-  - typings.webdriverio.webdriverioStrings.wait
-  - typings.webdriverio.webdriverioStrings.release
+  - typingsSlinky.webdriverio.webdriverioStrings.press
+  - typingsSlinky.webdriverio.webdriverioStrings.longPress
+  - typingsSlinky.webdriverio.webdriverioStrings.tap
+  - typingsSlinky.webdriverio.webdriverioStrings.moveTo
+  - typingsSlinky.webdriverio.webdriverioStrings.wait
+  - typingsSlinky.webdriverio.webdriverioStrings.release
 */
 trait ActionTypes extends js.Object
 

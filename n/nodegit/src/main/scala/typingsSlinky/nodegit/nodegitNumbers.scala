@@ -7,7 +7,7 @@ import typingsSlinky.nodegit.checkoutMod.Checkout.NOTIFY
 import typingsSlinky.nodegit.checkoutMod.Checkout.STRATEGY
 import typingsSlinky.nodegit.cloneMod.Clone.LOCAL
 import typingsSlinky.nodegit.configMod.Config.LEVEL
-import typingsSlinky.nodegit.diffDashBinaryMod.DiffBinary.DIFF_BINARY
+import typingsSlinky.nodegit.diffBinaryMod.DiffBinary.DIFF_BINARY
 import typingsSlinky.nodegit.diffMod.Diff.DELTA
 import typingsSlinky.nodegit.diffMod.Diff.FIND
 import typingsSlinky.nodegit.diffMod.Diff.FORMAT
@@ -24,22 +24,22 @@ import typingsSlinky.nodegit.errorMod.Error.ERROR
 import typingsSlinky.nodegit.fetchMod.Fetch.PRUNE
 import typingsSlinky.nodegit.filterMod.Filter.FLAG
 import typingsSlinky.nodegit.filterMod.Filter.MODE
-import typingsSlinky.nodegit.hashDashSigMod.Hashsig.OPTION
-import typingsSlinky.nodegit.indexUnderscoreMod.Index.ADD_OPTION
-import typingsSlinky.nodegit.indexUnderscoreMod.Index.CAP
-import typingsSlinky.nodegit.libDashGit2Mod.Libgit2.OPT
+import typingsSlinky.nodegit.hashSigMod.Hashsig.OPTION
+import typingsSlinky.nodegit.indexMod.Index.ADD_OPTION
+import typingsSlinky.nodegit.indexMod.Index.CAP
+import typingsSlinky.nodegit.libGit2Mod.Libgit2.OPT
 import typingsSlinky.nodegit.mergeMod.Merge.ANALYSIS
 import typingsSlinky.nodegit.mergeMod.Merge.FILE_FAVOR
 import typingsSlinky.nodegit.mergeMod.Merge.FILE_FLAGS
 import typingsSlinky.nodegit.mergeMod.Merge.PREFERENCE
 import typingsSlinky.nodegit.objectMod.Object.TYPE
 import typingsSlinky.nodegit.odbMod.Odb.STREAM
-import typingsSlinky.nodegit.packDashBuilderMod.Packbuilder.STAGE
-import typingsSlinky.nodegit.rebaseDashOperationMod.RebaseOperation.REBASE_OPERATION
+import typingsSlinky.nodegit.packBuilderMod.Packbuilder.STAGE
+import typingsSlinky.nodegit.rebaseOperationMod.RebaseOperation.REBASE_OPERATION
 import typingsSlinky.nodegit.referenceMod.Reference.NORMALIZE
 import typingsSlinky.nodegit.remoteMod.Remote.AUTOTAG_OPTION
 import typingsSlinky.nodegit.remoteMod.Remote.COMPLETION_TYPE
-import typingsSlinky.nodegit.revDashWalkMod.Revwalk.SORT
+import typingsSlinky.nodegit.revWalkMod.Revwalk.SORT
 import typingsSlinky.nodegit.stashMod.Stash.APPLY_FLAGS
 import typingsSlinky.nodegit.stashMod.Stash.APPLY_PROGRESS
 import typingsSlinky.nodegit.stashMod.Stash.FLAGS
@@ -48,7 +48,7 @@ import typingsSlinky.nodegit.statusMod.Status.STATUS
 import typingsSlinky.nodegit.submoduleMod.Submodule.IGNORE
 import typingsSlinky.nodegit.submoduleMod.Submodule.RECURSE
 import typingsSlinky.nodegit.submoduleMod.Submodule.UPDATE
-import typingsSlinky.nodegit.treeDashEntryMod.TreeEntry.FILEMODE
+import typingsSlinky.nodegit.treeEntryMod.TreeEntry.FILEMODE
 import typingsSlinky.nodegit.treeMod.Tree.WALK_MODE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -154,7 +154,7 @@ object nodegitNumbers {
        with FILE_FLAGS
        with FIND
        with FLAG
-       with typingsSlinky.nodegit.pathDashSpecMod.Pathspec.FLAG
+       with typingsSlinky.nodegit.pathSpecMod.Pathspec.FLAG
        with typingsSlinky.nodegit.blameMod.Blame.FLAG
        with FLAGS
        with FORMAT_EMAIL_FLAGS
@@ -202,7 +202,7 @@ object nodegitNumbers {
        with FILE_FLAGS
        with FIND
        with FLAG
-       with typingsSlinky.nodegit.pathDashSpecMod.Pathspec.FLAG
+       with typingsSlinky.nodegit.pathSpecMod.Pathspec.FLAG
        with typingsSlinky.nodegit.diffMod.Diff.FLAG
        with typingsSlinky.nodegit.blameMod.Blame.FLAG
        with FLAGS
@@ -213,7 +213,7 @@ object nodegitNumbers {
        with LEVEL
        with LOCAL
        with MODE
-       with typingsSlinky.nodegit.revDashParseMod.Revparse.MODE
+       with typingsSlinky.nodegit.revParseMod.Revparse.MODE
        with NORMALIZE
        with NOTIFY
        with OPT
@@ -303,7 +303,7 @@ object nodegitNumbers {
     extends ERROR
        with FILE_FLAGS
        with FIND
-       with typingsSlinky.nodegit.pathDashSpecMod.Pathspec.FLAG
+       with typingsSlinky.nodegit.pathSpecMod.Pathspec.FLAG
        with typingsSlinky.nodegit.blameMod.Blame.FLAG
        with IDXENTRY_EXTENDED_FLAG
        with NOTIFY
@@ -354,7 +354,7 @@ object nodegitNumbers {
        with FILE_FAVOR
        with FILE_FLAGS
        with FIND
-       with typingsSlinky.nodegit.pathDashSpecMod.Pathspec.FLAG
+       with typingsSlinky.nodegit.pathSpecMod.Pathspec.FLAG
        with typingsSlinky.nodegit.diffMod.Diff.FLAG
        with typingsSlinky.nodegit.blameMod.Blame.FLAG
        with FLAGS
@@ -363,7 +363,7 @@ object nodegitNumbers {
        with IGNORE
        with LEVEL
        with LOCAL
-       with typingsSlinky.nodegit.revDashParseMod.Revparse.MODE
+       with typingsSlinky.nodegit.revParseMod.Revparse.MODE
        with NORMALIZE
        with NOTIFY
        with OPT
@@ -484,7 +484,7 @@ object nodegitNumbers {
   sealed trait `32`
     extends FILE_FLAGS
        with FIND
-       with typingsSlinky.nodegit.pathDashSpecMod.Pathspec.FLAG
+       with typingsSlinky.nodegit.pathSpecMod.Pathspec.FLAG
        with IDXENTRY_EXTENDED_FLAG
        with LINE
        with typingsSlinky.nodegit.statusMod.Status.OPT
@@ -523,7 +523,7 @@ object nodegitNumbers {
        with FEATURE
        with FILE_FLAGS
        with FIND
-       with typingsSlinky.nodegit.pathDashSpecMod.Pathspec.FLAG
+       with typingsSlinky.nodegit.pathSpecMod.Pathspec.FLAG
        with typingsSlinky.nodegit.diffMod.Diff.FLAG
        with typingsSlinky.nodegit.blameMod.Blame.FLAG
        with FLAGS
@@ -531,7 +531,7 @@ object nodegitNumbers {
        with IDXENTRY_EXTENDED_FLAG
        with IGNORE
        with LEVEL
-       with typingsSlinky.nodegit.revDashParseMod.Revparse.MODE
+       with typingsSlinky.nodegit.revParseMod.Revparse.MODE
        with NORMALIZE
        with NOTIFY
        with OPT
@@ -671,7 +671,7 @@ object nodegitNumbers {
        with ERROR
        with FILE_FLAGS
        with FIND
-       with typingsSlinky.nodegit.pathDashSpecMod.Pathspec.FLAG
+       with typingsSlinky.nodegit.pathSpecMod.Pathspec.FLAG
        with typingsSlinky.nodegit.diffMod.Diff.FLAG
        with typingsSlinky.nodegit.blameMod.Blame.FLAG
        with IDXENTRY_EXTENDED_FLAG

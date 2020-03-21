@@ -10,9 +10,9 @@ JupyterLab - Launcher Page Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/launcher-extension |
 | Keywords           | - |
-| # releases         | 62 |
+| # releases         | 63 |
 | # dependents       | 1 |
-| # downloads        | 754480 |
+| # downloads        | 759708 |
 | # stars            | 0 |
 
 ## Links

@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ocsp
 
-import typingsSlinky.jsrsasign.Anon_AlgKeyhash
+import typingsSlinky.jsrsasign.AnonKeyhash
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -32,7 +32,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("jsrsasign.KJUR.asn1.ocsp.CertID")
 @js.native
 class CertID () extends ASN1Object {
-  def this(params: Anon_AlgKeyhash) = this()
+  def this(params: AnonKeyhash) = this()
   def this(params: CertificateRequest) = this()
   /**
     * set CertID ASN.1 object by PEM certificates.

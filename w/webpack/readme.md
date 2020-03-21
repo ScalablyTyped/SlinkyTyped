@@ -11,8 +11,8 @@ Packs CommonJs/AMD modules for the browser. Allows to split your codebase into m
 | Full name          | webpack |
 | Keywords           | - |
 | # releases         | 151 |
-| # dependents       | 14073 |
-| # downloads        | 393527342 |
+| # dependents       | 14189 |
+| # downloads        | 395773128 |
 | # stars            | 550 |
 
 ## Links

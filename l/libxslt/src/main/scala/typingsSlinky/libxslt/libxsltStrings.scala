@@ -1,6 +1,6 @@
 package typingsSlinky.libxslt
 
-import typingsSlinky.libxslt.internalDashTypesMod.OutputFormat
+import typingsSlinky.libxslt.internalTypesMod.OutputFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

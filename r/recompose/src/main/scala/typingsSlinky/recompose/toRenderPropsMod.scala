@@ -1,7 +1,7 @@
 package typingsSlinky.recompose
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.recompose.recomposeMod.InferableComponentEnhancerWithProps
+import typingsSlinky.recompose.mod.InferableComponentEnhancerWithProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 @JSImport("recompose/toRenderProps", JSImport.Namespace)
 @js.native
 object toRenderPropsMod extends js.Object {
-  def default[TInner, TOutter](hoc: InferableComponentEnhancerWithProps[TInner with TOutter, TOutter]): ReactComponentClass[TOutter with Anon_Children[TInner]] = js.native
+  def default[TInner, TOutter](hoc: InferableComponentEnhancerWithProps[TInner with TOutter, TOutter]): ReactComponentClass[TOutter with AnonChildren[TInner]] = js.native
 }
 

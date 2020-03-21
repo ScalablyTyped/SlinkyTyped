@@ -1,64 +1,63 @@
 package typingsSlinky.graphql
 
-import typingsSlinky.graphql.languageAstMod.ASTKindToNode
-import typingsSlinky.graphql.languageAstMod.ASTNode
-import typingsSlinky.graphql.languageAstMod.ArgumentNode
-import typingsSlinky.graphql.languageAstMod.BooleanValueNode
-import typingsSlinky.graphql.languageAstMod.DirectiveDefinitionNode
-import typingsSlinky.graphql.languageAstMod.DirectiveNode
-import typingsSlinky.graphql.languageAstMod.DocumentNode
-import typingsSlinky.graphql.languageAstMod.EnumTypeDefinitionNode
-import typingsSlinky.graphql.languageAstMod.EnumTypeExtensionNode
-import typingsSlinky.graphql.languageAstMod.EnumValueDefinitionNode
-import typingsSlinky.graphql.languageAstMod.EnumValueNode
-import typingsSlinky.graphql.languageAstMod.FieldDefinitionNode
-import typingsSlinky.graphql.languageAstMod.FieldNode
-import typingsSlinky.graphql.languageAstMod.FloatValueNode
-import typingsSlinky.graphql.languageAstMod.FragmentDefinitionNode
-import typingsSlinky.graphql.languageAstMod.FragmentSpreadNode
-import typingsSlinky.graphql.languageAstMod.InlineFragmentNode
-import typingsSlinky.graphql.languageAstMod.InputObjectTypeDefinitionNode
-import typingsSlinky.graphql.languageAstMod.InputObjectTypeExtensionNode
-import typingsSlinky.graphql.languageAstMod.InputValueDefinitionNode
-import typingsSlinky.graphql.languageAstMod.IntValueNode
-import typingsSlinky.graphql.languageAstMod.InterfaceTypeDefinitionNode
-import typingsSlinky.graphql.languageAstMod.InterfaceTypeExtensionNode
-import typingsSlinky.graphql.languageAstMod.ListTypeNode
-import typingsSlinky.graphql.languageAstMod.ListValueNode
-import typingsSlinky.graphql.languageAstMod.NameNode
-import typingsSlinky.graphql.languageAstMod.NamedTypeNode
-import typingsSlinky.graphql.languageAstMod.NonNullTypeNode
-import typingsSlinky.graphql.languageAstMod.NullValueNode
-import typingsSlinky.graphql.languageAstMod.ObjectFieldNode
-import typingsSlinky.graphql.languageAstMod.ObjectTypeDefinitionNode
-import typingsSlinky.graphql.languageAstMod.ObjectTypeExtensionNode
-import typingsSlinky.graphql.languageAstMod.ObjectValueNode
-import typingsSlinky.graphql.languageAstMod.OperationDefinitionNode
-import typingsSlinky.graphql.languageAstMod.OperationTypeDefinitionNode
-import typingsSlinky.graphql.languageAstMod.ScalarTypeDefinitionNode
-import typingsSlinky.graphql.languageAstMod.ScalarTypeExtensionNode
-import typingsSlinky.graphql.languageAstMod.SchemaDefinitionNode
-import typingsSlinky.graphql.languageAstMod.SchemaExtensionNode
-import typingsSlinky.graphql.languageAstMod.SelectionSetNode
-import typingsSlinky.graphql.languageAstMod.StringValueNode
-import typingsSlinky.graphql.languageAstMod.TypeNode
-import typingsSlinky.graphql.languageAstMod.UnionTypeDefinitionNode
-import typingsSlinky.graphql.languageAstMod.UnionTypeExtensionNode
-import typingsSlinky.graphql.languageAstMod.ValueNode
-import typingsSlinky.graphql.languageAstMod.VariableDefinitionNode
-import typingsSlinky.graphql.languageAstMod.VariableNode
-import typingsSlinky.graphql.languageDirectiveLocationMod._DirectiveLocation
-import typingsSlinky.graphql.languageKindsMod._Kind
-import typingsSlinky.graphql.languageLexerMod.Lexer
-import typingsSlinky.graphql.languageLocationMod.SourceLocation
-import typingsSlinky.graphql.languageParserMod.ParseOptions
-import typingsSlinky.graphql.languageSourceMod.Location
-import typingsSlinky.graphql.languageTokenKindMod._TokenKind
-import typingsSlinky.graphql.languageVisitorMod.VisitFn
-import typingsSlinky.graphql.languageVisitorMod.Visitor
-import typingsSlinky.graphql.languageVisitorMod.VisitorKeyMap
-import typingsSlinky.graphql.tsutilsMaybeMod.Maybe
-import typingsSlinky.graphql.utilitiesTypeInfoMod.TypeInfo
+import typingsSlinky.graphql.astMod.ASTKindToNode
+import typingsSlinky.graphql.astMod.ASTNode
+import typingsSlinky.graphql.astMod.ArgumentNode
+import typingsSlinky.graphql.astMod.BooleanValueNode
+import typingsSlinky.graphql.astMod.DirectiveDefinitionNode
+import typingsSlinky.graphql.astMod.DirectiveNode
+import typingsSlinky.graphql.astMod.DocumentNode
+import typingsSlinky.graphql.astMod.EnumTypeDefinitionNode
+import typingsSlinky.graphql.astMod.EnumTypeExtensionNode
+import typingsSlinky.graphql.astMod.EnumValueDefinitionNode
+import typingsSlinky.graphql.astMod.EnumValueNode
+import typingsSlinky.graphql.astMod.FieldDefinitionNode
+import typingsSlinky.graphql.astMod.FieldNode
+import typingsSlinky.graphql.astMod.FloatValueNode
+import typingsSlinky.graphql.astMod.FragmentDefinitionNode
+import typingsSlinky.graphql.astMod.FragmentSpreadNode
+import typingsSlinky.graphql.astMod.InlineFragmentNode
+import typingsSlinky.graphql.astMod.InputObjectTypeDefinitionNode
+import typingsSlinky.graphql.astMod.InputObjectTypeExtensionNode
+import typingsSlinky.graphql.astMod.InputValueDefinitionNode
+import typingsSlinky.graphql.astMod.IntValueNode
+import typingsSlinky.graphql.astMod.InterfaceTypeDefinitionNode
+import typingsSlinky.graphql.astMod.InterfaceTypeExtensionNode
+import typingsSlinky.graphql.astMod.ListTypeNode
+import typingsSlinky.graphql.astMod.ListValueNode
+import typingsSlinky.graphql.astMod.NameNode
+import typingsSlinky.graphql.astMod.NamedTypeNode
+import typingsSlinky.graphql.astMod.NonNullTypeNode
+import typingsSlinky.graphql.astMod.NullValueNode
+import typingsSlinky.graphql.astMod.ObjectFieldNode
+import typingsSlinky.graphql.astMod.ObjectTypeDefinitionNode
+import typingsSlinky.graphql.astMod.ObjectTypeExtensionNode
+import typingsSlinky.graphql.astMod.ObjectValueNode
+import typingsSlinky.graphql.astMod.OperationDefinitionNode
+import typingsSlinky.graphql.astMod.OperationTypeDefinitionNode
+import typingsSlinky.graphql.astMod.ScalarTypeDefinitionNode
+import typingsSlinky.graphql.astMod.ScalarTypeExtensionNode
+import typingsSlinky.graphql.astMod.SchemaDefinitionNode
+import typingsSlinky.graphql.astMod.SchemaExtensionNode
+import typingsSlinky.graphql.astMod.SelectionSetNode
+import typingsSlinky.graphql.astMod.StringValueNode
+import typingsSlinky.graphql.astMod.TypeNode
+import typingsSlinky.graphql.astMod.UnionTypeDefinitionNode
+import typingsSlinky.graphql.astMod.UnionTypeExtensionNode
+import typingsSlinky.graphql.astMod.ValueNode
+import typingsSlinky.graphql.astMod.VariableDefinitionNode
+import typingsSlinky.graphql.astMod.VariableNode
+import typingsSlinky.graphql.directiveLocationMod._DirectiveLocation
+import typingsSlinky.graphql.kindsMod._Kind
+import typingsSlinky.graphql.lexerMod.Lexer
+import typingsSlinky.graphql.locationMod.SourceLocation
+import typingsSlinky.graphql.maybeMod.Maybe
+import typingsSlinky.graphql.parserMod.ParseOptions
+import typingsSlinky.graphql.sourceMod.Location
+import typingsSlinky.graphql.tokenKindMod._TokenKind
+import typingsSlinky.graphql.typeInfoMod.TypeInfo
+import typingsSlinky.graphql.visitorMod.VisitFn
+import typingsSlinky.graphql.visitorMod.Visitor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -68,7 +67,7 @@ import scala.scalajs.js.annotation._
 object languageMod extends js.Object {
   @js.native
   class Source protected ()
-    extends typingsSlinky.graphql.languageSourceMod.Source {
+    extends typingsSlinky.graphql.sourceMod.Source {
     def this(body: String) = this()
     def this(body: String, name: String) = this()
     def this(body: String, name: String, locationOffset: Location) = this()
@@ -78,8 +77,8 @@ object languageMod extends js.Object {
   val DirectiveLocation: _DirectiveLocation = js.native
   val Kind: _Kind = js.native
   val TokenKind: _TokenKind = js.native
-  def createLexer[TOptions](source: typingsSlinky.graphql.languageSourceMod.Source, options: TOptions): Lexer[TOptions] = js.native
-  def getLocation(source: typingsSlinky.graphql.languageSourceMod.Source, position: Double): SourceLocation = js.native
+  def createLexer[TOptions](source: typingsSlinky.graphql.sourceMod.Source, options: TOptions): Lexer[TOptions] = js.native
+  def getLocation(source: typingsSlinky.graphql.sourceMod.Source, position: Double): SourceLocation = js.native
   def getVisitFn(
     visitor: Visitor[
       _, 
@@ -99,55 +98,55 @@ object languageMod extends js.Object {
   def isValueNode(node: ASTNode): /* is graphql.graphql/language/ast.ValueNode */ Boolean = js.native
   def parse(source: String): DocumentNode = js.native
   def parse(source: String, options: ParseOptions): DocumentNode = js.native
-  def parse(source: typingsSlinky.graphql.languageSourceMod.Source): DocumentNode = js.native
-  def parse(source: typingsSlinky.graphql.languageSourceMod.Source, options: ParseOptions): DocumentNode = js.native
+  def parse(source: typingsSlinky.graphql.sourceMod.Source): DocumentNode = js.native
+  def parse(source: typingsSlinky.graphql.sourceMod.Source, options: ParseOptions): DocumentNode = js.native
   def parseType(source: String): TypeNode = js.native
   def parseType(source: String, options: ParseOptions): TypeNode = js.native
-  def parseType(source: typingsSlinky.graphql.languageSourceMod.Source): TypeNode = js.native
-  def parseType(source: typingsSlinky.graphql.languageSourceMod.Source, options: ParseOptions): TypeNode = js.native
+  def parseType(source: typingsSlinky.graphql.sourceMod.Source): TypeNode = js.native
+  def parseType(source: typingsSlinky.graphql.sourceMod.Source, options: ParseOptions): TypeNode = js.native
   def parseValue(source: String): ValueNode = js.native
   def parseValue(source: String, options: ParseOptions): ValueNode = js.native
-  def parseValue(source: typingsSlinky.graphql.languageSourceMod.Source): ValueNode = js.native
-  def parseValue(source: typingsSlinky.graphql.languageSourceMod.Source, options: ParseOptions): ValueNode = js.native
+  def parseValue(source: typingsSlinky.graphql.sourceMod.Source): ValueNode = js.native
+  def parseValue(source: typingsSlinky.graphql.sourceMod.Source, options: ParseOptions): ValueNode = js.native
   def print(ast: ASTNode): String = js.native
-  def printLocation(location: typingsSlinky.graphql.languageAstMod.Location): String = js.native
-  def printSourceLocation(source: typingsSlinky.graphql.languageSourceMod.Source, sourceLocation: SourceLocation): String = js.native
+  def printLocation(location: typingsSlinky.graphql.astMod.Location): String = js.native
+  def printSourceLocation(source: typingsSlinky.graphql.sourceMod.Source, sourceLocation: SourceLocation): String = js.native
   def visit(
     root: ASTNode,
     visitor: Visitor[
       ASTKindToNode, 
-      NullValueNode | FragmentDefinitionNode | UnionTypeExtensionNode | ArgumentNode | InlineFragmentNode | ListTypeNode | FieldDefinitionNode | OperationDefinitionNode | OperationTypeDefinitionNode | UnionTypeDefinitionNode | InputObjectTypeDefinitionNode | ListValueNode | SelectionSetNode | InterfaceTypeDefinitionNode | VariableNode | EnumValueDefinitionNode | EnumValueNode | EnumTypeExtensionNode | ObjectTypeDefinitionNode | SchemaDefinitionNode | SchemaExtensionNode | DirectiveNode | StringValueNode | NameNode | FloatValueNode | IntValueNode | ObjectFieldNode | NonNullTypeNode | DirectiveDefinitionNode | ObjectTypeExtensionNode | BooleanValueNode | ObjectValueNode | ScalarTypeExtensionNode | DocumentNode | InterfaceTypeExtensionNode | FieldNode | ScalarTypeDefinitionNode | VariableDefinitionNode | FragmentSpreadNode | NamedTypeNode | InputValueDefinitionNode | EnumTypeDefinitionNode | InputObjectTypeExtensionNode
+      EnumValueDefinitionNode | ObjectValueNode | FieldDefinitionNode | SchemaDefinitionNode | InputObjectTypeDefinitionNode | DocumentNode | DirectiveDefinitionNode | InputValueDefinitionNode | ListValueNode | ScalarTypeDefinitionNode | IntValueNode | OperationDefinitionNode | ArgumentNode | FragmentDefinitionNode | OperationTypeDefinitionNode | FieldNode | StringValueNode | NameNode | ObjectFieldNode | EnumValueNode | SchemaExtensionNode | UnionTypeExtensionNode | VariableDefinitionNode | VariableNode | ObjectTypeDefinitionNode | EnumTypeExtensionNode | InterfaceTypeDefinitionNode | FloatValueNode | NonNullTypeNode | DirectiveNode | SelectionSetNode | InputObjectTypeExtensionNode | ScalarTypeExtensionNode | UnionTypeDefinitionNode | NullValueNode | InterfaceTypeExtensionNode | InlineFragmentNode | EnumTypeDefinitionNode | NamedTypeNode | BooleanValueNode | ListTypeNode | ObjectTypeExtensionNode | FragmentSpreadNode
     ]
   ): js.Any = js.native
   def visit(
     root: ASTNode,
     visitor: Visitor[
       ASTKindToNode, 
-      NullValueNode | FragmentDefinitionNode | UnionTypeExtensionNode | ArgumentNode | InlineFragmentNode | ListTypeNode | FieldDefinitionNode | OperationDefinitionNode | OperationTypeDefinitionNode | UnionTypeDefinitionNode | InputObjectTypeDefinitionNode | ListValueNode | SelectionSetNode | InterfaceTypeDefinitionNode | VariableNode | EnumValueDefinitionNode | EnumValueNode | EnumTypeExtensionNode | ObjectTypeDefinitionNode | SchemaDefinitionNode | SchemaExtensionNode | DirectiveNode | StringValueNode | NameNode | FloatValueNode | IntValueNode | ObjectFieldNode | NonNullTypeNode | DirectiveDefinitionNode | ObjectTypeExtensionNode | BooleanValueNode | ObjectValueNode | ScalarTypeExtensionNode | DocumentNode | InterfaceTypeExtensionNode | FieldNode | ScalarTypeDefinitionNode | VariableDefinitionNode | FragmentSpreadNode | NamedTypeNode | InputValueDefinitionNode | EnumTypeDefinitionNode | InputObjectTypeExtensionNode
+      EnumValueDefinitionNode | ObjectValueNode | FieldDefinitionNode | SchemaDefinitionNode | InputObjectTypeDefinitionNode | DocumentNode | DirectiveDefinitionNode | InputValueDefinitionNode | ListValueNode | ScalarTypeDefinitionNode | IntValueNode | OperationDefinitionNode | ArgumentNode | FragmentDefinitionNode | OperationTypeDefinitionNode | FieldNode | StringValueNode | NameNode | ObjectFieldNode | EnumValueNode | SchemaExtensionNode | UnionTypeExtensionNode | VariableDefinitionNode | VariableNode | ObjectTypeDefinitionNode | EnumTypeExtensionNode | InterfaceTypeDefinitionNode | FloatValueNode | NonNullTypeNode | DirectiveNode | SelectionSetNode | InputObjectTypeExtensionNode | ScalarTypeExtensionNode | UnionTypeDefinitionNode | NullValueNode | InterfaceTypeExtensionNode | InlineFragmentNode | EnumTypeDefinitionNode | NamedTypeNode | BooleanValueNode | ListTypeNode | ObjectTypeExtensionNode | FragmentSpreadNode
     ],
      // default: QueryDocumentKeys
-  visitorKeys: VisitorKeyMap[ASTKindToNode]
+  visitorKeys: VisitorKeyMapASTKindToNod
   ): js.Any = js.native
   def visitInParallel(
     visitors: js.Array[
       Visitor[
         ASTKindToNode, 
-        NullValueNode | FragmentDefinitionNode | UnionTypeExtensionNode | ArgumentNode | InlineFragmentNode | ListTypeNode | FieldDefinitionNode | OperationDefinitionNode | OperationTypeDefinitionNode | UnionTypeDefinitionNode | InputObjectTypeDefinitionNode | ListValueNode | SelectionSetNode | InterfaceTypeDefinitionNode | VariableNode | EnumValueDefinitionNode | EnumValueNode | EnumTypeExtensionNode | ObjectTypeDefinitionNode | SchemaDefinitionNode | SchemaExtensionNode | DirectiveNode | StringValueNode | NameNode | FloatValueNode | IntValueNode | ObjectFieldNode | NonNullTypeNode | DirectiveDefinitionNode | ObjectTypeExtensionNode | BooleanValueNode | ObjectValueNode | ScalarTypeExtensionNode | DocumentNode | InterfaceTypeExtensionNode | FieldNode | ScalarTypeDefinitionNode | VariableDefinitionNode | FragmentSpreadNode | NamedTypeNode | InputValueDefinitionNode | EnumTypeDefinitionNode | InputObjectTypeExtensionNode
+        EnumValueDefinitionNode | ObjectValueNode | FieldDefinitionNode | SchemaDefinitionNode | InputObjectTypeDefinitionNode | DocumentNode | DirectiveDefinitionNode | InputValueDefinitionNode | ListValueNode | ScalarTypeDefinitionNode | IntValueNode | OperationDefinitionNode | ArgumentNode | FragmentDefinitionNode | OperationTypeDefinitionNode | FieldNode | StringValueNode | NameNode | ObjectFieldNode | EnumValueNode | SchemaExtensionNode | UnionTypeExtensionNode | VariableDefinitionNode | VariableNode | ObjectTypeDefinitionNode | EnumTypeExtensionNode | InterfaceTypeDefinitionNode | FloatValueNode | NonNullTypeNode | DirectiveNode | SelectionSetNode | InputObjectTypeExtensionNode | ScalarTypeExtensionNode | UnionTypeDefinitionNode | NullValueNode | InterfaceTypeExtensionNode | InlineFragmentNode | EnumTypeDefinitionNode | NamedTypeNode | BooleanValueNode | ListTypeNode | ObjectTypeExtensionNode | FragmentSpreadNode
       ]
     ]
   ): Visitor[
     ASTKindToNode, 
-    NullValueNode | FragmentDefinitionNode | UnionTypeExtensionNode | ArgumentNode | InlineFragmentNode | ListTypeNode | FieldDefinitionNode | OperationDefinitionNode | OperationTypeDefinitionNode | UnionTypeDefinitionNode | InputObjectTypeDefinitionNode | ListValueNode | SelectionSetNode | InterfaceTypeDefinitionNode | VariableNode | EnumValueDefinitionNode | EnumValueNode | EnumTypeExtensionNode | ObjectTypeDefinitionNode | SchemaDefinitionNode | SchemaExtensionNode | DirectiveNode | StringValueNode | NameNode | FloatValueNode | IntValueNode | ObjectFieldNode | NonNullTypeNode | DirectiveDefinitionNode | ObjectTypeExtensionNode | BooleanValueNode | ObjectValueNode | ScalarTypeExtensionNode | DocumentNode | InterfaceTypeExtensionNode | FieldNode | ScalarTypeDefinitionNode | VariableDefinitionNode | FragmentSpreadNode | NamedTypeNode | InputValueDefinitionNode | EnumTypeDefinitionNode | InputObjectTypeExtensionNode
+    EnumValueDefinitionNode | ObjectValueNode | FieldDefinitionNode | SchemaDefinitionNode | InputObjectTypeDefinitionNode | DocumentNode | DirectiveDefinitionNode | InputValueDefinitionNode | ListValueNode | ScalarTypeDefinitionNode | IntValueNode | OperationDefinitionNode | ArgumentNode | FragmentDefinitionNode | OperationTypeDefinitionNode | FieldNode | StringValueNode | NameNode | ObjectFieldNode | EnumValueNode | SchemaExtensionNode | UnionTypeExtensionNode | VariableDefinitionNode | VariableNode | ObjectTypeDefinitionNode | EnumTypeExtensionNode | InterfaceTypeDefinitionNode | FloatValueNode | NonNullTypeNode | DirectiveNode | SelectionSetNode | InputObjectTypeExtensionNode | ScalarTypeExtensionNode | UnionTypeDefinitionNode | NullValueNode | InterfaceTypeExtensionNode | InlineFragmentNode | EnumTypeDefinitionNode | NamedTypeNode | BooleanValueNode | ListTypeNode | ObjectTypeExtensionNode | FragmentSpreadNode
   ] = js.native
   def visitWithTypeInfo(
     typeInfo: TypeInfo,
     visitor: Visitor[
       ASTKindToNode, 
-      NullValueNode | FragmentDefinitionNode | UnionTypeExtensionNode | ArgumentNode | InlineFragmentNode | ListTypeNode | FieldDefinitionNode | OperationDefinitionNode | OperationTypeDefinitionNode | UnionTypeDefinitionNode | InputObjectTypeDefinitionNode | ListValueNode | SelectionSetNode | InterfaceTypeDefinitionNode | VariableNode | EnumValueDefinitionNode | EnumValueNode | EnumTypeExtensionNode | ObjectTypeDefinitionNode | SchemaDefinitionNode | SchemaExtensionNode | DirectiveNode | StringValueNode | NameNode | FloatValueNode | IntValueNode | ObjectFieldNode | NonNullTypeNode | DirectiveDefinitionNode | ObjectTypeExtensionNode | BooleanValueNode | ObjectValueNode | ScalarTypeExtensionNode | DocumentNode | InterfaceTypeExtensionNode | FieldNode | ScalarTypeDefinitionNode | VariableDefinitionNode | FragmentSpreadNode | NamedTypeNode | InputValueDefinitionNode | EnumTypeDefinitionNode | InputObjectTypeExtensionNode
+      EnumValueDefinitionNode | ObjectValueNode | FieldDefinitionNode | SchemaDefinitionNode | InputObjectTypeDefinitionNode | DocumentNode | DirectiveDefinitionNode | InputValueDefinitionNode | ListValueNode | ScalarTypeDefinitionNode | IntValueNode | OperationDefinitionNode | ArgumentNode | FragmentDefinitionNode | OperationTypeDefinitionNode | FieldNode | StringValueNode | NameNode | ObjectFieldNode | EnumValueNode | SchemaExtensionNode | UnionTypeExtensionNode | VariableDefinitionNode | VariableNode | ObjectTypeDefinitionNode | EnumTypeExtensionNode | InterfaceTypeDefinitionNode | FloatValueNode | NonNullTypeNode | DirectiveNode | SelectionSetNode | InputObjectTypeExtensionNode | ScalarTypeExtensionNode | UnionTypeDefinitionNode | NullValueNode | InterfaceTypeExtensionNode | InlineFragmentNode | EnumTypeDefinitionNode | NamedTypeNode | BooleanValueNode | ListTypeNode | ObjectTypeExtensionNode | FragmentSpreadNode
     ]
   ): Visitor[
     ASTKindToNode, 
-    NullValueNode | FragmentDefinitionNode | UnionTypeExtensionNode | ArgumentNode | InlineFragmentNode | ListTypeNode | FieldDefinitionNode | OperationDefinitionNode | OperationTypeDefinitionNode | UnionTypeDefinitionNode | InputObjectTypeDefinitionNode | ListValueNode | SelectionSetNode | InterfaceTypeDefinitionNode | VariableNode | EnumValueDefinitionNode | EnumValueNode | EnumTypeExtensionNode | ObjectTypeDefinitionNode | SchemaDefinitionNode | SchemaExtensionNode | DirectiveNode | StringValueNode | NameNode | FloatValueNode | IntValueNode | ObjectFieldNode | NonNullTypeNode | DirectiveDefinitionNode | ObjectTypeExtensionNode | BooleanValueNode | ObjectValueNode | ScalarTypeExtensionNode | DocumentNode | InterfaceTypeExtensionNode | FieldNode | ScalarTypeDefinitionNode | VariableDefinitionNode | FragmentSpreadNode | NamedTypeNode | InputValueDefinitionNode | EnumTypeDefinitionNode | InputObjectTypeExtensionNode
+    EnumValueDefinitionNode | ObjectValueNode | FieldDefinitionNode | SchemaDefinitionNode | InputObjectTypeDefinitionNode | DocumentNode | DirectiveDefinitionNode | InputValueDefinitionNode | ListValueNode | ScalarTypeDefinitionNode | IntValueNode | OperationDefinitionNode | ArgumentNode | FragmentDefinitionNode | OperationTypeDefinitionNode | FieldNode | StringValueNode | NameNode | ObjectFieldNode | EnumValueNode | SchemaExtensionNode | UnionTypeExtensionNode | VariableDefinitionNode | VariableNode | ObjectTypeDefinitionNode | EnumTypeExtensionNode | InterfaceTypeDefinitionNode | FloatValueNode | NonNullTypeNode | DirectiveNode | SelectionSetNode | InputObjectTypeExtensionNode | ScalarTypeExtensionNode | UnionTypeDefinitionNode | NullValueNode | InterfaceTypeExtensionNode | InlineFragmentNode | EnumTypeDefinitionNode | NamedTypeNode | BooleanValueNode | ListTypeNode | ObjectTypeExtensionNode | FragmentSpreadNode
   ] = js.native
 }
 

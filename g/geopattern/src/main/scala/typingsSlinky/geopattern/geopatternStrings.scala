@@ -1,6 +1,6 @@
 package typingsSlinky.geopattern
 
-import typingsSlinky.geopattern.geopatternMod.GeneratorType
+import typingsSlinky.geopattern.mod.GeneratorType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

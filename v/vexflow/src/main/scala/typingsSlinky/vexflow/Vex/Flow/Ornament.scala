@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.Anon_Leftshift
+import typingsSlinky.vexflow.AnonLeftshift
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,6 +20,6 @@ class Ornament protected () extends Modifier {
 object Ornament extends js.Object {
   val CATEGORY: String = js.native
   var DEBUG: Boolean = js.native
-  def format(ornaments: js.Array[Ornament], state: Anon_Leftshift): Boolean = js.native
+  def format(ornaments: js.Array[Ornament], state: AnonLeftshift): Boolean = js.native
 }
 

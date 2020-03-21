@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   * @see {@link Xrm.Attributes.OptionSetAttributeFormat}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.language
-  - typings.xrm.xrmStrings.timezone
+  - typingsSlinky.xrm.xrmStrings.language
+  - typingsSlinky.xrm.xrmStrings.timezone
 */
 trait OptionSetAttributeFormat extends js.Object
 

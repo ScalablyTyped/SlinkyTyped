@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Links records for 'same' item
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait Linkage extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Linkage extends DomainResource {
   /**
     * Contains extended information for property 'active'.
     */

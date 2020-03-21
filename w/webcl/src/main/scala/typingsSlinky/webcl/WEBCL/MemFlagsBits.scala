@@ -9,9 +9,9 @@ import scala.scalajs.js.annotation._
 
 /* cl_mem_flags - bitfield */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1`
-  - typings.webcl.webclNumbers.`0x2`
-  - typings.webcl.webclNumbers.`0x4`
+  - typingsSlinky.webcl.webclNumbers.`0x1`
+  - typingsSlinky.webcl.webclNumbers.`0x2`
+  - typingsSlinky.webcl.webclNumbers.`0x4`
 */
 trait MemFlagsBits extends js.Object
 

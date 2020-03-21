@@ -1,6 +1,6 @@
 package typingsSlinky.heremaps.H.mapevents
 
-import typingsSlinky.heremaps.H.Map
+import typingsSlinky.heremaps.H.Map_
 import typingsSlinky.heremaps.H.map.Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -29,7 +29,7 @@ class WheelEvent protected ()
     * @param target {(H.Map | H.map.Object)} - The event's target element
     * @param originalEvent {Event} - target of the event
     */
-  def this(deltaY: Double, viewportX: Double, viewportY: Double, target: Map, originalEvent: Event) = this()
+  def this(deltaY: Double, viewportX: Double, viewportY: Double, target: Map_, originalEvent: Event) = this()
   def this(deltaY: Double, viewportX: Double, viewportY: Double, target: Object, originalEvent: Event) = this()
   var delta: Double = js.native
   var originalEvent: Event = js.native

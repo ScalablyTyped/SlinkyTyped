@@ -1,8 +1,8 @@
 package typingsSlinky.jimp
 
-import typingsSlinky.jimp.jimpMod.ChangeName
-import typingsSlinky.jimp.jimpMod.ColorActionName
-import typingsSlinky.jimp.jimpMod.ListenableName
+import typingsSlinky.jimp.mod.ChangeName
+import typingsSlinky.jimp.mod.ColorActionName
+import typingsSlinky.jimp.mod.ListenableName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

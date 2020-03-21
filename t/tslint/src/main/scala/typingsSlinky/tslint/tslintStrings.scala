@@ -1,13 +1,13 @@
 package typingsSlinky.tslint
 
-import typingsSlinky.tslint.libLanguageFormatterFormatterMod.ConsumerType
-import typingsSlinky.tslint.libLanguageRuleRuleMod.RuleSeverity
-import typingsSlinky.tslint.libLanguageRuleRuleMod.RuleType
-import typingsSlinky.tslint.libRulesCompletedDocsRuleMod._DocType
-import typingsSlinky.tslint.libRulesCompletedDocsRuleMod._Location
-import typingsSlinky.tslint.libRulesCompletedDocsRuleMod._Privacy
-import typingsSlinky.tslint.libRulesCompletedDocsRuleMod._Visibility
+import typingsSlinky.tslint.completedDocsRuleMod._DocType
+import typingsSlinky.tslint.completedDocsRuleMod._Location
+import typingsSlinky.tslint.completedDocsRuleMod._Privacy
+import typingsSlinky.tslint.completedDocsRuleMod._Visibility
+import typingsSlinky.tslint.formatterMod.ConsumerType
 import typingsSlinky.tslint.libUtilsMod.Encoding
+import typingsSlinky.tslint.ruleMod.RuleSeverity
+import typingsSlinky.tslint.ruleMod.RuleType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

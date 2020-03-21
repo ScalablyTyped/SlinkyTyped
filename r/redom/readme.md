@@ -1,7 +1,7 @@
 
 # Scala.js typings for redom
 
-Typings are for version 3.24.3
+Typings are for version 3.25.1
 
 ## Library description:
 Tiny turboboosted JavaScript library for creating user interfaces. 100 % test coverage!
@@ -10,9 +10,9 @@ Tiny turboboosted JavaScript library for creating user interfaces. 100 % test co
 | ------------------ | :-------------: |
 | Full name          | redom |
 | Keywords           | redom, javascript, tiny, dom, library |
-| # releases         | 49 |
+| # releases         | 45 |
 | # dependents       | 11 |
-| # downloads        | 41797 |
+| # downloads        | 42691 |
 | # stars            | 1 |
 
 ## Links

@@ -1,20 +1,20 @@
 package typingsSlinky.spex
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.spex.spexMod.errors.BatchError
-import typingsSlinky.spex.spexMod.errors.PageError
-import typingsSlinky.spex.spexMod.errors.SequenceError
+import typingsSlinky.spex.mod.errors.BatchError
+import typingsSlinky.spex.mod.errors.PageError
+import typingsSlinky.spex.mod.errors.SequenceError
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Typeoferrors extends js.Object {
   // API: http://vitaly-t.github.io/spex/errors.BatchError.html
-  var BatchError: Instantiable0[typingsSlinky.spex.spexMod.errors.BatchError]
+  var BatchError: Instantiable0[typingsSlinky.spex.mod.errors.BatchError]
   // API: http://vitaly-t.github.io/spex/errors.PageError.html
-  var PageError: Instantiable0[typingsSlinky.spex.spexMod.errors.PageError]
+  var PageError: Instantiable0[typingsSlinky.spex.mod.errors.PageError]
   // API: http://vitaly-t.github.io/spex/errors.SequenceError.html
-  var SequenceError: Instantiable0[typingsSlinky.spex.spexMod.errors.SequenceError]
+  var SequenceError: Instantiable0[typingsSlinky.spex.mod.errors.SequenceError]
 }
 
 object Typeoferrors {

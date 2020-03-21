@@ -15,7 +15,7 @@ import typingsSlinky.baseui.baseuiStrings.toggle_round
 import typingsSlinky.baseui.baseuiStrings.top
 import typingsSlinky.baseui.checkboxMod.CheckboxOverrides
 import typingsSlinky.baseui.checkboxMod.CheckboxProps
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ object Checkbox
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, checked, disabled, name, onBlur, onChange, onFocus, onMouseDown, onMouseEnter, onMouseLeave, onMouseUp, required, type */
+  /* The following DOM/SVG props were specified: autoFocus, checked, disabled, name, onBlur, onChange, onFocus, onMouseDown, onMouseEnter, onMouseLeave, onMouseUp, required, title, type */
   def apply(
     checkmarkType: default_ | toggle | toggle_round = null,
     inputRef: Ref[HTMLInputElement] = null,
@@ -35,7 +35,6 @@ object Checkbox
     isIndeterminate: js.UndefOr[Boolean] = js.undefined,
     labelPlacement: top | right | bottom | left = null,
     overrides: CheckboxOverrides = null,
-    title: String = null,
     value: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.baseui.checkboxMod.Checkbox] = {
@@ -46,7 +45,6 @@ object Checkbox
     if (!js.isUndefined(isIndeterminate)) __obj.updateDynamic("isIndeterminate")(isIndeterminate.asInstanceOf[js.Any])
     if (labelPlacement != null) __obj.updateDynamic("labelPlacement")(labelPlacement.asInstanceOf[js.Any])
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])

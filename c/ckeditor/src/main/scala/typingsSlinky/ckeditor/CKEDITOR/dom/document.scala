@@ -2,8 +2,8 @@ package typingsSlinky.ckeditor.CKEDITOR.dom
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.CSSStyleSheet
-import org.scalajs.dom.raw.Document
-import typingsSlinky.ckeditor.Anon_Attributes
+import typingsSlinky.ckeditor.AnonAttributes
+import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,12 +13,12 @@ import scala.scalajs.js.annotation._
 class document protected () extends domObject {
   def this(domDocument: StringDictionary[js.Any]) = this()
   @JSName("$")
-  val $_document: Document = js.native
+  val $_document: Document_ = js.native
   val `type`: Double = js.native
   def appendStyleSheet(cssFileUrl: String): Unit = js.native
   def appendStyleText(cssStyleText: String): CSSStyleSheet = js.native
   def createElement(name: String): element = js.native
-  def createElement(name: String, attribsAndStyles: Anon_Attributes): element = js.native
+  def createElement(name: String, attribsAndStyles: AnonAttributes): element = js.native
   def createText(text: String): element = js.native
   def find(selector: String): nodeList = js.native
   def findOne(selector: String): element = js.native

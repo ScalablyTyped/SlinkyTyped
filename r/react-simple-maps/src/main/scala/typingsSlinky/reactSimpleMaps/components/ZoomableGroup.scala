@@ -1,0 +1,309 @@
+package typingsSlinky.reactSimpleMaps.components
+
+import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.SVGGElement
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.SyntheticEvent
+import slinky.core.TagMod
+import slinky.web.SyntheticAnimationEvent
+import slinky.web.SyntheticClipboardEvent
+import slinky.web.SyntheticCompositionEvent
+import slinky.web.SyntheticMouseEvent
+import slinky.web.SyntheticPointerEvent
+import slinky.web.SyntheticTouchEvent
+import slinky.web.SyntheticTransitionEvent
+import slinky.web.SyntheticWheelEvent
+import slinky.web.svg.g.tag
+import typingsSlinky.react.mod.Booleanish
+import typingsSlinky.react.reactStrings._empty
+import typingsSlinky.react.reactStrings.`additions text`
+import typingsSlinky.react.reactStrings.`inline`
+import typingsSlinky.react.reactStrings.`use-credentials`
+import typingsSlinky.react.reactStrings.additions
+import typingsSlinky.react.reactStrings.all
+import typingsSlinky.react.reactStrings.anonymous
+import typingsSlinky.react.reactStrings.ascending
+import typingsSlinky.react.reactStrings.assertive
+import typingsSlinky.react.reactStrings.auto
+import typingsSlinky.react.reactStrings.both
+import typingsSlinky.react.reactStrings.copy
+import typingsSlinky.react.reactStrings.date
+import typingsSlinky.react.reactStrings.descending
+import typingsSlinky.react.reactStrings.dialog
+import typingsSlinky.react.reactStrings.execute
+import typingsSlinky.react.reactStrings.grammar
+import typingsSlinky.react.reactStrings.grid
+import typingsSlinky.react.reactStrings.horizontal
+import typingsSlinky.react.reactStrings.link
+import typingsSlinky.react.reactStrings.list
+import typingsSlinky.react.reactStrings.listbox
+import typingsSlinky.react.reactStrings.location
+import typingsSlinky.react.reactStrings.menu
+import typingsSlinky.react.reactStrings.mixed
+import typingsSlinky.react.reactStrings.move
+import typingsSlinky.react.reactStrings.no
+import typingsSlinky.react.reactStrings.none
+import typingsSlinky.react.reactStrings.off
+import typingsSlinky.react.reactStrings.other
+import typingsSlinky.react.reactStrings.page
+import typingsSlinky.react.reactStrings.polite
+import typingsSlinky.react.reactStrings.popup
+import typingsSlinky.react.reactStrings.removals
+import typingsSlinky.react.reactStrings.spelling
+import typingsSlinky.react.reactStrings.step
+import typingsSlinky.react.reactStrings.text
+import typingsSlinky.react.reactStrings.time
+import typingsSlinky.react.reactStrings.tree
+import typingsSlinky.react.reactStrings.vertical
+import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.reactSimpleMaps.mod.Point
+import typingsSlinky.reactSimpleMaps.mod.Position
+import typingsSlinky.reactSimpleMaps.mod.ZoomableGroupProps
+import typingsSlinky.std.Event_
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object ZoomableGroup
+  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  @JSImport("react-simple-maps", "ZoomableGroup")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: accentHeight, accumulate, additive, alignmentBaseline, alphabetic, amplitude, arabicForm, ascent, attributeName, attributeType, azimuth, baseFrequency, baseProfile, baselineShift, bbox, begin, bias, by, calcMode, capHeight, clip, clipPath, clipPathUnits, clipRule, colorInterpolation, colorInterpolationFilters, colorProfile, colorRendering, contentScriptType, contentStyleType, cursor, cx, cy, d, dangerouslySetInnerHTML, descent, diffuseConstant, direction, display, divisor, dominantBaseline, dur, dx, dy, edgeMode, elevation, enableBackground, end, exponent, externalResourcesRequired, fill, fillOpacity, fillRule, filter, filterRes, filterUnits, floodColor, floodOpacity, fontFamily, fontSize, fontSizeAdjust, fontStretch, fontStyle, fontVariant, fontWeight, format, from, fx, fy, g1, g2, glyphName, glyphOrientationHorizontal, glyphOrientationVertical, glyphRef, gradientTransform, gradientUnits, hanging, height, horizAdvX, horizOriginX, id, ideographic, imageRendering, in, in2, intercept, k, k1, k2, k3, k4, kernelMatrix, kernelUnitLength, kerning, keyPoints, keySplines, keyTimes, lang, lengthAdjust, letterSpacing, lightingColor, limitingConeAngle, local, markerEnd, markerHeight, markerMid, markerStart, markerUnits, markerWidth, mask, maskContentUnits, maskUnits, mathematical, max, media, method, min, mode, name, numOctaves, offset, onAbort, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onContextMenu, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPause, onPlay, onPlaying, onProgress, onRateChange, onReset, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onVolumeChange, onWaiting, opacity, operator, order, orient, orientation, origin, overflow, overlinePosition, overlineThickness, panose1, pathLength, patternContentUnits, patternTransform, patternUnits, pointerEvents, points, pointsAtX, pointsAtY, pointsAtZ, preserveAlpha, preserveAspectRatio, primitiveUnits, r, radius, refX, refY, renderingIntent, repeatCount, repeatDur, requiredExtensions, requiredFeatures, restart, result, rotate, rx, ry, scale, seed, shapeRendering, slope, spacing, specularConstant, specularExponent, spreadMethod, startOffset, stdDeviation, stemh, stemv, stitchTiles, stopColor, stopOpacity, strikethroughPosition, strikethroughThickness, string, stroke, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, strokeOpacity, strokeWidth, style, surfaceScale, systemLanguage, tableValues, target, targetX, targetY, textAnchor, textDecoration, textLength, textRendering, to, transform, type, u1, u2, underlinePosition, underlineThickness, unicode, unicodeBidi, unicodeRange, unitsPerEm, vAlphabetic, vHanging, vIdeographic, vMathematical, values, version, vertAdvY, vertOriginX, vertOriginY, viewBox, viewTarget, visibility, width, widths, wordSpacing, writingMode, x, x1, x2, xChannelSelector, xHeight, y, y1, y2, yChannelSelector, z, zoomAndPan */
+  def apply(
+    allowReorder: no | yes = null,
+    `aria-activedescendant`: String = null,
+    `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
+    `aria-autocomplete`: none | `inline` | list | both = null,
+    `aria-busy`: js.UndefOr[Boolean] = js.undefined,
+    `aria-checked`: Boolean | mixed = null,
+    `aria-colcount`: Int | Double = null,
+    `aria-colindex`: Int | Double = null,
+    `aria-colspan`: Int | Double = null,
+    `aria-controls`: String = null,
+    `aria-current`: Boolean | page | step | location | date | time = null,
+    `aria-describedby`: String = null,
+    `aria-details`: String = null,
+    `aria-disabled`: js.UndefOr[Boolean] = js.undefined,
+    `aria-dropeffect`: none | copy | execute | link | move | popup = null,
+    `aria-errormessage`: String = null,
+    `aria-expanded`: js.UndefOr[Boolean] = js.undefined,
+    `aria-flowto`: String = null,
+    `aria-grabbed`: js.UndefOr[Boolean] = js.undefined,
+    `aria-haspopup`: Boolean | menu | listbox | tree | grid | dialog = null,
+    `aria-hidden`: js.UndefOr[Boolean] = js.undefined,
+    `aria-invalid`: Boolean | grammar | spelling = null,
+    `aria-keyshortcuts`: String = null,
+    `aria-label`: String = null,
+    `aria-labelledby`: String = null,
+    `aria-level`: Int | Double = null,
+    `aria-live`: off | assertive | polite = null,
+    `aria-modal`: js.UndefOr[Boolean] = js.undefined,
+    `aria-multiline`: js.UndefOr[Boolean] = js.undefined,
+    `aria-multiselectable`: js.UndefOr[Boolean] = js.undefined,
+    `aria-orientation`: horizontal | vertical = null,
+    `aria-owns`: String = null,
+    `aria-placeholder`: String = null,
+    `aria-posinset`: Int | Double = null,
+    `aria-pressed`: Boolean | mixed = null,
+    `aria-readonly`: js.UndefOr[Boolean] = js.undefined,
+    `aria-relevant`: additions | (`additions text`) | all | removals | text = null,
+    `aria-required`: js.UndefOr[Boolean] = js.undefined,
+    `aria-roledescription`: String = null,
+    `aria-rowcount`: Int | Double = null,
+    `aria-rowindex`: Int | Double = null,
+    `aria-rowspan`: Int | Double = null,
+    `aria-selected`: js.UndefOr[Boolean] = js.undefined,
+    `aria-setsize`: Int | Double = null,
+    `aria-sort`: none | ascending | descending | other = null,
+    `aria-valuemax`: Int | Double = null,
+    `aria-valuemin`: Int | Double = null,
+    `aria-valuenow`: Int | Double = null,
+    `aria-valuetext`: String = null,
+    autoReverse: js.UndefOr[Boolean] = js.undefined,
+    center: Point = null,
+    className: String = null,
+    color: String = null,
+    crossOrigin: anonymous | `use-credentials` | _empty = null,
+    decelerate: Double | String = null,
+    disablePanning: js.UndefOr[Boolean] = js.undefined,
+    disableZooming: js.UndefOr[Boolean] = js.undefined,
+    focusable: Booleanish | auto = null,
+    href: String = null,
+    maxZoom: Int | Double = null,
+    minZoom: Int | Double = null,
+    onAnimationEnd: SyntheticAnimationEvent[SVGGElement] => Unit = null,
+    onAnimationIteration: SyntheticAnimationEvent[SVGGElement] => Unit = null,
+    onAnimationStart: SyntheticAnimationEvent[SVGGElement] => Unit = null,
+    onAuxClick: SyntheticMouseEvent[SVGGElement] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with SVGGElement, Event_] => Unit = null,
+    onCompositionEnd: SyntheticCompositionEvent[SVGGElement] => Unit = null,
+    onCompositionStart: SyntheticCompositionEvent[SVGGElement] => Unit = null,
+    onCompositionUpdate: SyntheticCompositionEvent[SVGGElement] => Unit = null,
+    onCopy: SyntheticClipboardEvent[SVGGElement] => Unit = null,
+    onCut: SyntheticClipboardEvent[SVGGElement] => Unit = null,
+    onEncrypted: SyntheticEvent[Event_, SVGGElement] => Unit = null,
+    onMoveEnd: (/* event */ js.Any, /* position */ Position) => Unit = null,
+    onMoveStart: (/* event */ js.Any, /* position */ Position) => Unit = null,
+    onPaste: SyntheticClipboardEvent[SVGGElement] => Unit = null,
+    onPointerCancel: SyntheticPointerEvent[SVGGElement] => Unit = null,
+    onPointerDown: SyntheticPointerEvent[SVGGElement] => Unit = null,
+    onPointerEnter: SyntheticPointerEvent[SVGGElement] => Unit = null,
+    onPointerLeave: SyntheticPointerEvent[SVGGElement] => Unit = null,
+    onPointerMove: SyntheticPointerEvent[SVGGElement] => Unit = null,
+    onPointerOut: SyntheticPointerEvent[SVGGElement] => Unit = null,
+    onPointerOver: SyntheticPointerEvent[SVGGElement] => Unit = null,
+    onPointerUp: SyntheticPointerEvent[SVGGElement] => Unit = null,
+    onTouchCancel: SyntheticTouchEvent[SVGGElement] => Unit = null,
+    onTouchEnd: SyntheticTouchEvent[SVGGElement] => Unit = null,
+    onTouchMove: SyntheticTouchEvent[SVGGElement] => Unit = null,
+    onTouchStart: SyntheticTouchEvent[SVGGElement] => Unit = null,
+    onTransitionEnd: SyntheticTransitionEvent[SVGGElement] => Unit = null,
+    onWheel: SyntheticWheelEvent[SVGGElement] => Unit = null,
+    onZoomEnd: (/* event */ js.Any, /* position */ Position) => Unit = null,
+    onZoomStart: (/* event */ js.Any, /* position */ Position) => Unit = null,
+    paintOrder: Double | String = null,
+    path: String = null,
+    role: String = null,
+    speed: Double | String = null,
+    tabIndex: Int | Double = null,
+    vectorEffect: Double | String = null,
+    xlinkActuate: String = null,
+    xlinkArcrole: String = null,
+    xlinkHref: String = null,
+    xlinkRole: String = null,
+    xlinkShow: String = null,
+    xlinkTitle: String = null,
+    xlinkType: String = null,
+    xmlBase: String = null,
+    xmlLang: String = null,
+    xmlSpace: String = null,
+    xmlns: String = null,
+    xmlnsXlink: String = null,
+    zoom: Int | Double = null,
+    zoomSensitivity: Int | Double = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, js.Object] = {
+    val __obj = js.Dynamic.literal()
+    if (allowReorder != null) __obj.updateDynamic("allowReorder")(allowReorder.asInstanceOf[js.Any])
+    if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
+    if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-busy`)) __obj.updateDynamic("aria-busy")(`aria-busy`.asInstanceOf[js.Any])
+    if (`aria-checked` != null) __obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
+    if (`aria-colcount` != null) __obj.updateDynamic("aria-colcount")(`aria-colcount`.asInstanceOf[js.Any])
+    if (`aria-colindex` != null) __obj.updateDynamic("aria-colindex")(`aria-colindex`.asInstanceOf[js.Any])
+    if (`aria-colspan` != null) __obj.updateDynamic("aria-colspan")(`aria-colspan`.asInstanceOf[js.Any])
+    if (`aria-controls` != null) __obj.updateDynamic("aria-controls")(`aria-controls`.asInstanceOf[js.Any])
+    if (`aria-current` != null) __obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+    if (`aria-describedby` != null) __obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
+    if (`aria-details` != null) __obj.updateDynamic("aria-details")(`aria-details`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-disabled`)) __obj.updateDynamic("aria-disabled")(`aria-disabled`.asInstanceOf[js.Any])
+    if (`aria-dropeffect` != null) __obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+    if (`aria-errormessage` != null) __obj.updateDynamic("aria-errormessage")(`aria-errormessage`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-expanded`)) __obj.updateDynamic("aria-expanded")(`aria-expanded`.asInstanceOf[js.Any])
+    if (`aria-flowto` != null) __obj.updateDynamic("aria-flowto")(`aria-flowto`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-grabbed`)) __obj.updateDynamic("aria-grabbed")(`aria-grabbed`.asInstanceOf[js.Any])
+    if (`aria-haspopup` != null) __obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-hidden`)) __obj.updateDynamic("aria-hidden")(`aria-hidden`.asInstanceOf[js.Any])
+    if (`aria-invalid` != null) __obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+    if (`aria-keyshortcuts` != null) __obj.updateDynamic("aria-keyshortcuts")(`aria-keyshortcuts`.asInstanceOf[js.Any])
+    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
+    if (`aria-level` != null) __obj.updateDynamic("aria-level")(`aria-level`.asInstanceOf[js.Any])
+    if (`aria-live` != null) __obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-modal`)) __obj.updateDynamic("aria-modal")(`aria-modal`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-multiline`)) __obj.updateDynamic("aria-multiline")(`aria-multiline`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-multiselectable`)) __obj.updateDynamic("aria-multiselectable")(`aria-multiselectable`.asInstanceOf[js.Any])
+    if (`aria-orientation` != null) __obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
+    if (`aria-owns` != null) __obj.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
+    if (`aria-placeholder` != null) __obj.updateDynamic("aria-placeholder")(`aria-placeholder`.asInstanceOf[js.Any])
+    if (`aria-posinset` != null) __obj.updateDynamic("aria-posinset")(`aria-posinset`.asInstanceOf[js.Any])
+    if (`aria-pressed` != null) __obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-readonly`)) __obj.updateDynamic("aria-readonly")(`aria-readonly`.asInstanceOf[js.Any])
+    if (`aria-relevant` != null) __obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-required`)) __obj.updateDynamic("aria-required")(`aria-required`.asInstanceOf[js.Any])
+    if (`aria-roledescription` != null) __obj.updateDynamic("aria-roledescription")(`aria-roledescription`.asInstanceOf[js.Any])
+    if (`aria-rowcount` != null) __obj.updateDynamic("aria-rowcount")(`aria-rowcount`.asInstanceOf[js.Any])
+    if (`aria-rowindex` != null) __obj.updateDynamic("aria-rowindex")(`aria-rowindex`.asInstanceOf[js.Any])
+    if (`aria-rowspan` != null) __obj.updateDynamic("aria-rowspan")(`aria-rowspan`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-selected`)) __obj.updateDynamic("aria-selected")(`aria-selected`.asInstanceOf[js.Any])
+    if (`aria-setsize` != null) __obj.updateDynamic("aria-setsize")(`aria-setsize`.asInstanceOf[js.Any])
+    if (`aria-sort` != null) __obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+    if (`aria-valuemax` != null) __obj.updateDynamic("aria-valuemax")(`aria-valuemax`.asInstanceOf[js.Any])
+    if (`aria-valuemin` != null) __obj.updateDynamic("aria-valuemin")(`aria-valuemin`.asInstanceOf[js.Any])
+    if (`aria-valuenow` != null) __obj.updateDynamic("aria-valuenow")(`aria-valuenow`.asInstanceOf[js.Any])
+    if (`aria-valuetext` != null) __obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoReverse)) __obj.updateDynamic("autoReverse")(autoReverse.asInstanceOf[js.Any])
+    if (center != null) __obj.updateDynamic("center")(center.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
+    if (decelerate != null) __obj.updateDynamic("decelerate")(decelerate.asInstanceOf[js.Any])
+    if (!js.isUndefined(disablePanning)) __obj.updateDynamic("disablePanning")(disablePanning.asInstanceOf[js.Any])
+    if (!js.isUndefined(disableZooming)) __obj.updateDynamic("disableZooming")(disableZooming.asInstanceOf[js.Any])
+    if (focusable != null) __obj.updateDynamic("focusable")(focusable.asInstanceOf[js.Any])
+    if (href != null) __obj.updateDynamic("href")(href.asInstanceOf[js.Any])
+    if (maxZoom != null) __obj.updateDynamic("maxZoom")(maxZoom.asInstanceOf[js.Any])
+    if (minZoom != null) __obj.updateDynamic("minZoom")(minZoom.asInstanceOf[js.Any])
+    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
+    if (onAnimationIteration != null) __obj.updateDynamic("onAnimationIteration")(js.Any.fromFunction1(onAnimationIteration))
+    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
+    if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
+    if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
+    if (onCompositionEnd != null) __obj.updateDynamic("onCompositionEnd")(js.Any.fromFunction1(onCompositionEnd))
+    if (onCompositionStart != null) __obj.updateDynamic("onCompositionStart")(js.Any.fromFunction1(onCompositionStart))
+    if (onCompositionUpdate != null) __obj.updateDynamic("onCompositionUpdate")(js.Any.fromFunction1(onCompositionUpdate))
+    if (onCopy != null) __obj.updateDynamic("onCopy")(js.Any.fromFunction1(onCopy))
+    if (onCut != null) __obj.updateDynamic("onCut")(js.Any.fromFunction1(onCut))
+    if (onEncrypted != null) __obj.updateDynamic("onEncrypted")(js.Any.fromFunction1(onEncrypted))
+    if (onMoveEnd != null) __obj.updateDynamic("onMoveEnd")(js.Any.fromFunction2(onMoveEnd))
+    if (onMoveStart != null) __obj.updateDynamic("onMoveStart")(js.Any.fromFunction2(onMoveStart))
+    if (onPaste != null) __obj.updateDynamic("onPaste")(js.Any.fromFunction1(onPaste))
+    if (onPointerCancel != null) __obj.updateDynamic("onPointerCancel")(js.Any.fromFunction1(onPointerCancel))
+    if (onPointerDown != null) __obj.updateDynamic("onPointerDown")(js.Any.fromFunction1(onPointerDown))
+    if (onPointerEnter != null) __obj.updateDynamic("onPointerEnter")(js.Any.fromFunction1(onPointerEnter))
+    if (onPointerLeave != null) __obj.updateDynamic("onPointerLeave")(js.Any.fromFunction1(onPointerLeave))
+    if (onPointerMove != null) __obj.updateDynamic("onPointerMove")(js.Any.fromFunction1(onPointerMove))
+    if (onPointerOut != null) __obj.updateDynamic("onPointerOut")(js.Any.fromFunction1(onPointerOut))
+    if (onPointerOver != null) __obj.updateDynamic("onPointerOver")(js.Any.fromFunction1(onPointerOver))
+    if (onPointerUp != null) __obj.updateDynamic("onPointerUp")(js.Any.fromFunction1(onPointerUp))
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
+    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction1(onTransitionEnd))
+    if (onWheel != null) __obj.updateDynamic("onWheel")(js.Any.fromFunction1(onWheel))
+    if (onZoomEnd != null) __obj.updateDynamic("onZoomEnd")(js.Any.fromFunction2(onZoomEnd))
+    if (onZoomStart != null) __obj.updateDynamic("onZoomStart")(js.Any.fromFunction2(onZoomStart))
+    if (paintOrder != null) __obj.updateDynamic("paintOrder")(paintOrder.asInstanceOf[js.Any])
+    if (path != null) __obj.updateDynamic("path")(path.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (speed != null) __obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
+    if (tabIndex != null) __obj.updateDynamic("tabIndex")(tabIndex.asInstanceOf[js.Any])
+    if (vectorEffect != null) __obj.updateDynamic("vectorEffect")(vectorEffect.asInstanceOf[js.Any])
+    if (xlinkActuate != null) __obj.updateDynamic("xlinkActuate")(xlinkActuate.asInstanceOf[js.Any])
+    if (xlinkArcrole != null) __obj.updateDynamic("xlinkArcrole")(xlinkArcrole.asInstanceOf[js.Any])
+    if (xlinkHref != null) __obj.updateDynamic("xlinkHref")(xlinkHref.asInstanceOf[js.Any])
+    if (xlinkRole != null) __obj.updateDynamic("xlinkRole")(xlinkRole.asInstanceOf[js.Any])
+    if (xlinkShow != null) __obj.updateDynamic("xlinkShow")(xlinkShow.asInstanceOf[js.Any])
+    if (xlinkTitle != null) __obj.updateDynamic("xlinkTitle")(xlinkTitle.asInstanceOf[js.Any])
+    if (xlinkType != null) __obj.updateDynamic("xlinkType")(xlinkType.asInstanceOf[js.Any])
+    if (xmlBase != null) __obj.updateDynamic("xmlBase")(xmlBase.asInstanceOf[js.Any])
+    if (xmlLang != null) __obj.updateDynamic("xmlLang")(xmlLang.asInstanceOf[js.Any])
+    if (xmlSpace != null) __obj.updateDynamic("xmlSpace")(xmlSpace.asInstanceOf[js.Any])
+    if (xmlns != null) __obj.updateDynamic("xmlns")(xmlns.asInstanceOf[js.Any])
+    if (xmlnsXlink != null) __obj.updateDynamic("xmlnsXlink")(xmlnsXlink.asInstanceOf[js.Any])
+    if (zoom != null) __obj.updateDynamic("zoom")(zoom.asInstanceOf[js.Any])
+    if (zoomSensitivity != null) __obj.updateDynamic("zoomSensitivity")(zoomSensitivity.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.svg.g.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = ZoomableGroupProps
+}
+

@@ -4,10 +4,10 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.reapop.reapopMod.Notification
-import typingsSlinky.reapop.reapopMod.NotificationSystemProps
-import typingsSlinky.reapop.reapopMod.NotificationSystemTheme
-import typingsSlinky.reapop.reapopMod.default
+import typingsSlinky.reapop.mod.Notification
+import typingsSlinky.reapop.mod.NotificationSystemProps
+import typingsSlinky.reapop.mod.NotificationSystemTheme
+import typingsSlinky.reapop.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

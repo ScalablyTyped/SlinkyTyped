@@ -1,7 +1,6 @@
 package typingsSlinky.antd.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.BuildingComponent
@@ -28,7 +27,7 @@ import typingsSlinky.antd.antdStrings.execute
 import typingsSlinky.antd.antdStrings.grammar
 import typingsSlinky.antd.antdStrings.grid
 import typingsSlinky.antd.antdStrings.horizontal
-import typingsSlinky.antd.antdStrings.large
+import typingsSlinky.antd.antdStrings.inherit
 import typingsSlinky.antd.antdStrings.link
 import typingsSlinky.antd.antdStrings.list
 import typingsSlinky.antd.antdStrings.listbox
@@ -47,7 +46,6 @@ import typingsSlinky.antd.antdStrings.polite
 import typingsSlinky.antd.antdStrings.popup
 import typingsSlinky.antd.antdStrings.removals
 import typingsSlinky.antd.antdStrings.search
-import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.antdStrings.spelling
 import typingsSlinky.antd.antdStrings.step
 import typingsSlinky.antd.antdStrings.tel
@@ -57,9 +55,12 @@ import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
-import typingsSlinky.antd.libInputPasswordMod.PasswordProps
-import typingsSlinky.antd.libInputPasswordMod.default
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.passwordMod.PasswordProps
+import typingsSlinky.antd.passwordMod.default
+import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.react.mod.Booleanish
+import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -71,13 +72,15 @@ object Password
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: accept, action, alt, autoComplete, autoFocus, capture, checked, className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, draggable, height, hidden, id, lang, list, max, min, multiple, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, pattern, placeholder, readOnly, required, spellCheck, src, step, suppressContentEditableWarning, tabIndex, type, value, width */
+  /* The following DOM/SVG props were specified: accept, autoComplete, autoFocus, capture, checked, className, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, draggable, form, height, hidden, id, lang, list, max, min, multiple, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, pattern, placeholder, readOnly, required, spellCheck, src, step, style, suppressContentEditableWarning, tabIndex, title, type, value, width */
   def apply(
     about: String = null,
     accessKey: String = null,
+    action: String = null,
     addonAfter: TagMod[Any] = null,
     addonBefore: TagMod[Any] = null,
     allowClear: js.UndefOr[Boolean] = js.undefined,
+    alt: String = null,
     `aria-activedescendant`: String = null,
     `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
     `aria-autocomplete`: none | `inline` | list | both = null,
@@ -130,10 +133,10 @@ object Password
     autoCorrect: String = null,
     autoSave: String = null,
     color: String = null,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     crossOrigin: String = null,
     datatype: String = null,
-    form: String = null,
     formAction: String = null,
     formEncType: String = null,
     formMethod: String = null,
@@ -151,9 +154,10 @@ object Password
     maxLength: Int | Double = null,
     minLength: Int | Double = null,
     onAuxClick: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
+    onChange: ChangeEvent[HTMLInputElement] => Unit = null,
     onPressEnter: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
     prefix: TagMod[Any] = null,
     prefixCls: String = null,
     property: String = null,
@@ -162,12 +166,10 @@ object Password
     results: Int | Double = null,
     role: String = null,
     security: String = null,
-    size: small | typingsSlinky.antd.antdStrings.default | large = null,
+    size: SizeType = null,
     slot: String = null,
-    style: CSSProperties = null,
     suffix: TagMod[Any] = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
     translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
@@ -178,9 +180,11 @@ object Password
     val __obj = js.Dynamic.literal()
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (action != null) __obj.updateDynamic("action")(action.asInstanceOf[js.Any])
     if (addonAfter != null) __obj.updateDynamic("addonAfter")(addonAfter.asInstanceOf[js.Any])
     if (addonBefore != null) __obj.updateDynamic("addonBefore")(addonBefore.asInstanceOf[js.Any])
     if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.asInstanceOf[js.Any])
+    if (alt != null) __obj.updateDynamic("alt")(alt.asInstanceOf[js.Any])
     if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
     if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
     if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
@@ -233,10 +237,10 @@ object Password
     if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
     if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (crossOrigin != null) __obj.updateDynamic("crossOrigin")(crossOrigin.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
     if (formAction != null) __obj.updateDynamic("formAction")(formAction.asInstanceOf[js.Any])
     if (formEncType != null) __obj.updateDynamic("formEncType")(formEncType.asInstanceOf[js.Any])
     if (formMethod != null) __obj.updateDynamic("formMethod")(formMethod.asInstanceOf[js.Any])
@@ -255,6 +259,7 @@ object Password
     if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
     if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
     if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onPressEnter != null) __obj.updateDynamic("onPressEnter")(js.Any.fromFunction1(onPressEnter))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
@@ -267,10 +272,8 @@ object Password
     if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (suffix != null) __obj.updateDynamic("suffix")(suffix.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
@@ -279,7 +282,7 @@ object Password
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.antd.libInputPasswordMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.antd.passwordMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PasswordProps
 }
 

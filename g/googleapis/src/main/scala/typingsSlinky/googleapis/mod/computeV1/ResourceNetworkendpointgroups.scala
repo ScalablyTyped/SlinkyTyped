@@ -1,0 +1,14 @@
+package typingsSlinky.googleapis.mod.computeV1
+
+import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("googleapis", "compute_v1.Resource$Networkendpointgroups")
+@js.native
+class ResourceNetworkendpointgroups protected ()
+  extends typingsSlinky.googleapis.computeV1Mod.computeV1.ResourceNetworkendpointgroups {
+  def this(context: APIRequestContext) = this()
+}
+

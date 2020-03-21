@@ -5,17 +5,17 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.atAntvG2.atAntvG2Mod.Styles.line
-import typingsSlinky.bizcharts.Anon_DodgeBy
-import typingsSlinky.bizcharts.Anon_Name
-import typingsSlinky.bizcharts.bizchartsMod.GeomProps
-import typingsSlinky.bizcharts.bizchartsMod.GeomType
+import typingsSlinky.antvG2.mod.Styles.line
+import typingsSlinky.bizcharts.AnonDodgeBy
+import typingsSlinky.bizcharts.AnonName
+import typingsSlinky.bizcharts.mod.GeomProps
+import typingsSlinky.bizcharts.mod.GeomType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Geom
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.bizchartsMod.Geom] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.mod.Geom] {
   @JSImport("bizcharts", "Geom")
   @js.native
   object componentImport extends js.Object
@@ -24,7 +24,7 @@ object Geom
   /* The following DOM/SVG props were specified: selected */
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,
-    adjust: String | (js.Array[Anon_DodgeBy | String]) = null,
+    adjust: String | (js.Array[AnonDodgeBy | String]) = null,
     animate: js.Any = null,
     color: String | (js.Tuple2[String, js.Array[String] | (js.Function1[/* d */ js.UndefOr[_], String]) | String]) = null,
     line: line | Boolean = null,
@@ -37,10 +37,10 @@ object Geom
       (js.Function1[/* d */ js.UndefOr[_], Double]) | (js.Tuple2[Double, Double])
     ]) = null,
     style: js.Object | (js.Tuple2[String, js.Object]) = null,
-    tooltip: Boolean | String | (js.Tuple2[String, js.Function1[/* repeated */ _, Anon_Name]]) = null,
+    tooltip: Boolean | String | (js.Tuple2[String, js.Function1[/* repeated */ _, AnonName]]) = null,
     `type`: GeomType = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Geom] = {
+  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Geom] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
     if (adjust != null) __obj.updateDynamic("adjust")(adjust.asInstanceOf[js.Any])
@@ -58,7 +58,7 @@ object Geom
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Geom] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.bizchartsMod.Geom](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Geom] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Geom](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = GeomProps
 }
 

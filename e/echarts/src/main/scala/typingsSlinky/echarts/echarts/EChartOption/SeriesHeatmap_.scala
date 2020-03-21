@@ -1,12 +1,12 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdate
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasing
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasingAnimationEasingUpdate
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BorderColorBorderType
-import typingsSlinky.echarts.Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthAnonBorderColorBorderType
+import typingsSlinky.echarts.AnonAnimationDurationUpdate
+import typingsSlinky.echarts.AnonAnimationEasing
+import typingsSlinky.echarts.AnonAnimationEasingUpdate
+import typingsSlinky.echarts.AnonBorderType
+import typingsSlinky.echarts.AnonDistance
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonItemStyleAnonBorderTypeLabelAnonDistance
 import typingsSlinky.echarts.echarts.EChartOption.SeriesHeatmap.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -42,7 +42,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-heatmap
   */
-@JSName("SeriesHeatmap")
 trait SeriesHeatmap_ extends js.Object {
   /**
     * Blur size of each data point. It is valid with
@@ -229,9 +228,7 @@ trait SeriesHeatmap_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-heatmap.emphasis
     */
-  var emphasis: js.UndefOr[
-    Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthAnonBorderColorBorderType
-  ] = js.undefined
+  var emphasis: js.UndefOr[AnonItemStyleAnonBorderTypeLabelAnonDistance] = js.undefined
   /**
     * Index of
     * [geographic coordinate](https://echarts.apache.org/en/option.html#geo)
@@ -259,7 +256,7 @@ trait SeriesHeatmap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderType] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderType] = js.undefined
   /**
     * Work for
     * [coordinateSystem](https://echarts.apache.org/en/option.html#series-heatmap.coordinateSystem)
@@ -268,7 +265,7 @@ trait SeriesHeatmap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth] = js.undefined
+  var label: js.UndefOr[AnonDistance] = js.undefined
   /**
     * Used to mark an area in chart.
     * For example, mark a time interval.
@@ -276,27 +273,21 @@ trait SeriesHeatmap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.markArea
     */
-  var markArea: js.UndefOr[
-    Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasingAnimationEasingUpdate
-  ] = js.undefined
+  var markArea: js.UndefOr[AnonAnimationEasingUpdate] = js.undefined
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.markLine
     */
-  var markLine: js.UndefOr[
-    Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasing
-  ] = js.undefined
+  var markLine: js.UndefOr[AnonAnimationEasing] = js.undefined
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.markPoint
     */
-  var markPoint: js.UndefOr[
-    Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdate
-  ] = js.undefined
+  var markPoint: js.UndefOr[AnonAnimationDurationUpdate] = js.undefined
   /**
     * Maximum opacity. It is valid with
     * [coordinateSystem](https://echarts.apache.org/en/option.html#series-heatmap.coordinateSystem)
@@ -343,7 +334,7 @@ trait SeriesHeatmap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-heatmap.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * @default
     * "heatmap"
@@ -412,19 +403,19 @@ object SeriesHeatmap_ {
     data: js.Array[
       (js.Array[Unit | Double | String | DataObject]) | DataObject | Double | String | Unit
     ] = null,
-    emphasis: Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidthAnonBorderColorBorderType = null,
+    emphasis: AnonItemStyleAnonBorderTypeLabelAnonDistance = null,
     geoIndex: Int | Double = null,
     id: String = null,
-    itemStyle: Anon_BorderColorBorderType = null,
-    label: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth = null,
-    markArea: Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasingAnimationEasingUpdate = null,
-    markLine: Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasing = null,
-    markPoint: Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdate = null,
+    itemStyle: AnonBorderType = null,
+    label: AnonDistance = null,
+    markArea: AnonAnimationEasingUpdate = null,
+    markLine: AnonAnimationEasing = null,
+    markPoint: AnonAnimationDurationUpdate = null,
     maxOpacity: Int | Double = null,
     minOpacity: Int | Double = null,
     name: String = null,
     silent: js.UndefOr[Boolean] = js.undefined,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     `type`: String = null,
     xAxisIndex: Int | Double = null,
     yAxisIndex: Int | Double = null,

@@ -1,9 +1,9 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesPictorialBar
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BorderColorBorderType
-import typingsSlinky.echarts.Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidth
+import typingsSlinky.echarts.AnonBorderType
+import typingsSlinky.echarts.AnonDistance
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonLabelAnonDistance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -111,7 +111,7 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.data.emphasis
     */
-  var emphasis: js.UndefOr[Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidth] = js.undefined
+  var emphasis: js.UndefOr[AnonLabelAnonDistance] = js.undefined
   /**
     * Whether to enable hover animation.
     *
@@ -135,14 +135,14 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.data.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderType] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderType] = js.undefined
   /**
     * The style setting of the text label in a single bar.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.data.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth] = js.undefined
+  var label: js.UndefOr[AnonDistance] = js.undefined
   /**
     * The name of data item.
     *
@@ -692,7 +692,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-pictorialBar.data.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * The value of a single data item.
     *
@@ -721,10 +721,10 @@ object DataObject {
     animationEasing: String = null,
     animationEasingUpdate: String = null,
     animationThreshold: Int | Double = null,
-    emphasis: Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidth = null,
+    emphasis: AnonLabelAnonDistance = null,
     hoverAnimation: js.UndefOr[Boolean] = js.undefined,
-    itemStyle: Anon_BorderColorBorderType = null,
-    label: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth = null,
+    itemStyle: AnonBorderType = null,
+    label: AnonDistance = null,
     name: String = null,
     symbol: String = null,
     symbolBoundingData: Int | Double = null,
@@ -737,7 +737,7 @@ object DataObject {
     symbolRepeatDirection: String = null,
     symbolRotate: Int | Double = null,
     symbolSize: js.Array[_] | Double = null,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     value: Int | Double = null,
     z: Int | Double = null
   ): DataObject = {

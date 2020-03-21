@@ -11,8 +11,8 @@ Utilities for working with htmlparser2's dom
 | Full name          | domutils |
 | Keywords           | dom, htmlparser2 |
 | # releases         | 3 |
-| # dependents       | 91 |
-| # downloads        | 535629875 |
+| # dependents       | 92 |
+| # downloads        | 544552962 |
 | # stars            | 3 |
 
 ## Links

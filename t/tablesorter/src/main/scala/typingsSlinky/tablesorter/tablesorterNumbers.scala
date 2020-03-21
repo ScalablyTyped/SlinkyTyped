@@ -1,6 +1,6 @@
 package typingsSlinky.tablesorter
 
-import typingsSlinky.tablesorter.sortingSortDefinitionOrderMod.SortDefinitionOrder
+import typingsSlinky.tablesorter.sortDefinitionOrderMod.SortDefinitionOrder
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

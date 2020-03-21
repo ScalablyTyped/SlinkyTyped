@@ -5,11 +5,11 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
 import typingsSlinky.dva.routerMod.routerRedux.ConnectedRouter
-import typingsSlinky.history.historyMod.History
-import typingsSlinky.history.historyMod.LocationState
-import typingsSlinky.reactDashRouterDashRedux.reactDashRouterDashReduxMod.ConnectedRouterProps
-import typingsSlinky.redux.reduxMod.AnyAction
-import typingsSlinky.redux.reduxMod.Store
+import typingsSlinky.history.mod.History
+import typingsSlinky.history.mod.LocationState
+import typingsSlinky.reactRouterRedux.mod.ConnectedRouterProps
+import typingsSlinky.redux.mod.AnyAction
+import typingsSlinky.redux.mod.Store
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

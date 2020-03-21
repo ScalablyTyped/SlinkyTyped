@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.Anon_Codehead
+import typingsSlinky.vexflow.AnonCodehead
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Vex.Flow.durationToGlyph")
 @js.native
 object durationToGlyph extends js.Object {
-  def apply(duration: String, `type`: String): Anon_Codehead = js.native
+  def apply(duration: String, `type`: String): AnonCodehead = js.native
 }
 

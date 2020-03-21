@@ -1,8 +1,8 @@
 package typingsSlinky.jqueryui.JQueryUI
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import typingsSlinky.jquery.JQueryEventObject
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,7 @@ trait DialogOptions extends DialogEvents {
   var appendTo: js.UndefOr[String] = js.undefined
   var autoOpen: js.UndefOr[Boolean] = js.undefined
   var buttons: js.UndefOr[
-    (StringDictionary[js.Function1[/* event */ js.UndefOr[Event], Unit]]) | js.Array[DialogButtonOptions]
+    (StringDictionary[js.Function1[/* event */ js.UndefOr[Event_], Unit]]) | js.Array[DialogButtonOptions]
   ] = js.undefined
   var classes: js.UndefOr[DialogClasses] = js.undefined
   var closeOnEscape: js.UndefOr[Boolean] = js.undefined
@@ -44,7 +44,7 @@ object DialogOptions {
     appendTo: String = null,
     autoOpen: js.UndefOr[Boolean] = js.undefined,
     beforeClose: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
-    buttons: (StringDictionary[js.Function1[/* event */ js.UndefOr[Event], Unit]]) | js.Array[DialogButtonOptions] = null,
+    buttons: (StringDictionary[js.Function1[/* event */ js.UndefOr[Event_], Unit]]) | js.Array[DialogButtonOptions] = null,
     classes: DialogClasses = null,
     close: (/* event */ JQueryEventObject, /* ui */ DialogUIParams) => Unit = null,
     closeOnEscape: js.UndefOr[Boolean] = js.undefined,

@@ -4,10 +4,10 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libButtonButtonMod.ButtonType
-import typingsSlinky.antd.libButtonButtonMod.NativeButtonProps
-import typingsSlinky.antd.libModalActionButtonMod.ActionButtonProps
-import typingsSlinky.antd.libModalActionButtonMod.default
+import typingsSlinky.antd.actionButtonMod.ActionButtonProps
+import typingsSlinky.antd.actionButtonMod.default
+import typingsSlinky.antd.buttonButtonMod.ButtonType
+import typingsSlinky.antd.buttonButtonMod.NativeButtonProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

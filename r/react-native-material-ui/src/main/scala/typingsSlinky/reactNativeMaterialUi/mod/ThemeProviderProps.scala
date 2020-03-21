@@ -1,0 +1,20 @@
+package typingsSlinky.reactNativeMaterialUi.mod
+
+import slinky.core.facade.ReactElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait ThemeProviderProps extends js.Object {
+  var children: ReactElement
+}
+
+object ThemeProviderProps {
+  @scala.inline
+  def apply(children: ReactElement): ThemeProviderProps = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+  
+    __obj.asInstanceOf[ThemeProviderProps]
+  }
+}
+

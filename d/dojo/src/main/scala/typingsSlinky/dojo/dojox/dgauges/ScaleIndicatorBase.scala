@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.dgauges
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.animationDuration
 import typingsSlinky.dojo.dojoStrings.animationEaser
 import typingsSlinky.dojo.dojoStrings.interactionArea
@@ -91,7 +91,7 @@ class ScaleIndicatorBase () extends IndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_animationEaser(
     property: animationEaser,
@@ -101,7 +101,7 @@ class ScaleIndicatorBase () extends IndicatorBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_interactionArea(
     property: interactionArea,
@@ -111,7 +111,7 @@ class ScaleIndicatorBase () extends IndicatorBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_interactionMode(
     property: interactionMode,
@@ -121,7 +121,7 @@ class ScaleIndicatorBase () extends IndicatorBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_scale(
     property: scale,
@@ -131,6 +131,6 @@ class ScaleIndicatorBase () extends IndicatorBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

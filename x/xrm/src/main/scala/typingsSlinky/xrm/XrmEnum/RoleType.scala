@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
   * An enumeration for Relationship Role Type Metadata
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmNumbers.`1`
-  - typings.xrm.xrmNumbers.`2`
+  - typingsSlinky.xrm.xrmNumbers.`1`
+  - typingsSlinky.xrm.xrmNumbers.`2`
 */
 trait RoleType extends js.Object
 

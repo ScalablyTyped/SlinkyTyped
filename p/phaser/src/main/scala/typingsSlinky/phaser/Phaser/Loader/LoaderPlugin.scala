@@ -2,6 +2,7 @@ package typingsSlinky.phaser.Phaser.Loader
 
 import typingsSlinky.phaser.Phaser.Cache.CacheManager
 import typingsSlinky.phaser.Phaser.Events.EventEmitter
+import typingsSlinky.phaser.Phaser.Loader.FileTypes.SpineFileConfig
 import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Scenes.SceneManager
 import typingsSlinky.phaser.Phaser.Scenes.Systems
@@ -2520,6 +2521,113 @@ class LoaderPlugin protected () extends EventEmitter {
     */
   def setPrefix(): LoaderPlugin = js.native
   def setPrefix(prefix: String): LoaderPlugin = js.native
+  def spine(key: String, jsonURL: String, atlasURL: String): LoaderPlugin = js.native
+  def spine(key: String, jsonURL: String, atlasURL: String, preMultipliedAlpha: Boolean): LoaderPlugin = js.native
+  def spine(
+    key: String,
+    jsonURL: String,
+    atlasURL: String,
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
+  def spine(
+    key: String,
+    jsonURL: String,
+    atlasURL: String,
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject,
+    atlasXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
+  def spine(key: String, jsonURL: String, atlasURL: js.Array[String]): LoaderPlugin = js.native
+  def spine(key: String, jsonURL: String, atlasURL: js.Array[String], preMultipliedAlpha: Boolean): LoaderPlugin = js.native
+  def spine(
+    key: String,
+    jsonURL: String,
+    atlasURL: js.Array[String],
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
+  def spine(
+    key: String,
+    jsonURL: String,
+    atlasURL: js.Array[String],
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject,
+    atlasXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
+  def spine(key: js.Array[SpineFileConfig], jsonURL: String, atlasURL: String): LoaderPlugin = js.native
+  def spine(key: js.Array[SpineFileConfig], jsonURL: String, atlasURL: String, preMultipliedAlpha: Boolean): LoaderPlugin = js.native
+  def spine(
+    key: js.Array[SpineFileConfig],
+    jsonURL: String,
+    atlasURL: String,
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
+  def spine(
+    key: js.Array[SpineFileConfig],
+    jsonURL: String,
+    atlasURL: String,
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject,
+    atlasXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
+  def spine(key: js.Array[SpineFileConfig], jsonURL: String, atlasURL: js.Array[String]): LoaderPlugin = js.native
+  def spine(
+    key: js.Array[SpineFileConfig],
+    jsonURL: String,
+    atlasURL: js.Array[String],
+    preMultipliedAlpha: Boolean
+  ): LoaderPlugin = js.native
+  def spine(
+    key: js.Array[SpineFileConfig],
+    jsonURL: String,
+    atlasURL: js.Array[String],
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
+  def spine(
+    key: js.Array[SpineFileConfig],
+    jsonURL: String,
+    atlasURL: js.Array[String],
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject,
+    atlasXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
+  def spine(key: SpineFileConfig, jsonURL: String, atlasURL: String): LoaderPlugin = js.native
+  def spine(key: SpineFileConfig, jsonURL: String, atlasURL: String, preMultipliedAlpha: Boolean): LoaderPlugin = js.native
+  def spine(
+    key: SpineFileConfig,
+    jsonURL: String,
+    atlasURL: String,
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
+  def spine(
+    key: SpineFileConfig,
+    jsonURL: String,
+    atlasURL: String,
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject,
+    atlasXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
+  def spine(key: SpineFileConfig, jsonURL: String, atlasURL: js.Array[String]): LoaderPlugin = js.native
+  def spine(key: SpineFileConfig, jsonURL: String, atlasURL: js.Array[String], preMultipliedAlpha: Boolean): LoaderPlugin = js.native
+  def spine(
+    key: SpineFileConfig,
+    jsonURL: String,
+    atlasURL: js.Array[String],
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
+  def spine(
+    key: SpineFileConfig,
+    jsonURL: String,
+    atlasURL: js.Array[String],
+    preMultipliedAlpha: Boolean,
+    textureXhrSettings: XHRSettingsObject,
+    atlasXhrSettings: XHRSettingsObject
+  ): LoaderPlugin = js.native
   /**
     * Adds a Sprite Sheet Image, or array of Sprite Sheet Images, to the current load queue.
     * 

@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.googlepay.googlepayStrings.FINAL
-  - typings.googlepay.googlepayStrings.PENDING
+  - typingsSlinky.googlepay.googlepayStrings.FINAL
+  - typingsSlinky.googlepay.googlepayStrings.PENDING
 */
 trait DisplayItemStatus extends js.Object
 

@@ -5,7 +5,6 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.gestaltMod.TextProps
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.breakWord
 import typingsSlinky.gestalt.gestaltStrings.center
@@ -36,12 +35,13 @@ import typingsSlinky.gestalt.gestaltStrings.watermelon
 import typingsSlinky.gestalt.gestaltStrings.white
 import typingsSlinky.gestalt.gestaltStrings.xl
 import typingsSlinky.gestalt.gestaltStrings.xs
+import typingsSlinky.gestalt.mod.TextProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Text
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Text] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Text] {
   @JSImport("gestalt", "Text")
   @js.native
   object componentImport extends js.Object
@@ -61,7 +61,7 @@ object Text
     smSize: xs | sm | md | lg | xl = null,
     truncate: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Text] = {
+  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Text] = {
     val __obj = js.Dynamic.literal()
     if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
     if (!js.isUndefined(bold)) __obj.updateDynamic("bold")(bold.asInstanceOf[js.Any])
@@ -78,7 +78,7 @@ object Text
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Text] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.gestaltMod.Text](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Text] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.mod.Text](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TextProps
 }
 

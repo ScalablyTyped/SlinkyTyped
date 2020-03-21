@@ -4,8 +4,6 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.gestaltMod.Icons
-import typingsSlinky.gestalt.gestaltMod.PogProps
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.gray
@@ -18,12 +16,14 @@ import typingsSlinky.gestalt.gestaltStrings.transparent
 import typingsSlinky.gestalt.gestaltStrings.white
 import typingsSlinky.gestalt.gestaltStrings.xl
 import typingsSlinky.gestalt.gestaltStrings.xs
+import typingsSlinky.gestalt.mod.Icons
+import typingsSlinky.gestalt.mod.PogProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Pog
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Pog] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Pog] {
   @JSImport("gestalt", "Pog")
   @js.native
   object componentImport extends js.Object
@@ -38,7 +38,7 @@ object Pog
     iconColor: blue | darkGray | gray | red | white = null,
     size: xs | sm | md | lg | xl = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Pog] = {
+  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Pog] = {
     val __obj = js.Dynamic.literal(icon = icon.asInstanceOf[js.Any])
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
     if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])

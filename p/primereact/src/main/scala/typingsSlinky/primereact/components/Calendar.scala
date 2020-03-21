@@ -1,16 +1,17 @@
 package typingsSlinky.primereact.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_OriginalEventValueDate
-import typingsSlinky.primereact.componentsCalendarCalendarMod.CalendarProps
-import typingsSlinky.primereact.componentsCalendarCalendarMod.DateMetaData
-import typingsSlinky.primereact.componentsCalendarCalendarMod.LocaleSettings
-import typingsSlinky.primereact.componentsTooltipTooltipOptionsMod.TooltipOptions
+import typingsSlinky.primereact.AnonOriginalEventEvent
+import typingsSlinky.primereact.AnonOriginalEventValue
+import typingsSlinky.primereact.calendarCalendarMod.CalendarProps
+import typingsSlinky.primereact.calendarCalendarMod.DateMetaData
+import typingsSlinky.primereact.calendarCalendarMod.LocaleSettings
+import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +23,10 @@ object Calendar
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, name, onBlur, onChange, onFocus, onInput, onSelect, placeholder, required, value */
+  /* The following DOM/SVG props were specified: className, disabled, id, name, placeholder, required */
   def apply(
     appendTo: js.Any = null,
+    ariaLabelledBy: String = null,
     autoZIndex: js.UndefOr[Boolean] = js.undefined,
     baseZIndex: Int | Double = null,
     clearButtonStyleClass: String = null,
@@ -47,9 +49,14 @@ object Calendar
     minDate: js.Date = null,
     monthNavigator: js.UndefOr[Boolean] = js.undefined,
     numberOfMonths: Int | Double = null,
-    onClearButtonClick: /* event */ Event => Unit = null,
-    onTodayButtonClick: /* event */ Event => Unit = null,
-    onViewDateChange: /* e */ Anon_OriginalEventValueDate => Unit = null,
+    onBlur: /* event */ Event_ => Unit = null,
+    onChange: /* e */ AnonOriginalEventEvent => Unit = null,
+    onClearButtonClick: /* event */ Event_ => Unit = null,
+    onFocus: /* event */ Event_ => Unit = null,
+    onInput: /* event */ Event_ => Unit = null,
+    onSelect: /* e */ AnonOriginalEventValue => Unit = null,
+    onTodayButtonClick: /* event */ Event_ => Unit = null,
+    onViewDateChange: /* e */ AnonOriginalEventValue => Unit = null,
     panelClassName: String = null,
     panelStyle: js.Object = null,
     readOnlyInput: js.UndefOr[Boolean] = js.undefined,
@@ -73,6 +80,7 @@ object Calendar
     tooltip: js.Any = null,
     tooltipOptions: TooltipOptions = null,
     touchUI: js.UndefOr[Boolean] = js.undefined,
+    value: js.Date | js.Array[js.Date] = null,
     view: String = null,
     viewDate: js.Date = null,
     yearNavigator: js.UndefOr[Boolean] = js.undefined,
@@ -81,6 +89,7 @@ object Calendar
   ): BuildingComponent[tag.type, typingsSlinky.primereact.calendarMod.Calendar] = {
     val __obj = js.Dynamic.literal()
     if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
+    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
     if (!js.isUndefined(autoZIndex)) __obj.updateDynamic("autoZIndex")(autoZIndex.asInstanceOf[js.Any])
     if (baseZIndex != null) __obj.updateDynamic("baseZIndex")(baseZIndex.asInstanceOf[js.Any])
     if (clearButtonStyleClass != null) __obj.updateDynamic("clearButtonStyleClass")(clearButtonStyleClass.asInstanceOf[js.Any])
@@ -103,7 +112,12 @@ object Calendar
     if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
     if (!js.isUndefined(monthNavigator)) __obj.updateDynamic("monthNavigator")(monthNavigator.asInstanceOf[js.Any])
     if (numberOfMonths != null) __obj.updateDynamic("numberOfMonths")(numberOfMonths.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onClearButtonClick != null) __obj.updateDynamic("onClearButtonClick")(js.Any.fromFunction1(onClearButtonClick))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onInput != null) __obj.updateDynamic("onInput")(js.Any.fromFunction1(onInput))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
     if (onTodayButtonClick != null) __obj.updateDynamic("onTodayButtonClick")(js.Any.fromFunction1(onTodayButtonClick))
     if (onViewDateChange != null) __obj.updateDynamic("onViewDateChange")(js.Any.fromFunction1(onViewDateChange))
     if (panelClassName != null) __obj.updateDynamic("panelClassName")(panelClassName.asInstanceOf[js.Any])
@@ -129,6 +143,7 @@ object Calendar
     if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])
     if (tooltipOptions != null) __obj.updateDynamic("tooltipOptions")(tooltipOptions.asInstanceOf[js.Any])
     if (!js.isUndefined(touchUI)) __obj.updateDynamic("touchUI")(touchUI.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     if (view != null) __obj.updateDynamic("view")(view.asInstanceOf[js.Any])
     if (viewDate != null) __obj.updateDynamic("viewDate")(viewDate.asInstanceOf[js.Any])
     if (!js.isUndefined(yearNavigator)) __obj.updateDynamic("yearNavigator")(yearNavigator.asInstanceOf[js.Any])

@@ -1,9 +1,9 @@
 package typingsSlinky.flipsnap
 
-import org.scalajs.dom.raw.Event
 import typingsSlinky.flipsnap.flipsnapStrings.fstouchend
 import typingsSlinky.flipsnap.flipsnapStrings.fstouchmove
 import typingsSlinky.flipsnap.flipsnapStrings.fstouchstart
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,8 +23,8 @@ trait HTMLElement extends js.Object {
     useCapture: Boolean
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_fstouchstart(`type`: fstouchstart, listener: js.Function1[/* ev */ Event, _]): Unit = js.native
+  def addEventListener_fstouchstart(`type`: fstouchstart, listener: js.Function1[/* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_fstouchstart(`type`: fstouchstart, listener: js.Function1[/* ev */ Event, _], useCapture: Boolean): Unit = js.native
+  def addEventListener_fstouchstart(`type`: fstouchstart, listener: js.Function1[/* ev */ Event_, _], useCapture: Boolean): Unit = js.native
 }
 

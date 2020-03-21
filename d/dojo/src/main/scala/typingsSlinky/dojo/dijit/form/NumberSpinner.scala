@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dijit.form
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.editOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dijit.form.NumberSpinner")
 @js.native
-class NumberSpinner () extends _Spinner {
+class NumberSpinner () extends Spinner {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -50,6 +50,6 @@ class NumberSpinner () extends _Spinner {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

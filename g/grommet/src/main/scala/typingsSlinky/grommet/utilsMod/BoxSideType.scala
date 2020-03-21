@@ -6,13 +6,13 @@ import scala.scalajs.js.annotation._
 
 // Extracting types for common properties among components
 /* Rewritten from type alias, can be one of: 
-  - typings.grommet.grommetStrings.top
-  - typings.grommet.grommetStrings.left
-  - typings.grommet.grommetStrings.bottom
-  - typings.grommet.grommetStrings.right
-  - typings.grommet.grommetStrings.horizontal
-  - typings.grommet.grommetStrings.vertical
-  - typings.grommet.grommetStrings.all
+  - typingsSlinky.grommet.grommetStrings.top
+  - typingsSlinky.grommet.grommetStrings.left
+  - typingsSlinky.grommet.grommetStrings.bottom
+  - typingsSlinky.grommet.grommetStrings.right
+  - typingsSlinky.grommet.grommetStrings.horizontal
+  - typingsSlinky.grommet.grommetStrings.vertical
+  - typingsSlinky.grommet.grommetStrings.all
 */
 trait BoxSideType extends _BorderType
 

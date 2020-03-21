@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.cypressMod
 
+import typingsSlinky.cypress.PartialCypressConfigurati
 import typingsSlinky.cypress.cypressBooleans.`false`
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -86,7 +86,7 @@ object CypressRunOptions {
   def apply(
     browser: String,
     ciBuildId: String,
-    config: Partial[CypressConfiguration],
+    config: PartialCypressConfigurati,
     configFile: String | `false`,
     env: js.Object,
     group: String,

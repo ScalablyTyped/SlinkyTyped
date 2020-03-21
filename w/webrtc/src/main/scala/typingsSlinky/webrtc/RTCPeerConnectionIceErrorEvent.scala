@@ -1,13 +1,13 @@
 package typingsSlinky.webrtc
 
-import typingsSlinky.std.Event
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 // https://www.w3.org/TR/webrtc/#h-rtcpeerconnectioniceerrorevent
 @js.native
-trait RTCPeerConnectionIceErrorEvent extends Event {
+trait RTCPeerConnectionIceErrorEvent extends Event_ {
   val errorCode: Double = js.native
   val errorText: String = js.native
   val hostCandidate: String = js.native

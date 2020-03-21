@@ -2,8 +2,8 @@ package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dijit.layout.AccordionContainer._Button
-import typingsSlinky.dojo.dijit.layout.AccordionContainer._InnerContainer
+import typingsSlinky.dojo.dijit.layout.AccordionContainer.Button
+import typingsSlinky.dojo.dijit.layout.AccordionContainer.InnerContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,11 +18,7 @@ trait TypeofAccordionContainer extends js.Object {
     * @param params Hash of initialization parameters for widget, including scalar values (like title, duration etc.)and functions, typically callbacks like onClick.The hash can contain any of the widget's properties, excluding read-only properties.     
     * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree     
     */
-  var _Button: Instantiable2[
-    js.UndefOr[/* params */ js.Object], 
-    js.UndefOr[/* srcNodeRef */ HTMLElement], 
-    typingsSlinky.dojo.dijit.layout.AccordionContainer._Button
-  ]
+  var _Button: Instantiable2[js.UndefOr[/* params */ js.Object], js.UndefOr[/* srcNodeRef */ HTMLElement], Button]
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/layout/AccordionContainer._InnerContainer.html
     *
@@ -33,22 +29,18 @@ trait TypeofAccordionContainer extends js.Object {
   var _InnerContainer: Instantiable2[
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
-    typingsSlinky.dojo.dijit.layout.AccordionContainer._InnerContainer
+    InnerContainer
   ]
 }
 
 object TypeofAccordionContainer {
   @scala.inline
   def apply(
-    _Button: Instantiable2[
-      js.UndefOr[/* params */ js.Object], 
-      js.UndefOr[/* srcNodeRef */ HTMLElement], 
-      _Button
-    ],
+    _Button: Instantiable2[js.UndefOr[/* params */ js.Object], js.UndefOr[/* srcNodeRef */ HTMLElement], Button],
     _InnerContainer: Instantiable2[
       js.UndefOr[/* params */ js.Object], 
       js.UndefOr[/* srcNodeRef */ HTMLElement], 
-      _InnerContainer
+      InnerContainer
     ]
   ): TypeofAccordionContainer = {
     val __obj = js.Dynamic.literal(_Button = _Button.asInstanceOf[js.Any], _InnerContainer = _InnerContainer.asInstanceOf[js.Any])

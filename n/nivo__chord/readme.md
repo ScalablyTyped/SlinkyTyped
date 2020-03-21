@@ -10,9 +10,9 @@ Typings are for version 0.59.1
 | ------------------ | :-------------: |
 | Full name          | @nivo/chord |
 | Keywords           | nivo, dataviz, react, d3, charts, chord-diagram |
-| # releases         | 30 |
+| # releases         | 32 |
 | # dependents       | 3 |
-| # downloads        | 14224 |
+| # downloads        | 15504 |
 | # stars            | 0 |
 
 ## Links

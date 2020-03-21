@@ -2,8 +2,9 @@ package typingsSlinky.samchon.collectionsMod
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable3
-import typingsSlinky.tstl.baseContainerSetContainerMod.SetContainer
-import typingsSlinky.tstl.tstlMod.base.Container
+import typingsSlinky.tstl.IteratoranyanyanyEquals
+import typingsSlinky.tstl.mod.base.Container
+import typingsSlinky.tstl.setContainerMod.SetContainer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +12,7 @@ import scala.scalajs.js.annotation._
 @JSImport("samchon/collections", "HashMultiSetCollection")
 @js.native
 class HashMultiSetCollection[T] ()
-  extends typingsSlinky.ecol.libSetsHashMultiSetCollectionMod.HashMultiSetCollection[T]
+  extends typingsSlinky.ecol.hashMultiSetCollectionMod.HashMultiSetCollection[T]
 
 @JSImport("samchon/collections", "HashMultiSetCollection")
 @js.native
@@ -20,7 +21,7 @@ object HashMultiSetCollection extends js.Object {
     /* type */ String, 
     /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ /* first */ js.Any, 
     /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ /* last */ js.Any, 
-    typingsSlinky.ecol.libBasicCollectionEventMod.CollectionEvent[
+    typingsSlinky.ecol.collectionEventMod.CollectionEvent[
       js.Object, 
       Container[
         /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
@@ -29,36 +30,20 @@ object HashMultiSetCollection extends js.Object {
         /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
       ], 
-      typingsSlinky.tstl.baseIteratorIteratorMod.Iterator[
-        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
-      ], 
-      typingsSlinky.tstl.tstlMod.base.ReverseIterator[
-        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam SourceT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam IteratorT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam ReverseT */ js.Any, 
-        /* import warning: RewrittenClass.unapply cls was tparam T */ js.Any
-      ]
+      js.Iterator[/* import warning: RewrittenClass.unapply cls was tparam T */ js.Any], 
+      /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify std.base.ReverseIterator<T, SourceT, IteratorT, ReverseT> */ js.Any
     ]
   ] = js.native
   val Iterator: Instantiable0[
-    typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
+    typingsSlinky.tstl.setElementListMod.SetElementList.Iterator[
       js.Object, 
       Boolean, 
       SetContainer[
         /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-          /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
-        ], 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
+        IteratoranyanyanyEquals, 
+        typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
           /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
@@ -67,19 +52,15 @@ object HashMultiSetCollection extends js.Object {
     ]
   ] = js.native
   val ReverseIterator: Instantiable0[
-    typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
+    typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
       js.Object, 
       Boolean, 
       SetContainer[
         /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
         /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any, 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.Iterator[
-          /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
-          /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any
-        ], 
-        typingsSlinky.tstl.baseContainerSetElementListMod.SetElementList.ReverseIterator[
+        IteratoranyanyanyEquals, 
+        typingsSlinky.tstl.setElementListMod.SetElementList.ReverseIterator[
           /* import warning: RewrittenClass.unapply cls was tparam Key */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam Unique */ js.Any, 
           /* import warning: RewrittenClass.unapply cls was tparam Source */ js.Any

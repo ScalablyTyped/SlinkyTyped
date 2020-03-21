@@ -1,6 +1,6 @@
 package typingsSlinky.drivelist
 
-import typingsSlinky.drivelist.drivelistMod.BusType
+import typingsSlinky.drivelist.mod.BusType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

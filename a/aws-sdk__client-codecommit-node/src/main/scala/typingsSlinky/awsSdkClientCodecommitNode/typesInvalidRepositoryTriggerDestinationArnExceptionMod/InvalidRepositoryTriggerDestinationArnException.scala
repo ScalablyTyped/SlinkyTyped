@@ -1,0 +1,18 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesInvalidRepositoryTriggerDestinationArnExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.putRepositoryTriggersExceptionsUnionMod.PutRepositoryTriggersExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.testRepositoryTriggersExceptionsUnionMod.TestRepositoryTriggersExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidRepositoryTriggerDestinationArnException
+  extends ServiceException[InvalidRepositoryTriggerDestinationArnExceptionDetails]
+     with PutRepositoryTriggersExceptionsUnion
+     with TestRepositoryTriggersExceptionsUnion {
+  @JSName("name")
+  var name_InvalidRepositoryTriggerDestinationArnException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidRepositoryTriggerDestinationArnException = js.native
+}
+

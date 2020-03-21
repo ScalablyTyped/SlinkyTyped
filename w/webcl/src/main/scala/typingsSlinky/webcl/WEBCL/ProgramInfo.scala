@@ -13,10 +13,10 @@ import scala.scalajs.js.annotation._
 //MAP_WRITE                                 = 0x2, // disallowed
 /* cl_prograinfo */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1161`
-  - typings.webcl.webclNumbers.`0x1162`
-  - typings.webcl.webclNumbers.`0x1163`
-  - typings.webcl.webclNumbers.`0x1164`
+  - typingsSlinky.webcl.webclNumbers.`0x1161`
+  - typingsSlinky.webcl.webclNumbers.`0x1162`
+  - typingsSlinky.webcl.webclNumbers.`0x1163`
+  - typingsSlinky.webcl.webclNumbers.`0x1164`
 */
 trait ProgramInfo extends js.Object
 

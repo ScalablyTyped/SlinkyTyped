@@ -12,7 +12,7 @@ PhosphorJS - Generic Collections
 | Keywords           | - |
 | # releases         | 3 |
 | # dependents       | 2 |
-| # downloads        | 1666650 |
+| # downloads        | 1706453 |
 | # stars            | 0 |
 
 ## Links

@@ -1,8 +1,8 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesBar
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColor
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BarBorderColorBarBorderRadius
+import typingsSlinky.echarts.AnonBarBorderRadius
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonFontFamily
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,14 +11,14 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-bar.data.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BarBorderColorBarBorderRadius] = js.undefined
+  var itemStyle: js.UndefOr[AnonBarBorderRadius] = js.undefined
   /**
     * The style setting of the text label in a single bar.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.data.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColor] = js.undefined
+  var label: js.UndefOr[AnonFontFamily] = js.undefined
   /**
     * The name of data item.
     *
@@ -32,7 +32,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.data.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * The value of a single data item.
     *
@@ -45,10 +45,10 @@ trait DataObject extends js.Object {
 object DataObject {
   @scala.inline
   def apply(
-    itemStyle: Anon_BarBorderColorBarBorderRadius = null,
-    label: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColor = null,
+    itemStyle: AnonBarBorderRadius = null,
+    label: AnonFontFamily = null,
     name: String = null,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     value: Int | Double = null
   ): DataObject = {
     val __obj = js.Dynamic.literal()

@@ -8,9 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.realm.realmStrings.discard
-  - typings.realm.realmStrings.manual
-  - typings.realm.realmStrings.recover
+  - typingsSlinky.realm.realmStrings.discard
+  - typingsSlinky.realm.realmStrings.manual
+  - typingsSlinky.realm.realmStrings.recover
 */
 trait ClientResyncMode extends js.Object
 

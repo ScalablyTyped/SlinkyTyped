@@ -5,10 +5,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.bizcharts.bizchartsMod.Guide.DataRegion
-import typingsSlinky.bizcharts.bizchartsMod.Guide.DataRegionProps
 import typingsSlinky.bizcharts.bizchartsStrings.downward
 import typingsSlinky.bizcharts.bizchartsStrings.upward
+import typingsSlinky.bizcharts.mod.Guide.DataRegion
+import typingsSlinky.bizcharts.mod.Guide.DataRegionProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,9 +44,7 @@ object GuideDataRegion
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, DataRegion] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.bizcharts.bizchartsMod.Guide.DataRegion](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, DataRegion] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Guide.DataRegion](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DataRegionProps
 }
 

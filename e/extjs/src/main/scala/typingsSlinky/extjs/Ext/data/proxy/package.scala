@@ -5,6 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object proxy {
-  type ILocalStorage = IWebStorage
-  type ISessionStorage = IWebStorage
+  type ILocalStorage = typingsSlinky.extjs.Ext.data.proxy.IWebStorage
+  type ISessionStorage = typingsSlinky.extjs.Ext.data.proxy.IWebStorage
 }

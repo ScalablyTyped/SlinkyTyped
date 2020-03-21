@@ -10,11 +10,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.microsoftteams.microsoftteamsNumbers.`0`
-  - typings.microsoftteams.microsoftteamsNumbers.`1`
-  - typings.microsoftteams.microsoftteamsNumbers.`2`
-  - typings.microsoftteams.microsoftteamsNumbers.`3`
-  - typings.microsoftteams.microsoftteamsNumbers.`4`
+  - typingsSlinky.microsoftteams.microsoftteamsNumbers.`0`
+  - typingsSlinky.microsoftteams.microsoftteamsNumbers.`1`
+  - typingsSlinky.microsoftteams.microsoftteamsNumbers.`2`
+  - typingsSlinky.microsoftteams.microsoftteamsNumbers.`3`
+  - typingsSlinky.microsoftteams.microsoftteamsNumbers.`4`
 */
 trait TeamType extends js.Object
 

@@ -2,8 +2,8 @@ package typingsSlinky.baseui.accordionMod
 
 import slinky.core.TagMod
 import typingsSlinky.baseui.baseuiStrings.expand
-import typingsSlinky.react.reactMod.Component
-import typingsSlinky.react.reactMod.Key
+import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

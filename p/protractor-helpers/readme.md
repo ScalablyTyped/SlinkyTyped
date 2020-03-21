@@ -10,9 +10,9 @@ Additional matchers / locators and helpers for system tests using protractor and
 | ------------------ | :-------------: |
 | Full name          | protractor-helpers |
 | Keywords           | protractor, spec, helpers, matchers, angular, e2e |
-| # releases         | 253 |
+| # releases         | 261 |
 | # dependents       | 0 |
-| # downloads        | 82256 |
+| # downloads        | 84395 |
 | # stars            | 2 |
 
 ## Links

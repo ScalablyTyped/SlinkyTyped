@@ -374,18 +374,18 @@ trait Client extends js.Object {
     */
   def getDisplayDensity(): js.Any = js.native
   /**
-    * [jsonwp]
-    * Get the value of an element's attribute.
-    * https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol#sessionsessionidelementidattributename
-    */
-  def getElementAttribute(elementId: String, name: String): String | Null = js.native
-  /**
     * [webdriver]
     * The Get Element Attribute command will return the attribute of a web element.
     * https://w3c.github.io/webdriver/#dfn-get-element-attribute
     */
+  def getElementAttribute(elementId: String, name: String): String = js.native
+  /**
+    * [jsonwp]
+    * Get the value of an element's attribute.
+    * https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol#sessionsessionidelementidattributename
+    */
   @JSName("getElementAttribute")
-  def getElementAttribute_String(elementId: String, name: String): String = js.native
+  def getElementAttribute_Union(elementId: String, name: String): String | Null = js.native
   /**
     * [webdriver]
     * The Get Element CSS Value command retrieves the computed value of the given CSS property of the given web element.
@@ -784,18 +784,18 @@ trait Client extends js.Object {
     */
   def manageSeleniumHubLifecycle(action: String): Unit = js.native
   /**
-    * [webdriver]
-    * The Maximize Window command invokes the window manager-specific "maximize" operation, if any, on the window containing the current top-level browsing context. This typically increases the window to the maximum available size without going full-screen.
-    * https://w3c.github.io/webdriver/#dfn-maximize-window
-    */
-  def maximizeWindow(): RectReturn = js.native
-  /**
     * [jsonwp]
     * Maximize the current focused window if not already maximized.
     * https://github.com/SeleniumHQ/selenium/wiki/JsonWireProtocol#sessionsessionidwindowwindowhandlemaximize
     */
+  def maximizeWindow(): Unit = js.native
+  /**
+    * [webdriver]
+    * The Maximize Window command invokes the window manager-specific "maximize" operation, if any, on the window containing the current top-level browsing context. This typically increases the window to the maximum available size without going full-screen.
+    * https://w3c.github.io/webdriver/#dfn-maximize-window
+    */
   @JSName("maximizeWindow")
-  def maximizeWindow_Unit(): Unit = js.native
+  def maximizeWindow_RectReturn(): RectReturn = js.native
   /**
     * [webdriver]
     * The Minimize Window command invokes the window manager-specific "minimize" operation, if any, on the window containing the current top-level browsing context. This typically hides the window in the system tray.

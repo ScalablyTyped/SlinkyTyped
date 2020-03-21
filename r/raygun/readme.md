@@ -12,7 +12,7 @@ Raygun.io plugin for Node
 | Keywords           | - |
 | # releases         | 2 |
 | # dependents       | 18 |
-| # downloads        | 864063 |
+| # downloads        | 888350 |
 | # stars            | 0 |
 
 ## Links

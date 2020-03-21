@@ -5,10 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.arangodb.arangodbStrings.hash
-  - typings.arangodb.arangodbStrings.skiplist
-  - typings.arangodb.arangodbStrings.fulltext
-  - typings.arangodb.arangodbStrings.geo
+  - typingsSlinky.arangodb.arangodbStrings.hash
+  - typingsSlinky.arangodb.arangodbStrings.skiplist
+  - typingsSlinky.arangodb.arangodbStrings.fulltext
+  - typingsSlinky.arangodb.arangodbStrings.geo
+  - typingsSlinky.arangodb.arangodbStrings.ttl
 */
 trait IndexType extends js.Object
 
@@ -23,5 +24,7 @@ object IndexType {
   def hash: typingsSlinky.arangodb.arangodbStrings.hash = this.cast("hash")
   @scala.inline
   def skiplist: typingsSlinky.arangodb.arangodbStrings.skiplist = this.cast("skiplist")
+  @scala.inline
+  def ttl: typingsSlinky.arangodb.arangodbStrings.ttl = this.cast("ttl")
 }
 

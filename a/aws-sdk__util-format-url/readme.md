@@ -9,9 +9,9 @@ Typings are for version 0.1.0-preview.1
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/util-format-url |
 | Keywords           | - |
-| # releases         | 8 |
+| # releases         | 9 |
 | # dependents       | 3 |
-| # downloads        | 1554 |
+| # downloads        | 1594 |
 | # stars            | 0 |
 
 ## Links

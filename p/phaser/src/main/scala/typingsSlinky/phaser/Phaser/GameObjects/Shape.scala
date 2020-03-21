@@ -1,6 +1,6 @@
 package typingsSlinky.phaser.Phaser.GameObjects
 
-import typingsSlinky.phaser.Phaser.GameObjects.Components.Alpha
+import typingsSlinky.phaser.Phaser.GameObjects.Components.AlphaSingle
 import typingsSlinky.phaser.Phaser.GameObjects.Components.BlendMode
 import typingsSlinky.phaser.Phaser.GameObjects.Components.ComputedSize
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Depth
@@ -25,7 +25,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Shape protected ()
   extends GameObject
-     with Alpha
+     with AlphaSingle
      with BlendMode
      with ComputedSize
      with Depth

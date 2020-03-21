@@ -1,8 +1,8 @@
 package typingsSlinky.stylelint
 
-import typingsSlinky.stylelint.stylelintMod.Severity
-import typingsSlinky.stylelint.stylelintMod.SyntaxType
-import typingsSlinky.stylelint.stylelintMod._FormatterType
+import typingsSlinky.stylelint.mod.Severity
+import typingsSlinky.stylelint.mod.SyntaxType
+import typingsSlinky.stylelint.mod._FormatterType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

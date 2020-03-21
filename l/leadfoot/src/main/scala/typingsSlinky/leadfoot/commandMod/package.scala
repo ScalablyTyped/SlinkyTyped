@@ -7,6 +7,6 @@ import scala.scalajs.js.annotation._
 package object commandMod {
   type ContextSetter = js.Function1[
     /* context */ typingsSlinky.leadfoot.elementMod.^  | js.Array[typingsSlinky.leadfoot.elementMod.^], 
-    Unit
+    scala.Unit
   ]
 }

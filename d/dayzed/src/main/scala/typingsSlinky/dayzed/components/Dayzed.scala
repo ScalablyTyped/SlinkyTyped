@@ -5,9 +5,6 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.dayzed.dayzedMod.DateObj
-import typingsSlinky.dayzed.dayzedMod.RenderProps
-import typingsSlinky.dayzed.dayzedMod.default
 import typingsSlinky.dayzed.dayzedNumbers.`0`
 import typingsSlinky.dayzed.dayzedNumbers.`1`
 import typingsSlinky.dayzed.dayzedNumbers.`2`
@@ -15,6 +12,9 @@ import typingsSlinky.dayzed.dayzedNumbers.`3`
 import typingsSlinky.dayzed.dayzedNumbers.`4`
 import typingsSlinky.dayzed.dayzedNumbers.`5`
 import typingsSlinky.dayzed.dayzedNumbers.`6`
+import typingsSlinky.dayzed.mod.DateObj
+import typingsSlinky.dayzed.mod.RenderProps
+import typingsSlinky.dayzed.mod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,6 +54,6 @@ object Dayzed
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  type Props = typingsSlinky.dayzed.dayzedMod.Props
+  type Props = typingsSlinky.dayzed.mod.Props
 }
 

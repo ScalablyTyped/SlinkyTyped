@@ -11,8 +11,8 @@ Typings are for version 1.0
 | Full name          | get-caller-file |
 | Keywords           | - |
 | # releases         | 8 |
-| # dependents       | 87 |
-| # downloads        | 515274683 |
+| # dependents       | 88 |
+| # downloads        | 543056825 |
 | # stars            | 1 |
 
 ## Links

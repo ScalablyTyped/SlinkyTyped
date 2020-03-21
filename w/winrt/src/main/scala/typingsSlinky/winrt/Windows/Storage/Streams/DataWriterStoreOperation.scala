@@ -1,6 +1,6 @@
 package typingsSlinky.winrt.Windows.Storage.Streams
 
-import typingsSlinky.winrt.Anon_CompletedGetResultsAsyncOperationCompletedHandlerNumber
+import typingsSlinky.winrt.Anon7
 import typingsSlinky.winrt.Windows.Foundation.AsyncOperationCompletedHandler
 import typingsSlinky.winrt.Windows.Foundation.AsyncStatus
 import typingsSlinky.winrt.Windows.Foundation.IAsyncInfo
@@ -21,7 +21,7 @@ class DataWriterStoreOperation ()
   /* CompleteClass */
   override var id: Double = js.native
   @JSName("operation")
-  var operation_DataWriterStoreOperation: Anon_CompletedGetResultsAsyncOperationCompletedHandlerNumber = js.native
+  var operation_DataWriterStoreOperation: Anon7 = js.native
   /* CompleteClass */
   override var status: AsyncStatus = js.native
   /* InferMemberOverrides */

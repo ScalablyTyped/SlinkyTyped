@@ -12,7 +12,7 @@ Minimal ORM for mysql, postgresql and sqlite with complete arbitrary SQL query s
 | Keywords           | any, db, sql, orm, postgres, pg, postgresql, mysql, sqlite |
 | # releases         | 5 |
 | # dependents       | 4 |
-| # downloads        | 8919 |
+| # downloads        | 8314 |
 | # stars            | 3 |
 
 ## Links

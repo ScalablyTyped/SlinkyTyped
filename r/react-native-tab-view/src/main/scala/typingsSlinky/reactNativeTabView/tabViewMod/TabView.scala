@@ -1,0 +1,18 @@
+package typingsSlinky.reactNativeTabView.tabViewMod
+
+import typingsSlinky.react.mod.Component
+import typingsSlinky.reactNativeTabView.AnonLayout
+import typingsSlinky.reactNativeTabView.typesMod.Route
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TabView[T /* <: Route */]
+  extends Component[Props[T], State, js.Any] {
+  var handleLayout: js.Any = js.native
+  var jumpToIndex: js.Any = js.native
+  @JSName("state")
+  var state_TabView: AnonLayout = js.native
+}
+

@@ -1,6 +1,6 @@
 package typingsSlinky.mongodb
 
-import typingsSlinky.mongodb.mongodbMod.SortValues
+import typingsSlinky.mongodb.mod.SortValues
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

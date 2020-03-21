@@ -12,7 +12,7 @@ Validate a response according to an openapi schema.
 | Keywords           | openapi, validation, jsonschema, response |
 | # releases         | 20 |
 | # dependents       | 3 |
-| # downloads        | 432292 |
+| # downloads        | 460270 |
 | # stars            | 0 |
 
 ## Links

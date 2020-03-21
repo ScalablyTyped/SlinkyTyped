@@ -5,15 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.googlemaps.googlemapsStrings.all
-  - typings.googlemaps.googlemapsStrings.geometry
-  - typings.googlemaps.googlemapsStrings.geometryDotfill
-  - typings.googlemaps.googlemapsStrings.geometryDotstroke
-  - typings.googlemaps.googlemapsStrings.labels
-  - typings.googlemaps.googlemapsStrings.labelsDoticon
-  - typings.googlemaps.googlemapsStrings.labelsDottext
-  - typings.googlemaps.googlemapsStrings.labelsDottextDotfill
-  - typings.googlemaps.googlemapsStrings.labelsDottextDotstroke
+  - typingsSlinky.googlemaps.googlemapsStrings.all
+  - typingsSlinky.googlemaps.googlemapsStrings.geometry
+  - typingsSlinky.googlemaps.googlemapsStrings.geometryDotfill
+  - typingsSlinky.googlemaps.googlemapsStrings.geometryDotstroke
+  - typingsSlinky.googlemaps.googlemapsStrings.labels
+  - typingsSlinky.googlemaps.googlemapsStrings.labelsDoticon
+  - typingsSlinky.googlemaps.googlemapsStrings.labelsDottext
+  - typingsSlinky.googlemaps.googlemapsStrings.labelsDottextDotfill
+  - typingsSlinky.googlemaps.googlemapsStrings.labelsDottextDotstroke
 */
 trait MapTypeStyleElementType extends js.Object
 

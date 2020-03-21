@@ -1,7 +1,7 @@
 package typingsSlinky.elasticlunr
 
-import typingsSlinky.elasticlunr.elasticlunrMod.Bool
-import typingsSlinky.elasticlunr.elasticlunrMod.EventType
+import typingsSlinky.elasticlunr.mod.Bool
+import typingsSlinky.elasticlunr.mod.EventType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

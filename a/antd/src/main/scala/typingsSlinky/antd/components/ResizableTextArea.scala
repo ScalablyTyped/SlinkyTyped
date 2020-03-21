@@ -1,11 +1,11 @@
 package typingsSlinky.antd.components
 
-import typingsSlinky.antd.libInputResizableTextAreaMod.default
+import typingsSlinky.antd.resizableTextAreaMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object ResizableTextArea extends SharedApply_TextAreaProps_343676828[default] {
+object ResizableTextArea extends SharedApply_TextAreaProps_439891318[default] {
   @JSImport("antd/lib/input/ResizableTextArea", JSImport.Default)
   @js.native
   object componentImport extends js.Object

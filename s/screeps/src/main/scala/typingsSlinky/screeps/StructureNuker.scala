@@ -1,7 +1,6 @@
 package typingsSlinky.screeps
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.screeps.screepsBooleans.`false`
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -44,7 +43,7 @@ trait StructureNuker
   /**
     * A Store object that contains cargo of this structure.
     */
-  var store: Store[RESOURCE_ENERGY | RESOURCE_GHODIUM, `false`]
+  var store: StoreRESOURCEENERGYRESOURAlloy
   /**
     * Launch a nuke to the specified position.
     * @param pos The target room position.

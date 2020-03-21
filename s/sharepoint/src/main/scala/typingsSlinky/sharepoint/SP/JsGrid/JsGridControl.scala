@@ -2,8 +2,8 @@ package typingsSlinky.sharepoint.SP.JsGrid
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.microsoftDashAjax.Sys.UI.DomEvent
-import typingsSlinky.sharepoint.Anon_Begin
+import typingsSlinky.microsoftAjax.Sys.UI.DomEvent
+import typingsSlinky.sharepoint.AnonBegin
 import typingsSlinky.sharepoint.SP.JsGrid.Internal.DiffTracker
 import typingsSlinky.sharepoint.SP.JsGrid.JsGridControl.Parameters
 import typingsSlinky.sharepoint.SP.Utilities.Set
@@ -95,7 +95,7 @@ class JsGridControl protected () extends js.Object {
   def GetColumnByFieldKey(fieldKey: String, optPaneId: js.Any): ColumnInfo = js.native
   def GetColumns(): js.Array[ColumnInfo] = js.native
   def GetColumns(optPaneId: String): js.Array[ColumnInfo] = js.native
-  def GetContiguousRowSelectionWithoutEntryRecords(): Anon_Begin = js.native
+  def GetContiguousRowSelectionWithoutEntryRecords(): AnonBegin = js.native
   def GetCurrentChangeKey(): js.Any = js.native
   /** Get current delegate. */
   def GetDelegate(delegateKey: DelegateType): js.Any = js.native

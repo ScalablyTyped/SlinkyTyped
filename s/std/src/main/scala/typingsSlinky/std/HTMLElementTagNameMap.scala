@@ -8,14 +8,14 @@ trait HTMLElementTagNameMap extends js.Object {
   var a: org.scalajs.dom.raw.HTMLAnchorElement
   var abbr: org.scalajs.dom.raw.HTMLElement
   var address: org.scalajs.dom.raw.HTMLElement
-  var applet: org.scalajs.dom.raw.HTMLAppletElement
+  var applet: HTMLAppletElement
   var area: org.scalajs.dom.raw.HTMLAreaElement
   var article: org.scalajs.dom.raw.HTMLElement
   var aside: org.scalajs.dom.raw.HTMLElement
   var audio: org.scalajs.dom.raw.HTMLAudioElement
   var b: org.scalajs.dom.raw.HTMLElement
   var base: org.scalajs.dom.raw.HTMLBaseElement
-  var basefont: org.scalajs.dom.raw.HTMLBaseFontElement
+  var basefont: HTMLBaseFontElement
   var bdi: org.scalajs.dom.raw.HTMLElement
   var bdo: org.scalajs.dom.raw.HTMLElement
   var blockquote: org.scalajs.dom.raw.HTMLQuoteElement
@@ -35,7 +35,7 @@ trait HTMLElementTagNameMap extends js.Object {
   var details: HTMLDetailsElement
   var dfn: org.scalajs.dom.raw.HTMLElement
   var dialog: HTMLDialogElement
-  var dir: org.scalajs.dom.raw.HTMLDirectoryElement
+  var dir: HTMLDirectoryElement
   var div: org.scalajs.dom.raw.HTMLDivElement
   var dl: org.scalajs.dom.raw.HTMLDListElement
   var dt: org.scalajs.dom.raw.HTMLElement
@@ -44,11 +44,11 @@ trait HTMLElementTagNameMap extends js.Object {
   var fieldset: org.scalajs.dom.raw.HTMLFieldSetElement
   var figcaption: org.scalajs.dom.raw.HTMLElement
   var figure: org.scalajs.dom.raw.HTMLElement
-  var font: org.scalajs.dom.raw.HTMLFontElement
+  var font: HTMLFontElement
   var footer: org.scalajs.dom.raw.HTMLElement
   var form: org.scalajs.dom.raw.HTMLFormElement
-  var frame: org.scalajs.dom.raw.HTMLFrameElement
-  var frameset: org.scalajs.dom.raw.HTMLFrameSetElement
+  var frame: HTMLFrameElement
+  var frameset: HTMLFrameSetElement
   var h1: org.scalajs.dom.raw.HTMLHeadingElement
   var h2: org.scalajs.dom.raw.HTMLHeadingElement
   var h3: org.scalajs.dom.raw.HTMLHeadingElement
@@ -73,7 +73,7 @@ trait HTMLElementTagNameMap extends js.Object {
   var main: org.scalajs.dom.raw.HTMLElement
   var map: org.scalajs.dom.raw.HTMLMapElement
   var mark: org.scalajs.dom.raw.HTMLElement
-  var marquee: org.scalajs.dom.raw.HTMLMarqueeElement
+  var marquee: HTMLMarqueeElement
   var menu: org.scalajs.dom.raw.HTMLMenuElement
   var meta: org.scalajs.dom.raw.HTMLMetaElement
   var meter: HTMLMeterElement
@@ -109,11 +109,11 @@ trait HTMLElementTagNameMap extends js.Object {
   var sup: org.scalajs.dom.raw.HTMLElement
   var table: org.scalajs.dom.raw.HTMLTableElement
   var tbody: org.scalajs.dom.raw.HTMLTableSectionElement
-  var td: org.scalajs.dom.raw.HTMLTableDataCellElement
+  var td: HTMLTableDataCellElement
   var template: HTMLTemplateElement
   var textarea: org.scalajs.dom.raw.HTMLTextAreaElement
   var tfoot: org.scalajs.dom.raw.HTMLTableSectionElement
-  var th: org.scalajs.dom.raw.HTMLTableHeaderCellElement
+  var th: HTMLTableHeaderCellElement
   var thead: org.scalajs.dom.raw.HTMLTableSectionElement
   var time: HTMLTimeElement
   var title: org.scalajs.dom.raw.HTMLTitleElement
@@ -132,14 +132,14 @@ object HTMLElementTagNameMap {
     a: org.scalajs.dom.raw.HTMLAnchorElement,
     abbr: org.scalajs.dom.raw.HTMLElement,
     address: org.scalajs.dom.raw.HTMLElement,
-    applet: org.scalajs.dom.raw.HTMLAppletElement,
+    applet: HTMLAppletElement,
     area: org.scalajs.dom.raw.HTMLAreaElement,
     article: org.scalajs.dom.raw.HTMLElement,
     aside: org.scalajs.dom.raw.HTMLElement,
     audio: org.scalajs.dom.raw.HTMLAudioElement,
     b: org.scalajs.dom.raw.HTMLElement,
     base: org.scalajs.dom.raw.HTMLBaseElement,
-    basefont: org.scalajs.dom.raw.HTMLBaseFontElement,
+    basefont: HTMLBaseFontElement,
     bdi: org.scalajs.dom.raw.HTMLElement,
     bdo: org.scalajs.dom.raw.HTMLElement,
     blockquote: org.scalajs.dom.raw.HTMLQuoteElement,
@@ -159,7 +159,7 @@ object HTMLElementTagNameMap {
     details: HTMLDetailsElement,
     dfn: org.scalajs.dom.raw.HTMLElement,
     dialog: HTMLDialogElement,
-    dir: org.scalajs.dom.raw.HTMLDirectoryElement,
+    dir: HTMLDirectoryElement,
     div: org.scalajs.dom.raw.HTMLDivElement,
     dl: org.scalajs.dom.raw.HTMLDListElement,
     dt: org.scalajs.dom.raw.HTMLElement,
@@ -168,11 +168,11 @@ object HTMLElementTagNameMap {
     fieldset: org.scalajs.dom.raw.HTMLFieldSetElement,
     figcaption: org.scalajs.dom.raw.HTMLElement,
     figure: org.scalajs.dom.raw.HTMLElement,
-    font: org.scalajs.dom.raw.HTMLFontElement,
+    font: HTMLFontElement,
     footer: org.scalajs.dom.raw.HTMLElement,
     form: org.scalajs.dom.raw.HTMLFormElement,
-    frame: org.scalajs.dom.raw.HTMLFrameElement,
-    frameset: org.scalajs.dom.raw.HTMLFrameSetElement,
+    frame: HTMLFrameElement,
+    frameset: HTMLFrameSetElement,
     h1: org.scalajs.dom.raw.HTMLHeadingElement,
     h2: org.scalajs.dom.raw.HTMLHeadingElement,
     h3: org.scalajs.dom.raw.HTMLHeadingElement,
@@ -197,7 +197,7 @@ object HTMLElementTagNameMap {
     main: org.scalajs.dom.raw.HTMLElement,
     map: org.scalajs.dom.raw.HTMLMapElement,
     mark: org.scalajs.dom.raw.HTMLElement,
-    marquee: org.scalajs.dom.raw.HTMLMarqueeElement,
+    marquee: HTMLMarqueeElement,
     menu: org.scalajs.dom.raw.HTMLMenuElement,
     meta: org.scalajs.dom.raw.HTMLMetaElement,
     meter: HTMLMeterElement,
@@ -233,11 +233,11 @@ object HTMLElementTagNameMap {
     sup: org.scalajs.dom.raw.HTMLElement,
     table: org.scalajs.dom.raw.HTMLTableElement,
     tbody: org.scalajs.dom.raw.HTMLTableSectionElement,
-    td: org.scalajs.dom.raw.HTMLTableDataCellElement,
+    td: HTMLTableDataCellElement,
     template: HTMLTemplateElement,
     textarea: org.scalajs.dom.raw.HTMLTextAreaElement,
     tfoot: org.scalajs.dom.raw.HTMLTableSectionElement,
-    th: org.scalajs.dom.raw.HTMLTableHeaderCellElement,
+    th: HTMLTableHeaderCellElement,
     thead: org.scalajs.dom.raw.HTMLTableSectionElement,
     time: HTMLTimeElement,
     title: org.scalajs.dom.raw.HTMLTitleElement,

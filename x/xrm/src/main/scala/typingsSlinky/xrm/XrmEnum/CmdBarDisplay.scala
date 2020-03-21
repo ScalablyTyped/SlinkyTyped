@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   * @see {@link Xrm.Url.CmdBarDisplay}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.`true`
-  - typings.xrm.xrmStrings.`false`
+  - typingsSlinky.xrm.xrmStrings.`true`
+  - typingsSlinky.xrm.xrmStrings.`false`
 */
 trait CmdBarDisplay extends js.Object
 

@@ -5,7 +5,6 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.ink.inkMod.BoxProps
 import typingsSlinky.ink.inkStrings.`column-reverse`
 import typingsSlinky.ink.inkStrings.`flex-end`
 import typingsSlinky.ink.inkStrings.`flex-start`
@@ -20,12 +19,13 @@ import typingsSlinky.ink.inkStrings.column
 import typingsSlinky.ink.inkStrings.row
 import typingsSlinky.ink.inkStrings.truncate
 import typingsSlinky.ink.inkStrings.wrap
+import typingsSlinky.ink.mod.BoxProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Box
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.ink.inkMod.Box] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.ink.mod.Box] {
   @JSImport("ink", "Box")
   @js.native
   object componentImport extends js.Object
@@ -57,7 +57,7 @@ object Box
     paddingY: Int | Double = null,
     textWrap: wrap | truncate | `truncate-start` | `truncate-middle` | `truncate-end` = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.ink.inkMod.Box] = {
+  ): BuildingComponent[tag.type, typingsSlinky.ink.mod.Box] = {
     val __obj = js.Dynamic.literal()
     if (alignItems != null) __obj.updateDynamic("alignItems")(alignItems.asInstanceOf[js.Any])
     if (flexBasis != null) __obj.updateDynamic("flexBasis")(flexBasis.asInstanceOf[js.Any])
@@ -85,7 +85,7 @@ object Box
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.ink.inkMod.Box] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.ink.inkMod.Box](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.ink.mod.Box] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.ink.mod.Box](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = BoxProps
 }
 

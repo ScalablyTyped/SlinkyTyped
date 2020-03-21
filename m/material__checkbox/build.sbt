@@ -1,18 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "material__checkbox"
-version := "0.35-dt-20191126Z-fd5d80"
-scalaVersion := "2.12.10"
+version := "0.35-dt-20191126Z-412db5"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "material__base" % "0.35-dt-20191126Z-acdc3a",
-  "org.scalablytyped.slinky" %%% "material__ripple" % "0.35-dt-20191126Z-873c94",
-  "org.scalablytyped.slinky" %%% "material__selection-control" % "0.35-dt-20190213Z-f23dab",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "material__base" % "0.35-dt-20191126Z-80ccb3",
+  "org.scalablytyped.slinky" %%% "material__ripple" % "0.35-dt-20191126Z-ef7835",
+  "org.scalablytyped.slinky" %%% "material__selection-control" % "0.35-dt-20190213Z-5fa5c2",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

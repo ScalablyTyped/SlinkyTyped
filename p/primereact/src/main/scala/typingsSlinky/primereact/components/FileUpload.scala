@@ -6,22 +6,24 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_Files
-import typingsSlinky.primereact.Anon_FilesAny
-import typingsSlinky.primereact.Anon_FormData
-import typingsSlinky.primereact.componentsFileuploadFileUploadMod.FileUploadProps
+import typingsSlinky.primereact.AnonFiles
+import typingsSlinky.primereact.AnonFilesAny
+import typingsSlinky.primereact.AnonFilesOriginalEvent
+import typingsSlinky.primereact.AnonFormData
+import typingsSlinky.primereact.AnonProgress
+import typingsSlinky.primereact.fileUploadMod.FileUploadProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FileUpload
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.fileuploadMod.FileUpload] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactFileuploadMod.FileUpload] {
   @JSImport("primereact/fileupload", "FileUpload")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: accept, className, disabled, id, multiple, name, onError, onProgress, onSelect */
+  /* The following DOM/SVG props were specified: accept, className, disabled, id, multiple, name */
   def apply(
     auto: js.UndefOr[Boolean] = js.undefined,
     cancelLabel: String = null,
@@ -31,19 +33,22 @@ object FileUpload
     invalidFileSizeMessageSummary: String = null,
     maxFileSize: Int | Double = null,
     mode: String = null,
-    onBeforeSend: /* e */ Anon_FormData => Unit = null,
-    onBeforeUpload: /* e */ Anon_FormData => Unit = null,
+    onBeforeSend: /* e */ AnonFormData => Unit = null,
+    onBeforeUpload: /* e */ AnonFormData => Unit = null,
     onClear: () => Unit = null,
-    onUpload: /* e */ Anon_Files => Unit = null,
+    onError: /* e */ AnonFiles => Unit = null,
+    onProgress: /* e */ AnonProgress => Unit = null,
+    onSelect: /* e */ AnonFilesOriginalEvent => Unit = null,
+    onUpload: /* e */ AnonFiles => Unit = null,
     onValidationFail: /* file */ File => Unit = null,
     previewWidth: Int | Double = null,
     style: js.Object = null,
-    uploadHandler: /* e */ Anon_FilesAny => Unit = null,
+    uploadHandler: /* e */ AnonFilesAny => Unit = null,
     uploadLabel: String = null,
     url: String = null,
     withCredentials: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.fileuploadMod.FileUpload] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactFileuploadMod.FileUpload] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(auto)) __obj.updateDynamic("auto")(auto.asInstanceOf[js.Any])
     if (cancelLabel != null) __obj.updateDynamic("cancelLabel")(cancelLabel.asInstanceOf[js.Any])
@@ -56,6 +61,9 @@ object FileUpload
     if (onBeforeSend != null) __obj.updateDynamic("onBeforeSend")(js.Any.fromFunction1(onBeforeSend))
     if (onBeforeUpload != null) __obj.updateDynamic("onBeforeUpload")(js.Any.fromFunction1(onBeforeUpload))
     if (onClear != null) __obj.updateDynamic("onClear")(js.Any.fromFunction0(onClear))
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
     if (onUpload != null) __obj.updateDynamic("onUpload")(js.Any.fromFunction1(onUpload))
     if (onValidationFail != null) __obj.updateDynamic("onValidationFail")(js.Any.fromFunction1(onValidationFail))
     if (previewWidth != null) __obj.updateDynamic("previewWidth")(previewWidth.asInstanceOf[js.Any])
@@ -67,7 +75,9 @@ object FileUpload
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.fileuploadMod.FileUpload] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.fileuploadMod.FileUpload](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactFileuploadMod.FileUpload] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactFileuploadMod.FileUpload](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = FileUploadProps
 }
 

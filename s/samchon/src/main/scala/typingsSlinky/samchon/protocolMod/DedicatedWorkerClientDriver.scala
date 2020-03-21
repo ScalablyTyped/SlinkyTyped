@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation._
   * Default Constructor.
   */
 class DedicatedWorkerClientDriver ()
-  extends typingsSlinky.samchon.protocolCommunicatorClientUnderscoreDriverDedicatedWorkerClientDriverMod.DedicatedWorkerClientDriver
+  extends typingsSlinky.samchon.dedicatedWorkerClientDriverMod.DedicatedWorkerClientDriver
 

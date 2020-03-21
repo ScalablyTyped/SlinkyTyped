@@ -5,13 +5,13 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.formol.formolMod.ConditionalProps
+import typingsSlinky.formol.mod.ConditionalProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Conditional
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.formol.formolMod.Conditional] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.formol.mod.Conditional] {
   @JSImport("formol", "Conditional")
   @js.native
   object componentImport extends js.Object
@@ -23,7 +23,7 @@ object Conditional
     show: (js.Function1[js.Any, Boolean]) | Boolean = null,
     value: js.Any => _ = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.formol.formolMod.Conditional] = {
+  ): BuildingComponent[tag.type, typingsSlinky.formol.mod.Conditional] = {
     val __obj = js.Dynamic.literal()
     if (context != null) __obj.updateDynamic("context")(context.asInstanceOf[js.Any])
     if (readOnly != null) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
@@ -32,7 +32,7 @@ object Conditional
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.formol.formolMod.Conditional] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.formol.formolMod.Conditional](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.formol.mod.Conditional] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.formol.mod.Conditional](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ConditionalProps[js.Any]
 }
 

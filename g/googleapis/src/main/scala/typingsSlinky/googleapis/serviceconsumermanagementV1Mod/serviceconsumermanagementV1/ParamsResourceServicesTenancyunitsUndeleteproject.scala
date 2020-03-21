@@ -1,0 +1,27 @@
+package typingsSlinky.googleapis.serviceconsumermanagementV1Mod.serviceconsumermanagementV1
+
+import typingsSlinky.googleAuthLibrary.mod.Compute
+import typingsSlinky.googleAuthLibrary.mod.JWT
+import typingsSlinky.googleAuthLibrary.mod.OAuth2Client
+import typingsSlinky.googleAuthLibrary.mod.UserRefreshClient
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ParamsResourceServicesTenancyunitsUndeleteproject extends StandardParameters {
+  /**
+    * Auth client or API Key for the request
+    */
+  var auth: js.UndefOr[String | OAuth2Client | JWT | Compute | UserRefreshClient] = js.native
+  /**
+    * Name of the tenancy unit. Such as
+    * 'services/service.googleapis.com/projects/12345/tenancyUnits/abcd'.
+    */
+  var name: js.UndefOr[String] = js.native
+  /**
+    * Request body metadata
+    */
+  var requestBody: js.UndefOr[SchemaUndeleteTenantProjectRequest] = js.native
+}
+

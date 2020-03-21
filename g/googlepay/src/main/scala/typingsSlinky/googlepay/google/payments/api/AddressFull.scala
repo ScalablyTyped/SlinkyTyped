@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.googlepay.google.payments.api.Address because Already inherited */ trait AddressFull extends AddressMin {
+- typingsSlinky.googlepay.google.payments.api.Address because Already inherited */ trait AddressFull extends AddressMin {
   var address1: String
   var address2: String
   var address3: String

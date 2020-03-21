@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-rnd
 
-Typings are for version 10.1.3
+Typings are for version 10.1.6
 
 ## Library description:
 <p align="center"><img src ="https://github.com/bokuweb/react-rnd/blob/master/logo.png?raw=true" /></p>
@@ -10,9 +10,9 @@ Typings are for version 10.1.3
 | ------------------ | :-------------: |
 | Full name          | react-rnd |
 | Keywords           | react, resize, resizable, draggable, component |
-| # releases         | 26 |
-| # dependents       | 51 |
-| # downloads        | 1135421 |
+| # releases         | 25 |
+| # dependents       | 52 |
+| # downloads        | 1153517 |
 | # stars            | 2 |
 
 ## Links

@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 
 /* cl_bool */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0`
-  - typings.webcl.webclNumbers.`1`
+  - typingsSlinky.webcl.webclNumbers.`0`
+  - typingsSlinky.webcl.webclNumbers.`1`
 */
 trait Bool extends js.Object
 

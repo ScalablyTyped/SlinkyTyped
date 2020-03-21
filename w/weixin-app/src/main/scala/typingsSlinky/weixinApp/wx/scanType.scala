@@ -1,0 +1,22 @@
+package typingsSlinky.weixinApp.wx
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+// 设备-----扫码
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.weixinApp.weixinAppStrings.qrCode
+  - typingsSlinky.weixinApp.weixinAppStrings.barCode
+*/
+trait scanType extends js.Object
+
+object scanType {
+  @scala.inline
+  def barCode: typingsSlinky.weixinApp.weixinAppStrings.barCode = this.cast("barCode")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def qrCode: typingsSlinky.weixinApp.weixinAppStrings.qrCode = this.cast("qrCode")
+}
+

@@ -1,8 +1,8 @@
 package typingsSlinky.webdriver.WebDriver
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.webdriver.Anon_Browser
-import typingsSlinky.webdriver.Anon_BufferUsageReportingInterval
+import typingsSlinky.webdriver.AnonBrowser
+import typingsSlinky.webdriver.AnonBufferUsageReportingInterval
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -136,7 +136,7 @@ trait DesiredCapabilities extends Capabilities {
   var locationServicesEnabled: js.UndefOr[Boolean] = js.undefined
   var logFile: js.UndefOr[String] = js.undefined
   var logLevel: js.UndefOr[String] = js.undefined
-  var loggingPrefs: js.UndefOr[Anon_Browser] = js.undefined
+  var loggingPrefs: js.UndefOr[AnonBrowser] = js.undefined
   var maxInstances: js.UndefOr[Double] = js.undefined
   var mobileEmulationEnabled: js.UndefOr[Boolean] = js.undefined
   @JSName("moz:firefoxOptions")
@@ -162,7 +162,7 @@ trait DesiredCapabilities extends Capabilities {
   var orientation: js.UndefOr[String] = js.undefined
   var otherApps: js.UndefOr[String] = js.undefined
   var pageLoadingStrategy: js.UndefOr[String] = js.undefined
-  var perfLoggingPrefs: js.UndefOr[Anon_BufferUsageReportingInterval] = js.undefined
+  var perfLoggingPrefs: js.UndefOr[AnonBufferUsageReportingInterval] = js.undefined
   var platform: js.UndefOr[String] = js.undefined
   var platformVersion: js.UndefOr[String] = js.undefined
   var printPageSourceOnFindFailure: js.UndefOr[Boolean] = js.undefined
@@ -349,7 +349,7 @@ object DesiredCapabilities {
     locationServicesEnabled: js.UndefOr[Boolean] = js.undefined,
     logFile: String = null,
     logLevel: String = null,
-    loggingPrefs: Anon_Browser = null,
+    loggingPrefs: AnonBrowser = null,
     maxInstances: Int | Double = null,
     mobileEmulationEnabled: js.UndefOr[Boolean] = js.undefined,
     mozColonfirefoxOptions: FirefoxOptions = null,
@@ -371,7 +371,7 @@ object DesiredCapabilities {
     otherApps: String = null,
     pageLoadStrategy: PageLoadingStrategy = null,
     pageLoadingStrategy: String = null,
-    perfLoggingPrefs: Anon_BufferUsageReportingInterval = null,
+    perfLoggingPrefs: AnonBufferUsageReportingInterval = null,
     platform: String = null,
     platformName: String = null,
     platformVersion: String = null,

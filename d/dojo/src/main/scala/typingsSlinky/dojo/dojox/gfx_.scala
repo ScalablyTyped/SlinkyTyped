@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dojo._base.Color
+import typingsSlinky.dojo.dojo.base.Color
 import typingsSlinky.dojo.dojox.gfx.Surface
 import typingsSlinky.dojo.dojox.gfx.matrix.Matrix2D
 import scala.scalajs.js
@@ -13,7 +13,6 @@ import scala.scalajs.js.annotation._
   *
   *
   */
-@JSName("gfx")
 @js.native
 trait gfx_ extends js.Object {
   /**

@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.mermaid.mermaidStrings.default
-  - typings.mermaid.mermaidStrings.forest
-  - typings.mermaid.mermaidStrings.dark
-  - typings.mermaid.mermaidStrings.neutral
+  - typingsSlinky.mermaid.mermaidStrings.default
+  - typingsSlinky.mermaid.mermaidStrings.forest
+  - typingsSlinky.mermaid.mermaidStrings.dark
+  - typingsSlinky.mermaid.mermaidStrings.neutral
 */
 trait Theme extends js.Object
 

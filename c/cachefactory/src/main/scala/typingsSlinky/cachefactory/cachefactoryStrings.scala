@@ -1,7 +1,7 @@
 package typingsSlinky.cachefactory
 
-import typingsSlinky.cachefactory.cachefactoryMod.DeleteOnExpire
-import typingsSlinky.cachefactory.cachefactoryMod.StorageMode
+import typingsSlinky.cachefactory.mod.DeleteOnExpire
+import typingsSlinky.cachefactory.mod.StorageMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

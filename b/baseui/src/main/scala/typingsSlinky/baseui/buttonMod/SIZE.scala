@@ -11,6 +11,7 @@ trait SIZE extends js.Object {
   var compact: typingsSlinky.baseui.baseuiStrings.compact
   var default: default_
   var large: large_
+  var mini: typingsSlinky.baseui.baseuiStrings.mini
 }
 
 @JSImport("baseui/button", "SIZE")

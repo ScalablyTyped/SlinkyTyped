@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation._
 
 /* cl_image_info */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1110`
-  - typings.webcl.webclNumbers.`0x1111`
-  - typings.webcl.webclNumbers.`0x1112`
-  - typings.webcl.webclNumbers.`0x1114`
-  - typings.webcl.webclNumbers.`0x1115`
+  - typingsSlinky.webcl.webclNumbers.`0x1110`
+  - typingsSlinky.webcl.webclNumbers.`0x1111`
+  - typingsSlinky.webcl.webclNumbers.`0x1112`
+  - typingsSlinky.webcl.webclNumbers.`0x1114`
+  - typingsSlinky.webcl.webclNumbers.`0x1115`
 */
 trait ImageInfo extends js.Object
 

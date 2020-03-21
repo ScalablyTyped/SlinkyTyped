@@ -10,9 +10,9 @@ AWS credential provider that sources credentials from the EC2 instance metadata 
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/credential-provider-imds |
 | Keywords           | aws, credentials |
-| # releases         | 9 |
+| # releases         | 10 |
 | # dependents       | 1 |
-| # downloads        | 38757 |
+| # downloads        | 39488 |
 | # stars            | 0 |
 
 ## Links

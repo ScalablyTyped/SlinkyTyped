@@ -2,16 +2,17 @@ package typingsSlinky.antd.components
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
+import org.scalajs.dom.raw.MouseEvent
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libMenuMenuContextMod.MenuTheme
-import typingsSlinky.antd.libMenuMod.MenuMode
-import typingsSlinky.antd.libMenuMod.MenuProps
-import typingsSlinky.antd.libMenuMod.SelectParam
-import typingsSlinky.antd.libMenuMod.default
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.menuContextMod.MenuTheme
+import typingsSlinky.antd.menuMod.ClickParam
+import typingsSlinky.antd.menuMod.MenuMode
+import typingsSlinky.antd.menuMod.MenuProps
+import typingsSlinky.antd.menuMod.SelectParam
+import typingsSlinky.antd.menuMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +24,7 @@ object Menu
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, multiple, onClick, onMouseEnter, onSelect */
+  /* The following DOM/SVG props were specified: className, id, multiple, style */
   def apply(
     defaultOpenKeys: js.Array[String] = null,
     defaultSelectedKeys: js.Array[String] = null,
@@ -34,8 +35,11 @@ object Menu
     inlineIndent: Int | Double = null,
     mode: MenuMode = null,
     motion: js.Object = null,
+    onClick: /* param */ ClickParam => Unit = null,
     onDeselect: /* param */ SelectParam => Unit = null,
+    onMouseEnter: /* e */ MouseEvent => Unit = null,
     onOpenChange: /* openKeys */ js.Array[String] => Unit = null,
+    onSelect: /* param */ SelectParam => Unit = null,
     openAnimation: String = null,
     openKeys: js.Array[String] = null,
     openTransitionName: String = null,
@@ -43,7 +47,6 @@ object Menu
     prefixCls: String = null,
     selectable: js.UndefOr[Boolean] = js.undefined,
     selectedKeys: js.Array[String] = null,
-    style: CSSProperties = null,
     subMenuCloseDelay: Int | Double = null,
     subMenuOpenDelay: Int | Double = null,
     theme: MenuTheme = null,
@@ -59,8 +62,11 @@ object Menu
     if (inlineIndent != null) __obj.updateDynamic("inlineIndent")(inlineIndent.asInstanceOf[js.Any])
     if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
     if (motion != null) __obj.updateDynamic("motion")(motion.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
     if (onDeselect != null) __obj.updateDynamic("onDeselect")(js.Any.fromFunction1(onDeselect))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
     if (onOpenChange != null) __obj.updateDynamic("onOpenChange")(js.Any.fromFunction1(onOpenChange))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
     if (openAnimation != null) __obj.updateDynamic("openAnimation")(openAnimation.asInstanceOf[js.Any])
     if (openKeys != null) __obj.updateDynamic("openKeys")(openKeys.asInstanceOf[js.Any])
     if (openTransitionName != null) __obj.updateDynamic("openTransitionName")(openTransitionName.asInstanceOf[js.Any])
@@ -68,14 +74,13 @@ object Menu
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (!js.isUndefined(selectable)) __obj.updateDynamic("selectable")(selectable.asInstanceOf[js.Any])
     if (selectedKeys != null) __obj.updateDynamic("selectedKeys")(selectedKeys.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (subMenuCloseDelay != null) __obj.updateDynamic("subMenuCloseDelay")(subMenuCloseDelay.asInstanceOf[js.Any])
     if (subMenuOpenDelay != null) __obj.updateDynamic("subMenuOpenDelay")(subMenuOpenDelay.asInstanceOf[js.Any])
     if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libMenuMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.menuMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = MenuProps
 }
 

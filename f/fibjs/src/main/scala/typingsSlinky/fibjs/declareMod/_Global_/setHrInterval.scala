@@ -1,7 +1,7 @@
 package typingsSlinky.fibjs.declareMod._Global_
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.fibjs.Class_Timer
+import typingsSlinky.fibjs.ClassTimer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,6 +14,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object setHrInterval
   extends TopLevel[
-      js.Function3[/* callback */ js.Function, /* timeout */ Double, /* repeated */ js.Any, Class_Timer]
+      js.Function3[/* callback */ js.Function, /* timeout */ Double, /* repeated */ js.Any, ClassTimer]
     ]
 

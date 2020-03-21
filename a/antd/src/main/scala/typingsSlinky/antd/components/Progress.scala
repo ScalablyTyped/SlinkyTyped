@@ -16,12 +16,11 @@ import typingsSlinky.antd.antdStrings.round
 import typingsSlinky.antd.antdStrings.square
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.top
-import typingsSlinky.antd.libProgressMod.default
-import typingsSlinky.antd.libProgressProgressMod.ProgressGradient
-import typingsSlinky.antd.libProgressProgressMod.ProgressProps
-import typingsSlinky.antd.libProgressProgressMod.ProgressSize
-import typingsSlinky.antd.libProgressProgressMod.ProgressType
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.progressMod.default
+import typingsSlinky.antd.progressProgressMod.ProgressGradient
+import typingsSlinky.antd.progressProgressMod.ProgressProps
+import typingsSlinky.antd.progressProgressMod.ProgressSize
+import typingsSlinky.antd.progressProgressMod.ProgressType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +32,7 @@ object Progress
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
+  /* The following DOM/SVG props were specified: className, style */
   def apply(
     format: (/* percent */ js.UndefOr[Double], /* successPercent */ js.UndefOr[Double]) => TagMod[Any] = null,
     gapDegree: Int | Double = null,
@@ -43,10 +42,10 @@ object Progress
     showInfo: js.UndefOr[Boolean] = js.undefined,
     size: ProgressSize = null,
     status: normal | exception | active | success = null,
+    steps: Int | Double = null,
     strokeColor: String | ProgressGradient = null,
     strokeLinecap: butt | square | round = null,
     strokeWidth: Int | Double = null,
-    style: CSSProperties = null,
     successPercent: Int | Double = null,
     trailColor: String = null,
     `type`: ProgressType = null,
@@ -62,10 +61,10 @@ object Progress
     if (!js.isUndefined(showInfo)) __obj.updateDynamic("showInfo")(showInfo.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
+    if (steps != null) __obj.updateDynamic("steps")(steps.asInstanceOf[js.Any])
     if (strokeColor != null) __obj.updateDynamic("strokeColor")(strokeColor.asInstanceOf[js.Any])
     if (strokeLinecap != null) __obj.updateDynamic("strokeLinecap")(strokeLinecap.asInstanceOf[js.Any])
     if (strokeWidth != null) __obj.updateDynamic("strokeWidth")(strokeWidth.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (successPercent != null) __obj.updateDynamic("successPercent")(successPercent.asInstanceOf[js.Any])
     if (trailColor != null) __obj.updateDynamic("trailColor")(trailColor.asInstanceOf[js.Any])
     if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
@@ -73,7 +72,7 @@ object Progress
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libProgressMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.progressMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ProgressProps
 }
 

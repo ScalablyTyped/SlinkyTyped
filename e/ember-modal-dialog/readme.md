@@ -12,7 +12,7 @@ An ember-cli addon for implementing modal dialogs
 | Keywords           | ember-addon |
 | # releases         | 10 |
 | # dependents       | 17 |
-| # downloads        | 1148072 |
+| # downloads        | 1154961 |
 | # stars            | 11 |
 
 ## Links

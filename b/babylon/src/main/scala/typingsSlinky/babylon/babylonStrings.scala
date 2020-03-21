@@ -1,6 +1,6 @@
 package typingsSlinky.babylon
 
-import typingsSlinky.babylon.babylonMod.PluginName
+import typingsSlinky.babylon.mod.PluginName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

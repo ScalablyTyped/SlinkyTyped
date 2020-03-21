@@ -1,7 +1,7 @@
 package typingsSlinky.revalidator
 
-import typingsSlinky.revalidator.Revalidator.Formats
-import typingsSlinky.revalidator.Revalidator.Types
+import typingsSlinky.revalidator.Revalidator_.Formats
+import typingsSlinky.revalidator.Revalidator_.Types
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

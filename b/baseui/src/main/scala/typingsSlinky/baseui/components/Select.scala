@@ -1,7 +1,6 @@
 package typingsSlinky.baseui.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLInputElement
@@ -9,19 +8,22 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
-import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_LabelKey
-import typingsSlinky.baseui.Anon_Option
-import typingsSlinky.baseui.Anon_Option_1721897024
+import slinky.web.SyntheticFocusEvent
+import slinky.web.html.input.tag
+import typingsSlinky.baseui.AnonLabelKey
+import typingsSlinky.baseui.AnonOption
+import typingsSlinky.baseui.AnonOptionOption
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.search
 import typingsSlinky.baseui.baseuiStrings.select
+import typingsSlinky.baseui.selectMod.OnChangeParams
 import typingsSlinky.baseui.selectMod.OptionsT
 import typingsSlinky.baseui.selectMod.SelectOverrides
 import typingsSlinky.baseui.selectMod.SelectProps
 import typingsSlinky.baseui.selectMod.Value
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +35,7 @@ object Select
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, disabled, id, onBlur, onChange, onFocus, required */
+  /* The following DOM/SVG props were specified: autoFocus, disabled, id, required */
   def apply(
     `aria-describedby`: String = null,
     `aria-label`: String = null,
@@ -45,20 +47,23 @@ object Select
     deleteRemoves: js.UndefOr[Boolean] = js.undefined,
     error: js.UndefOr[Boolean] = js.undefined,
     escapeClearsValue: js.UndefOr[Boolean] = js.undefined,
-    filterOptions: (/* options */ Value, /* filterValue */ String, /* excludeOptions */ js.UndefOr[Value], /* newProps */ js.UndefOr[Anon_LabelKey]) => Value = null,
+    filterOptions: (/* options */ Value, /* filterValue */ String, /* excludeOptions */ js.UndefOr[Value], /* newProps */ js.UndefOr[AnonLabelKey]) => Value = null,
     filterOutSelected: js.UndefOr[Boolean] = js.undefined,
-    getOptionLabel: /* args */ Anon_Option => TagMod[Any] = null,
-    getValueLabel: /* args */ Anon_Option_1721897024 => TagMod[Any] = null,
+    getOptionLabel: /* args */ AnonOption => TagMod[Any] = null,
+    getValueLabel: /* args */ AnonOptionOption => TagMod[Any] = null,
     isLoading: js.UndefOr[Boolean] = js.undefined,
     labelKey: String = null,
     maxDropdownHeight: String = null,
     mountNode: HTMLElement = null,
     multi: js.UndefOr[Boolean] = js.undefined,
     noResultsMsg: TagMod[Any] = null,
+    onBlur: /* e */ Event_ => _ = null,
     onBlurResetsInput: js.UndefOr[Boolean] = js.undefined,
+    onChange: /* params */ OnChangeParams => _ = null,
     onClose: () => _ = null,
     onCloseResetsInput: js.UndefOr[Boolean] = js.undefined,
-    onInputChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onFocus: SyntheticFocusEvent[HTMLElement] => Unit = null,
+    onInputChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
     onOpen: () => _ = null,
     onSelectResetsInput: js.UndefOr[Boolean] = js.undefined,
     openOnClick: js.UndefOr[Boolean] = js.undefined,
@@ -95,9 +100,12 @@ object Select
     if (mountNode != null) __obj.updateDynamic("mountNode")(mountNode.asInstanceOf[js.Any])
     if (!js.isUndefined(multi)) __obj.updateDynamic("multi")(multi.asInstanceOf[js.Any])
     if (noResultsMsg != null) __obj.updateDynamic("noResultsMsg")(noResultsMsg.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
     if (!js.isUndefined(onBlurResetsInput)) __obj.updateDynamic("onBlurResetsInput")(onBlurResetsInput.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction0(onClose))
     if (!js.isUndefined(onCloseResetsInput)) __obj.updateDynamic("onCloseResetsInput")(onCloseResetsInput.asInstanceOf[js.Any])
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
     if (onInputChange != null) __obj.updateDynamic("onInputChange")(js.Any.fromFunction1(onInputChange))
     if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction0(onOpen))
     if (!js.isUndefined(onSelectResetsInput)) __obj.updateDynamic("onSelectResetsInput")(onSelectResetsInput.asInstanceOf[js.Any])
@@ -115,7 +123,7 @@ object Select
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.selectMod.Select] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.selectMod.Select](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.selectMod.Select] = new slinky.core.BuildingComponent[slinky.web.html.input.tag.type, typingsSlinky.baseui.selectMod.Select](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SelectProps
 }
 

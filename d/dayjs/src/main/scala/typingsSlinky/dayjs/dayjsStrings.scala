@@ -1,9 +1,9 @@
 package typingsSlinky.dayjs
 
-import typingsSlinky.dayjs.dayjsMod.OpUnitType
-import typingsSlinky.dayjs.dayjsMod.QUnitType
-import typingsSlinky.dayjs.dayjsMod.UnitType
-import typingsSlinky.dayjs.dayjsMod.UnitTypeShort
+import typingsSlinky.dayjs.mod.OpUnitType
+import typingsSlinky.dayjs.mod.QUnitType
+import typingsSlinky.dayjs.mod.UnitType
+import typingsSlinky.dayjs.mod.UnitTypeShort
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

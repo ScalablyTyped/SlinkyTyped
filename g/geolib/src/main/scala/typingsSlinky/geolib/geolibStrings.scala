@@ -1,8 +1,8 @@
 package typingsSlinky.geolib
 
-import typingsSlinky.geolib.esTypesMod.AltitudeKeys
-import typingsSlinky.geolib.esTypesMod.LatitudeKeys
-import typingsSlinky.geolib.esTypesMod.LongitudeKeys
+import typingsSlinky.geolib.typesMod.AltitudeKeys
+import typingsSlinky.geolib.typesMod.LatitudeKeys
+import typingsSlinky.geolib.typesMod.LongitudeKeys
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -10,9 +10,9 @@ JupyterLab - Javascript Renderer
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/javascript-extension |
 | Keywords           | - |
-| # releases         | 55 |
+| # releases         | 56 |
 | # dependents       | 1 |
-| # downloads        | 733387 |
+| # downloads        | 738578 |
 | # stars            | 0 |
 
 ## Links

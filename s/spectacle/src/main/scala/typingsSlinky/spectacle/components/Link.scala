@@ -5,15 +5,15 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.spectacle.spectacleMod.CSSProperties
-import typingsSlinky.spectacle.spectacleMod.LinkProps
-import typingsSlinky.spectacle.spectacleMod.targetType
+import typingsSlinky.spectacle.mod.CSSProperties
+import typingsSlinky.spectacle.mod.LinkProps
+import typingsSlinky.spectacle.mod.targetType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Link
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.spectacleMod.Link] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.mod.Link] {
   @JSImport("spectacle", "Link")
   @js.native
   object componentImport extends js.Object
@@ -36,7 +36,7 @@ object Link
     textFont: String = null,
     textSize: String = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.Link] = {
+  ): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Link] = {
     val __obj = js.Dynamic.literal()
     if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
     if (bgDarken != null) __obj.updateDynamic("bgDarken")(bgDarken.asInstanceOf[js.Any])
@@ -55,7 +55,7 @@ object Link
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.Link] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.spectacleMod.Link](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Link] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.mod.Link](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = LinkProps
 }
 

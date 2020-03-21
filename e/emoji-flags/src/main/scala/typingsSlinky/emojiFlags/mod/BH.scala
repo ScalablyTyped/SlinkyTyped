@@ -1,0 +1,11 @@
+package typingsSlinky.emojiFlags.mod
+
+import org.scalablytyped.runtime.TopLevel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("emoji-flags", "BH")
+@js.native
+object BH extends TopLevel[CountryData]
+

@@ -1,7 +1,7 @@
 package typingsSlinky.primereact
 
-import typingsSlinky.primereact.componentsButtonButtonMod.ButtonProps
-import typingsSlinky.react.reactMod.Component
+import typingsSlinky.primereact.buttonButtonMod.ButtonProps
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

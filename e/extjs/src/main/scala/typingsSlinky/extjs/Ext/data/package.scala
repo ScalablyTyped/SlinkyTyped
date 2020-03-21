@@ -5,23 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object data {
-  import typingsSlinky.extjs.Ext.IBase
-  import typingsSlinky.extjs.Ext.data.proxy.IWebStorage
-  import typingsSlinky.extjs.Ext.util.IMixedCollection
-  import typingsSlinky.extjs.Ext.util.IObservable
-
-  type IDirectStore = IStore
-  type IGroup = IObservable
-  type IJsonP = IBase
-  type IJsonPStore = IStore
-  type IJsonStore = IStore
-  type ILocalStorageProxy = IWebStorage
-  type ISessionStorageProxy = IWebStorage
-  type ISortTypes = IBase
-  type IStoreManager = IMixedCollection
-  type IStoreMgr = IMixedCollection
-  type ITreeModel = IModel
-  type ITypes = IBase
-  type IValidations = IBase
-  type IXmlStore = IStore
+  type IDirectStore = typingsSlinky.extjs.Ext.data.IStore
+  type IGroup = typingsSlinky.extjs.Ext.util.IObservable
+  type IJsonP = typingsSlinky.extjs.Ext.IBase
+  type IJsonPStore = typingsSlinky.extjs.Ext.data.IStore
+  type IJsonStore = typingsSlinky.extjs.Ext.data.IStore
+  type ILocalStorageProxy = typingsSlinky.extjs.Ext.data.proxy.IWebStorage
+  type ISessionStorageProxy = typingsSlinky.extjs.Ext.data.proxy.IWebStorage
+  type ISortTypes = typingsSlinky.extjs.Ext.IBase
+  type IStoreManager = typingsSlinky.extjs.Ext.util.IMixedCollection
+  type IStoreMgr = typingsSlinky.extjs.Ext.util.IMixedCollection
+  type ITreeModel = typingsSlinky.extjs.Ext.data.IModel
+  type ITypes = typingsSlinky.extjs.Ext.IBase
+  type IValidations = typingsSlinky.extjs.Ext.IBase
+  type IXmlStore = typingsSlinky.extjs.Ext.data.IStore
 }

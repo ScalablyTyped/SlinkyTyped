@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ocsp
 
-import typingsSlinky.jsrsasign.Anon_AlgKeyhashNamehash
+import typingsSlinky.jsrsasign.AnonNamehash
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -31,7 +31,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("jsrsasign.KJUR.asn1.ocsp.Request")
 @js.native
 class Request () extends ASN1Object {
-  def this(params: Anon_AlgKeyhashNamehash) = this()
+  def this(params: AnonNamehash) = this()
   def this(params: CertificateRequest) = this()
 }
 

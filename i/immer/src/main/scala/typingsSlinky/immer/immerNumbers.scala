@@ -1,7 +1,7 @@
 package typingsSlinky.immer
 
-import typingsSlinky.immer.immerMod.HasVoidLike
-import typingsSlinky.immer.immerMod.IsVoidLike
+import typingsSlinky.immer.mod.HasVoidLike
+import typingsSlinky.immer.mod.IsVoidLike
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

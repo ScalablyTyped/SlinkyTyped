@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dojox.geo.openlayers
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._Widget
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.Widget
 import typingsSlinky.dojo.dojoStrings.baseLayerType
 import typingsSlinky.dojo.dojoStrings.initialLocation
 import typingsSlinky.dojo.dojoStrings.map
@@ -31,7 +31,7 @@ object widget extends js.Object {
     * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
     */
   @js.native
-  class Map () extends _Widget {
+  class Map () extends Widget {
     def this(params: js.Object) = this()
     def this(params: js.Object, srcNodeRef: HTMLElement) = this()
     /**
@@ -131,7 +131,7 @@ object widget extends js.Object {
           /* newValue */ js.UndefOr[String], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_initialLocation(
       property: initialLocation,
@@ -141,7 +141,7 @@ object widget extends js.Object {
           /* newValue */ js.UndefOr[String], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_map(
       property: map,
@@ -151,7 +151,7 @@ object widget extends js.Object {
           /* newValue */ js.UndefOr[js.Object], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
     @JSName("watch")
     def watch_touchHandler(
       property: touchHandler,
@@ -161,7 +161,7 @@ object widget extends js.Object {
           /* newValue */ js.UndefOr[Boolean], 
           Unit
         ]
-    ): Anon_Unwatch = js.native
+    ): AnonUnwatch = js.native
   }
   
 }

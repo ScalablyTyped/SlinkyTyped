@@ -1,8 +1,8 @@
 package typingsSlinky.nodegit.revertMod
 
 import typingsSlinky.nodegit.commitMod.Commit
-import typingsSlinky.nodegit.mergeDashOptionsMod.MergeOptions
-import typingsSlinky.nodegit.nodegitMod.Index
+import typingsSlinky.nodegit.mergeOptionsMod.MergeOptions
+import typingsSlinky.nodegit.mod.Index
 import typingsSlinky.nodegit.repositoryMod.Repository
 import scala.scalajs.js
 import scala.scalajs.js.`|`

@@ -1,0 +1,52 @@
+package typingsSlinky.reactLazyLoadImageComponent.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
+import slinky.core.facade.ReactElement
+import slinky.web.html.`*`.tag
+import typingsSlinky.reactLazyLoadImageComponent.mod.DelayMethod
+import typingsSlinky.reactLazyLoadImageComponent.mod.LazyLoadComponentProps
+import typingsSlinky.reactLazyLoadImageComponent.mod.ScrollPosition
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object LazyLoadComponent
+  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
+  @JSImport("react-lazy-load-image-component", "LazyLoadComponent")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: style */
+  def apply(
+    afterLoad: () => _ = null,
+    beforeLoad: () => _ = null,
+    delayMethod: DelayMethod = null,
+    delayTime: Int | Double = null,
+    placeholder: ReactElement = null,
+    scrollPosition: ScrollPosition = null,
+    threshold: Int | Double = null,
+    useIntersectionObserver: js.UndefOr[Boolean] = js.undefined,
+    visibleByDefault: js.UndefOr[Boolean] = js.undefined,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, js.Object] = {
+    val __obj = js.Dynamic.literal()
+    if (afterLoad != null) __obj.updateDynamic("afterLoad")(js.Any.fromFunction0(afterLoad))
+    if (beforeLoad != null) __obj.updateDynamic("beforeLoad")(js.Any.fromFunction0(beforeLoad))
+    if (delayMethod != null) __obj.updateDynamic("delayMethod")(delayMethod.asInstanceOf[js.Any])
+    if (delayTime != null) __obj.updateDynamic("delayTime")(delayTime.asInstanceOf[js.Any])
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (scrollPosition != null) __obj.updateDynamic("scrollPosition")(scrollPosition.asInstanceOf[js.Any])
+    if (threshold != null) __obj.updateDynamic("threshold")(threshold.asInstanceOf[js.Any])
+    if (!js.isUndefined(useIntersectionObserver)) __obj.updateDynamic("useIntersectionObserver")(useIntersectionObserver.asInstanceOf[js.Any])
+    if (!js.isUndefined(visibleByDefault)) __obj.updateDynamic("visibleByDefault")(visibleByDefault.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = LazyLoadComponentProps
+}
+

@@ -1,7 +1,7 @@
 package typingsSlinky.antd
 
 import slinky.core.TagMod
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

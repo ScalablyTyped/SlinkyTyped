@@ -10,9 +10,9 @@ Typings are for version 0.59.3
 | ------------------ | :-------------: |
 | Full name          | @nivo/line |
 | Keywords           | nivo, dataviz, react, d3, charts, line-chart |
-| # releases         | 35 |
+| # releases         | 37 |
 | # dependents       | 14 |
-| # downloads        | 663701 |
+| # downloads        | 713633 |
 | # stars            | 0 |
 
 ## Links

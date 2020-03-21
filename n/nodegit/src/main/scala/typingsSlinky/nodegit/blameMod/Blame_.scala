@@ -1,6 +1,6 @@
 package typingsSlinky.nodegit.blameMod
 
-import typingsSlinky.nodegit.blameDashHunkMod.BlameHunk
+import typingsSlinky.nodegit.blameHunkMod.BlameHunk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

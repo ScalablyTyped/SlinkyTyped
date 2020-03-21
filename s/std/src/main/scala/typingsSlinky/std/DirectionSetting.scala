@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings._empty
-  - typings.std.stdStrings.rl
-  - typings.std.stdStrings.lr
+  - typingsSlinky.std.stdStrings._empty
+  - typingsSlinky.std.stdStrings.lr
+  - typingsSlinky.std.stdStrings.rl
 */
 trait DirectionSetting extends js.Object
 

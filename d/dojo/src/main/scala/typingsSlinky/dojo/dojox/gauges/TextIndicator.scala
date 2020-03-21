@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.gauges
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.align
 import typingsSlinky.dojo.dojoStrings.fixedPrecision
 import typingsSlinky.dojo.dojoStrings.precision
@@ -21,7 +21,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.gauges.TextIndicator")
 @js.native
-class TextIndicator () extends _Indicator {
+class TextIndicator () extends Indicator {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -87,7 +87,7 @@ class TextIndicator () extends _Indicator {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_fixedPrecision(
     property: fixedPrecision,
@@ -97,7 +97,7 @@ class TextIndicator () extends _Indicator {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_precision(
     property: precision,
@@ -107,7 +107,7 @@ class TextIndicator () extends _Indicator {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_x(
     property: x,
@@ -117,7 +117,7 @@ class TextIndicator () extends _Indicator {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_y(
     property: y,
@@ -127,6 +127,6 @@ class TextIndicator () extends _Indicator {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

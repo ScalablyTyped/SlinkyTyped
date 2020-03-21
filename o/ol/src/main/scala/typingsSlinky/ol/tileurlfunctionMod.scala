@@ -1,6 +1,6 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.tileMod.UrlFunction
+import typingsSlinky.ol.olTileMod.UrlFunction
 import typingsSlinky.ol.tilecoordMod.TileCoord
 import typingsSlinky.ol.tilegridTileGridMod.default
 import scala.scalajs.js
@@ -14,6 +14,6 @@ object tileurlfunctionMod extends js.Object {
   def createFromTemplates(templates: js.Array[String], tileGrid: default): UrlFunction = js.native
   def createFromTileUrlFunctions(tileUrlFunctions: js.Array[UrlFunction]): UrlFunction = js.native
   def expandUrl(url: String): js.Array[String] = js.native
-  def nullTileUrlFunction(tileCoord: TileCoord, pixelRatio: Double, projection: typingsSlinky.ol.projProjectionMod.default): js.UndefOr[String] = js.native
+  def nullTileUrlFunction(tileCoord: TileCoord, pixelRatio: Double, projection: typingsSlinky.ol.projectionMod.default): String = js.native
 }
 

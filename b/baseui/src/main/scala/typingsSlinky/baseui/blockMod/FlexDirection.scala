@@ -5,13 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.baseui.baseuiStrings.row
-  - typings.baseui.baseuiStrings.`row-reverse`
-  - typings.baseui.baseuiStrings.column
-  - typings.baseui.baseuiStrings.`column-reverse`
-  - typings.baseui.baseuiStrings.inherit
-  - typings.baseui.baseuiStrings.initial
-  - typings.baseui.baseuiStrings.unset
+  - typingsSlinky.baseui.baseuiStrings.row
+  - typingsSlinky.baseui.baseuiStrings.`row-reverse`
+  - typingsSlinky.baseui.baseuiStrings.column
+  - typingsSlinky.baseui.baseuiStrings.`column-reverse`
+  - typingsSlinky.baseui.baseuiStrings.inherit
+  - typingsSlinky.baseui.baseuiStrings.initial
+  - typingsSlinky.baseui.baseuiStrings.unset
 */
 trait FlexDirection extends js.Object
 

@@ -1,7 +1,7 @@
 package typingsSlinky.server
 
-import typingsSlinky.server.typingsCommonMod.Middleware
-import typingsSlinky.server.typingsCommonMod.Middlewares
+import typingsSlinky.server.commonMod.Middleware
+import typingsSlinky.server.commonMod.Middlewares
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

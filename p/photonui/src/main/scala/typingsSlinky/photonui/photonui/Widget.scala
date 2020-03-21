@@ -2,7 +2,7 @@ package typingsSlinky.photonui.photonui
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.photonui.Anon_X
+import typingsSlinky.photonui.AnonX
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("photonui.Widget")
 @js.native
 class Widget () extends Base {
-  var absolutePosition: Anon_X = js.native
+  var absolutePosition: AnonX = js.native
    // readonly
   var contextMenu: PopupWindow = js.native
   var contextMenuName: String = js.native

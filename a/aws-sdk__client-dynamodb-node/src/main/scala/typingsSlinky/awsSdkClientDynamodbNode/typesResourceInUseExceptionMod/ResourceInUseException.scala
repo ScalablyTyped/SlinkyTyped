@@ -1,0 +1,28 @@
+package typingsSlinky.awsSdkClientDynamodbNode.typesResourceInUseExceptionMod
+
+import typingsSlinky.awsSdkClientDynamodbNode.createTableExceptionsUnionMod.CreateTableExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.deleteTableExceptionsUnionMod.DeleteTableExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.tagResourceExceptionsUnionMod.TagResourceExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.untagResourceExceptionsUnionMod.UntagResourceExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.updateGlobalTableSettingsExceptionsUnionMod.UpdateGlobalTableSettingsExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.updateTableExceptionsUnionMod.UpdateTableExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.updateTimeToLiveExceptionsUnionMod.UpdateTimeToLiveExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ResourceInUseException
+  extends ServiceException[ResourceInUseExceptionDetails]
+     with CreateTableExceptionsUnion
+     with DeleteTableExceptionsUnion
+     with TagResourceExceptionsUnion
+     with UntagResourceExceptionsUnion
+     with UpdateGlobalTableSettingsExceptionsUnion
+     with UpdateTableExceptionsUnion
+     with UpdateTimeToLiveExceptionsUnion {
+  @JSName("name")
+  var name_ResourceInUseException: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.ResourceInUseException = js.native
+}
+

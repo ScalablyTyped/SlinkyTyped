@@ -1,0 +1,100 @@
+package typingsSlinky.detectBrowser.mod
+
+import typingsSlinky.detectBrowser.detectBrowserStrings.ios_
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.detectBrowser.detectBrowserStrings.aol
+  - typingsSlinky.detectBrowser.detectBrowserStrings.edge
+  - typingsSlinky.detectBrowser.detectBrowserStrings.`edge-ios`
+  - typingsSlinky.detectBrowser.detectBrowserStrings.yandexbrowser
+  - typingsSlinky.detectBrowser.detectBrowserStrings.vivaldi
+  - typingsSlinky.detectBrowser.detectBrowserStrings.kakaotalk
+  - typingsSlinky.detectBrowser.detectBrowserStrings.samsung
+  - typingsSlinky.detectBrowser.detectBrowserStrings.silk
+  - typingsSlinky.detectBrowser.detectBrowserStrings.miui
+  - typingsSlinky.detectBrowser.detectBrowserStrings.beaker
+  - typingsSlinky.detectBrowser.detectBrowserStrings.`edge-chromium`
+  - typingsSlinky.detectBrowser.detectBrowserStrings.chrome
+  - typingsSlinky.detectBrowser.detectBrowserStrings.`chromium-webview`
+  - typingsSlinky.detectBrowser.detectBrowserStrings.phantomjs
+  - typingsSlinky.detectBrowser.detectBrowserStrings.crios
+  - typingsSlinky.detectBrowser.detectBrowserStrings.firefox
+  - typingsSlinky.detectBrowser.detectBrowserStrings.fxios
+  - typingsSlinky.detectBrowser.detectBrowserStrings.`opera-mini`
+  - typingsSlinky.detectBrowser.detectBrowserStrings.opera
+  - typingsSlinky.detectBrowser.detectBrowserStrings.ie
+  - typingsSlinky.detectBrowser.detectBrowserStrings.bb10
+  - typingsSlinky.detectBrowser.detectBrowserStrings.android
+  - typingsSlinky.detectBrowser.detectBrowserStrings.ios_
+  - typingsSlinky.detectBrowser.detectBrowserStrings.safari
+  - typingsSlinky.detectBrowser.detectBrowserStrings.facebook
+  - typingsSlinky.detectBrowser.detectBrowserStrings.instagram
+  - typingsSlinky.detectBrowser.detectBrowserStrings.`ios-webview`
+  - typingsSlinky.detectBrowser.detectBrowserStrings.searchbot
+*/
+trait Browser extends js.Object
+
+object Browser {
+  @scala.inline
+  def android: typingsSlinky.detectBrowser.detectBrowserStrings.android = this.cast("android")
+  @scala.inline
+  def aol: typingsSlinky.detectBrowser.detectBrowserStrings.aol = this.cast("aol")
+  @scala.inline
+  def bb10: typingsSlinky.detectBrowser.detectBrowserStrings.bb10 = this.cast("bb10")
+  @scala.inline
+  def beaker: typingsSlinky.detectBrowser.detectBrowserStrings.beaker = this.cast("beaker")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def chrome: typingsSlinky.detectBrowser.detectBrowserStrings.chrome = this.cast("chrome")
+  @scala.inline
+  def `chromium-webview`: typingsSlinky.detectBrowser.detectBrowserStrings.`chromium-webview` = this.cast("chromium-webview")
+  @scala.inline
+  def crios: typingsSlinky.detectBrowser.detectBrowserStrings.crios = this.cast("crios")
+  @scala.inline
+  def edge: typingsSlinky.detectBrowser.detectBrowserStrings.edge = this.cast("edge")
+  @scala.inline
+  def `edge-chromium`: typingsSlinky.detectBrowser.detectBrowserStrings.`edge-chromium` = this.cast("edge-chromium")
+  @scala.inline
+  def `edge-ios`: typingsSlinky.detectBrowser.detectBrowserStrings.`edge-ios` = this.cast("edge-ios")
+  @scala.inline
+  def facebook: typingsSlinky.detectBrowser.detectBrowserStrings.facebook = this.cast("facebook")
+  @scala.inline
+  def firefox: typingsSlinky.detectBrowser.detectBrowserStrings.firefox = this.cast("firefox")
+  @scala.inline
+  def fxios: typingsSlinky.detectBrowser.detectBrowserStrings.fxios = this.cast("fxios")
+  @scala.inline
+  def ie: typingsSlinky.detectBrowser.detectBrowserStrings.ie = this.cast("ie")
+  @scala.inline
+  def instagram: typingsSlinky.detectBrowser.detectBrowserStrings.instagram = this.cast("instagram")
+  @scala.inline
+  def ios: ios_ = this.cast("ios")
+  @scala.inline
+  def `ios-webview`: typingsSlinky.detectBrowser.detectBrowserStrings.`ios-webview` = this.cast("ios-webview")
+  @scala.inline
+  def kakaotalk: typingsSlinky.detectBrowser.detectBrowserStrings.kakaotalk = this.cast("kakaotalk")
+  @scala.inline
+  def miui: typingsSlinky.detectBrowser.detectBrowserStrings.miui = this.cast("miui")
+  @scala.inline
+  def opera: typingsSlinky.detectBrowser.detectBrowserStrings.opera = this.cast("opera")
+  @scala.inline
+  def `opera-mini`: typingsSlinky.detectBrowser.detectBrowserStrings.`opera-mini` = this.cast("opera-mini")
+  @scala.inline
+  def phantomjs: typingsSlinky.detectBrowser.detectBrowserStrings.phantomjs = this.cast("phantomjs")
+  @scala.inline
+  def safari: typingsSlinky.detectBrowser.detectBrowserStrings.safari = this.cast("safari")
+  @scala.inline
+  def samsung: typingsSlinky.detectBrowser.detectBrowserStrings.samsung = this.cast("samsung")
+  @scala.inline
+  def searchbot: typingsSlinky.detectBrowser.detectBrowserStrings.searchbot = this.cast("searchbot")
+  @scala.inline
+  def silk: typingsSlinky.detectBrowser.detectBrowserStrings.silk = this.cast("silk")
+  @scala.inline
+  def vivaldi: typingsSlinky.detectBrowser.detectBrowserStrings.vivaldi = this.cast("vivaldi")
+  @scala.inline
+  def yandexbrowser: typingsSlinky.detectBrowser.detectBrowserStrings.yandexbrowser = this.cast("yandexbrowser")
+}
+

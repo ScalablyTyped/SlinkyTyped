@@ -1,8 +1,8 @@
 package typingsSlinky.sharepoint.SP.UI
 
 import org.scalajs.dom.raw.HTMLSpanElement
-import typingsSlinky.sharepoint.Anon_Disabled
-import typingsSlinky.sharepoint.Anon_Next
+import typingsSlinky.sharepoint.AnonDisabled
+import typingsSlinky.sharepoint.AnonNext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ class PagingControl protected () extends js.Object {
 @JSGlobal("SP.UI.PagingControl")
 @js.native
 object PagingControl extends js.Object {
-  var ButtonIDs: Anon_Next = js.native
-  var ButtonState: Anon_Disabled = js.native
+  var ButtonIDs: AnonNext = js.native
+  var ButtonState: AnonDisabled = js.native
 }
 

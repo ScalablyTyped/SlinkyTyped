@@ -2,9 +2,9 @@ package typingsSlinky.echarts.echarts
 
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLDivElement
-import typingsSlinky.echarts.Anon_BackgroundColor
-import typingsSlinky.echarts.Anon_BackgroundColorExcludeComponents
-import typingsSlinky.echarts.Anon_Data
+import typingsSlinky.echarts.AnonBackgroundColor
+import typingsSlinky.echarts.AnonData
+import typingsSlinky.echarts.AnonExcludeComponents
 import typingsSlinky.echarts.echarts.EChartOption.Series
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +26,7 @@ trait ECharts extends js.Object {
     *
     * @param opts Data options.
     */
-  def appendData(opts: Anon_Data): Unit = js.native
+  def appendData(opts: AnonData): Unit = js.native
   /**
     * Clears current instance; removes all components and charts in
     *     current instance.
@@ -88,14 +88,14 @@ trait ECharts extends js.Object {
     *
     * @param opts Options.
     */
-  def getConnectedDataURL(opts: Anon_BackgroundColorExcludeComponents): String = js.native
+  def getConnectedDataURL(opts: AnonExcludeComponents): String = js.native
   /**
     * Exports chart image; returns a base64 URL; can be set to `src` of
     *      `Image`.
     *
     * @param opts Options.
     */
-  def getDataURL(opts: Anon_BackgroundColor): String = js.native
+  def getDataURL(opts: AnonBackgroundColor): String = js.native
   /**
     * Gets DOM element of ECharts instance container.
     *

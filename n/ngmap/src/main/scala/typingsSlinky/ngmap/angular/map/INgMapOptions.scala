@@ -1,17 +1,17 @@
 package typingsSlinky.ngmap.angular.map
 
-import typingsSlinky.ngmap.Anon_AnchorPoint
+import typingsSlinky.ngmap.AnonAnchorPoint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait INgMapOptions extends js.Object {
-  var marker: Anon_AnchorPoint
+  var marker: AnonAnchorPoint
 }
 
 object INgMapOptions {
   @scala.inline
-  def apply(marker: Anon_AnchorPoint): INgMapOptions = {
+  def apply(marker: AnonAnchorPoint): INgMapOptions = {
     val __obj = js.Dynamic.literal(marker = marker.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[INgMapOptions]

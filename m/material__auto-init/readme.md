@@ -10,9 +10,9 @@ Declarative, easy-to-use auto-initialization for Material Components for the web
 | ------------------ | :-------------: |
 | Full name          | @material/auto-init |
 | Keywords           | - |
-| # releases         | 98 |
+| # releases         | 143 |
 | # dependents       | 10 |
-| # downloads        | 917574 |
+| # downloads        | 934672 |
 | # stars            | 0 |
 
 ## Links

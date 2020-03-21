@@ -1,6 +1,6 @@
 package typingsSlinky.tapable
 
-import typingsSlinky.tapable.tapableMod.TapType
+import typingsSlinky.tapable.mod.TapType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

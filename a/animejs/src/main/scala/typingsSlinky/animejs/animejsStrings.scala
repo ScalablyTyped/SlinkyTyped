@@ -1,7 +1,7 @@
 package typingsSlinky.animejs
 
-import typingsSlinky.animejs.animejsMod.DirectionOptions
-import typingsSlinky.animejs.animejsMod.EasingOptions
+import typingsSlinky.animejs.mod.DirectionOptions
+import typingsSlinky.animejs.mod.EasingOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

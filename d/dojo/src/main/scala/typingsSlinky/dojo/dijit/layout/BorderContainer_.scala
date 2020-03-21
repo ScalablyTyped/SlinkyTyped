@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dijit.layout
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.gutters
 import typingsSlinky.dojo.dojoStrings.liveSplitters
 import typingsSlinky.dojo.dojoStrings.persist
@@ -81,7 +81,7 @@ class BorderContainer_ () extends LayoutContainer {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_liveSplitters(
     property: liveSplitters,
@@ -91,7 +91,7 @@ class BorderContainer_ () extends LayoutContainer {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_persist(
     property: persist,
@@ -101,6 +101,6 @@ class BorderContainer_ () extends LayoutContainer {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

@@ -5,7 +5,6 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.gestaltMod.HeaderProps
 import typingsSlinky.gestalt.gestaltNumbers.`1`
 import typingsSlinky.gestalt.gestaltNumbers.`2`
 import typingsSlinky.gestalt.gestaltNumbers.`3`
@@ -36,12 +35,13 @@ import typingsSlinky.gestalt.gestaltStrings.watermelon
 import typingsSlinky.gestalt.gestaltStrings.white
 import typingsSlinky.gestalt.gestaltStrings.xl
 import typingsSlinky.gestalt.gestaltStrings.xs
+import typingsSlinky.gestalt.mod.HeaderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Heading
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Heading] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Heading] {
   @JSImport("gestalt", "Heading")
   @js.native
   object componentImport extends js.Object
@@ -58,7 +58,7 @@ object Heading
     smSize: xs | sm | md | lg | xl = null,
     truncate: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Heading] = {
+  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Heading] = {
     val __obj = js.Dynamic.literal()
     if (accessibilityLevel != null) __obj.updateDynamic("accessibilityLevel")(accessibilityLevel.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
@@ -71,7 +71,7 @@ object Heading
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Heading] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.gestaltMod.Heading](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Heading] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.mod.Heading](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = HeaderProps
 }
 

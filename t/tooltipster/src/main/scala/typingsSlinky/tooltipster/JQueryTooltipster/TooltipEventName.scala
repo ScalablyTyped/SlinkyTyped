@@ -5,29 +5,29 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.tooltipster.tooltipsterStrings.init
-  - typings.tooltipster.tooltipsterStrings.before
-  - typings.tooltipster.tooltipsterStrings.ready
-  - typings.tooltipster.tooltipsterStrings.after
-  - typings.tooltipster.tooltipsterStrings.format
-  - typings.tooltipster.tooltipsterStrings.position
-  - typings.tooltipster.tooltipsterStrings.close
-  - typings.tooltipster.tooltipsterStrings.closing
-  - typings.tooltipster.tooltipsterStrings.created
-  - typings.tooltipster.tooltipsterStrings.destroy
-  - typings.tooltipster.tooltipsterStrings.destroyed
-  - typings.tooltipster.tooltipsterStrings.dismissable
-  - typings.tooltipster.tooltipsterStrings.geometry
-  - typings.tooltipster.tooltipsterStrings.positionTest
-  - typings.tooltipster.tooltipsterStrings.positionTested
-  - typings.tooltipster.tooltipsterStrings.reposition
-  - typings.tooltipster.tooltipsterStrings.repositioned
-  - typings.tooltipster.tooltipsterStrings.scroll
-  - typings.tooltipster.tooltipsterStrings.start
-  - typings.tooltipster.tooltipsterStrings.startcancel
-  - typings.tooltipster.tooltipsterStrings.startend
-  - typings.tooltipster.tooltipsterStrings.state
-  - typings.tooltipster.tooltipsterStrings.updated
+  - typingsSlinky.tooltipster.tooltipsterStrings.init
+  - typingsSlinky.tooltipster.tooltipsterStrings.before
+  - typingsSlinky.tooltipster.tooltipsterStrings.ready
+  - typingsSlinky.tooltipster.tooltipsterStrings.after
+  - typingsSlinky.tooltipster.tooltipsterStrings.format
+  - typingsSlinky.tooltipster.tooltipsterStrings.position
+  - typingsSlinky.tooltipster.tooltipsterStrings.close
+  - typingsSlinky.tooltipster.tooltipsterStrings.closing
+  - typingsSlinky.tooltipster.tooltipsterStrings.created
+  - typingsSlinky.tooltipster.tooltipsterStrings.destroy
+  - typingsSlinky.tooltipster.tooltipsterStrings.destroyed
+  - typingsSlinky.tooltipster.tooltipsterStrings.dismissable
+  - typingsSlinky.tooltipster.tooltipsterStrings.geometry
+  - typingsSlinky.tooltipster.tooltipsterStrings.positionTest
+  - typingsSlinky.tooltipster.tooltipsterStrings.positionTested
+  - typingsSlinky.tooltipster.tooltipsterStrings.reposition
+  - typingsSlinky.tooltipster.tooltipsterStrings.repositioned
+  - typingsSlinky.tooltipster.tooltipsterStrings.scroll
+  - typingsSlinky.tooltipster.tooltipsterStrings.start
+  - typingsSlinky.tooltipster.tooltipsterStrings.startcancel
+  - typingsSlinky.tooltipster.tooltipsterStrings.startend
+  - typingsSlinky.tooltipster.tooltipsterStrings.state
+  - typingsSlinky.tooltipster.tooltipsterStrings.updated
 */
 trait TooltipEventName extends js.Object
 

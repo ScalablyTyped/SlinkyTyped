@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.ionic.ionicStrings.buildColonbefore
-  - typings.ionic.ionicStrings.buildColonafter
-  - typings.ionic.ionicStrings.serveColonbefore
-  - typings.ionic.ionicStrings.serveColonafter
+  - typingsSlinky.ionic.ionicStrings.buildColonbefore
+  - typingsSlinky.ionic.ionicStrings.buildColonafter
+  - typingsSlinky.ionic.ionicStrings.serveColonbefore
+  - typingsSlinky.ionic.ionicStrings.serveColonafter
 */
 trait HookName extends js.Object
 

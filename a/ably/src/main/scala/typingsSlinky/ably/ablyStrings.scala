@@ -1,8 +1,8 @@
 package typingsSlinky.ably
 
-import typingsSlinky.ably.ablyMod.Types.DevicePushState
-import typingsSlinky.ably.ablyMod.Types.Transport
-import typingsSlinky.ably.ablyMod.Types.capabilityOp
+import typingsSlinky.ably.mod.Types.DevicePushState
+import typingsSlinky.ably.mod.Types.Transport
+import typingsSlinky.ably.mod.Types.capabilityOp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

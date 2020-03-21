@@ -9,10 +9,10 @@ package object XmlPoke {
     - java.lang.String
     - scala.Boolean
     - scala.Double
-    - typings.xmlpoke.XmlPoke.XmlValue
-    - typings.xmlpoke.XmlPoke.CDataValue
-    - typings.xmlpoke.XmlPoke.PathToValueMap
-    - typings.xmlpoke.XmlPoke.Transform
+    - typingsSlinky.xmlpoke.XmlPoke.XmlValue
+    - typingsSlinky.xmlpoke.XmlPoke.CDataValue
+    - typingsSlinky.xmlpoke.XmlPoke.PathToValueMap
+    - typingsSlinky.xmlpoke.XmlPoke.Transform
   */
-  type Value = _Value | String | Boolean | Double
+  type Value = typingsSlinky.xmlpoke.XmlPoke._Value | java.lang.String | scala.Boolean | scala.Double
 }

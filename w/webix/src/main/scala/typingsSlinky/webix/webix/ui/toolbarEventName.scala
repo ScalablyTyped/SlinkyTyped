@@ -5,19 +5,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onAfterLoad
-  - typings.webix.webixStrings.onAfterScroll
-  - typings.webix.webixStrings.onAfterValidation
-  - typings.webix.webixStrings.onBeforeLoad
-  - typings.webix.webixStrings.onBeforeValidate
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onChange
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onLoadError
-  - typings.webix.webixStrings.onValidationError
-  - typings.webix.webixStrings.onValidationSuccess
-  - typings.webix.webixStrings.onValues
-  - typings.webix.webixStrings.onViewShow
+  - typingsSlinky.webix.webixStrings.onAfterLoad
+  - typingsSlinky.webix.webixStrings.onAfterScroll
+  - typingsSlinky.webix.webixStrings.onAfterValidation
+  - typingsSlinky.webix.webixStrings.onBeforeLoad
+  - typingsSlinky.webix.webixStrings.onBeforeValidate
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onChange
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onLoadError
+  - typingsSlinky.webix.webixStrings.onValidationError
+  - typingsSlinky.webix.webixStrings.onValidationSuccess
+  - typingsSlinky.webix.webixStrings.onValues
+  - typingsSlinky.webix.webixStrings.onViewShow
 */
 trait toolbarEventName extends js.Object
 

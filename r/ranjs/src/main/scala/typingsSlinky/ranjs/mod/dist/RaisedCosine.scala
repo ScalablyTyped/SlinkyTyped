@@ -1,0 +1,14 @@
+package typingsSlinky.ranjs.mod.dist
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("ranjs", "dist.RaisedCosine")
+@js.native
+class RaisedCosine ()
+  extends typingsSlinky.ranjs.mod._dist.Distribution[typingsSlinky.ranjs.ranjsStrings.RaisedCosine] {
+  def this(mu: Double) = this()
+  def this(mu: Double, s: Double) = this()
+}
+

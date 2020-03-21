@@ -1,32 +1,32 @@
 package typingsSlinky.baseui.toastMod
 
-import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
-import typingsSlinky.baseui.Anon_Dismiss
+import typingsSlinky.baseui.AnonDismiss
 import typingsSlinky.baseui.baseuiStrings.`inline`
 import typingsSlinky.baseui.baseuiStrings.info
 import typingsSlinky.baseui.baseuiStrings.negative
 import typingsSlinky.baseui.baseuiStrings.positive
 import typingsSlinky.baseui.baseuiStrings.toast
 import typingsSlinky.baseui.baseuiStrings.warning
-import typingsSlinky.react.reactMod.Key
+import typingsSlinky.react.mod.Key
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ToastProps extends js.Object {
   var autoHideDuration: js.UndefOr[Double] = js.undefined
-  var children: js.UndefOr[(js.Function1[/* args */ Anon_Dismiss, TagMod[Any]]) | TagMod[Any]] = js.undefined
+  var children: js.UndefOr[(js.Function1[/* args */ AnonDismiss, TagMod[Any]]) | TagMod[Any]] = js.undefined
   var closeable: js.UndefOr[Boolean] = js.undefined
   var `data-baseweb`: js.UndefOr[String] = js.undefined
   var key: js.UndefOr[Key] = js.undefined
   var kind: js.UndefOr[info | positive | warning | negative] = js.undefined
   var notificationType: js.UndefOr[`inline` | toast] = js.undefined
-  var onBlur: js.UndefOr[js.Function1[/* e */ Event, _]] = js.undefined
+  var onBlur: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.undefined
   var onClose: js.UndefOr[js.Function0[_]] = js.undefined
-  var onFocus: js.UndefOr[js.Function1[/* e */ Event, _]] = js.undefined
-  var onMouseEnter: js.UndefOr[js.Function1[/* e */ Event, _]] = js.undefined
-  var onMouseLeave: js.UndefOr[js.Function1[/* e */ Event, _]] = js.undefined
+  var onFocus: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.undefined
+  var onMouseEnter: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.undefined
+  var onMouseLeave: js.UndefOr[js.Function1[/* e */ Event_, _]] = js.undefined
   var overrides: js.UndefOr[ToastOverrides] = js.undefined
 }
 
@@ -34,17 +34,17 @@ object ToastProps {
   @scala.inline
   def apply(
     autoHideDuration: Int | Double = null,
-    children: (js.Function1[/* args */ Anon_Dismiss, TagMod[Any]]) | TagMod[Any] = null,
+    children: (js.Function1[/* args */ AnonDismiss, TagMod[Any]]) | TagMod[Any] = null,
     closeable: js.UndefOr[Boolean] = js.undefined,
     `data-baseweb`: String = null,
     key: Key = null,
     kind: info | positive | warning | negative = null,
     notificationType: `inline` | toast = null,
-    onBlur: /* e */ Event => _ = null,
+    onBlur: /* e */ Event_ => _ = null,
     onClose: () => _ = null,
-    onFocus: /* e */ Event => _ = null,
-    onMouseEnter: /* e */ Event => _ = null,
-    onMouseLeave: /* e */ Event => _ = null,
+    onFocus: /* e */ Event_ => _ = null,
+    onMouseEnter: /* e */ Event_ => _ = null,
+    onMouseLeave: /* e */ Event_ => _ = null,
     overrides: ToastOverrides = null
   ): ToastProps = {
     val __obj = js.Dynamic.literal()

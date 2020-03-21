@@ -32,7 +32,7 @@ object xmlfragment extends js.Object {
     */
   def apply(sId: String, vFragment: String): Control | js.Array[Control] = js.native
   def apply(sId: String, vFragment: String, oController: Controller): Control | js.Array[Control] = js.native
-  def apply(sId: String, vFragment: js.Any): Control | js.Array[Control] = js.native
+  def apply(sId: String, vFragment: js.Any): Fragment = js.native
   def apply(sId: String, vFragment: js.Any, oController: js.Any): Fragment = js.native
   def apply(sId: String, vFragment: js.Any, oController: Controller): Control | js.Array[Control] = js.native
   //  Instantiates an XML-based Fragment.

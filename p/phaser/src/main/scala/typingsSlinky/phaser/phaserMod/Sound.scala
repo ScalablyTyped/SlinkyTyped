@@ -149,7 +149,7 @@ object Sound extends js.Object {
     * Be aware of https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
     * @param game Reference to the current game instance.
     */
-  def SoundManagerCreator(game: typingsSlinky.phaser.Phaser.Game): Unit = js.native
+  def SoundManagerCreator(game: typingsSlinky.phaser.Phaser.Game): typingsSlinky.phaser.Phaser.Sound.HTML5AudioSoundManager | typingsSlinky.phaser.Phaser.Sound.WebAudioSoundManager | typingsSlinky.phaser.Phaser.Sound.NoAudioSoundManager = js.native
   @js.native
   object Events extends js.Object {
     /**

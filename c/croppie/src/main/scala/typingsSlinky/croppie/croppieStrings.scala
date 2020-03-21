@@ -1,8 +1,8 @@
 package typingsSlinky.croppie
 
-import typingsSlinky.croppie.croppieMod.CropType
-import typingsSlinky.croppie.croppieMod.Format
-import typingsSlinky.croppie.croppieMod.Type
+import typingsSlinky.croppie.mod.CropType
+import typingsSlinky.croppie.mod.Format
+import typingsSlinky.croppie.mod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

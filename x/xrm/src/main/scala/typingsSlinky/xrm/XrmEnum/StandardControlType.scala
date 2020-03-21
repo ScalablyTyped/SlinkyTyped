@@ -21,18 +21,18 @@ import scala.scalajs.js.annotation._
   * @see {@link Xrm.Controls.ControlType}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.standard
-  - typings.xrm.xrmStrings.iframe
-  - typings.xrm.xrmStrings.lookup
-  - typings.xrm.xrmStrings.optionset
-  - typings.xrm.xrmStrings.multiselectoptionset
-  - typings.xrm.xrmStrings.subgrid
-  - typings.xrm.xrmStrings.webresource
-  - typings.xrm.xrmStrings.notes
-  - typings.xrm.xrmStrings.timercontrol
-  - typings.xrm.xrmStrings.kbsearch
-  - typings.xrm.xrmStrings.timelinewall
-  - typings.xrm.xrmStrings.quickform
+  - typingsSlinky.xrm.xrmStrings.standard
+  - typingsSlinky.xrm.xrmStrings.iframe
+  - typingsSlinky.xrm.xrmStrings.lookup
+  - typingsSlinky.xrm.xrmStrings.optionset
+  - typingsSlinky.xrm.xrmStrings.multiselectoptionset
+  - typingsSlinky.xrm.xrmStrings.subgrid
+  - typingsSlinky.xrm.xrmStrings.webresource
+  - typingsSlinky.xrm.xrmStrings.notes
+  - typingsSlinky.xrm.xrmStrings.timercontrol
+  - typingsSlinky.xrm.xrmStrings.kbsearch
+  - typingsSlinky.xrm.xrmStrings.timelinewall
+  - typingsSlinky.xrm.xrmStrings.quickform
 */
 trait StandardControlType extends js.Object
 

@@ -1,0 +1,22 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesCommentContentRequiredExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExceptionsUnionMod.PostCommentForComparedCommitExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentReplyExceptionsUnionMod.PostCommentReplyExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.updateCommentExceptionsUnionMod.UpdateCommentExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CommentContentRequiredException
+  extends ServiceException[CommentContentRequiredExceptionDetails]
+     with PostCommentForComparedCommitExceptionsUnion
+     with PostCommentForPullRequestExceptionsUnion
+     with PostCommentReplyExceptionsUnion
+     with UpdateCommentExceptionsUnion {
+  @JSName("name")
+  var name_CommentContentRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommentContentRequiredException = js.native
+}
+

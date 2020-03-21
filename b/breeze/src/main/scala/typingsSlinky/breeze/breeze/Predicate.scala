@@ -1,6 +1,6 @@
 package typingsSlinky.breeze.breeze
 
-import typingsSlinky.breeze.Anon_DataType
+import typingsSlinky.breeze.AnonDataType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,9 +13,9 @@ class Predicate () extends js.Object {
   def this(passthru: String) = this()
   def this(predicate: Predicate) = this()
   def this(property: String, operator: String, value: js.Any) = this()
-  def this(property: String, operator: String, value: Anon_DataType) = this()
+  def this(property: String, operator: String, value: AnonDataType) = this()
   def this(property: String, operator: FilterQueryOpSymbol, value: js.Any) = this()
-  def this(property: String, operator: FilterQueryOpSymbol, value: Anon_DataType) = this()
+  def this(property: String, operator: FilterQueryOpSymbol, value: AnonDataType) = this()
     // for any/all clauses
   def this(property: String, filterop: String, property2: String, filterop2: String, value: js.Any) = this()
   def this(

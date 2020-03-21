@@ -1,8 +1,8 @@
 package typingsSlinky.marko.expressMod
 
 import typingsSlinky.express.Typeofm
-import typingsSlinky.expressDashServeDashStaticDashCore.expressDashServeDashStaticDashCoreMod.Handler
-import typingsSlinky.serveDashStatic.serveDashStaticMod.ServeStaticOptions
+import typingsSlinky.expressServeStaticCore.mod.Handler
+import typingsSlinky.serveStatic.mod.ServeStaticOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.Anon_Rsaprvkey
+import typingsSlinky.jsrsasign.AnonRsaprvkey
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -33,7 +33,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("jsrsasign.KJUR.asn1.x509.CRL")
 @js.native
 class CRL () extends ASN1Object {
-  def this(params: Anon_Rsaprvkey) = this()
+  def this(params: AnonRsaprvkey) = this()
   /**
     * get PEM formatted CRL string after signed
     * @return PEM formatted string of certificate

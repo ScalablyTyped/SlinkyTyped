@@ -1,8 +1,8 @@
 package typingsSlinky.node.fsMod
 
-import typingsSlinky.node.Anon_BufferEncoding
-import typingsSlinky.node.Anon_EncodingBufferEncoding
-import typingsSlinky.node.Anon_EncodingNull
+import typingsSlinky.node.Anon2
+import typingsSlinky.node.Anon3
+import typingsSlinky.node.AnonEncoding
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import typingsSlinky.node.NodeJS.ErrnoException
@@ -23,7 +23,7 @@ object mkdtemp extends js.Object {
   def apply(
     prefix: String,
     options: js.UndefOr[scala.Nothing],
-    callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
+    callback: js.Function2[ErrnoException | Null, Buffer | (/* folder */ String), Unit]
   ): Unit = js.native
   def apply(
     prefix: String,
@@ -33,11 +33,11 @@ object mkdtemp extends js.Object {
   def apply(
     prefix: String,
     options: Null,
-    callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
+    callback: js.Function2[ErrnoException | Null, Buffer | (/* folder */ String), Unit]
   ): Unit = js.native
   def apply(
     prefix: String,
-    options: Anon_BufferEncoding,
+    options: Anon2,
     callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ Buffer, Unit]
   ): Unit = js.native
   /**
@@ -47,8 +47,8 @@ object mkdtemp extends js.Object {
     */
   def apply(
     prefix: String,
-    options: Anon_EncodingBufferEncoding,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String, Unit]
+    options: Anon3,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String | Buffer, Unit]
   ): Unit = js.native
   /**
     * Asynchronously creates a unique temporary directory.
@@ -57,8 +57,8 @@ object mkdtemp extends js.Object {
     */
   def apply(
     prefix: String,
-    options: Anon_EncodingNull,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String | Buffer, Unit]
+    options: AnonEncoding,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* folder */ String, Unit]
   ): Unit = js.native
   def apply(
     prefix: String,
@@ -80,18 +80,24 @@ object mkdtemp extends js.Object {
     * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def __promisify__(prefix: String): js.Promise[String] = js.native
-  def __promisify__(prefix: String, options: String): js.Promise[String | Buffer] = js.native
+  @JSName("__promisify__")
+  def promisify(prefix: String): js.Promise[String] = js.native
+  @JSName("__promisify__")
+  def promisify(prefix: String, options: String): js.Promise[String | Buffer] = js.native
   /**
     * Asynchronously creates a unique temporary directory.
     * Generates six random characters to be appended behind a required prefix to create a unique temporary directory.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def __promisify__(prefix: String, options: Anon_BufferEncoding): js.Promise[Buffer] = js.native
-  def __promisify__(prefix: String, options: Anon_EncodingBufferEncoding): js.Promise[String] = js.native
-  def __promisify__(prefix: String, options: Anon_EncodingNull): js.Promise[String | Buffer] = js.native
-  def __promisify__(prefix: String, options: BufferEncoding): js.Promise[String] = js.native
   @JSName("__promisify__")
-  def __promisify___buffer(prefix: String, options: buffer_): js.Promise[Buffer] = js.native
+  def promisify(prefix: String, options: Anon2): js.Promise[Buffer] = js.native
+  @JSName("__promisify__")
+  def promisify(prefix: String, options: Anon3): js.Promise[String | Buffer] = js.native
+  @JSName("__promisify__")
+  def promisify(prefix: String, options: AnonEncoding): js.Promise[String] = js.native
+  @JSName("__promisify__")
+  def promisify(prefix: String, options: BufferEncoding): js.Promise[String] = js.native
+  @JSName("__promisify__")
+  def promisify_buffer(prefix: String, options: buffer_): js.Promise[Buffer] = js.native
 }
 

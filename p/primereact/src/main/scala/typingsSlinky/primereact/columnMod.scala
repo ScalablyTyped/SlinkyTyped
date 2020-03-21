@@ -1,7 +1,7 @@
 package typingsSlinky.primereact
 
-import typingsSlinky.primereact.componentsColumnColumnMod.ColumnProps
-import typingsSlinky.react.reactMod.Component
+import typingsSlinky.primereact.columnColumnMod.ColumnProps
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

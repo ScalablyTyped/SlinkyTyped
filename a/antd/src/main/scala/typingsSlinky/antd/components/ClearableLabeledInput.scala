@@ -9,11 +9,10 @@ import slinky.core.facade.ReactElement
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.antdStrings.input
-import typingsSlinky.antd.antdStrings.large
-import typingsSlinky.antd.antdStrings.small
 import typingsSlinky.antd.antdStrings.text
-import typingsSlinky.antd.libInputClearableLabeledInputMod.ClearableInputProps
-import typingsSlinky.antd.libInputClearableLabeledInputMod.default
+import typingsSlinky.antd.clearableLabeledInputMod.ClearableInputProps
+import typingsSlinky.antd.clearableLabeledInputMod.default
+import typingsSlinky.antd.sizeContextMod.SizeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,28 +24,31 @@ object ClearableLabeledInput
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled */
+  /* The following DOM/SVG props were specified: className, disabled, readOnly */
   def apply(
     element: ReactElement,
     handleReset: SyntheticMouseEvent[HTMLElement] => Unit,
     inputType: text | input,
     prefixCls: String,
+    triggerFocus: () => Unit,
     addonAfter: TagMod[Any] = null,
     addonBefore: TagMod[Any] = null,
     allowClear: js.UndefOr[Boolean] = js.undefined,
-    defaultValue: js.Any = null,
+    direction: js.Any = null,
+    focused: js.UndefOr[Boolean] = js.undefined,
     prefix: TagMod[Any] = null,
-    size: small | typingsSlinky.antd.antdStrings.default | large = null,
+    size: SizeType = null,
     style: js.Object = null,
     suffix: TagMod[Any] = null,
     value: js.Any = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
-    val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], handleReset = js.Any.fromFunction1(handleReset), inputType = inputType.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(element = element.asInstanceOf[js.Any], handleReset = js.Any.fromFunction1(handleReset), inputType = inputType.asInstanceOf[js.Any], prefixCls = prefixCls.asInstanceOf[js.Any], triggerFocus = js.Any.fromFunction0(triggerFocus))
     if (addonAfter != null) __obj.updateDynamic("addonAfter")(addonAfter.asInstanceOf[js.Any])
     if (addonBefore != null) __obj.updateDynamic("addonBefore")(addonBefore.asInstanceOf[js.Any])
     if (!js.isUndefined(allowClear)) __obj.updateDynamic("allowClear")(allowClear.asInstanceOf[js.Any])
-    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (direction != null) __obj.updateDynamic("direction")(direction.asInstanceOf[js.Any])
+    if (!js.isUndefined(focused)) __obj.updateDynamic("focused")(focused.asInstanceOf[js.Any])
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])

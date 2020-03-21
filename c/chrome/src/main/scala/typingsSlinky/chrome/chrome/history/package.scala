@@ -5,8 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object history {
-  import typingsSlinky.chrome.chrome.events.Event
-
-  type HistoryVisitRemovedEvent = Event[js.Function1[/* removed */ RemovedResult, Unit]]
-  type HistoryVisitedEvent = Event[js.Function1[/* result */ HistoryItem, Unit]]
+  type HistoryVisitRemovedEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function1[/* removed */ typingsSlinky.chrome.chrome.history.RemovedResult, scala.Unit]
+  ]
+  type HistoryVisitedEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function1[/* result */ typingsSlinky.chrome.chrome.history.HistoryItem, scala.Unit]
+  ]
 }

@@ -5,15 +5,15 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.spectacle.spectacleMod.AppearProps
-import typingsSlinky.spectacle.spectacleMod.CSSProperties
-import typingsSlinky.spectacle.spectacleMod.easeType
+import typingsSlinky.spectacle.mod.AppearProps
+import typingsSlinky.spectacle.mod.CSSProperties
+import typingsSlinky.spectacle.mod.easeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Appear
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.spectacleMod.Appear] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.mod.Appear] {
   @JSImport("spectacle", "Appear")
   @js.native
   object componentImport extends js.Object
@@ -28,7 +28,7 @@ object Appear
     style: CSSProperties = null,
     transitionDuration: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.Appear] = {
+  ): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Appear] = {
     val __obj = js.Dynamic.literal()
     if (easing != null) __obj.updateDynamic("easing")(easing.asInstanceOf[js.Any])
     if (endValue != null) __obj.updateDynamic("endValue")(endValue.asInstanceOf[js.Any])
@@ -40,7 +40,7 @@ object Appear
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.Appear] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.spectacleMod.Appear](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Appear] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.mod.Appear](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = AppearProps
 }
 

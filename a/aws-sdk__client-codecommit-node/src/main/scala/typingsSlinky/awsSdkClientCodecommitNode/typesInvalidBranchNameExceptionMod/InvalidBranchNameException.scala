@@ -1,0 +1,26 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesInvalidBranchNameExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.createBranchExceptionsUnionMod.CreateBranchExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.deleteBranchExceptionsUnionMod.DeleteBranchExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.deleteFileExceptionsUnionMod.DeleteFileExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getBranchExceptionsUnionMod.GetBranchExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.putFileExceptionsUnionMod.PutFileExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.updateDefaultBranchExceptionsUnionMod.UpdateDefaultBranchExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidBranchNameException
+  extends ServiceException[InvalidBranchNameExceptionDetails]
+     with CreateBranchExceptionsUnion
+     with DeleteBranchExceptionsUnion
+     with DeleteFileExceptionsUnion
+     with GetBranchExceptionsUnion
+     with PutFileExceptionsUnion
+     with UpdateDefaultBranchExceptionsUnion {
+  @JSName("name")
+  var name_InvalidBranchNameException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.InvalidBranchNameException = js.native
+}
+

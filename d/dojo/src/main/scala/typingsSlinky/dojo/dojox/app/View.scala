@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.app
 
-import typingsSlinky.dojo.dijit._TemplatedMixin
+import typingsSlinky.dojo.dijit.TemplatedMixin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,11 +13,11 @@ import scala.scalajs.js.annotation._
   * @param params view parameters, include:app: the appid: view idname: view nametemplate: view template identifier. If templateString is not empty, this parameter is ignored.templateString: view template stringcontroller: view controller module identifierparent: parent viewchildren: children viewsnls: nls definition module identifier
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dojox.app.ViewBase because Inheritance from two classes. Inlined afterActivate, afterDeactivate, beforeActivate, beforeDeactivate, init, load, start
-- typings.dojo.dijit.Destroyable because Inheritance from two classes. Inlined destroy, destroy, own
-- typings.dojo.dijit._WidgetsInTemplateMixin because Inheritance from two classes. Inlined contextRequire, widgetsInTemplate, startup */ @JSGlobal("dojox.app.View")
+- typingsSlinky.dojo.dojox.app.ViewBase because Inheritance from two classes. Inlined afterActivate, afterDeactivate, beforeActivate, beforeDeactivate, init, load, start
+- typingsSlinky.dojo.dijit.Destroyable because Inheritance from two classes. Inlined destroy, destroy, own
+- typingsSlinky.dojo.dijit.WidgetsInTemplateMixin because Inheritance from two classes. Inlined contextRequire, widgetsInTemplate, startup */ @JSGlobal("dojox.app.View")
 @js.native
-class View protected () extends _TemplatedMixin {
+class View protected () extends TemplatedMixin {
   def this(params: js.Any) = this()
   /**
     * Used to provide a context require to the dojo/parser in order to be

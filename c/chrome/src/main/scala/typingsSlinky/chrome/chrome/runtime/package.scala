@@ -5,23 +5,33 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object runtime {
-  import org.scalablytyped.runtime.NumberDictionary
-  import typingsSlinky.chrome.chrome.events.Event
-
-  type ExtensionConnectEvent = Event[js.Function1[/* port */ Port, Unit]]
-  type ExtensionMessageEvent = Event[
+  type ExtensionConnectEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* port */ typingsSlinky.chrome.chrome.runtime.Port, scala.Unit]]
+  type ExtensionMessageEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function3[
       /* message */ js.Any, 
-      /* sender */ MessageSender, 
-      /* sendResponse */ js.Function1[/* response */ js.UndefOr[js.Any], Unit], 
-      Unit
+      /* sender */ typingsSlinky.chrome.chrome.runtime.MessageSender, 
+      /* sendResponse */ js.Function1[/* response */ js.UndefOr[js.Any], scala.Unit], 
+      scala.Unit
     ]
   ]
-  type ManifestIcons = NumberDictionary[String]
-  type PortDisconnectEvent = Event[js.Function1[/* port */ Port, Unit]]
-  type PortMessageEvent = Event[js.Function2[/* message */ js.Any, /* port */ Port, Unit]]
-  type RuntimeEvent = Event[js.Function0[Unit]]
-  type RuntimeInstalledEvent = Event[js.Function1[/* details */ InstalledDetails, Unit]]
-  type RuntimeRestartRequiredEvent = Event[js.Function1[/* reason */ String, Unit]]
-  type RuntimeUpdateAvailableEvent = Event[js.Function1[/* details */ UpdateAvailableDetails, Unit]]
+  type ManifestIcons = org.scalablytyped.runtime.NumberDictionary[java.lang.String]
+  type PortDisconnectEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* port */ typingsSlinky.chrome.chrome.runtime.Port, scala.Unit]]
+  type PortMessageEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function2[
+      /* message */ js.Any, 
+      /* port */ typingsSlinky.chrome.chrome.runtime.Port, 
+      scala.Unit
+    ]
+  ]
+  type RuntimeEvent = typingsSlinky.chrome.chrome.events.Event[js.Function0[scala.Unit]]
+  type RuntimeInstalledEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function1[/* details */ typingsSlinky.chrome.chrome.runtime.InstalledDetails, scala.Unit]
+  ]
+  type RuntimeRestartRequiredEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* reason */ java.lang.String, scala.Unit]]
+  type RuntimeUpdateAvailableEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function1[
+      /* details */ typingsSlinky.chrome.chrome.runtime.UpdateAvailableDetails, 
+      scala.Unit
+    ]
+  ]
 }

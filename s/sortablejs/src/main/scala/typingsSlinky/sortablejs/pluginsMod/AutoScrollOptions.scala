@@ -1,10 +1,10 @@
 package typingsSlinky.sortablejs.pluginsMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.TouchEvent
-import typingsSlinky.sortablejs.sortablejsMod.^
+import typingsSlinky.sortablejs.mod.^
 import typingsSlinky.sortablejs.sortablejsStrings.continue
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait AutoScrollOptions extends js.Object {
       /* this */ ^, 
       /* offsetX */ Double, 
       /* offsetY */ Double, 
-      /* originalEvent */ Event, 
+      /* originalEvent */ Event_, 
       /* touchEvt */ TouchEvent, 
       /* hoverTargetEl */ HTMLElement, 
       continue | Unit
@@ -51,7 +51,7 @@ object AutoScrollOptions {
       /* this */ ^, 
       /* offsetX */ Double, 
       /* offsetY */ Double, 
-      /* originalEvent */ Event, 
+      /* originalEvent */ Event_, 
       /* touchEvt */ TouchEvent, 
       /* hoverTargetEl */ HTMLElement, 
       continue | Unit

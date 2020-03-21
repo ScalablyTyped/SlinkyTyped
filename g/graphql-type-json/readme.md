@@ -11,8 +11,8 @@ JSON scalar types for GraphQL.js
 | Full name          | graphql-type-json |
 | Keywords           | graphql |
 | # releases         | 8 |
-| # dependents       | 214 |
-| # downloads        | 15894735 |
+| # dependents       | 221 |
+| # downloads        | 16588647 |
 | # stars            | 0 |
 
 ## Links

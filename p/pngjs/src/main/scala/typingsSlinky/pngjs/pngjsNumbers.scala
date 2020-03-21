@@ -1,7 +1,7 @@
 package typingsSlinky.pngjs
 
-import typingsSlinky.pngjs.pngjsMod.BitDepth
-import typingsSlinky.pngjs.pngjsMod.ColorType
+import typingsSlinky.pngjs.mod.BitDepth
+import typingsSlinky.pngjs.mod.ColorType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

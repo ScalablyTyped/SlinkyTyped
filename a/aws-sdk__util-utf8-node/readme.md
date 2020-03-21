@@ -10,9 +10,9 @@ A Node.JS UTF-8 string <-> UInt8Array converter
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/util-utf8-node |
 | Keywords           | - |
-| # releases         | 5 |
-| # dependents       | 186 |
-| # downloads        | 929466 |
+| # releases         | 6 |
+| # dependents       | 368 |
+| # downloads        | 940989 |
 | # stars            | 0 |
 
 ## Links

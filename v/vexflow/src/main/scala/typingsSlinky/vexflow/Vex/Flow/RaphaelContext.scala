@@ -13,8 +13,9 @@ class RaphaelContext protected () extends IRenderContext {
   @JSName("glow")
   def glow_RaphaelContext(): RaphaelContext = js.native
   def rect(x: Double, y: Double, width: Double, height: Double): Unit = js.native
+  //TODO remove the following lines once TypeScript allows subclass overrides with type changes or type inconsistencies mentioned below are fixed
   @JSName("setLineWidth")
-  def setLineWidth_Unit(width: Double): Unit = js.native
+  def setLineWidth_RaphaelContext(width: Double): RaphaelContext = js.native
   def setViewBox(viewBox: String): Unit = js.native
 }
 

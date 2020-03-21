@@ -1,19 +1,19 @@
 package typingsSlinky.webgme.GmeConfig
 
-import typingsSlinky.webgme.Anon_AllowBrowserExecution
-import typingsSlinky.webgme.Anon_AllowDuplication
-import typingsSlinky.webgme.Anon_AllowGuests
-import typingsSlinky.webgme.Anon_AutoMerge
-import typingsSlinky.webgme.Anon_BasePaths
-import typingsSlinky.webgme.Anon_BehindSecureProxy
-import typingsSlinky.webgme.Anon_ClearOldDataAtStartUp
-import typingsSlinky.webgme.Anon_ClientOptions
-import typingsSlinky.webgme.Anon_Components
-import typingsSlinky.webgme.Anon_DecoratorPaths
-import typingsSlinky.webgme.Anon_EnableCustomConstraints
-import typingsSlinky.webgme.Anon_EnableManager
-import typingsSlinky.webgme.Anon_Log
-import typingsSlinky.webgme.Anon_OptionsUri
+import typingsSlinky.webgme.AnonAllowBrowserExecution
+import typingsSlinky.webgme.AnonAllowDuplication
+import typingsSlinky.webgme.AnonAllowGuests
+import typingsSlinky.webgme.AnonAutoMerge
+import typingsSlinky.webgme.AnonBasePaths
+import typingsSlinky.webgme.AnonBehindSecureProxy
+import typingsSlinky.webgme.AnonClearOldDataAtStartUp
+import typingsSlinky.webgme.AnonClientOptions
+import typingsSlinky.webgme.AnonComponents
+import typingsSlinky.webgme.AnonDecoratorPaths
+import typingsSlinky.webgme.AnonEnableCustomConstraints
+import typingsSlinky.webgme.AnonLog
+import typingsSlinky.webgme.AnonManager
+import typingsSlinky.webgme.AnonUri
 import typingsSlinky.webgme.Blobs.ObjectBlob
 import typingsSlinky.webgme.GmeCommon.Dictionary
 import scala.scalajs.js
@@ -24,28 +24,28 @@ import scala.scalajs.js.annotation._
 @js.native
 class GmeConfig () extends js.Object {
   /**  Add-on related settings. */
-  var addOns: Anon_BasePaths = js.native
+  var addOns: AnonBasePaths = js.native
   /**  Authentication related settings. */
-  var authentication: Anon_AllowGuests = js.native
+  var authentication: AnonAllowGuests = js.native
   /** Bin script related settings. */
-  var bin: Anon_Log = js.native
+  var bin: AnonLog = js.native
   /** Blob related settings. */
   var blob: ObjectBlob = js.native
   /** Client related settings. */
   var client: ClientOptions = js.native
   /** Client related settings. */
-  var core: Anon_EnableCustomConstraints = js.native
+  var core: AnonEnableCustomConstraints = js.native
   /**
     * If true will add extra debug messages and also 
     * enable experimental Visualizers, (URL equivalent (only on client side) ?debug=true).
     */
   var debug: Boolean = js.native
   /** Executor related settings. */
-  var executor: Anon_ClearOldDataAtStartUp = js.native
+  var executor: AnonClearOldDataAtStartUp = js.native
   /** Mongo database related settings. */
-  var mongo: Anon_OptionsUri = js.native
+  var mongo: AnonUri = js.native
   /** Plugin related settings. */
-  var plugin: Anon_AllowBrowserExecution = js.native
+  var plugin: AnonAllowBrowserExecution = js.native
   /** Additional paths to for requirejs. 
     * Custom paths that will be added to the 
     * paths of requirejs configuration. 
@@ -55,18 +55,18 @@ class GmeConfig () extends js.Object {
     */
   var requirejsPaths: Dictionary[String] = js.native
   /** REST related settings. */
-  var rest: Anon_Components = js.native
+  var rest: AnonComponents = js.native
   /** Seed related settings. */
-  var seedProjects: Anon_AllowDuplication = js.native
+  var seedProjects: AnonAllowDuplication = js.native
   /** Server related settings. */
-  var server: Anon_BehindSecureProxy = js.native
+  var server: AnonBehindSecureProxy = js.native
   /** Socket IO related settings. */
-  var socketIO: Anon_ClientOptions = js.native
+  var socketIO: AnonClientOptions = js.native
   /** Storage related settings. */
-  var storage: Anon_AutoMerge = js.native
+  var storage: AnonAutoMerge = js.native
   /** Visualization related settings. */
-  var visualization: Anon_DecoratorPaths = js.native
-  var webhooks: Anon_EnableManager = js.native
+  var visualization: AnonDecoratorPaths = js.native
+  var webhooks: AnonManager = js.native
   /**
     *  Serialize the configuration.
     * @returns {*} 

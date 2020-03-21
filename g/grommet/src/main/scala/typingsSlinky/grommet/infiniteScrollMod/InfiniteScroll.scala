@@ -1,0 +1,22 @@
+package typingsSlinky.grommet.infiniteScrollMod
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.ComponentClass
+import typingsSlinky.react.mod.ComponentState
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("grommet/components/InfiniteScroll", "InfiniteScroll")
+@js.native
+class InfiniteScroll protected ()
+  extends Component[InfiniteScrollProps, ComponentState, js.Any] {
+  def this(props: InfiniteScrollProps) = this()
+  def this(props: InfiniteScrollProps, context: js.Any) = this()
+}
+
+@JSImport("grommet/components/InfiniteScroll", "InfiniteScroll")
+@js.native
+object InfiniteScroll extends TopLevel[ComponentClass[InfiniteScrollProps, ComponentState]]
+

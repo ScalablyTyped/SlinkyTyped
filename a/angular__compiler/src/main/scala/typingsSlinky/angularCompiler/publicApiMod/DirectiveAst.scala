@@ -1,0 +1,21 @@
+package typingsSlinky.angularCompiler.publicApiMod
+
+import typingsSlinky.angularCompiler.compileMetadataMod.CompileDirectiveSummary
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@angular/compiler/public_api", "DirectiveAst")
+@js.native
+class DirectiveAst protected ()
+  extends typingsSlinky.angularCompiler.srcCompilerMod.DirectiveAst {
+  def this(
+    directive: CompileDirectiveSummary,
+    inputs: js.Array[typingsSlinky.angularCompiler.templateAstMod.BoundDirectivePropertyAst],
+    hostProperties: js.Array[typingsSlinky.angularCompiler.templateAstMod.BoundElementPropertyAst],
+    hostEvents: js.Array[typingsSlinky.angularCompiler.templateAstMod.BoundEventAst],
+    contentQueryStartId: Double,
+    sourceSpan: typingsSlinky.angularCompiler.srcParseUtilMod.ParseSourceSpan
+  ) = this()
+}
+

@@ -1,14 +1,17 @@
 package typingsSlinky.jest
 
-import typingsSlinky.jest.jestMod.jasmine.CustomMatcherFactories
-import typingsSlinky.jest.jestMod.jest.ArgsType
-import typingsSlinky.jest.jestMod.jest.FunctionPropertyNames
-import typingsSlinky.jest.jestMod.jest.Mock
-import typingsSlinky.jest.jestMod.jest.MockOptions
-import typingsSlinky.jest.jestMod.jest.NonFunctionPropertyNames
-import typingsSlinky.jest.jestMod.jest.SpyInstance
 import typingsSlinky.jest.jestStrings.get
 import typingsSlinky.jest.jestStrings.set
+import typingsSlinky.jest.mod.jasmine.CustomMatcherFactories
+import typingsSlinky.jest.mod.jest.ArgsType
+import typingsSlinky.jest.mod.jest.ConstructorArgsType
+import typingsSlinky.jest.mod.jest.ConstructorPropertyNames
+import typingsSlinky.jest.mod.jest.FunctionPropertyNames
+import typingsSlinky.jest.mod.jest.MockOptions
+import typingsSlinky.jest.mod.jest.Mock_
+import typingsSlinky.jest.mod.jest.NonFunctionPropertyNames
+import typingsSlinky.jest.mod.jest.SpyInstance
+import typingsSlinky.std.InstanceType
 import typingsSlinky.std.Required
 import typingsSlinky.std.ReturnType
 import scala.scalajs.js
@@ -80,13 +83,13 @@ trait Typeofjest extends js.Object {
   /**
     * Creates a mock function. Optionally takes a mock implementation.
     */
-  def fn(): Mock[_, _] = js.native
-  def fn[T, Y /* <: js.Array[_] */](implementation: js.Function1[/* args */ Y, T]): Mock[T, Y] = js.native
+  def fn(): Mock_[_, _] = js.native
+  def fn[T, Y /* <: js.Array[_] */](implementation: js.Function1[/* args */ Y, T]): Mock_[T, Y] = js.native
   /**
     * Creates a mock function. Optionally takes a mock implementation.
     */
   @JSName("fn")
-  def fn_TY_ArrayWildcard[T, Y /* <: js.Array[_] */](): Mock[T, Y] = js.native
+  def fn_TY_ArrayWildcard[T, Y /* <: js.Array[_] */](): Mock_[T, Y] = js.native
   /**
     * Use the automatic mocking system to generate a mocked version of the given module.
     */
@@ -182,7 +185,16 @@ trait Typeofjest extends js.Object {
     * Note: The default timeout interval is 5 seconds if this method is not called.
     */
   def setTimeout(timeout: Double): /* import warning: importer.ImportType#apply Failed type conversion: typeof jest */ js.Any = js.native
-  def spyOn[T /* <: js.Object */, M /* <: FunctionPropertyNames[Required[T]] */](`object`: T, method: M): SpyInstance[
+  def spyOn[T /* <: js.Object */, M /* <: ConstructorPropertyNames[Required[T]] */](`object`: T, method: M): SpyInstance[
+    InstanceType[
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Required<T>[M] */ js.Any
+    ], 
+    ConstructorArgsType[
+      /* import warning: importer.ImportType#apply Failed type conversion: std.Required<T>[M] */ js.Any
+    ]
+  ] = js.native
+  @JSName("spyOn")
+  def spyOn_T_ObjectM_FunctionPropertyNamesRequiredT[T /* <: js.Object */, M /* <: FunctionPropertyNames[Required[T]] */](`object`: T, method: M): SpyInstance[
     ReturnType[
       /* import warning: importer.ImportType#apply Failed type conversion: std.Required<T>[M] */ js.Any
     ], 

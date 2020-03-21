@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dojox.widget
 
 import org.scalajs.dom.raw.HTMLDocument
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.attachScope
 import typingsSlinky.dojo.dojoStrings.buttonCancel
 import typingsSlinky.dojo.dojoStrings.noRemindButton
@@ -39,10 +39,10 @@ import scala.scalajs.js.annotation._
   * @param node
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit._AttachMixin because Inheritance from two classes. Inlined 
-- typings.dojo.dijit._TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.widget.UpgradeBar")
+- typingsSlinky.dojo.dijit.AttachMixin because Inheritance from two classes. Inlined 
+- typingsSlinky.dojo.dijit.TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.widget.UpgradeBar")
 @js.native
-class UpgradeBar protected () extends _WidgetBase {
+class UpgradeBar protected () extends WidgetBase {
   def this(props: js.Any, node: js.Any) = this()
   /**
     * Object to which attach points and events will be scoped.  Defaults
@@ -171,7 +171,7 @@ class UpgradeBar protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_buttonCancel(
     property: buttonCancel,
@@ -181,7 +181,7 @@ class UpgradeBar protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_noRemindButton(
     property: noRemindButton,
@@ -191,7 +191,7 @@ class UpgradeBar protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_notifications(
     property: notifications,
@@ -201,7 +201,7 @@ class UpgradeBar protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Array[_]], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_searchContainerNode(
     property: searchContainerNode,
@@ -211,7 +211,7 @@ class UpgradeBar protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templatePath(
     property: templatePath,
@@ -221,7 +221,7 @@ class UpgradeBar protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templateString(
     property: templateString,
@@ -231,6 +231,6 @@ class UpgradeBar protected () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

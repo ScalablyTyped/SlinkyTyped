@@ -1,0 +1,25 @@
+package typingsSlinky.angularCompiler.publicApiMod
+
+import typingsSlinky.angularCompiler.outputAstMod.TypeModifier
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@angular/compiler/public_api", "ExpressionType")
+@js.native
+class ExpressionType protected ()
+  extends typingsSlinky.angularCompiler.srcCompilerMod.ExpressionType {
+  def this(value: typingsSlinky.angularCompiler.outputAstMod.Expression) = this()
+  def this(value: typingsSlinky.angularCompiler.outputAstMod.Expression, modifiers: js.Array[TypeModifier]) = this()
+  def this(
+    value: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    modifiers: js.Array[TypeModifier],
+    typeParams: js.Array[typingsSlinky.angularCompiler.outputAstMod.Type]
+  ) = this()
+  def this(
+    value: typingsSlinky.angularCompiler.outputAstMod.Expression,
+    modifiers: Null,
+    typeParams: js.Array[typingsSlinky.angularCompiler.outputAstMod.Type]
+  ) = this()
+}
+

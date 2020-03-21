@@ -1,7 +1,7 @@
 package typingsSlinky.umbraco.umbraco.services
 
-import typingsSlinky.angular.angularMod.IFormController
-import typingsSlinky.angular.angularMod.IScope
+import typingsSlinky.angular.mod.IFormController
+import typingsSlinky.angular.mod.IScope
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

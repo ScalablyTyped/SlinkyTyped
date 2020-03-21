@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.grid.enhanced.plugins
 
 import typingsSlinky.dojo.dojox.grid.EnhancedGrid
-import typingsSlinky.dojo.dojox.grid.enhanced._Plugin
+import typingsSlinky.dojo.dojox.grid.enhanced.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.grid.enhanced.plugins.Pagination")
 @js.native
-class Pagination protected () extends _Plugin {
+class Pagination protected () extends Plugin {
   def this(inGrid: EnhancedGrid, option: js.Any) = this()
   /**
     * Which page will be displayed initially, 1st page by default.

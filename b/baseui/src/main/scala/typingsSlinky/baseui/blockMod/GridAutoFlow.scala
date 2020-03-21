@@ -5,14 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.baseui.baseuiStrings.row
-  - typings.baseui.baseuiStrings.column
-  - typings.baseui.baseuiStrings.dense
-  - typings.baseui.baseuiStrings.`row dense`
-  - typings.baseui.baseuiStrings.`column dense`
-  - typings.baseui.baseuiStrings.inherit
-  - typings.baseui.baseuiStrings.initial
-  - typings.baseui.baseuiStrings.unset
+  - typingsSlinky.baseui.baseuiStrings.row
+  - typingsSlinky.baseui.baseuiStrings.column
+  - typingsSlinky.baseui.baseuiStrings.dense
+  - typingsSlinky.baseui.baseuiStrings.`row dense`
+  - typingsSlinky.baseui.baseuiStrings.`column dense`
+  - typingsSlinky.baseui.baseuiStrings.inherit
+  - typingsSlinky.baseui.baseuiStrings.initial
+  - typingsSlinky.baseui.baseuiStrings.unset
 */
 trait GridAutoFlow extends js.Object
 

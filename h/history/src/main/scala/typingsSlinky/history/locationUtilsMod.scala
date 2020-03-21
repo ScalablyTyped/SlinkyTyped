@@ -1,8 +1,8 @@
 package typingsSlinky.history
 
-import typingsSlinky.history.historyMod.Location
-import typingsSlinky.history.historyMod.LocationDescriptor
-import typingsSlinky.history.historyMod.LocationKey
+import typingsSlinky.history.mod.Location
+import typingsSlinky.history.mod.LocationDescriptor
+import typingsSlinky.history.mod.LocationKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

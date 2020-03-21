@@ -10,9 +10,9 @@ The set of base classes for Material Components for the web
 | ------------------ | :-------------: |
 | Full name          | @material/base |
 | Keywords           | - |
-| # releases         | 93 |
+| # releases         | 138 |
 | # dependents       | 69 |
-| # downloads        | 3104506 |
+| # downloads        | 3177752 |
 | # stars            | 0 |
 
 ## Links

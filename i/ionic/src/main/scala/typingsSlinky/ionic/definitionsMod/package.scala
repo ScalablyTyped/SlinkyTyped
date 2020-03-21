@@ -5,38 +5,42 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object definitionsMod {
-  import org.scalablytyped.runtime.StringDictionary
-  import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandMetadataInput
-  import typingsSlinky.ionic.Anon_Images
-  import typingsSlinky.ionic.Anon_Req
-  import typingsSlinky.ionic.ionicStrings.`ssl-commands`
-  import typingsSlinky.ionic.ionicStrings.custom
-  import typingsSlinky.ionic.ionicStrings.guard
-  import typingsSlinky.ionic.ionicStrings.ionic1
-  import typingsSlinky.ionic.ionicStrings.max
-  import typingsSlinky.ionic.ionicStrings.reqgen
-  import typingsSlinky.ionic.ionicStrings.state
-  import typingsSlinky.std.Pick
-
-  type APIResponseData = js.Object | js.Array[js.Object] | String
-  type CommandInstanceInfo = typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandInstanceInfo[ICommand, INamespace, CommandMetadata, CommandMetadataInput, CommandMetadataOption]
-  type CustomBuildOptions = BuildOptions[custom]
-  type CustomServeOptions = ServeOptions
-  type FeatureId = `ssl-commands`
-  type HookContext = BaseHookContext with HookInput
-  type HookFn = js.Function1[/* ctx */ HookContext, js.Promise[Unit]]
-  type HydratedCommandMetadata = CommandMetadata with (typingsSlinky.atIonicCliDashFramework.definitionsMod.HydratedCommandMetadata[ICommand, INamespace, CommandMetadata, CommandMetadataInput, CommandMetadataOption])
-  type Ionic1BuildOptions = BuildOptions[ionic1]
-  type LogFn = js.Function1[/* msg */ String, Unit]
-  type NamespaceLocateResult = typingsSlinky.atIonicCliDashFramework.definitionsMod.NamespaceLocateResult[ICommand, INamespace, CommandMetadata, CommandMetadataInput, CommandMetadataOption]
-  type OAuthIdentity = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ A in ionic.ionic/definitions.AssociationType ]:? ionic.ionic/definitions.OAuthIdentityDetails}
-    */ typingsSlinky.ionic.ionicStrings.OAuthIdentity with js.Any
-  type PackageVersions = StringDictionary[String]
-  type PaginateArgs[T /* <: Response[js.Array[js.Object]] */] = Pick[PaginatorDeps[T, PaginatorState], reqgen | guard | state | max]
-  type PaginatorGuard[T /* <: Response[js.Array[js.Object]] */] = js.Function1[/* res */ APIResponseSuccess, /* is T */ Boolean]
-  type PaginatorRequestGenerator = js.Function0[js.Promise[Anon_Req]]
-  type ResourcesConfig = StringDictionary[ResourcesPlatform]
-  type ResourcesPlatform = StringDictionary[Anon_Images]
-  type SuperAgentRequest = typingsSlinky.superagent.superagentMod.SuperAgentRequest
+  type APIResponseData = js.Object | js.Array[js.Object] | java.lang.String
+  type CommandInstanceInfo = typingsSlinky.ionicCliFramework.definitionsMod.CommandInstanceInfo[
+    typingsSlinky.ionic.definitionsMod.ICommand, 
+    typingsSlinky.ionic.definitionsMod.INamespace, 
+    typingsSlinky.ionic.definitionsMod.CommandMetadata, 
+    typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput, 
+    typingsSlinky.ionic.definitionsMod.CommandMetadataOption
+  ]
+  type CustomBuildOptions = typingsSlinky.ionic.definitionsMod.BuildOptions[typingsSlinky.ionic.ionicStrings.custom]
+  type CustomServeOptions = typingsSlinky.ionic.definitionsMod.ServeOptions
+  type FeatureId = typingsSlinky.ionic.ionicStrings.`ssl-commands`
+  type HookContext = typingsSlinky.ionic.definitionsMod.BaseHookContext with typingsSlinky.ionic.definitionsMod.HookInput
+  type HookFn = js.Function1[/* ctx */ typingsSlinky.ionic.definitionsMod.HookContext, js.Promise[scala.Unit]]
+  type HydratedCommandMetadata = typingsSlinky.ionic.definitionsMod.CommandMetadata with (typingsSlinky.ionicCliFramework.definitionsMod.HydratedCommandMetadata[
+    typingsSlinky.ionic.definitionsMod.ICommand, 
+    typingsSlinky.ionic.definitionsMod.INamespace, 
+    typingsSlinky.ionic.definitionsMod.CommandMetadata, 
+    typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput, 
+    typingsSlinky.ionic.definitionsMod.CommandMetadataOption
+  ])
+  type Ionic1BuildOptions = typingsSlinky.ionic.definitionsMod.BuildOptions[typingsSlinky.ionic.ionicStrings.ionic1]
+  type LogFn = js.Function1[/* msg */ java.lang.String, scala.Unit]
+  type NamespaceLocateResult = typingsSlinky.ionicCliFramework.definitionsMod.NamespaceLocateResult[
+    typingsSlinky.ionic.definitionsMod.ICommand, 
+    typingsSlinky.ionic.definitionsMod.INamespace, 
+    typingsSlinky.ionic.definitionsMod.CommandMetadata, 
+    typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput, 
+    typingsSlinky.ionic.definitionsMod.CommandMetadataOption
+  ]
+  type PackageVersions = org.scalablytyped.runtime.StringDictionary[java.lang.String]
+  type PaginatorGuard[T /* <: typingsSlinky.ionic.definitionsMod.Response[js.Array[js.Object]] */] = js.Function1[
+    /* res */ typingsSlinky.ionic.definitionsMod.APIResponseSuccess, 
+    /* is T */ scala.Boolean
+  ]
+  type PaginatorRequestGenerator = js.Function0[js.Promise[typingsSlinky.ionic.AnonReq]]
+  type ResourcesConfig = org.scalablytyped.runtime.StringDictionary[typingsSlinky.ionic.definitionsMod.ResourcesPlatform]
+  type ResourcesPlatform = org.scalablytyped.runtime.StringDictionary[typingsSlinky.ionic.AnonImages]
+  type SuperAgentRequest = typingsSlinky.superagent.mod.SuperAgentRequest
 }

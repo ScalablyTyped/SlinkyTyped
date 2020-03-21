@@ -12,7 +12,7 @@ sequelize fixture loader
 | Keywords           | sequelize, fixtures |
 | # releases         | 10 |
 | # dependents       | 8 |
-| # downloads        | 405789 |
+| # downloads        | 415917 |
 | # stars            | 7 |
 
 ## Links

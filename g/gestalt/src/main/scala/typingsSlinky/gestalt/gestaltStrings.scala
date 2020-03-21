@@ -1,6 +1,6 @@
 package typingsSlinky.gestalt
 
-import typingsSlinky.gestalt.gestaltMod.Icons
+import typingsSlinky.gestalt.mod.Icons
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

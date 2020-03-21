@@ -4,16 +4,16 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.gestaltMod.ImageProps
 import typingsSlinky.gestalt.gestaltStrings.contain
 import typingsSlinky.gestalt.gestaltStrings.cover
 import typingsSlinky.gestalt.gestaltStrings.none
+import typingsSlinky.gestalt.mod.ImageProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Image
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Image] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Image] {
   @JSImport("gestalt", "Image")
   @js.native
   object componentImport extends js.Object
@@ -31,7 +31,7 @@ object Image
     size: String = null,
     srcSet: String = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Image] = {
+  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Image] = {
     val __obj = js.Dynamic.literal(alt = alt.asInstanceOf[js.Any], color = color.asInstanceOf[js.Any], naturalHeight = naturalHeight.asInstanceOf[js.Any], naturalWidth = naturalWidth.asInstanceOf[js.Any], src = src.asInstanceOf[js.Any])
     if (fit != null) __obj.updateDynamic("fit")(fit.asInstanceOf[js.Any])
     if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction0(onError))

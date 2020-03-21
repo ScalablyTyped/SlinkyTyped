@@ -1,15 +1,15 @@
 package typingsSlinky.tsutils
 
 import typingsSlinky.std.Map
+import typingsSlinky.tsutils.controlFlowMod.ControlFlowEnd
+import typingsSlinky.tsutils.convertAstMod.ConvertedAst
+import typingsSlinky.tsutils.convertAstMod.NodeWrap
 import typingsSlinky.tsutils.tsutilsStrings.CarriagereturnLinefeed
 import typingsSlinky.tsutils.tsutilsStrings.Linefeed
 import typingsSlinky.tsutils.tsutilsStrings.stripInternal
-import typingsSlinky.tsutils.utilControlDashFlowMod.ControlFlowEnd
-import typingsSlinky.tsutils.utilConvertDashAstMod.ConvertedAst
-import typingsSlinky.tsutils.utilConvertDashAstMod.NodeWrap
-import typingsSlinky.tsutils.utilUsageMod.DeclarationDomain
-import typingsSlinky.tsutils.utilUsageMod.UsageDomain
-import typingsSlinky.tsutils.utilUsageMod.VariableInfo
+import typingsSlinky.tsutils.usageMod.DeclarationDomain
+import typingsSlinky.tsutils.usageMod.UsageDomain
+import typingsSlinky.tsutils.usageMod.VariableInfo
 import typingsSlinky.tsutils.utilUtilMod.AccessKind
 import typingsSlinky.tsutils.utilUtilMod.BooleanCompilerOptions
 import typingsSlinky.tsutils.utilUtilMod.ForEachCommentCallback
@@ -23,47 +23,46 @@ import typingsSlinky.tsutils.utilUtilMod.SideEffectOptions
 import typingsSlinky.tsutils.utilUtilMod.StrictCompilerOption
 import typingsSlinky.tsutils.utilUtilMod.VariableDeclarationKind
 import typingsSlinky.tsutils.utilUtilMod.WellKnownSymbolLiteral
-import typingsSlinky.typescript.typescriptMod.ArrowFunction
-import typingsSlinky.typescript.typescriptMod.AssertionExpression
-import typingsSlinky.typescript.typescriptMod.BindingElement
-import typingsSlinky.typescript.typescriptMod.BindingPattern
-import typingsSlinky.typescript.typescriptMod.BlockLike
-import typingsSlinky.typescript.typescriptMod.CallExpression
-import typingsSlinky.typescript.typescriptMod.CheckJsDirective
-import typingsSlinky.typescript.typescriptMod.ClassElement
-import typingsSlinky.typescript.typescriptMod.ClassLikeDeclaration
-import typingsSlinky.typescript.typescriptMod.CommentRange
-import typingsSlinky.typescript.typescriptMod.CompilerOptions
-import typingsSlinky.typescript.typescriptMod.Expression
-import typingsSlinky.typescript.typescriptMod.FunctionExpression
-import typingsSlinky.typescript.typescriptMod.Identifier
-import typingsSlinky.typescript.typescriptMod.JSDoc
-import typingsSlinky.typescript.typescriptMod.Modifier
-import typingsSlinky.typescript.typescriptMod.ModifierFlags
-import typingsSlinky.typescript.typescriptMod.ModifiersArray
-import typingsSlinky.typescript.typescriptMod.ModuleDeclaration
-import typingsSlinky.typescript.typescriptMod.NoSubstitutionTemplateLiteral
-import typingsSlinky.typescript.typescriptMod.Node
-import typingsSlinky.typescript.typescriptMod.NodeFlags
-import typingsSlinky.typescript.typescriptMod.ObjectFlags
-import typingsSlinky.typescript.typescriptMod.ObjectType
-import typingsSlinky.typescript.typescriptMod.ParameterDeclaration
-import typingsSlinky.typescript.typescriptMod.PropertyName
-import typingsSlinky.typescript.typescriptMod.ScriptTarget
-import typingsSlinky.typescript.typescriptMod.Signature
-import typingsSlinky.typescript.typescriptMod.SourceFile
-import typingsSlinky.typescript.typescriptMod.Statement
-import typingsSlinky.typescript.typescriptMod.StringLiteral
-import typingsSlinky.typescript.typescriptMod.Symbol
-import typingsSlinky.typescript.typescriptMod.SymbolFlags
-import typingsSlinky.typescript.typescriptMod.SyntaxKind
-import typingsSlinky.typescript.typescriptMod.Token
-import typingsSlinky.typescript.typescriptMod.Type
-import typingsSlinky.typescript.typescriptMod.TypeChecker
-import typingsSlinky.typescript.typescriptMod.TypeFlags
-import typingsSlinky.typescript.typescriptMod.VariableDeclaration
-import typingsSlinky.typescript.typescriptMod.VariableDeclarationList
-import typingsSlinky.typescript.typescriptMod.__String
+import typingsSlinky.typescript.mod.ArrowFunction
+import typingsSlinky.typescript.mod.AssertionExpression
+import typingsSlinky.typescript.mod.BindingElement
+import typingsSlinky.typescript.mod.BindingPattern
+import typingsSlinky.typescript.mod.BlockLike
+import typingsSlinky.typescript.mod.CallExpression
+import typingsSlinky.typescript.mod.CheckJsDirective
+import typingsSlinky.typescript.mod.ClassElement
+import typingsSlinky.typescript.mod.ClassLikeDeclaration
+import typingsSlinky.typescript.mod.CommentRange
+import typingsSlinky.typescript.mod.CompilerOptions
+import typingsSlinky.typescript.mod.Expression
+import typingsSlinky.typescript.mod.FunctionExpression
+import typingsSlinky.typescript.mod.Identifier
+import typingsSlinky.typescript.mod.JSDoc
+import typingsSlinky.typescript.mod.Modifier
+import typingsSlinky.typescript.mod.ModifierFlags
+import typingsSlinky.typescript.mod.ModifiersArray
+import typingsSlinky.typescript.mod.ModuleDeclaration
+import typingsSlinky.typescript.mod.NoSubstitutionTemplateLiteral
+import typingsSlinky.typescript.mod.Node
+import typingsSlinky.typescript.mod.NodeFlags
+import typingsSlinky.typescript.mod.ObjectFlags
+import typingsSlinky.typescript.mod.ObjectType
+import typingsSlinky.typescript.mod.ParameterDeclaration
+import typingsSlinky.typescript.mod.PropertyName
+import typingsSlinky.typescript.mod.ScriptTarget
+import typingsSlinky.typescript.mod.Signature
+import typingsSlinky.typescript.mod.SourceFile
+import typingsSlinky.typescript.mod.Statement
+import typingsSlinky.typescript.mod.StringLiteral
+import typingsSlinky.typescript.mod.Symbol
+import typingsSlinky.typescript.mod.SymbolFlags
+import typingsSlinky.typescript.mod.SyntaxKind
+import typingsSlinky.typescript.mod.Token
+import typingsSlinky.typescript.mod.Type
+import typingsSlinky.typescript.mod.TypeChecker
+import typingsSlinky.typescript.mod.TypeFlags
+import typingsSlinky.typescript.mod.VariableDeclaration
+import typingsSlinky.typescript.mod.VariableDeclarationList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -83,9 +82,9 @@ object utilMod extends js.Object {
   def forEachComment(node: Node, cb: ForEachCommentCallback, sourceFile: SourceFile): Unit = js.native
   def forEachDeclaredVariable[T](
     declarationList: VariableDeclarationList,
-    cb: js.Function1[/* element */ (VariableDeclaration | BindingElement) with Anon_Name, T]
+    cb: js.Function1[/* element */ (VariableDeclaration | BindingElement) with AnonName, T]
   ): js.UndefOr[T] = js.native
-  def forEachDestructuringIdentifier[T](pattern: BindingPattern, fn: js.Function1[/* element */ BindingElement with Anon_Name, T]): js.UndefOr[T] = js.native
+  def forEachDestructuringIdentifier[T](pattern: BindingPattern, fn: js.Function1[/* element */ BindingElementnameIdentif, T]): js.UndefOr[T] = js.native
   def forEachToken(node: Node, cb: js.Function1[/* node */ Node, Unit]): Unit = js.native
   def forEachToken(node: Node, cb: js.Function1[/* node */ Node, Unit], sourceFile: SourceFile): Unit = js.native
   def forEachTokenWithTrivia(node: Node, cb: ForEachTokenCallback): Unit = js.native
@@ -126,7 +125,7 @@ object utilMod extends js.Object {
   def getPropertyName(propertyName: PropertyName): js.UndefOr[String] = js.native
   def getPropertyNameFromType(`type`: Type): js.UndefOr[typingsSlinky.tsutils.utilUtilMod.PropertyName] = js.native
   def getPropertyNameOfWellKnownSymbol(node: WellKnownSymbolLiteral): typingsSlinky.tsutils.utilUtilMod.PropertyName = js.native
-  def getPropertyOfType(`type`: Type, name: __String): js.UndefOr[Symbol] = js.native
+  def getPropertyOfType(`type`: Type, name: typingsSlinky.typescript.mod.String): js.UndefOr[Symbol] = js.native
   def getSingleLateBoundPropertyNameOfPropertyName(node: PropertyName, checker: TypeChecker): js.UndefOr[typingsSlinky.tsutils.utilUtilMod.PropertyName] = js.native
   def getTokenAtPosition(parent: Node, pos: Double): js.UndefOr[Node] = js.native
   def getTokenAtPosition(parent: Node, pos: Double, sourceFile: SourceFile): js.UndefOr[Node] = js.native
@@ -175,12 +174,12 @@ object utilMod extends js.Object {
   def isNodeFlagSet(node: Node, flag: NodeFlags): Boolean = js.native
   def isNodeKind(kind: SyntaxKind): Boolean = js.native
   def isNumericPropertyName(name: String): Boolean = js.native
-  def isNumericPropertyName(name: __String): Boolean = js.native
+  def isNumericPropertyName(name: typingsSlinky.typescript.mod.String): Boolean = js.native
   def isObjectFlagSet(objectType: ObjectType, flag: ObjectFlags): Boolean = js.native
   def isParameterProperty(node: ParameterDeclaration): Boolean = js.native
   def isPositionInComment(sourceFile: SourceFile, pos: Double): Boolean = js.native
   def isPositionInComment(sourceFile: SourceFile, pos: Double, parent: Node): Boolean = js.native
-  def isPropertyReadonlyInType(`type`: Type, name: __String, checker: TypeChecker): Boolean = js.native
+  def isPropertyReadonlyInType(`type`: Type, name: typingsSlinky.typescript.mod.String, checker: TypeChecker): Boolean = js.native
   def isReadonlyAssignmentDeclaration(node: CallExpression, checker: TypeChecker): Boolean = js.native
   def isReassignmentTarget(node: Expression): Boolean = js.native
   def isSameLine(sourceFile: SourceFile, pos1: Double, pos2: Double): Boolean = js.native
@@ -235,13 +234,13 @@ object utilMod extends js.Object {
   
   @js.native
   object DeclarationDomain extends js.Object {
-    /* 7 */ val Any: typingsSlinky.tsutils.utilUsageMod.DeclarationDomain.Any with Double = js.native
-    /* 8 */ val Import: typingsSlinky.tsutils.utilUsageMod.DeclarationDomain.Import with Double = js.native
-    /* 1 */ val Namespace: typingsSlinky.tsutils.utilUsageMod.DeclarationDomain.Namespace with Double = js.native
-    /* 2 */ val Type: typingsSlinky.tsutils.utilUsageMod.DeclarationDomain.Type with Double = js.native
-    /* 4 */ val Value: typingsSlinky.tsutils.utilUsageMod.DeclarationDomain.Value with Double = js.native
+    /* 7 */ val Any: typingsSlinky.tsutils.usageMod.DeclarationDomain.Any with Double = js.native
+    /* 8 */ val Import: typingsSlinky.tsutils.usageMod.DeclarationDomain.Import with Double = js.native
+    /* 1 */ val Namespace: typingsSlinky.tsutils.usageMod.DeclarationDomain.Namespace with Double = js.native
+    /* 2 */ val Type: typingsSlinky.tsutils.usageMod.DeclarationDomain.Type with Double = js.native
+    /* 4 */ val Value: typingsSlinky.tsutils.usageMod.DeclarationDomain.Value with Double = js.native
     @JSBracketAccess
-    def apply(value: Double): js.UndefOr[typingsSlinky.tsutils.utilUsageMod.DeclarationDomain with Double] = js.native
+    def apply(value: Double): js.UndefOr[typingsSlinky.tsutils.usageMod.DeclarationDomain with Double] = js.native
   }
   
   @js.native
@@ -294,14 +293,14 @@ object utilMod extends js.Object {
   
   @js.native
   object UsageDomain extends js.Object {
-    /* 7 */ val Any: typingsSlinky.tsutils.utilUsageMod.UsageDomain.Any with Double = js.native
-    /* 1 */ val Namespace: typingsSlinky.tsutils.utilUsageMod.UsageDomain.Namespace with Double = js.native
-    /* 2 */ val Type: typingsSlinky.tsutils.utilUsageMod.UsageDomain.Type with Double = js.native
-    /* 8 */ val TypeQuery: typingsSlinky.tsutils.utilUsageMod.UsageDomain.TypeQuery with Double = js.native
-    /* 4 */ val Value: typingsSlinky.tsutils.utilUsageMod.UsageDomain.Value with Double = js.native
-    /* 5 */ val ValueOrNamespace: typingsSlinky.tsutils.utilUsageMod.UsageDomain.ValueOrNamespace with Double = js.native
+    /* 7 */ val Any: typingsSlinky.tsutils.usageMod.UsageDomain.Any with Double = js.native
+    /* 1 */ val Namespace: typingsSlinky.tsutils.usageMod.UsageDomain.Namespace with Double = js.native
+    /* 2 */ val Type: typingsSlinky.tsutils.usageMod.UsageDomain.Type with Double = js.native
+    /* 8 */ val TypeQuery: typingsSlinky.tsutils.usageMod.UsageDomain.TypeQuery with Double = js.native
+    /* 4 */ val Value: typingsSlinky.tsutils.usageMod.UsageDomain.Value with Double = js.native
+    /* 5 */ val ValueOrNamespace: typingsSlinky.tsutils.usageMod.UsageDomain.ValueOrNamespace with Double = js.native
     @JSBracketAccess
-    def apply(value: Double): js.UndefOr[typingsSlinky.tsutils.utilUsageMod.UsageDomain with Double] = js.native
+    def apply(value: Double): js.UndefOr[typingsSlinky.tsutils.usageMod.UsageDomain with Double] = js.native
   }
   
   @js.native

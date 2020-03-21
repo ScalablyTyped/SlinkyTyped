@@ -1,10 +1,10 @@
 package typingsSlinky.autolinker
 
-import typingsSlinky.autolinker.distCommonjsAutolinkerMod.HashtagConfig
-import typingsSlinky.autolinker.distCommonjsAutolinkerMod.HashtagServices
-import typingsSlinky.autolinker.distCommonjsAutolinkerMod.MentionConfig
-import typingsSlinky.autolinker.distCommonjsAutolinkerMod.MentionServices
-import typingsSlinky.autolinker.distCommonjsAutolinkerMod.UrlMatchTypeOptions
+import typingsSlinky.autolinker.autolinkerMod.HashtagConfig
+import typingsSlinky.autolinker.autolinkerMod.HashtagServices
+import typingsSlinky.autolinker.autolinkerMod.MentionConfig
+import typingsSlinky.autolinker.autolinkerMod.MentionServices
+import typingsSlinky.autolinker.autolinkerMod.UrlMatchTypeOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

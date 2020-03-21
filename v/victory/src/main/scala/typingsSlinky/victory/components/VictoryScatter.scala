@@ -6,21 +6,22 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.victory.Anon_XY
-import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.victoryMod.AnimatePropTypeInterface
-import typingsSlinky.victory.victoryMod.CategoryPropType
-import typingsSlinky.victory.victoryMod.D3Scale
-import typingsSlinky.victory.victoryMod.DataGetterPropType
-import typingsSlinky.victory.victoryMod.DomainPropType
-import typingsSlinky.victory.victoryMod.EventPropTypeInterface
-import typingsSlinky.victory.victoryMod.PaddingProps
-import typingsSlinky.victory.victoryMod.ScalePropType
-import typingsSlinky.victory.victoryMod.ScatterSymbolType
-import typingsSlinky.victory.victoryMod.StringOrNumberOrCallback
-import typingsSlinky.victory.victoryMod.VictoryScatterProps
-import typingsSlinky.victory.victoryMod.VictoryStyleInterface
-import typingsSlinky.victory.victoryMod.VictoryThemeDefinition
+import typingsSlinky.victory.Anon1
+import typingsSlinky.victory.AnonXBoolean
+import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.mod.AnimatePropTypeInterface
+import typingsSlinky.victory.mod.CategoryPropType
+import typingsSlinky.victory.mod.D3Scale
+import typingsSlinky.victory.mod.DataGetterPropType
+import typingsSlinky.victory.mod.DomainPropType
+import typingsSlinky.victory.mod.EventPropTypeInterface
+import typingsSlinky.victory.mod.PaddingProps
+import typingsSlinky.victory.mod.ScalePropType
+import typingsSlinky.victory.mod.ScatterSymbolType
+import typingsSlinky.victory.mod.StringOrNumberOrCallback
+import typingsSlinky.victory.mod.VictoryScatterProps
+import typingsSlinky.victory.mod.VictoryStyleInterface
+import typingsSlinky.victory.mod.VictoryThemeDefinition
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.labels
 import typingsSlinky.victory.victoryStrings.parent
@@ -29,7 +30,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VictoryScatter
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.VictoryScatter] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryScatter] {
   @JSImport("victory", "VictoryScatter")
   @js.native
   object componentImport extends js.Object
@@ -52,11 +53,12 @@ object VictoryScatter
     labelComponent: ReactElement = null,
     labels: js.Array[String] | (js.Function1[/* data */ js.Any, String]) = null,
     maxBubbleSize: Int | Double = null,
-    maxDomain: Double | Anon_XY = null,
-    minDomain: Double | Anon_XY = null,
+    maxDomain: Double | AnonY = null,
+    minDomain: Double | AnonY = null,
     padding: PaddingProps = null,
     samples: Int | Double = null,
-    scale: ScalePropType | D3Scale | Anon_XYD3Scale = null,
+    scale: ScalePropType | D3Scale | Anon1 = null,
+    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
     size: Double | (js.Function1[/* data */ js.Any, Double]) = null,
     standalone: js.UndefOr[Boolean] = js.undefined,
     style: VictoryStyleInterface = null,
@@ -67,7 +69,7 @@ object VictoryScatter
     y: DataGetterPropType = null,
     y0: DataGetterPropType = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryScatter] = {
+  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryScatter] = {
     val __obj = js.Dynamic.literal()
     if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
     if (bubbleProperty != null) __obj.updateDynamic("bubbleProperty")(bubbleProperty.asInstanceOf[js.Any])
@@ -89,6 +91,7 @@ object VictoryScatter
     if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
     if (samples != null) __obj.updateDynamic("samples")(samples.asInstanceOf[js.Any])
     if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
@@ -101,7 +104,7 @@ object VictoryScatter
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryScatter] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.VictoryScatter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryScatter] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryScatter](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryScatterProps
 }
 

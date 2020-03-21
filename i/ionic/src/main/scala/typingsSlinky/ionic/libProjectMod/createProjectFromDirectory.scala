@@ -1,7 +1,7 @@
 package typingsSlinky.ionic.libProjectMod
 
 import typingsSlinky.ionic.definitionsMod.IProject
-import typingsSlinky.minimist.minimistMod.ParsedArgs
+import typingsSlinky.minimist.mod.ParsedArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

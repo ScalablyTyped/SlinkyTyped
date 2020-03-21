@@ -1,6 +1,5 @@
 package typingsSlinky.muicss.reactMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -16,14 +15,14 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
-import typingsSlinky.react.Anon_Html
-import typingsSlinky.react.reactMod.Booleanish
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.react.reactMod.ChangeEvent
-import typingsSlinky.react.reactMod.DragEvent
-import typingsSlinky.react.reactMod.MouseEventHandler
-import typingsSlinky.react.reactMod.Ref
-import typingsSlinky.react.reactMod.TextareaHTMLAttributes
+import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.mod.Booleanish
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.MouseEventHandler
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.TextareaHTMLAttributes
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -69,6 +68,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.std.Event_
 import typingsSlinky.std.HTMLTextAreaElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -147,7 +147,7 @@ object TextareaProps {
     cols: Int | Double = null,
     contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
-    dangerouslySetInnerHTML: Anon_Html = null,
+    dangerouslySetInnerHTML: AnonHtml = null,
     datatype: String = null,
     defaultChecked: js.UndefOr[Boolean] = js.undefined,
     defaultValue: String | Double | js.Array[String] = null,
@@ -175,15 +175,15 @@ object TextareaProps {
     maxLength: Int | Double = null,
     minLength: Int | Double = null,
     name: String = null,
-    onAbort: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onAbort: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onAnimationEnd: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onAnimationIteration: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onAnimationStart: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onAuxClick: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event_] => Unit = null,
     onBlur: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onCanPlay: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onCanPlayThrough: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onCanPlay: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onCanPlayThrough: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onChange: ChangeEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onClick: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onCompositionEnd: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
@@ -201,22 +201,22 @@ object TextareaProps {
     onDragOver: DragEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onDragStart: DragEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onDrop: DragEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onDurationChange: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onEmptied: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onEncrypted: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onEnded: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onError: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onDurationChange: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onEmptied: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onEncrypted: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onEnded: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onError: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onFocus: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event] => Unit = null,
-    onInvalid: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event] => Unit = null,
+    onInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event_] => Unit = null,
+    onInvalid: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event_] => Unit = null,
     onKeyDown: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onKeyPress: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onKeyUp: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onLabelClick: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
-    onLoad: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onLoadStart: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onLoadedData: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onLoadedMetadata: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onLoad: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onLoadStart: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onLoadedData: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onLoadedMetadata: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onMouseDown: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onMouseEnter: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onMouseLeave: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
@@ -225,9 +225,9 @@ object TextareaProps {
     onMouseOver: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onMouseUp: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onPaste: SyntheticClipboardEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onPause: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onPlay: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onPlaying: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onPause: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onPlay: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onPlaying: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onPointerCancel: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onPointerDown: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onPointerEnter: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
@@ -236,24 +236,24 @@ object TextareaProps {
     onPointerOut: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onPointerOver: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onPointerUp: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onProgress: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onRateChange: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event] => Unit = null,
+    onProgress: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onRateChange: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event_] => Unit = null,
     onScroll: SyntheticUIEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onSeeked: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onSeeking: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onSelect: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onStalled: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onSubmit: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event] => Unit = null,
-    onSuspend: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onTimeUpdate: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onSeeked: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onSeeking: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onSelect: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onStalled: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onSubmit: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event_] => Unit = null,
+    onSuspend: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onTimeUpdate: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onTouchCancel: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onTouchEnd: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onTouchMove: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onTouchStart: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onTransitionEnd: SyntheticTransitionEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onVolumeChange: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onWaiting: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onVolumeChange: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
+    onWaiting: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onWheel: SyntheticWheelEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     placeholder: String = null,
     prefix: String = null,

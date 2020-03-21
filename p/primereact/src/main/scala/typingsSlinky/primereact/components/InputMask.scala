@@ -1,30 +1,33 @@
 package typingsSlinky.primereact.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsInputmaskInputMaskMod.InputMaskProps
-import typingsSlinky.primereact.componentsTooltipTooltipOptionsMod.TooltipOptions
+import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.inputMaskMod.InputMaskProps
+import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InputMask
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.inputmaskMod.InputMask] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactInputmaskMod.InputMask] {
   @JSImport("primereact/inputmask", "InputMask")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, name, onChange, placeholder, required, size, type */
+  /* The following DOM/SVG props were specified: className, disabled, id, name, placeholder, required, size, type */
   def apply(
+    ariaLabelledBy: String = null,
     autoClear: js.UndefOr[Boolean] = js.undefined,
     mask: String = null,
     maxlength: Int | Double = null,
-    onComplete: /* e */ Event => Unit = null,
+    onChange: /* e */ AnonValue => Unit = null,
+    onComplete: /* e */ Event_ => Unit = null,
     readonly: js.UndefOr[Boolean] = js.undefined,
     slotChar: String = null,
     style: js.Object = null,
@@ -34,11 +37,13 @@ object InputMask
     unmask: js.UndefOr[Boolean] = js.undefined,
     value: String = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.inputmaskMod.InputMask] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactInputmaskMod.InputMask] = {
     val __obj = js.Dynamic.literal()
+    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
     if (!js.isUndefined(autoClear)) __obj.updateDynamic("autoClear")(autoClear.asInstanceOf[js.Any])
     if (mask != null) __obj.updateDynamic("mask")(mask.asInstanceOf[js.Any])
     if (maxlength != null) __obj.updateDynamic("maxlength")(maxlength.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onComplete != null) __obj.updateDynamic("onComplete")(js.Any.fromFunction1(onComplete))
     if (!js.isUndefined(readonly)) __obj.updateDynamic("readonly")(readonly.asInstanceOf[js.Any])
     if (slotChar != null) __obj.updateDynamic("slotChar")(slotChar.asInstanceOf[js.Any])
@@ -51,7 +56,9 @@ object InputMask
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.inputmaskMod.InputMask] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.inputmaskMod.InputMask](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactInputmaskMod.InputMask] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactInputmaskMod.InputMask](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = InputMaskProps
 }
 

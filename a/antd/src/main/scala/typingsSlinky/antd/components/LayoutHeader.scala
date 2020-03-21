@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object LayoutHeader extends SharedApply_BasicProps_181078447 {
+object LayoutHeader extends SharedApply_BasicProps_295772230 {
   @JSImport("antd", "Layout.Header")
   @js.native
   object componentImport extends js.Object

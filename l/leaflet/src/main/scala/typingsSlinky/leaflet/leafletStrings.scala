@@ -1,10 +1,10 @@
 package typingsSlinky.leaflet
 
-import typingsSlinky.leaflet.leafletMod.ControlPosition
-import typingsSlinky.leaflet.leafletMod.Direction
-import typingsSlinky.leaflet.leafletMod.FillRule
-import typingsSlinky.leaflet.leafletMod.LineCapShape
-import typingsSlinky.leaflet.leafletMod.LineJoinShape
+import typingsSlinky.leaflet.mod.ControlPosition
+import typingsSlinky.leaflet.mod.Direction
+import typingsSlinky.leaflet.mod.FillRule
+import typingsSlinky.leaflet.mod.LineCapShape
+import typingsSlinky.leaflet.mod.LineJoinShape
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

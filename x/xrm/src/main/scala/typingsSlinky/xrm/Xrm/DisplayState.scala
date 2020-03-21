@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
   * @see {@link XrmEnum.DisplayState}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.collapsed
-  - typings.xrm.xrmStrings.expanded
+  - typingsSlinky.xrm.xrmStrings.collapsed
+  - typingsSlinky.xrm.xrmStrings.expanded
 */
 trait DisplayState extends js.Object
 

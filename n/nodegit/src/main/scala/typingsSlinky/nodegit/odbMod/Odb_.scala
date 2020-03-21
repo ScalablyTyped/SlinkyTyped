@@ -2,8 +2,8 @@ package typingsSlinky.nodegit.odbMod
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.nodegit.objectMod.Object.TYPE
-import typingsSlinky.nodegit.odbDashExpandDashIdMod.OdbExpandId
-import typingsSlinky.nodegit.odbDashObjectMod.OdbObject
+import typingsSlinky.nodegit.odbExpandIdMod.OdbExpandId
+import typingsSlinky.nodegit.odbObjectMod.OdbObject
 import typingsSlinky.nodegit.oidMod.Oid
 import scala.scalajs.js
 import scala.scalajs.js.`|`

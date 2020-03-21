@@ -1,0 +1,44 @@
+package typingsSlinky.awsSdkClientLambdaNode
+
+import typingsSlinky.awsSdkClientLambdaNode.inputTypesUnionMod.InputTypesUnion
+import typingsSlinky.awsSdkClientLambdaNode.lambdaConfigurationMod.LambdaResolvedConfiguration
+import typingsSlinky.awsSdkClientLambdaNode.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientLambdaNode.typesGetEventSourceMappingInputMod.GetEventSourceMappingInput
+import typingsSlinky.awsSdkClientLambdaNode.typesGetEventSourceMappingOutputMod.GetEventSourceMappingOutput
+import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
+import typingsSlinky.awsSdkTypes.commandMod.Command
+import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import typingsSlinky.node.streamMod.Readable
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-lambda-node/commands/GetEventSourceMappingCommand", JSImport.Namespace)
+@js.native
+object getEventSourceMappingCommandMod extends js.Object {
+  @js.native
+  class GetEventSourceMappingCommand protected () extends Command[
+          InputTypesUnion, 
+          GetEventSourceMappingInput, 
+          OutputTypesUnion, 
+          GetEventSourceMappingOutput, 
+          LambdaResolvedConfiguration, 
+          Readable
+        ] {
+    def this(input: GetEventSourceMappingInput) = this()
+    /* CompleteClass */
+    override val input: GetEventSourceMappingInput = js.native
+    val middlewareStack: MiddlewareStack[GetEventSourceMappingInput, GetEventSourceMappingOutput, Readable] = js.native
+    def resolveMiddleware(
+      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: LambdaResolvedConfiguration
+    ): Handler[GetEventSourceMappingInput, GetEventSourceMappingOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Readable],
+      configuration: LambdaResolvedConfiguration
+    ): Handler[GetEventSourceMappingInput, GetEventSourceMappingOutput] = js.native
+  }
+  
+}
+

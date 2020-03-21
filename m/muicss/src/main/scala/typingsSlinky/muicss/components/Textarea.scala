@@ -1,7 +1,6 @@
 package typingsSlinky.muicss.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import org.scalajs.dom.raw.HTMLTextAreaElement
@@ -10,11 +9,11 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.`*`.tag
-import typingsSlinky.muicss.libReactTextareaMod.default
+import slinky.web.html.textarea.tag
 import typingsSlinky.muicss.reactMod.TextareaProps
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.muicss.textareaMod.default
+import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.react.mod.Ref
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -59,6 +58,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -70,7 +70,7 @@ object Textarea
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoComplete, autoFocus, className, cols, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, draggable, hidden, id, lang, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, readOnly, required, rows, spellCheck, suppressContentEditableWarning, tabIndex, value, wrap */
+  /* The following DOM/SVG props were specified: className, cols, contentEditable, dangerouslySetInnerHTML, defaultValue, dir, disabled, draggable, form, hidden, id, lang, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, required, rows, spellCheck, style, suppressContentEditableWarning, tabIndex, title, value, wrap */
   def apply(
     about: String = null,
     accessKey: String = null,
@@ -123,14 +123,16 @@ object Textarea
     `aria-valuenow`: Int | Double = null,
     `aria-valuetext`: String = null,
     autoCapitalize: String = null,
+    autoComplete: String = null,
     autoCorrect: String = null,
+    autoFocus: js.UndefOr[Boolean] = js.undefined,
     autoSave: String = null,
     color: String = null,
     contextMenu: String = null,
     datatype: String = null,
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
     dirName: String = null,
     floatingLabel: js.UndefOr[Boolean] = js.undefined,
-    form: String = null,
     hint: String = null,
     inlist: js.Any = null,
     inputMode: none | text | tel | url | email | numeric | decimal | search = null,
@@ -146,20 +148,20 @@ object Textarea
     maxLength: Int | Double = null,
     minLength: Int | Double = null,
     onAuxClick: SyntheticMouseEvent[HTMLTextAreaElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with HTMLTextAreaElement, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLTextAreaElement, Event_] => Unit = null,
+    onChange: ChangeEvent[HTMLTextAreaElement] => Unit = null,
     onLabelClick: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with HTMLTextAreaElement, Event] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLTextAreaElement, Event_] => Unit = null,
     prefix: String = null,
     property: String = null,
     radioGroup: String = null,
+    readOnly: js.UndefOr[Boolean] = js.undefined,
     resource: String = null,
     results: Int | Double = null,
     role: String = null,
     security: String = null,
     slot: String = null,
-    style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
     translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
@@ -218,14 +220,16 @@ object Textarea
     if (`aria-valuenow` != null) __obj.updateDynamic("aria-valuenow")(`aria-valuenow`.asInstanceOf[js.Any])
     if (`aria-valuetext` != null) __obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
     if (autoCapitalize != null) __obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
+    if (autoComplete != null) __obj.updateDynamic("autoComplete")(autoComplete.asInstanceOf[js.Any])
     if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
+    if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])
     if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
     if (dirName != null) __obj.updateDynamic("dirName")(dirName.asInstanceOf[js.Any])
     if (!js.isUndefined(floatingLabel)) __obj.updateDynamic("floatingLabel")(floatingLabel.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
     if (hint != null) __obj.updateDynamic("hint")(hint.asInstanceOf[js.Any])
     if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
     if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
@@ -242,19 +246,19 @@ object Textarea
     if (minLength != null) __obj.updateDynamic("minLength")(minLength.asInstanceOf[js.Any])
     if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
     if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onLabelClick != null) __obj.updateDynamic("onLabelClick")(js.Any.fromFunction1(onLabelClick))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
     if (radioGroup != null) __obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])
+    if (!js.isUndefined(readOnly)) __obj.updateDynamic("readOnly")(readOnly.asInstanceOf[js.Any])
     if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
     if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
     if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
     if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
@@ -262,7 +266,7 @@ object Textarea
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.muicss.libReactTextareaMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.textarea.tag.type, typingsSlinky.muicss.textareaMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TextareaProps
 }
 

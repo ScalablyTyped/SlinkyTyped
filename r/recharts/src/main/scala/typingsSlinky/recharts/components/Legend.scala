@@ -6,32 +6,30 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.recharts.Anon_HeightWidth
-import typingsSlinky.recharts.rechartsMod.ContentRenderer
-import typingsSlinky.recharts.rechartsMod.IconType
-import typingsSlinky.recharts.rechartsMod.LayoutType
-import typingsSlinky.recharts.rechartsMod.LegendPayload
-import typingsSlinky.recharts.rechartsMod.LegendProps
-import typingsSlinky.recharts.rechartsMod.Margin
+import typingsSlinky.recharts.AnonWidth
+import typingsSlinky.recharts.PartialMargin
+import typingsSlinky.recharts.mod.ContentRenderer
+import typingsSlinky.recharts.mod.IconType
+import typingsSlinky.recharts.mod.LayoutType
+import typingsSlinky.recharts.mod.LegendPayload
+import typingsSlinky.recharts.mod.LegendProps
 import typingsSlinky.recharts.rechartsStrings.bottom
 import typingsSlinky.recharts.rechartsStrings.center
 import typingsSlinky.recharts.rechartsStrings.left
 import typingsSlinky.recharts.rechartsStrings.middle
 import typingsSlinky.recharts.rechartsStrings.right
 import typingsSlinky.recharts.rechartsStrings.top
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Legend
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.rechartsMod.Legend] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.Legend] {
   @JSImport("recharts", "Legend")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: onClick, onMouseEnter, onMouseLeave */
   def apply(
     align: left | center | right = null,
     chartHeight: Int | Double = null,
@@ -44,14 +42,17 @@ object Legend
     iconSize: Int | Double = null,
     iconType: IconType = null,
     layout: LayoutType = null,
-    margin: Partial[Margin] = null,
-    onBBoxUpdate: /* box */ Anon_HeightWidth => Unit = null,
+    margin: PartialMargin = null,
+    onBBoxUpdate: /* box */ AnonWidth => Unit = null,
+    onClick: /* repeated */ js.Any => Unit = null,
+    onMouseEnter: /* repeated */ js.Any => Unit = null,
+    onMouseLeave: /* repeated */ js.Any => Unit = null,
     payload: js.Array[LegendPayload] = null,
     verticalAlign: top | middle | bottom = null,
     width: Int | Double = null,
     wrapperStyle: js.Object = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.Legend] = {
+  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Legend] = {
     val __obj = js.Dynamic.literal()
     if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
     if (chartHeight != null) __obj.updateDynamic("chartHeight")(chartHeight.asInstanceOf[js.Any])
@@ -64,6 +65,9 @@ object Legend
     if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
     if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
     if (onBBoxUpdate != null) __obj.updateDynamic("onBBoxUpdate")(js.Any.fromFunction1(onBBoxUpdate))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
     if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
     if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
     if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
@@ -71,7 +75,7 @@ object Legend
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.Legend] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.rechartsMod.Legend](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Legend] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.Legend](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = LegendProps
 }
 

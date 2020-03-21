@@ -10,9 +10,9 @@ The Material Components for the web list component
 | ------------------ | :-------------: |
 | Full name          | @material/list |
 | Keywords           | material components, material design, list |
-| # releases         | 123 |
-| # dependents       | 66 |
-| # downloads        | 1777313 |
+| # releases         | 167 |
+| # dependents       | 67 |
+| # downloads        | 1814417 |
 | # stars            | 0 |
 
 ## Links

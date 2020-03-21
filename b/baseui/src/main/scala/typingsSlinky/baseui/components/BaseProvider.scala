@@ -4,8 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.baseuiMod.BaseProviderOverrides
-import typingsSlinky.baseui.baseuiMod.BaseProviderProps
+import typingsSlinky.baseui.mod.BaseProviderOverrides
+import typingsSlinky.baseui.mod.BaseProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

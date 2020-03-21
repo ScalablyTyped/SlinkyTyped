@@ -5,15 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object radioMod {
-  import org.scalajs.dom.raw.Event
-  import org.scalajs.dom.raw.HTMLInputElement
-  import slinky.core.SyntheticEvent
-
   type StateReducer = js.Function4[
-    /* stateType */ String, 
-    /* nextState */ State, 
-    /* currentState */ State, 
-    /* event */ SyntheticEvent[Event, HTMLInputElement], 
-    State
+    /* stateType */ java.lang.String, 
+    /* nextState */ typingsSlinky.baseui.radioMod.State, 
+    /* currentState */ typingsSlinky.baseui.radioMod.State, 
+    /* event */ slinky.core.SyntheticEvent[typingsSlinky.std.Event_, org.scalajs.dom.raw.HTMLInputElement], 
+    typingsSlinky.baseui.radioMod.State
   ]
 }

@@ -5,11 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.installing
-  - typings.std.stdStrings.installed
-  - typings.std.stdStrings.activating
-  - typings.std.stdStrings.activated
-  - typings.std.stdStrings.redundant
+  - typingsSlinky.std.stdStrings.activated
+  - typingsSlinky.std.stdStrings.activating
+  - typingsSlinky.std.stdStrings.installed
+  - typingsSlinky.std.stdStrings.installing
+  - typingsSlinky.std.stdStrings.parsed
+  - typingsSlinky.std.stdStrings.redundant
 */
 trait ServiceWorkerState extends js.Object
 
@@ -24,6 +25,8 @@ object ServiceWorkerState {
   def installed: typingsSlinky.std.stdStrings.installed = this.cast("installed")
   @scala.inline
   def installing: typingsSlinky.std.stdStrings.installing = this.cast("installing")
+  @scala.inline
+  def parsed: typingsSlinky.std.stdStrings.parsed = this.cast("parsed")
   @scala.inline
   def redundant: typingsSlinky.std.stdStrings.redundant = this.cast("redundant")
 }

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Definition of a Medication
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait Medication extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Medication extends DomainResource {
   /**
     * Contains extended information for property 'isBrand'.
     */

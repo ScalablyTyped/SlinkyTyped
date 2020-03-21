@@ -1,7 +1,7 @@
 
 # Scala.js typings for cypress
 
-Typings are for version 3.8.1
+Typings are for version 3.8.3
 
 ## Library description:
 Cypress.io end to end testing tool
@@ -10,9 +10,9 @@ Cypress.io end to end testing tool
 | ------------------ | :-------------: |
 | Full name          | cypress |
 | Keywords           | automation, browser, cypress, cypress.io, e2e, end-to-end, integration, mocks, runner, spies, stubs, test, testing |
-| # releases         | 30 |
-| # dependents       | 68 |
-| # downloads        | 25373847 |
+| # releases         | 29 |
+| # dependents       | 61 |
+| # downloads        | 25932885 |
 | # stars            | 12 |
 
 ## Links

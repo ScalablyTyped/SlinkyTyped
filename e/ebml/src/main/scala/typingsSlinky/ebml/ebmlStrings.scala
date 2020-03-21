@@ -1,6 +1,6 @@
 package typingsSlinky.ebml
 
-import typingsSlinky.ebml.ebmlMod.TagType
+import typingsSlinky.ebml.mod.TagType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

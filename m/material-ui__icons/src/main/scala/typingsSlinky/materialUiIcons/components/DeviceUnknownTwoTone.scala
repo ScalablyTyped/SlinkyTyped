@@ -1,0 +1,15 @@
+package typingsSlinky.materialUiIcons.components
+
+import typingsSlinky.materialUiIcons.deviceUnknownTwoToneMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object DeviceUnknownTwoTone extends SharedApply_SvgIconProps1442979138[default] {
+  @JSImport("@material-ui/icons/DeviceUnknownTwoTone", "default")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+}
+

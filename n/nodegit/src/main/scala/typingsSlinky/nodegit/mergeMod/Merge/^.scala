@@ -1,12 +1,12 @@
 package typingsSlinky.nodegit.mergeMod.Merge
 
-import typingsSlinky.nodegit.annotatedDashCommitMod.AnnotatedCommit
-import typingsSlinky.nodegit.checkoutDashOptionsMod.CheckoutOptions
+import typingsSlinky.nodegit.annotatedCommitMod.AnnotatedCommit
+import typingsSlinky.nodegit.checkoutOptionsMod.CheckoutOptions
 import typingsSlinky.nodegit.commitMod.Commit
-import typingsSlinky.nodegit.mergeDashFileDashInputMod.MergeFileInput
-import typingsSlinky.nodegit.mergeDashOptionsMod.MergeOptions
-import typingsSlinky.nodegit.nodegitMod.Index
-import typingsSlinky.nodegit.oidDashArrayMod.Oidarray
+import typingsSlinky.nodegit.mergeFileInputMod.MergeFileInput
+import typingsSlinky.nodegit.mergeOptionsMod.MergeOptions
+import typingsSlinky.nodegit.mod.Index
+import typingsSlinky.nodegit.oidArrayMod.Oidarray
 import typingsSlinky.nodegit.oidMod.Oid
 import typingsSlinky.nodegit.repositoryMod.Repository
 import typingsSlinky.nodegit.treeMod.Tree

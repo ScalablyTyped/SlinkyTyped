@@ -1,78 +1,87 @@
 package typingsSlinky.antd.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLFormElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.form.tag
-import typingsSlinky.antd.libFormFormItemMod.FormLabelAlign
-import typingsSlinky.antd.libFormFormMod.FormLayout
-import typingsSlinky.antd.libFormFormMod.FormProps
-import typingsSlinky.antd.libFormFormMod.WrappedFormUtils
-import typingsSlinky.antd.libFormMod.default
-import typingsSlinky.antd.libGridColMod.ColProps
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.react.reactStrings.`additions text`
-import typingsSlinky.react.reactStrings.`inline`
-import typingsSlinky.react.reactStrings.additions
-import typingsSlinky.react.reactStrings.all
-import typingsSlinky.react.reactStrings.ascending
-import typingsSlinky.react.reactStrings.assertive
-import typingsSlinky.react.reactStrings.both
-import typingsSlinky.react.reactStrings.copy
-import typingsSlinky.react.reactStrings.date
-import typingsSlinky.react.reactStrings.decimal
-import typingsSlinky.react.reactStrings.descending
-import typingsSlinky.react.reactStrings.dialog
-import typingsSlinky.react.reactStrings.email
-import typingsSlinky.react.reactStrings.execute
-import typingsSlinky.react.reactStrings.grammar
-import typingsSlinky.react.reactStrings.grid
-import typingsSlinky.react.reactStrings.horizontal
-import typingsSlinky.react.reactStrings.link
-import typingsSlinky.react.reactStrings.list
-import typingsSlinky.react.reactStrings.listbox
-import typingsSlinky.react.reactStrings.location
-import typingsSlinky.react.reactStrings.menu
-import typingsSlinky.react.reactStrings.mixed
-import typingsSlinky.react.reactStrings.move
-import typingsSlinky.react.reactStrings.no
-import typingsSlinky.react.reactStrings.none
-import typingsSlinky.react.reactStrings.numeric
-import typingsSlinky.react.reactStrings.off
-import typingsSlinky.react.reactStrings.on
-import typingsSlinky.react.reactStrings.other
-import typingsSlinky.react.reactStrings.page
-import typingsSlinky.react.reactStrings.polite
-import typingsSlinky.react.reactStrings.popup
-import typingsSlinky.react.reactStrings.removals
-import typingsSlinky.react.reactStrings.search
-import typingsSlinky.react.reactStrings.spelling
-import typingsSlinky.react.reactStrings.step
-import typingsSlinky.react.reactStrings.tel
-import typingsSlinky.react.reactStrings.text
-import typingsSlinky.react.reactStrings.time
-import typingsSlinky.react.reactStrings.tree
-import typingsSlinky.react.reactStrings.url
-import typingsSlinky.react.reactStrings.vertical
-import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.antd.antdBooleans.`false`
+import typingsSlinky.antd.antdStrings.`additions text`
+import typingsSlinky.antd.antdStrings.`inline`
+import typingsSlinky.antd.antdStrings.additions
+import typingsSlinky.antd.antdStrings.all
+import typingsSlinky.antd.antdStrings.ascending
+import typingsSlinky.antd.antdStrings.assertive
+import typingsSlinky.antd.antdStrings.both
+import typingsSlinky.antd.antdStrings.copy
+import typingsSlinky.antd.antdStrings.date
+import typingsSlinky.antd.antdStrings.decimal
+import typingsSlinky.antd.antdStrings.descending
+import typingsSlinky.antd.antdStrings.dialog
+import typingsSlinky.antd.antdStrings.email
+import typingsSlinky.antd.antdStrings.execute
+import typingsSlinky.antd.antdStrings.grammar
+import typingsSlinky.antd.antdStrings.grid
+import typingsSlinky.antd.antdStrings.horizontal
+import typingsSlinky.antd.antdStrings.inherit
+import typingsSlinky.antd.antdStrings.link
+import typingsSlinky.antd.antdStrings.list
+import typingsSlinky.antd.antdStrings.listbox
+import typingsSlinky.antd.antdStrings.location
+import typingsSlinky.antd.antdStrings.menu
+import typingsSlinky.antd.antdStrings.mixed
+import typingsSlinky.antd.antdStrings.move
+import typingsSlinky.antd.antdStrings.no
+import typingsSlinky.antd.antdStrings.none
+import typingsSlinky.antd.antdStrings.numeric
+import typingsSlinky.antd.antdStrings.off
+import typingsSlinky.antd.antdStrings.on
+import typingsSlinky.antd.antdStrings.other
+import typingsSlinky.antd.antdStrings.page
+import typingsSlinky.antd.antdStrings.polite
+import typingsSlinky.antd.antdStrings.popup
+import typingsSlinky.antd.antdStrings.removals
+import typingsSlinky.antd.antdStrings.search
+import typingsSlinky.antd.antdStrings.spelling
+import typingsSlinky.antd.antdStrings.step
+import typingsSlinky.antd.antdStrings.tel
+import typingsSlinky.antd.antdStrings.text
+import typingsSlinky.antd.antdStrings.time
+import typingsSlinky.antd.antdStrings.tree
+import typingsSlinky.antd.antdStrings.url
+import typingsSlinky.antd.antdStrings.vertical
+import typingsSlinky.antd.antdStrings.yes
+import typingsSlinky.antd.formFormMod.FormLayout
+import typingsSlinky.antd.formFormMod.FormProps
+import typingsSlinky.antd.formUtilMod.FormInstance
+import typingsSlinky.antd.gridColMod.ColProps
+import typingsSlinky.antd.interfaceMod.FormLabelAlign
+import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.rcFieldForm.interfaceMod.FieldData
+import typingsSlinky.rcFieldForm.interfaceMod.Store
+import typingsSlinky.rcFieldForm.interfaceMod.ValidateErrorEntity
+import typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages
+import typingsSlinky.react.mod.Booleanish
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Form
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, Ref[js.Any] with js.Object] {
   @JSImport("antd/lib/form", JSImport.Default)
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: action, autoComplete, className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, draggable, hidden, id, lang, method, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, spellCheck, suppressContentEditableWarning, tabIndex, target */
+  /* The following DOM/SVG props were specified: action, autoComplete, className, dangerouslySetInnerHTML, dir, draggable, hidden, id, lang, method, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, spellCheck, style, suppressContentEditableWarning, tabIndex, target, title */
   def apply(
     about: String = null,
     acceptCharset: String = null,
@@ -130,11 +139,17 @@ object Form
     autoSave: String = null,
     colon: js.UndefOr[Boolean] = js.undefined,
     color: String = null,
+    component: `false` | String | ReactComponentClass[_] = null,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     datatype: String = null,
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    defaultValue: String | Double | js.Array[String] = null,
     encType: String = null,
-    form: WrappedFormUtils[_] = null,
+    fields: js.Array[FieldData] = null,
+    form: FormInstance = null,
     hideRequiredMark: js.UndefOr[Boolean] = js.undefined,
+    initialValues: Store = null,
     inlist: js.Any = null,
     inputMode: none | text | tel | url | email | numeric | decimal | search = null,
     is: String = null,
@@ -148,8 +163,13 @@ object Form
     layout: FormLayout = null,
     noValidate: js.UndefOr[Boolean] = js.undefined,
     onAuxClick: SyntheticMouseEvent[HTMLFormElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with HTMLFormElement, Event] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with HTMLFormElement, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLFormElement, Event_] => Unit = null,
+    onFieldsChange: (/* changedFields */ js.Array[FieldData], /* allFields */ js.Array[FieldData]) => Unit = null,
+    onFinish: /* values */ Store => Unit = null,
+    onFinishFailed: /* errorInfo */ ValidateErrorEntity => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLFormElement, Event_] => Unit = null,
+    onValuesChange: (/* changedValues */ Store, /* values */ Store) => Unit = null,
+    placeholder: String = null,
     prefix: String = null,
     prefixCls: String = null,
     property: String = null,
@@ -157,18 +177,19 @@ object Form
     resource: String = null,
     results: Int | Double = null,
     role: String = null,
+    scrollToFirstError: js.UndefOr[Boolean] = js.undefined,
     security: String = null,
+    size: SizeType = null,
     slot: String = null,
-    style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
     translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
+    validateMessages: ValidateMessages = null,
     vocab: String = null,
     wrapperCol: ColProps = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default] = {
+  ): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = {
     val __obj = js.Dynamic.literal()
     if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
     if (acceptCharset != null) __obj.updateDynamic("acceptCharset")(acceptCharset.asInstanceOf[js.Any])
@@ -226,11 +247,17 @@ object Form
     if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
     if (!js.isUndefined(colon)) __obj.updateDynamic("colon")(colon.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
     if (encType != null) __obj.updateDynamic("encType")(encType.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
     if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
     if (!js.isUndefined(hideRequiredMark)) __obj.updateDynamic("hideRequiredMark")(hideRequiredMark.asInstanceOf[js.Any])
+    if (initialValues != null) __obj.updateDynamic("initialValues")(initialValues.asInstanceOf[js.Any])
     if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
     if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
     if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
@@ -245,7 +272,12 @@ object Form
     if (!js.isUndefined(noValidate)) __obj.updateDynamic("noValidate")(noValidate.asInstanceOf[js.Any])
     if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
     if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
+    if (onFieldsChange != null) __obj.updateDynamic("onFieldsChange")(js.Any.fromFunction2(onFieldsChange))
+    if (onFinish != null) __obj.updateDynamic("onFinish")(js.Any.fromFunction1(onFinish))
+    if (onFinishFailed != null) __obj.updateDynamic("onFinishFailed")(js.Any.fromFunction1(onFinishFailed))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
+    if (onValuesChange != null) __obj.updateDynamic("onValuesChange")(js.Any.fromFunction2(onValuesChange))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
@@ -253,20 +285,21 @@ object Form
     if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
     if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
     if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (!js.isUndefined(scrollToFirstError)) __obj.updateDynamic("scrollToFirstError")(scrollToFirstError.asInstanceOf[js.Any])
     if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
+    if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
+    if (validateMessages != null) __obj.updateDynamic("validateMessages")(validateMessages.asInstanceOf[js.Any])
     if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
     if (wrapperCol != null) __obj.updateDynamic("wrapperCol")(wrapperCol.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.form.tag.type, typingsSlinky.antd.libFormMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
-  type Props = FormProps
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = new slinky.core.BuildingComponent[slinky.web.html.form.tag.type, typingsSlinky.react.mod.Ref[js.Any] with js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = FormProps with RefAttributes[FormInstance]
 }
 

@@ -1,15 +1,20 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.List
-import typingsSlinky.lodash.lodashMod.MemoIteratorCappedRight
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.MemoIteratorCappedRight
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LodashReduceRight1x2[TResult] extends js.Object {
-  def apply[T](callback: MemoIteratorCappedRight[T, TResult]): LodashReduceRight1x3[T, TResult] = js.native
+  def apply[T /* <: js.Object */](
+    callback: MemoIteratorCappedRight[
+      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 
+      TResult
+    ]
+  ): TResult = js.native
   def apply[T /* <: js.Object */](
     callback: MemoIteratorCappedRight[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 

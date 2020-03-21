@@ -1,12 +1,12 @@
 package typingsSlinky.lobibox.LobiboxModule
 
-import typingsSlinky.lobibox.Anon_DEFAULTS
-import typingsSlinky.lobibox.Anon_DEFAULTSOPTIONS
-import typingsSlinky.lobibox.Anon_DEFAULTSOptions
-import typingsSlinky.lobibox.Anon_DEFAULTSOptionsConfirmOptions
-import typingsSlinky.lobibox.Anon_DEFAULTSOptionsMessageBoxesDefault
-import typingsSlinky.lobibox.Anon_DEFAULTSOptionsMessageBoxesDefaultT
-import typingsSlinky.lobibox.Anon_DEFAULTSOptionsType
+import typingsSlinky.lobibox.AnonCall
+import typingsSlinky.lobibox.AnonCallDEFAULTS
+import typingsSlinky.lobibox.AnonCallOptions
+import typingsSlinky.lobibox.AnonDEFAULTS
+import typingsSlinky.lobibox.AnonDEFAULTSProgressOptions
+import typingsSlinky.lobibox.AnonDEFAULTSWindowOptions
+import typingsSlinky.lobibox.AnonOPTIONS
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,18 +14,18 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LobiboxStatic extends js.Object {
   @JSName("alert")
-  var alert_Original: Anon_DEFAULTSOptions = js.native
-  var base: Anon_DEFAULTS = js.native
+  var alert_Original: AnonCall = js.native
+  var base: AnonDEFAULTS = js.native
   @JSName("confirm")
-  var confirm_Original: Anon_DEFAULTSOptionsConfirmOptions = js.native
+  var confirm_Original: AnonCallOptions = js.native
   @JSName("notify")
-  var notify_Original: Anon_DEFAULTSOPTIONS = js.native
+  var notify_Original: AnonOPTIONS = js.native
   @JSName("progress")
-  var progress_Original: Anon_DEFAULTSOptionsMessageBoxesDefault = js.native
+  var progress_Original: AnonDEFAULTSProgressOptions = js.native
   @JSName("prompt")
-  var prompt_Original: Anon_DEFAULTSOptionsType = js.native
+  var prompt_Original: AnonCallDEFAULTS = js.native
   @JSName("window")
-  var window_Original: Anon_DEFAULTSOptionsMessageBoxesDefaultT = js.native
+  var window_Original: AnonDEFAULTSWindowOptions = js.native
   def alert[T /* <: MessageBoxesDefault */](`type`: String): LobiboxStatic = js.native
   def alert[T /* <: MessageBoxesDefault */](`type`: String, options: T): LobiboxStatic = js.native
   def confirm[T /* <: MessageBoxesDefault */](): T = js.native

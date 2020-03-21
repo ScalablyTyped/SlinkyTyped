@@ -29,30 +29,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.wiiu.wiiuNumbers.`0x00000004`
-  - typings.wiiu.wiiuNumbers.`0x00000008`
-  - typings.wiiu.wiiuNumbers.`0x00000010`
-  - typings.wiiu.wiiuNumbers.`0x00000020`
-  - typings.wiiu.wiiuNumbers.`0x00000040`
-  - typings.wiiu.wiiuNumbers.`0x00000080`
-  - typings.wiiu.wiiuNumbers.`0x00000100`
-  - typings.wiiu.wiiuNumbers.`0x00000200`
-  - typings.wiiu.wiiuNumbers.`0x00000400`
-  - typings.wiiu.wiiuNumbers.`0x00000800`
-  - typings.wiiu.wiiuNumbers.`0x00001000`
-  - typings.wiiu.wiiuNumbers.`0x00002000`
-  - typings.wiiu.wiiuNumbers.`0x00004000`
-  - typings.wiiu.wiiuNumbers.`0x00008000`
-  - typings.wiiu.wiiuNumbers.`0x00020000`
-  - typings.wiiu.wiiuNumbers.`0x00040000`
-  - typings.wiiu.wiiuNumbers.`0x00800000`
-  - typings.wiiu.wiiuNumbers.`0x01000000`
-  - typings.wiiu.wiiuNumbers.`0x02000000`
-  - typings.wiiu.wiiuNumbers.`0x04000000`
-  - typings.wiiu.wiiuNumbers.`0x08000000`
-  - typings.wiiu.wiiuNumbers.`0x10000000`
-  - typings.wiiu.wiiuNumbers.`0x20000000`
-  - typings.wiiu.wiiuNumbers.`0x40000000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00000004`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00000008`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00000010`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00000020`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00000040`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00000080`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00000100`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00000200`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00000400`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00000800`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00001000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00002000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00004000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00008000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00020000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00040000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x00800000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x01000000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x02000000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x04000000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x08000000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x10000000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x20000000`
+  - typingsSlinky.wiiu.wiiuNumbers.`0x40000000`
 */
 trait Button extends js.Object
 

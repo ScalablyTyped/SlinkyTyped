@@ -9,10 +9,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.wiiu.wiiuNumbers.`202`
-  - typings.wiiu.wiiuNumbers.`203`
-  - typings.wiiu.wiiuNumbers.`204`
-  - typings.wiiu.wiiuNumbers.`205`
+  - typingsSlinky.wiiu.wiiuNumbers.`202`
+  - typingsSlinky.wiiu.wiiuNumbers.`203`
+  - typingsSlinky.wiiu.wiiuNumbers.`204`
+  - typingsSlinky.wiiu.wiiuNumbers.`205`
 */
 trait ImageViewErrorCode extends js.Object
 

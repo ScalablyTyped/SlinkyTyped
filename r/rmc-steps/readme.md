@@ -12,7 +12,7 @@ steps ui component for react mobile
 | Keywords           | react, react-component, react-steps, mobile steps |
 | # releases         | 1 |
 | # dependents       | 23 |
-| # downloads        | 544494 |
+| # downloads        | 591385 |
 | # stars            | 0 |
 
 ## Links

@@ -1,7 +1,7 @@
 package typingsSlinky.ckeditor.CKEDITOR.plugins
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ckeditor.Anon_Editor
+import typingsSlinky.ckeditor.AnonExec
 import typingsSlinky.ckeditor.CKEDITOR.command
 import typingsSlinky.ckeditor.CKEDITOR.commandDefinition
 import typingsSlinky.ckeditor.CKEDITOR.dom.element
@@ -43,7 +43,7 @@ object indent extends js.Object {
     val enterBr: Boolean = js.native
     val indentKey: StringDictionary[js.Any] = js.native
     val isIndent: Boolean = js.native
-    val jobs: StringDictionary[Anon_Editor] = js.native
+    val jobs: StringDictionary[AnonExec] = js.native
     val relatedGlobal: StringDictionary[js.Any] = js.native
     def execJob(editor: editor, priority: Double): Boolean = js.native
     def getContext(node: elementPath): element = js.native

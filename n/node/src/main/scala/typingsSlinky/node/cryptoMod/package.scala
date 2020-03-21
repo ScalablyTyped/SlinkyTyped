@@ -5,14 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object cryptoMod {
-  import typingsSlinky.node.NodeJS.ArrayBufferView
-
-  type BinaryLike = String | ArrayBufferView
-  type CipherKey = BinaryLike | KeyObject
+  type BinaryLike = java.lang.String | typingsSlinky.node.NodeJS.ArrayBufferView
+  type CipherKey = typingsSlinky.node.cryptoMod.BinaryLike | typingsSlinky.node.cryptoMod.KeyObject
   /* Rewritten from type alias, can be one of: 
     - java.lang.String
-    - typings.node.Buffer
-    - typings.node.cryptoMod.KeyObject
+    - typingsSlinky.node.Buffer
+    - typingsSlinky.node.cryptoMod.KeyObject
   */
-  type KeyLike = _KeyLike | String
+  type KeyLike = typingsSlinky.node.cryptoMod._KeyLike | java.lang.String
 }

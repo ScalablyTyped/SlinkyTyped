@@ -6,9 +6,8 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.react.reactMod.DOMAttributes
-import typingsSlinky.victory.victoryMod.VictoryVoronoiContainerProps
+import typingsSlinky.react.mod.DOMAttributes
+import typingsSlinky.victory.mod.VictoryVoronoiContainerProps
 import typingsSlinky.victory.victoryStrings.x
 import typingsSlinky.victory.victoryStrings.y
 import scala.scalajs.js
@@ -16,12 +15,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VictoryVoronoiContainer
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.VictoryVoronoiContainer] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryVoronoiContainer] {
   @JSImport("victory", "VictoryVoronoiContainer")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: style, title */
   def apply(
     activateData: js.UndefOr[Boolean] = js.undefined,
     activateLabels: js.UndefOr[Boolean] = js.undefined,
@@ -35,14 +35,12 @@ object VictoryVoronoiContainer
     onDeactivated: (/* points */ js.Array[_], /* props */ VictoryVoronoiContainerProps) => Unit = null,
     radius: Int | Double = null,
     responsive: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
-    title: String = null,
     voronoiBlacklist: js.Array[String] = null,
     voronoiDimension: x | y = null,
     voronoiPadding: Int | Double = null,
     width: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryVoronoiContainer] = {
+  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryVoronoiContainer] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(activateData)) __obj.updateDynamic("activateData")(activateData.asInstanceOf[js.Any])
     if (!js.isUndefined(activateLabels)) __obj.updateDynamic("activateLabels")(activateLabels.asInstanceOf[js.Any])
@@ -56,8 +54,6 @@ object VictoryVoronoiContainer
     if (onDeactivated != null) __obj.updateDynamic("onDeactivated")(js.Any.fromFunction2(onDeactivated))
     if (radius != null) __obj.updateDynamic("radius")(radius.asInstanceOf[js.Any])
     if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (voronoiBlacklist != null) __obj.updateDynamic("voronoiBlacklist")(voronoiBlacklist.asInstanceOf[js.Any])
     if (voronoiDimension != null) __obj.updateDynamic("voronoiDimension")(voronoiDimension.asInstanceOf[js.Any])
     if (voronoiPadding != null) __obj.updateDynamic("voronoiPadding")(voronoiPadding.asInstanceOf[js.Any])
@@ -65,9 +61,7 @@ object VictoryVoronoiContainer
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryVoronoiContainer] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.victory.victoryMod.VictoryVoronoiContainer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryVoronoiContainer] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryVoronoiContainer](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryVoronoiContainerProps
 }
 

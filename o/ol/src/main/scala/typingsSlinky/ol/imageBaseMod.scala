@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 object imageBaseMod extends js.Object {
   @js.native
   trait ImageBase
-    extends typingsSlinky.ol.eventsTargetMod.default {
+    extends typingsSlinky.ol.targetMod.default {
     var extent: Extent = js.native
     var resolution: Double = js.native
     var state: ImageState = js.native
@@ -28,7 +28,7 @@ object imageBaseMod extends js.Object {
   }
   
   @js.native
-  class default protected () extends ImageBase {
+  abstract class default protected () extends ImageBase {
     def this(extent: Extent, resolution: js.UndefOr[scala.Nothing], pixelRatio: Double, state: ImageState) = this()
     def this(extent: Extent, resolution: Double, pixelRatio: Double, state: ImageState) = this()
   }

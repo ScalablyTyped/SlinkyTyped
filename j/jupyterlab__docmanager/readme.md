@@ -10,9 +10,9 @@ JupyterLab - Document Manager
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/docmanager |
 | Keywords           | - |
-| # releases         | 64 |
+| # releases         | 65 |
 | # dependents       | 77 |
-| # downloads        | 828298 |
+| # downloads        | 834029 |
 | # stars            | 0 |
 
 ## Links

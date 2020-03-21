@@ -5,12 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object breeze {
-  import typingsSlinky.breeze.Anon_EntityErrors
-  import typingsSlinky.breeze.Anon_EntityManager
-
-  type ExecuteQueryErrorCallback = js.Function1[/* error */ Anon_EntityManager, Unit]
-  type ExecuteQuerySuccessCallback = js.Function1[/* data */ QueryResult, Unit]
-  type SaveChangesErrorCallback = js.Function1[/* error */ Anon_EntityErrors, Unit]
-  type SaveChangesSuccessCallback = js.Function1[/* saveResult */ SaveResult, Unit]
-  type ValidatorFunction = js.Function2[/* value */ js.Any, /* context */ ValidatorFunctionContext, Unit]
+  type ExecuteQueryErrorCallback = js.Function1[/* error */ typingsSlinky.breeze.AnonEntityManager, scala.Unit]
+  type ExecuteQuerySuccessCallback = js.Function1[/* data */ typingsSlinky.breeze.breeze.QueryResult, scala.Unit]
+  type SaveChangesErrorCallback = js.Function1[/* error */ typingsSlinky.breeze.AnonEntityErrors, scala.Unit]
+  type SaveChangesSuccessCallback = js.Function1[/* saveResult */ typingsSlinky.breeze.breeze.SaveResult, scala.Unit]
+  type ValidatorFunction = js.Function2[
+    /* value */ js.Any, 
+    /* context */ typingsSlinky.breeze.breeze.ValidatorFunctionContext, 
+    scala.Unit
+  ]
 }

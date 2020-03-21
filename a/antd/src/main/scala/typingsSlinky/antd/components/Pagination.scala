@@ -6,15 +6,14 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.Anon_GoButton
+import typingsSlinky.antd.AnonGoButton
 import typingsSlinky.antd.antdStrings.`jump-next`
 import typingsSlinky.antd.antdStrings.`jump-prev`
 import typingsSlinky.antd.antdStrings.next
 import typingsSlinky.antd.antdStrings.page
 import typingsSlinky.antd.antdStrings.prev
-import typingsSlinky.antd.libPaginationMod.default
-import typingsSlinky.antd.libPaginationPaginationMod.PaginationProps
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.paginationMod.default
+import typingsSlinky.antd.paginationPaginationMod.PaginationProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +25,7 @@ object Pagination
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled */
+  /* The following DOM/SVG props were specified: className, disabled, style */
   def apply(
     current: Int | Double = null,
     defaultCurrent: Int | Double = null,
@@ -42,12 +41,11 @@ object Pagination
     role: String = null,
     selectPrefixCls: String = null,
     showLessItems: js.UndefOr[Boolean] = js.undefined,
-    showQuickJumper: Boolean | Anon_GoButton = null,
+    showQuickJumper: Boolean | AnonGoButton = null,
     showSizeChanger: js.UndefOr[Boolean] = js.undefined,
     showTotal: (/* total */ Double, /* range */ js.Tuple2[Double, Double]) => TagMod[Any] = null,
     simple: js.UndefOr[Boolean] = js.undefined,
     size: String = null,
-    style: CSSProperties = null,
     total: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
@@ -71,12 +69,11 @@ object Pagination
     if (showTotal != null) __obj.updateDynamic("showTotal")(js.Any.fromFunction2(showTotal))
     if (!js.isUndefined(simple)) __obj.updateDynamic("simple")(simple.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (total != null) __obj.updateDynamic("total")(total.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libPaginationMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.paginationMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = PaginationProps
 }
 

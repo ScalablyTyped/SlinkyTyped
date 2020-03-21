@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dojox.layout
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.dojo.dnd.Source
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -109,7 +109,7 @@ object dnd extends js.Object {
       *
       * @param e
       */
-    def setIndicatorPosition(e: Event): Boolean = js.native
+    def setIndicatorPosition(e: Event_): Boolean = js.native
   }
   
 }

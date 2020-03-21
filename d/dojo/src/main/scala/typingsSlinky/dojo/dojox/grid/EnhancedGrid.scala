@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.grid
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.pluginMgr
 import typingsSlinky.dojo.dojoStrings.plugins
 import scala.scalajs.js
@@ -80,7 +80,7 @@ class EnhancedGrid () extends DataGrid {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_plugins(
     property: plugins,
@@ -90,6 +90,6 @@ class EnhancedGrid () extends DataGrid {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

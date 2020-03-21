@@ -1,88 +1,88 @@
 package typingsSlinky.antd.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.Anon_ScrollToFirstRowOnChange
+import typingsSlinky.antd.AnonScrollToFirstRowOnChange
 import typingsSlinky.antd.antdBooleans.`false`
-import typingsSlinky.antd.libPaginationPaginationMod.PaginationConfig
-import typingsSlinky.antd.libSpinMod.SpinProps
-import typingsSlinky.antd.libTableInterfaceMod.ColumnProps
-import typingsSlinky.antd.libTableInterfaceMod.ExpandIconProps
-import typingsSlinky.antd.libTableInterfaceMod.SortOrder
-import typingsSlinky.antd.libTableInterfaceMod.SorterResult
-import typingsSlinky.antd.libTableInterfaceMod.TableComponents
-import typingsSlinky.antd.libTableInterfaceMod.TableCurrentDataSource
-import typingsSlinky.antd.libTableInterfaceMod.TableEventListeners
-import typingsSlinky.antd.libTableInterfaceMod.TableLocale
-import typingsSlinky.antd.libTableInterfaceMod.TableProps
-import typingsSlinky.antd.libTableInterfaceMod.TableRowSelection
-import typingsSlinky.antd.libTableInterfaceMod.TableSize
-import typingsSlinky.antd.libTableMod.default
-import typingsSlinky.csstype.csstypeMod.TableLayoutProperty
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.std.Partial
+import typingsSlinky.antd.paginationPaginationMod.PaginationConfig
+import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.antd.spinMod.SpinProps
+import typingsSlinky.antd.tableInterfaceMod.ColumnsType
+import typingsSlinky.antd.tableInterfaceMod.SortOrder
+import typingsSlinky.antd.tableInterfaceMod.SorterResult
+import typingsSlinky.antd.tableInterfaceMod.TableCurrentDataSource
+import typingsSlinky.antd.tableInterfaceMod.TableLocale
+import typingsSlinky.antd.tableInterfaceMod.TablePaginationConfig
+import typingsSlinky.antd.tableInterfaceMod.TableRowSelection
+import typingsSlinky.antd.tableTableMod.TableProps
+import typingsSlinky.rcTable.AnonX
+import typingsSlinky.rcTable.interfaceMod.ColumnType
+import typingsSlinky.rcTable.interfaceMod.ExpandableConfig
+import typingsSlinky.rcTable.interfaceMod.GetRowKey
+import typingsSlinky.rcTable.interfaceMod.Key
+import typingsSlinky.rcTable.interfaceMod.RenderExpandIconProps
+import typingsSlinky.rcTable.interfaceMod.RowClassName
+import typingsSlinky.rcTable.interfaceMod.TableComponents
+import typingsSlinky.rcTable.interfaceMod.TableLayout
+import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.std.Record
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Table
-  extends ExternalComponentWithAttributesWithRefType[tag.type, default[js.Any]] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, js.Object] {
   @JSImport("antd/lib/table", JSImport.Default)
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
-  def apply[T](
-    bodyStyle: CSSProperties = null,
+  /* The following DOM/SVG props were specified: className, id, style */
+  def apply[RecordType /* <: js.Object */](
     bordered: js.UndefOr[Boolean] = js.undefined,
     childrenColumnName: String = null,
-    columns: js.Array[ColumnProps[T]] = null,
-    components: TableComponents = null,
-    dataSource: js.Array[T] = null,
+    columns: ColumnsType[RecordType] = null,
+    components: TableComponents[RecordType] = null,
+    dataSource: js.Array[RecordType] = null,
     defaultExpandAllRows: js.UndefOr[Boolean] = js.undefined,
-    defaultExpandedRowKeys: js.Array[Double | String] = null,
+    defaultExpandedRowKeys: js.Array[Key] = null,
     dropdownPrefixCls: String = null,
-    expandIcon: /* props */ ExpandIconProps[T] => TagMod[Any] = null,
-    expandIconAsCell: js.UndefOr[Boolean] = js.undefined,
-    expandIconColumnIndex: Int | Double = null,
+    emptyText: TagMod[Any] | js.Function0[TagMod[Any]] = null,
+    expandIcon: /* props */ RenderExpandIconProps[RecordType] => TagMod[Any] = null,
     expandRowByClick: js.UndefOr[Boolean] = js.undefined,
-    expandedRowKeys: js.Array[Double | String] = null,
-    expandedRowRender: (T, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => TagMod[Any] = null,
-    footer: /* currentPageData */ js.Array[T] => TagMod[Any] = null,
+    expandable: ExpandableConfig[RecordType] = null,
+    expandedRowClassName: (RecordType, /* index */ Double, /* indent */ Double) => String = null,
+    expandedRowKeys: js.Array[Key] = null,
+    expandedRowRender: (RecordType, /* index */ Double, /* indent */ Double, /* expanded */ Boolean) => TagMod[Any] = null,
+    footer: /* data */ js.Array[RecordType] => TagMod[Any] = null,
     getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,
     indentSize: Int | Double = null,
     loading: Boolean | SpinProps = null,
     locale: TableLocale = null,
-    onChange: (/* pagination */ PaginationConfig, /* filters */ Partial[Record[String, js.Array[String]]], /* sorter */ SorterResult[T], /* extra */ TableCurrentDataSource[T]) => Unit = null,
-    onExpand: (/* expanded */ Boolean, T) => Unit = null,
-    onExpandedRowsChange: /* expandedRowKeys */ js.Array[Double | String] => Unit = null,
-    onHeaderRow: /* columns */ js.Array[ColumnProps[T]] => TableEventListeners = null,
-    onRow: (T, /* index */ Double) => TableEventListeners = null,
-    onRowClick: (T, /* index */ Double, /* event */ Event) => Unit = null,
-    pagination: PaginationConfig | `false` = null,
+    onChange: (/* pagination */ PaginationConfig, /* filters */ Record[String, js.Array[typingsSlinky.antd.tableInterfaceMod.Key] | Null], /* sorter */ SorterResult[RecordType] | js.Array[SorterResult[RecordType]], /* extra */ TableCurrentDataSource[RecordType]) => Unit = null,
+    onExpand: (/* expanded */ Boolean, RecordType) => Unit = null,
+    onExpandedRowsChange: /* expandedKeys */ js.Array[Key] => Unit = null,
+    onHeaderRow: (js.Array[ColumnType[RecordType]], /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement] = null,
+    onRow: (RecordType, /* index */ js.UndefOr[Double]) => HTMLAttributes[HTMLElement] = null,
+    pagination: `false` | TablePaginationConfig = null,
     prefixCls: String = null,
-    rowClassName: (T, /* index */ Double) => String = null,
-    rowKey: String | (js.Function2[T, /* index */ Double, String]) = null,
-    rowSelection: TableRowSelection[T] = null,
-    scroll: Anon_ScrollToFirstRowOnChange = null,
+    rowClassName: String | RowClassName[RecordType] = null,
+    rowKey: String | GetRowKey[RecordType] = null,
+    rowSelection: TableRowSelection[RecordType] = null,
+    scroll: js.UndefOr[AnonX] with AnonScrollToFirstRowOnChange = null,
     showHeader: js.UndefOr[Boolean] = js.undefined,
-    size: TableSize = null,
+    size: SizeType = null,
     sortDirections: js.Array[SortOrder] = null,
-    style: CSSProperties = null,
-    tableLayout: TableLayoutProperty = null,
-    title: /* currentPageData */ js.Array[T] => TagMod[Any] = null,
-    useFixedHeader: js.UndefOr[Boolean] = js.undefined,
+    summary: /* data */ js.Array[RecordType] => TagMod[Any] = null,
+    tableLayout: TableLayout = null,
+    title: /* data */ js.Array[RecordType] => TagMod[Any] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, default[js.Any]] = {
+  ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
-    if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
     if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])
     if (childrenColumnName != null) __obj.updateDynamic("childrenColumnName")(childrenColumnName.asInstanceOf[js.Any])
     if (columns != null) __obj.updateDynamic("columns")(columns.asInstanceOf[js.Any])
@@ -91,10 +91,11 @@ object Table
     if (!js.isUndefined(defaultExpandAllRows)) __obj.updateDynamic("defaultExpandAllRows")(defaultExpandAllRows.asInstanceOf[js.Any])
     if (defaultExpandedRowKeys != null) __obj.updateDynamic("defaultExpandedRowKeys")(defaultExpandedRowKeys.asInstanceOf[js.Any])
     if (dropdownPrefixCls != null) __obj.updateDynamic("dropdownPrefixCls")(dropdownPrefixCls.asInstanceOf[js.Any])
+    if (emptyText != null) __obj.updateDynamic("emptyText")(emptyText.asInstanceOf[js.Any])
     if (expandIcon != null) __obj.updateDynamic("expandIcon")(js.Any.fromFunction1(expandIcon))
-    if (!js.isUndefined(expandIconAsCell)) __obj.updateDynamic("expandIconAsCell")(expandIconAsCell.asInstanceOf[js.Any])
-    if (expandIconColumnIndex != null) __obj.updateDynamic("expandIconColumnIndex")(expandIconColumnIndex.asInstanceOf[js.Any])
     if (!js.isUndefined(expandRowByClick)) __obj.updateDynamic("expandRowByClick")(expandRowByClick.asInstanceOf[js.Any])
+    if (expandable != null) __obj.updateDynamic("expandable")(expandable.asInstanceOf[js.Any])
+    if (expandedRowClassName != null) __obj.updateDynamic("expandedRowClassName")(js.Any.fromFunction3(expandedRowClassName))
     if (expandedRowKeys != null) __obj.updateDynamic("expandedRowKeys")(expandedRowKeys.asInstanceOf[js.Any])
     if (expandedRowRender != null) __obj.updateDynamic("expandedRowRender")(js.Any.fromFunction4(expandedRowRender))
     if (footer != null) __obj.updateDynamic("footer")(js.Any.fromFunction1(footer))
@@ -105,26 +106,24 @@ object Table
     if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction4(onChange))
     if (onExpand != null) __obj.updateDynamic("onExpand")(js.Any.fromFunction2(onExpand))
     if (onExpandedRowsChange != null) __obj.updateDynamic("onExpandedRowsChange")(js.Any.fromFunction1(onExpandedRowsChange))
-    if (onHeaderRow != null) __obj.updateDynamic("onHeaderRow")(js.Any.fromFunction1(onHeaderRow))
+    if (onHeaderRow != null) __obj.updateDynamic("onHeaderRow")(js.Any.fromFunction2(onHeaderRow))
     if (onRow != null) __obj.updateDynamic("onRow")(js.Any.fromFunction2(onRow))
-    if (onRowClick != null) __obj.updateDynamic("onRowClick")(js.Any.fromFunction3(onRowClick))
     if (pagination != null) __obj.updateDynamic("pagination")(pagination.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (rowClassName != null) __obj.updateDynamic("rowClassName")(js.Any.fromFunction2(rowClassName))
+    if (rowClassName != null) __obj.updateDynamic("rowClassName")(rowClassName.asInstanceOf[js.Any])
     if (rowKey != null) __obj.updateDynamic("rowKey")(rowKey.asInstanceOf[js.Any])
     if (rowSelection != null) __obj.updateDynamic("rowSelection")(rowSelection.asInstanceOf[js.Any])
     if (scroll != null) __obj.updateDynamic("scroll")(scroll.asInstanceOf[js.Any])
     if (!js.isUndefined(showHeader)) __obj.updateDynamic("showHeader")(showHeader.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (sortDirections != null) __obj.updateDynamic("sortDirections")(sortDirections.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (summary != null) __obj.updateDynamic("summary")(js.Any.fromFunction1(summary))
     if (tableLayout != null) __obj.updateDynamic("tableLayout")(tableLayout.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(js.Any.fromFunction1(title))
-    if (!js.isUndefined(useFixedHeader)) __obj.updateDynamic("useFixedHeader")(useFixedHeader.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libTableMod.default[js.Any]]]
+    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object]]
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libTableMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TableProps[js.Any]
 }
 

@@ -5,10 +5,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.bizcharts.bizchartsMod.Guide.DataMarker
-import typingsSlinky.bizcharts.bizchartsMod.Guide.DataMarkerProps
 import typingsSlinky.bizcharts.bizchartsStrings.downward
 import typingsSlinky.bizcharts.bizchartsStrings.upward
+import typingsSlinky.bizcharts.mod.Guide.DataMarker
+import typingsSlinky.bizcharts.mod.Guide.DataMarkerProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -40,9 +40,7 @@ object GuideDataMarker
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, DataMarker] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.bizcharts.bizchartsMod.Guide.DataMarker](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, DataMarker] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Guide.DataMarker](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DataMarkerProps
 }
 

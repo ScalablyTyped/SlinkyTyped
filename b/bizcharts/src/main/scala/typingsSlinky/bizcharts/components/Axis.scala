@@ -5,18 +5,18 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.atAntvG2.atAntvG2Mod.AxisGrid
-import typingsSlinky.atAntvG2.atAntvG2Mod.AxisLabel
-import typingsSlinky.atAntvG2.atAntvG2Mod.Styles.line
-import typingsSlinky.atAntvG2.atAntvG2Mod.Styles.tickLine
-import typingsSlinky.bizcharts.bizchartsMod.AxisProps
-import typingsSlinky.bizcharts.bizchartsMod.PositionType
+import typingsSlinky.antvG2.mod.AxisGrid
+import typingsSlinky.antvG2.mod.AxisLabel
+import typingsSlinky.antvG2.mod.Styles.line
+import typingsSlinky.antvG2.mod.Styles.tickLine
+import typingsSlinky.bizcharts.mod.AxisProps
+import typingsSlinky.bizcharts.mod.PositionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Axis
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.bizchartsMod.Axis] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.mod.Axis] {
   @JSImport("bizcharts", "Axis")
   @js.native
   object componentImport extends js.Object
@@ -36,7 +36,7 @@ object Axis
     visible: js.UndefOr[Boolean] = js.undefined,
     zIndex: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Axis] = {
+  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Axis] = {
     val __obj = js.Dynamic.literal()
     if (grid != null) __obj.updateDynamic("grid")(grid.asInstanceOf[js.Any])
     if (label != null) __obj.updateDynamic("label")(label.asInstanceOf[js.Any])
@@ -52,7 +52,7 @@ object Axis
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Axis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.bizchartsMod.Axis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Axis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Axis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = AxisProps
 }
 

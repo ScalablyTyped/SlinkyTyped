@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dijit.form
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.currency
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -51,6 +51,6 @@ class CurrencyTextBox () extends NumberTextBox {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.sammy.Sammy
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery
+import typingsSlinky.jquery.JQuery_
 import typingsSlinky.std.RegExp
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -15,9 +15,9 @@ trait Application extends Object {
   // Features provided by oauth2 plugin
   var oauthorize: String = js.native
   @JSName("$element")
-  def $element(): JQuery[HTMLElement] = js.native
+  def $element(): JQuery_[HTMLElement] = js.native
   @JSName("$element")
-  def $element(selector: String): JQuery[HTMLElement] = js.native
+  def $element(selector: String): JQuery_[HTMLElement] = js.native
   def apply(appFn: js.Function): js.Any = js.native
   def after(callback: js.Function): Application = js.native
   def any(verb: String, path: String, callback: js.Function): Unit = js.native

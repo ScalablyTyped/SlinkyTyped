@@ -1,9 +1,8 @@
 package typingsSlinky.dojo.dojox.calendar
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.attachScope
 import typingsSlinky.dojo.dojoStrings.cellHeaderLongPattern
 import typingsSlinky.dojo.dojoStrings.cellHeaderShortPattern
@@ -34,6 +33,7 @@ import typingsSlinky.dojo.dojoStrings.templatePath
 import typingsSlinky.dojo.dojoStrings.templateString
 import typingsSlinky.dojo.dojoStrings.triggerExtent
 import typingsSlinky.dojo.dojoStrings.verticalGap
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,8 +45,8 @@ import scala.scalajs.js.annotation._
   *
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit._AttachMixin because Inheritance from two classes. Inlined 
-- typings.dojo.dijit._TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.calendar.MatrixView")
+- typingsSlinky.dojo.dijit.AttachMixin because Inheritance from two classes. Inlined 
+- typingsSlinky.dojo.dijit.TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.calendar.MatrixView")
 @js.native
 class MatrixView () extends ViewBase {
   /**
@@ -231,7 +231,7 @@ class MatrixView () extends ViewBase {
     * @param e The mouse event.
     * @param renderer The expand renderer.
     */
-  def expandRendererClickHandler(e: Event, renderer: js.Object): Unit = js.native
+  def expandRendererClickHandler(e: Event_, renderer: js.Object): Unit = js.native
   /**
     * Expands the specified row.
     *
@@ -437,7 +437,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_cellHeaderLongPattern(
     property: cellHeaderLongPattern,
@@ -447,7 +447,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_cellHeaderShortPattern(
     property: cellHeaderShortPattern,
@@ -457,7 +457,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_cellPaddingTop(
     property: cellPaddingTop,
@@ -467,7 +467,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_columnCount(
     property: columnCount,
@@ -477,7 +477,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_expandDuration(
     property: expandDuration,
@@ -487,7 +487,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_expandEasing(
     property: expandEasing,
@@ -497,7 +497,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Function], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_expandRenderer(
     property: expandRenderer,
@@ -507,7 +507,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_expandRendererHeight(
     property: expandRendererHeight,
@@ -517,7 +517,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_horizontalRenderer(
     property: horizontalRenderer,
@@ -527,7 +527,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_horizontalRendererHeight(
     property: horizontalRendererHeight,
@@ -537,7 +537,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_labelRenderer(
     property: labelRenderer,
@@ -547,7 +547,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_labelRendererHeight(
     property: labelRendererHeight,
@@ -557,7 +557,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_layoutDuringResize(
     property: layoutDuringResize,
@@ -567,7 +567,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_naturalRowsHeight(
     property: naturalRowsHeight,
@@ -577,7 +577,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_percentOverlap(
     property: percentOverlap,
@@ -587,7 +587,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_refEndTime(
     property: refEndTime,
@@ -597,7 +597,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_refStartTime(
     property: refStartTime,
@@ -607,7 +607,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_renderData(
     property: renderData,
@@ -617,7 +617,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_resizeAnimationDuration(
     property: resizeAnimationDuration,
@@ -627,7 +627,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_roundToDay(
     property: roundToDay,
@@ -637,7 +637,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rowCount(
     property: rowCount,
@@ -647,7 +647,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_searchContainerNode(
     property: searchContainerNode,
@@ -657,7 +657,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_showCellLabel(
     property: showCellLabel,
@@ -667,7 +667,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_startDate(
     property: startDate,
@@ -677,7 +677,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Date], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_styleGridCellFunc(
     property: styleGridCellFunc,
@@ -687,7 +687,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Function], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templatePath(
     property: templatePath,
@@ -697,7 +697,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templateString(
     property: templateString,
@@ -707,7 +707,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_triggerExtent(
     property: triggerExtent,
@@ -717,7 +717,7 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_verticalGap(
     property: verticalGap,
@@ -727,6 +727,6 @@ class MatrixView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

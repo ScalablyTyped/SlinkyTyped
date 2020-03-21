@@ -4,14 +4,15 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsDialogDialogMod.DialogProps
+import typingsSlinky.primereact.dialogMod.DialogProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Dialog
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.dialogMod.Dialog] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactDialogMod.Dialog] {
   @JSImport("primereact/dialog", "Dialog")
   @js.native
   object componentImport extends js.Object
@@ -31,7 +32,7 @@ object Dialog
     focusOnShow: js.UndefOr[Boolean] = js.undefined,
     footer: js.Any = null,
     header: js.Any = null,
-    iconsTemplate: () => js.UndefOr[typingsSlinky.react.reactMod._Global_.JSX.Element] = null,
+    iconsTemplate: () => js.UndefOr[ReactElement] = null,
     maximizable: js.UndefOr[Boolean] = js.undefined,
     modal: js.UndefOr[Boolean] = js.undefined,
     onShow: () => Unit = null,
@@ -40,7 +41,7 @@ object Dialog
     style: js.Object = null,
     visible: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.dialogMod.Dialog] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDialogMod.Dialog] = {
     val __obj = js.Dynamic.literal(onHide = js.Any.fromFunction0(onHide))
     if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
     if (ariaCloseIconLabel != null) __obj.updateDynamic("ariaCloseIconLabel")(ariaCloseIconLabel.asInstanceOf[js.Any])

@@ -1,7 +1,7 @@
 
 # Scala.js typings for karma-viewport
 
-Typings are for version 1.0.4
+Typings are for version 1.0.5
 
 ## Library description:
 A Karma plugin for testing responsive features and layout
@@ -12,7 +12,7 @@ A Karma plugin for testing responsive features and layout
 | Keywords           | breakpoint, iframe, karma, karma-framework, karma-plugin, responsive, testing, viewport |
 | # releases         | 6 |
 | # dependents       | 3 |
-| # downloads        | 239863 |
+| # downloads        | 247478 |
 | # stars            | 0 |
 
 ## Links

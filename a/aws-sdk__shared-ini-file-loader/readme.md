@@ -10,9 +10,9 @@ This module provides a function that reads from AWS SDK configuration files and 
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/shared-ini-file-loader |
 | Keywords           | - |
-| # releases         | 4 |
-| # dependents       | 3 |
-| # downloads        | 38259 |
+| # releases         | 5 |
+| # dependents       | 4 |
+| # downloads        | 38995 |
 | # stars            | 0 |
 
 ## Links

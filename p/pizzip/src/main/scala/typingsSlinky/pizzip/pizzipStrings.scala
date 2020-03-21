@@ -1,6 +1,6 @@
 package typingsSlinky.pizzip
 
-import typingsSlinky.pizzip.pizzipMod.Compression
+import typingsSlinky.pizzip.mod.Compression
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

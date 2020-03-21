@@ -4,8 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.dygraphs.Anon_Label
-import typingsSlinky.dygraphs.Anon_X
+import typingsSlinky.dygraphs.AnonLabel
+import typingsSlinky.dygraphs.AnonX
 import typingsSlinky.dygraphs.Dygraph
 import typingsSlinky.dygraphs.dygraphsStrings.always
 import typingsSlinky.dygraphs.dygraphsStrings.follow
@@ -81,7 +81,7 @@ trait Options
     * See also documentation on <a href='http://dygraphs.com/per-axis.html'>per-series and
     * per-axis options</a>.
     */
-  var axes: js.UndefOr[Anon_X] = js.undefined
+  var axes: js.UndefOr[AnonX] = js.undefined
   /**
     * A function to call when the canvas is clicked.
     */
@@ -505,7 +505,7 @@ object Options {
     annotationDblClickHandler: (/* annotation */ Annotation, /* point */ Point, /* dygraph */ Dygraph, /* event */ MouseEvent) => _ = null,
     annotationMouseOutHandler: (/* annotation */ Annotation, /* point */ Point, /* dygraph */ Dygraph, /* event */ MouseEvent) => _ = null,
     annotationMouseOverHandler: (/* annotation */ Annotation, /* point */ Point, /* dygraph */ Dygraph, /* event */ MouseEvent) => _ = null,
-    axes: Anon_X = null,
+    axes: AnonX = null,
     axis: y1 | y2 = null,
     axisLabelColor: String = null,
     axisLabelFontSize: Int | Double = null,
@@ -591,7 +591,7 @@ object Options {
     strokeBorderWidth: Int | Double = null,
     strokePattern: js.Array[Double] = null,
     strokeWidth: Int | Double = null,
-    ticker: (/* min */ Double, /* max */ Double, /* pixels */ Double, /* opts */ js.Function1[/* name */ String, _], /* dygraph */ Dygraph, /* vals */ js.Array[Double]) => js.Array[Anon_Label] = null,
+    ticker: (/* min */ Double, /* max */ Double, /* pixels */ Double, /* opts */ js.Function1[/* name */ String, _], /* dygraph */ Dygraph, /* vals */ js.Array[Double]) => js.Array[AnonLabel] = null,
     title: String = null,
     titleHeight: Int | Double = null,
     underlayCallback: (/* context */ CanvasRenderingContext2D, /* area */ Area, /* dygraph */ Dygraph) => _ = null,

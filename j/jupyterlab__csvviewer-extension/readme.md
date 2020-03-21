@@ -10,9 +10,9 @@ JupyterLab - CSV Widget Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/csvviewer-extension |
 | Keywords           | - |
-| # releases         | 64 |
+| # releases         | 65 |
 | # dependents       | 1 |
-| # downloads        | 749769 |
+| # downloads        | 755022 |
 | # stars            | 0 |
 
 ## Links

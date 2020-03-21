@@ -1,44 +1,33 @@
 package typingsSlinky.tstl
 
-import typingsSlinky.tstl.functionalIPointerMod.IPointer.ValueType
-import typingsSlinky.tstl.iteratorIBidirectionalIteratorMod.IBidirectionalIterator
-import typingsSlinky.tstl.iteratorIFakeMod.General
-import typingsSlinky.tstl.iteratorIFakeMod.Writeonly
-import typingsSlinky.tstl.iteratorIForwardIteratorMod.IForwardIterator
-import typingsSlinky.tstl.utilityPairMod.Pair
+import typingsSlinky.tstl.ibidirectionalcontainerMod.IBidirectionalContainer
+import typingsSlinky.tstl.ibidirectionalcontainerMod.IBidirectionalContainer.IteratorType
+import typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer
+import typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer.ValueType
+import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
+import typingsSlinky.tstl.pairMod.Pair
+import typingsSlinky.tstl.unaryPredicatorMod.UnaryPredicator
+import typingsSlinky.tstl.writeonlyMod.Writeonly
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("tstl/algorithm/partition", JSImport.Namespace)
+@JSImport("tstl/ranges/algorithm/partition", JSImport.Namespace)
 @js.native
 object algorithmPartitionMod extends js.Object {
-  def is_partitioned[ForwardIterator /* <: IForwardIterator[ValueType[ForwardIterator], ForwardIterator] */](
-    first: ForwardIterator,
-    last: ForwardIterator,
-    pred: js.Function1[/* x */ ValueType[ForwardIterator], Boolean]
-  ): Boolean = js.native
-  def partition[BidirectionalIterator /* <: General[IBidirectionalIterator[ValueType[BidirectionalIterator], BidirectionalIterator]] */](
-    first: BidirectionalIterator,
-    last: BidirectionalIterator,
-    pred: js.Function1[/* x */ ValueType[BidirectionalIterator], Boolean]
-  ): BidirectionalIterator = js.native
-  def partition_copy[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator1 /* <: Writeonly[IForwardIterator[ValueType[InputIterator], OutputIterator1]] */, OutputIterator2 /* <: Writeonly[IForwardIterator[ValueType[InputIterator], OutputIterator2]] */](
-    first: InputIterator,
-    last: InputIterator,
+  @JSName("is_partitioned")
+  def isPartitioned[Range /* <: js.Array[_] | IForwardContainer[_] */](range: Range, pred: UnaryPredicator[ValueType[Range]]): Boolean = js.native
+  def partition[Range /* <: js.Array[_] | (IBidirectionalContainer[_, _]) */](range: Range, pred: UnaryPredicator[ValueType[Range]]): IteratorType[Range] = js.native
+  @JSName("partition_copy")
+  def partitionCopy[Range /* <: js.Array[_] | IForwardContainer[_] */, OutputIterator1 /* <: Writeonly[IForwardIterator[ValueType[Range], OutputIterator1]] */, OutputIterator2 /* <: Writeonly[IForwardIterator[ValueType[Range], OutputIterator2]] */](
+    range: Range,
     output_true: OutputIterator1,
     output_false: OutputIterator2,
-    pred: js.Function1[/* val */ ValueType[InputIterator], ValueType[InputIterator]]
+    pred: UnaryPredicator[ValueType[Range]]
   ): Pair[OutputIterator1, OutputIterator2] = js.native
-  def partition_point[ForwardIterator /* <: IForwardIterator[ValueType[ForwardIterator], ForwardIterator] */](
-    first: ForwardIterator,
-    last: ForwardIterator,
-    pred: js.Function1[/* x */ ValueType[ForwardIterator], Boolean]
-  ): ForwardIterator = js.native
-  def stable_partition[BidirectionalIterator /* <: General[IBidirectionalIterator[ValueType[BidirectionalIterator], BidirectionalIterator]] */](
-    first: BidirectionalIterator,
-    last: BidirectionalIterator,
-    pred: js.Function1[/* x */ ValueType[BidirectionalIterator], Boolean]
-  ): BidirectionalIterator = js.native
+  @JSName("partition_point")
+  def partitionPoint[Range /* <: js.Array[_] | IForwardContainer[_] */](range: Range, pred: UnaryPredicator[ValueType[Range]]): typingsSlinky.tstl.iforwardcontainerMod.IForwardContainer.IteratorType[Range] = js.native
+  @JSName("stable_partition")
+  def stablePartition[Range /* <: js.Array[_] | (IBidirectionalContainer[_, _]) */](range: Range, pred: UnaryPredicator[ValueType[Range]]): IteratorType[Range] = js.native
 }
 

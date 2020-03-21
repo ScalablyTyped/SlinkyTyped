@@ -9,10 +9,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.mfiles.mfilesNumbers.`0`
-  - typings.mfiles.mfilesNumbers.`1`
-  - typings.mfiles.mfilesNumbers.`2`
-  - typings.mfiles.mfilesNumbers.`3`
+  - typingsSlinky.mfiles.mfilesNumbers.`0`
+  - typingsSlinky.mfiles.mfilesNumbers.`1`
+  - typingsSlinky.mfiles.mfilesNumbers.`2`
+  - typingsSlinky.mfiles.mfilesNumbers.`3`
 */
 trait MFLicenseType extends js.Object
 

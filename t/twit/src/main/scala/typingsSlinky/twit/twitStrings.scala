@@ -1,7 +1,7 @@
 package typingsSlinky.twit
 
-import typingsSlinky.twit.twitMod.StreamEndpoint
-import typingsSlinky.twit.twitMod.Twitter.ResultType
+import typingsSlinky.twit.mod.StreamEndpoint
+import typingsSlinky.twit.mod.Twitter.ResultType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

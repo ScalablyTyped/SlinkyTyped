@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dijit.form
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.cols
 import typingsSlinky.dojo.dojoStrings.rows
 import typingsSlinky.dojo.dojoStrings.value
@@ -63,7 +63,7 @@ class SimpleTextarea () extends TextBox {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rows(
     property: rows,
@@ -73,6 +73,6 @@ class SimpleTextarea () extends TextBox {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

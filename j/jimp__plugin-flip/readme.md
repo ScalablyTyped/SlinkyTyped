@@ -10,9 +10,9 @@ flip an image.
 | ------------------ | :-------------: |
 | Full name          | @jimp/plugin-flip |
 | Keywords           | - |
-| # releases         | 66 |
+| # releases         | 65 |
 | # dependents       | 1 |
-| # downloads        | 13915140 |
+| # downloads        | 14290183 |
 | # stars            | 0 |
 
 ## Links

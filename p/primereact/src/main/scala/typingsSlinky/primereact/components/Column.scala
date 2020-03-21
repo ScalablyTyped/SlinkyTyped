@@ -4,9 +4,10 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_Field
-import typingsSlinky.primereact.componentsColumnColumnMod.ColumnProps
+import typingsSlinky.primereact.AnonField
+import typingsSlinky.primereact.columnColumnMod.ColumnProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +25,7 @@ object Column
     bodyClassName: String = null,
     bodyStyle: js.Object = null,
     columnKey: String = null,
-    editor: /* props */ js.Any => js.UndefOr[typingsSlinky.react.reactMod._Global_.JSX.Element] = null,
+    editor: /* props */ js.Any => js.UndefOr[ReactElement] = null,
     editorValidator: /* props */ js.Any => Boolean = null,
     editorValidatorEvent: String = null,
     excludeGlobalFilter: js.UndefOr[Boolean] = js.undefined,
@@ -53,7 +54,7 @@ object Column
     rowReorderIcon: String = null,
     selectionMode: String = null,
     sortField: String = null,
-    sortFunction: /* e */ Anon_Field => Unit = null,
+    sortFunction: /* e */ AnonField => Unit = null,
     sortable: js.UndefOr[Boolean] = js.undefined,
     style: js.Object = null,
     _overrides: StringDictionary[js.Any] = null

@@ -1,6 +1,6 @@
 package typingsSlinky.sequelize
 
-import typingsSlinky.sequelize.sequelizeMod.IndexType
+import typingsSlinky.sequelize.mod.IndexType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

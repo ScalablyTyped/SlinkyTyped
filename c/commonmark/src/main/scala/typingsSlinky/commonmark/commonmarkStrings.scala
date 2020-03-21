@@ -1,6 +1,6 @@
 package typingsSlinky.commonmark
 
-import typingsSlinky.commonmark.commonmarkMod.NodeType
+import typingsSlinky.commonmark.mod.NodeType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

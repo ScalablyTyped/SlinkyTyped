@@ -11,8 +11,8 @@ Internationalization plugin for Vue.js
 | Full name          | vue-i18n |
 | Keywords           | i18n, internationalization, plugin, vue, vue.js |
 | # releases         | 36 |
-| # dependents       | 573 |
-| # downloads        | 8816253 |
+| # dependents       | 603 |
+| # downloads        | 9283657 |
 | # stars            | 15 |
 
 ## Links

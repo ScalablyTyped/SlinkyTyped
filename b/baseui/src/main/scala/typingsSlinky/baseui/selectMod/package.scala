@@ -5,19 +5,20 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object selectMod {
-  import typingsSlinky.baseui.Anon_Any
-  import typingsSlinky.baseui.Anon_InitialState
-
   type ChangeAction = js.Function0[js.Any]
-  type OptionsT = Value | OptgroupsT
-  type StateReducer = js.Function3[/* stateType */ String, /* nextState */ State, /* currentState */ State, State]
-  type StatefulSelectProps = SelectProps with Anon_InitialState
-  type Value = js.Array[Option]
+  type OptionsT = typingsSlinky.baseui.selectMod.Value | typingsSlinky.baseui.selectMod.OptgroupsT
+  type StateReducer = js.Function3[
+    /* stateType */ java.lang.String, 
+    /* nextState */ typingsSlinky.baseui.selectMod.State, 
+    /* currentState */ typingsSlinky.baseui.selectMod.State, 
+    typingsSlinky.baseui.selectMod.State
+  ]
+  type Value = js.Array[typingsSlinky.baseui.selectMod.Option]
   type filterOptions = js.Function4[
-    /* options */ Value, 
-    /* filterValue */ String, 
-    /* excludeOptions */ js.UndefOr[Value], 
-    /* newProps */ js.UndefOr[Anon_Any], 
-    Value
+    /* options */ typingsSlinky.baseui.selectMod.Value, 
+    /* filterValue */ java.lang.String, 
+    /* excludeOptions */ js.UndefOr[typingsSlinky.baseui.selectMod.Value], 
+    /* newProps */ js.UndefOr[typingsSlinky.baseui.AnonFilterOption], 
+    typingsSlinky.baseui.selectMod.Value
   ]
 }

@@ -4,17 +4,16 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.catalog.catalogMod.Config
-import typingsSlinky.catalog.catalogMod.ConfigPageOrGroup
-import typingsSlinky.catalog.catalogMod.ConfigResponsiveSize
-import typingsSlinky.catalog.catalogMod.Theme
-import typingsSlinky.std.Partial
+import typingsSlinky.catalog.PartialTheme
+import typingsSlinky.catalog.mod.Config
+import typingsSlinky.catalog.mod.ConfigPageOrGroup
+import typingsSlinky.catalog.mod.ConfigResponsiveSize
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Catalog
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.catalog.catalogMod.Catalog] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.catalog.mod.Catalog] {
   @JSImport("catalog", "Catalog")
   @js.native
   object componentImport extends js.Object
@@ -24,18 +23,16 @@ object Catalog
     pages: js.Array[ConfigPageOrGroup],
     title: String,
     basePath: String = null,
-    imports: StringDictionary[js.Any] = null,
     logoSrc: String = null,
     responsiveSizes: js.Array[ConfigResponsiveSize] = null,
     scripts: js.Array[String] = null,
     styles: js.Array[String] = null,
-    theme: Partial[Theme] = null,
+    theme: PartialTheme = null,
     useBrowserHistory: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.catalog.catalogMod.Catalog] = {
+  ): BuildingComponent[tag.type, typingsSlinky.catalog.mod.Catalog] = {
     val __obj = js.Dynamic.literal(pages = pages.asInstanceOf[js.Any], title = title.asInstanceOf[js.Any])
     if (basePath != null) __obj.updateDynamic("basePath")(basePath.asInstanceOf[js.Any])
-    if (imports != null) __obj.updateDynamic("imports")(imports.asInstanceOf[js.Any])
     if (logoSrc != null) __obj.updateDynamic("logoSrc")(logoSrc.asInstanceOf[js.Any])
     if (responsiveSizes != null) __obj.updateDynamic("responsiveSizes")(responsiveSizes.asInstanceOf[js.Any])
     if (scripts != null) __obj.updateDynamic("scripts")(scripts.asInstanceOf[js.Any])

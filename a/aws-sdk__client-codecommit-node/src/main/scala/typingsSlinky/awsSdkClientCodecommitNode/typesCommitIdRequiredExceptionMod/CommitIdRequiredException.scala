@@ -1,0 +1,26 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesCommitIdRequiredExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.createBranchExceptionsUnionMod.CreateBranchExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getCommentsForComparedCommitExceptionsUnionMod.GetCommentsForComparedCommitExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getCommentsForPullRequestExceptionsUnionMod.GetCommentsForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.getCommitExceptionsUnionMod.GetCommitExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExceptionsUnionMod.PostCommentForComparedCommitExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait CommitIdRequiredException
+  extends ServiceException[CommitIdRequiredExceptionDetails]
+     with CreateBranchExceptionsUnion
+     with GetCommentsForComparedCommitExceptionsUnion
+     with GetCommentsForPullRequestExceptionsUnion
+     with GetCommitExceptionsUnion
+     with PostCommentForComparedCommitExceptionsUnion
+     with PostCommentForPullRequestExceptionsUnion {
+  @JSName("name")
+  var name_CommitIdRequiredException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.CommitIdRequiredException = js.native
+}
+

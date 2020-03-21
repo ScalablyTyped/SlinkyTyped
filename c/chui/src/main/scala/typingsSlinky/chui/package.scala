@@ -5,13 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object chui {
-  import org.scalajs.dom.raw.Event
-
   /**
     * Interface of the JQuery extension of the W3C event object
     */
-  type BaseJQueryEventObject = Event
-  type JQueryInputEventObject = Event
-  type JQueryKeyEventObject = Event
-  type JQueryMouseEventObject = Event
+  type BaseJQueryEventObject = typingsSlinky.std.Event_
+  type JQueryInputEventObject = typingsSlinky.chui.BaseJQueryEventObject
+  type JQueryKeyEventObject = typingsSlinky.chui.JQueryInputEventObject
+  type JQueryMouseEventObject = typingsSlinky.chui.JQueryInputEventObject
 }

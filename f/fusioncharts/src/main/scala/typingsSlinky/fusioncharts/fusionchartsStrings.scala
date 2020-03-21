@@ -1,8 +1,8 @@
 package typingsSlinky.fusioncharts
 
-import typingsSlinky.fusioncharts.fusionchartsMod.ChartDataFormats
-import typingsSlinky.fusioncharts.fusionchartsMod.ImageHAlign
-import typingsSlinky.fusioncharts.fusionchartsMod.ImageVAlign
+import typingsSlinky.fusioncharts.mod.ChartDataFormats
+import typingsSlinky.fusioncharts.mod.ImageHAlign
+import typingsSlinky.fusioncharts.mod.ImageVAlign
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

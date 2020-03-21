@@ -1,0 +1,24 @@
+package typingsSlinky.csstype.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.csstype.csstypeStrings.`-ms-zoom`
+  - typingsSlinky.csstype.csstypeStrings.fixed
+  - typingsSlinky.csstype.csstypeStrings.zoom
+*/
+trait ViewportUserZoomProperty extends js.Object
+
+object ViewportUserZoomProperty {
+  @scala.inline
+  def `-ms-zoom`: typingsSlinky.csstype.csstypeStrings.`-ms-zoom` = this.cast("-ms-zoom")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def fixed: typingsSlinky.csstype.csstypeStrings.fixed = this.cast("fixed")
+  @scala.inline
+  def zoom: typingsSlinky.csstype.csstypeStrings.zoom = this.cast("zoom")
+}
+

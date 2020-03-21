@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object AST {
-  type Decorator = MustacheStatement
-  type DecoratorBlock = BlockStatement
-  type Expression = Node
-  type Literal = Expression
-  type Statement = Node
+  type Decorator = typingsSlinky.handlebars.hbs.AST.MustacheStatement
+  type DecoratorBlock = typingsSlinky.handlebars.hbs.AST.BlockStatement
+  type Expression = typingsSlinky.handlebars.hbs.AST.Node
+  type Literal = typingsSlinky.handlebars.hbs.AST.Expression
+  type Statement = typingsSlinky.handlebars.hbs.AST.Node
 }

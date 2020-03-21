@@ -5,26 +5,26 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.bizcharts.Anon_Style
-import typingsSlinky.bizcharts.bizchartsMod.PositionType
-import typingsSlinky.bizcharts.bizchartsMod.TooltipProps
-import typingsSlinky.bizcharts.bizchartsMod.triggerOnType
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.bizcharts.AnonStyle
+import typingsSlinky.bizcharts.mod.PositionType
+import typingsSlinky.bizcharts.mod.TooltipProps
+import typingsSlinky.bizcharts.mod.triggerOnType
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.bizchartsMod.Tooltip] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.mod.Tooltip] {
   @JSImport("bizcharts", "Tooltip")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: type */
+  /* The following DOM/SVG props were specified: title, type */
   def apply(
     containerTpl: String = null,
-    crosshairs: Anon_Style | Boolean = null,
+    crosshairs: AnonStyle | Boolean = null,
     enterable: js.UndefOr[Boolean] = js.undefined,
     follow: js.UndefOr[Boolean] = js.undefined,
     `g2-tooltip`: CSSProperties = null,
@@ -39,11 +39,10 @@ object Tooltip
     position: PositionType = null,
     shared: js.UndefOr[Boolean] = js.undefined,
     showTitle: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
     triggerOn: triggerOnType = null,
     useHtml: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Tooltip] = {
+  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Tooltip] = {
     val __obj = js.Dynamic.literal()
     if (containerTpl != null) __obj.updateDynamic("containerTpl")(containerTpl.asInstanceOf[js.Any])
     if (crosshairs != null) __obj.updateDynamic("crosshairs")(crosshairs.asInstanceOf[js.Any])
@@ -61,13 +60,12 @@ object Tooltip
     if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     if (!js.isUndefined(shared)) __obj.updateDynamic("shared")(shared.asInstanceOf[js.Any])
     if (!js.isUndefined(showTitle)) __obj.updateDynamic("showTitle")(showTitle.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (triggerOn != null) __obj.updateDynamic("triggerOn")(triggerOn.asInstanceOf[js.Any])
     if (!js.isUndefined(useHtml)) __obj.updateDynamic("useHtml")(useHtml.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Tooltip] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.bizchartsMod.Tooltip](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Tooltip] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Tooltip](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TooltipProps
 }
 

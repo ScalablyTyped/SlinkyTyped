@@ -1,14 +1,14 @@
 package typingsSlinky.jweixin
 
-import typingsSlinky.jweixin.jweixinMod.ApiMethod
-import typingsSlinky.jweixin.jweixinMod.ImageSizeType
-import typingsSlinky.jweixin.jweixinMod.ImageSourceType
-import typingsSlinky.jweixin.jweixinMod.VideoSourceType
-import typingsSlinky.jweixin.jweixinMod.menuBase
-import typingsSlinky.jweixin.jweixinMod.menuProtected
-import typingsSlinky.jweixin.jweixinMod.menuShare
-import typingsSlinky.jweixin.jweixinMod.networkType
-import typingsSlinky.jweixin.jweixinMod.scanType
+import typingsSlinky.jweixin.mod.ApiMethod
+import typingsSlinky.jweixin.mod.ImageSizeType
+import typingsSlinky.jweixin.mod.ImageSourceType
+import typingsSlinky.jweixin.mod.VideoSourceType
+import typingsSlinky.jweixin.mod.menuBase
+import typingsSlinky.jweixin.mod.menuProtected
+import typingsSlinky.jweixin.mod.menuShare
+import typingsSlinky.jweixin.mod.networkType
+import typingsSlinky.jweixin.mod.scanType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

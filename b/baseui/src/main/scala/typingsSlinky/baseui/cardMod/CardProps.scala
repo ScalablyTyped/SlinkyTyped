@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.cardMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.Anon_Thumbnail
+import typingsSlinky.baseui.AnonThumbnail
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,8 +9,10 @@ import scala.scalajs.js.annotation._
 trait CardProps extends js.Object {
   val action: js.UndefOr[TagMod[Any]] = js.undefined
   val children: js.UndefOr[TagMod[Any]] = js.undefined
-  val hasThumbnail: js.UndefOr[js.Function1[/* props */ Anon_Thumbnail, Boolean]] = js.undefined
-  val headerImage: js.UndefOr[String] = js.undefined
+  val hasThumbnail: js.UndefOr[js.Function1[/* props */ AnonThumbnail, Boolean]] = js.undefined
+  val headerImage: js.UndefOr[
+    String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ImagePropsT */ js.Any)
+  ] = js.undefined
   val overrides: js.UndefOr[CardOverrides] = js.undefined
   val thumbnail: js.UndefOr[String] = js.undefined
   val title: js.UndefOr[TagMod[Any]] = js.undefined
@@ -21,8 +23,8 @@ object CardProps {
   def apply(
     action: TagMod[Any] = null,
     children: TagMod[Any] = null,
-    hasThumbnail: /* props */ Anon_Thumbnail => Boolean = null,
-    headerImage: String = null,
+    hasThumbnail: /* props */ AnonThumbnail => Boolean = null,
+    headerImage: String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ImagePropsT */ js.Any) = null,
     overrides: CardOverrides = null,
     thumbnail: String = null,
     title: TagMod[Any] = null

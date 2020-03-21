@@ -5,14 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.ionic.ionicStrings.GET
-  - typings.ionic.ionicStrings.POST
-  - typings.ionic.ionicStrings.PATCH
-  - typings.ionic.ionicStrings.PUT
-  - typings.ionic.ionicStrings.DELETE
-  - typings.ionic.ionicStrings.PURGE
-  - typings.ionic.ionicStrings.HEAD
-  - typings.ionic.ionicStrings.OPTIONS
+  - typingsSlinky.ionic.ionicStrings.GET
+  - typingsSlinky.ionic.ionicStrings.POST
+  - typingsSlinky.ionic.ionicStrings.PATCH
+  - typingsSlinky.ionic.ionicStrings.PUT
+  - typingsSlinky.ionic.ionicStrings.DELETE
+  - typingsSlinky.ionic.ionicStrings.PURGE
+  - typingsSlinky.ionic.ionicStrings.HEAD
+  - typingsSlinky.ionic.ionicStrings.OPTIONS
 */
 trait HttpMethod extends js.Object
 

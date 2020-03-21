@@ -10,9 +10,9 @@ The Material Components for the web floating-label component
 | ------------------ | :-------------: |
 | Full name          | @material/floating-label |
 | Keywords           | material components, material design, floatinglabel, floating label |
-| # releases         | 111 |
+| # releases         | 156 |
 | # dependents       | 24 |
-| # downloads        | 1633684 |
+| # downloads        | 1672234 |
 | # stars            | 0 |
 
 ## Links

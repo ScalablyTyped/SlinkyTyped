@@ -5,11 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.baseui.baseuiStrings.static
-  - typings.baseui.baseuiStrings.absolute
-  - typings.baseui.baseuiStrings.relative
-  - typings.baseui.baseuiStrings.fixed
-  - typings.baseui.baseuiStrings.sticky
+  - typingsSlinky.baseui.baseuiStrings.static
+  - typingsSlinky.baseui.baseuiStrings.absolute
+  - typingsSlinky.baseui.baseuiStrings.relative
+  - typingsSlinky.baseui.baseuiStrings.fixed
+  - typingsSlinky.baseui.baseuiStrings.sticky
 */
 trait Position extends js.Object
 

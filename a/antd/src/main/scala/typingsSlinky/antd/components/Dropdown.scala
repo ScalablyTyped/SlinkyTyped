@@ -4,17 +4,17 @@ import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
-import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
 import typingsSlinky.antd.antdStrings.click
 import typingsSlinky.antd.antdStrings.contextMenu
 import typingsSlinky.antd.antdStrings.hover
-import typingsSlinky.antd.libDropdownDropdownMod.Align
-import typingsSlinky.antd.libDropdownDropdownMod.DropDownProps
-import typingsSlinky.antd.libDropdownDropdownMod.OverlayFunc
-import typingsSlinky.antd.libDropdownDropdownMod.Placement
-import typingsSlinky.antd.libDropdownMod.default
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.dropdownDropdownMod.Align
+import typingsSlinky.antd.dropdownDropdownMod.DropDownProps
+import typingsSlinky.antd.dropdownDropdownMod.OverlayFunc
+import typingsSlinky.antd.dropdownDropdownMod.Placement
+import typingsSlinky.antd.dropdownMod.default
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +28,7 @@ object Dropdown
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, disabled */
   def apply(
-    overlay: TagMod[Any] | OverlayFunc,
+    overlay: ReactElement | OverlayFunc,
     align: Align = null,
     forceRender: js.UndefOr[Boolean] = js.undefined,
     getPopupContainer: /* triggerNode */ HTMLElement => HTMLElement = null,

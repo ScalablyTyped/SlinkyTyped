@@ -12,15 +12,15 @@ package object html5plus {
     */
   /* Rewritten from type alias, can be one of: 
     - `js.undefined`
-    - typings.html5plus.html5plusNumbers.`0`
-    - typings.html5plus.html5plusNumbers.`1`
-    - typings.html5plus.html5plusNumbers.`2`
-    - typings.html5plus.html5plusNumbers.`3`
-    - typings.html5plus.html5plusNumbers.`4`
-    - typings.html5plus.html5plusNumbers.`5`
-    - typings.html5plus.html5plusNumbers.`-1`
+    - typingsSlinky.html5plus.html5plusNumbers.`0`
+    - typingsSlinky.html5plus.html5plusNumbers.`1`
+    - typingsSlinky.html5plus.html5plusNumbers.`2`
+    - typingsSlinky.html5plus.html5plusNumbers.`3`
+    - typingsSlinky.html5plus.html5plusNumbers.`4`
+    - typingsSlinky.html5plus.html5plusNumbers.`5`
+    - typingsSlinky.html5plus.html5plusNumbers.`-1`
   */
-  type PlusDownloaderDownloadState = js.UndefOr[_PlusDownloaderDownloadState]
+  type PlusDownloaderDownloadState = js.UndefOr[typingsSlinky.html5plus._PlusDownloaderDownloadState]
   /**
     * 本地路径URL
     * 可在html页面中直接访问本地资源，以“file:///”开头，后面跟随系统的绝对路径。
@@ -52,13 +52,13 @@ package object html5plus {
     */
   /* Rewritten from type alias, can be one of: 
     - `js.undefined`
-    - typings.html5plus.html5plusNumbers.`0`
-    - typings.html5plus.html5plusNumbers.`1`
-    - typings.html5plus.html5plusNumbers.`2`
-    - typings.html5plus.html5plusNumbers.`3`
-    - typings.html5plus.html5plusNumbers.`4`
-    - typings.html5plus.html5plusNumbers.`5`
-    - typings.html5plus.html5plusNumbers.`-1`
+    - typingsSlinky.html5plus.html5plusNumbers.`0`
+    - typingsSlinky.html5plus.html5plusNumbers.`1`
+    - typingsSlinky.html5plus.html5plusNumbers.`2`
+    - typingsSlinky.html5plus.html5plusNumbers.`3`
+    - typingsSlinky.html5plus.html5plusNumbers.`4`
+    - typingsSlinky.html5plus.html5plusNumbers.`5`
+    - typingsSlinky.html5plus.html5plusNumbers.`-1`
   */
-  type PlusUploaderUploadState = js.UndefOr[_PlusUploaderUploadState]
+  type PlusUploaderUploadState = js.UndefOr[typingsSlinky.html5plus._PlusUploaderUploadState]
 }

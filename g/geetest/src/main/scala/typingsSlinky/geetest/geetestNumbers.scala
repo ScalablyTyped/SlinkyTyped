@@ -1,6 +1,6 @@
 package typingsSlinky.geetest
 
-import typingsSlinky.geetest.geetestMod.Success
+import typingsSlinky.geetest.mod.Success
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

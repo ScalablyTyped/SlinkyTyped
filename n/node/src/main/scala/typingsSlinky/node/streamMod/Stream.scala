@@ -1,6 +1,6 @@
 package typingsSlinky.node.streamMod
 
-import typingsSlinky.node.childUnderscoreProcessMod.StdioNull
+import typingsSlinky.node.childProcessMod.StdioNull
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,5 +9,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class Stream ()
   extends internal
-     with StdioNull
+     with StdioNull {
+  def this(opts: ReadableOptions) = this()
+}
 

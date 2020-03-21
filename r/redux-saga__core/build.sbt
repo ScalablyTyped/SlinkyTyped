@@ -1,20 +1,19 @@
 organization := "org.scalablytyped.slinky"
 name := "redux-saga__core"
-version := "1.1.3-ed0ecd"
-scalaVersion := "2.12.10"
+version := "1.1.3-f67888"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
-  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-95021d",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43",
-  "org.scalablytyped.slinky" %%% "typescript-compare" % "0.0.2-a17e41",
-  "org.scalablytyped.slinky" %%% "typescript-logic" % "0.0.0-a69353",
-  "org.scalablytyped.slinky" %%% "typescript-tuple" % "2.2.1-df8722")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "node" % "13.7-dt-20200228Z-eb4e34",
+  "org.scalablytyped.slinky" %%% "redux" % "4.0.5-9d78fe",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f",
+  "org.scalablytyped.slinky" %%% "typescript-compare" % "0.0.2-97da62",
+  "org.scalablytyped.slinky" %%% "typescript-logic" % "0.0.0-aa1358",
+  "org.scalablytyped.slinky" %%% "typescript-tuple" % "2.2.1-65d72f")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

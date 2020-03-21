@@ -1,10 +1,10 @@
 package typingsSlinky.protobufjs.lightMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.protobufjs.protobufjsMod.Constructor
-import typingsSlinky.protobufjs.protobufjsMod.FieldDecorator
-import typingsSlinky.protobufjs.protobufjsMod.IMapField
-import typingsSlinky.protobufjs.protobufjsMod.Long
+import typingsSlinky.protobufjs.mod.Constructor
+import typingsSlinky.protobufjs.mod.FieldDecorator
+import typingsSlinky.protobufjs.mod.IMapField
+import typingsSlinky.protobufjs.mod.Long
 import typingsSlinky.protobufjs.protobufjsStrings.bool
 import typingsSlinky.protobufjs.protobufjsStrings.bytes
 import typingsSlinky.protobufjs.protobufjsStrings.double
@@ -27,7 +27,7 @@ import scala.scalajs.js.annotation._
 @JSImport("protobufjs/light", "MapField")
 @js.native
 class MapField protected ()
-  extends typingsSlinky.protobufjs.protobufjsMod.MapField {
+  extends typingsSlinky.protobufjs.mod.MapField {
   /**
     * Constructs a new map field instance.
     * @param name Unique name within its namespace
@@ -61,7 +61,7 @@ object MapField extends js.Object {
     * @returns Decorator function
     */
   def d[T /* <: StringDictionary[
-    Double | Long | String | Boolean | scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8Array | js.Array[Double] | typingsSlinky.protobufjs.protobufjsMod.Message[js.Object]
+    Double | Long | String | Boolean | scala.scalajs.js.typedarray.Uint8Array | scala.scalajs.js.typedarray.Uint8Array | js.Array[Double] | typingsSlinky.protobufjs.mod.Message[js.Object]
   ] */](
     fieldId: Double,
     fieldKeyType: int32 | uint32 | sint32 | fixed32 | sfixed32 | int64 | uint64 | sint64 | fixed64 | sfixed64 | bool | string,
@@ -74,6 +74,6 @@ object MapField extends js.Object {
     * @returns Created map field
     * @throws {TypeError} If arguments are invalid
     */
-  def fromJSON(name: String, json: IMapField): typingsSlinky.protobufjs.protobufjsMod.MapField = js.native
+  def fromJSON(name: String, json: IMapField): typingsSlinky.protobufjs.mod.MapField = js.native
 }
 

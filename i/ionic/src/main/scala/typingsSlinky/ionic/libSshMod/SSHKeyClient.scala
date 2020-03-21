@@ -1,13 +1,17 @@
 package typingsSlinky.ionic.libSshMod
 
-import typingsSlinky.ionic.Anon_IdNumber
+import typingsSlinky.ionic.AnonIdNumber
+import typingsSlinky.ionic.PartialPaginateArgsResponMax
 import typingsSlinky.ionic.definitionsMod.IClient
+import typingsSlinky.ionic.definitionsMod.IPaginator
+import typingsSlinky.ionic.definitionsMod.PaginatorState
 import typingsSlinky.ionic.definitionsMod.ResourceClientCreate
 import typingsSlinky.ionic.definitionsMod.ResourceClientDelete
 import typingsSlinky.ionic.definitionsMod.ResourceClientLoad
 import typingsSlinky.ionic.definitionsMod.ResourceClientPaginate
+import typingsSlinky.ionic.definitionsMod.Response
 import typingsSlinky.ionic.definitionsMod.SSHKey
-import typingsSlinky.ionic.libHttpMod.ResourceClient
+import typingsSlinky.ionic.httpMod.ResourceClient
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,9 +27,10 @@ class SSHKeyClient protected ()
   def this(hasClientTokenUser: SSHKeyClientDeps) = this()
   var client: IClient = js.native
   var token: String = js.native
-  var user: Anon_IdNumber = js.native
+  var user: AnonIdNumber = js.native
   /* CompleteClass */
   override def create(details: SSHKeyCreateDetails): js.Promise[SSHKey] = js.native
   def load(id: String): js.Promise[SSHKey] = js.native
+  def paginate(args: PartialPaginateArgsResponMax): IPaginator[Response[js.Array[SSHKey]], PaginatorState] = js.native
 }
 

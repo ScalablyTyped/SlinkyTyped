@@ -5,29 +5,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Ext {
-  import typingsSlinky.extjs.Ext.data.IConnection
-  import typingsSlinky.extjs.Ext.dom.IHelper
-  import typingsSlinky.extjs.Ext.util.IMixedCollection
-  import typingsSlinky.extjs.Ext.util.ITaskRunner
-
-  type IAjax = IConnection
-  type IButtonToggleManager = IBase
-  type IComponentManager = IAbstractManager
-  type IComponentMgr = IAbstractManager
-  type IComponentQuery = IBase
+  type IAjax = typingsSlinky.extjs.Ext.data.IConnection
+  type IButtonToggleManager = typingsSlinky.extjs.Ext.IBase
+  type IComponentManager = typingsSlinky.extjs.Ext.IAbstractManager
+  type IComponentMgr = typingsSlinky.extjs.Ext.IAbstractManager
+  type IComponentQuery = typingsSlinky.extjs.Ext.IBase
   type ICompositeElement = typingsSlinky.extjs.Ext.dom.ICompositeElementLite
-  type IDomHelper = IHelper
+  type IDomHelper = typingsSlinky.extjs.Ext.dom.IHelper
   type IMessageBox = typingsSlinky.extjs.Ext.window.IMessageBox
-  type IModelManager = IAbstractManager
-  type IModelMgr = IAbstractManager
+  type IModelManager = typingsSlinky.extjs.Ext.IAbstractManager
+  type IModelMgr = typingsSlinky.extjs.Ext.IAbstractManager
   type IMsg = typingsSlinky.extjs.Ext.window.IMessageBox
-  type IPerf = IBase
-  type IPluginManager = IAbstractManager
-  type IPluginMgr = IAbstractManager
-  type IQuickTips = IBase
-  type IShadowPool = IBase
-  type IStoreManager = IMixedCollection
-  type IStoreMgr = IMixedCollection
-  type ITaskManager = ITaskRunner
-  type IWindowManager = IZIndexManager
+  type IPerf = typingsSlinky.extjs.Ext.IBase
+  type IPluginManager = typingsSlinky.extjs.Ext.IAbstractManager
+  type IPluginMgr = typingsSlinky.extjs.Ext.IAbstractManager
+  type IQuickTips = typingsSlinky.extjs.Ext.IBase
+  type IShadowPool = typingsSlinky.extjs.Ext.IBase
+  type IStoreManager = typingsSlinky.extjs.Ext.util.IMixedCollection
+  type IStoreMgr = typingsSlinky.extjs.Ext.util.IMixedCollection
+  type ITaskManager = typingsSlinky.extjs.Ext.util.ITaskRunner
+  type IWindowManager = typingsSlinky.extjs.Ext.IZIndexManager
 }

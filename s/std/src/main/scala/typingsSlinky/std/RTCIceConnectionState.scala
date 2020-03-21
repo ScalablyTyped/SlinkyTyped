@@ -5,13 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.`new`
-  - typings.std.stdStrings.checking
-  - typings.std.stdStrings.connected
-  - typings.std.stdStrings.completed
-  - typings.std.stdStrings.disconnected
-  - typings.std.stdStrings.failed
-  - typings.std.stdStrings.closed
+  - typingsSlinky.std.stdStrings.checking
+  - typingsSlinky.std.stdStrings.closed
+  - typingsSlinky.std.stdStrings.completed
+  - typingsSlinky.std.stdStrings.connected
+  - typingsSlinky.std.stdStrings.disconnected
+  - typingsSlinky.std.stdStrings.failed
+  - typingsSlinky.std.stdStrings.`new`
 */
 trait RTCIceConnectionState extends js.Object
 

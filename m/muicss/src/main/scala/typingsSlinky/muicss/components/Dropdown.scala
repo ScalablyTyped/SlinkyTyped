@@ -1,7 +1,6 @@
 package typingsSlinky.muicss.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.BuildingComponent
@@ -10,11 +9,10 @@ import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.div.tag
-import typingsSlinky.muicss.libReactDropdownMod.default
+import typingsSlinky.muicss.dropdownMod.default
 import typingsSlinky.muicss.muicssStrings.left
 import typingsSlinky.muicss.muicssStrings.right
 import typingsSlinky.muicss.reactMod.DropdownProps
-import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -59,6 +57,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -70,7 +69,7 @@ object Dropdown
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, draggable, hidden, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, spellCheck, suppressContentEditableWarning, tabIndex */
+  /* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, dir, draggable, hidden, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, spellCheck, style, suppressContentEditableWarning, tabIndex, title */
   def apply(
     about: String = null,
     accessKey: String = null,
@@ -129,6 +128,9 @@ object Dropdown
     color: String = null,
     contextMenu: String = null,
     datatype: String = null,
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    defaultValue: String | Double | js.Array[String] = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
     inlist: js.Any = null,
     inputMode: none | text | tel | url | email | numeric | decimal | search = null,
     is: String = null,
@@ -139,9 +141,10 @@ object Dropdown
     itemType: String = null,
     label: TagMod[Any] = null,
     onAuxClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
     onOutsideClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
+    placeholder: String = null,
     prefix: String = null,
     property: String = null,
     radioGroup: String = null,
@@ -151,9 +154,7 @@ object Dropdown
     security: String = null,
     size: String = null,
     slot: String = null,
-    style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
     translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
@@ -219,6 +220,9 @@ object Dropdown
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
     if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
     if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
     if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
@@ -232,6 +236,7 @@ object Dropdown
     if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
     if (onOutsideClick != null) __obj.updateDynamic("onOutsideClick")(js.Any.fromFunction1(onOutsideClick))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
     if (radioGroup != null) __obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])
@@ -241,9 +246,7 @@ object Dropdown
     if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
@@ -252,7 +255,7 @@ object Dropdown
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.muicss.libReactDropdownMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.muicss.dropdownMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DropdownProps
 }
 

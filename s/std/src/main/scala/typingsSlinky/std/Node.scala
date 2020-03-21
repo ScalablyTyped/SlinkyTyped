@@ -103,7 +103,7 @@ trait Node extends EventTarget {
   /**
     * Returns the node document. Returns null for documents.
     */
-  val ownerDocument: org.scalajs.dom.raw.Document | Null = js.native
+  val ownerDocument: Document_ | Null = js.native
   /**
     * Returns the parent element.
     */
@@ -115,7 +115,7 @@ trait Node extends EventTarget {
   /**
     * Returns the previous sibling.
     */
-  val previousSibling: org.scalajs.dom.raw.Node | Null = js.native
+  val previousSibling: ChildNode | Null = js.native
   var textContent: java.lang.String | Null = js.native
   def appendChild[T /* <: org.scalajs.dom.raw.Node */](newChild: T): T = js.native
   /**

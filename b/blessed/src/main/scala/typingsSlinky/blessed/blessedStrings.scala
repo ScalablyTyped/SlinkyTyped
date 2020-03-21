@@ -1,13 +1,13 @@
 package typingsSlinky.blessed
 
-import typingsSlinky.blessed.blessedMod.Widgets.ListElementEventType
-import typingsSlinky.blessed.blessedMod.Widgets.NodeEventType
-import typingsSlinky.blessed.blessedMod.Widgets.NodeGenericEventType
-import typingsSlinky.blessed.blessedMod.Widgets.NodeMouseEventType
-import typingsSlinky.blessed.blessedMod.Widgets.NodeScreenEventType
-import typingsSlinky.blessed.blessedMod.Widgets.TextareaElementEventType
-import typingsSlinky.blessed.blessedMod.Widgets.Types.TAlign
-import typingsSlinky.blessed.blessedMod.Widgets.Types.TMouseAction
+import typingsSlinky.blessed.mod.Widgets.ListElementEventType
+import typingsSlinky.blessed.mod.Widgets.NodeEventType
+import typingsSlinky.blessed.mod.Widgets.NodeGenericEventType
+import typingsSlinky.blessed.mod.Widgets.NodeMouseEventType
+import typingsSlinky.blessed.mod.Widgets.NodeScreenEventType
+import typingsSlinky.blessed.mod.Widgets.TextareaElementEventType
+import typingsSlinky.blessed.mod.Widgets.Types.TAlign
+import typingsSlinky.blessed.mod.Widgets.Types.TMouseAction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

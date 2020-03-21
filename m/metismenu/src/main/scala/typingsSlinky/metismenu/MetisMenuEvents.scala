@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.metismenu.metismenuStrings.showDotmetisMenu
-  - typings.metismenu.metismenuStrings.shownDotmetisMenu
-  - typings.metismenu.metismenuStrings.hideDotmetisMenu
-  - typings.metismenu.metismenuStrings.hiddenDotmetisMenu
+  - typingsSlinky.metismenu.metismenuStrings.showDotmetisMenu
+  - typingsSlinky.metismenu.metismenuStrings.shownDotmetisMenu
+  - typingsSlinky.metismenu.metismenuStrings.hideDotmetisMenu
+  - typingsSlinky.metismenu.metismenuStrings.hiddenDotmetisMenu
 */
 trait MetisMenuEvents extends js.Object
 

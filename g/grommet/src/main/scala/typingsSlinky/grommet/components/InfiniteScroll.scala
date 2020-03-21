@@ -5,14 +5,14 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.grommet.componentsInfiniteScrollMod.InfiniteScrollProps
 import typingsSlinky.grommet.grommetStrings.window
+import typingsSlinky.grommet.infiniteScrollMod.InfiniteScrollProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object InfiniteScroll
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.grommetMod.InfiniteScroll] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.mod.InfiniteScroll] {
   @JSImport("grommet", "InfiniteScroll")
   @js.native
   object componentImport extends js.Object
@@ -27,7 +27,7 @@ object InfiniteScroll
     show: Int | Double = null,
     step: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.grommet.grommetMod.InfiniteScroll] = {
+  ): BuildingComponent[tag.type, typingsSlinky.grommet.mod.InfiniteScroll] = {
     val __obj = js.Dynamic.literal()
     if (items != null) __obj.updateDynamic("items")(items.asInstanceOf[js.Any])
     if (onMore != null) __obj.updateDynamic("onMore")(js.Any.fromFunction1(onMore))
@@ -39,7 +39,7 @@ object InfiniteScroll
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.grommet.grommetMod.InfiniteScroll] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.grommet.grommetMod.InfiniteScroll](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.grommet.mod.InfiniteScroll] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.grommet.mod.InfiniteScroll](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = InfiniteScrollProps
 }
 

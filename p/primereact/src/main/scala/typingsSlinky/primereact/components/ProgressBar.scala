@@ -4,14 +4,15 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsProgressbarProgressBarMod.ProgressBarProps
+import typingsSlinky.primereact.progressBarMod.ProgressBarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ProgressBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.progressbarMod.ProgressBar] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactProgressbarMod.ProgressBar] {
   @JSImport("primereact/progressbar", "ProgressBar")
   @js.native
   object componentImport extends js.Object
@@ -19,14 +20,14 @@ object ProgressBar
   override val component: String | js.Object = this.componentImport
   /* The following DOM/SVG props were specified: className, id */
   def apply(
-    displayValueTemplate: /* value */ js.Any => typingsSlinky.react.reactMod._Global_.JSX.Element = null,
+    displayValueTemplate: /* value */ js.Any => ReactElement = null,
     mode: String = null,
     showValue: js.UndefOr[Boolean] = js.undefined,
     style: js.Object = null,
     unit: String = null,
     value: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.progressbarMod.ProgressBar] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactProgressbarMod.ProgressBar] = {
     val __obj = js.Dynamic.literal()
     if (displayValueTemplate != null) __obj.updateDynamic("displayValueTemplate")(js.Any.fromFunction1(displayValueTemplate))
     if (mode != null) __obj.updateDynamic("mode")(mode.asInstanceOf[js.Any])
@@ -37,7 +38,9 @@ object ProgressBar
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.progressbarMod.ProgressBar] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.progressbarMod.ProgressBar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactProgressbarMod.ProgressBar] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactProgressbarMod.ProgressBar](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ProgressBarProps
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.feedme
 
-import typingsSlinky.feedme.feedmeMod.Type
+import typingsSlinky.feedme.mod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

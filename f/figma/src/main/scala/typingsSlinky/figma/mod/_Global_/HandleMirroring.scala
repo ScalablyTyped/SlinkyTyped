@@ -1,0 +1,24 @@
+package typingsSlinky.figma.mod._Global_
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.figma.figmaStrings.NONE
+  - typingsSlinky.figma.figmaStrings.ANGLE
+  - typingsSlinky.figma.figmaStrings.ANGLE_AND_LENGTH
+*/
+trait HandleMirroring extends js.Object
+
+object HandleMirroring {
+  @scala.inline
+  def ANGLE: typingsSlinky.figma.figmaStrings.ANGLE = this.cast("ANGLE")
+  @scala.inline
+  def ANGLE_AND_LENGTH: typingsSlinky.figma.figmaStrings.ANGLE_AND_LENGTH = this.cast("ANGLE_AND_LENGTH")
+  @scala.inline
+  def NONE: typingsSlinky.figma.figmaStrings.NONE = this.cast("NONE")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+}
+

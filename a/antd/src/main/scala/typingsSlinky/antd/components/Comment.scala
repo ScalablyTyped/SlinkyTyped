@@ -5,9 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libCommentMod.CommentProps
-import typingsSlinky.antd.libCommentMod.default
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.commentMod.CommentProps
+import typingsSlinky.antd.commentMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +18,7 @@ object Comment
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
+  /* The following DOM/SVG props were specified: className, style */
   def apply(
     content: TagMod[Any],
     actions: js.Array[TagMod[Any]] = null,
@@ -27,7 +26,6 @@ object Comment
     avatar: TagMod[Any] = null,
     datetime: TagMod[Any] = null,
     prefixCls: String = null,
-    style: CSSProperties = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal(content = content.asInstanceOf[js.Any])
@@ -36,7 +34,6 @@ object Comment
     if (avatar != null) __obj.updateDynamic("avatar")(avatar.asInstanceOf[js.Any])
     if (datetime != null) __obj.updateDynamic("datetime")(datetime.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }

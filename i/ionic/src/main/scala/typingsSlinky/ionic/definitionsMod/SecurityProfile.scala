@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.ionic.Anon_Android
+import typingsSlinky.ionic.AnonAndroid
 import typingsSlinky.ionic.ionicStrings.development
 import typingsSlinky.ionic.ionicStrings.production
 import scala.scalajs.js
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 
 trait SecurityProfile extends js.Object {
   var created: String
-  var credentials: Anon_Android
+  var credentials: AnonAndroid
   var name: String
   var tag: String
   var `type`: development | production
@@ -19,7 +19,7 @@ object SecurityProfile {
   @scala.inline
   def apply(
     created: String,
-    credentials: Anon_Android,
+    credentials: AnonAndroid,
     name: String,
     tag: String,
     `type`: development | production

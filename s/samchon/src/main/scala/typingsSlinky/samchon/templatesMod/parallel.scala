@@ -1,10 +1,10 @@
 package typingsSlinky.samchon.templatesMod
 
-import typingsSlinky.samchon.protocolCommunicatorIClientDriverMod.IClientDriver
-import typingsSlinky.samchon.protocolInvokeInvokeMod.Invoke
-import typingsSlinky.samchon.templatesDistributedDistributedSystemArrayMediatorMod.DistributedSystemArrayMediator
-import typingsSlinky.samchon.templatesDistributedDistributedSystemMod.DistributedSystem
-import typingsSlinky.samchon.templatesParallelInterfacesIParallelServerMod.IParallelServer
+import typingsSlinky.samchon.distributedSystemArrayMediatorMod.DistributedSystemArrayMediator
+import typingsSlinky.samchon.distributedSystemMod.DistributedSystem
+import typingsSlinky.samchon.iclientdriverMod.IClientDriver
+import typingsSlinky.samchon.invokeMod.Invoke
+import typingsSlinky.samchon.iparallelserverMod.IParallelServer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
 object parallel extends js.Object {
   @js.native
   class MediatorClient protected ()
-    extends typingsSlinky.samchon.templatesParallelMod.MediatorClient {
+    extends typingsSlinky.samchon.parallelMod.MediatorClient {
     /**
       * Initializer Constructor.
       *
@@ -31,7 +31,7 @@ object parallel extends js.Object {
       * @param port Port number to connect.
       */
     def this(
-      systemArray: typingsSlinky.samchon.templatesParallelParallelSystemArrayMediatorMod.ParallelSystemArrayMediator[typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem],
+      systemArray: typingsSlinky.samchon.parallelSystemArrayMediatorMod.ParallelSystemArrayMediator[typingsSlinky.samchon.parallelSystemMod.ParallelSystem],
       ip: String,
       port: Double
     ) = this()
@@ -39,11 +39,11 @@ object parallel extends js.Object {
   
   @js.native
   class MediatorDedicatedWorkerServer ()
-    extends typingsSlinky.samchon.templatesParallelDerivedMediatorServerMod.MediatorDedicatedWorkerServer
+    extends typingsSlinky.samchon.mediatorServerMod.MediatorDedicatedWorkerServer
   
   @js.native
   class MediatorServer protected ()
-    extends typingsSlinky.samchon.templatesParallelMod.MediatorServer {
+    extends typingsSlinky.samchon.parallelMod.MediatorServer {
     /**
       * Initializer Constructor.
       *
@@ -58,22 +58,22 @@ object parallel extends js.Object {
       * @param port Port number of server to open.
       */
     def this(
-      systemArray: typingsSlinky.samchon.templatesParallelParallelSystemArrayMediatorMod.ParallelSystemArrayMediator[typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem],
+      systemArray: typingsSlinky.samchon.parallelSystemArrayMediatorMod.ParallelSystemArrayMediator[typingsSlinky.samchon.parallelSystemMod.ParallelSystem],
       port: Double
     ) = this()
   }
   
   @js.native
   class MediatorSharedWorkerClient ()
-    extends typingsSlinky.samchon.templatesParallelDerivedMediatorClientMod.MediatorSharedWorkerClient
+    extends typingsSlinky.samchon.mediatorClientMod.MediatorSharedWorkerClient
   
   @js.native
   class MediatorSharedWorkerServer ()
-    extends typingsSlinky.samchon.templatesParallelDerivedMediatorServerMod.MediatorSharedWorkerServer
+    extends typingsSlinky.samchon.mediatorServerMod.MediatorSharedWorkerServer
   
   @js.native
   abstract class MediatorSystem protected ()
-    extends typingsSlinky.samchon.templatesParallelMod.MediatorSystem {
+    extends typingsSlinky.samchon.parallelMod.MediatorSystem {
     /**
       * Construct from parent {@link DistributedSystemArrayMediator} object.
       *
@@ -85,23 +85,23 @@ object parallel extends js.Object {
       *
       * @param systemArray The parent {@link ParallelSystemArrayMediator} object.
       */
-    def this(systemArray: typingsSlinky.samchon.templatesParallelParallelSystemArrayMediatorMod.ParallelSystemArrayMediator[typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem]) = this()
+    def this(systemArray: typingsSlinky.samchon.parallelSystemArrayMediatorMod.ParallelSystemArrayMediator[typingsSlinky.samchon.parallelSystemMod.ParallelSystem]) = this()
   }
   
   @js.native
   class MediatorWebClient ()
-    extends typingsSlinky.samchon.templatesParallelDerivedMediatorClientMod.MediatorWebClient
+    extends typingsSlinky.samchon.mediatorClientMod.MediatorWebClient
   
   @js.native
   class MediatorWebServer ()
-    extends typingsSlinky.samchon.templatesParallelDerivedMediatorServerMod.MediatorWebServer
+    extends typingsSlinky.samchon.mediatorServerMod.MediatorWebServer
   
   @js.native
   /**
     * Default Constructor.
     */
   class PRInvokeHistory ()
-    extends typingsSlinky.samchon.templatesParallelMod.PRInvokeHistory {
+    extends typingsSlinky.samchon.parallelMod.PRInvokeHistory {
     /**
       * Construct from an {@link Invoke} message.
       *
@@ -114,25 +114,25 @@ object parallel extends js.Object {
   /**
     * Default Constructor.
     */
-  abstract class ParallelClientArray[System /* <: typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem */] ()
-    extends typingsSlinky.samchon.templatesParallelMod.ParallelClientArray[System]
+  abstract class ParallelClientArray[System /* <: typingsSlinky.samchon.parallelSystemMod.ParallelSystem */] ()
+    extends typingsSlinky.samchon.parallelMod.ParallelClientArray[System]
   
   @js.native
   /**
     * Default Constructor.
     */
-  abstract class ParallelClientArrayMediator[System /* <: typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem */] ()
-    extends typingsSlinky.samchon.templatesParallelMod.ParallelClientArrayMediator[System]
+  abstract class ParallelClientArrayMediator[System /* <: typingsSlinky.samchon.parallelSystemMod.ParallelSystem */] ()
+    extends typingsSlinky.samchon.parallelMod.ParallelClientArrayMediator[System]
   
   @js.native
   abstract class ParallelServer protected ()
-    extends typingsSlinky.samchon.templatesParallelMod.ParallelServer {
+    extends typingsSlinky.samchon.parallelMod.ParallelServer {
     /**
       * Construct from parent {@link ParallelSystemArray}.
       *
       * @param systemArray The parent {@link ParallelSystemArray} object.
       */
-    def this(systemArray: typingsSlinky.samchon.templatesParallelParallelSystemArrayMod.ParallelSystemArray[IParallelServer]) = this()
+    def this(systemArray: typingsSlinky.samchon.parallelSystemArrayMod.ParallelSystemArray[IParallelServer]) = this()
   }
   
   @js.native
@@ -140,38 +140,38 @@ object parallel extends js.Object {
     * Default Constructor.
     */
   abstract class ParallelServerArray[System /* <: IParallelServer */] ()
-    extends typingsSlinky.samchon.templatesParallelMod.ParallelServerArray[System]
+    extends typingsSlinky.samchon.parallelMod.ParallelServerArray[System]
   
   @js.native
   /**
     * Default Constructor.
     */
   abstract class ParallelServerArrayMediator[System /* <: IParallelServer */] ()
-    extends typingsSlinky.samchon.templatesParallelMod.ParallelServerArrayMediator[System]
+    extends typingsSlinky.samchon.parallelMod.ParallelServerArrayMediator[System]
   
   @js.native
   /**
     * Default Constructor.
     */
-  abstract class ParallelServerClientArray[System /* <: typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem */] ()
-    extends typingsSlinky.samchon.templatesParallelMod.ParallelServerClientArray[System]
+  abstract class ParallelServerClientArray[System /* <: typingsSlinky.samchon.parallelSystemMod.ParallelSystem */] ()
+    extends typingsSlinky.samchon.parallelMod.ParallelServerClientArray[System]
   
   @js.native
   /**
     * Default Constructor.
     */
-  abstract class ParallelServerClientArrayMediator[System /* <: typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem */] ()
-    extends typingsSlinky.samchon.templatesParallelMod.ParallelServerClientArrayMediator[System]
+  abstract class ParallelServerClientArrayMediator[System /* <: typingsSlinky.samchon.parallelSystemMod.ParallelSystem */] ()
+    extends typingsSlinky.samchon.parallelMod.ParallelServerClientArrayMediator[System]
   
   @js.native
   abstract class ParallelSystem protected ()
-    extends typingsSlinky.samchon.templatesParallelMod.ParallelSystem {
+    extends typingsSlinky.samchon.parallelMod.ParallelSystem {
     /**
       * Construct from parent {@link ParallelSystemArray}.
       *
       * @param systemArray The parent {@link ParallelSystemArray} object.
       */
-    def this(systemArray: typingsSlinky.samchon.templatesParallelParallelSystemArrayMod.ParallelSystemArray[typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem]) = this()
+    def this(systemArray: typingsSlinky.samchon.parallelSystemArrayMod.ParallelSystemArray[typingsSlinky.samchon.parallelSystemMod.ParallelSystem]) = this()
     /**
       * Construct from parent {@link ParallelSystemArray} and communicator.
       *
@@ -179,7 +179,7 @@ object parallel extends js.Object {
       * @param communicator A communicator communicates with remote, the external system.
       */
     def this(
-      systemArray: typingsSlinky.samchon.templatesParallelParallelSystemArrayMod.ParallelSystemArray[typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem],
+      systemArray: typingsSlinky.samchon.parallelSystemArrayMod.ParallelSystemArray[typingsSlinky.samchon.parallelSystemMod.ParallelSystem],
       communicator: IClientDriver
     ) = this()
   }
@@ -188,15 +188,15 @@ object parallel extends js.Object {
   /**
     * Default Constructor.
     */
-  abstract class ParallelSystemArray[System /* <: typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem */] ()
-    extends typingsSlinky.samchon.templatesParallelMod.ParallelSystemArray[System]
+  abstract class ParallelSystemArray[System /* <: typingsSlinky.samchon.parallelSystemMod.ParallelSystem */] ()
+    extends typingsSlinky.samchon.parallelMod.ParallelSystemArray[System]
   
   @js.native
   /**
     * Default Constructor.
     */
-  abstract class ParallelSystemArrayMediator[System /* <: typingsSlinky.samchon.templatesParallelParallelSystemMod.ParallelSystem */] ()
-    extends typingsSlinky.samchon.templatesParallelMod.ParallelSystemArrayMediator[System]
+  abstract class ParallelSystemArrayMediator[System /* <: typingsSlinky.samchon.parallelSystemMod.ParallelSystem */] ()
+    extends typingsSlinky.samchon.parallelMod.ParallelSystemArrayMediator[System]
   
 }
 

@@ -2,14 +2,14 @@ package typingsSlinky.electron.Electron
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.electron.TypeofClassBrowserView
-import typingsSlinky.electron.TypeofClassBrowserWindow
-import typingsSlinky.electron.TypeofClassMenu
-import typingsSlinky.electron.TypeofClassNativeImage
-import typingsSlinky.electron.TypeofClassNotification
-import typingsSlinky.electron.TypeofClassSession
-import typingsSlinky.electron.TypeofClassTouchBar
-import typingsSlinky.electron.TypeofClassWebContents
+import typingsSlinky.electron.TypeofBrowserView
+import typingsSlinky.electron.TypeofBrowserWindow
+import typingsSlinky.electron.TypeofMenu
+import typingsSlinky.electron.TypeofNativeImage
+import typingsSlinky.electron.TypeofNotification
+import typingsSlinky.electron.TypeofSession
+import typingsSlinky.electron.TypeofTouchBar
+import typingsSlinky.electron.TypeofWebContents
 import typingsSlinky.electron.electronStrings.host
 import typingsSlinky.electron.electronStrings.hostname
 import typingsSlinky.electron.electronStrings.method
@@ -23,8 +23,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait MainInterface extends CommonInterface {
-  var BrowserView: TypeofClassBrowserView
-  var BrowserWindow: TypeofClassBrowserWindow
+  var BrowserView: TypeofBrowserView
+  var BrowserWindow: TypeofBrowserWindow
   var ClientRequest: Instantiable1[
     /* options */ method | url | typingsSlinky.electron.electronStrings.session | partition | typingsSlinky.electron.electronStrings.protocol | host | hostname | port | path | redirect, 
     typingsSlinky.electron.Electron.ClientRequest
@@ -33,35 +33,35 @@ trait MainInterface extends CommonInterface {
   var Debugger: Instantiable0[typingsSlinky.electron.Electron.Debugger]
   var DownloadItem: Instantiable0[typingsSlinky.electron.Electron.DownloadItem]
   var IncomingMessage: Instantiable0[typingsSlinky.electron.Electron.IncomingMessage]
-  var Menu: TypeofClassMenu
+  var Menu: TypeofMenu
   var MenuItem: Instantiable1[/* options */ MenuItemConstructorOptions, typingsSlinky.electron.Electron.MenuItem]
-  var Notification: TypeofClassNotification
-  var TouchBar: TypeofClassTouchBar
-  var Tray: Instantiable1[/* image */ NativeImage | String, typingsSlinky.electron.Electron.Tray]
+  var Notification: TypeofNotification
+  var TouchBar: TypeofTouchBar
+  var Tray: Instantiable1[/* image */ NativeImage_ | String, typingsSlinky.electron.Electron.Tray]
   var WebRequest: Instantiable0[typingsSlinky.electron.Electron.WebRequest]
-  var app: App
-  var autoUpdater: AutoUpdater
-  var contentTracing: ContentTracing
-  var dialog: Dialog
-  var globalShortcut: GlobalShortcut
-  var inAppPurchase: InAppPurchase
-  var ipcMain: IpcMain
-  var net: Net
-  var netLog: NetLog
-  var powerMonitor: PowerMonitor
-  var powerSaveBlocker: PowerSaveBlocker
-  var protocol: Protocol
-  var screen: Screen
-  var session: TypeofClassSession
-  var systemPreferences: SystemPreferences
-  var webContents: TypeofClassWebContents
+  var app: App_
+  var autoUpdater: AutoUpdater_
+  var contentTracing: ContentTracing_
+  var dialog: Dialog_
+  var globalShortcut: GlobalShortcut_
+  var inAppPurchase: InAppPurchase_
+  var ipcMain: IpcMain_
+  var net: Net_
+  var netLog: NetLog_
+  var powerMonitor: PowerMonitor_
+  var powerSaveBlocker: PowerSaveBlocker_
+  var protocol: Protocol_
+  var screen: Screen_
+  var session: TypeofSession
+  var systemPreferences: SystemPreferences_
+  var webContents: TypeofWebContents
 }
 
 object MainInterface {
   @scala.inline
   def apply(
-    BrowserView: TypeofClassBrowserView,
-    BrowserWindow: TypeofClassBrowserWindow,
+    BrowserView: TypeofBrowserView,
+    BrowserWindow: TypeofBrowserWindow,
     ClientRequest: Instantiable1[
       /* options */ method | url | typingsSlinky.electron.electronStrings.session | partition | typingsSlinky.electron.electronStrings.protocol | host | hostname | port | path | redirect, 
       ClientRequest
@@ -70,32 +70,32 @@ object MainInterface {
     Debugger: Instantiable0[Debugger],
     DownloadItem: Instantiable0[DownloadItem],
     IncomingMessage: Instantiable0[IncomingMessage],
-    Menu: TypeofClassMenu,
+    Menu: TypeofMenu,
     MenuItem: Instantiable1[/* options */ MenuItemConstructorOptions, MenuItem],
-    Notification: TypeofClassNotification,
-    TouchBar: TypeofClassTouchBar,
-    Tray: Instantiable1[/* image */ NativeImage | String, Tray],
+    Notification: TypeofNotification,
+    TouchBar: TypeofTouchBar,
+    Tray: Instantiable1[/* image */ NativeImage_ | String, Tray],
     WebRequest: Instantiable0[WebRequest],
-    app: App,
-    autoUpdater: AutoUpdater,
-    clipboard: Clipboard,
-    contentTracing: ContentTracing,
-    crashReporter: CrashReporter,
-    dialog: Dialog,
-    globalShortcut: GlobalShortcut,
-    inAppPurchase: InAppPurchase,
-    ipcMain: IpcMain,
-    nativeImage: TypeofClassNativeImage,
-    net: Net,
-    netLog: NetLog,
-    powerMonitor: PowerMonitor,
-    powerSaveBlocker: PowerSaveBlocker,
-    protocol: Protocol,
-    screen: Screen,
-    session: TypeofClassSession,
-    shell: Shell,
-    systemPreferences: SystemPreferences,
-    webContents: TypeofClassWebContents
+    app: App_,
+    autoUpdater: AutoUpdater_,
+    clipboard: Clipboard_,
+    contentTracing: ContentTracing_,
+    crashReporter: CrashReporter_,
+    dialog: Dialog_,
+    globalShortcut: GlobalShortcut_,
+    inAppPurchase: InAppPurchase_,
+    ipcMain: IpcMain_,
+    nativeImage: TypeofNativeImage,
+    net: Net_,
+    netLog: NetLog_,
+    powerMonitor: PowerMonitor_,
+    powerSaveBlocker: PowerSaveBlocker_,
+    protocol: Protocol_,
+    screen: Screen_,
+    session: TypeofSession,
+    shell: Shell_,
+    systemPreferences: SystemPreferences_,
+    webContents: TypeofWebContents
   ): MainInterface = {
     val __obj = js.Dynamic.literal(BrowserView = BrowserView.asInstanceOf[js.Any], BrowserWindow = BrowserWindow.asInstanceOf[js.Any], ClientRequest = ClientRequest.asInstanceOf[js.Any], Cookies = Cookies.asInstanceOf[js.Any], Debugger = Debugger.asInstanceOf[js.Any], DownloadItem = DownloadItem.asInstanceOf[js.Any], IncomingMessage = IncomingMessage.asInstanceOf[js.Any], Menu = Menu.asInstanceOf[js.Any], MenuItem = MenuItem.asInstanceOf[js.Any], Notification = Notification.asInstanceOf[js.Any], TouchBar = TouchBar.asInstanceOf[js.Any], Tray = Tray.asInstanceOf[js.Any], WebRequest = WebRequest.asInstanceOf[js.Any], app = app.asInstanceOf[js.Any], autoUpdater = autoUpdater.asInstanceOf[js.Any], clipboard = clipboard.asInstanceOf[js.Any], contentTracing = contentTracing.asInstanceOf[js.Any], crashReporter = crashReporter.asInstanceOf[js.Any], dialog = dialog.asInstanceOf[js.Any], globalShortcut = globalShortcut.asInstanceOf[js.Any], inAppPurchase = inAppPurchase.asInstanceOf[js.Any], ipcMain = ipcMain.asInstanceOf[js.Any], nativeImage = nativeImage.asInstanceOf[js.Any], net = net.asInstanceOf[js.Any], netLog = netLog.asInstanceOf[js.Any], powerMonitor = powerMonitor.asInstanceOf[js.Any], powerSaveBlocker = powerSaveBlocker.asInstanceOf[js.Any], protocol = protocol.asInstanceOf[js.Any], screen = screen.asInstanceOf[js.Any], session = session.asInstanceOf[js.Any], shell = shell.asInstanceOf[js.Any], systemPreferences = systemPreferences.asInstanceOf[js.Any], webContents = webContents.asInstanceOf[js.Any])
   

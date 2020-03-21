@@ -10,9 +10,9 @@ The main @keystonejs class & CLI. This is where the magic happens.
 | ------------------ | :-------------: |
 | Full name          | @keystonejs/keystone |
 | Keywords           | - |
-| # releases         | 8 |
+| # releases         | 9 |
 | # dependents       | 3 |
-| # downloads        | 18513 |
+| # downloads        | 20252 |
 | # stars            | 0 |
 
 ## Links

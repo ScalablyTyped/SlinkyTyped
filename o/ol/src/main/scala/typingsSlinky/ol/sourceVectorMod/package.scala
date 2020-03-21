@@ -5,7 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object sourceVectorMod {
-  import typingsSlinky.ol.extentMod.Extent
-
-  type LoadingStrategy = js.Function2[/* p0 */ Extent, /* p1 */ Double, js.Array[Extent]]
+  type LoadingStrategy = js.Function2[
+    /* p0 */ typingsSlinky.ol.extentMod.Extent, 
+    /* p1 */ scala.Double, 
+    js.Array[typingsSlinky.ol.extentMod.Extent]
+  ]
 }

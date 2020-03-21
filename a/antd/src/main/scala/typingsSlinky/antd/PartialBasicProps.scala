@@ -1,6 +1,5 @@
 package typingsSlinky.antd
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.SyntheticEvent
@@ -61,24 +60,25 @@ import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
-import typingsSlinky.react.Anon_Html
-import typingsSlinky.react.reactMod.AnimationEventHandler
-import typingsSlinky.react.reactMod.Booleanish
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.react.reactMod.ClipboardEventHandler
-import typingsSlinky.react.reactMod.CompositionEventHandler
-import typingsSlinky.react.reactMod.DragEvent
-import typingsSlinky.react.reactMod.DragEventHandler
-import typingsSlinky.react.reactMod.FocusEventHandler
-import typingsSlinky.react.reactMod.FormEventHandler
-import typingsSlinky.react.reactMod.KeyboardEventHandler
-import typingsSlinky.react.reactMod.MouseEventHandler
-import typingsSlinky.react.reactMod.PointerEventHandler
-import typingsSlinky.react.reactMod.ReactEventHandler
-import typingsSlinky.react.reactMod.TouchEventHandler
-import typingsSlinky.react.reactMod.TransitionEventHandler
-import typingsSlinky.react.reactMod.UIEventHandler
-import typingsSlinky.react.reactMod.WheelEventHandler
+import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.mod.AnimationEventHandler
+import typingsSlinky.react.mod.Booleanish
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.ClipboardEventHandler
+import typingsSlinky.react.mod.CompositionEventHandler
+import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.DragEventHandler
+import typingsSlinky.react.mod.FocusEventHandler
+import typingsSlinky.react.mod.FormEventHandler
+import typingsSlinky.react.mod.KeyboardEventHandler
+import typingsSlinky.react.mod.MouseEventHandler
+import typingsSlinky.react.mod.PointerEventHandler
+import typingsSlinky.react.mod.ReactEventHandler
+import typingsSlinky.react.mod.TouchEventHandler
+import typingsSlinky.react.mod.TransitionEventHandler
+import typingsSlinky.react.mod.UIEventHandler
+import typingsSlinky.react.mod.WheelEventHandler
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -143,7 +143,7 @@ trait PartialBasicProps extends js.Object {
   var color: js.UndefOr[String] = js.undefined
   var contentEditable: js.UndefOr[Booleanish | inherit] = js.undefined
   var contextMenu: js.UndefOr[String] = js.undefined
-  var dangerouslySetInnerHTML: js.UndefOr[Anon_Html] = js.undefined
+  var dangerouslySetInnerHTML: js.UndefOr[AnonHtml] = js.undefined
   var datatype: js.UndefOr[String] = js.undefined
   var defaultChecked: js.UndefOr[Boolean] = js.undefined
   var defaultValue: js.UndefOr[String | Double | js.Array[String]] = js.undefined
@@ -323,7 +323,7 @@ object PartialBasicProps {
     color: String = null,
     contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
-    dangerouslySetInnerHTML: Anon_Html = null,
+    dangerouslySetInnerHTML: AnonHtml = null,
     datatype: String = null,
     defaultChecked: js.UndefOr[Boolean] = js.undefined,
     defaultValue: String | Double | js.Array[String] = null,
@@ -341,16 +341,16 @@ object PartialBasicProps {
     itemScope: js.UndefOr[Boolean] = js.undefined,
     itemType: String = null,
     lang: String = null,
-    onAbort: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
+    onAbort: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
     onAnimationEnd: SyntheticAnimationEvent[HTMLDivElement] => Unit = null,
     onAnimationIteration: SyntheticAnimationEvent[HTMLDivElement] => Unit = null,
     onAnimationStart: SyntheticAnimationEvent[HTMLDivElement] => Unit = null,
     onAuxClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
     onBlur: SyntheticFocusEvent[HTMLDivElement] => Unit = null,
-    onCanPlay: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onCanPlayThrough: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit = null,
+    onCanPlay: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onCanPlayThrough: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onChange: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
     onClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
     onCompositionEnd: SyntheticCompositionEvent[HTMLDivElement] => Unit = null,
     onCompositionStart: SyntheticCompositionEvent[HTMLDivElement] => Unit = null,
@@ -367,21 +367,21 @@ object PartialBasicProps {
     onDragOver: DragEvent[HTMLDivElement] => Unit = null,
     onDragStart: DragEvent[HTMLDivElement] => Unit = null,
     onDrop: DragEvent[HTMLDivElement] => Unit = null,
-    onDurationChange: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onEmptied: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onEncrypted: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onEnded: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onError: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
+    onDurationChange: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onEmptied: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onEncrypted: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onEnded: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onError: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
     onFocus: SyntheticFocusEvent[HTMLDivElement] => Unit = null,
-    onInput: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit = null,
-    onInvalid: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit = null,
+    onInput: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
+    onInvalid: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
     onKeyDown: SyntheticKeyboardEvent[HTMLDivElement] => Unit = null,
     onKeyPress: SyntheticKeyboardEvent[HTMLDivElement] => Unit = null,
     onKeyUp: SyntheticKeyboardEvent[HTMLDivElement] => Unit = null,
-    onLoad: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onLoadStart: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onLoadedData: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onLoadedMetadata: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
+    onLoad: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onLoadStart: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onLoadedData: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onLoadedMetadata: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
     onMouseDown: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
     onMouseEnter: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
     onMouseLeave: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
@@ -390,9 +390,9 @@ object PartialBasicProps {
     onMouseOver: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
     onMouseUp: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
     onPaste: SyntheticClipboardEvent[HTMLDivElement] => Unit = null,
-    onPause: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onPlay: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onPlaying: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
+    onPause: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onPlay: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onPlaying: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
     onPointerCancel: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
     onPointerDown: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
     onPointerEnter: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
@@ -401,24 +401,24 @@ object PartialBasicProps {
     onPointerOut: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
     onPointerOver: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
     onPointerUp: SyntheticPointerEvent[HTMLDivElement] => Unit = null,
-    onProgress: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onRateChange: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit = null,
+    onProgress: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onRateChange: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
     onScroll: SyntheticUIEvent[HTMLDivElement] => Unit = null,
-    onSeeked: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onSeeking: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onSelect: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onStalled: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onSubmit: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit = null,
-    onSuspend: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onTimeUpdate: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
+    onSeeked: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onSeeking: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onSelect: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onStalled: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onSubmit: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
+    onSuspend: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onTimeUpdate: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
     onTouchCancel: SyntheticTouchEvent[HTMLDivElement] => Unit = null,
     onTouchEnd: SyntheticTouchEvent[HTMLDivElement] => Unit = null,
     onTouchMove: SyntheticTouchEvent[HTMLDivElement] => Unit = null,
     onTouchStart: SyntheticTouchEvent[HTMLDivElement] => Unit = null,
     onTransitionEnd: SyntheticTransitionEvent[HTMLDivElement] => Unit = null,
-    onVolumeChange: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
-    onWaiting: SyntheticEvent[Event, HTMLDivElement] => Unit = null,
+    onVolumeChange: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
+    onWaiting: SyntheticEvent[Event_, HTMLDivElement] => Unit = null,
     onWheel: SyntheticWheelEvent[HTMLDivElement] => Unit = null,
     placeholder: String = null,
     prefix: String = null,

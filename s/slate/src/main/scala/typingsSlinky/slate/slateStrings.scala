@@ -1,6 +1,6 @@
 package typingsSlinky.slate
 
-import typingsSlinky.slate.slateMod.ErrorCode
+import typingsSlinky.slate.mod.ErrorCode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

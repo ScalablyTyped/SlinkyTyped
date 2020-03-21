@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 
 /* cl_sampler_info */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1151`
-  - typings.webcl.webclNumbers.`0x1152`
-  - typings.webcl.webclNumbers.`0x1153`
-  - typings.webcl.webclNumbers.`0x1154`
+  - typingsSlinky.webcl.webclNumbers.`0x1151`
+  - typingsSlinky.webcl.webclNumbers.`0x1152`
+  - typingsSlinky.webcl.webclNumbers.`0x1153`
+  - typingsSlinky.webcl.webclNumbers.`0x1154`
 */
 trait SamplerInfo extends js.Object
 

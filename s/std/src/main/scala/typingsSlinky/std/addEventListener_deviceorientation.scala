@@ -11,7 +11,7 @@ object addEventListener_deviceorientation extends js.Object {
   def apply(
     `type`: deviceorientation,
     listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.Window, 
+      /* this */ Window_, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
       _
     ]
@@ -19,7 +19,7 @@ object addEventListener_deviceorientation extends js.Object {
   def apply(
     `type`: deviceorientation,
     listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.Window, 
+      /* this */ Window_, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
       _
     ],
@@ -28,7 +28,7 @@ object addEventListener_deviceorientation extends js.Object {
   def apply(
     `type`: deviceorientation,
     listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.Window, 
+      /* this */ Window_, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceOrientationEvent, 
       _
     ],

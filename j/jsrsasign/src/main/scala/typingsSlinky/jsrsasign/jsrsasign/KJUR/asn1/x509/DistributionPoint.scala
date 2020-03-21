@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.Anon_Dpobj
+import typingsSlinky.jsrsasign.AnonDpobj
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("jsrsasign.KJUR.asn1.x509.DistributionPoint")
 @js.native
 class DistributionPoint () extends js.Object {
-  def this(params: Anon_Dpobj) = this()
+  def this(params: AnonDpobj) = this()
   def getEncodedHex(): String = js.native
 }
 

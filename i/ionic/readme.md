@@ -1,7 +1,7 @@
 
 # Scala.js typings for ionic
 
-Typings are for version 5.4.13
+Typings are for version 5.4.16
 
 ## Library description:
 A tool for creating and developing Ionic Framework mobile apps.
@@ -10,9 +10,9 @@ A tool for creating and developing Ionic Framework mobile apps.
 | ------------------ | :-------------: |
 | Full name          | ionic |
 | Keywords           | ionic, ionic framework, ionicframework, mobile, app, hybrid, cordova, native, phonegap |
-| # releases         | 145 |
+| # releases         | 138 |
 | # dependents       | 21 |
-| # downloads        | 3386116 |
+| # downloads        | 3374173 |
 | # stars            | 124 |
 
 ## Links

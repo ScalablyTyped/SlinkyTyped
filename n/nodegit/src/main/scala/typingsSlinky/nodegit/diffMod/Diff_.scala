@@ -1,10 +1,10 @@
 package typingsSlinky.nodegit.diffMod
 
 import typingsSlinky.nodegit.bufMod.Buf
-import typingsSlinky.nodegit.convenientDashPatchMod.ConvenientPatch
-import typingsSlinky.nodegit.diffDashDeltaMod.DiffDelta
-import typingsSlinky.nodegit.diffDashPerfDashDataMod.DiffPerfdata
+import typingsSlinky.nodegit.convenientPatchMod.ConvenientPatch
+import typingsSlinky.nodegit.diffDeltaMod.DiffDelta
 import typingsSlinky.nodegit.diffMod.Diff.FORMAT
+import typingsSlinky.nodegit.diffPerfDataMod.DiffPerfdata
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

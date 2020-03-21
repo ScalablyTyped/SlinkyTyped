@@ -1,0 +1,24 @@
+package typingsSlinky.fridaGum
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.fridaGum.fridaGumStrings.unix
+  - typingsSlinky.fridaGum.fridaGumStrings.ipv4
+  - typingsSlinky.fridaGum.fridaGumStrings.ipv6
+*/
+trait AddressFamily extends js.Object
+
+object AddressFamily {
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def ipv4: typingsSlinky.fridaGum.fridaGumStrings.ipv4 = this.cast("ipv4")
+  @scala.inline
+  def ipv6: typingsSlinky.fridaGum.fridaGumStrings.ipv6 = this.cast("ipv6")
+  @scala.inline
+  def unix: typingsSlinky.fridaGum.fridaGumStrings.unix = this.cast("unix")
+}
+

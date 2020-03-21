@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Definition of an graph of resources
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait GraphDefinition extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait GraphDefinition extends DomainResource {
   /**
     * Contains extended information for property 'date'.
     */

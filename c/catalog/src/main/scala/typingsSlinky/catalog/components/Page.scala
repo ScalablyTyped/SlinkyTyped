@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Page
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.catalog.catalogMod.Page] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.catalog.mod.Page] {
   @JSImport("catalog", "Page")
   @js.native
   object componentImport extends js.Object

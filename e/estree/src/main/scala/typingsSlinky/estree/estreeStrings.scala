@@ -1,10 +1,10 @@
 package typingsSlinky.estree
 
-import typingsSlinky.estree.estreeMod.AssignmentOperator
-import typingsSlinky.estree.estreeMod.BinaryOperator
-import typingsSlinky.estree.estreeMod.LogicalOperator
-import typingsSlinky.estree.estreeMod.UnaryOperator
-import typingsSlinky.estree.estreeMod.UpdateOperator
+import typingsSlinky.estree.mod.AssignmentOperator
+import typingsSlinky.estree.mod.BinaryOperator
+import typingsSlinky.estree.mod.LogicalOperator
+import typingsSlinky.estree.mod.UnaryOperator
+import typingsSlinky.estree.mod.UpdateOperator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

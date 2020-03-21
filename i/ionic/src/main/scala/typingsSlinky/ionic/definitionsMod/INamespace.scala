@@ -1,13 +1,13 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandMetadataInput
+import typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait INamespace
-  extends typingsSlinky.atIonicCliDashFramework.definitionsMod.INamespace[ICommand, INamespace, CommandMetadata, CommandMetadataInput, CommandMetadataOption] {
+  extends typingsSlinky.ionicCliFramework.definitionsMod.INamespace[ICommand, INamespace, CommandMetadata, CommandMetadataInput, CommandMetadataOption] {
   var env: IonicEnvironment = js.native
   var project: js.UndefOr[IProject] = js.native
 }

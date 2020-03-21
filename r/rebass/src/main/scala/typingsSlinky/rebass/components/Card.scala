@@ -6,39 +6,32 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.csstype.csstypeMod.AlignSelfProperty
-import typingsSlinky.csstype.csstypeMod.BackgroundProperty
-import typingsSlinky.csstype.csstypeMod.ColorProperty
-import typingsSlinky.csstype.csstypeMod.DisplayProperty
-import typingsSlinky.csstype.csstypeMod.FlexProperty
-import typingsSlinky.csstype.csstypeMod.FontSizeProperty
-import typingsSlinky.csstype.csstypeMod.GlobalsNumber
-import typingsSlinky.csstype.csstypeMod.HeightProperty
-import typingsSlinky.csstype.csstypeMod.MarginBottomProperty
-import typingsSlinky.csstype.csstypeMod.MarginLeftProperty
-import typingsSlinky.csstype.csstypeMod.MarginProperty
-import typingsSlinky.csstype.csstypeMod.MarginRightProperty
-import typingsSlinky.csstype.csstypeMod.MarginTopProperty
-import typingsSlinky.csstype.csstypeMod.MaxHeightProperty
-import typingsSlinky.csstype.csstypeMod.MaxWidthProperty
-import typingsSlinky.csstype.csstypeMod.MinHeightProperty
-import typingsSlinky.csstype.csstypeMod.MinWidthProperty
-import typingsSlinky.csstype.csstypeMod.OverflowProperty
-import typingsSlinky.csstype.csstypeMod.OverflowXProperty
-import typingsSlinky.csstype.csstypeMod.OverflowYProperty
-import typingsSlinky.csstype.csstypeMod.PaddingBottomProperty
-import typingsSlinky.csstype.csstypeMod.PaddingLeftProperty
-import typingsSlinky.csstype.csstypeMod.PaddingProperty
-import typingsSlinky.csstype.csstypeMod.PaddingRightProperty
-import typingsSlinky.csstype.csstypeMod.PaddingTopProperty
-import typingsSlinky.csstype.csstypeMod.VerticalAlignProperty
-import typingsSlinky.react.reactMod.Ref
-import typingsSlinky.rebass.rebassMod.BoxKnownProps
-import typingsSlinky.rebass.rebassMod.SxStyleProp
-import typingsSlinky.styledDashComponents.styledDashComponentsMod.CSSObject
-import typingsSlinky.styledDashComponents.styledDashComponentsMod.FlattenSimpleInterpolation
-import typingsSlinky.styledDashSystem.styledDashSystemMod.ResponsiveValue
-import typingsSlinky.styledDashSystem.styledDashSystemMod.TLengthStyledSystem
+import typingsSlinky.csstype.mod.AlignSelfProperty
+import typingsSlinky.csstype.mod.DisplayProperty
+import typingsSlinky.csstype.mod.FlexProperty
+import typingsSlinky.csstype.mod.GlobalsNumber
+import typingsSlinky.csstype.mod.HeightProperty
+import typingsSlinky.csstype.mod.MaxHeightProperty
+import typingsSlinky.csstype.mod.MaxWidthProperty
+import typingsSlinky.csstype.mod.MinHeightProperty
+import typingsSlinky.csstype.mod.MinWidthProperty
+import typingsSlinky.csstype.mod.OverflowProperty
+import typingsSlinky.csstype.mod.OverflowXProperty
+import typingsSlinky.csstype.mod.OverflowYProperty
+import typingsSlinky.csstype.mod.VerticalAlignProperty
+import typingsSlinky.csstype.mod.WidthProperty
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.rebass.mod.BoxKnownProps
+import typingsSlinky.rebass.mod.SxStyleProp
+import typingsSlinky.rebass.rebassStrings.colors
+import typingsSlinky.rebass.rebassStrings.fontSizes
+import typingsSlinky.rebass.rebassStrings.space
+import typingsSlinky.styledComponents.styledComponentsMod.CSSObject
+import typingsSlinky.styledComponents.styledComponentsMod.FlattenSimpleInterpolation
+import typingsSlinky.styledSystem.mod.RequiredTheme
+import typingsSlinky.styledSystem.mod.ResponsiveValue
+import typingsSlinky.styledSystem.mod.TLengthStyledSystem
+import typingsSlinky.styledSystem.mod.ThemeValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,59 +43,60 @@ object Card
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: height, width */
   def apply(
-    alignSelf: ResponsiveValue[AlignSelfProperty] = null,
+    alignSelf: ResponsiveValue[AlignSelfProperty, RequiredTheme] = null,
     as: ReactElement = null,
-    backgroundColor: ResponsiveValue[BackgroundProperty[TLengthStyledSystem]] = null,
-    bg: ResponsiveValue[BackgroundProperty[TLengthStyledSystem]] = null,
-    color: ResponsiveValue[ColorProperty] = null,
+    backgroundColor: ResponsiveValue[ThemeValue[colors, RequiredTheme, js.Any], RequiredTheme] = null,
+    bg: ResponsiveValue[ThemeValue[colors, RequiredTheme, js.Any], RequiredTheme] = null,
+    color: ResponsiveValue[ThemeValue[colors, RequiredTheme, js.Any], RequiredTheme] = null,
     css: CSSObject | FlattenSimpleInterpolation | String = null,
-    display: ResponsiveValue[DisplayProperty] = null,
-    flex: ResponsiveValue[FlexProperty[TLengthStyledSystem]] = null,
-    fontSize: ResponsiveValue[FontSizeProperty[TLengthStyledSystem]] = null,
-    m: ResponsiveValue[MarginProperty[TLengthStyledSystem]] = null,
-    margin: ResponsiveValue[MarginProperty[TLengthStyledSystem]] = null,
-    marginBottom: ResponsiveValue[MarginBottomProperty[TLengthStyledSystem]] = null,
-    marginLeft: ResponsiveValue[MarginLeftProperty[TLengthStyledSystem]] = null,
-    marginRight: ResponsiveValue[MarginRightProperty[TLengthStyledSystem]] = null,
-    marginTop: ResponsiveValue[MarginTopProperty[TLengthStyledSystem]] = null,
-    marginX: ResponsiveValue[MarginProperty[TLengthStyledSystem]] = null,
-    marginY: ResponsiveValue[MarginProperty[TLengthStyledSystem]] = null,
-    maxHeight: ResponsiveValue[MaxHeightProperty[TLengthStyledSystem]] = null,
-    maxWidth: ResponsiveValue[MaxWidthProperty[TLengthStyledSystem]] = null,
-    mb: ResponsiveValue[MarginBottomProperty[TLengthStyledSystem]] = null,
-    minHeight: ResponsiveValue[MinHeightProperty[TLengthStyledSystem]] = null,
-    minWidth: ResponsiveValue[MinWidthProperty[TLengthStyledSystem]] = null,
-    ml: ResponsiveValue[MarginLeftProperty[TLengthStyledSystem]] = null,
-    mr: ResponsiveValue[MarginRightProperty[TLengthStyledSystem]] = null,
-    mt: ResponsiveValue[MarginTopProperty[TLengthStyledSystem]] = null,
-    mx: ResponsiveValue[MarginProperty[TLengthStyledSystem]] = null,
-    my: ResponsiveValue[MarginProperty[TLengthStyledSystem]] = null,
-    opacity: ResponsiveValue[GlobalsNumber] = null,
-    order: ResponsiveValue[GlobalsNumber] = null,
-    overflow: ResponsiveValue[OverflowProperty] = null,
-    overflowX: ResponsiveValue[OverflowXProperty] = null,
-    overflowY: ResponsiveValue[OverflowYProperty] = null,
-    p: ResponsiveValue[PaddingProperty[TLengthStyledSystem]] = null,
-    padding: ResponsiveValue[PaddingProperty[TLengthStyledSystem]] = null,
-    paddingBottom: ResponsiveValue[PaddingBottomProperty[TLengthStyledSystem]] = null,
-    paddingLeft: ResponsiveValue[PaddingLeftProperty[TLengthStyledSystem]] = null,
-    paddingRight: ResponsiveValue[PaddingRightProperty[TLengthStyledSystem]] = null,
-    paddingTop: ResponsiveValue[PaddingTopProperty[TLengthStyledSystem]] = null,
-    paddingX: ResponsiveValue[PaddingProperty[TLengthStyledSystem]] = null,
-    paddingY: ResponsiveValue[PaddingProperty[TLengthStyledSystem]] = null,
-    pb: ResponsiveValue[PaddingBottomProperty[TLengthStyledSystem]] = null,
-    pl: ResponsiveValue[PaddingLeftProperty[TLengthStyledSystem]] = null,
-    pr: ResponsiveValue[PaddingRightProperty[TLengthStyledSystem]] = null,
-    pt: ResponsiveValue[PaddingTopProperty[TLengthStyledSystem]] = null,
-    px: ResponsiveValue[PaddingProperty[TLengthStyledSystem]] = null,
-    py: ResponsiveValue[PaddingProperty[TLengthStyledSystem]] = null,
-    size: ResponsiveValue[HeightProperty[TLengthStyledSystem]] = null,
+    display: ResponsiveValue[DisplayProperty, RequiredTheme] = null,
+    flex: ResponsiveValue[FlexProperty[TLengthStyledSystem], RequiredTheme] = null,
+    fontSize: ResponsiveValue[ThemeValue[fontSizes, RequiredTheme, js.Any], RequiredTheme] = null,
+    height: ResponsiveValue[HeightProperty[TLengthStyledSystem], RequiredTheme] = null,
+    m: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    margin: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    marginBottom: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    marginLeft: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    marginRight: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    marginTop: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    marginX: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    marginY: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    maxHeight: ResponsiveValue[MaxHeightProperty[TLengthStyledSystem], RequiredTheme] = null,
+    maxWidth: ResponsiveValue[MaxWidthProperty[TLengthStyledSystem], RequiredTheme] = null,
+    mb: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    minHeight: ResponsiveValue[MinHeightProperty[TLengthStyledSystem], RequiredTheme] = null,
+    minWidth: ResponsiveValue[MinWidthProperty[TLengthStyledSystem], RequiredTheme] = null,
+    ml: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    mr: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    mt: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    mx: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    my: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    opacity: ResponsiveValue[GlobalsNumber, RequiredTheme] = null,
+    order: ResponsiveValue[GlobalsNumber, RequiredTheme] = null,
+    overflow: ResponsiveValue[OverflowProperty, RequiredTheme] = null,
+    overflowX: ResponsiveValue[OverflowXProperty, RequiredTheme] = null,
+    overflowY: ResponsiveValue[OverflowYProperty, RequiredTheme] = null,
+    p: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    padding: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    paddingBottom: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    paddingLeft: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    paddingRight: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    paddingTop: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    paddingX: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    paddingY: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    pb: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    pl: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    pr: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    pt: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    px: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    py: ResponsiveValue[ThemeValue[space, RequiredTheme, js.Any], RequiredTheme] = null,
+    size: ResponsiveValue[HeightProperty[TLengthStyledSystem], RequiredTheme] = null,
     sx: SxStyleProp = null,
     tx: String = null,
-    variant: ResponsiveValue[String] = null,
-    verticalAlign: ResponsiveValue[VerticalAlignProperty[TLengthStyledSystem]] = null,
+    variant: ResponsiveValue[String, RequiredTheme] = null,
+    verticalAlign: ResponsiveValue[VerticalAlignProperty[TLengthStyledSystem], RequiredTheme] = null,
+    width: ResponsiveValue[WidthProperty[TLengthStyledSystem], RequiredTheme] = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = {
     val __obj = js.Dynamic.literal()
@@ -115,6 +109,7 @@ object Card
     if (display != null) __obj.updateDynamic("display")(display.asInstanceOf[js.Any])
     if (flex != null) __obj.updateDynamic("flex")(flex.asInstanceOf[js.Any])
     if (fontSize != null) __obj.updateDynamic("fontSize")(fontSize.asInstanceOf[js.Any])
+    if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
     if (m != null) __obj.updateDynamic("m")(m.asInstanceOf[js.Any])
     if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
     if (marginBottom != null) __obj.updateDynamic("marginBottom")(marginBottom.asInstanceOf[js.Any])
@@ -157,12 +152,11 @@ object Card
     if (tx != null) __obj.updateDynamic("tx")(tx.asInstanceOf[js.Any])
     if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
     if (verticalAlign != null) __obj.updateDynamic("verticalAlign")(verticalAlign.asInstanceOf[js.Any])
+    if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = new slinky.core.BuildingComponent[
-  slinky.web.html.`*`.tag.type, 
-  typingsSlinky.react.reactMod.Ref[js.Any] with js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.react.mod.Ref[js.Any] with js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = BoxKnownProps
 }
 

@@ -12,7 +12,7 @@ Get status bar height for React Native App
 | Keywords           | react-native |
 | # releases         | 9 |
 | # dependents       | 33 |
-| # downloads        | 1717719 |
+| # downloads        | 1871921 |
 | # stars            | 0 |
 
 ## Links

@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object BeatLoader
-  extends SharedApply_MarginLoaderProps929156443[typingsSlinky.halogenium.halogeniumMod.BeatLoader] {
+  extends SharedApply_MarginLoaderProps_1324934918[typingsSlinky.halogenium.mod.BeatLoader] {
   @JSImport("halogenium", "BeatLoader")
   @js.native
   object componentImport extends js.Object

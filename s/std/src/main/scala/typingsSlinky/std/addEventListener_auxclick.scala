@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 object addEventListener_auxclick extends js.Object {
   def apply(
     `type`: auxclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.MouseEvent, _]
   ): Unit = js.native
   def apply(
     `type`: auxclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   def apply(
     `type`: auxclick,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.MouseEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
 }

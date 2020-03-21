@@ -1,9 +1,9 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesMap
 
-import typingsSlinky.echarts.Anon_AreaColorAnonBorderColorBorderType
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColorBorderRadiusBorderWidthColorDistance
-import typingsSlinky.echarts.Anon_ItemStyleLabelAnonAreaColor
+import typingsSlinky.echarts.AnonAreaColorAnonBorderType
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonItemStyleAnonAreaColor
+import typingsSlinky.echarts.AnonRotate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,14 +12,14 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-map.data.emphasis
     */
-  var emphasis: js.UndefOr[Anon_ItemStyleLabelAnonAreaColor] = js.undefined
+  var emphasis: js.UndefOr[AnonItemStyleAnonAreaColor] = js.undefined
   /**
     * Style of item polygon
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-map.data.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_AreaColorAnonBorderColorBorderType] = js.undefined
+  var itemStyle: js.UndefOr[AnonAreaColorAnonBorderType] = js.undefined
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -31,7 +31,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.data.label
     */
-  var label: js.UndefOr[Anon_BackgroundColorBorderColorBorderRadiusBorderWidthColorDistance] = js.undefined
+  var label: js.UndefOr[AnonRotate] = js.undefined
   /**
     * The name of the map area where the data belongs to, such
     * as `'China'` or `'United Kingdom'` .
@@ -53,7 +53,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-map.data.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * The numerical value of this area.
     *
@@ -66,12 +66,12 @@ trait DataObject extends js.Object {
 object DataObject {
   @scala.inline
   def apply(
-    emphasis: Anon_ItemStyleLabelAnonAreaColor = null,
-    itemStyle: Anon_AreaColorAnonBorderColorBorderType = null,
-    label: Anon_BackgroundColorBorderColorBorderRadiusBorderWidthColorDistance = null,
+    emphasis: AnonItemStyleAnonAreaColor = null,
+    itemStyle: AnonAreaColorAnonBorderType = null,
+    label: AnonRotate = null,
     name: String = null,
     selected: js.UndefOr[Boolean] = js.undefined,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     value: Int | Double = null
   ): DataObject = {
     val __obj = js.Dynamic.literal()

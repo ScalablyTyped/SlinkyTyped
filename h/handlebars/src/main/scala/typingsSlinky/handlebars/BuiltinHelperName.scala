@@ -5,14 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.handlebars.handlebarsStrings.helperMissing
-  - typings.handlebars.handlebarsStrings.blockHelperMissing
-  - typings.handlebars.handlebarsStrings.each
-  - typings.handlebars.handlebarsStrings.`if`
-  - typings.handlebars.handlebarsStrings.unless
-  - typings.handlebars.handlebarsStrings.`with`
-  - typings.handlebars.handlebarsStrings.log
-  - typings.handlebars.handlebarsStrings.lookup
+  - typingsSlinky.handlebars.handlebarsStrings.helperMissing
+  - typingsSlinky.handlebars.handlebarsStrings.blockHelperMissing
+  - typingsSlinky.handlebars.handlebarsStrings.each
+  - typingsSlinky.handlebars.handlebarsStrings.`if`
+  - typingsSlinky.handlebars.handlebarsStrings.unless
+  - typingsSlinky.handlebars.handlebarsStrings.`with`
+  - typingsSlinky.handlebars.handlebarsStrings.log
+  - typingsSlinky.handlebars.handlebarsStrings.lookup
 */
 trait BuiltinHelperName extends js.Object
 

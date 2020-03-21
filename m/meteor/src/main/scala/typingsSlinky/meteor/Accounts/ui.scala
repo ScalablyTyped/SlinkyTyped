@@ -1,6 +1,6 @@
 package typingsSlinky.meteor.Accounts
 
-import typingsSlinky.meteor.Anon_ForceApprovalPrompt
+import typingsSlinky.meteor.AnonForceApprovalPrompt
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,6 +8,6 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Accounts.ui")
 @js.native
 object ui extends js.Object {
-  def config(options: Anon_ForceApprovalPrompt): Unit = js.native
+  def config(options: AnonForceApprovalPrompt): Unit = js.native
 }
 

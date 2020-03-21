@@ -1,6 +1,6 @@
 package typingsSlinky.stompit
 
-import typingsSlinky.stompit.libClientMod.Ack
+import typingsSlinky.stompit.clientMod.Ack
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

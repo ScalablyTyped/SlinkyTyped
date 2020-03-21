@@ -1,9 +1,9 @@
 package typingsSlinky.recompose
 
-import typingsSlinky.recompose.recomposeMod.ComponentEnhancer
-import typingsSlinky.recompose.recomposeMod.ObservableConfig
-import typingsSlinky.recompose.recomposeMod.Subscribable
-import typingsSlinky.recompose.recomposeMod.mapper
+import typingsSlinky.recompose.mod.ComponentEnhancer
+import typingsSlinky.recompose.mod.ObservableConfig
+import typingsSlinky.recompose.mod.Subscribable
+import typingsSlinky.recompose.mod.mapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

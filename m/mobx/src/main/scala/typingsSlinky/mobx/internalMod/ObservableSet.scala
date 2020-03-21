@@ -1,0 +1,17 @@
+package typingsSlinky.mobx.internalMod
+
+import typingsSlinky.mobx.modifiersMod.IEnhancer
+import typingsSlinky.mobx.observablesetMod.IObservableSetInitialValues
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("mobx/lib/internal", "ObservableSet")
+@js.native
+class ObservableSet[T] ()
+  extends typingsSlinky.mobx.observablesetMod.ObservableSet[T] {
+  def this(initialData: IObservableSetInitialValues[T]) = this()
+  def this(initialData: IObservableSetInitialValues[T], enhancer: IEnhancer[T]) = this()
+  def this(initialData: IObservableSetInitialValues[T], enhancer: IEnhancer[T], name: String) = this()
+}
+

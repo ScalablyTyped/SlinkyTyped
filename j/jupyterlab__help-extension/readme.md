@@ -10,15 +10,13 @@ JupyterLab - Help Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/help-extension |
 | Keywords           | - |
-| # releases         | 63 |
+| # releases         | 64 |
 | # dependents       | 2 |
-| # downloads        | 754912 |
+| # downloads        | 760120 |
 | # stars            | 0 |
 
 ## Links
-- [Homepage](https://github.com/jupyterlab/jupyterlab)
 - [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
-- [Repository](https://github.com/jupyterlab/jupyterlab)
 - [Npm](https://www.npmjs.com/package/%40jupyterlab%2Fhelp-extension)
     
 

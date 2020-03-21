@@ -3,7 +3,7 @@ package typingsSlinky.baseui.selectMod
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

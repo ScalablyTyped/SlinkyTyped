@@ -1,7 +1,7 @@
 package typingsSlinky.primereact
 
-import typingsSlinky.primereact.componentsCardCardMod.CardProps
-import typingsSlinky.react.reactMod.Component
+import typingsSlinky.primereact.cardCardMod.CardProps
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

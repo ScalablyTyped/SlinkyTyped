@@ -2,7 +2,7 @@ package typingsSlinky.phaser.Phaser.GameObjects
 
 import org.scalajs.dom.raw.Element
 import typingsSlinky.phaser.Phaser.Cache.BaseCache
-import typingsSlinky.phaser.Phaser.GameObjects.Components.Alpha
+import typingsSlinky.phaser.Phaser.GameObjects.Components.AlphaSingle
 import typingsSlinky.phaser.Phaser.GameObjects.Components.BlendMode
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Depth
 import typingsSlinky.phaser.Phaser.GameObjects.Components.Origin
@@ -73,7 +73,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class DOMElement protected ()
   extends GameObject
-     with Alpha
+     with AlphaSingle
      with BlendMode
      with Depth
      with Origin

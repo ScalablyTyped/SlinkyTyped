@@ -1,0 +1,20 @@
+package typingsSlinky.octokitPluginRestEndpointMethods
+
+import typingsSlinky.octokitPluginRestEndpointMethods.restEndpointMethodsTypesMod.ReactionsCreateForPullRequestReviewCommentParams
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait Anon316 extends js.Object {
+  var endpoint: /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify EndpointInterface */ js.Any = js.native
+  def apply(): js.Promise[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ReactionsCreateForPullRequestReviewCommentResponse> */ _
+  ] = js.native
+  def apply(
+    params: (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify RequestParameters */ js.Any) with ReactionsCreateForPullRequestReviewCommentParams
+  ): js.Promise[
+    /* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify OctokitResponse<ReactionsCreateForPullRequestReviewCommentResponse> */ _
+  ] = js.native
+}
+

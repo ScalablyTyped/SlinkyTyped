@@ -1,6 +1,6 @@
 package typingsSlinky.listr
 
-import typingsSlinky.listr.listrMod.ListrRendererValue
+import typingsSlinky.listr.mod.ListrRendererValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

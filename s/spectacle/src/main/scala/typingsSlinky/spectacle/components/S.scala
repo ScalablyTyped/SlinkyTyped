@@ -5,15 +5,15 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.spectacle.spectacleMod.CSSProperties
-import typingsSlinky.spectacle.spectacleMod.SProps
-import typingsSlinky.spectacle.spectacleMod.sType
+import typingsSlinky.spectacle.mod.CSSProperties
+import typingsSlinky.spectacle.mod.SProps
+import typingsSlinky.spectacle.mod.sType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object S
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.spectacleMod.S] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.mod.S] {
   @JSImport("spectacle", "S")
   @js.native
   object componentImport extends js.Object
@@ -36,7 +36,7 @@ object S
     textSize: String = null,
     `type`: sType | js.Array[sType] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.S] = {
+  ): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.S] = {
     val __obj = js.Dynamic.literal()
     if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
     if (bgDarken != null) __obj.updateDynamic("bgDarken")(bgDarken.asInstanceOf[js.Any])
@@ -55,7 +55,7 @@ object S
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.S] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.spectacleMod.S](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.S] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.mod.S](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SProps
 }
 

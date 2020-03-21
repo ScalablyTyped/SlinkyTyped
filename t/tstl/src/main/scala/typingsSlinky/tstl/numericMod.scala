@@ -1,12 +1,14 @@
 package typingsSlinky.tstl
 
-import typingsSlinky.tstl.iteratorIFakeMod.General
-import typingsSlinky.tstl.iteratorIFakeMod.Writeonly
-import typingsSlinky.tstl.iteratorIForwardIteratorMod.IForwardIterator
-import typingsSlinky.tstl.numericIComputableMod.IComputable
-import typingsSlinky.tstl.numericINegatableMod.INegatable
-import typingsSlinky.tstl.numericOperationsMod.BinaryOperator
-import typingsSlinky.tstl.numericOperatorsMod.Param
+import typingsSlinky.tstl.generalMod.General
+import typingsSlinky.tstl.icomputableMod.IComputable
+import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
+import typingsSlinky.tstl.inegatableMod.INegatable
+import typingsSlinky.tstl.ipointerMod.IPointer.ValueType
+import typingsSlinky.tstl.operationsMod.Operator
+import typingsSlinky.tstl.operationsMod.Transformer
+import typingsSlinky.tstl.operatorsMod.Param
+import typingsSlinky.tstl.writeonlyMod.Writeonly
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,60 +16,102 @@ import scala.scalajs.js.annotation._
 @JSImport("tstl/numeric", JSImport.Namespace)
 @js.native
 object numericMod extends js.Object {
-  def accumulate[T, InputIterator /* <: General[IForwardIterator[T, InputIterator]] */](first: InputIterator, last: InputIterator, init: T): T = js.native
-  def accumulate[T, InputIterator /* <: General[IForwardIterator[T, InputIterator]] */](first: InputIterator, last: InputIterator, init: T, op: BinaryOperator[T, T]): T = js.native
-  def adjacent_difference[T, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[T, OutputIterator]] */](first: InputIterator, last: InputIterator, output: OutputIterator): OutputIterator = js.native
-  def adjacent_difference[T, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[T, OutputIterator]] */](first: InputIterator, last: InputIterator, output: OutputIterator, op: BinaryOperator[T, T]): OutputIterator = js.native
-  def assoc_laguerre(n: Double, m: Double, x: Double): Double = js.native
-  def assoc_legendre(n: Double, m: Double, x: Double): Double = js.native
-  def beta(x: Double, y: Double): Double = js.native
-  def comp_ellint_1(k: Double): Double = js.native
-  def comp_ellint_2(k: Double): Double = js.native
-  def comp_ellint_3(k: Double, n: Double): Double = js.native
-  def cyl_bessel_i(n: Double, x: Double): Double = js.native
-  def cyl_bessel_j(n: Double, x: Double): Double = js.native
-  def cyl_bessel_k(n: Double, x: Double): Double = js.native
-  def cyl_neumann(v: Double, x: Double): Double = js.native
-  def divides[X /* <: Param[Y, Ret, typingsSlinky.tstl.tstlStrings.divides] */, Y, Ret](x: X, y: Y): Ret = js.native
-  def ellint_1(k: Double, phi: Double): Double = js.native
-  def ellint_2(k: Double, phi: Double): Double = js.native
-  def ellint_3(k: Double, v: Double, phi: Double): Double = js.native
-  def exclusive_scan[T, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[T, OutputIterator]] */](first: InputIterator, last: InputIterator, output: OutputIterator, init: T): OutputIterator = js.native
-  def exclusive_scan[T, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[T, OutputIterator]] */](
+  def accumulate[InputIterator /* <: General[IForwardIterator[ValueType[InputIterator], InputIterator]] */](first: InputIterator, last: InputIterator, init: ValueType[InputIterator]): ValueType[InputIterator] = js.native
+  def accumulate[InputIterator /* <: General[IForwardIterator[ValueType[InputIterator], InputIterator]] */](
+    first: InputIterator,
+    last: InputIterator,
+    init: ValueType[InputIterator],
+    op: Operator[InputIterator, InputIterator]
+  ): ValueType[InputIterator] = js.native
+  @JSName("adjacent_difference")
+  def adjacentDifference[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator], OutputIterator]] */](first: InputIterator, last: InputIterator, output: OutputIterator): OutputIterator = js.native
+  @JSName("adjacent_difference")
+  def adjacentDifference[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator], OutputIterator]] */](
     first: InputIterator,
     last: InputIterator,
     output: OutputIterator,
-    init: T,
-    op: BinaryOperator[T, T]
+    subtracter: Operator[InputIterator, InputIterator]
+  ): OutputIterator = js.native
+  @JSName("assoc_laguerre")
+  def assocLaguerre(n: Double, m: Double, x: Double): Double = js.native
+  @JSName("assoc_legendre")
+  def assocLegendre(n: Double, m: Double, x: Double): Double = js.native
+  def beta(x: Double, y: Double): Double = js.native
+  @JSName("comp_ellint_1")
+  def compEllint1(k: Double): Double = js.native
+  @JSName("comp_ellint_2")
+  def compEllint2(k: Double): Double = js.native
+  @JSName("comp_ellint_3")
+  def compEllint3(k: Double, n: Double): Double = js.native
+  @JSName("cyl_bessel_i")
+  def cylBesselI(n: Double, x: Double): Double = js.native
+  @JSName("cyl_bessel_j")
+  def cylBesselJ(n: Double, x: Double): Double = js.native
+  @JSName("cyl_bessel_k")
+  def cylBesselK(n: Double, x: Double): Double = js.native
+  @JSName("cyl_neumann")
+  def cylNeumann(v: Double, x: Double): Double = js.native
+  def divides[X /* <: Param[Y, Ret, typingsSlinky.tstl.tstlStrings.divides] */, Y, Ret](x: X, y: Y): Ret = js.native
+  @JSName("ellint_1")
+  def ellint1(k: Double, phi: Double): Double = js.native
+  @JSName("ellint_2")
+  def ellint2(k: Double, phi: Double): Double = js.native
+  @JSName("ellint_3")
+  def ellint3(k: Double, v: Double, phi: Double): Double = js.native
+  @JSName("exclusive_scan")
+  def exclusiveScan[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator], OutputIterator]] */](first: InputIterator, last: InputIterator, output: OutputIterator, init: ValueType[InputIterator]): OutputIterator = js.native
+  @JSName("exclusive_scan")
+  def exclusiveScan[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator], OutputIterator]] */](
+    first: InputIterator,
+    last: InputIterator,
+    output: OutputIterator,
+    init: ValueType[InputIterator],
+    op: Operator[InputIterator, InputIterator]
   ): OutputIterator = js.native
   def expint(x: Double): Double = js.native
   def gcd(x: Double, y: Double): Double = js.native
   def hermite(n: Double, x: Double): Double = js.native
-  def inclusive_scan[T, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[T, OutputIterator]] */](first: InputIterator, last: InputIterator, output: OutputIterator): OutputIterator = js.native
-  def inclusive_scan[T, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[T, OutputIterator]] */](first: InputIterator, last: InputIterator, output: OutputIterator, op: BinaryOperator[T, T]): OutputIterator = js.native
-  def inclusive_scan[T, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[T, OutputIterator]] */](
+  @JSName("inclusive_scan")
+  def inclusiveScan[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator], OutputIterator]] */](first: InputIterator, last: InputIterator, output: OutputIterator): OutputIterator = js.native
+  @JSName("inclusive_scan")
+  def inclusiveScan[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator], OutputIterator]] */](
     first: InputIterator,
     last: InputIterator,
     output: OutputIterator,
-    op: BinaryOperator[T, T],
-    init: T
+    adder: Operator[InputIterator, InputIterator]
   ): OutputIterator = js.native
-  def inner_product[X, Y, InputIterator1 /* <: General[IForwardIterator[X, InputIterator1]] */, InputIterator2 /* <: General[IForwardIterator[Y, InputIterator2]] */](first1: InputIterator1, last1: InputIterator1, first2: InputIterator2, value: X): X = js.native
-  def inner_product[X, Y, InputIterator1 /* <: General[IForwardIterator[X, InputIterator1]] */, InputIterator2 /* <: General[IForwardIterator[Y, InputIterator2]] */](
+  @JSName("inclusive_scan")
+  def inclusiveScan[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator], OutputIterator]] */](
+    first: InputIterator,
+    last: InputIterator,
+    output: OutputIterator,
+    adder: Operator[InputIterator, InputIterator],
+    init: ValueType[InputIterator]
+  ): OutputIterator = js.native
+  @JSName("inner_product")
+  def innerProduct[InputIterator1 /* <: General[IForwardIterator[ValueType[InputIterator1], InputIterator1]] */, InputIterator2 /* <: General[IForwardIterator[ValueType[InputIterator2], InputIterator2]] */](
     first1: InputIterator1,
     last1: InputIterator1,
     first2: InputIterator2,
-    value: X,
-    op1: BinaryOperator[X, X]
-  ): X = js.native
-  def inner_product[X, Y, InputIterator1 /* <: General[IForwardIterator[X, InputIterator1]] */, InputIterator2 /* <: General[IForwardIterator[Y, InputIterator2]] */](
+    value: ValueType[InputIterator1]
+  ): ValueType[InputIterator1] = js.native
+  @JSName("inner_product")
+  def innerProduct[InputIterator1 /* <: General[IForwardIterator[ValueType[InputIterator1], InputIterator1]] */, InputIterator2 /* <: General[IForwardIterator[ValueType[InputIterator2], InputIterator2]] */](
     first1: InputIterator1,
     last1: InputIterator1,
     first2: InputIterator2,
-    value: X,
-    op1: BinaryOperator[X, X],
-    op2: BinaryOperator[X, Y]
-  ): X = js.native
+    value: ValueType[InputIterator1],
+    adder: Operator[InputIterator1, InputIterator1]
+  ): ValueType[InputIterator1] = js.native
+  @JSName("inner_product")
+  def innerProduct[InputIterator1 /* <: General[IForwardIterator[ValueType[InputIterator1], InputIterator1]] */, InputIterator2 /* <: General[IForwardIterator[ValueType[InputIterator2], InputIterator2]] */](
+    first1: InputIterator1,
+    last1: InputIterator1,
+    first2: InputIterator2,
+    value: ValueType[InputIterator1],
+    adder: Operator[InputIterator1, InputIterator1],
+    multiplier: Operator[InputIterator1, InputIterator2]
+  ): ValueType[InputIterator1] = js.native
   def iota[ForwardIterator /* <: General[IForwardIterator[Double, ForwardIterator]] */](first: ForwardIterator, last: ForwardIterator, value: Double): Unit = js.native
   def laguerre(n: Double, x: Double): Double = js.native
   def lcm(x: Double, y: Double): Double = js.native
@@ -78,39 +122,52 @@ object numericMod extends js.Object {
   def multiplies[X /* <: Param[Y, Ret, typingsSlinky.tstl.tstlStrings.multiplies] */, Y, Ret](x: X, y: Y): Ret = js.native
   def negate[Ret](x: Double): Ret = js.native
   def negate[Ret](x: INegatable[Ret]): Ret = js.native
-  def partial_sum[T, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[T, OutputIterator]] */](first: InputIterator, last: InputIterator, output: OutputIterator): OutputIterator = js.native
-  def partial_sum[T, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[T, OutputIterator]] */](first: InputIterator, last: InputIterator, output: OutputIterator, op: BinaryOperator[T, T]): OutputIterator = js.native
+  @JSName("partial_sum")
+  def partialSum[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator], OutputIterator]] */](first: InputIterator, last: InputIterator, output: OutputIterator): OutputIterator = js.native
+  @JSName("partial_sum")
+  def partialSum[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[InputIterator], OutputIterator]] */](
+    first: InputIterator,
+    last: InputIterator,
+    output: OutputIterator,
+    adder: Operator[InputIterator, InputIterator]
+  ): OutputIterator = js.native
   def plus[Y, Ret](x: String, y: Y): Ret = js.native
   def plus[Y, Ret](x: Double, y: Y): Ret = js.native
   def plus[X /* <: /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ P in 'plus' ]: tstl.tstl/numeric/IComputable.IComputable<Y, Ret>[P]}
     */ typingsSlinky.tstl.tstlStrings.plus with (IComputable[Y, Ret]) */, Y, Ret](x: X, y: Y): Ret = js.native
-  def riemann_zeta(arg: Double): Double = js.native
-  def sph_bessel(n: Double, x: Double): Double = js.native
-  def sph_neumann(n: Double, x: Double): Double = js.native
+  @JSName("riemann_zeta")
+  def riemannZeta(arg: Double): Double = js.native
+  @JSName("sph_bessel")
+  def sphBessel(n: Double, x: Double): Double = js.native
+  @JSName("sph_neumann")
+  def sphNeumann(n: Double, x: Double): Double = js.native
   def tgamma(x: Double): Double = js.native
-  def transform_exclusive_scan[T, Ret, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: General[IForwardIterator[Ret, OutputIterator]] */](
+  @JSName("transform_exclusive_scan")
+  def transformExclusiveScan[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[OutputIterator], OutputIterator]] */](
     first: InputIterator,
     last: InputIterator,
     output: OutputIterator,
-    init: T,
-    binary: BinaryOperator[Ret, Ret],
-    unary: js.Function1[/* val */ T, Ret]
+    init: ValueType[InputIterator],
+    binary: Operator[OutputIterator, OutputIterator],
+    unary: Transformer[InputIterator, OutputIterator]
   ): OutputIterator = js.native
-  def transform_inclusive_scan[T, Ret, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[Ret, OutputIterator]] */](
+  @JSName("transform_inclusive_scan")
+  def transformInclusiveScan[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[OutputIterator], OutputIterator]] */](
     first: InputIterator,
     last: InputIterator,
     output: OutputIterator,
-    binary: BinaryOperator[Ret, Ret],
-    unary: js.Function1[/* val */ T, Ret]
+    binary: Operator[OutputIterator, OutputIterator],
+    unary: Transformer[InputIterator, OutputIterator]
   ): OutputIterator = js.native
-  def transform_inclusive_scan[T, Ret, InputIterator /* <: IForwardIterator[T, InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[Ret, OutputIterator]] */](
+  @JSName("transform_inclusive_scan")
+  def transformInclusiveScan[InputIterator /* <: IForwardIterator[ValueType[InputIterator], InputIterator] */, OutputIterator /* <: Writeonly[IForwardIterator[ValueType[OutputIterator], OutputIterator]] */](
     first: InputIterator,
     last: InputIterator,
     output: OutputIterator,
-    binary: BinaryOperator[Ret, Ret],
-    unary: js.Function1[/* val */ T, Ret],
-    init: T
+    binary: Operator[OutputIterator, OutputIterator],
+    unary: Transformer[InputIterator, OutputIterator],
+    init: ValueType[InputIterator]
   ): OutputIterator = js.native
 }
 

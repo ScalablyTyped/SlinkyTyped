@@ -5,307 +5,298 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object utilsMod {
-  import org.scalajs.dom.raw.HTMLElement
-  import slinky.core.ReactComponentClass
-  import slinky.core.TagMod
-  import slinky.web.SyntheticKeyboardEvent
-  import typingsSlinky.grommet.Anon_ColorContain
-  import typingsSlinky.grommet.Anon_ColorSideSizeStyleBoxStyleType
-  import typingsSlinky.grommet.Anon_Dark
-  import typingsSlinky.grommet.Anon_DarkLightArray
-  import typingsSlinky.react.reactMod._Global_.JSX.Element
-  import typingsSlinky.std.Exclude
-  import typingsSlinky.std.Pick
-
-  type A11yTitleType = String
-  type AnimateType = Boolean
-  type BackgroundType = String | Anon_ColorContain
+  type A11yTitleType = java.lang.String
+  type AnimateType = scala.Boolean
+  type BackgroundType = java.lang.String | typingsSlinky.grommet.AnonImage
   /* Rewritten from type alias, can be one of: 
-    - typings.grommet.grommetStrings.xxsmall
-    - typings.grommet.grommetStrings.xsmall
-    - typings.grommet.grommetStrings.small
-    - typings.grommet.grommetStrings.medium
-    - typings.grommet.grommetStrings.large
-    - typings.grommet.grommetStrings.xlarge
-    - typings.grommet.grommetStrings.xxlarge
-    - typings.grommet.grommetStrings.full
-    - typings.grommet.grommetStrings.`1Slash2`
-    - typings.grommet.grommetStrings.`1Slash3`
-    - typings.grommet.grommetStrings.`2Slash3`
-    - typings.grommet.grommetStrings.`1Slash4`
-    - typings.grommet.grommetStrings.`2Slash4`
-    - typings.grommet.grommetStrings.`3Slash4`
-    - typings.grommet.grommetStrings.auto
+    - typingsSlinky.grommet.grommetStrings.xxsmall
+    - typingsSlinky.grommet.grommetStrings.xsmall
+    - typingsSlinky.grommet.grommetStrings.small
+    - typingsSlinky.grommet.grommetStrings.medium
+    - typingsSlinky.grommet.grommetStrings.large
+    - typingsSlinky.grommet.grommetStrings.xlarge
+    - typingsSlinky.grommet.grommetStrings.xxlarge
+    - typingsSlinky.grommet.grommetStrings.full
+    - typingsSlinky.grommet.grommetStrings.`1Slash2`
+    - typingsSlinky.grommet.grommetStrings.`1Slash3`
+    - typingsSlinky.grommet.grommetStrings.`2Slash3`
+    - typingsSlinky.grommet.grommetStrings.`1Slash4`
+    - typingsSlinky.grommet.grommetStrings.`2Slash4`
+    - typingsSlinky.grommet.grommetStrings.`3Slash4`
+    - typingsSlinky.grommet.grommetStrings.auto
     - java.lang.String
   */
-  type BasisType = _BasisType | String
+  type BasisType = typingsSlinky.grommet.utilsMod._BasisType | java.lang.String
   /* Rewritten from type alias, can be one of: 
     - scala.Boolean
-    - typings.grommet.utilsMod.BoxSideType
-    - typings.grommet.Anon_ColorSideSizeStyle
-    - js.Array[typings.grommet.Anon_ColorSideSizeStyleBoxStyleType]
+    - typingsSlinky.grommet.utilsMod.BoxSideType
+    - typingsSlinky.grommet.AnonStyle
+    - js.Array[typingsSlinky.grommet.AnonSizeStyle]
   */
-  type BorderType = _BorderType | js.Array[Anon_ColorSideSizeStyleBoxStyleType] | Boolean
+  type BorderType = typingsSlinky.grommet.utilsMod._BorderType | js.Array[typingsSlinky.grommet.AnonSizeStyle] | scala.Boolean
   /* Rewritten from type alias, can be one of: 
-    - typings.grommet.grommetStrings.xsmall
-    - typings.grommet.grommetStrings.small
-    - typings.grommet.grommetStrings.medium
-    - typings.grommet.grommetStrings.large
-    - typings.grommet.grommetStrings.xlarge
+    - typingsSlinky.grommet.grommetStrings.xsmall
+    - typingsSlinky.grommet.grommetStrings.small
+    - typingsSlinky.grommet.grommetStrings.medium
+    - typingsSlinky.grommet.grommetStrings.large
+    - typingsSlinky.grommet.grommetStrings.xlarge
     - java.lang.String
   */
-  type BoxSizeType = _BoxSizeType | String
-  type ColorType = String | Anon_Dark
-  type DeepFreeze = js.Function1[/* obj */ js.Object, DeepReadonly[js.Object]]
+  type BoxSizeType = typingsSlinky.grommet.utilsMod._BoxSizeType | java.lang.String
+  type ColorType = js.UndefOr[java.lang.String | typingsSlinky.grommet.AnonLight]
+  type DeepFreeze_ = js.Function1[/* obj */ js.Object, typingsSlinky.grommet.utilsMod.DeepReadonly[js.Object]]
   type DeepReadonly[T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {readonly [ K in keyof T ]: T[K] extends object? / * import warning: SimplifyRecursiveTypeAlias.enterTsTypeRef rewrittenOpt applyOrElse Simplified recursive type alias grommet.grommet/utils.DeepReadonly<T[K]> * / object : T[K]}
     */ typingsSlinky.grommet.grommetStrings.DeepReadonly with js.Any
   /* Rewritten from type alias, can be one of: 
-    - typings.grommet.grommetStrings.none
-    - typings.grommet.grommetStrings.xsmall
-    - typings.grommet.grommetStrings.small
-    - typings.grommet.grommetStrings.medium
-    - typings.grommet.grommetStrings.large
-    - typings.grommet.grommetStrings.xlarge
+    - typingsSlinky.grommet.grommetStrings.none
+    - typingsSlinky.grommet.grommetStrings.xsmall
+    - typingsSlinky.grommet.grommetStrings.small
+    - typingsSlinky.grommet.grommetStrings.medium
+    - typingsSlinky.grommet.grommetStrings.large
+    - typingsSlinky.grommet.grommetStrings.xlarge
     - java.lang.String
   */
-  type ElevationType = _ElevationType | String
+  type ElevationType = typingsSlinky.grommet.utilsMod._ElevationType | java.lang.String
   /* Rewritten from type alias, can be one of: 
-    - typings.grommet.grommetStrings.horizontal
-    - typings.grommet.grommetStrings.vertical
+    - typingsSlinky.grommet.grommetStrings.horizontal
+    - typingsSlinky.grommet.grommetStrings.vertical
     - scala.Boolean
   */
-  type FillType = _FillType | Boolean
+  type FillType = typingsSlinky.grommet.utilsMod._FillType | scala.Boolean
   /* Rewritten from type alias, can be one of: 
-    - typings.grommet.grommetStrings.none
-    - typings.grommet.grommetStrings.xxsmall
-    - typings.grommet.grommetStrings.xsmall
-    - typings.grommet.grommetStrings.small
-    - typings.grommet.grommetStrings.medium
-    - typings.grommet.grommetStrings.large
-    - typings.grommet.grommetStrings.xlarge
+    - typingsSlinky.grommet.grommetStrings.none
+    - typingsSlinky.grommet.grommetStrings.xxsmall
+    - typingsSlinky.grommet.grommetStrings.xsmall
+    - typingsSlinky.grommet.grommetStrings.small
+    - typingsSlinky.grommet.grommetStrings.medium
+    - typingsSlinky.grommet.grommetStrings.large
+    - typingsSlinky.grommet.grommetStrings.xlarge
     - java.lang.String
   */
-  type GapType = _GapType | String
-  type GraphColorsType = js.Array[String] | Anon_DarkLightArray
-  type GridAreaType = String
-  type KeyboardType = js.Function1[/* event */ SyntheticKeyboardEvent[HTMLElement], Unit]
+  type GapType = typingsSlinky.grommet.utilsMod._GapType | java.lang.String
+  type GraphColorsType = js.Array[java.lang.String] | typingsSlinky.grommet.AnonDarkArray
+  type GridAreaType = java.lang.String
+  type KeyboardType = js.Function1[
+    /* event */ slinky.web.SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLElement], 
+    scala.Unit
+  ]
   /* Rewritten from type alias, can be one of: 
-    - typings.grommet.grommetStrings.none
-    - typings.grommet.grommetStrings.xxsmall
-    - typings.grommet.grommetStrings.xsmall
-    - typings.grommet.grommetStrings.small
-    - typings.grommet.grommetStrings.medium
-    - typings.grommet.grommetStrings.large
-    - typings.grommet.grommetStrings.xlarge
-    - typings.grommet.Anon_BottomHorizontal
+    - typingsSlinky.grommet.grommetStrings.none
+    - typingsSlinky.grommet.grommetStrings.xxsmall
+    - typingsSlinky.grommet.grommetStrings.xsmall
+    - typingsSlinky.grommet.grommetStrings.small
+    - typingsSlinky.grommet.grommetStrings.medium
+    - typingsSlinky.grommet.grommetStrings.large
+    - typingsSlinky.grommet.grommetStrings.xlarge
+    - typingsSlinky.grommet.AnonBottom
     - java.lang.String
   */
-  type MarginType = _MarginType | String
+  type MarginType = typingsSlinky.grommet.utilsMod._MarginType | java.lang.String
   type NonUndefined[T] = T
   type NonUndefinedProps[T /* <: js.Object */] = /* import warning: importer.ImportType#apply c Unsupported type mapping: 
   {[ K in keyof T ]:? grommet.grommet/utils.NonUndefined<T[K]>}
     */ typingsSlinky.grommet.grommetStrings.NonUndefinedProps with T
-  type Omit[T, K] = Pick[T, Exclude[String, K]]
+  type Omit[T, K] = typingsSlinky.std.Pick[T, typingsSlinky.std.Exclude[java.lang.String, K]]
   /* Rewritten from type alias, can be one of: 
-    - typings.grommet.grommetStrings.weak
-    - typings.grommet.grommetStrings.medium
-    - typings.grommet.grommetStrings.strong
+    - typingsSlinky.grommet.grommetStrings.weak
+    - typingsSlinky.grommet.grommetStrings.medium
+    - typingsSlinky.grommet.grommetStrings.strong
     - java.lang.String
-    - typings.grommet.grommetBooleans.`true`
-    - typings.grommet.grommetBooleans.`false`
+    - typingsSlinky.grommet.grommetBooleans.`true`
+    - typingsSlinky.grommet.grommetBooleans.`false`
     - scala.Double
   */
-  type OpacityType = _OpacityType | String | Double
+  type OpacityType = typingsSlinky.grommet.utilsMod._OpacityType | java.lang.String | scala.Double
   /* Rewritten from type alias, can be one of: 
-    - typings.grommet.grommetStrings.none
-    - typings.grommet.grommetStrings.xxsmall
-    - typings.grommet.grommetStrings.xsmall
-    - typings.grommet.grommetStrings.small
-    - typings.grommet.grommetStrings.medium
-    - typings.grommet.grommetStrings.large
-    - typings.grommet.grommetStrings.xlarge
-    - typings.grommet.Anon_BottomHorizontal
+    - typingsSlinky.grommet.grommetStrings.none
+    - typingsSlinky.grommet.grommetStrings.xxsmall
+    - typingsSlinky.grommet.grommetStrings.xsmall
+    - typingsSlinky.grommet.grommetStrings.small
+    - typingsSlinky.grommet.grommetStrings.medium
+    - typingsSlinky.grommet.grommetStrings.large
+    - typingsSlinky.grommet.grommetStrings.xlarge
+    - typingsSlinky.grommet.AnonBottom
     - java.lang.String
   */
-  type PadType = _PadType | String
-  type PlaceHolderType = String | Element | TagMod[Any]
+  type PadType = typingsSlinky.grommet.utilsMod._PadType | java.lang.String
+  type PlaceHolderType = java.lang.String | slinky.core.facade.ReactElement | slinky.core.TagMod[scala.Any]
   /* Rewritten from type alias, can be one of: 
-    - typings.grommet.grommetStrings.a
-    - typings.grommet.grommetStrings.abbr
-    - typings.grommet.grommetStrings.address
-    - typings.grommet.grommetStrings.area
-    - typings.grommet.grommetStrings.article
-    - typings.grommet.grommetStrings.aside
-    - typings.grommet.grommetStrings.audio
-    - typings.grommet.grommetStrings.b
-    - typings.grommet.grommetStrings.base
-    - typings.grommet.grommetStrings.bdi
-    - typings.grommet.grommetStrings.bdo
-    - typings.grommet.grommetStrings.big
-    - typings.grommet.grommetStrings.blockquote
-    - typings.grommet.grommetStrings.body
-    - typings.grommet.grommetStrings.br
-    - typings.grommet.grommetStrings.button
-    - typings.grommet.grommetStrings.canvas
-    - typings.grommet.grommetStrings.caption
-    - typings.grommet.grommetStrings.cite
-    - typings.grommet.grommetStrings.code
-    - typings.grommet.grommetStrings.col
-    - typings.grommet.grommetStrings.colgroup
-    - typings.grommet.grommetStrings.data
-    - typings.grommet.grommetStrings.datalist
-    - typings.grommet.grommetStrings.dd
-    - typings.grommet.grommetStrings.del
-    - typings.grommet.grommetStrings.details
-    - typings.grommet.grommetStrings.dfn
-    - typings.grommet.grommetStrings.dialog
-    - typings.grommet.grommetStrings.div
-    - typings.grommet.grommetStrings.dl
-    - typings.grommet.grommetStrings.dt
-    - typings.grommet.grommetStrings.em
-    - typings.grommet.grommetStrings.embed
-    - typings.grommet.grommetStrings.fieldset
-    - typings.grommet.grommetStrings.figcaption
-    - typings.grommet.grommetStrings.figure
-    - typings.grommet.grommetStrings.footer
-    - typings.grommet.grommetStrings.form
-    - typings.grommet.grommetStrings.h1
-    - typings.grommet.grommetStrings.h2
-    - typings.grommet.grommetStrings.h3
-    - typings.grommet.grommetStrings.h4
-    - typings.grommet.grommetStrings.h5
-    - typings.grommet.grommetStrings.h6
-    - typings.grommet.grommetStrings.head
-    - typings.grommet.grommetStrings.header
-    - typings.grommet.grommetStrings.hgroup
-    - typings.grommet.grommetStrings.hr
-    - typings.grommet.grommetStrings.html
-    - typings.grommet.grommetStrings.i
-    - typings.grommet.grommetStrings.iframe
-    - typings.grommet.grommetStrings.img
-    - typings.grommet.grommetStrings.input
-    - typings.grommet.grommetStrings.ins
-    - typings.grommet.grommetStrings.kbd
-    - typings.grommet.grommetStrings.keygen
-    - typings.grommet.grommetStrings.label
-    - typings.grommet.grommetStrings.legend
-    - typings.grommet.grommetStrings.li
-    - typings.grommet.grommetStrings.link
-    - typings.grommet.grommetStrings.main
-    - typings.grommet.grommetStrings.map
-    - typings.grommet.grommetStrings.mark
-    - typings.grommet.grommetStrings.menu
-    - typings.grommet.grommetStrings.menuitem
-    - typings.grommet.grommetStrings.meta
-    - typings.grommet.grommetStrings.meter
-    - typings.grommet.grommetStrings.nav
-    - typings.grommet.grommetStrings.noindex
-    - typings.grommet.grommetStrings.noscript
-    - typings.grommet.grommetStrings.`object`
-    - typings.grommet.grommetStrings.ol
-    - typings.grommet.grommetStrings.optgroup
-    - typings.grommet.grommetStrings.option
-    - typings.grommet.grommetStrings.output
-    - typings.grommet.grommetStrings.p
-    - typings.grommet.grommetStrings.param
-    - typings.grommet.grommetStrings.picture
-    - typings.grommet.grommetStrings.pre
-    - typings.grommet.grommetStrings.progress
-    - typings.grommet.grommetStrings.q
-    - typings.grommet.grommetStrings.rp
-    - typings.grommet.grommetStrings.rt
-    - typings.grommet.grommetStrings.ruby
-    - typings.grommet.grommetStrings.s
-    - typings.grommet.grommetStrings.samp
-    - typings.grommet.grommetStrings.script
-    - typings.grommet.grommetStrings.section
-    - typings.grommet.grommetStrings.select
-    - typings.grommet.grommetStrings.small
-    - typings.grommet.grommetStrings.source
-    - typings.grommet.grommetStrings.span
-    - typings.grommet.grommetStrings.strong
-    - typings.grommet.grommetStrings.style
-    - typings.grommet.grommetStrings.sub
-    - typings.grommet.grommetStrings.summary
-    - typings.grommet.grommetStrings.sup
-    - typings.grommet.grommetStrings.table
-    - typings.grommet.grommetStrings.template
-    - typings.grommet.grommetStrings.tbody
-    - typings.grommet.grommetStrings.td
-    - typings.grommet.grommetStrings.textarea
-    - typings.grommet.grommetStrings.tfoot
-    - typings.grommet.grommetStrings.th
-    - typings.grommet.grommetStrings.thead
-    - typings.grommet.grommetStrings.time
-    - typings.grommet.grommetStrings.title
-    - typings.grommet.grommetStrings.tr
-    - typings.grommet.grommetStrings.track
-    - typings.grommet.grommetStrings.u
-    - typings.grommet.grommetStrings.ul
-    - typings.grommet.grommetStrings.`var`
-    - typings.grommet.grommetStrings.video
-    - typings.grommet.grommetStrings.wbr
-    - typings.grommet.grommetStrings.webview
-    - typings.grommet.grommetStrings.svg
-    - typings.grommet.grommetStrings.animate
-    - typings.grommet.grommetStrings.animateMotion
-    - typings.grommet.grommetStrings.animateTransform
-    - typings.grommet.grommetStrings.circle
-    - typings.grommet.grommetStrings.clipPath
-    - typings.grommet.grommetStrings.defs
-    - typings.grommet.grommetStrings.desc
-    - typings.grommet.grommetStrings.ellipse
-    - typings.grommet.grommetStrings.feBlend
-    - typings.grommet.grommetStrings.feColorMatrix
-    - typings.grommet.grommetStrings.feComponentTransfer
-    - typings.grommet.grommetStrings.feComposite
-    - typings.grommet.grommetStrings.feConvolveMatrix
-    - typings.grommet.grommetStrings.feDiffuseLighting
-    - typings.grommet.grommetStrings.feDisplacementMap
-    - typings.grommet.grommetStrings.feDistantLight
-    - typings.grommet.grommetStrings.feDropShadow
-    - typings.grommet.grommetStrings.feFlood
-    - typings.grommet.grommetStrings.feFuncA
-    - typings.grommet.grommetStrings.feFuncB
-    - typings.grommet.grommetStrings.feFuncG
-    - typings.grommet.grommetStrings.feFuncR
-    - typings.grommet.grommetStrings.feGaussianBlur
-    - typings.grommet.grommetStrings.feImage
-    - typings.grommet.grommetStrings.feMerge
-    - typings.grommet.grommetStrings.feMergeNode
-    - typings.grommet.grommetStrings.feMorphology
-    - typings.grommet.grommetStrings.feOffset
-    - typings.grommet.grommetStrings.fePointLight
-    - typings.grommet.grommetStrings.feSpecularLighting
-    - typings.grommet.grommetStrings.feSpotLight
-    - typings.grommet.grommetStrings.feTile
-    - typings.grommet.grommetStrings.feTurbulence
-    - typings.grommet.grommetStrings.filter
-    - typings.grommet.grommetStrings.foreignObject
-    - typings.grommet.grommetStrings.g
-    - typings.grommet.grommetStrings.image
-    - typings.grommet.grommetStrings.line
-    - typings.grommet.grommetStrings.linearGradient
-    - typings.grommet.grommetStrings.marker
-    - typings.grommet.grommetStrings.mask
-    - typings.grommet.grommetStrings.metadata
-    - typings.grommet.grommetStrings.mpath
-    - typings.grommet.grommetStrings.path
-    - typings.grommet.grommetStrings.pattern
-    - typings.grommet.grommetStrings.polygon
-    - typings.grommet.grommetStrings.polyline
-    - typings.grommet.grommetStrings.radialGradient
-    - typings.grommet.grommetStrings.rect
-    - typings.grommet.grommetStrings.stop
-    - typings.grommet.grommetStrings.switch
-    - typings.grommet.grommetStrings.symbol
-    - typings.grommet.grommetStrings.text
-    - typings.grommet.grommetStrings.textPath
-    - typings.grommet.grommetStrings.tspan
-    - typings.grommet.grommetStrings.use
-    - typings.grommet.grommetStrings.view
-    - typings.react.reactMod.ComponentType[js.Any]
+    - typingsSlinky.grommet.grommetStrings.a
+    - typingsSlinky.grommet.grommetStrings.abbr
+    - typingsSlinky.grommet.grommetStrings.address
+    - typingsSlinky.grommet.grommetStrings.area
+    - typingsSlinky.grommet.grommetStrings.article
+    - typingsSlinky.grommet.grommetStrings.aside
+    - typingsSlinky.grommet.grommetStrings.audio
+    - typingsSlinky.grommet.grommetStrings.b
+    - typingsSlinky.grommet.grommetStrings.base
+    - typingsSlinky.grommet.grommetStrings.bdi
+    - typingsSlinky.grommet.grommetStrings.bdo
+    - typingsSlinky.grommet.grommetStrings.big
+    - typingsSlinky.grommet.grommetStrings.blockquote
+    - typingsSlinky.grommet.grommetStrings.body
+    - typingsSlinky.grommet.grommetStrings.br
+    - typingsSlinky.grommet.grommetStrings.button
+    - typingsSlinky.grommet.grommetStrings.canvas
+    - typingsSlinky.grommet.grommetStrings.caption
+    - typingsSlinky.grommet.grommetStrings.cite
+    - typingsSlinky.grommet.grommetStrings.code
+    - typingsSlinky.grommet.grommetStrings.col
+    - typingsSlinky.grommet.grommetStrings.colgroup
+    - typingsSlinky.grommet.grommetStrings.data
+    - typingsSlinky.grommet.grommetStrings.datalist
+    - typingsSlinky.grommet.grommetStrings.dd
+    - typingsSlinky.grommet.grommetStrings.del
+    - typingsSlinky.grommet.grommetStrings.details
+    - typingsSlinky.grommet.grommetStrings.dfn
+    - typingsSlinky.grommet.grommetStrings.dialog
+    - typingsSlinky.grommet.grommetStrings.div
+    - typingsSlinky.grommet.grommetStrings.dl
+    - typingsSlinky.grommet.grommetStrings.dt
+    - typingsSlinky.grommet.grommetStrings.em
+    - typingsSlinky.grommet.grommetStrings.embed
+    - typingsSlinky.grommet.grommetStrings.fieldset
+    - typingsSlinky.grommet.grommetStrings.figcaption
+    - typingsSlinky.grommet.grommetStrings.figure
+    - typingsSlinky.grommet.grommetStrings.footer
+    - typingsSlinky.grommet.grommetStrings.form
+    - typingsSlinky.grommet.grommetStrings.h1
+    - typingsSlinky.grommet.grommetStrings.h2
+    - typingsSlinky.grommet.grommetStrings.h3
+    - typingsSlinky.grommet.grommetStrings.h4
+    - typingsSlinky.grommet.grommetStrings.h5
+    - typingsSlinky.grommet.grommetStrings.h6
+    - typingsSlinky.grommet.grommetStrings.head
+    - typingsSlinky.grommet.grommetStrings.header
+    - typingsSlinky.grommet.grommetStrings.hgroup
+    - typingsSlinky.grommet.grommetStrings.hr
+    - typingsSlinky.grommet.grommetStrings.html
+    - typingsSlinky.grommet.grommetStrings.i
+    - typingsSlinky.grommet.grommetStrings.iframe
+    - typingsSlinky.grommet.grommetStrings.img
+    - typingsSlinky.grommet.grommetStrings.input
+    - typingsSlinky.grommet.grommetStrings.ins
+    - typingsSlinky.grommet.grommetStrings.kbd
+    - typingsSlinky.grommet.grommetStrings.keygen
+    - typingsSlinky.grommet.grommetStrings.label
+    - typingsSlinky.grommet.grommetStrings.legend
+    - typingsSlinky.grommet.grommetStrings.li
+    - typingsSlinky.grommet.grommetStrings.link
+    - typingsSlinky.grommet.grommetStrings.main
+    - typingsSlinky.grommet.grommetStrings.map
+    - typingsSlinky.grommet.grommetStrings.mark
+    - typingsSlinky.grommet.grommetStrings.menu
+    - typingsSlinky.grommet.grommetStrings.menuitem
+    - typingsSlinky.grommet.grommetStrings.meta
+    - typingsSlinky.grommet.grommetStrings.meter
+    - typingsSlinky.grommet.grommetStrings.nav
+    - typingsSlinky.grommet.grommetStrings.noindex
+    - typingsSlinky.grommet.grommetStrings.noscript
+    - typingsSlinky.grommet.grommetStrings.`object`
+    - typingsSlinky.grommet.grommetStrings.ol
+    - typingsSlinky.grommet.grommetStrings.optgroup
+    - typingsSlinky.grommet.grommetStrings.option
+    - typingsSlinky.grommet.grommetStrings.output
+    - typingsSlinky.grommet.grommetStrings.p
+    - typingsSlinky.grommet.grommetStrings.param
+    - typingsSlinky.grommet.grommetStrings.picture
+    - typingsSlinky.grommet.grommetStrings.pre
+    - typingsSlinky.grommet.grommetStrings.progress
+    - typingsSlinky.grommet.grommetStrings.q
+    - typingsSlinky.grommet.grommetStrings.rp
+    - typingsSlinky.grommet.grommetStrings.rt
+    - typingsSlinky.grommet.grommetStrings.ruby
+    - typingsSlinky.grommet.grommetStrings.s
+    - typingsSlinky.grommet.grommetStrings.samp
+    - typingsSlinky.grommet.grommetStrings.script
+    - typingsSlinky.grommet.grommetStrings.section
+    - typingsSlinky.grommet.grommetStrings.select
+    - typingsSlinky.grommet.grommetStrings.small
+    - typingsSlinky.grommet.grommetStrings.source
+    - typingsSlinky.grommet.grommetStrings.span
+    - typingsSlinky.grommet.grommetStrings.strong
+    - typingsSlinky.grommet.grommetStrings.style
+    - typingsSlinky.grommet.grommetStrings.sub
+    - typingsSlinky.grommet.grommetStrings.summary
+    - typingsSlinky.grommet.grommetStrings.sup
+    - typingsSlinky.grommet.grommetStrings.table
+    - typingsSlinky.grommet.grommetStrings.template
+    - typingsSlinky.grommet.grommetStrings.tbody
+    - typingsSlinky.grommet.grommetStrings.td
+    - typingsSlinky.grommet.grommetStrings.textarea
+    - typingsSlinky.grommet.grommetStrings.tfoot
+    - typingsSlinky.grommet.grommetStrings.th
+    - typingsSlinky.grommet.grommetStrings.thead
+    - typingsSlinky.grommet.grommetStrings.time
+    - typingsSlinky.grommet.grommetStrings.title
+    - typingsSlinky.grommet.grommetStrings.tr
+    - typingsSlinky.grommet.grommetStrings.track
+    - typingsSlinky.grommet.grommetStrings.u
+    - typingsSlinky.grommet.grommetStrings.ul
+    - typingsSlinky.grommet.grommetStrings.`var`
+    - typingsSlinky.grommet.grommetStrings.video
+    - typingsSlinky.grommet.grommetStrings.wbr
+    - typingsSlinky.grommet.grommetStrings.webview
+    - typingsSlinky.grommet.grommetStrings.svg
+    - typingsSlinky.grommet.grommetStrings.animate
+    - typingsSlinky.grommet.grommetStrings.animateMotion
+    - typingsSlinky.grommet.grommetStrings.animateTransform
+    - typingsSlinky.grommet.grommetStrings.circle
+    - typingsSlinky.grommet.grommetStrings.clipPath
+    - typingsSlinky.grommet.grommetStrings.defs
+    - typingsSlinky.grommet.grommetStrings.desc
+    - typingsSlinky.grommet.grommetStrings.ellipse
+    - typingsSlinky.grommet.grommetStrings.feBlend
+    - typingsSlinky.grommet.grommetStrings.feColorMatrix
+    - typingsSlinky.grommet.grommetStrings.feComponentTransfer
+    - typingsSlinky.grommet.grommetStrings.feComposite
+    - typingsSlinky.grommet.grommetStrings.feConvolveMatrix
+    - typingsSlinky.grommet.grommetStrings.feDiffuseLighting
+    - typingsSlinky.grommet.grommetStrings.feDisplacementMap
+    - typingsSlinky.grommet.grommetStrings.feDistantLight
+    - typingsSlinky.grommet.grommetStrings.feDropShadow
+    - typingsSlinky.grommet.grommetStrings.feFlood
+    - typingsSlinky.grommet.grommetStrings.feFuncA
+    - typingsSlinky.grommet.grommetStrings.feFuncB
+    - typingsSlinky.grommet.grommetStrings.feFuncG
+    - typingsSlinky.grommet.grommetStrings.feFuncR
+    - typingsSlinky.grommet.grommetStrings.feGaussianBlur
+    - typingsSlinky.grommet.grommetStrings.feImage
+    - typingsSlinky.grommet.grommetStrings.feMerge
+    - typingsSlinky.grommet.grommetStrings.feMergeNode
+    - typingsSlinky.grommet.grommetStrings.feMorphology
+    - typingsSlinky.grommet.grommetStrings.feOffset
+    - typingsSlinky.grommet.grommetStrings.fePointLight
+    - typingsSlinky.grommet.grommetStrings.feSpecularLighting
+    - typingsSlinky.grommet.grommetStrings.feSpotLight
+    - typingsSlinky.grommet.grommetStrings.feTile
+    - typingsSlinky.grommet.grommetStrings.feTurbulence
+    - typingsSlinky.grommet.grommetStrings.filter
+    - typingsSlinky.grommet.grommetStrings.foreignObject
+    - typingsSlinky.grommet.grommetStrings.g
+    - typingsSlinky.grommet.grommetStrings.image
+    - typingsSlinky.grommet.grommetStrings.line
+    - typingsSlinky.grommet.grommetStrings.linearGradient
+    - typingsSlinky.grommet.grommetStrings.marker
+    - typingsSlinky.grommet.grommetStrings.mask
+    - typingsSlinky.grommet.grommetStrings.metadata
+    - typingsSlinky.grommet.grommetStrings.mpath
+    - typingsSlinky.grommet.grommetStrings.path
+    - typingsSlinky.grommet.grommetStrings.pattern
+    - typingsSlinky.grommet.grommetStrings.polygon
+    - typingsSlinky.grommet.grommetStrings.polyline
+    - typingsSlinky.grommet.grommetStrings.radialGradient
+    - typingsSlinky.grommet.grommetStrings.rect
+    - typingsSlinky.grommet.grommetStrings.stop
+    - typingsSlinky.grommet.grommetStrings.switch
+    - typingsSlinky.grommet.grommetStrings.symbol
+    - typingsSlinky.grommet.grommetStrings.text
+    - typingsSlinky.grommet.grommetStrings.textPath
+    - typingsSlinky.grommet.grommetStrings.tspan
+    - typingsSlinky.grommet.grommetStrings.use
+    - typingsSlinky.grommet.grommetStrings.view
+    - typingsSlinky.react.mod.ComponentType[js.Any]
   */
-  type PolymorphicType = _PolymorphicType | ReactComponentClass[js.Any]
+  type PolymorphicType = typingsSlinky.grommet.utilsMod._PolymorphicType | slinky.core.ReactComponentClass[js.Any]
 }

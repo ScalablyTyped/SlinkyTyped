@@ -5,16 +5,16 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.spectacle.spectacleMod.CSSProperties
-import typingsSlinky.spectacle.spectacleMod.SlideProps
-import typingsSlinky.spectacle.spectacleMod.alignType
-import typingsSlinky.spectacle.spectacleMod.transitionType
+import typingsSlinky.spectacle.mod.CSSProperties
+import typingsSlinky.spectacle.mod.SlideProps
+import typingsSlinky.spectacle.mod.alignType
+import typingsSlinky.spectacle.mod.transitionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Slide
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.spectacleMod.Slide] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.mod.Slide] {
   @JSImport("spectacle", "Slide")
   @js.native
   object componentImport extends js.Object
@@ -52,7 +52,7 @@ object Slide
     transitionIn: js.Array[transitionType] = null,
     transitionOut: js.Array[transitionType] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.Slide] = {
+  ): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Slide] = {
     val __obj = js.Dynamic.literal()
     if (align != null) __obj.updateDynamic("align")(align.asInstanceOf[js.Any])
     if (bgColor != null) __obj.updateDynamic("bgColor")(bgColor.asInstanceOf[js.Any])
@@ -86,7 +86,7 @@ object Slide
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.Slide] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.spectacleMod.Slide](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Slide] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.mod.Slide](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = SlideProps
 }
 

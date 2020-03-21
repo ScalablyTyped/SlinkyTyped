@@ -6,9 +6,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.googlepay.googlepayStrings.default_
-  - typings.googlepay.googlepayStrings.black
-  - typings.googlepay.googlepayStrings.white
+  - typingsSlinky.googlepay.googlepayStrings.default_
+  - typingsSlinky.googlepay.googlepayStrings.black
+  - typingsSlinky.googlepay.googlepayStrings.white
 */
 trait ButtonColor extends js.Object
 

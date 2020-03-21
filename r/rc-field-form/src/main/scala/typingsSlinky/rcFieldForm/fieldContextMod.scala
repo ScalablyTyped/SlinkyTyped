@@ -1,0 +1,16 @@
+package typingsSlinky.rcFieldForm
+
+import typingsSlinky.rcFieldForm.interfaceMod.InternalFormInstance
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.RC_FORM_INTERNAL_HOOKS
+import typingsSlinky.react.mod.Context
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("rc-field-form/lib/FieldContext", JSImport.Namespace)
+@js.native
+object fieldContextMod extends js.Object {
+  val HOOK_MARK: RC_FORM_INTERNAL_HOOKS = js.native
+  val default: Context[InternalFormInstance] = js.native
+}
+

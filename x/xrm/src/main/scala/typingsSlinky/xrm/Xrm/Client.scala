@@ -9,10 +9,10 @@ import scala.scalajs.js.annotation._
   * @see {@link XrmEnum.Client}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.Web
-  - typings.xrm.xrmStrings.Outlook
-  - typings.xrm.xrmStrings.Mobile
-  - typings.xrm.xrmStrings.UnifiedServiceDesk
+  - typingsSlinky.xrm.xrmStrings.Web
+  - typingsSlinky.xrm.xrmStrings.Outlook
+  - typingsSlinky.xrm.xrmStrings.Mobile
+  - typingsSlinky.xrm.xrmStrings.UnifiedServiceDesk
 */
 trait Client extends js.Object
 

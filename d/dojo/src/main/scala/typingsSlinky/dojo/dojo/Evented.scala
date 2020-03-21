@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojo
 
-import typingsSlinky.dojo.Anon_Remove
+import typingsSlinky.dojo.AnonRemove
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,6 +27,6 @@ class Evented () extends js.Object {
     * @param type
     * @param listener
     */
-  def on(`type`: String, listener: js.Function1[/* e */ js.Any, Unit]): Anon_Remove = js.native
+  def on(`type`: String, listener: js.Function1[/* e */ js.Any, Unit]): AnonRemove = js.native
 }
 

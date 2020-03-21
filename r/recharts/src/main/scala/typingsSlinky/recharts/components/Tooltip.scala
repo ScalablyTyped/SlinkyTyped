@@ -7,25 +7,24 @@ import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.recharts.rechartsMod.AllowEscapeViewBox
-import typingsSlinky.recharts.rechartsMod.AnimationEasingType
-import typingsSlinky.recharts.rechartsMod.ContentRenderer
-import typingsSlinky.recharts.rechartsMod.Coordinate
-import typingsSlinky.recharts.rechartsMod.TooltipPayload
-import typingsSlinky.recharts.rechartsMod.TooltipProps
-import typingsSlinky.recharts.rechartsMod.ViewBox
+import typingsSlinky.recharts.mod.AllowEscapeViewBox
+import typingsSlinky.recharts.mod.AnimationEasingType
+import typingsSlinky.recharts.mod.ContentRenderer
+import typingsSlinky.recharts.mod.Coordinate
+import typingsSlinky.recharts.mod.TooltipPayload
+import typingsSlinky.recharts.mod.TooltipProps
+import typingsSlinky.recharts.mod.ViewBox
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.rechartsMod.Tooltip] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.Tooltip] {
   @JSImport("recharts", "Tooltip")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: onAnimationEnd, onAnimationStart */
   def apply(
     active: js.UndefOr[Boolean] = js.undefined,
     allowEscapeViewBox: AllowEscapeViewBox = null,
@@ -47,6 +46,8 @@ object Tooltip
     labelFormatter: /* label */ String | Double => TagMod[Any] = null,
     labelStyle: js.Object = null,
     offset: Int | Double = null,
+    onAnimationEnd: /* repeated */ js.Any => Unit = null,
+    onAnimationStart: /* repeated */ js.Any => Unit = null,
     payload: js.Array[TooltipPayload] = null,
     position: Coordinate = null,
     separator: String = null,
@@ -54,7 +55,7 @@ object Tooltip
     viewBox: ViewBox = null,
     wrapperStyle: js.Object = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.Tooltip] = {
+  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Tooltip] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
     if (allowEscapeViewBox != null) __obj.updateDynamic("allowEscapeViewBox")(allowEscapeViewBox.asInstanceOf[js.Any])
@@ -76,6 +77,8 @@ object Tooltip
     if (labelFormatter != null) __obj.updateDynamic("labelFormatter")(js.Any.fromFunction1(labelFormatter))
     if (labelStyle != null) __obj.updateDynamic("labelStyle")(labelStyle.asInstanceOf[js.Any])
     if (offset != null) __obj.updateDynamic("offset")(offset.asInstanceOf[js.Any])
+    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
+    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
     if (payload != null) __obj.updateDynamic("payload")(payload.asInstanceOf[js.Any])
     if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     if (separator != null) __obj.updateDynamic("separator")(separator.asInstanceOf[js.Any])
@@ -85,7 +88,7 @@ object Tooltip
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.Tooltip] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.rechartsMod.Tooltip](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Tooltip] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.Tooltip](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TooltipProps
 }
 

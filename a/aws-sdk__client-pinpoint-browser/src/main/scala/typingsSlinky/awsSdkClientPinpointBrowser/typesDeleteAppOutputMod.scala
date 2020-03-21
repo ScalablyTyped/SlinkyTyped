@@ -1,0 +1,27 @@
+package typingsSlinky.awsSdkClientPinpointBrowser
+
+import typingsSlinky.awsSdkClientPinpointBrowser.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientPinpointBrowser.typesApplicationResponseMod.UnmarshalledApplicationResponse
+import typingsSlinky.awsSdkTypes.responseMod.ResponseMetadata
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-pinpoint-browser/types/DeleteAppOutput", JSImport.Namespace)
+@js.native
+object typesDeleteAppOutputMod extends js.Object {
+  @js.native
+  trait DeleteAppOutput extends OutputTypesUnion {
+    /**
+      * Metadata about the response received, including the HTTP status code, HTTP headers, and any request identifiers recognized by the SDK.
+      */
+    @JSName("$metadata")
+    var $metadata: ResponseMetadata = js.native
+    /**
+      * Application Response.
+      */
+    var ApplicationResponse: UnmarshalledApplicationResponse = js.native
+  }
+  
+}
+

@@ -19,11 +19,11 @@ trait HTMLIFrameElement extends HTMLElement {
   /**
     * Retrieves the document object of the page or frame.
     */
-  val contentDocument: org.scalajs.dom.raw.Document | Null = js.native
+  val contentDocument: Document_ | Null = js.native
   /**
     * Retrieves the object of the specified.
     */
-  val contentWindow: org.scalajs.dom.raw.Window | Null = js.native
+  val contentWindow: WindowProxy | Null = js.native
   /**
     * Sets or retrieves whether to display a border for the frame.
     */
@@ -71,7 +71,7 @@ trait HTMLIFrameElement extends HTMLElement {
     * Sets or retrieves the width of the object.
     */
   var width: java.lang.String = js.native
-  def getSVGDocument(): org.scalajs.dom.raw.Document | Null = js.native
+  def getSVGDocument(): Document_ | Null = js.native
 }
 
 @JSGlobal("HTMLIFrameElement")

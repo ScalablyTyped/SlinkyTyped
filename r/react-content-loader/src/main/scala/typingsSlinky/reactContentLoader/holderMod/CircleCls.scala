@@ -1,0 +1,17 @@
+package typingsSlinky.reactContentLoader.holderMod
+
+import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.ComponentState
+import typingsSlinky.reactNativeSvg.mod.CircleProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("react-content-loader/dist/native/Holder", "Circle")
+@js.native
+class CircleCls protected ()
+  extends Component[CircleProps, ComponentState, js.Any] {
+  def this(props: CircleProps) = this()
+  def this(props: CircleProps, context: js.Any) = this()
+}
+

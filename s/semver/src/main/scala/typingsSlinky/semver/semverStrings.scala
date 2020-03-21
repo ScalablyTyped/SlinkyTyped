@@ -1,7 +1,7 @@
 package typingsSlinky.semver
 
-import typingsSlinky.semver.semverMod.Operator
-import typingsSlinky.semver.semverMod.ReleaseType
+import typingsSlinky.semver.mod.Operator
+import typingsSlinky.semver.mod.ReleaseType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

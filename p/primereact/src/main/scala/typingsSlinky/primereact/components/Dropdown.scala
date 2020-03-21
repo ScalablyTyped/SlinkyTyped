@@ -5,20 +5,22 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsDropdownDropdownMod.DropdownProps
-import typingsSlinky.primereact.componentsTooltipTooltipOptionsMod.TooltipOptions
+import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.dropdownMod.DropdownProps
+import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Dropdown
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.dropdownMod.Dropdown] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactDropdownMod.Dropdown] {
   @JSImport("primereact/dropdown", "Dropdown")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, className, disabled, id, name, onChange, onContextMenu, onMouseDown, placeholder, required, tabIndex */
+  /* The following DOM/SVG props were specified: autoFocus, className, disabled, id, name, placeholder, required, tabIndex */
   def apply(
     appendTo: js.Any = null,
     ariaLabel: String = null,
@@ -34,6 +36,9 @@ object Dropdown
     itemTemplate: /* option */ js.Any => TagMod[Any] = null,
     `lazy`: js.UndefOr[Boolean] = js.undefined,
     maxLength: Int | Double = null,
+    onChange: /* e */ AnonValue => Unit = null,
+    onContextMenu: /* event */ Event_ => Unit = null,
+    onMouseDown: /* event */ Event_ => Unit = null,
     optionLabel: String = null,
     options: js.Array[_] = null,
     panelClassName: String = null,
@@ -45,7 +50,7 @@ object Dropdown
     tooltipOptions: TooltipOptions = null,
     value: js.Any = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.dropdownMod.Dropdown] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDropdownMod.Dropdown] = {
     val __obj = js.Dynamic.literal()
     if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
     if (ariaLabel != null) __obj.updateDynamic("ariaLabel")(ariaLabel.asInstanceOf[js.Any])
@@ -61,6 +66,9 @@ object Dropdown
     if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(js.Any.fromFunction1(itemTemplate))
     if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
     if (maxLength != null) __obj.updateDynamic("maxLength")(maxLength.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
     if (optionLabel != null) __obj.updateDynamic("optionLabel")(optionLabel.asInstanceOf[js.Any])
     if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     if (panelClassName != null) __obj.updateDynamic("panelClassName")(panelClassName.asInstanceOf[js.Any])
@@ -74,7 +82,9 @@ object Dropdown
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.dropdownMod.Dropdown] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.dropdownMod.Dropdown](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDropdownMod.Dropdown] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactDropdownMod.Dropdown](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DropdownProps
 }
 

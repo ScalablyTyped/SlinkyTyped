@@ -16,7 +16,7 @@ object FocusEventInit {
     composed: js.UndefOr[scala.Boolean] = js.undefined,
     detail: Int | Double = null,
     relatedTarget: org.scalajs.dom.raw.EventTarget = null,
-    view: org.scalajs.dom.raw.Window = null
+    view: Window_ = null
   ): FocusEventInit = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(bubbles)) __obj.updateDynamic("bubbles")(bubbles.asInstanceOf[js.Any])

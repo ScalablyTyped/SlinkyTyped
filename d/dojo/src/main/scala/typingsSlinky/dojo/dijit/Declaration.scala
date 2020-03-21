@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dijit
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.defaults
 import typingsSlinky.dojo.dojoStrings.mixins
 import typingsSlinky.dojo.dojoStrings.style
@@ -21,7 +21,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dijit.Declaration")
 @js.native
-class Declaration () extends _Widget {
+class Declaration () extends Widget {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -68,7 +68,7 @@ class Declaration () extends _Widget {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_mixins(
     property: mixins,
@@ -78,7 +78,7 @@ class Declaration () extends _Widget {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_widgetClass(
     property: widgetClass,
@@ -88,6 +88,6 @@ class Declaration () extends _Widget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

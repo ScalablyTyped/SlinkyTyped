@@ -1,0 +1,13 @@
+package typingsSlinky.uirouterAngularjs.mod.core
+
+import typingsSlinky.uirouterCore.commonCommonMod.TypedMap
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@uirouter/angularjs", "core.applyPairs")
+@js.native
+object applyPairs extends js.Object {
+  def apply(memo: TypedMap[_], keyValTuple: js.Array[_]): TypedMap[_] = js.native
+}
+

@@ -1,7 +1,7 @@
 package typingsSlinky.samlp
 
-import typingsSlinky.samlp.samlpMod.DigestAlgorithmType
-import typingsSlinky.samlp.samlpMod.SignatureAlgorithmType
+import typingsSlinky.samlp.mod.DigestAlgorithmType
+import typingsSlinky.samlp.mod.SignatureAlgorithmType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

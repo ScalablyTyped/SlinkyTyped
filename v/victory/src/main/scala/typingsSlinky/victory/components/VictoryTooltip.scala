@@ -6,25 +6,25 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.victory.victoryMod.NumberOrCallback
-import typingsSlinky.victory.victoryMod.OrientationTypes
-import typingsSlinky.victory.victoryMod.StringOrNumberOrCallback
-import typingsSlinky.victory.victoryMod.VictoryNumberCallback
-import typingsSlinky.victory.victoryMod.VictoryStyleObject
-import typingsSlinky.victory.victoryMod.VictoryThemeDefinition
-import typingsSlinky.victory.victoryMod.VictoryTooltipProps
+import typingsSlinky.victory.mod.NumberOrCallback
+import typingsSlinky.victory.mod.OrientationTypes
+import typingsSlinky.victory.mod.StringOrNumberOrCallback
+import typingsSlinky.victory.mod.VictoryNumberCallback
+import typingsSlinky.victory.mod.VictoryStyleObject
+import typingsSlinky.victory.mod.VictoryThemeDefinition
+import typingsSlinky.victory.mod.VictoryTooltipProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VictoryTooltip
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.VictoryTooltip] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryTooltip] {
   @JSImport("victory", "VictoryTooltip")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: style */
   def apply(
     activateData: js.UndefOr[Boolean] = js.undefined,
     active: js.UndefOr[Boolean] = js.undefined,
@@ -48,14 +48,13 @@ object VictoryTooltip
     pointerLength: NumberOrCallback = null,
     pointerWidth: NumberOrCallback = null,
     renderInPortal: js.UndefOr[Boolean] = js.undefined,
-    style: CSSProperties = null,
     text: StringOrNumberOrCallback | (js.Array[Double | String]) = null,
     theme: VictoryThemeDefinition = null,
     width: Int | Double = null,
     x: Int | Double = null,
     y: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryTooltip] = {
+  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryTooltip] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(activateData)) __obj.updateDynamic("activateData")(activateData.asInstanceOf[js.Any])
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
@@ -79,7 +78,6 @@ object VictoryTooltip
     if (pointerLength != null) __obj.updateDynamic("pointerLength")(pointerLength.asInstanceOf[js.Any])
     if (pointerWidth != null) __obj.updateDynamic("pointerWidth")(pointerWidth.asInstanceOf[js.Any])
     if (!js.isUndefined(renderInPortal)) __obj.updateDynamic("renderInPortal")(renderInPortal.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
     if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
     if (width != null) __obj.updateDynamic("width")(width.asInstanceOf[js.Any])
@@ -88,7 +86,7 @@ object VictoryTooltip
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryTooltip] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.VictoryTooltip](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryTooltip] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryTooltip](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryTooltipProps
 }
 

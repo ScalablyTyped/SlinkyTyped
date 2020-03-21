@@ -158,8 +158,8 @@ object Layout extends js.Object {
   
   /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
   - org.scalablytyped.runtime.NumberDictionary because Already inherited
-  - typings.std.String because Already inherited
-  - typings.androiduix.android.text.Spanned because var conflicts: iterator. Inlined getSpans, getSpanStart, getSpanEnd, getSpanFlags, nextSpanTransition */ @js.native
+  - typingsSlinky.std.String because Already inherited
+  - typingsSlinky.androiduix.android.text.Spanned because var conflicts: iterator. Inlined getSpans, getSpanStart, getSpanEnd, getSpanFlags, nextSpanTransition */ @js.native
   class SpannedEllipsizer protected () extends Ellipsizer {
     def this(display: String) = this()
     var mSpanned: js.Any = js.native

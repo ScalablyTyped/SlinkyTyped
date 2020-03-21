@@ -10,7 +10,7 @@ import typingsSlinky.bootbox.bootboxStrings.lg
 import typingsSlinky.bootbox.bootboxStrings.sm
 import typingsSlinky.bootbox.bootboxStrings.small
 import typingsSlinky.bootbox.bootboxStrings.xl
-import typingsSlinky.jquery.JQuery
+import typingsSlinky.jquery.JQuery_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ trait BootboxAlertOptions extends BootboxDialogOptions[Unit] {
 object BootboxAlertOptions {
   @scala.inline
   def apply(
-    message: JQuery[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery[HTMLElement]]),
+    message: JQuery_[HTMLElement] | js.Array[_] | Element | DocumentFragment | Text | String | (js.Function2[/* index */ Double, /* html */ String, String | Element | JQuery_[HTMLElement]]),
     animate: js.UndefOr[Boolean] = js.undefined,
     backdrop: js.UndefOr[Boolean] = js.undefined,
     buttons: BootboxAlertButtonMap = null,

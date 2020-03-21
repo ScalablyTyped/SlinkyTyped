@@ -1,6 +1,5 @@
 package typingsSlinky.parse.nodeMod
 
-import typingsSlinky.parse.parseMod._Global_.Parse.ScopeOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +22,7 @@ import scala.scalajs.js.annotation._
 @JSImport("parse/node", "Schema")
 @js.native
 class Schema protected ()
-  extends typingsSlinky.parse.parseMod.Schema {
+  extends typingsSlinky.parse.mod.Schema {
   def this(className: String) = this()
 }
 
@@ -33,11 +32,10 @@ class Schema protected ()
 object Schema extends js.Object {
   /**
     * Static method to get all schemas
-    * @param options Valid options are:
-    * - useMasterKey: In Cloud Code and Node only, causes the Master Key to be used for this request.
-    * - sessionToken: A valid session token, used for making a request on behalf of a specific user.
+    *
+    * @return A promise that is resolved with the result when
+    * the query completes.
     */
-  def all(): js.Promise[js.Array[typingsSlinky.parse.parseMod._Global_.Parse.Schema]] = js.native
-  def all(options: ScopeOptions): js.Promise[js.Array[typingsSlinky.parse.parseMod._Global_.Parse.Schema]] = js.native
+  def all(): js.Promise[js.Array[typingsSlinky.parse.mod._Global_.Parse.Schema]] = js.native
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.marko.expressMod
 
-import typingsSlinky.bodyDashParser.bodyDashParserMod.OptionsUrlencoded
-import typingsSlinky.connect.connectMod.NextHandleFunction
+import typingsSlinky.bodyParser.mod.OptionsUrlencoded
+import typingsSlinky.connect.mod.NextHandleFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

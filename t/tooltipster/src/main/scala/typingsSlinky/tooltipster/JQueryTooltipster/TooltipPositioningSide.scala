@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.tooltipster.tooltipsterStrings.top
-  - typings.tooltipster.tooltipsterStrings.bottom
-  - typings.tooltipster.tooltipsterStrings.left
-  - typings.tooltipster.tooltipsterStrings.right
+  - typingsSlinky.tooltipster.tooltipsterStrings.top
+  - typingsSlinky.tooltipster.tooltipsterStrings.bottom
+  - typingsSlinky.tooltipster.tooltipsterStrings.left
+  - typingsSlinky.tooltipster.tooltipsterStrings.right
 */
 trait TooltipPositioningSide extends js.Object
 

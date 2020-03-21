@@ -1,6 +1,6 @@
 package typingsSlinky.behavior3.b3
 
-import typingsSlinky.behavior3.Anon_ChildBaseNode
+import typingsSlinky.behavior3.AnonChildBaseNode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,6 +16,6 @@ import scala.scalajs.js.annotation._
   * Creates an instance of Inverter.
   */
 class Inverter () extends Decorator {
-  def this(hasChild: Anon_ChildBaseNode) = this()
+  def this(hasChild: AnonChildBaseNode) = this()
 }
 

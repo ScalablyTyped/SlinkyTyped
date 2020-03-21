@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_EventItem
-import typingsSlinky.baseui.Anon_OptionOptionState
+import typingsSlinky.baseui.AnonItem
+import typingsSlinky.baseui.AnonOptionState
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
@@ -15,7 +15,7 @@ import typingsSlinky.baseui.baseuiStrings.select
 import typingsSlinky.baseui.selectMod.DropdownOverrides
 import typingsSlinky.baseui.selectMod.DropdownProps
 import typingsSlinky.baseui.selectMod.Value
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -30,14 +30,14 @@ object SelectDropdown
   /* The following DOM/SVG props were specified: required */
   def apply(
     error: js.UndefOr[Boolean] = js.undefined,
-    getOptionLabel: /* args */ Anon_OptionOptionState => TagMod[Any] = null,
+    getOptionLabel: /* args */ AnonOptionState => TagMod[Any] = null,
     innerRef: Ref[_] = null,
     isLoading: js.UndefOr[Boolean] = js.undefined,
     labelKey: String = null,
     maxDropdownHeight: String = null,
     multi: js.UndefOr[Boolean] = js.undefined,
     noResultsMsg: TagMod[Any] = null,
-    onItemSelect: /* args */ Anon_EventItem => js.Any = null,
+    onItemSelect: /* args */ AnonItem => js.Any = null,
     options: Value = null,
     overrides: DropdownOverrides = null,
     searchable: js.UndefOr[Boolean] = js.undefined,

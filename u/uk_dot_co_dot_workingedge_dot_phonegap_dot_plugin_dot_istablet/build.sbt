@@ -1,14 +1,13 @@
 organization := "org.scalablytyped.slinky"
 name := "uk_dot_co_dot_workingedge_dot_phonegap_dot_plugin_dot_istablet"
-version := "1.2.0-02e7b9"
-scalaVersion := "2.12.10"
+version := "1.2.0-f6f0c2"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2")
+  "me.shadaj" %%% "slinky-web" % "0.6.4")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

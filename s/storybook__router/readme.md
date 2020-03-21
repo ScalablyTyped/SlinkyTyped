@@ -1,7 +1,7 @@
 
 # Scala.js typings for storybook__router
 
-Typings are for version 5.2.8
+Typings are for version 5.3.13
 
 ## Library description:
 Core Storybook Router
@@ -10,9 +10,9 @@ Core Storybook Router
 | ------------------ | :-------------: |
 | Full name          | @storybook/router |
 | Keywords           | storybook |
-| # releases         | 294 |
-| # dependents       | 19 |
-| # downloads        | 31068176 |
+| # releases         | 304 |
+| # dependents       | 14 |
+| # downloads        | 33184403 |
 | # stars            | 0 |
 
 ## Links

@@ -1,24 +1,24 @@
 package typingsSlinky.electron.Electron
 
-import typingsSlinky.electron.TypeofClassNativeImage
+import typingsSlinky.electron.TypeofNativeImage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait CommonInterface extends js.Object {
-  var clipboard: Clipboard
-  var crashReporter: CrashReporter
-  var nativeImage: TypeofClassNativeImage
-  var shell: Shell
+  var clipboard: Clipboard_
+  var crashReporter: CrashReporter_
+  var nativeImage: TypeofNativeImage
+  var shell: Shell_
 }
 
 object CommonInterface {
   @scala.inline
   def apply(
-    clipboard: Clipboard,
-    crashReporter: CrashReporter,
-    nativeImage: TypeofClassNativeImage,
-    shell: Shell
+    clipboard: Clipboard_,
+    crashReporter: CrashReporter_,
+    nativeImage: TypeofNativeImage,
+    shell: Shell_
   ): CommonInterface = {
     val __obj = js.Dynamic.literal(clipboard = clipboard.asInstanceOf[js.Any], crashReporter = crashReporter.asInstanceOf[js.Any], nativeImage = nativeImage.asInstanceOf[js.Any], shell = shell.asInstanceOf[js.Any])
   

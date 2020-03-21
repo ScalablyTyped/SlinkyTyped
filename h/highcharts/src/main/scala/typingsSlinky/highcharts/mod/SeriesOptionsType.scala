@@ -1,0 +1,106 @@
+package typingsSlinky.highcharts.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.highcharts.mod.SeriesAbandsOptions
+  - typingsSlinky.highcharts.mod.SeriesAdOptions
+  - typingsSlinky.highcharts.mod.SeriesAoOptions
+  - typingsSlinky.highcharts.mod.SeriesApoOptions
+  - typingsSlinky.highcharts.mod.SeriesAreaOptions
+  - typingsSlinky.highcharts.mod.SeriesArearangeOptions
+  - typingsSlinky.highcharts.mod.SeriesAreasplineOptions
+  - typingsSlinky.highcharts.mod.SeriesAreasplinerangeOptions
+  - typingsSlinky.highcharts.mod.SeriesAroonOptions
+  - typingsSlinky.highcharts.mod.SeriesAroonoscillatorOptions
+  - typingsSlinky.highcharts.mod.SeriesAtrOptions
+  - typingsSlinky.highcharts.mod.SeriesBarOptions
+  - typingsSlinky.highcharts.mod.SeriesBbOptions
+  - typingsSlinky.highcharts.mod.SeriesBellcurveOptions
+  - typingsSlinky.highcharts.mod.SeriesBoxplotOptions
+  - typingsSlinky.highcharts.mod.SeriesBubbleOptions
+  - typingsSlinky.highcharts.mod.SeriesBulletOptions
+  - typingsSlinky.highcharts.mod.SeriesCandlestickOptions
+  - typingsSlinky.highcharts.mod.SeriesCciOptions
+  - typingsSlinky.highcharts.mod.SeriesChaikinOptions
+  - typingsSlinky.highcharts.mod.SeriesCmfOptions
+  - typingsSlinky.highcharts.mod.SeriesColumnOptions
+  - typingsSlinky.highcharts.mod.SeriesColumnpyramidOptions
+  - typingsSlinky.highcharts.mod.SeriesColumnrangeOptions
+  - typingsSlinky.highcharts.mod.SeriesCylinderOptions
+  - typingsSlinky.highcharts.mod.SeriesDemaOptions
+  - typingsSlinky.highcharts.mod.SeriesDependencywheelOptions
+  - typingsSlinky.highcharts.mod.SeriesDpoOptions
+  - typingsSlinky.highcharts.mod.SeriesEmaOptions
+  - typingsSlinky.highcharts.mod.SeriesErrorbarOptions
+  - typingsSlinky.highcharts.mod.SeriesFlagsOptions
+  - typingsSlinky.highcharts.mod.SeriesFunnel3dOptions
+  - typingsSlinky.highcharts.mod.SeriesFunnelOptions
+  - typingsSlinky.highcharts.mod.SeriesGanttOptions
+  - typingsSlinky.highcharts.mod.SeriesGaugeOptions
+  - typingsSlinky.highcharts.mod.SeriesHeatmapOptions
+  - typingsSlinky.highcharts.mod.SeriesHistogramOptions
+  - typingsSlinky.highcharts.mod.SeriesIkhOptions
+  - typingsSlinky.highcharts.mod.SeriesItemOptions
+  - typingsSlinky.highcharts.mod.SeriesKeltnerchannelsOptions
+  - typingsSlinky.highcharts.mod.SeriesLinearregressionangleOptions
+  - typingsSlinky.highcharts.mod.SeriesLinearregressioninterceptOptions
+  - typingsSlinky.highcharts.mod.SeriesLinearregressionOptions
+  - typingsSlinky.highcharts.mod.SeriesLinearregressionslopeOptions
+  - typingsSlinky.highcharts.mod.SeriesLineOptions
+  - typingsSlinky.highcharts.mod.SeriesMacdOptions
+  - typingsSlinky.highcharts.mod.SeriesMapbubbleOptions
+  - typingsSlinky.highcharts.mod.SeriesMaplineOptions
+  - typingsSlinky.highcharts.mod.SeriesMapOptions
+  - typingsSlinky.highcharts.mod.SeriesMappointOptions
+  - typingsSlinky.highcharts.mod.SeriesMfiOptions
+  - typingsSlinky.highcharts.mod.SeriesMomentumOptions
+  - typingsSlinky.highcharts.mod.SeriesNatrOptions
+  - typingsSlinky.highcharts.mod.SeriesNetworkgraphOptions
+  - typingsSlinky.highcharts.mod.SeriesOhlcOptions
+  - typingsSlinky.highcharts.mod.SeriesOrganizationOptions
+  - typingsSlinky.highcharts.mod.SeriesPackedbubbleOptions
+  - typingsSlinky.highcharts.mod.SeriesParetoOptions
+  - typingsSlinky.highcharts.mod.SeriesPcOptions
+  - typingsSlinky.highcharts.mod.SeriesPieOptions
+  - typingsSlinky.highcharts.mod.SeriesPivotpointsOptions
+  - typingsSlinky.highcharts.mod.SeriesPolygonOptions
+  - typingsSlinky.highcharts.mod.SeriesPpoOptions
+  - typingsSlinky.highcharts.mod.SeriesPriceenvelopesOptions
+  - typingsSlinky.highcharts.mod.SeriesPsarOptions
+  - typingsSlinky.highcharts.mod.SeriesPyramid3dOptions
+  - typingsSlinky.highcharts.mod.SeriesPyramidOptions
+  - typingsSlinky.highcharts.mod.SeriesRocOptions
+  - typingsSlinky.highcharts.mod.SeriesRsiOptions
+  - typingsSlinky.highcharts.mod.SeriesSankeyOptions
+  - typingsSlinky.highcharts.mod.SeriesScatter3dOptions
+  - typingsSlinky.highcharts.mod.SeriesScatterOptions
+  - typingsSlinky.highcharts.mod.SeriesSmaOptions
+  - typingsSlinky.highcharts.mod.SeriesSolidgaugeOptions
+  - typingsSlinky.highcharts.mod.SeriesSplineOptions
+  - typingsSlinky.highcharts.mod.SeriesStochasticOptions
+  - typingsSlinky.highcharts.mod.SeriesStreamgraphOptions
+  - typingsSlinky.highcharts.mod.SeriesSunburstOptions
+  - typingsSlinky.highcharts.mod.SeriesSupertrendOptions
+  - typingsSlinky.highcharts.mod.SeriesTemaOptions
+  - typingsSlinky.highcharts.mod.SeriesTilemapOptions
+  - typingsSlinky.highcharts.mod.SeriesTimelineOptions
+  - typingsSlinky.highcharts.mod.SeriesTrendlineOptions
+  - typingsSlinky.highcharts.mod.SeriesTrixOptions
+  - typingsSlinky.highcharts.mod.SeriesVariablepieOptions
+  - typingsSlinky.highcharts.mod.SeriesVariwideOptions
+  - typingsSlinky.highcharts.mod.SeriesVbpOptions
+  - typingsSlinky.highcharts.mod.SeriesVectorOptions
+  - typingsSlinky.highcharts.mod.SeriesVennOptions
+  - typingsSlinky.highcharts.mod.SeriesVwapOptions
+  - typingsSlinky.highcharts.mod.SeriesWaterfallOptions
+  - typingsSlinky.highcharts.mod.SeriesWilliamsrOptions
+  - typingsSlinky.highcharts.mod.SeriesWmaOptions
+  - typingsSlinky.highcharts.mod.SeriesWordcloudOptions
+  - typingsSlinky.highcharts.mod.SeriesXrangeOptions
+  - typingsSlinky.highcharts.mod.SeriesZigzagOptions
+*/
+trait SeriesOptionsType extends js.Object
+

@@ -1,7 +1,7 @@
 package typingsSlinky.ol.interactionMod
 
-import typingsSlinky.ol.interactionPinchRotateMod.Options
-import typingsSlinky.ol.interactionPinchRotateMod.default
+import typingsSlinky.ol.pinchRotateMod.Options
+import typingsSlinky.ol.pinchRotateMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

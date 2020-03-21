@@ -1,6 +1,6 @@
 package typingsSlinky.express
 
-import typingsSlinky.mime.mimeMod.TypeMap
+import typingsSlinky.mime.mod.TypeMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

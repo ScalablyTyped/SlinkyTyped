@@ -1,7 +1,7 @@
 
 # Scala.js typings for braintree
 
-Typings are for version 2.20
+Typings are for version 2.22
 
 ## Library description:
 A library for integrating with Braintree.
@@ -11,8 +11,8 @@ A library for integrating with Braintree.
 | Full name          | braintree |
 | Keywords           | braintree, payments |
 | # releases         | 19 |
-| # dependents       | 28 |
-| # downloads        | 1344131 |
+| # dependents       | 29 |
+| # downloads        | 1375694 |
 | # stars            | 20 |
 
 ## Links

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A set of images produced in single study (one or more series of references images)
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait ImagingStudy extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait ImagingStudy extends DomainResource {
   /**
     * Contains extended information for property 'availability'.
     */

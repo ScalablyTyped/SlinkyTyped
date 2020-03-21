@@ -1,6 +1,6 @@
 package typingsSlinky.nightwatch
 
-import typingsSlinky.nightwatch.nightwatchMod.LocateStrategy
+import typingsSlinky.nightwatch.mod.LocateStrategy
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

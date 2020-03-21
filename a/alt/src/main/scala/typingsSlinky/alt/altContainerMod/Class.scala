@@ -1,7 +1,7 @@
 package typingsSlinky.alt.altContainerMod
 
-import typingsSlinky.react.reactMod.Component
-import typingsSlinky.react.reactMod.ComponentState
+import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.ComponentState
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

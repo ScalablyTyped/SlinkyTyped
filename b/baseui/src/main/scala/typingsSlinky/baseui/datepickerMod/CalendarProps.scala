@@ -1,9 +1,9 @@
 package typingsSlinky.baseui.datepickerMod
 
-import typingsSlinky.baseui.Anon_BeginDate
-import typingsSlinky.baseui.Anon_Date
-import typingsSlinky.baseui.Anon_DateEvent
-import typingsSlinky.baseui.Anon_Date_912435367
+import typingsSlinky.baseui.AnonBeginDate
+import typingsSlinky.baseui.AnonDate
+import typingsSlinky.baseui.AnonDateDate
+import typingsSlinky.baseui.AnonDateEvent
 import typingsSlinky.baseui.baseuiStrings.horizontal
 import typingsSlinky.baseui.baseuiStrings.vertical
 import scala.scalajs.js
@@ -22,16 +22,16 @@ trait CalendarProps extends js.Object {
   var minDate: js.UndefOr[js.Date] = js.undefined
   var monthsShown: js.UndefOr[Double] = js.undefined
   var onChange: js.UndefOr[typingsSlinky.baseui.datepickerMod.onChange] = js.undefined
-  var onDayClick: js.UndefOr[js.Function1[/* args */ Anon_DateEvent, _]] = js.undefined
-  var onDayMouseLeave: js.UndefOr[js.Function1[/* args */ Anon_DateEvent, _]] = js.undefined
-  var onDayMouseOver: js.UndefOr[js.Function1[/* args */ Anon_DateEvent, _]] = js.undefined
-  var onMonthChange: js.UndefOr[js.Function1[/* args */ Anon_Date_912435367, _]] = js.undefined
-  var onYearChange: js.UndefOr[js.Function1[/* args */ Anon_Date_912435367, _]] = js.undefined
+  var onDayClick: js.UndefOr[js.Function1[/* args */ AnonDateEvent, _]] = js.undefined
+  var onDayMouseLeave: js.UndefOr[js.Function1[/* args */ AnonDateEvent, _]] = js.undefined
+  var onDayMouseOver: js.UndefOr[js.Function1[/* args */ AnonDateEvent, _]] = js.undefined
+  var onMonthChange: js.UndefOr[js.Function1[/* args */ AnonDateDate, _]] = js.undefined
+  var onYearChange: js.UndefOr[js.Function1[/* args */ AnonDateDate, _]] = js.undefined
   var orientation: js.UndefOr[horizontal | vertical] = js.undefined
   var overrides: js.UndefOr[DatepickerOverrides[SharedStylePropsT]] = js.undefined
   var peekNextMonth: js.UndefOr[Boolean] = js.undefined
   var quickSelect: js.UndefOr[Boolean] = js.undefined
-  var quickSelectOptions: js.UndefOr[js.Array[Anon_BeginDate]] = js.undefined
+  var quickSelectOptions: js.UndefOr[js.Array[AnonBeginDate]] = js.undefined
   var range: js.UndefOr[Boolean] = js.undefined
   var timeSelectEnd: js.UndefOr[Boolean] = js.undefined
   var timeSelectStart: js.UndefOr[Boolean] = js.undefined
@@ -51,17 +51,17 @@ object CalendarProps {
     maxDate: js.Date = null,
     minDate: js.Date = null,
     monthsShown: Int | Double = null,
-    onChange: /* args */ Anon_Date => js.Any = null,
-    onDayClick: /* args */ Anon_DateEvent => _ = null,
-    onDayMouseLeave: /* args */ Anon_DateEvent => _ = null,
-    onDayMouseOver: /* args */ Anon_DateEvent => _ = null,
-    onMonthChange: /* args */ Anon_Date_912435367 => _ = null,
-    onYearChange: /* args */ Anon_Date_912435367 => _ = null,
+    onChange: /* args */ AnonDate => js.Any = null,
+    onDayClick: /* args */ AnonDateEvent => _ = null,
+    onDayMouseLeave: /* args */ AnonDateEvent => _ = null,
+    onDayMouseOver: /* args */ AnonDateEvent => _ = null,
+    onMonthChange: /* args */ AnonDateDate => _ = null,
+    onYearChange: /* args */ AnonDateDate => _ = null,
     orientation: horizontal | vertical = null,
     overrides: DatepickerOverrides[SharedStylePropsT] = null,
     peekNextMonth: js.UndefOr[Boolean] = js.undefined,
     quickSelect: js.UndefOr[Boolean] = js.undefined,
-    quickSelectOptions: js.Array[Anon_BeginDate] = null,
+    quickSelectOptions: js.Array[AnonBeginDate] = null,
     range: js.UndefOr[Boolean] = js.undefined,
     timeSelectEnd: js.UndefOr[Boolean] = js.undefined,
     timeSelectStart: js.UndefOr[Boolean] = js.undefined,

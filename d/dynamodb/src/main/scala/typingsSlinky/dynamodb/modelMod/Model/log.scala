@@ -1,7 +1,7 @@
 package typingsSlinky.dynamodb.modelMod.Model
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.bunyan.bunyanMod.^
+import typingsSlinky.bunyan.mod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

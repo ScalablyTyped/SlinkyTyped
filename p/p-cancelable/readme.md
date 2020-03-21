@@ -11,8 +11,8 @@ Create a promise that can be canceled
 | Full name          | p-cancelable |
 | Keywords           | promise, cancelable, cancel, canceled, canceling, cancellable, cancellation, abort, abortable, aborting, cleanup, task, token, async, function, await, promises, bluebird |
 | # releases         | 8 |
-| # dependents       | 42 |
-| # downloads        | 146889554 |
+| # dependents       | 50 |
+| # downloads        | 152208735 |
 | # stars            | 2 |
 
 ## Links

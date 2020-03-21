@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.drawing.plugins.tools
 
-import typingsSlinky.dojo.dojox.drawing.plugins._Plugin
+import typingsSlinky.dojo.dojox.drawing.plugins.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,7 +16,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.drawing.plugins.tools.Iconize")
 @js.native
-class Iconize_ protected () extends _Plugin {
+class Iconize_ protected () extends Plugin {
   def this(options: js.Any) = this()
   /**
     *

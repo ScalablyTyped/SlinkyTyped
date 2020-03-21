@@ -1,7 +1,7 @@
 package typingsSlinky.googlepay.google.payments.api
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.googlepay.Anon_ProtocolVersion
+import typingsSlinky.googlepay.AnonProtocolVersion
 import typingsSlinky.googlepay.googlepayStrings.DIRECT
 import typingsSlinky.googlepay.googlepayStrings.PAYMENT_GATEWAY
 import scala.scalajs.js
@@ -9,8 +9,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.googlepay.google.payments.api.PaymentGatewayTokenizationSpecification
-  - typings.googlepay.google.payments.api.DirectTokenizationSpecification
+  - typingsSlinky.googlepay.google.payments.api.PaymentGatewayTokenizationSpecification
+  - typingsSlinky.googlepay.google.payments.api.DirectTokenizationSpecification
 */
 trait PaymentMethodTokenizationSpecification extends js.Object
 
@@ -22,7 +22,7 @@ object PaymentMethodTokenizationSpecification {
     __obj.asInstanceOf[PaymentMethodTokenizationSpecification]
   }
   @scala.inline
-  def DirectTokenizationSpecification(parameters: Anon_ProtocolVersion, `type`: DIRECT): PaymentMethodTokenizationSpecification = {
+  def DirectTokenizationSpecification(parameters: AnonProtocolVersion, `type`: DIRECT): PaymentMethodTokenizationSpecification = {
     val __obj = js.Dynamic.literal(parameters = parameters.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[PaymentMethodTokenizationSpecification]

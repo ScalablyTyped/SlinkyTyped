@@ -15,16 +15,16 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.mfiles.mfilesNumbers.`0`
-  - typings.mfiles.mfilesNumbers.`1`
-  - typings.mfiles.mfilesNumbers.`30000`
-  - typings.mfiles.mfilesNumbers.`30001`
-  - typings.mfiles.mfilesNumbers.`30002`
-  - typings.mfiles.mfilesNumbers.`30003`
-  - typings.mfiles.mfilesNumbers.`30004`
-  - typings.mfiles.mfilesNumbers.`30005`
-  - typings.mfiles.mfilesNumbers.`30006`
-  - typings.mfiles.mfilesNumbers.`30007`
+  - typingsSlinky.mfiles.mfilesNumbers.`0`
+  - typingsSlinky.mfiles.mfilesNumbers.`1`
+  - typingsSlinky.mfiles.mfilesNumbers.`30000`
+  - typingsSlinky.mfiles.mfilesNumbers.`30001`
+  - typingsSlinky.mfiles.mfilesNumbers.`30002`
+  - typingsSlinky.mfiles.mfilesNumbers.`30003`
+  - typingsSlinky.mfiles.mfilesNumbers.`30004`
+  - typingsSlinky.mfiles.mfilesNumbers.`30005`
+  - typingsSlinky.mfiles.mfilesNumbers.`30006`
+  - typingsSlinky.mfiles.mfilesNumbers.`30007`
 */
 trait MFPredefinedSearchFilterType extends js.Object
 

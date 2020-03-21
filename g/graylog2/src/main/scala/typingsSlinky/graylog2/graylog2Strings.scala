@@ -1,7 +1,7 @@
 package typingsSlinky.graylog2
 
-import typingsSlinky.graylog2.graylog2Mod.GraylogDeflate
-import typingsSlinky.graylog2.graylog2Mod.GraylogLogMethod
+import typingsSlinky.graylog2.mod.GraylogDeflate
+import typingsSlinky.graylog2.mod.GraylogLogMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

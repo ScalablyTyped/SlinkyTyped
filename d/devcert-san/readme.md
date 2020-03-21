@@ -12,7 +12,7 @@ Generate trusted local SSL/TLS certificates for local SSL development
 | Keywords           | ssl, certificate, openssl, trust |
 | # releases         | 0 |
 | # dependents       | 19 |
-| # downloads        | 8752661 |
+| # downloads        | 9077848 |
 | # stars            | 0 |
 
 ## Links

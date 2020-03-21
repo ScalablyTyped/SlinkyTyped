@@ -11,8 +11,8 @@ Create HTTP error objects
 | Full name          | http-errors |
 | Keywords           | http, error |
 | # releases         | 6 |
-| # dependents       | 935 |
-| # downloads        | 728150281 |
+| # dependents       | 984 |
+| # downloads        | 800317565 |
 | # stars            | 37 |
 
 ## Links

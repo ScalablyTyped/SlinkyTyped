@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.googlepay.googlepayStrings.FULL
-  - typings.googlepay.googlepayStrings.MIN
+  - typingsSlinky.googlepay.googlepayStrings.FULL
+  - typingsSlinky.googlepay.googlepayStrings.MIN
 */
 trait BillingAddressFormat extends js.Object
 

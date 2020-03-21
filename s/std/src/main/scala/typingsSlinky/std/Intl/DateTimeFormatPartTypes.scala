@@ -5,17 +5,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.day
-  - typings.std.stdStrings.dayPeriod
-  - typings.std.stdStrings.era
-  - typings.std.stdStrings.hour
-  - typings.std.stdStrings.literal
-  - typings.std.stdStrings.minute
-  - typings.std.stdStrings.month
-  - typings.std.stdStrings.second
-  - typings.std.stdStrings.timeZoneName
-  - typings.std.stdStrings.weekday
-  - typings.std.stdStrings.year
+  - typingsSlinky.std.stdStrings.day
+  - typingsSlinky.std.stdStrings.dayPeriod
+  - typingsSlinky.std.stdStrings.era
+  - typingsSlinky.std.stdStrings.hour
+  - typingsSlinky.std.stdStrings.literal
+  - typingsSlinky.std.stdStrings.minute
+  - typingsSlinky.std.stdStrings.month
+  - typingsSlinky.std.stdStrings.second
+  - typingsSlinky.std.stdStrings.timeZoneName
+  - typingsSlinky.std.stdStrings.weekday
+  - typingsSlinky.std.stdStrings.year
 */
 trait DateTimeFormatPartTypes extends js.Object
 

@@ -1,6 +1,6 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ trait LodashForIn extends js.Object {
       _
     ],
     `object`: T
-  ): T = js.native
+  ): js.UndefOr[T | Null] = js.native
   def apply[T](iteratee: __): LodashForIn2x2[T] = js.native
   def apply[T](iteratee: __, `object`: T): LodashForIn2x2[T] = js.native
 }

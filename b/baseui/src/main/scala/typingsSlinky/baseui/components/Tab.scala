@@ -1,6 +1,7 @@
 package typingsSlinky.baseui.components
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.KeyboardEvent
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
@@ -10,6 +11,7 @@ import typingsSlinky.baseui.baseuiStrings.vertical
 import typingsSlinky.baseui.tabsMod.SharedProps
 import typingsSlinky.baseui.tabsMod.TabOverrides
 import typingsSlinky.baseui.tabsMod.TabProps
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +23,12 @@ object Tab
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, id, onClick, onKeyDown */
+  /* The following DOM/SVG props were specified: disabled, id */
   def apply(
     $orientation: horizontal | vertical = null,
     active: js.UndefOr[Boolean] = js.undefined,
+    onClick: /* e */ Event_ => _ = null,
+    onKeyDown: /* e */ KeyboardEvent => _ = null,
     onSelect: () => _ = null,
     overrides: TabOverrides[SharedProps] = null,
     title: TagMod[Any] = null,
@@ -33,6 +37,8 @@ object Tab
     val __obj = js.Dynamic.literal()
     if ($orientation != null) __obj.updateDynamic("$orientation")($orientation.asInstanceOf[js.Any])
     if (!js.isUndefined(active)) __obj.updateDynamic("active")(active.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
     if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction0(onSelect))
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])

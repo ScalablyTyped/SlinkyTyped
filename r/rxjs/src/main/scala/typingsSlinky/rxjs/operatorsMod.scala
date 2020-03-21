@@ -1,29 +1,29 @@
 package typingsSlinky.rxjs
 
-import typingsSlinky.rxjs.internalNotificationMod.Notification
-import typingsSlinky.rxjs.internalObservableConnectableObservableMod.ConnectableObservable
+import typingsSlinky.rxjs.connectableObservableMod.ConnectableObservable
+import typingsSlinky.rxjs.groupByMod.GroupedObservable
 import typingsSlinky.rxjs.internalObservableMod.Observable
-import typingsSlinky.rxjs.internalOperatorsGroupByMod.GroupedObservable
-import typingsSlinky.rxjs.internalOperatorsShareReplayMod.ShareReplayConfig
-import typingsSlinky.rxjs.internalOperatorsThrottleMod.ThrottleConfig
-import typingsSlinky.rxjs.internalOperatorsTimeIntervalMod.TimeInterval
-import typingsSlinky.rxjs.internalOperatorsTimestampMod.Timestamp
-import typingsSlinky.rxjs.internalSubjectMod.Subject
-import typingsSlinky.rxjs.internalTypesMod.MonoTypeOperatorFunction
-import typingsSlinky.rxjs.internalTypesMod.ObservableInput
-import typingsSlinky.rxjs.internalTypesMod.ObservedValueOf
-import typingsSlinky.rxjs.internalTypesMod.OperatorFunction
-import typingsSlinky.rxjs.internalTypesMod.PartialObserver
-import typingsSlinky.rxjs.internalTypesMod.SchedulerLike
-import typingsSlinky.rxjs.internalTypesMod.SubscribableOrPromise
-import typingsSlinky.rxjs.internalTypesMod.UnaryFunction
+import typingsSlinky.rxjs.notificationMod.Notification
 import typingsSlinky.rxjs.rxjsBooleans.`false`
+import typingsSlinky.rxjs.shareReplayMod.ShareReplayConfig
+import typingsSlinky.rxjs.subjectMod.Subject
+import typingsSlinky.rxjs.throttleMod.ThrottleConfig
+import typingsSlinky.rxjs.timeIntervalMod.TimeInterval_
+import typingsSlinky.rxjs.timestampMod.Timestamp_
+import typingsSlinky.rxjs.typesMod.MonoTypeOperatorFunction
+import typingsSlinky.rxjs.typesMod.ObservableInput
+import typingsSlinky.rxjs.typesMod.ObservedValueOf
+import typingsSlinky.rxjs.typesMod.OperatorFunction
+import typingsSlinky.rxjs.typesMod.PartialObserver
+import typingsSlinky.rxjs.typesMod.SchedulerLike
+import typingsSlinky.rxjs.typesMod.SubscribableOrPromise
+import typingsSlinky.rxjs.typesMod.UnaryFunction
 import typingsSlinky.std.Date
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("rxjs/operators", JSImport.Namespace)
+@JSImport("rxjs/internal/operators", JSImport.Namespace)
 @js.native
 object operatorsMod extends js.Object {
   def audit[T](durationSelector: js.Function1[/* value */ T, SubscribableOrPromise[_]]): MonoTypeOperatorFunction[T] = js.native
@@ -222,20 +222,6 @@ object operatorsMod extends js.Object {
   ): MonoTypeOperatorFunction[T] = js.native
   def elementAt[T](index: Double): MonoTypeOperatorFunction[T] = js.native
   def elementAt[T](index: Double, defaultValue: T): MonoTypeOperatorFunction[T] = js.native
-  def endWith[T](scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
-  def endWith[T, Z](array: (SchedulerLike | Z)*): OperatorFunction[T, T | Z] = js.native
-  def endWith[T, A](v1: A): OperatorFunction[T, T | A] = js.native
-  def endWith[T, A](v1: A, scheduler: SchedulerLike): OperatorFunction[T, T | A] = js.native
-  def endWith[T, A, B](v1: A, v2: B): OperatorFunction[T, T | A | B] = js.native
-  def endWith[T, A, B](v1: A, v2: B, scheduler: SchedulerLike): OperatorFunction[T, T | A | B] = js.native
-  def endWith[T, A, B, C](v1: A, v2: B, v3: C): OperatorFunction[T, T | A | B | C] = js.native
-  def endWith[T, A, B, C](v1: A, v2: B, v3: C, scheduler: SchedulerLike): OperatorFunction[T, T | A | B | C] = js.native
-  def endWith[T, A, B, C, D](v1: A, v2: B, v3: C, v4: D): OperatorFunction[T, T | A | B | C | D] = js.native
-  def endWith[T, A, B, C, D](v1: A, v2: B, v3: C, v4: D, scheduler: SchedulerLike): OperatorFunction[T, T | A | B | C | D] = js.native
-  def endWith[T, A, B, C, D, E](v1: A, v2: B, v3: C, v4: D, v5: E): OperatorFunction[T, T | A | B | C | D | E] = js.native
-  def endWith[T, A, B, C, D, E](v1: A, v2: B, v3: C, v4: D, v5: E, scheduler: SchedulerLike): OperatorFunction[T, T | A | B | C | D | E] = js.native
-  def endWith[T, A, B, C, D, E, F](v1: A, v2: B, v3: C, v4: D, v5: E, v6: F): OperatorFunction[T, T | A | B | C | D | E | F] = js.native
-  def endWith[T, A, B, C, D, E, F](v1: A, v2: B, v3: C, v4: D, v5: E, v6: F, scheduler: SchedulerLike): OperatorFunction[T, T | A | B | C | D | E | F] = js.native
   def every[T](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, Boolean] = js.native
   def every[T](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
@@ -299,21 +285,21 @@ object operatorsMod extends js.Object {
     thisArg: js.Any
   ): OperatorFunction[T, js.UndefOr[S]] = js.native
   def first[T, D](): OperatorFunction[T, T | D] = js.native
-  def first[T, S /* <: T */](
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean]
-  ): OperatorFunction[T, S] = js.native
-  def first[T, S /* <: T */](
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean],
-    defaultValue: S
-  ): OperatorFunction[T, S] = js.native
-  def first[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
-  @JSName("first")
-  def first_TD[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
-  @JSName("first")
-  def first_TD[T, D](
+  def first[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
+  def first[T, D](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
     defaultValue: D
   ): OperatorFunction[T, T | D] = js.native
+  def first[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
+  @JSName("first")
+  def first_TS_T[T, S /* <: T */](
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean]
+  ): OperatorFunction[T, S] = js.native
+  @JSName("first")
+  def first_TS_T[T, S /* <: T */](
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean],
+    defaultValue: S
+  ): OperatorFunction[T, S] = js.native
   def flatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O]): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def flatMap[T, O /* <: ObservableInput[_] */](project: js.Function2[/* value */ T, /* index */ Double, O], concurrent: Double): OperatorFunction[T, ObservedValueOf[O]] = js.native
   def flatMap[T, O /* <: ObservableInput[_] */](
@@ -365,21 +351,21 @@ object operatorsMod extends js.Object {
   def ignoreElements(): OperatorFunction[_, scala.Nothing] = js.native
   def isEmpty[T](): OperatorFunction[T, Boolean] = js.native
   def last[T, D](): OperatorFunction[T, T | D] = js.native
-  def last[T, S /* <: T */](
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean]
-  ): OperatorFunction[T, S] = js.native
-  def last[T, S /* <: T */](
-    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean],
-    defaultValue: S
-  ): OperatorFunction[T, S] = js.native
-  def last[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
-  @JSName("last")
-  def last_TD[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
-  @JSName("last")
-  def last_TD[T, D](
+  def last[T, D](predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean]): OperatorFunction[T, T | D] = js.native
+  def last[T, D](
     predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], Boolean],
     defaultValue: D
   ): OperatorFunction[T, T | D] = js.native
+  def last[T, D](predicate: Null, defaultValue: D): OperatorFunction[T, T | D] = js.native
+  @JSName("last")
+  def last_TS_T[T, S /* <: T */](
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean]
+  ): OperatorFunction[T, S] = js.native
+  @JSName("last")
+  def last_TS_T[T, S /* <: T */](
+    predicate: js.Function3[/* value */ T, /* index */ Double, /* source */ Observable[T], /* is S */ Boolean],
+    defaultValue: S
+  ): OperatorFunction[T, S] = js.native
   def map[T, R](project: js.Function2[/* value */ T, /* index */ Double, R]): OperatorFunction[T, R] = js.native
   def map[T, R](project: js.Function2[/* value */ T, /* index */ Double, R], thisArg: js.Any): OperatorFunction[T, R] = js.native
   def mapTo[T, R](value: R): OperatorFunction[T, R] = js.native
@@ -743,10 +729,8 @@ object operatorsMod extends js.Object {
   def throttleTime[T](duration: Double): MonoTypeOperatorFunction[T] = js.native
   def throttleTime[T](duration: Double, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def throttleTime[T](duration: Double, scheduler: SchedulerLike, config: ThrottleConfig): MonoTypeOperatorFunction[T] = js.native
-  def throwIfEmpty[T](): MonoTypeOperatorFunction[T] = js.native
-  def throwIfEmpty[T](errorFactory: js.Function0[_]): MonoTypeOperatorFunction[T] = js.native
-  def timeInterval[T](): OperatorFunction[T, TimeInterval[T]] = js.native
-  def timeInterval[T](scheduler: SchedulerLike): OperatorFunction[T, TimeInterval[T]] = js.native
+  def timeInterval[T](): OperatorFunction[T, TimeInterval_[T]] = js.native
+  def timeInterval[T](scheduler: SchedulerLike): OperatorFunction[T, TimeInterval_[T]] = js.native
   def timeout[T](due: Double): MonoTypeOperatorFunction[T] = js.native
   def timeout[T](due: Double, scheduler: SchedulerLike): MonoTypeOperatorFunction[T] = js.native
   def timeout[T](due: Date): MonoTypeOperatorFunction[T] = js.native
@@ -755,8 +739,8 @@ object operatorsMod extends js.Object {
   def timeoutWith[T, R](due: Double, withObservable: ObservableInput[R], scheduler: SchedulerLike): OperatorFunction[T, T | R] = js.native
   def timeoutWith[T, R](due: Date, withObservable: ObservableInput[R]): OperatorFunction[T, T | R] = js.native
   def timeoutWith[T, R](due: Date, withObservable: ObservableInput[R], scheduler: SchedulerLike): OperatorFunction[T, T | R] = js.native
-  def timestamp[T](): OperatorFunction[T, Timestamp[T]] = js.native
-  def timestamp[T](scheduler: SchedulerLike): OperatorFunction[T, Timestamp[T]] = js.native
+  def timestamp[T](): OperatorFunction[T, Timestamp_[T]] = js.native
+  def timestamp[T](scheduler: SchedulerLike): OperatorFunction[T, Timestamp_[T]] = js.native
   def toArray[T](): OperatorFunction[T, js.Array[T]] = js.native
   def window[T](windowBoundaries: Observable[_]): OperatorFunction[T, Observable[T]] = js.native
   def windowCount[T](windowSize: Double): OperatorFunction[T, Observable[T]] = js.native

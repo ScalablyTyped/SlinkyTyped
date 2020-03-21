@@ -10,9 +10,9 @@ FNV-1a non-cryptographic hash function
 | ------------------ | :-------------: |
 | Full name          | @sindresorhus/fnv1a |
 | Keywords           | fnv1a, fnv-1a, fnv1, fnv-1, fnv, algorithm, hash, hashing, string, function, fowler–noll–vo, fowler, noll, vo, unicode, bigint |
-| # releases         | 6 |
+| # releases         | 4 |
 | # dependents       | 16 |
-| # downloads        | 616137 |
+| # downloads        | 672885 |
 | # stars            | 0 |
 
 ## Links

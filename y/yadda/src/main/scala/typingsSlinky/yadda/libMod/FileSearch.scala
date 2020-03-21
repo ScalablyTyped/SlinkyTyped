@@ -1,6 +1,6 @@
 package typingsSlinky.yadda.libMod
 
-import typingsSlinky.yadda.libFileSearchMod.^
+import typingsSlinky.yadda.fileSearchMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

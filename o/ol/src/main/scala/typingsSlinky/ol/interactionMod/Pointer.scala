@@ -1,7 +1,7 @@
 package typingsSlinky.ol.interactionMod
 
-import typingsSlinky.ol.interactionPointerMod.Options
-import typingsSlinky.ol.interactionPointerMod.default
+import typingsSlinky.ol.pointerMod.Options
+import typingsSlinky.ol.pointerMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

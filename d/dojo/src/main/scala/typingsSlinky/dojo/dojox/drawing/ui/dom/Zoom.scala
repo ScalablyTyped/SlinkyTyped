@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.drawing.ui.dom
 
 import org.scalajs.dom.raw.MouseEvent
-import typingsSlinky.dojo.dojox.drawing.plugins._Plugin
+import typingsSlinky.dojo.dojox.drawing.plugins.Plugin
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -14,7 +14,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.drawing.ui.dom.Zoom")
 @js.native
-class Zoom protected () extends _Plugin {
+class Zoom protected () extends Plugin {
   def this(options: js.Any) = this()
   /**
     * The CSS class added to the Toolbar buttons

@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint.SP.JsGrid.EventArgs
 
-import typingsSlinky.microsoftDashAjax.Sys.UI.DomEvent
+import typingsSlinky.microsoftAjax.Sys.UI.DomEvent
 import typingsSlinky.sharepoint.SP.JsGrid.ClickContext
 import typingsSlinky.sharepoint.SP.JsGrid.IEventArgs
 import scala.scalajs.js

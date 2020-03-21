@@ -1,6 +1,6 @@
 package typingsSlinky.sharp
 
-import typingsSlinky.sharp.sharpMod.Channels
+import typingsSlinky.sharp.mod.Channels
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

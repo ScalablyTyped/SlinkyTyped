@@ -1,6 +1,6 @@
 package typingsSlinky.behavior3.b3
 
-import typingsSlinky.behavior3.Anon_ChildrenArray
+import typingsSlinky.behavior3.AnonChildrenArray
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -17,6 +17,6 @@ import scala.scalajs.js.annotation._
   * Creates an instance of Priority.
   */
 class Priority () extends Composite {
-  def this(hasChildren: Anon_ChildrenArray) = this()
+  def this(hasChildren: AnonChildrenArray) = this()
 }
 

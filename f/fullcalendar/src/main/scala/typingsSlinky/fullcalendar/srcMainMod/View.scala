@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("fullcalendar/src/main", "View")
 @js.native
 abstract class View protected ()
-  extends typingsSlinky.fullcalendar.srcExportsMod.View {
+  extends typingsSlinky.fullcalendar.exportsMod.View {
   def this(calendar: js.Any, viewSpec: js.Any) = this()
 }
 

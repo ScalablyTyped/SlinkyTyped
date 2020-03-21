@@ -5,11 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.geolocation
-  - typings.std.stdStrings.unlimitedIndexedDBQuota
-  - typings.std.stdStrings.media
-  - typings.std.stdStrings.pointerlock
-  - typings.std.stdStrings.webnotifications
+  - typingsSlinky.std.stdStrings.geolocation
+  - typingsSlinky.std.stdStrings.media
+  - typingsSlinky.std.stdStrings.pointerlock
+  - typingsSlinky.std.stdStrings.unlimitedIndexedDBQuota
+  - typingsSlinky.std.stdStrings.webnotifications
 */
 trait MSWebViewPermissionType extends js.Object
 

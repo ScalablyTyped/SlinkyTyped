@@ -4,15 +4,15 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.history.historyMod.Location
-import typingsSlinky.history.historyMod.LocationState
-import typingsSlinky.mirrorx.mirrorxMod.PromptProps
+import typingsSlinky.history.mod.Location
+import typingsSlinky.history.mod.LocationState
+import typingsSlinky.mirrorx.mod.PromptProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Prompt
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mirrorx.mirrorxMod.Prompt] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mirrorx.mod.Prompt] {
   @JSImport("mirrorx", "Prompt")
   @js.native
   object componentImport extends js.Object
@@ -22,7 +22,7 @@ object Prompt
     message: String | (js.Function1[/* location */ Location[LocationState], String | Boolean]),
     when: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.mirrorx.mirrorxMod.Prompt] = {
+  ): BuildingComponent[tag.type, typingsSlinky.mirrorx.mod.Prompt] = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any])
     if (!js.isUndefined(when)) __obj.updateDynamic("when")(when.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

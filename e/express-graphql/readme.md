@@ -12,7 +12,7 @@ Production ready GraphQL HTTP middleware.
 | Keywords           | express, restify, connect, http, graphql, middleware, api |
 | # releases         | 6 |
 | # dependents       | 281 |
-| # downloads        | 12950730 |
+| # downloads        | 13387279 |
 | # stars            | 42 |
 
 ## Links

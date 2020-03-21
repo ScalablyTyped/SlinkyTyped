@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.sketch
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.figure
 import typingsSlinky.dojo.dojoStrings.plugins
 import scala.scalajs.js
@@ -34,7 +34,7 @@ class Toolbar ()
     * @param item
     * @param group
     */
-  def addGroupItem(item: _Plugin, group: js.Any): Unit = js.native
+  def addGroupItem(item: Plugin, group: js.Any): Unit = js.native
   @JSName("get")
   def get_figure(property: figure): js.Object = js.native
   @JSName("get")
@@ -61,7 +61,7 @@ class Toolbar ()
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_plugins(
     property: plugins,
@@ -71,6 +71,6 @@ class Toolbar ()
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

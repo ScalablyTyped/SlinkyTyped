@@ -4,9 +4,9 @@ import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import typingsSlinky.heremaps.H.map.Object
 import typingsSlinky.heremaps.H.map.provider.TileProvider.Options
-import typingsSlinky.heremaps.H.net.Request.Priority
 import typingsSlinky.heremaps.H.util.ICache
 import typingsSlinky.heremaps.H.util.ICancelable
+import typingsSlinky.heremaps.H.util.Job.Priority
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.milkcocoa.milkcocoa
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.milkcocoa.Anon_Id
+import typingsSlinky.milkcocoa.AnonId
 import typingsSlinky.milkcocoa.milkcocoa.MilkCocoa.Error.AddAccount
 import typingsSlinky.milkcocoa.milkcocoa.MilkCocoa.Error.GetCurrentUser
 import typingsSlinky.milkcocoa.milkcocoa.MilkCocoa.Error.Login
@@ -23,7 +23,7 @@ class MilkCocoa protected () extends js.Object {
     callback: js.Function2[/* err */ AddAccount, /* user */ User, Unit]
   ): Unit = js.native
   def dataStore(path: String): DataStore = js.native
-  def getCurrentUser(callback: js.Function2[/* err */ GetCurrentUser, /* user */ Anon_Id, Unit]): Unit = js.native
+  def getCurrentUser(callback: js.Function2[/* err */ GetCurrentUser, /* user */ AnonId, Unit]): Unit = js.native
   def login(email: String, password: String, callback: js.Function2[/* err */ Login, /* user */ User, Unit]): Unit = js.native
   def logout(): Unit = js.native
   def logout(callback: js.Function1[/* err */ String, Unit]): Unit = js.native

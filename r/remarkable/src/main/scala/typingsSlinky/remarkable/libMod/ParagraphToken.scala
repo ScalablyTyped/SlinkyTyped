@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.remarkable.libMod._Token because Already inherited */ trait ParagraphToken extends TagToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait ParagraphToken extends TagToken {
   /**
     * Absence of empty line before current tag: `true` if absent, `false`
     * if present. List is tight if any list item is tight.

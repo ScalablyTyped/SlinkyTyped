@@ -1,6 +1,5 @@
 package typingsSlinky.dojo.dijit.tree
 
-import typingsSlinky.dojo.dijit.tree.dndSource.__Item
 import typingsSlinky.dojo.dojo.data.api.Item
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -134,7 +133,7 @@ class TreeStoreModel protected () extends js.Object {
     * @param parent             
     * @param insertIndex               Optional            
     */
-  def newItem(args: __Item, parent: Item, insertIndex: Double): Unit = js.native
+  def newItem(args: typingsSlinky.dojo.dijit.tree.dndSource.Item, parent: Item, insertIndex: Double): Unit = js.native
   /**
     * Callback whenever an item has changed, so that Tree
     * can update the label, icon, etc.   Note that changes

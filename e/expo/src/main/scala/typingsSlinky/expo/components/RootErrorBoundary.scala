@@ -2,7 +2,7 @@ package typingsSlinky.expo.components
 
 import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.expo.buildLaunchRootErrorBoundaryMod.default
+import typingsSlinky.expo.rootErrorBoundaryMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.bufferhelper
 
-import typingsSlinky.bufferhelper.bufferhelperMod.encoding
+import typingsSlinky.bufferhelper.mod.encoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

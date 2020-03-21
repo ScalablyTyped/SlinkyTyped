@@ -5,14 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onAfterDateSelect
-  - typings.webix.webixStrings.onBeforeDateSelect
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onChange
-  - typings.webix.webixStrings.onDateClear
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onTodaySet
-  - typings.webix.webixStrings.onViewShow
+  - typingsSlinky.webix.webixStrings.onAfterDateSelect
+  - typingsSlinky.webix.webixStrings.onBeforeDateSelect
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onChange
+  - typingsSlinky.webix.webixStrings.onDateClear
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onTodaySet
+  - typingsSlinky.webix.webixStrings.onViewShow
 */
 trait daterangeEventName extends js.Object
 

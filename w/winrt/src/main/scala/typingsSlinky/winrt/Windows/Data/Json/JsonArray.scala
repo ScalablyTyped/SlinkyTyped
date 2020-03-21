@@ -1,6 +1,6 @@
 package typingsSlinky.winrt.Windows.Data.Json
 
-import typingsSlinky.winrt.Anon_Result
+import typingsSlinky.winrt.AnonResult
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrt.Windows.Foundation.Collections.IVector
 import scala.scalajs.js
@@ -45,6 +45,6 @@ class JsonArray ()
 @js.native
 object JsonArray extends js.Object {
   def parse(input: String): JsonArray = js.native
-  def tryParse(input: String): Anon_Result = js.native
+  def tryParse(input: String): AnonResult = js.native
 }
 

@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 object addListener_disconnect extends js.Object {
   def apply(
     event: typingsSlinky.node.nodeStrings.disconnect,
-    listener: js.Function1[/* worker */ Worker, Unit]
+    listener: js.Function1[/* worker */ Worker_, Unit]
   ): Cluster = js.native
 }
 

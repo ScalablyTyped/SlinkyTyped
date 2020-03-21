@@ -10,9 +10,9 @@ JupyterLab statusbar package.
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/statusbar |
 | Keywords           | - |
-| # releases         | 56 |
+| # releases         | 57 |
 | # dependents       | 17 |
-| # downloads        | 505978 |
+| # downloads        | 513536 |
 | # stars            | 0 |
 
 ## Links

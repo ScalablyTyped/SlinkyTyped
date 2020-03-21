@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dijit._editor
 
 import org.scalajs.dom.raw.HTMLElement
-import org.scalajs.dom.raw.Window
+import typingsSlinky.std.Window_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,7 +12,6 @@ import scala.scalajs.js.annotation._
   * W3C range API
   * 
   */
-@JSName("range")
 trait range_ extends js.Object {
   /**
     * 
@@ -50,7 +49,7 @@ trait range_ extends js.Object {
     * 
     * @param win               Optional            
     */
-  def create(win: Window): js.Any
+  def create(win: Window_): js.Any
   /**
     * 
     * @param node             
@@ -89,7 +88,7 @@ trait range_ extends js.Object {
     * @param window             
     * @param ignoreUpdate               Optional            
     */
-  def getSelection(window: Window, ignoreUpdate: Boolean): js.Any
+  def getSelection(window: Window_, ignoreUpdate: Boolean): js.Any
 }
 
 object range_ {
@@ -100,13 +99,13 @@ object range_ {
     adjacentNoneTextNode: (js.Any, js.Any) => js.Array[_],
     atBeginningOfContainer: (HTMLElement, HTMLElement, Double) => Boolean,
     atEndOfContainer: (HTMLElement, HTMLElement, Double) => Boolean,
-    create: Window => js.Any,
+    create: Window_ => js.Any,
     getAncestor: (HTMLElement, js.RegExp, HTMLElement) => HTMLElement,
     getBlockAncestor: (HTMLElement, js.RegExp, HTMLElement) => js.Object,
     getCommonAncestor: (js.Any, js.Any, js.Any) => js.Any,
     getIndex: (HTMLElement, HTMLElement) => js.Object,
     getNode: (js.Array[_], HTMLElement) => HTMLElement,
-    getSelection: (Window, Boolean) => js.Any,
+    getSelection: (Window_, Boolean) => js.Any,
     ie: js.Object
   ): range_ = {
     val __obj = js.Dynamic.literal(BlockTagNames = BlockTagNames.asInstanceOf[js.Any], W3CRange = js.Any.fromFunction0(W3CRange), adjacentNoneTextNode = js.Any.fromFunction2(adjacentNoneTextNode), atBeginningOfContainer = js.Any.fromFunction3(atBeginningOfContainer), atEndOfContainer = js.Any.fromFunction3(atEndOfContainer), create = js.Any.fromFunction1(create), getAncestor = js.Any.fromFunction3(getAncestor), getBlockAncestor = js.Any.fromFunction3(getBlockAncestor), getCommonAncestor = js.Any.fromFunction3(getCommonAncestor), getIndex = js.Any.fromFunction2(getIndex), getNode = js.Any.fromFunction2(getNode), getSelection = js.Any.fromFunction2(getSelection), ie = ie.asInstanceOf[js.Any])

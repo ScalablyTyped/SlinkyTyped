@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.tableau.tableau.CategoricalFilter
-  - typings.tableau.tableau.QuantitativeFilter
-  - typings.tableau.tableau.RelativeDateFilter
+  - typingsSlinky.tableau.tableau.CategoricalFilter
+  - typingsSlinky.tableau.tableau.QuantitativeFilter
+  - typingsSlinky.tableau.tableau.RelativeDateFilter
 */
 trait ConcreteFilter extends js.Object
 

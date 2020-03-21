@@ -5,6 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object countdown {
-  type DateFunction = js.Function1[/* timespan */ Timespan, Unit]
-  type DateTime = js.UndefOr[Double | js.Date | DateFunction | Null]
+  type DateFunction = js.Function1[/* timespan */ typingsSlinky.countdown.countdown.Timespan, scala.Unit]
+  type DateTime = js.UndefOr[
+    scala.Double | js.Date | typingsSlinky.countdown.countdown.DateFunction | scala.Null
+  ]
 }

@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation._
   * A type that indicates how purchased items are to be shipped.
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.applepayjs.applepayjsStrings.shipping
-  - typings.applepayjs.applepayjsStrings.delivery
-  - typings.applepayjs.applepayjsStrings.storePickup
-  - typings.applepayjs.applepayjsStrings.servicePickup
+  - typingsSlinky.applepayjs.applepayjsStrings.shipping
+  - typingsSlinky.applepayjs.applepayjsStrings.delivery
+  - typingsSlinky.applepayjs.applepayjsStrings.storePickup
+  - typingsSlinky.applepayjs.applepayjsStrings.servicePickup
 */
 trait ApplePayShippingType extends js.Object
 

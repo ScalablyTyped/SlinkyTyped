@@ -1,7 +1,7 @@
 package typingsSlinky.pem
 
-import typingsSlinky.pem.pemMod._HashFunction
-import typingsSlinky.pem.pemMod._PrivateKeyCipher
+import typingsSlinky.pem.mod._HashFunction
+import typingsSlinky.pem.mod._PrivateKeyCipher
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

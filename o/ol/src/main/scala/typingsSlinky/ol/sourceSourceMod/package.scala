@@ -5,8 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object sourceSourceMod {
-  import typingsSlinky.ol.pluggableMapMod.FrameState
-
-  type Attribution = js.Function1[/* p0 */ FrameState, String | js.Array[String]]
-  type AttributionLike = String | js.Array[String] | Attribution
+  type Attribution = js.Function1[
+    /* p0 */ typingsSlinky.ol.pluggableMapMod.FrameState, 
+    java.lang.String | js.Array[java.lang.String]
+  ]
+  type AttributionLike = java.lang.String | js.Array[java.lang.String] | typingsSlinky.ol.sourceSourceMod.Attribution
 }

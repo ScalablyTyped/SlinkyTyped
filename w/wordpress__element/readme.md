@@ -10,15 +10,14 @@ Element React module for WordPress.
 | ------------------ | :-------------: |
 | Full name          | @wordpress/element |
 | Keywords           | wordpress, element, react |
-| # releases         | 33 |
-| # dependents       | 30 |
-| # downloads        | 347778 |
+| # releases         | 32 |
+| # dependents       | 31 |
+| # downloads        | 358456 |
 | # stars            | 0 |
 
 ## Links
 - [Homepage](https://github.com/WordPress/gutenberg/tree/master/packages/element/README.md)
 - [Bugs](https://github.com/WordPress/gutenberg/issues)
-- [Repository](https://github.com/WordPress/gutenberg)
 - [Npm](https://www.npmjs.com/package/%40wordpress%2Felement)
     
 

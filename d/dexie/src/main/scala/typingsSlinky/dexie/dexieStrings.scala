@@ -1,6 +1,6 @@
 package typingsSlinky.dexie
 
-import typingsSlinky.dexie.dexieMod.TransactionMode
+import typingsSlinky.dexie.mod.TransactionMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

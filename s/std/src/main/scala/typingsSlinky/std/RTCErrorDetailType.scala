@@ -5,21 +5,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.`data-channel-failure`
-  - typings.std.stdStrings.`dtls-failure`
-  - typings.std.stdStrings.`fingerprint-failure`
-  - typings.std.stdStrings.`idp-bad-script-failure`
-  - typings.std.stdStrings.`idp-execution-failure`
-  - typings.std.stdStrings.`idp-load-failure`
-  - typings.std.stdStrings.`idp-need-login`
-  - typings.std.stdStrings.`idp-timeout`
-  - typings.std.stdStrings.`idp-tls-failure`
-  - typings.std.stdStrings.`idp-token-expired`
-  - typings.std.stdStrings.`idp-token-invalid`
-  - typings.std.stdStrings.`sctp-failure`
-  - typings.std.stdStrings.`sdp-syntax-error`
-  - typings.std.stdStrings.`hardware-encoder-not-available`
-  - typings.std.stdStrings.`hardware-encoder-error`
+  - typingsSlinky.std.stdStrings.`data-channel-failure`
+  - typingsSlinky.std.stdStrings.`dtls-failure`
+  - typingsSlinky.std.stdStrings.`fingerprint-failure`
+  - typingsSlinky.std.stdStrings.`hardware-encoder-error`
+  - typingsSlinky.std.stdStrings.`hardware-encoder-not-available`
+  - typingsSlinky.std.stdStrings.`idp-bad-script-failure`
+  - typingsSlinky.std.stdStrings.`idp-execution-failure`
+  - typingsSlinky.std.stdStrings.`idp-load-failure`
+  - typingsSlinky.std.stdStrings.`idp-need-login`
+  - typingsSlinky.std.stdStrings.`idp-timeout`
+  - typingsSlinky.std.stdStrings.`idp-tls-failure`
+  - typingsSlinky.std.stdStrings.`idp-token-expired`
+  - typingsSlinky.std.stdStrings.`idp-token-invalid`
+  - typingsSlinky.std.stdStrings.`sctp-failure`
+  - typingsSlinky.std.stdStrings.`sdp-syntax-error`
 */
 trait RTCErrorDetailType extends js.Object
 

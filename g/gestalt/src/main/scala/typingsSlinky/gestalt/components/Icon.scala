@@ -4,9 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.Anon_Path
-import typingsSlinky.gestalt.gestaltMod.IconProps
-import typingsSlinky.gestalt.gestaltMod.Icons
+import typingsSlinky.gestalt.AnonPath
 import typingsSlinky.gestalt.gestaltStrings.blue
 import typingsSlinky.gestalt.gestaltStrings.darkGray
 import typingsSlinky.gestalt.gestaltStrings.eggplant
@@ -24,12 +22,14 @@ import typingsSlinky.gestalt.gestaltStrings.purple
 import typingsSlinky.gestalt.gestaltStrings.red
 import typingsSlinky.gestalt.gestaltStrings.watermelon
 import typingsSlinky.gestalt.gestaltStrings.white
+import typingsSlinky.gestalt.mod.IconProps
+import typingsSlinky.gestalt.mod.Icons
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Icon
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Icon] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Icon] {
   @JSImport("gestalt", "Icon")
   @js.native
   object componentImport extends js.Object
@@ -39,11 +39,11 @@ object Icon
     accessibilityLabel: String,
     icon: Icons,
     color: blue | darkGray | eggplant | gray | green | lightGray | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | watermelon | white = null,
-    dangerouslySetSvgPath: Anon_Path = null,
+    dangerouslySetSvgPath: AnonPath = null,
     `inline`: js.UndefOr[Boolean] = js.undefined,
     size: Double | String = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Icon] = {
+  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Icon] = {
     val __obj = js.Dynamic.literal(accessibilityLabel = accessibilityLabel.asInstanceOf[js.Any], icon = icon.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
     if (dangerouslySetSvgPath != null) __obj.updateDynamic("dangerouslySetSvgPath")(dangerouslySetSvgPath.asInstanceOf[js.Any])

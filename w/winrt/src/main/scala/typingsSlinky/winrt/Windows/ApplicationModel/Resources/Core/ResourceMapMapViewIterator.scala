@@ -1,6 +1,6 @@
 package typingsSlinky.winrt.Windows.ApplicationModel.Resources.Core
 
-import typingsSlinky.winrt.Anon_Items
+import typingsSlinky.winrt.AnonItems
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrt.Windows.Foundation.Collections.IKeyValuePair
 import scala.scalajs.js
@@ -15,7 +15,7 @@ class ResourceMapMapViewIterator () extends IIterator[IKeyValuePair[String, Reso
   /* CompleteClass */
   override var hasCurrent: Boolean = js.native
   /* CompleteClass */
-  override def getMany(): Anon_Items[IKeyValuePair[String, ResourceMap]] = js.native
+  override def getMany(): AnonItems[IKeyValuePair[String, ResourceMap]] = js.native
   /* CompleteClass */
   override def moveNext(): Boolean = js.native
 }

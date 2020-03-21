@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A structured set of questions and their answers
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait QuestionnaireResponse extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait QuestionnaireResponse extends DomainResource {
   /**
     * Contains extended information for property 'authored'.
     */

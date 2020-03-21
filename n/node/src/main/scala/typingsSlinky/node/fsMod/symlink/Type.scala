@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.node.nodeStrings.dir
-  - typings.node.nodeStrings.file
-  - typings.node.nodeStrings.junction
+  - typingsSlinky.node.nodeStrings.dir
+  - typingsSlinky.node.nodeStrings.file
+  - typingsSlinky.node.nodeStrings.junction
 */
 trait Type extends js.Object
 

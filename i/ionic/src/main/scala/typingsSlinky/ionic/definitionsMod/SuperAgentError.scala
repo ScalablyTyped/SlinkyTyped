@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait SuperAgentError extends Error {
-  var response: typingsSlinky.superagent.superagentMod.Response
+  var response: typingsSlinky.superagent.mod.Response
 }
 
 object SuperAgentError {
@@ -14,7 +14,7 @@ object SuperAgentError {
   def apply(
     message: String,
     name: String,
-    response: typingsSlinky.superagent.superagentMod.Response,
+    response: typingsSlinky.superagent.mod.Response,
     stack: String = null
   ): SuperAgentError = {
     val __obj = js.Dynamic.literal(message = message.asInstanceOf[js.Any], name = name.asInstanceOf[js.Any], response = response.asInstanceOf[js.Any])

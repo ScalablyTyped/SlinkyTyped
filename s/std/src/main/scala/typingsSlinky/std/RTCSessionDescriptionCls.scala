@@ -6,7 +6,7 @@ import scala.scalajs.js.annotation._
 
 @JSGlobal("RTCSessionDescription")
 @js.native
-class RTCSessionDescriptionCls protected () extends RTCSessionDescription {
+class RTCSessionDescriptionCls () extends RTCSessionDescription {
   def this(descriptionInitDict: org.scalajs.dom.experimental.webrtc.RTCSessionDescriptionInit) = this()
   /* CompleteClass */
   override val sdp: java.lang.String = js.native

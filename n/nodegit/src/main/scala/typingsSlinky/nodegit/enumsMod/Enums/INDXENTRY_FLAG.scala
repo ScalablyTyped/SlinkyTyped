@@ -7,8 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.nodegit.nodegitNumbers.`16384`
-  - typings.nodegit.nodegitNumbers.`32768`
+  - typingsSlinky.nodegit.nodegitNumbers.`16384`
+  - typingsSlinky.nodegit.nodegitNumbers.`32768`
 */
 trait INDXENTRY_FLAG extends js.Object
 

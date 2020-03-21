@@ -5,13 +5,13 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsTabviewTabViewMod.TabPanelProps
+import typingsSlinky.primereact.tabViewMod.TabPanelProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabPanel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.tabviewMod.TabPanel] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactTabviewMod.TabPanel] {
   @JSImport("primereact/tabview", "TabPanel")
   @js.native
   object componentImport extends js.Object
@@ -27,7 +27,7 @@ object TabPanel
     leftIcon: String = null,
     rightIcon: String = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.tabviewMod.TabPanel] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTabviewMod.TabPanel] = {
     val __obj = js.Dynamic.literal()
     if (contentClassName != null) __obj.updateDynamic("contentClassName")(contentClassName.asInstanceOf[js.Any])
     if (contentStyle != null) __obj.updateDynamic("contentStyle")(contentStyle.asInstanceOf[js.Any])
@@ -39,7 +39,9 @@ object TabPanel
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.tabviewMod.TabPanel] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.tabviewMod.TabPanel](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTabviewMod.TabPanel] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactTabviewMod.TabPanel](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TabPanelProps
 }
 

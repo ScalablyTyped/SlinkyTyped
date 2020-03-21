@@ -1,6 +1,6 @@
 package typingsSlinky.graphql.typeMod
 
-import typingsSlinky.graphql.typeDefinitionMod.GraphQLNullableType
+import typingsSlinky.graphql.definitionMod.GraphQLNullableType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/type", "GraphQLNonNull")
 @js.native
 class GraphQLNonNullCls protected ()
-  extends typingsSlinky.graphql.typeDefinitionMod.GraphQLNonNull[GraphQLNullableType] {
+  extends typingsSlinky.graphql.definitionMod.GraphQLNonNull[GraphQLNullableType] {
   def this(`type`: GraphQLNullableType) = this()
   /* CompleteClass */
   override val ofType: GraphQLNullableType = js.native

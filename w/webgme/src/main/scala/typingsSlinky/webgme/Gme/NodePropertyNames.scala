@@ -1,17 +1,17 @@
 package typingsSlinky.webgme.Gme
 
-import typingsSlinky.webgme.Anon_Name
+import typingsSlinky.webgme.AnonName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait NodePropertyNames extends js.Object {
-  var Attributes: Anon_Name
+  var Attributes: AnonName
 }
 
 object NodePropertyNames {
   @scala.inline
-  def apply(Attributes: Anon_Name): NodePropertyNames = {
+  def apply(Attributes: AnonName): NodePropertyNames = {
     val __obj = js.Dynamic.literal(Attributes = Attributes.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[NodePropertyNames]

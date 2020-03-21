@@ -5,12 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.googlepay.googlepayStrings.AMEX
-  - typings.googlepay.googlepayStrings.DISCOVER
-  - typings.googlepay.googlepayStrings.JCB
-  - typings.googlepay.googlepayStrings.MASTERCARD
-  - typings.googlepay.googlepayStrings.VISA
-  - typings.googlepay.googlepayStrings.INTERAC
+  - typingsSlinky.googlepay.googlepayStrings.AMEX
+  - typingsSlinky.googlepay.googlepayStrings.DISCOVER
+  - typingsSlinky.googlepay.googlepayStrings.JCB
+  - typingsSlinky.googlepay.googlepayStrings.MASTERCARD
+  - typingsSlinky.googlepay.googlepayStrings.VISA
+  - typingsSlinky.googlepay.googlepayStrings.INTERAC
 */
 trait AllowedCardNetwork extends js.Object
 

@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.mvc
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.style
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.mvc.Element")
 @js.native
-class Element () extends _WidgetBase {
+class Element () extends WidgetBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**

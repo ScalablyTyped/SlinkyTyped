@@ -5,10 +5,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.recharts.rechartsMod.DataKey
-import typingsSlinky.recharts.rechartsMod.RechartsFunction
-import typingsSlinky.recharts.rechartsMod.ScaleType
-import typingsSlinky.recharts.rechartsMod.ZAxisProps
+import typingsSlinky.recharts.mod.DataKey
+import typingsSlinky.recharts.mod.RechartsFunction
+import typingsSlinky.recharts.mod.ScaleType
+import typingsSlinky.recharts.mod.ZAxisProps
 import typingsSlinky.recharts.rechartsStrings.category
 import typingsSlinky.recharts.rechartsStrings.number
 import scala.scalajs.js
@@ -16,7 +16,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ZAxis
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.rechartsMod.ZAxis] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.ZAxis] {
   @JSImport("recharts", "ZAxis")
   @js.native
   object componentImport extends js.Object
@@ -31,7 +31,7 @@ object ZAxis
     unit: String | Double = null,
     zAxisId: String | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.ZAxis] = {
+  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.ZAxis] = {
     val __obj = js.Dynamic.literal()
     if (dataKey != null) __obj.updateDynamic("dataKey")(dataKey.asInstanceOf[js.Any])
     if (name != null) __obj.updateDynamic("name")(name.asInstanceOf[js.Any])
@@ -43,7 +43,7 @@ object ZAxis
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.ZAxis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.rechartsMod.ZAxis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.ZAxis] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.ZAxis](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ZAxisProps
 }
 

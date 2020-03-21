@@ -20,12 +20,12 @@ class Event[T] () extends js.Object {
   		* @method subscribe
   		* @param fn {Function} Event handler.
   		*/
-  def subscribe(fn: js.Function2[org.scalajs.dom.raw.Event | (/* e */ EventData), /* data */ T, Unit]): Unit = js.native
+  def subscribe(fn: js.Function2[(/* e */ DOMEvent) | (/* e */ EventData), /* data */ T, Unit]): Unit = js.native
   /***
   		* Removes an event handler added with <code>subscribe(fn)</code>.
   		* @method unsubscribe
   		* @param fn {Function} Event handler to be removed.
   		*/
-  def unsubscribe(fn: js.Function2[org.scalajs.dom.raw.Event | (/* e */ EventData), /* data */ T, Unit]): Unit = js.native
+  def unsubscribe(fn: js.Function2[(/* e */ DOMEvent) | (/* e */ EventData), /* data */ T, Unit]): Unit = js.native
 }
 

@@ -10,9 +10,9 @@ Javascript identicon generator
 | ------------------ | :-------------: |
 | Full name          | jdenticon |
 | Keywords           | javascript, identicon, jdenticon, avatar |
-| # releases         | 6 |
-| # dependents       | 20 |
-| # downloads        | 141937 |
+| # releases         | 5 |
+| # dependents       | 21 |
+| # downloads        | 152005 |
 | # stars            | 2 |
 
 ## Links

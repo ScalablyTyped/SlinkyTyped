@@ -5,9 +5,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_BeginDate
-import typingsSlinky.baseui.Anon_DateEvent
-import typingsSlinky.baseui.Anon_Date_912435367
+import typingsSlinky.baseui.AnonBeginDate
+import typingsSlinky.baseui.AnonDate
+import typingsSlinky.baseui.AnonDateDate
+import typingsSlinky.baseui.AnonDateEvent
 import typingsSlinky.baseui.baseuiStrings.horizontal
 import typingsSlinky.baseui.baseuiStrings.vertical
 import typingsSlinky.baseui.datepickerMod.CalendarProps
@@ -24,7 +25,6 @@ object Calendar
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: onChange, value */
   def apply(
     autoFocusCalendar: js.UndefOr[Boolean] = js.undefined,
     excludeDates: js.Array[js.Date] = null,
@@ -35,20 +35,22 @@ object Calendar
     maxDate: js.Date = null,
     minDate: js.Date = null,
     monthsShown: Int | Double = null,
-    onDayClick: /* args */ Anon_DateEvent => _ = null,
-    onDayMouseLeave: /* args */ Anon_DateEvent => _ = null,
-    onDayMouseOver: /* args */ Anon_DateEvent => _ = null,
-    onMonthChange: /* args */ Anon_Date_912435367 => _ = null,
-    onYearChange: /* args */ Anon_Date_912435367 => _ = null,
+    onChange: /* args */ AnonDate => js.Any = null,
+    onDayClick: /* args */ AnonDateEvent => _ = null,
+    onDayMouseLeave: /* args */ AnonDateEvent => _ = null,
+    onDayMouseOver: /* args */ AnonDateEvent => _ = null,
+    onMonthChange: /* args */ AnonDateDate => _ = null,
+    onYearChange: /* args */ AnonDateDate => _ = null,
     orientation: horizontal | vertical = null,
     overrides: DatepickerOverrides[SharedStylePropsT] = null,
     peekNextMonth: js.UndefOr[Boolean] = js.undefined,
     quickSelect: js.UndefOr[Boolean] = js.undefined,
-    quickSelectOptions: js.Array[Anon_BeginDate] = null,
+    quickSelectOptions: js.Array[AnonBeginDate] = null,
     range: js.UndefOr[Boolean] = js.undefined,
     timeSelectEnd: js.UndefOr[Boolean] = js.undefined,
     timeSelectStart: js.UndefOr[Boolean] = js.undefined,
     trapTabbing: js.UndefOr[Boolean] = js.undefined,
+    value: js.Date | js.Array[js.Date] = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, typingsSlinky.baseui.datepickerMod.Calendar] = {
     val __obj = js.Dynamic.literal()
@@ -61,6 +63,7 @@ object Calendar
     if (maxDate != null) __obj.updateDynamic("maxDate")(maxDate.asInstanceOf[js.Any])
     if (minDate != null) __obj.updateDynamic("minDate")(minDate.asInstanceOf[js.Any])
     if (monthsShown != null) __obj.updateDynamic("monthsShown")(monthsShown.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onDayClick != null) __obj.updateDynamic("onDayClick")(js.Any.fromFunction1(onDayClick))
     if (onDayMouseLeave != null) __obj.updateDynamic("onDayMouseLeave")(js.Any.fromFunction1(onDayMouseLeave))
     if (onDayMouseOver != null) __obj.updateDynamic("onDayMouseOver")(js.Any.fromFunction1(onDayMouseOver))
@@ -75,6 +78,7 @@ object Calendar
     if (!js.isUndefined(timeSelectEnd)) __obj.updateDynamic("timeSelectEnd")(timeSelectEnd.asInstanceOf[js.Any])
     if (!js.isUndefined(timeSelectStart)) __obj.updateDynamic("timeSelectStart")(timeSelectStart.asInstanceOf[js.Any])
     if (!js.isUndefined(trapTabbing)) __obj.updateDynamic("trapTabbing")(trapTabbing.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }

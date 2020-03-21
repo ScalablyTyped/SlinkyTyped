@@ -5,10 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object cryptoMod {
-  import typingsSlinky.k6.k6Mod.bytes
-  import typingsSlinky.k6.k6Strings.binary
-
-  type BinaryEncoding = binary
-  type Output[OE /* <: OutputEncoding */] = bytes | String
-  type OutputEncoding = StringEncoding | BinaryEncoding
+  type BinaryEncoding = typingsSlinky.k6.k6Strings.binary
+  type Output[OE /* <: typingsSlinky.k6.cryptoMod.OutputEncoding */] = typingsSlinky.k6.mod.bytes | java.lang.String
+  type OutputEncoding = typingsSlinky.k6.cryptoMod.StringEncoding | typingsSlinky.k6.cryptoMod.BinaryEncoding
 }

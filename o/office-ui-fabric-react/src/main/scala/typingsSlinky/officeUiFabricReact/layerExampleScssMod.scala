@@ -1,0 +1,19 @@
+package typingsSlinky.officeUiFabricReact
+
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.content_35e9f74a
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.customHost_35e9f74a
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.nonLayered_35e9f74a
+import typingsSlinky.officeUiFabricReact.officeUiFabricReactStrings.textContent_35e9f74a
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("office-ui-fabric-react/lib/components/Layer/examples/Layer.Example.scss", JSImport.Namespace)
+@js.native
+object layerExampleScssMod extends js.Object {
+  val content: content_35e9f74a = js.native
+  val customHost: customHost_35e9f74a = js.native
+  val nonLayered: nonLayered_35e9f74a = js.native
+  val textContent: textContent_35e9f74a = js.native
+}
+

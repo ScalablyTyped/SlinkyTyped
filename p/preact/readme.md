@@ -1,7 +1,7 @@
 
 # Scala.js typings for preact
 
-Typings are for version 10.1.1
+Typings are for version 10.3.2
 
 ## Library description:
 Fast 3kb React-compatible Virtual DOM library.
@@ -10,9 +10,9 @@ Fast 3kb React-compatible Virtual DOM library.
 | ------------------ | :-------------: |
 | Full name          | preact |
 | Keywords           | preact, react, ui, user interface, virtual dom, vdom, components, dom diff |
-| # releases         | 32 |
+| # releases         | 33 |
 | # dependents       | 502 |
-| # downloads        | 8346201 |
+| # downloads        | 8363333 |
 | # stars            | 33 |
 
 ## Links

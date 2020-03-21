@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object HeaderCell
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.primereact.componentsDatatableHeaderCellMod.HeaderCell] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.primereact.headerCellMod.HeaderCell] {
   @JSImport("primereact/components/datatable/HeaderCell", "HeaderCell")
   @js.native
   object componentImport extends js.Object

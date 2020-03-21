@@ -1,7 +1,7 @@
 
 # Scala.js typings for firebase__database-types
 
-Typings are for version 0.4.10
+Typings are for version 0.4.11
 
 ## Library description:
 @firebase/database Types
@@ -10,9 +10,9 @@ Typings are for version 0.4.10
 | ------------------ | :-------------: |
 | Full name          | @firebase/database-types |
 | Keywords           | - |
-| # releases         | 899 |
+| # releases         | 909 |
 | # dependents       | 15 |
-| # downloads        | 32921220 |
+| # downloads        | 33401067 |
 | # stars            | 0 |
 
 ## Links

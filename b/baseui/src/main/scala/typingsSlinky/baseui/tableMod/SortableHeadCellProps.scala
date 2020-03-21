@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.tableMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.Anon_HeadCell
+import typingsSlinky.baseui.AnonHeadCell
 import typingsSlinky.baseui.baseuiStrings.ASC
 import typingsSlinky.baseui.baseuiStrings.DESC
 import scala.scalajs.js
@@ -14,7 +14,7 @@ trait SortableHeadCellProps extends js.Object {
   var disabled: js.UndefOr[Boolean] = js.undefined
   var fillClickTarget: js.UndefOr[Boolean] = js.undefined
   var onSort: js.UndefOr[js.Function0[_]] = js.undefined
-  var overrides: js.UndefOr[Anon_HeadCell] = js.undefined
+  var overrides: js.UndefOr[AnonHeadCell] = js.undefined
   var title: String
 }
 
@@ -27,7 +27,7 @@ object SortableHeadCellProps {
     disabled: js.UndefOr[Boolean] = js.undefined,
     fillClickTarget: js.UndefOr[Boolean] = js.undefined,
     onSort: () => _ = null,
-    overrides: Anon_HeadCell = null
+    overrides: AnonHeadCell = null
   ): SortableHeadCellProps = {
     val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])
     if (children != null) __obj.updateDynamic("children")(children.asInstanceOf[js.Any])

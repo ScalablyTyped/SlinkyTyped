@@ -12,7 +12,7 @@ Typings are for version 0.3.0
 | Keywords           | image, image processing, image manipulation, png, jpg, jpeg, bmp, resize, scale, crop |
 | # releases         | 3 |
 | # dependents       | 6 |
-| # downloads        | 16198 |
+| # downloads        | 16109 |
 | # stars            | 0 |
 
 ## Links

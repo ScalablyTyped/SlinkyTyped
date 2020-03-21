@@ -5,47 +5,47 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.baseui.baseuiStrings.block
-  - typings.baseui.baseuiStrings.`inline`
-  - typings.baseui.baseuiStrings.`run-in`
-  - typings.baseui.baseuiStrings.flow
-  - typings.baseui.baseuiStrings.`flow-root`
-  - typings.baseui.baseuiStrings.table
-  - typings.baseui.baseuiStrings.flex
-  - typings.baseui.baseuiStrings.grid
-  - typings.baseui.baseuiStrings.ruby
-  - typings.baseui.baseuiStrings.`block flow`
-  - typings.baseui.baseuiStrings.`inline table`
-  - typings.baseui.baseuiStrings.`flex run-in`
-  - typings.baseui.baseuiStrings.`list-item`
-  - typings.baseui.baseuiStrings.`list-item block`
-  - typings.baseui.baseuiStrings.`list-item inline`
-  - typings.baseui.baseuiStrings.`list-item flow`
-  - typings.baseui.baseuiStrings.`list-item flow-root`
-  - typings.baseui.baseuiStrings.`list-item block flow`
-  - typings.baseui.baseuiStrings.`list-item block flow-root`
-  - typings.baseui.baseuiStrings.`flow list-item block`
-  - typings.baseui.baseuiStrings.`table-row-group`
-  - typings.baseui.baseuiStrings.`table-header-group`
-  - typings.baseui.baseuiStrings.`table-footer-group`
-  - typings.baseui.baseuiStrings.`table-row`
-  - typings.baseui.baseuiStrings.`table-cell`
-  - typings.baseui.baseuiStrings.`table-column-group`
-  - typings.baseui.baseuiStrings.`table-column`
-  - typings.baseui.baseuiStrings.`table-caption`
-  - typings.baseui.baseuiStrings.`ruby-base`
-  - typings.baseui.baseuiStrings.`ruby-text`
-  - typings.baseui.baseuiStrings.`ruby-base-container`
-  - typings.baseui.baseuiStrings.`ruby-text-container`
-  - typings.baseui.baseuiStrings.contents
-  - typings.baseui.baseuiStrings.none
-  - typings.baseui.baseuiStrings.`inline-block`
-  - typings.baseui.baseuiStrings.`inline-table`
-  - typings.baseui.baseuiStrings.`inline-flex`
-  - typings.baseui.baseuiStrings.`inline-grid`
-  - typings.baseui.baseuiStrings.inherit
-  - typings.baseui.baseuiStrings.initial
-  - typings.baseui.baseuiStrings.unset
+  - typingsSlinky.baseui.baseuiStrings.block
+  - typingsSlinky.baseui.baseuiStrings.`inline`
+  - typingsSlinky.baseui.baseuiStrings.`run-in`
+  - typingsSlinky.baseui.baseuiStrings.flow
+  - typingsSlinky.baseui.baseuiStrings.`flow-root`
+  - typingsSlinky.baseui.baseuiStrings.table
+  - typingsSlinky.baseui.baseuiStrings.flex
+  - typingsSlinky.baseui.baseuiStrings.grid
+  - typingsSlinky.baseui.baseuiStrings.ruby
+  - typingsSlinky.baseui.baseuiStrings.`block flow`
+  - typingsSlinky.baseui.baseuiStrings.`inline table`
+  - typingsSlinky.baseui.baseuiStrings.`flex run-in`
+  - typingsSlinky.baseui.baseuiStrings.`list-item`
+  - typingsSlinky.baseui.baseuiStrings.`list-item block`
+  - typingsSlinky.baseui.baseuiStrings.`list-item inline`
+  - typingsSlinky.baseui.baseuiStrings.`list-item flow`
+  - typingsSlinky.baseui.baseuiStrings.`list-item flow-root`
+  - typingsSlinky.baseui.baseuiStrings.`list-item block flow`
+  - typingsSlinky.baseui.baseuiStrings.`list-item block flow-root`
+  - typingsSlinky.baseui.baseuiStrings.`flow list-item block`
+  - typingsSlinky.baseui.baseuiStrings.`table-row-group`
+  - typingsSlinky.baseui.baseuiStrings.`table-header-group`
+  - typingsSlinky.baseui.baseuiStrings.`table-footer-group`
+  - typingsSlinky.baseui.baseuiStrings.`table-row`
+  - typingsSlinky.baseui.baseuiStrings.`table-cell`
+  - typingsSlinky.baseui.baseuiStrings.`table-column-group`
+  - typingsSlinky.baseui.baseuiStrings.`table-column`
+  - typingsSlinky.baseui.baseuiStrings.`table-caption`
+  - typingsSlinky.baseui.baseuiStrings.`ruby-base`
+  - typingsSlinky.baseui.baseuiStrings.`ruby-text`
+  - typingsSlinky.baseui.baseuiStrings.`ruby-base-container`
+  - typingsSlinky.baseui.baseuiStrings.`ruby-text-container`
+  - typingsSlinky.baseui.baseuiStrings.contents
+  - typingsSlinky.baseui.baseuiStrings.none
+  - typingsSlinky.baseui.baseuiStrings.`inline-block`
+  - typingsSlinky.baseui.baseuiStrings.`inline-table`
+  - typingsSlinky.baseui.baseuiStrings.`inline-flex`
+  - typingsSlinky.baseui.baseuiStrings.`inline-grid`
+  - typingsSlinky.baseui.baseuiStrings.inherit
+  - typingsSlinky.baseui.baseuiStrings.initial
+  - typingsSlinky.baseui.baseuiStrings.unset
 */
 trait Display extends js.Object
 

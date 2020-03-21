@@ -1,7 +1,7 @@
 package typingsSlinky.k6.globalMod._Global_
 
-import typingsSlinky.k6.k6Mod.bytes
 import typingsSlinky.k6.k6Strings.b
+import typingsSlinky.k6.mod.bytes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

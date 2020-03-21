@@ -1,0 +1,16 @@
+package typingsSlinky.typescriptServices.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("typescript-services", "HeritageClause")
+@js.native
+class HeritageClause protected ()
+  extends typingsSlinky.typescriptServices.TypeScript.HeritageClause {
+  def this(
+    _nodeType: typingsSlinky.typescriptServices.TypeScript.SyntaxKind,
+    typeNames: typingsSlinky.typescriptServices.TypeScript.ISeparatedSyntaxList2
+  ) = this()
+}
+

@@ -1,8 +1,8 @@
 package typingsSlinky.needle
 
-import typingsSlinky.needle.needleMod.core.NeedleHttpVerbs
-import typingsSlinky.needle.needleMod.core.NeedleReadWriteHttpVerbs
-import typingsSlinky.needle.needleMod.core.NeedleReadonlyHttpVerbs
+import typingsSlinky.needle.mod.core.NeedleHttpVerbs
+import typingsSlinky.needle.mod.core.NeedleReadWriteHttpVerbs
+import typingsSlinky.needle.mod.core.NeedleReadonlyHttpVerbs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

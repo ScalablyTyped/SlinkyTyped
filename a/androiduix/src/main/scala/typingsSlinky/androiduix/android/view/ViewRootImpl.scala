@@ -6,7 +6,7 @@ import typingsSlinky.androiduix.android.graphics.Rect
 import typingsSlinky.androiduix.android.os.Handler
 import typingsSlinky.androiduix.android.view.View.AttachInfo.InvalidateInfo
 import typingsSlinky.androiduix.java.lang.Runnable
-import typingsSlinky.std.Event
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -67,7 +67,7 @@ class ViewRootImpl () extends ViewParent {
   /* private */ def deliverInputEvent(event: js.Any): js.Any = js.native
   def dispatchInputEvent(event: KeyEvent): Boolean = js.native
   def dispatchInputEvent(event: MotionEvent): Boolean = js.native
-  def dispatchInputEvent(event: Event): Boolean = js.native
+  def dispatchInputEvent(event: Event_): Boolean = js.native
   def dispatchInvalidateDelayed(view: View, delayMilliseconds: Double): Unit = js.native
   def dispatchInvalidateOnAnimation(view: View): Unit = js.native
   def dispatchInvalidateRectDelayed(info: InvalidateInfo, delayMilliseconds: Double): Unit = js.native

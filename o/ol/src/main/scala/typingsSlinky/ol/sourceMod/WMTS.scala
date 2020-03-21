@@ -1,7 +1,7 @@
 package typingsSlinky.ol.sourceMod
 
-import typingsSlinky.ol.sourceWMTSMod.Options
-import typingsSlinky.ol.sourceWMTSMod.default
+import typingsSlinky.ol.wmtsMod.Options
+import typingsSlinky.ol.wmtsMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

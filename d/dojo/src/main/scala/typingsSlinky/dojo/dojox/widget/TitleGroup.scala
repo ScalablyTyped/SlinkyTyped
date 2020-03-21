@@ -2,7 +2,7 @@ package typingsSlinky.dojo.dojox.widget
 
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.dojo.dijit.TitlePane
-import typingsSlinky.dojo.dijit._Widget
+import typingsSlinky.dojo.dijit.Widget
 import typingsSlinky.dojo.dojoStrings.style
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.widget.TitleGroup")
 @js.native
-class TitleGroup () extends _Widget {
+class TitleGroup () extends Widget {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**

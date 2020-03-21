@@ -29,27 +29,27 @@ import scala.scalajs.js.annotation._
   * An enumeration for Attribute Type metadata
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmNumbers.`0`
-  - typings.xrm.xrmNumbers.`1`
-  - typings.xrm.xrmNumbers.`2`
-  - typings.xrm.xrmNumbers.`3`
-  - typings.xrm.xrmNumbers.`4`
-  - typings.xrm.xrmNumbers.`5`
-  - typings.xrm.xrmNumbers.`6`
-  - typings.xrm.xrmNumbers.`7`
-  - typings.xrm.xrmNumbers.`8`
-  - typings.xrm.xrmNumbers.`9`
-  - typings.xrm.xrmNumbers.`10`
-  - typings.xrm.xrmNumbers.`11`
-  - typings.xrm.xrmNumbers.`12`
-  - typings.xrm.xrmNumbers.`13`
-  - typings.xrm.xrmNumbers.`14`
-  - typings.xrm.xrmNumbers.`15`
-  - typings.xrm.xrmNumbers.`16`
-  - typings.xrm.xrmNumbers.`17`
-  - typings.xrm.xrmNumbers.`18`
-  - typings.xrm.xrmNumbers.`19`
-  - typings.xrm.xrmNumbers.`20`
+  - typingsSlinky.xrm.xrmNumbers.`0`
+  - typingsSlinky.xrm.xrmNumbers.`1`
+  - typingsSlinky.xrm.xrmNumbers.`2`
+  - typingsSlinky.xrm.xrmNumbers.`3`
+  - typingsSlinky.xrm.xrmNumbers.`4`
+  - typingsSlinky.xrm.xrmNumbers.`5`
+  - typingsSlinky.xrm.xrmNumbers.`6`
+  - typingsSlinky.xrm.xrmNumbers.`7`
+  - typingsSlinky.xrm.xrmNumbers.`8`
+  - typingsSlinky.xrm.xrmNumbers.`9`
+  - typingsSlinky.xrm.xrmNumbers.`10`
+  - typingsSlinky.xrm.xrmNumbers.`11`
+  - typingsSlinky.xrm.xrmNumbers.`12`
+  - typingsSlinky.xrm.xrmNumbers.`13`
+  - typingsSlinky.xrm.xrmNumbers.`14`
+  - typingsSlinky.xrm.xrmNumbers.`15`
+  - typingsSlinky.xrm.xrmNumbers.`16`
+  - typingsSlinky.xrm.xrmNumbers.`17`
+  - typingsSlinky.xrm.xrmNumbers.`18`
+  - typingsSlinky.xrm.xrmNumbers.`19`
+  - typingsSlinky.xrm.xrmNumbers.`20`
 */
 trait AttributeTypeCode extends js.Object
 

@@ -1,18 +1,18 @@
 package typingsSlinky.ionic.libHelpMod
 
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandMetadataInput
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.NamespaceLocateResult
-import typingsSlinky.atIonicCliDashFramework.libColorsMod.Colors
 import typingsSlinky.ionic.definitionsMod.CommandMetadata
 import typingsSlinky.ionic.definitionsMod.CommandMetadataOption
 import typingsSlinky.ionic.definitionsMod.ICommand
 import typingsSlinky.ionic.definitionsMod.INamespace
+import typingsSlinky.ionicCliFramework.colorsMod.Colors
+import typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataInput
+import typingsSlinky.ionicCliFramework.definitionsMod.NamespaceLocateResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait NamespaceHelpFormatterDeps
-  extends typingsSlinky.atIonicCliDashFramework.libHelpMod.NamespaceHelpFormatterDeps[ICommand, INamespace, CommandMetadata, CommandMetadataInput, CommandMetadataOption] {
+  extends typingsSlinky.ionicCliFramework.helpMod.NamespaceHelpFormatterDeps[ICommand, INamespace, CommandMetadata, CommandMetadataInput, CommandMetadataOption] {
   val inProject: Boolean
   val version: String
 }

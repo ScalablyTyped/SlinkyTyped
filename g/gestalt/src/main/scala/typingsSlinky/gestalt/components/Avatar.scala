@@ -4,16 +4,16 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.gestaltMod.AvatarProps
 import typingsSlinky.gestalt.gestaltStrings.lg
 import typingsSlinky.gestalt.gestaltStrings.md
 import typingsSlinky.gestalt.gestaltStrings.sm
+import typingsSlinky.gestalt.mod.AvatarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Avatar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Avatar] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Avatar] {
   @JSImport("gestalt", "Avatar")
   @js.native
   object componentImport extends js.Object
@@ -26,7 +26,7 @@ object Avatar
     size: sm | md | lg = null,
     verified: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Avatar] = {
+  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Avatar] = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     if (!js.isUndefined(outline)) __obj.updateDynamic("outline")(outline.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])

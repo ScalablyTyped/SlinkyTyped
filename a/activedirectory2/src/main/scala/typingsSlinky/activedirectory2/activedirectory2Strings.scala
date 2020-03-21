@@ -1,8 +1,8 @@
 package typingsSlinky.activedirectory2
 
-import typingsSlinky.activedirectory2.activedirectory2Mod.GroupAttributes
-import typingsSlinky.activedirectory2.activedirectory2Mod.MembershipType
-import typingsSlinky.activedirectory2.activedirectory2Mod.UserAttributes
+import typingsSlinky.activedirectory2.mod.GroupAttributes
+import typingsSlinky.activedirectory2.mod.MembershipType
+import typingsSlinky.activedirectory2.mod.UserAttributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

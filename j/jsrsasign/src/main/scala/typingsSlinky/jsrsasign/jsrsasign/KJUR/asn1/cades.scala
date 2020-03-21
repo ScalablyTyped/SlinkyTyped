@@ -1,14 +1,14 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1
 
-import typingsSlinky.jsrsasign.Anon_Alg
-import typingsSlinky.jsrsasign.Anon_AlgCert
-import typingsSlinky.jsrsasign.Anon_Algs
-import typingsSlinky.jsrsasign.Anon_Cert
-import typingsSlinky.jsrsasign.Anon_CertString
-import typingsSlinky.jsrsasign.Anon_Digalg
-import typingsSlinky.jsrsasign.Anon_Hash
-import typingsSlinky.jsrsasign.Anon_Length
-import typingsSlinky.jsrsasign.Anon_Res
+import typingsSlinky.jsrsasign.AnonAlg
+import typingsSlinky.jsrsasign.AnonAlgCert
+import typingsSlinky.jsrsasign.AnonAlgs
+import typingsSlinky.jsrsasign.AnonCert
+import typingsSlinky.jsrsasign.AnonCertString
+import typingsSlinky.jsrsasign.AnonDigalg
+import typingsSlinky.jsrsasign.AnonHash
+import typingsSlinky.jsrsasign.AnonLength
+import typingsSlinky.jsrsasign.AnonRes
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.cms.Attribute
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -170,7 +170,7 @@ object cades extends js.Object {
     */
   @js.native
   class CompleteCertificateRefs () extends Attribute {
-    def this(params: Anon_Length) = this()
+    def this(params: AnonLength) = this()
     /**
       * set value by array
       * @param a array of `KJUR.asn1.cades.OtherCertID` argument
@@ -194,7 +194,7 @@ object cades extends js.Object {
   @js.native
   class OtherCertID () extends ASN1Object {
     def this(params: String) = this()
-    def this(params: Anon_Cert) = this()
+    def this(params: AnonCert) = this()
     /**
       * set value by PEM string of certificate
       * @param certPEM PEM string of certificate
@@ -226,9 +226,9 @@ object cades extends js.Object {
   @js.native
   class OtherHash () extends ASN1Object {
     def this(params: String) = this()
-    def this(params: Anon_Alg) = this()
-    def this(params: Anon_AlgCert) = this()
-    def this(params: Anon_CertString) = this()
+    def this(params: AnonAlg) = this()
+    def this(params: AnonAlgCert) = this()
+    def this(params: AnonCertString) = this()
     /**
       * set value by PEM string of certificate
       * @param certPEM PEM string of certificate
@@ -253,7 +253,7 @@ object cades extends js.Object {
     */
   @js.native
   class OtherHashAlgAndValue () extends ASN1Object {
-    def this(params: Anon_Alg) = this()
+    def this(params: AnonAlg) = this()
   }
   
   /**
@@ -282,7 +282,7 @@ object cades extends js.Object {
     */
   @js.native
   class SignaturePolicyIdentifier () extends Attribute {
-    def this(params: Anon_Hash) = this()
+    def this(params: AnonHash) = this()
   }
   
   /**
@@ -297,7 +297,7 @@ object cades extends js.Object {
     */
   @js.native
   class SignatureTimeStamp () extends Attribute {
-    def this(params: Anon_Res) = this()
+    def this(params: AnonRes) = this()
   }
   
   @js.native
@@ -325,7 +325,7 @@ object cades extends js.Object {
       * info = KJUR.asn1.cades.CAdESUtil.parseSignedDataForAddingUnsigned(beshex);
       * sd = info.obj;
       */
-    def parseSignedDataForAddingUnsigned(hex: String): Anon_Algs = js.native
+    def parseSignedDataForAddingUnsigned(hex: String): AnonAlgs = js.native
     /**
       * parse SignerInfo to add unsigned attributes
       * @param hex hexadecimal string of SignerInfo
@@ -350,7 +350,7 @@ object cades extends js.Object {
       * future version. That's way this version provides support
       * for CAdES-T and not for CAdES-C.
       */
-    def parseSignerInfoForAddingUnsigned(hex: String, iSI: Double, nth: Double): Anon_Digalg = js.native
+    def parseSignerInfoForAddingUnsigned(hex: String, iSI: Double, nth: Double): AnonDigalg = js.native
   }
   
 }

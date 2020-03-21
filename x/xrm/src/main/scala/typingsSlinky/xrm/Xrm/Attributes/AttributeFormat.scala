@@ -12,18 +12,18 @@ import scala.scalajs.js.annotation._
   * @see {@link XrmEnum.StringAttributeFormat}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.date
-  - typings.xrm.xrmStrings.datetime
-  - typings.xrm.xrmStrings.duration
-  - typings.xrm.xrmStrings.none
-  - typings.xrm.xrmStrings.language
-  - typings.xrm.xrmStrings.timezone
-  - typings.xrm.xrmStrings.email
-  - typings.xrm.xrmStrings.phone
-  - typings.xrm.xrmStrings.text
-  - typings.xrm.xrmStrings.textarea
-  - typings.xrm.xrmStrings.tickersymbol
-  - typings.xrm.xrmStrings.url
+  - typingsSlinky.xrm.xrmStrings.date
+  - typingsSlinky.xrm.xrmStrings.datetime
+  - typingsSlinky.xrm.xrmStrings.duration
+  - typingsSlinky.xrm.xrmStrings.none
+  - typingsSlinky.xrm.xrmStrings.language
+  - typingsSlinky.xrm.xrmStrings.timezone
+  - typingsSlinky.xrm.xrmStrings.email
+  - typingsSlinky.xrm.xrmStrings.phone
+  - typingsSlinky.xrm.xrmStrings.text
+  - typingsSlinky.xrm.xrmStrings.textarea
+  - typingsSlinky.xrm.xrmStrings.tickersymbol
+  - typingsSlinky.xrm.xrmStrings.url
 */
 trait AttributeFormat extends js.Object
 

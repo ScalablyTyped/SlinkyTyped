@@ -11,8 +11,8 @@ Typings are for version 1.0.20
 | Full name          | xml-core |
 | Keywords           | xml |
 | # releases         | 7 |
-| # dependents       | 7 |
-| # downloads        | 20331 |
+| # dependents       | 8 |
+| # downloads        | 21309 |
 | # stars            | 0 |
 
 ## Links

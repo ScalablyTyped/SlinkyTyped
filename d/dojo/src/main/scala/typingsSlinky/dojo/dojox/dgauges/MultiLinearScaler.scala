@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.dgauges
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojo.Stateful
 import typingsSlinky.dojo.dojoStrings.majorTickValues
 import typingsSlinky.dojo.dojoStrings.majorTicks
@@ -92,7 +92,7 @@ class MultiLinearScaler () extends Stateful {
       /* newValue */ js.UndefOr[js.Array[_]], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_majorTicks(
     property: majorTicks,
@@ -102,7 +102,7 @@ class MultiLinearScaler () extends Stateful {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_minorTickCount(
     property: minorTickCount,
@@ -112,7 +112,7 @@ class MultiLinearScaler () extends Stateful {
       /* newValue */ js.UndefOr[js.Array[_]], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_minorTicks(
     property: minorTicks,
@@ -122,6 +122,6 @@ class MultiLinearScaler () extends Stateful {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

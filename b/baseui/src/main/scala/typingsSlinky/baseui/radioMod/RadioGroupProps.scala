@@ -10,10 +10,10 @@ import typingsSlinky.baseui.baseuiStrings.left
 import typingsSlinky.baseui.baseuiStrings.right
 import typingsSlinky.baseui.baseuiStrings.top
 import typingsSlinky.baseui.baseuiStrings.vertical
-import typingsSlinky.react.reactMod.ChangeEvent
-import typingsSlinky.react.reactMod.ChangeEventHandler
-import typingsSlinky.react.reactMod.FocusEventHandler
-import typingsSlinky.react.reactMod.MouseEventHandler
+import typingsSlinky.react.mod.ChangeEvent
+import typingsSlinky.react.mod.ChangeEventHandler
+import typingsSlinky.react.mod.FocusEventHandler
+import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

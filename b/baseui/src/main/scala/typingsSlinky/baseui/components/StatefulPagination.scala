@@ -4,8 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_EventAny
-import typingsSlinky.baseui.Anon_NextPage
+import typingsSlinky.baseui.AnonEventAny
+import typingsSlinky.baseui.AnonNextPage
 import typingsSlinky.baseui.baseuiStrings.change_
 import typingsSlinky.baseui.paginationMod.Labels
 import typingsSlinky.baseui.paginationMod.PaginationOverrides
@@ -26,9 +26,9 @@ object StatefulPagination
     numPages: Double,
     initialState: State = null,
     labels: Labels = null,
-    onNextClick: /* args */ Anon_EventAny => _ = null,
-    onPageChange: /* args */ Anon_NextPage => _ = null,
-    onPrevClick: /* args */ Anon_EventAny => _ = null,
+    onNextClick: /* args */ AnonEventAny => _ = null,
+    onPageChange: /* args */ AnonNextPage => _ = null,
+    onPrevClick: /* args */ AnonEventAny => _ = null,
     overrides: PaginationOverrides = null,
     stateReducer: (change_, /* changes */ State, /* currentState */ State) => State = null,
     _overrides: StringDictionary[js.Any] = null

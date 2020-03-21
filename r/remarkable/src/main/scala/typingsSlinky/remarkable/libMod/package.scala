@@ -5,165 +5,172 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libMod {
-  import org.scalablytyped.runtime.StringDictionary
-  import typingsSlinky.remarkable.remarkableStrings.Linefeed
-  import typingsSlinky.remarkable.remarkableStrings._empty
-
   // ---------------
   // Specific Core Tokens
   // ---------------
-  type AbbrToken = TagToken
+  type AbbrToken = typingsSlinky.remarkable.libMod.TagToken
   /**
     * Return `true` if the parsing function has recognized the current position
     * in the input as one if its tokens.
     */
   type BlockParsingRule = js.Function4[
-    /* state */ StateBlock, 
-    /* startLine */ Double, 
-    /* endLine */ Double, 
-    /* silent */ Boolean, 
-    Boolean
+    /* state */ typingsSlinky.remarkable.libMod.StateBlock, 
+    /* startLine */ scala.Double, 
+    /* endLine */ scala.Double, 
+    /* silent */ scala.Boolean, 
+    scala.Boolean
   ]
   // ---------------
   // Specific Block Tokens
   // ---------------
-  type BlockquoteToken = TagToken
-  type BulletListToken = TagToken
+  type BlockquoteToken = typingsSlinky.remarkable.libMod.TagToken
+  type BulletListToken = typingsSlinky.remarkable.libMod.TagToken
   /**
     * Return `true` if the parsing function has recognized the current position
     * in the input as one if its tokens.
     */
-  type CoreParsingRule = js.Function1[/* state */ StateInline, Boolean]
-  type DelToken = TagToken
-  type EmToken = TagToken
-  type Env = StringDictionary[js.Any]
-  type FootnoteBlockToken = TagToken
-  type FootnoteReferenceToken = FootnoteGenericToken
-  type FootnoteToken = FootnoteGenericToken
-  type GetBreak = Rule[ContentToken, _empty | Linefeed]
+  type CoreParsingRule = js.Function1[/* state */ typingsSlinky.remarkable.libMod.StateInline, scala.Boolean]
+  type DelToken = typingsSlinky.remarkable.libMod.TagToken
+  type EmToken = typingsSlinky.remarkable.libMod.TagToken
+  type Env = org.scalablytyped.runtime.StringDictionary[js.Any]
+  type FootnoteBlockToken = typingsSlinky.remarkable.libMod.TagToken
+  type FootnoteReferenceToken = typingsSlinky.remarkable.libMod.FootnoteGenericToken
+  type FootnoteToken = typingsSlinky.remarkable.libMod.FootnoteGenericToken
+  type GetBreak = typingsSlinky.remarkable.libMod.Rule[
+    typingsSlinky.remarkable.libMod.ContentToken, 
+    typingsSlinky.remarkable.remarkableStrings._empty | typingsSlinky.remarkable.remarkableStrings.Linefeed
+  ]
   /**
     * Return `true` if the parsing function has recognized the current position
     * in the input as one if its tokens.
     */
-  type InlineParsingRule = js.Function2[/* state */ StateInline, /* silent */ Boolean, Boolean]
-  type InsToken = TagToken
-  type LHeadingCloseToken = HeadingCloseToken
-  type LHeadingOpenToken = HeadingOpenToken
+  type InlineParsingRule = js.Function2[
+    /* state */ typingsSlinky.remarkable.libMod.StateInline, 
+    /* silent */ scala.Boolean, 
+    scala.Boolean
+  ]
+  type InsToken = typingsSlinky.remarkable.libMod.TagToken
+  type LHeadingCloseToken = typingsSlinky.remarkable.libMod.HeadingCloseToken
+  type LHeadingOpenToken = typingsSlinky.remarkable.libMod.HeadingOpenToken
   // ---------------
   // Specific Block Tokens
   // ---------------
-  type LinkToken = TagToken
-  type ListItemToken = TagToken
-  type MarkToken = TagToken
-  type OrderedListToken = TagToken
-  type Plugin = js.Function2[/* md */ Remarkable, /* options */ js.UndefOr[js.Any], Unit]
-  type Rule[T /* <: TagToken */, R /* <: String */] = js.Function5[
+  type LinkToken = typingsSlinky.remarkable.libMod.TagToken
+  type ListItemToken = typingsSlinky.remarkable.libMod.TagToken
+  type MarkToken = typingsSlinky.remarkable.libMod.TagToken
+  type OrderedListToken = typingsSlinky.remarkable.libMod.TagToken
+  type Plugin = js.Function2[
+    /* md */ typingsSlinky.remarkable.libMod.Remarkable, 
+    /* options */ js.UndefOr[js.Any], 
+    scala.Unit
+  ]
+  type Rule[T /* <: typingsSlinky.remarkable.libMod.TagToken */, R /* <: java.lang.String */] = js.Function5[
     /* tokens */ js.Array[T], 
-    /* idx */ Double, 
-    /* options */ js.UndefOr[Options], 
-    /* env */ js.UndefOr[Env], 
-    /* instance */ js.UndefOr[Remarkable], 
+    /* idx */ scala.Double, 
+    /* options */ js.UndefOr[typingsSlinky.remarkable.libMod.Options], 
+    /* env */ js.UndefOr[typingsSlinky.remarkable.libMod.Env], 
+    /* instance */ js.UndefOr[typingsSlinky.remarkable.libMod.Remarkable], 
     R
   ]
-  type StrongToken = TagToken
-  type TBodyToken = TagToken
-  type TDToken = TagToken
-  type THToken = TagToken
-  type THeadToken = TagToken
-  type TRToken = TagToken
-  type TableToken = TagToken
+  type StrongToken = typingsSlinky.remarkable.libMod.TagToken
+  type TBodyToken = typingsSlinky.remarkable.libMod.TagToken
+  type TDToken = typingsSlinky.remarkable.libMod.TagToken
+  type THToken = typingsSlinky.remarkable.libMod.TagToken
+  type THeadToken = typingsSlinky.remarkable.libMod.TagToken
+  type TRToken = typingsSlinky.remarkable.libMod.TagToken
+  type TableToken = typingsSlinky.remarkable.libMod.TagToken
   /* Rewritten from type alias, can be one of: 
-    - typings.remarkable.libMod.BlockContentToken
-    - typings.remarkable.libMod.ContentToken
-    - typings.remarkable.libMod.TagToken
-    - typings.remarkable.libMod.BlockquoteToken
-    - typings.remarkable.libMod.BlockquoteOpenToken
-    - typings.remarkable.libMod.BlockquoteCloseToken
-    - typings.remarkable.libMod.CodeToken
-    - typings.remarkable.libMod.DlOpenToken
-    - typings.remarkable.libMod.DlCloseToken
-    - typings.remarkable.libMod.DtOpenToken
-    - typings.remarkable.libMod.DtCloseToken
-    - typings.remarkable.libMod.DdOpenToken
-    - typings.remarkable.libMod.DdCloseToken
-    - typings.remarkable.libMod.FenceToken
-    - typings.remarkable.libMod.FootnoteGenericToken
-    - typings.remarkable.libMod.FootnoteReferenceToken
-    - typings.remarkable.libMod.FootnoteReferenceOpenToken
-    - typings.remarkable.libMod.FootnoteReferenceCloseToken
-    - typings.remarkable.libMod.HeadingToken
-    - typings.remarkable.libMod.HeadingOpenToken
-    - typings.remarkable.libMod.HeadingCloseToken
-    - typings.remarkable.libMod.HrToken
-    - typings.remarkable.libMod.HtmlBlockToken
-    - typings.remarkable.libMod.LHeadingOpenToken
-    - typings.remarkable.libMod.LHeadingCloseToken
-    - typings.remarkable.libMod.OrderedListToken
-    - typings.remarkable.libMod.OrderedListOpenToken
-    - typings.remarkable.libMod.OrderedListCloseToken
-    - typings.remarkable.libMod.BulletListToken
-    - typings.remarkable.libMod.BulletListOpenToken
-    - typings.remarkable.libMod.BulletListCloseToken
-    - typings.remarkable.libMod.ListItemToken
-    - typings.remarkable.libMod.ListItemOpenToken
-    - typings.remarkable.libMod.ListItemCloseToken
-    - typings.remarkable.libMod.ParagraphToken
-    - typings.remarkable.libMod.ParagraphOpenToken
-    - typings.remarkable.libMod.ParagraphCloseToken
-    - typings.remarkable.libMod.TextToken
-    - typings.remarkable.libMod.StrongToken
-    - typings.remarkable.libMod.StrongOpenToken
-    - typings.remarkable.libMod.StrongCloseToken
-    - typings.remarkable.libMod.TableToken
-    - typings.remarkable.libMod.TableOpenToken
-    - typings.remarkable.libMod.TableCloseToken
-    - typings.remarkable.libMod.THeadToken
-    - typings.remarkable.libMod.THeadOpenToken
-    - typings.remarkable.libMod.THeadCloseToken
-    - typings.remarkable.libMod.TBodyToken
-    - typings.remarkable.libMod.TBodyOpenToken
-    - typings.remarkable.libMod.TBodyCloseToken
-    - typings.remarkable.libMod.TRToken
-    - typings.remarkable.libMod.TROpenToken
-    - typings.remarkable.libMod.TRCloseToken
-    - typings.remarkable.libMod.THToken
-    - typings.remarkable.libMod.THOpenToken
-    - typings.remarkable.libMod.THCloseToken
-    - typings.remarkable.libMod.TDToken
-    - typings.remarkable.libMod.TDOpenToken
-    - typings.remarkable.libMod.TDCloseToken
-    - typings.remarkable.libMod.LinkToken
-    - typings.remarkable.libMod.LinkOpenToken
-    - typings.remarkable.libMod.LinkCloseToken
-    - typings.remarkable.libMod.DelToken
-    - typings.remarkable.libMod.DelOpenToken
-    - typings.remarkable.libMod.DelCloseToken
-    - typings.remarkable.libMod.EmToken
-    - typings.remarkable.libMod.EmOpenToken
-    - typings.remarkable.libMod.EmCloseToken
-    - typings.remarkable.libMod.HardbreakToken
-    - typings.remarkable.libMod.SoftbreakToken
-    - typings.remarkable.libMod.FootnoteInlineToken
-    - typings.remarkable.libMod.HtmlTagToken
-    - typings.remarkable.libMod.InsToken
-    - typings.remarkable.libMod.InsOpenToken
-    - typings.remarkable.libMod.InsCloseToken
-    - typings.remarkable.libMod.ImageToken
-    - typings.remarkable.libMod.MarkToken
-    - typings.remarkable.libMod.MarkOpenToken
-    - typings.remarkable.libMod.MarkCloseToken
-    - typings.remarkable.libMod.SubToken
-    - typings.remarkable.libMod.SupToken
-    - typings.remarkable.libMod.AbbrToken
-    - typings.remarkable.libMod.AbbrOpenToken
-    - typings.remarkable.libMod.AbbrCloseToken
-    - typings.remarkable.libMod.FootnoteToken
-    - typings.remarkable.libMod.FootnoteOpenToken
-    - typings.remarkable.libMod.FootnoteCloseToken
-    - typings.remarkable.libMod.FootnoteBlockToken
-    - typings.remarkable.libMod.FootnoteBlockOpenToken
-    - typings.remarkable.libMod.FootnoteBlockCloseToken
-    - typings.remarkable.libMod.FootnoteAnchorToken
+    - typingsSlinky.remarkable.libMod.BlockContentToken
+    - typingsSlinky.remarkable.libMod.ContentToken
+    - typingsSlinky.remarkable.libMod.TagToken
+    - typingsSlinky.remarkable.libMod.BlockquoteToken
+    - typingsSlinky.remarkable.libMod.BlockquoteOpenToken
+    - typingsSlinky.remarkable.libMod.BlockquoteCloseToken
+    - typingsSlinky.remarkable.libMod.CodeToken
+    - typingsSlinky.remarkable.libMod.DlOpenToken
+    - typingsSlinky.remarkable.libMod.DlCloseToken
+    - typingsSlinky.remarkable.libMod.DtOpenToken
+    - typingsSlinky.remarkable.libMod.DtCloseToken
+    - typingsSlinky.remarkable.libMod.DdOpenToken
+    - typingsSlinky.remarkable.libMod.DdCloseToken
+    - typingsSlinky.remarkable.libMod.FenceToken
+    - typingsSlinky.remarkable.libMod.FootnoteGenericToken
+    - typingsSlinky.remarkable.libMod.FootnoteReferenceToken
+    - typingsSlinky.remarkable.libMod.FootnoteReferenceOpenToken
+    - typingsSlinky.remarkable.libMod.FootnoteReferenceCloseToken
+    - typingsSlinky.remarkable.libMod.HeadingToken
+    - typingsSlinky.remarkable.libMod.HeadingOpenToken
+    - typingsSlinky.remarkable.libMod.HeadingCloseToken
+    - typingsSlinky.remarkable.libMod.HrToken
+    - typingsSlinky.remarkable.libMod.HtmlBlockToken
+    - typingsSlinky.remarkable.libMod.LHeadingOpenToken
+    - typingsSlinky.remarkable.libMod.LHeadingCloseToken
+    - typingsSlinky.remarkable.libMod.OrderedListToken
+    - typingsSlinky.remarkable.libMod.OrderedListOpenToken
+    - typingsSlinky.remarkable.libMod.OrderedListCloseToken
+    - typingsSlinky.remarkable.libMod.BulletListToken
+    - typingsSlinky.remarkable.libMod.BulletListOpenToken
+    - typingsSlinky.remarkable.libMod.BulletListCloseToken
+    - typingsSlinky.remarkable.libMod.ListItemToken
+    - typingsSlinky.remarkable.libMod.ListItemOpenToken
+    - typingsSlinky.remarkable.libMod.ListItemCloseToken
+    - typingsSlinky.remarkable.libMod.ParagraphToken
+    - typingsSlinky.remarkable.libMod.ParagraphOpenToken
+    - typingsSlinky.remarkable.libMod.ParagraphCloseToken
+    - typingsSlinky.remarkable.libMod.TextToken
+    - typingsSlinky.remarkable.libMod.StrongToken
+    - typingsSlinky.remarkable.libMod.StrongOpenToken
+    - typingsSlinky.remarkable.libMod.StrongCloseToken
+    - typingsSlinky.remarkable.libMod.TableToken
+    - typingsSlinky.remarkable.libMod.TableOpenToken
+    - typingsSlinky.remarkable.libMod.TableCloseToken
+    - typingsSlinky.remarkable.libMod.THeadToken
+    - typingsSlinky.remarkable.libMod.THeadOpenToken
+    - typingsSlinky.remarkable.libMod.THeadCloseToken
+    - typingsSlinky.remarkable.libMod.TBodyToken
+    - typingsSlinky.remarkable.libMod.TBodyOpenToken
+    - typingsSlinky.remarkable.libMod.TBodyCloseToken
+    - typingsSlinky.remarkable.libMod.TRToken
+    - typingsSlinky.remarkable.libMod.TROpenToken
+    - typingsSlinky.remarkable.libMod.TRCloseToken
+    - typingsSlinky.remarkable.libMod.THToken
+    - typingsSlinky.remarkable.libMod.THOpenToken
+    - typingsSlinky.remarkable.libMod.THCloseToken
+    - typingsSlinky.remarkable.libMod.TDToken
+    - typingsSlinky.remarkable.libMod.TDOpenToken
+    - typingsSlinky.remarkable.libMod.TDCloseToken
+    - typingsSlinky.remarkable.libMod.LinkToken
+    - typingsSlinky.remarkable.libMod.LinkOpenToken
+    - typingsSlinky.remarkable.libMod.LinkCloseToken
+    - typingsSlinky.remarkable.libMod.DelToken
+    - typingsSlinky.remarkable.libMod.DelOpenToken
+    - typingsSlinky.remarkable.libMod.DelCloseToken
+    - typingsSlinky.remarkable.libMod.EmToken
+    - typingsSlinky.remarkable.libMod.EmOpenToken
+    - typingsSlinky.remarkable.libMod.EmCloseToken
+    - typingsSlinky.remarkable.libMod.HardbreakToken
+    - typingsSlinky.remarkable.libMod.SoftbreakToken
+    - typingsSlinky.remarkable.libMod.FootnoteInlineToken
+    - typingsSlinky.remarkable.libMod.HtmlTagToken
+    - typingsSlinky.remarkable.libMod.InsToken
+    - typingsSlinky.remarkable.libMod.InsOpenToken
+    - typingsSlinky.remarkable.libMod.InsCloseToken
+    - typingsSlinky.remarkable.libMod.ImageToken
+    - typingsSlinky.remarkable.libMod.MarkToken
+    - typingsSlinky.remarkable.libMod.MarkOpenToken
+    - typingsSlinky.remarkable.libMod.MarkCloseToken
+    - typingsSlinky.remarkable.libMod.SubToken
+    - typingsSlinky.remarkable.libMod.SupToken
+    - typingsSlinky.remarkable.libMod.AbbrToken
+    - typingsSlinky.remarkable.libMod.AbbrOpenToken
+    - typingsSlinky.remarkable.libMod.AbbrCloseToken
+    - typingsSlinky.remarkable.libMod.FootnoteToken
+    - typingsSlinky.remarkable.libMod.FootnoteOpenToken
+    - typingsSlinky.remarkable.libMod.FootnoteCloseToken
+    - typingsSlinky.remarkable.libMod.FootnoteBlockToken
+    - typingsSlinky.remarkable.libMod.FootnoteBlockOpenToken
+    - typingsSlinky.remarkable.libMod.FootnoteBlockCloseToken
+    - typingsSlinky.remarkable.libMod.FootnoteAnchorToken
   */
-  type Token = _Token | BlockquoteToken | FootnoteReferenceToken | LHeadingOpenToken | LHeadingCloseToken | OrderedListToken | BulletListToken | ListItemToken | StrongToken | TableToken | THeadToken | TBodyToken | TRToken | THToken | TDToken | LinkToken | DelToken | EmToken | InsToken | MarkToken | AbbrToken | FootnoteToken | FootnoteBlockToken
+  type Token = typingsSlinky.remarkable.libMod._Token | typingsSlinky.remarkable.libMod.BlockquoteToken | typingsSlinky.remarkable.libMod.FootnoteReferenceToken | typingsSlinky.remarkable.libMod.LHeadingOpenToken | typingsSlinky.remarkable.libMod.LHeadingCloseToken | typingsSlinky.remarkable.libMod.OrderedListToken | typingsSlinky.remarkable.libMod.BulletListToken | typingsSlinky.remarkable.libMod.ListItemToken | typingsSlinky.remarkable.libMod.StrongToken | typingsSlinky.remarkable.libMod.TableToken | typingsSlinky.remarkable.libMod.THeadToken | typingsSlinky.remarkable.libMod.TBodyToken | typingsSlinky.remarkable.libMod.TRToken | typingsSlinky.remarkable.libMod.THToken | typingsSlinky.remarkable.libMod.TDToken | typingsSlinky.remarkable.libMod.LinkToken | typingsSlinky.remarkable.libMod.DelToken | typingsSlinky.remarkable.libMod.EmToken | typingsSlinky.remarkable.libMod.InsToken | typingsSlinky.remarkable.libMod.MarkToken | typingsSlinky.remarkable.libMod.AbbrToken | typingsSlinky.remarkable.libMod.FootnoteToken | typingsSlinky.remarkable.libMod.FootnoteBlockToken
 }

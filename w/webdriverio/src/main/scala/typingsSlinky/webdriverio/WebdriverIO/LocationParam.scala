@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webdriverio.webdriverioStrings.x
-  - typings.webdriverio.webdriverioStrings.y
+  - typingsSlinky.webdriverio.webdriverioStrings.x
+  - typingsSlinky.webdriverio.webdriverioStrings.y
 */
 trait LocationParam extends js.Object
 

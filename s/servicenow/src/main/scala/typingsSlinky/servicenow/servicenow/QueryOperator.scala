@@ -5,18 +5,18 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.servicenow.servicenowStrings.Equalssign
-  - typings.servicenow.servicenowStrings.ExclamationmarkEqualssign
-  - typings.servicenow.servicenowStrings.Greaterthansign
-  - typings.servicenow.servicenowStrings.GreaterthansignEqualssign
-  - typings.servicenow.servicenowStrings.Lessthansign
-  - typings.servicenow.servicenowStrings.LessthansignEqualssign
-  - typings.servicenow.servicenowStrings.IN
-  - typings.servicenow.servicenowStrings.STARTSWITH
-  - typings.servicenow.servicenowStrings.ENDSWITH
-  - typings.servicenow.servicenowStrings.CONTAINS
-  - typings.servicenow.servicenowStrings.DOESNOTCONTAIN
-  - typings.servicenow.servicenowStrings.INSTANCEOF
+  - typingsSlinky.servicenow.servicenowStrings.Equalssign
+  - typingsSlinky.servicenow.servicenowStrings.ExclamationmarkEqualssign
+  - typingsSlinky.servicenow.servicenowStrings.Greaterthansign
+  - typingsSlinky.servicenow.servicenowStrings.GreaterthansignEqualssign
+  - typingsSlinky.servicenow.servicenowStrings.Lessthansign
+  - typingsSlinky.servicenow.servicenowStrings.LessthansignEqualssign
+  - typingsSlinky.servicenow.servicenowStrings.IN
+  - typingsSlinky.servicenow.servicenowStrings.STARTSWITH
+  - typingsSlinky.servicenow.servicenowStrings.ENDSWITH
+  - typingsSlinky.servicenow.servicenowStrings.CONTAINS
+  - typingsSlinky.servicenow.servicenowStrings.DOESNOTCONTAIN
+  - typingsSlinky.servicenow.servicenowStrings.INSTANCEOF
 */
 trait QueryOperator extends js.Object
 

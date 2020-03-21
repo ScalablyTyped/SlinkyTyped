@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dojox.mvc
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.`data-mvc-child-bindings`
 import typingsSlinky.dojo.dojoStrings.`data-mvc-child-mixins`
 import typingsSlinky.dojo.dojoStrings.`data-mvc-child-props`
@@ -29,9 +29,9 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit._Container because Inheritance from two classes. Inlined addChild, addChild, buildRendering, getIndexOfChild, hasChildren, removeChild, removeChild */ @JSGlobal("dojox.mvc.WidgetList")
+- typingsSlinky.dojo.dijit.Container because Inheritance from two classes. Inlined addChild, addChild, buildRendering, getIndexOfChild, hasChildren, removeChild, removeChild */ @JSGlobal("dojox.mvc.WidgetList")
 @js.native
-class WidgetList () extends _WidgetBase {
+class WidgetList () extends WidgetBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -111,7 +111,7 @@ class WidgetList () extends _WidgetBase {
     * @param widget             
     * @param insertIndex               Optional            
     */
-  def addChild(widget: _WidgetBase): Unit = js.native
+  def addChild(widget: WidgetBase): Unit = js.native
   /**
     * Makes the given widget a child of this widget.
     * Inserts specified child widget's dom node as a child of this widget's
@@ -120,7 +120,7 @@ class WidgetList () extends _WidgetBase {
     * @param widget
     * @param insertIndex               Optional
     */
-  def addChild(widget: _WidgetBase, insertIndex: Double): Unit = js.native
+  def addChild(widget: WidgetBase, insertIndex: Double): Unit = js.native
   /**
     * Gets the index of the child in this container or -1 if not found
     *
@@ -131,7 +131,7 @@ class WidgetList () extends _WidgetBase {
     * 
     * @param child             
     */
-  def getIndexOfChild(child: _WidgetBase): js.Any = js.native
+  def getIndexOfChild(child: WidgetBase): js.Any = js.native
   @JSName("get")
   def get_childBindings(property: childBindings): js.Object = js.native
   @JSName("get")
@@ -200,7 +200,7 @@ class WidgetList () extends _WidgetBase {
     * 
     * @param widget             
     */
-  def removeChild(widget: _WidgetBase): Unit = js.native
+  def removeChild(widget: WidgetBase): Unit = js.native
   @JSName("set")
   def set_childBindings(property: childBindings, value: js.Object): Unit = js.native
   @JSName("set")
@@ -236,7 +236,7 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_childClz(
     property: childClz,
@@ -246,7 +246,7 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Function], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_childMixins(
     property: childMixins,
@@ -256,7 +256,7 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_childParams(
     property: childParams,
@@ -266,7 +266,7 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_childType(
     property: childType,
@@ -276,7 +276,7 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_children(
     property: children,
@@ -286,7 +286,7 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_datamvcchildbindings(
     property: `data-mvc-child-bindings`,
@@ -296,7 +296,7 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_datamvcchildmixins(
     property: `data-mvc-child-mixins`,
@@ -306,7 +306,7 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_datamvcchildprops(
     property: `data-mvc-child-props`,
@@ -316,7 +316,7 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_datamvcchildtype(
     property: `data-mvc-child-type`,
@@ -326,7 +326,7 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_partialRebuild(
     property: partialRebuild,
@@ -336,7 +336,7 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templateString(
     property: templateString,
@@ -346,6 +346,6 @@ class WidgetList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

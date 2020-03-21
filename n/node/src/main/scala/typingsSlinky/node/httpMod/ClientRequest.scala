@@ -10,7 +10,7 @@ import typingsSlinky.node.nodeStrings.response
 import typingsSlinky.node.nodeStrings.socket
 import typingsSlinky.node.nodeStrings.timeout
 import typingsSlinky.node.nodeStrings.upgrade
-import typingsSlinky.node.urlMod.URL
+import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,10 +21,10 @@ import scala.scalajs.js.annotation._
 class ClientRequest protected () extends OutgoingMessage {
   def this(url: String) = this()
   def this(url: ClientRequestArgs) = this()
-  def this(url: URL) = this()
+  def this(url: URL_) = this()
   def this(url: String, cb: js.Function1[/* res */ IncomingMessage, Unit]) = this()
   def this(url: ClientRequestArgs, cb: js.Function1[/* res */ IncomingMessage, Unit]) = this()
-  def this(url: URL, cb: js.Function1[/* res */ IncomingMessage, Unit]) = this()
+  def this(url: URL_, cb: js.Function1[/* res */ IncomingMessage, Unit]) = this()
   var aborted: Double = js.native
   var method: String = js.native
   var path: String = js.native

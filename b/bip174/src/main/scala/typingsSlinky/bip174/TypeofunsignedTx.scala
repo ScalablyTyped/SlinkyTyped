@@ -1,7 +1,7 @@
 package typingsSlinky.bip174
 
-import typingsSlinky.bip174.srcLibInterfacesMod.KeyValue
-import typingsSlinky.bip174.srcLibInterfacesMod.Transaction
+import typingsSlinky.bip174.interfacesMod.KeyValue
+import typingsSlinky.bip174.interfacesMod.Transaction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

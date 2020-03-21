@@ -1,7 +1,7 @@
 package typingsSlinky.terser
 
-import typingsSlinky.terser.terserMod.ECMA
-import typingsSlinky.terser.terserMod.ECMA_UNOFFICIAL
+import typingsSlinky.terser.mod.ECMA
+import typingsSlinky.terser.mod.ECMA_UNOFFICIAL
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

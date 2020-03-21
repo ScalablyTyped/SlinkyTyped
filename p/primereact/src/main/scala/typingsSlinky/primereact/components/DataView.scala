@@ -4,9 +4,10 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_FirstOriginalEvent
-import typingsSlinky.primereact.componentsDataviewDataViewMod.DataViewProps
+import typingsSlinky.primereact.AnonRows
+import typingsSlinky.primereact.dataViewMod.DataViewProps
 import typingsSlinky.primereact.primereactStrings.grid
 import typingsSlinky.primereact.primereactStrings.list
 import scala.scalajs.js
@@ -14,7 +15,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DataView
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.dataviewMod.DataView] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactDataviewMod.DataView] {
   @JSImport("primereact/dataview", "DataView")
   @js.native
   object componentImport extends js.Object
@@ -26,11 +27,12 @@ object DataView
     currentPageReportTemplate: String = null,
     emptyMessage: String = null,
     first: Int | Double = null,
-    footer: typingsSlinky.react.reactMod._Global_.JSX.Element | String = null,
-    header: typingsSlinky.react.reactMod._Global_.JSX.Element | String = null,
-    itemTemplate: (/* item */ js.Any, /* layout */ grid | list) => js.UndefOr[typingsSlinky.react.reactMod._Global_.JSX.Element] = null,
+    footer: ReactElement | String = null,
+    header: ReactElement | String = null,
+    itemTemplate: (/* item */ js.Any, /* layout */ grid | list) => js.UndefOr[ReactElement] = null,
     layout: String = null,
-    onPage: /* e */ Anon_FirstOriginalEvent => Unit = null,
+    `lazy`: js.UndefOr[Boolean] = js.undefined,
+    onPage: /* e */ AnonRows => Unit = null,
     pageLinkSize: Int | Double = null,
     paginator: js.UndefOr[Boolean] = js.undefined,
     paginatorLeft: js.Any = null,
@@ -44,7 +46,7 @@ object DataView
     totalRecords: Int | Double = null,
     value: js.Array[_] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.dataviewMod.DataView] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDataviewMod.DataView] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(alwaysShowPaginator)) __obj.updateDynamic("alwaysShowPaginator")(alwaysShowPaginator.asInstanceOf[js.Any])
     if (currentPageReportTemplate != null) __obj.updateDynamic("currentPageReportTemplate")(currentPageReportTemplate.asInstanceOf[js.Any])
@@ -54,6 +56,7 @@ object DataView
     if (header != null) __obj.updateDynamic("header")(header.asInstanceOf[js.Any])
     if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(js.Any.fromFunction2(itemTemplate))
     if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
+    if (!js.isUndefined(`lazy`)) __obj.updateDynamic("lazy")(`lazy`.asInstanceOf[js.Any])
     if (onPage != null) __obj.updateDynamic("onPage")(js.Any.fromFunction1(onPage))
     if (pageLinkSize != null) __obj.updateDynamic("pageLinkSize")(pageLinkSize.asInstanceOf[js.Any])
     if (!js.isUndefined(paginator)) __obj.updateDynamic("paginator")(paginator.asInstanceOf[js.Any])
@@ -70,7 +73,9 @@ object DataView
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.dataviewMod.DataView] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.dataviewMod.DataView](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDataviewMod.DataView] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactDataviewMod.DataView](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DataViewProps
 }
 

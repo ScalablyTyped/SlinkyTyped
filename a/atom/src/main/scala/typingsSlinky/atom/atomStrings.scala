@@ -1,7 +1,7 @@
 package typingsSlinky.atom
 
-import typingsSlinky.atom.atomMod.FileEncoding
-import typingsSlinky.atom.atomMod.TooltipPlacement
+import typingsSlinky.atom.mod.FileEncoding
+import typingsSlinky.atom.mod.TooltipPlacement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -488,6 +488,9 @@ object atomStrings {
   sealed trait never extends js.Object
   
   @js.native
+  sealed trait nightly extends js.Object
+  
+  @js.native
   sealed trait no extends js.Object
   
   @js.native
@@ -945,6 +948,8 @@ object atomStrings {
   def native: native = "native".asInstanceOf[native]
   @scala.inline
   def never: never = "never".asInstanceOf[never]
+  @scala.inline
+  def nightly: nightly = "nightly".asInstanceOf[nightly]
   @scala.inline
   def no: no = "no".asInstanceOf[no]
   @scala.inline

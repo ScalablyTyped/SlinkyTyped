@@ -6,7 +6,7 @@ import typingsSlinky.jpm.jpmStrings.detach
 import typingsSlinky.jpm.jpmStrings.load
 import typingsSlinky.jpm.jpmStrings.message
 import typingsSlinky.jpm.jpmStrings.ready
-import typingsSlinky.jpm.sdkUiToolbarMod.ToolbarItem
+import typingsSlinky.jpm.toolbarMod.ToolbarItem
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

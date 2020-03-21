@@ -1,0 +1,28 @@
+package typingsSlinky.awsSdkClientLambdaNode.typesResourceConflictExceptionMod
+
+import typingsSlinky.awsSdkClientLambdaNode.addPermissionExceptionsUnionMod.AddPermissionExceptionsUnion
+import typingsSlinky.awsSdkClientLambdaNode.createAliasExceptionsUnionMod.CreateAliasExceptionsUnion
+import typingsSlinky.awsSdkClientLambdaNode.createEventSourceMappingExceptionsUnionMod.CreateEventSourceMappingExceptionsUnion
+import typingsSlinky.awsSdkClientLambdaNode.createFunctionExceptionsUnionMod.CreateFunctionExceptionsUnion
+import typingsSlinky.awsSdkClientLambdaNode.deleteFunctionExceptionsUnionMod.DeleteFunctionExceptionsUnion
+import typingsSlinky.awsSdkClientLambdaNode.updateEventSourceMappingExceptionsUnionMod.UpdateEventSourceMappingExceptionsUnion
+import typingsSlinky.awsSdkClientLambdaNode.updateFunctionConfigurationExceptionsUnionMod.UpdateFunctionConfigurationExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ResourceConflictException
+  extends ServiceException[ResourceConflictExceptionDetails]
+     with AddPermissionExceptionsUnion
+     with CreateAliasExceptionsUnion
+     with CreateEventSourceMappingExceptionsUnion
+     with CreateFunctionExceptionsUnion
+     with DeleteFunctionExceptionsUnion
+     with UpdateEventSourceMappingExceptionsUnion
+     with UpdateFunctionConfigurationExceptionsUnion {
+  @JSName("name")
+  var name_ResourceConflictException: typingsSlinky.awsSdkClientLambdaNode.awsSdkClientLambdaNodeStrings.ResourceConflictException = js.native
+}
+

@@ -1,7 +1,7 @@
 package typingsSlinky.ol.sourceMod
 
-import typingsSlinky.ol.sourceUTFGridMod.Options
-import typingsSlinky.ol.sourceUTFGridMod.default
+import typingsSlinky.ol.utfgridMod.Options
+import typingsSlinky.ol.utfgridMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

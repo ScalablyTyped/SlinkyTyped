@@ -7,8 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.vexflow.vexflowNumbers.`1`
-  - typings.vexflow.vexflowNumbers.`0`
+  - typingsSlinky.vexflow.vexflowNumbers.`1`
+  - typingsSlinky.vexflow.vexflowNumbers.`0`
 */
 trait Styles extends js.Object
 

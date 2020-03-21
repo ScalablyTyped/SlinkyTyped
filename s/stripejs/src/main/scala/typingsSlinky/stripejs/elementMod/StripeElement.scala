@@ -1,7 +1,7 @@
 package typingsSlinky.stripejs.elementMod
 
 import typingsSlinky.std.HTMLElement
-import typingsSlinky.stripejs.Anon_PreventDefault
+import typingsSlinky.stripejs.AnonPreventDefault
 import typingsSlinky.stripejs.stripejsStrings.blur
 import typingsSlinky.stripejs.stripejsStrings.change
 import typingsSlinky.stripejs.stripejsStrings.click
@@ -58,7 +58,7 @@ trait StripeElement extends js.Object {
   @JSName("on")
   def on_change(event: change, handler: js.Function1[/* event */ OnChange, Unit]): Unit = js.native
   @JSName("on")
-  def on_click(event: click, handler: js.Function1[/* event */ Anon_PreventDefault, Unit]): Unit = js.native
+  def on_click(event: click, handler: js.Function1[/* event */ AnonPreventDefault, Unit]): Unit = js.native
   @JSName("on")
   def on_focus(event: focus, handler: js.Function0[Unit]): Unit = js.native
   @JSName("on")

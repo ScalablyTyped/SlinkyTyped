@@ -1,9 +1,9 @@
 package typingsSlinky.aframe
 
-import typingsSlinky.three.srcCoreGeometryMod.Geometry
-import typingsSlinky.three.srcCoreObject3DMod.Object3D
-import typingsSlinky.three.srcMaterialsMaterialMod.Material
-import typingsSlinky.three.srcScenesSceneMod.Scene
+import typingsSlinky.three.geometryMod.Geometry
+import typingsSlinky.three.materialMod.Material
+import typingsSlinky.three.object3DMod.Object3D
+import typingsSlinky.three.sceneMod.Scene
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

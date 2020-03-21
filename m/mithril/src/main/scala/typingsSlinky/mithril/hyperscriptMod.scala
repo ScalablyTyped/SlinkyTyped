@@ -1,7 +1,7 @@
 package typingsSlinky.mithril
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.mithril.mithrilMod.Hyperscript
+import typingsSlinky.mithril.mod.Hyperscript
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

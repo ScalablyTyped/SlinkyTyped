@@ -10,9 +10,9 @@ Process execution for humans
 | ------------------ | :-------------: |
 | Full name          | execa |
 | Keywords           | exec, child, process, execute, fork, execfile, spawn, file, shell, bin, binary, binaries, npm, path, local |
-| # releases         | 17 |
-| # dependents       | 3233 |
-| # downloads        | 888830995 |
+| # releases         | 18 |
+| # dependents       | 3325 |
+| # downloads        | 914925338 |
 | # stars            | 38 |
 
 ## Links

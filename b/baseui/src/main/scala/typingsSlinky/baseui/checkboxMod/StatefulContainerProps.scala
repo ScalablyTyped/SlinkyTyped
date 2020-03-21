@@ -1,15 +1,15 @@
 package typingsSlinky.baseui.checkboxMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticFocusEvent
 import slinky.web.SyntheticMouseEvent
-import typingsSlinky.react.reactMod.FocusEventHandler
-import typingsSlinky.react.reactMod.FormEventHandler
-import typingsSlinky.react.reactMod.MouseEventHandler
+import typingsSlinky.react.mod.FocusEventHandler
+import typingsSlinky.react.mod.FormEventHandler
+import typingsSlinky.react.mod.MouseEventHandler
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,12 +34,12 @@ object StatefulContainerProps {
     children: TagMod[Any] = null,
     initialState: CheckboxState = null,
     onBlur: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
     onFocus: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
     onMouseEnter: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
     onMouseLeave: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
     overrides: CheckboxOverrides = null,
-    stateReducer: (/* stateType */ String, /* nextState */ CheckboxState, /* currentState */ CheckboxState, /* event */ SyntheticEvent[Event, HTMLInputElement]) => CheckboxState = null
+    stateReducer: (/* stateType */ String, /* nextState */ CheckboxState, /* currentState */ CheckboxState, /* event */ SyntheticEvent[Event_, HTMLInputElement]) => CheckboxState = null
   ): StatefulContainerProps = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(autoFocus)) __obj.updateDynamic("autoFocus")(autoFocus.asInstanceOf[js.Any])

@@ -1,10 +1,10 @@
 package typingsSlinky.chui
 
-import typingsSlinky.std.Event
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait JQueryEventObject extends Event
+trait JQueryEventObject extends Event_
 

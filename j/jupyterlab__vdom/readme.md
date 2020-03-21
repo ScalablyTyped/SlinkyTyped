@@ -10,9 +10,9 @@ A viewer for VDOM documents.
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/vdom |
 | Keywords           | - |
-| # releases         | 41 |
+| # releases         | 42 |
 | # dependents       | 2 |
-| # downloads        | 358905 |
+| # downloads        | 365113 |
 | # stars            | 0 |
 
 ## Links

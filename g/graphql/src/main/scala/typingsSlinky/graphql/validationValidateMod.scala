@@ -1,12 +1,12 @@
 package typingsSlinky.graphql
 
-import typingsSlinky.graphql.errorGraphQLErrorMod.GraphQLError
-import typingsSlinky.graphql.languageAstMod.DocumentNode
-import typingsSlinky.graphql.tsutilsMaybeMod.Maybe
-import typingsSlinky.graphql.typeSchemaMod.GraphQLSchema
-import typingsSlinky.graphql.utilitiesTypeInfoMod.TypeInfo
-import typingsSlinky.graphql.validationValidationContextMod.SDLValidationRule
-import typingsSlinky.graphql.validationValidationContextMod.ValidationRule
+import typingsSlinky.graphql.astMod.DocumentNode
+import typingsSlinky.graphql.graphQLErrorMod.GraphQLError
+import typingsSlinky.graphql.maybeMod.Maybe
+import typingsSlinky.graphql.schemaMod.GraphQLSchema
+import typingsSlinky.graphql.typeInfoMod.TypeInfo
+import typingsSlinky.graphql.validationContextMod.SDLValidationRule
+import typingsSlinky.graphql.validationContextMod.ValidationRule
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -29,7 +29,7 @@ object validationValidateMod extends js.Object {
     documentAST: DocumentNode,
     rules: js.Array[ValidationRule],
     typeInfo: TypeInfo,
-    options: Anon_MaxErrors
+    options: AnonMaxErrors
   ): js.Array[GraphQLError] = js.native
   def validateSDL(documentAST: DocumentNode): js.Array[GraphQLError] = js.native
   def validateSDL(documentAST: DocumentNode, schemaToExtend: Maybe[GraphQLSchema]): js.Array[GraphQLError] = js.native

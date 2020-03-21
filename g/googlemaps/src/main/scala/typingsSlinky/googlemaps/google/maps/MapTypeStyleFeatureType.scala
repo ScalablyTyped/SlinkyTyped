@@ -5,39 +5,39 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.googlemaps.googlemapsStrings.all
-  - typings.googlemaps.googlemapsStrings.administrative
-  - typings.googlemaps.googlemapsStrings.administrativeDotcountry
-  - typings.googlemaps.googlemapsStrings.administrativeDotland_parcel
-  - typings.googlemaps.googlemapsStrings.administrativeDotlocality
-  - typings.googlemaps.googlemapsStrings.administrativeDotneighborhood
-  - typings.googlemaps.googlemapsStrings.administrativeDotprovince
-  - typings.googlemaps.googlemapsStrings.landscape
-  - typings.googlemaps.googlemapsStrings.landscapeDotman_made
-  - typings.googlemaps.googlemapsStrings.landscapeDotnatural
-  - typings.googlemaps.googlemapsStrings.landscapeDotnaturalDotlandcover
-  - typings.googlemaps.googlemapsStrings.landscapeDotnaturalDotterrain
-  - typings.googlemaps.googlemapsStrings.poi
-  - typings.googlemaps.googlemapsStrings.poiDotattraction
-  - typings.googlemaps.googlemapsStrings.poiDotbusiness
-  - typings.googlemaps.googlemapsStrings.poiDotgovernment
-  - typings.googlemaps.googlemapsStrings.poiDotmedical
-  - typings.googlemaps.googlemapsStrings.poiDotpark
-  - typings.googlemaps.googlemapsStrings.poiDotplace_of_worship
-  - typings.googlemaps.googlemapsStrings.poiDotschool
-  - typings.googlemaps.googlemapsStrings.poiDotsports_complex
-  - typings.googlemaps.googlemapsStrings.road
-  - typings.googlemaps.googlemapsStrings.roadDotarterial
-  - typings.googlemaps.googlemapsStrings.roadDothighway
-  - typings.googlemaps.googlemapsStrings.roadDothighwayDotcontrolled_access
-  - typings.googlemaps.googlemapsStrings.roadDotlocal
-  - typings.googlemaps.googlemapsStrings.transit
-  - typings.googlemaps.googlemapsStrings.transitDotline
-  - typings.googlemaps.googlemapsStrings.transitDotstation
-  - typings.googlemaps.googlemapsStrings.transitDotstationDotairport
-  - typings.googlemaps.googlemapsStrings.transitDotstationDotbus
-  - typings.googlemaps.googlemapsStrings.transitDotstationDotrail
-  - typings.googlemaps.googlemapsStrings.water
+  - typingsSlinky.googlemaps.googlemapsStrings.all
+  - typingsSlinky.googlemaps.googlemapsStrings.administrative
+  - typingsSlinky.googlemaps.googlemapsStrings.administrativeDotcountry
+  - typingsSlinky.googlemaps.googlemapsStrings.administrativeDotland_parcel
+  - typingsSlinky.googlemaps.googlemapsStrings.administrativeDotlocality
+  - typingsSlinky.googlemaps.googlemapsStrings.administrativeDotneighborhood
+  - typingsSlinky.googlemaps.googlemapsStrings.administrativeDotprovince
+  - typingsSlinky.googlemaps.googlemapsStrings.landscape
+  - typingsSlinky.googlemaps.googlemapsStrings.landscapeDotman_made
+  - typingsSlinky.googlemaps.googlemapsStrings.landscapeDotnatural
+  - typingsSlinky.googlemaps.googlemapsStrings.landscapeDotnaturalDotlandcover
+  - typingsSlinky.googlemaps.googlemapsStrings.landscapeDotnaturalDotterrain
+  - typingsSlinky.googlemaps.googlemapsStrings.poi
+  - typingsSlinky.googlemaps.googlemapsStrings.poiDotattraction
+  - typingsSlinky.googlemaps.googlemapsStrings.poiDotbusiness
+  - typingsSlinky.googlemaps.googlemapsStrings.poiDotgovernment
+  - typingsSlinky.googlemaps.googlemapsStrings.poiDotmedical
+  - typingsSlinky.googlemaps.googlemapsStrings.poiDotpark
+  - typingsSlinky.googlemaps.googlemapsStrings.poiDotplace_of_worship
+  - typingsSlinky.googlemaps.googlemapsStrings.poiDotschool
+  - typingsSlinky.googlemaps.googlemapsStrings.poiDotsports_complex
+  - typingsSlinky.googlemaps.googlemapsStrings.road
+  - typingsSlinky.googlemaps.googlemapsStrings.roadDotarterial
+  - typingsSlinky.googlemaps.googlemapsStrings.roadDothighway
+  - typingsSlinky.googlemaps.googlemapsStrings.roadDothighwayDotcontrolled_access
+  - typingsSlinky.googlemaps.googlemapsStrings.roadDotlocal
+  - typingsSlinky.googlemaps.googlemapsStrings.transit
+  - typingsSlinky.googlemaps.googlemapsStrings.transitDotline
+  - typingsSlinky.googlemaps.googlemapsStrings.transitDotstation
+  - typingsSlinky.googlemaps.googlemapsStrings.transitDotstationDotairport
+  - typingsSlinky.googlemaps.googlemapsStrings.transitDotstationDotbus
+  - typingsSlinky.googlemaps.googlemapsStrings.transitDotstationDotrail
+  - typingsSlinky.googlemaps.googlemapsStrings.water
 */
 trait MapTypeStyleFeatureType extends js.Object
 

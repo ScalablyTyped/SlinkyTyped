@@ -11,8 +11,8 @@ Full-sized drag & drop event calendar
 | Full name          | fullcalendar |
 | Keywords           | calendar, event, full-sized, jquery-plugin |
 | # releases         | 10 |
-| # dependents       | 136 |
-| # downloads        | 4275353 |
+| # dependents       | 137 |
+| # downloads        | 4318079 |
 | # stars            | 17 |
 
 ## Links

@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.Anon_Duration
+import typingsSlinky.vexflow.AnonDurationLine
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Vex.Flow.Crescendo")
 @js.native
 class Crescendo protected () extends Note {
-  def this(note_struct: Anon_Duration) = this()
+  def this(note_struct: AnonDurationLine) = this()
   def draw(): Unit = js.native
   def setDecrescendo(decresc: Boolean): Crescendo = js.native
   def setHeight(height: Double): Crescendo = js.native

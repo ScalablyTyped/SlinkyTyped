@@ -10,9 +10,9 @@ GraphQL execution and error handling middleware written from scratch for Koa.
 | ------------------ | :-------------: |
 | Full name          | graphql-api-koa |
 | Keywords           | graphql, api, koa |
-| # releases         | 14 |
+| # releases         | 15 |
 | # dependents       | 2 |
-| # downloads        | 4177 |
+| # downloads        | 4440 |
 | # stars            | 0 |
 
 ## Links

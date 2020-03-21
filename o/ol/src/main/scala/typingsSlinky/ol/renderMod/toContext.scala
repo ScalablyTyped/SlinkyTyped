@@ -1,7 +1,7 @@
 package typingsSlinky.ol.renderMod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
-import typingsSlinky.ol.renderCanvasImmediateMod.default
+import typingsSlinky.ol.immediateMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

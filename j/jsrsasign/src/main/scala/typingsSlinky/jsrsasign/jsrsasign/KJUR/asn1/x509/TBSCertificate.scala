@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.Anon_E
+import typingsSlinky.jsrsasign.AnonE
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ASN1Object
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.IntegerParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.NameParam
@@ -114,7 +114,7 @@ class TBSCertificate () extends ASN1Object {
   def setSubjectPublicKey(param: ECDSA): Unit = js.native
   def setSubjectPublicKey(param: RSAKey): Unit = js.native
   def setSubjectPublicKeyByGetKey(keyParam: String): Unit = js.native
-  def setSubjectPublicKeyByGetKey(keyParam: Anon_E): Unit = js.native
+  def setSubjectPublicKeyByGetKey(keyParam: AnonE): Unit = js.native
   def setSubjectPublicKeyByGetKey(keyParam: DSA): Unit = js.native
   def setSubjectPublicKeyByGetKey(keyParam: ECDSA): Unit = js.native
   def setSubjectPublicKeyByGetKey(keyParam: JsonWebKey): Unit = js.native

@@ -6,13 +6,13 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.formik.distErrorMessageMod.ErrorMessageProps
+import typingsSlinky.formik.errorMessageMod.ErrorMessageProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ErrorMessage
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.formik.formikMod.ErrorMessage] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.formik.mod.ErrorMessage] {
   @JSImport("formik", "ErrorMessage")
   @js.native
   object componentImport extends js.Object
@@ -24,7 +24,7 @@ object ErrorMessage
     component: String | ReactComponentClass[js.Object] = null,
     render: /* errorMessage */ String => TagMod[Any] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.formik.formikMod.ErrorMessage] = {
+  ): BuildingComponent[tag.type, typingsSlinky.formik.mod.ErrorMessage] = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any])
     if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
     if (render != null) __obj.updateDynamic("render")(js.Any.fromFunction1(render))

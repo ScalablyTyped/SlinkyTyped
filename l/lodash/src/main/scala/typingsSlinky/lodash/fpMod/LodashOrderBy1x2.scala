@@ -1,17 +1,17 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.List
-import typingsSlinky.lodash.lodashMod.Many
-import typingsSlinky.lodash.lodashMod.NotVoid
-import typingsSlinky.lodash.lodashMod.ValueIteratee
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.Many
+import typingsSlinky.lodash.mod.NotVoid
+import typingsSlinky.lodash.mod.ValueIteratee
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait LodashOrderBy1x2 extends js.Object {
-  def apply[T](iteratees: Many[ValueIteratee[T]]): LodashOrderBy2x3[T] = js.native
+  def apply[T](iteratees: Many[js.Function1[/* value */ T, NotVoid]]): LodashOrderBy1x3[T] = js.native
   def apply[T /* <: js.Object */](
     iteratees: Many[
       (js.Function1[

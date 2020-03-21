@@ -1,6 +1,6 @@
 package typingsSlinky.node.streamMod
 
-import typingsSlinky.node.Anon_Chunk
+import typingsSlinky.node.AnonChunk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -39,7 +39,7 @@ trait WritableOptions extends js.Object {
   var writev: js.UndefOr[
     js.ThisFunction2[
       /* this */ Writable, 
-      /* chunks */ js.Array[Anon_Chunk], 
+      /* chunks */ js.Array[AnonChunk], 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
@@ -75,7 +75,7 @@ object WritableOptions {
     ] = null,
     writev: js.ThisFunction2[
       /* this */ Writable, 
-      /* chunks */ js.Array[Anon_Chunk], 
+      /* chunks */ js.Array[AnonChunk], 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null

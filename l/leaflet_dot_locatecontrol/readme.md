@@ -10,9 +10,9 @@ A useful control to geolocate the user with many options. Used by osm.org and ma
 | ------------------ | :-------------: |
 | Full name          | leaflet.locatecontrol |
 | Keywords           | leaflet, locate, plugin |
-| # releases         | 10 |
+| # releases         | 11 |
 | # dependents       | 14 |
-| # downloads        | 158704 |
+| # downloads        | 160179 |
 | # stars            | 1 |
 
 ## Links

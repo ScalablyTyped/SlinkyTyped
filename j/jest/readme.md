@@ -1,7 +1,7 @@
 
 # Scala.js typings for jest
 
-Typings are for version 24.0
+Typings are for version 25.1
 
 ## Library description:
 Delightful JavaScript Testing.
@@ -10,9 +10,9 @@ Delightful JavaScript Testing.
 | ------------------ | :-------------: |
 | Full name          | jest |
 | Keywords           | ava, babel, coverage, easy, expect, facebook, immersive, instant, jasmine, jest, jsdom, mocha, mocking, painless, qunit, runner, sandboxed, snapshot, tap, tape, test, testing, typescript, watch |
-| # releases         | 75 |
-| # dependents       | 4954 |
-| # downloads        | 225073258 |
+| # releases         | 74 |
+| # dependents       | 4970 |
+| # downloads        | 226198090 |
 | # stars            | 91 |
 
 ## Links

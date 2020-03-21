@@ -1,0 +1,21 @@
+package typingsSlinky.sipJs.coreMod
+
+import typingsSlinky.sipJs.outgoingRequestMod.OutgoingRequestDelegate
+import typingsSlinky.sipJs.outgoingRequestMod.RequestOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("sip.js/lib/core", "ByeUserAgentClient")
+@js.native
+class ByeUserAgentClient protected ()
+  extends typingsSlinky.sipJs.userAgentsMod.ByeUserAgentClient {
+  def this(dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog) = this()
+  def this(dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog, delegate: OutgoingRequestDelegate) = this()
+  def this(
+    dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog,
+    delegate: OutgoingRequestDelegate,
+    options: RequestOptions
+  ) = this()
+}
+

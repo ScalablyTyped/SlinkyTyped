@@ -15,7 +15,7 @@ import typingsSlinky.spectrum.spectrumStrings.reflow
 import typingsSlinky.spectrum.spectrumStrings.set
 import typingsSlinky.spectrum.spectrumStrings.show
 import typingsSlinky.spectrum.spectrumStrings.toggle
-import typingsSlinky.tinycolor2.tinycolor2Mod.Instance
+import typingsSlinky.tinycolor2.mod.Instance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,12 +1,12 @@
 package typingsSlinky.rxjs
 
-import typingsSlinky.rxjs.internalOperatorMod.Operator
-import typingsSlinky.rxjs.internalSubscriberMod.Subscriber
-import typingsSlinky.rxjs.internalTypesMod.OperatorFunction
-import typingsSlinky.rxjs.internalTypesMod.SchedulerLike
-import typingsSlinky.rxjs.internalTypesMod.Subscribable
-import typingsSlinky.rxjs.internalTypesMod.SubscribableOrPromise
-import typingsSlinky.rxjs.internalTypesMod.TeardownLogic
+import typingsSlinky.rxjs.operatorMod.Operator
+import typingsSlinky.rxjs.subscriberMod.Subscriber
+import typingsSlinky.rxjs.typesMod.OperatorFunction
+import typingsSlinky.rxjs.typesMod.SchedulerLike
+import typingsSlinky.rxjs.typesMod.Subscribable
+import typingsSlinky.rxjs.typesMod.SubscribableOrPromise
+import typingsSlinky.rxjs.typesMod.TeardownLogic
 import typingsSlinky.std.PromiseConstructor
 import typingsSlinky.std.PromiseConstructorLike
 import scala.scalajs.js
@@ -144,7 +144,7 @@ object internalObservableMod extends js.Object {
       * @deprecated In favor of iif creation function: import { iif } from 'rxjs';
       */
     @JSName("if")
-    var if_Original: Fn_Condition = js.native
+    var if_Original: FnCall = js.native
     /**
       * @nocollapse
       * @deprecated In favor of throwError creation function: import { throwError } from 'rxjs';

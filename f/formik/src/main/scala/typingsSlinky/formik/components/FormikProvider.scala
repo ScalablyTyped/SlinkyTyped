@@ -4,8 +4,8 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.formik.distTypesMod.FormikContext
-import typingsSlinky.react.reactMod.ProviderProps
+import typingsSlinky.formik.typesMod.FormikContext
+import typingsSlinky.react.mod.ProviderProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

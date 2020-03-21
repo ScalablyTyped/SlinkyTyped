@@ -5,15 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.jsmediatags.jsmediatagsStrings.title
-  - typings.jsmediatags.jsmediatagsStrings.artist
-  - typings.jsmediatags.jsmediatagsStrings.album
-  - typings.jsmediatags.jsmediatagsStrings.year
-  - typings.jsmediatags.jsmediatagsStrings.comment
-  - typings.jsmediatags.jsmediatagsStrings.track
-  - typings.jsmediatags.jsmediatagsStrings.genre
-  - typings.jsmediatags.jsmediatagsStrings.picture
-  - typings.jsmediatags.jsmediatagsStrings.lyrics
+  - typingsSlinky.jsmediatags.jsmediatagsStrings.title
+  - typingsSlinky.jsmediatags.jsmediatagsStrings.artist
+  - typingsSlinky.jsmediatags.jsmediatagsStrings.album
+  - typingsSlinky.jsmediatags.jsmediatagsStrings.year
+  - typingsSlinky.jsmediatags.jsmediatagsStrings.comment
+  - typingsSlinky.jsmediatags.jsmediatagsStrings.track
+  - typingsSlinky.jsmediatags.jsmediatagsStrings.genre
+  - typingsSlinky.jsmediatags.jsmediatagsStrings.picture
+  - typingsSlinky.jsmediatags.jsmediatagsStrings.lyrics
 */
 trait ShortcutNameType extends js.Object
 

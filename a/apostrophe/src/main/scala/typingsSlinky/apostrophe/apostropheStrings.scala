@@ -1,6 +1,6 @@
 package typingsSlinky.apostrophe
 
-import typingsSlinky.apostrophe.apostropheMod.AposCoreModules
+import typingsSlinky.apostrophe.mod.AposCoreModules
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

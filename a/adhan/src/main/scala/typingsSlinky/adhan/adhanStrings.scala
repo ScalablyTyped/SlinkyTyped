@@ -1,6 +1,6 @@
 package typingsSlinky.adhan
 
-import typingsSlinky.adhan.adhanMod.TimeMode
+import typingsSlinky.adhan.mod.TimeMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

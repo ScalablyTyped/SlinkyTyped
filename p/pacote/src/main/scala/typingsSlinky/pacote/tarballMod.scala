@@ -2,7 +2,7 @@ package typingsSlinky.pacote
 
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.streamMod.PassThrough
-import typingsSlinky.pacote.pacoteMod.Options
+import typingsSlinky.pacote.mod.Options
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

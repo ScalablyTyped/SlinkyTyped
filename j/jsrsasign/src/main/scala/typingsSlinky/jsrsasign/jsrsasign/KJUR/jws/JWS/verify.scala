@@ -1,8 +1,8 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.jws.JWS
 
-import typingsSlinky.jsrsasign.Anon_B64
-import typingsSlinky.jsrsasign.Anon_Hex
-import typingsSlinky.jsrsasign.Anon_Utf8
+import typingsSlinky.jsrsasign.AnonB64
+import typingsSlinky.jsrsasign.AnonHex
+import typingsSlinky.jsrsasign.AnonUtf8
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,8 +72,8 @@ object verify extends js.Object {
     */
   def apply(sJWS: String, key: String): Boolean = js.native
   def apply(sJWS: String, key: String, acceptAlgs: js.Array[String]): Boolean = js.native
-  def apply(sJWS: String, key: String, acceptAlgs: Anon_B64): Boolean = js.native
-  def apply(sJWS: String, key: String, acceptAlgs: Anon_Hex): Boolean = js.native
-  def apply(sJWS: String, key: String, acceptAlgs: Anon_Utf8): Boolean = js.native
+  def apply(sJWS: String, key: String, acceptAlgs: AnonB64): Boolean = js.native
+  def apply(sJWS: String, key: String, acceptAlgs: AnonHex): Boolean = js.native
+  def apply(sJWS: String, key: String, acceptAlgs: AnonUtf8): Boolean = js.native
 }
 

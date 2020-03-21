@@ -10,9 +10,9 @@ A cross-platform UTF-8 string <-> UInt8Array converter
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/util-utf8-universal |
 | Keywords           | - |
-| # releases         | 5 |
+| # releases         | 6 |
 | # dependents       | 1 |
-| # downloads        | 791 |
+| # downloads        | 816 |
 | # stars            | 0 |
 
 ## Links

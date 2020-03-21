@@ -214,7 +214,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelectorAll")
   def querySelectorAll_address(selectors: address): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_applet(selectors: applet): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLAppletElement with org.scalajs.dom.raw.Node] = js.native
+  def querySelectorAll_applet(selectors: applet): org.scalajs.dom.raw.NodeListOf[HTMLAppletElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
   def querySelectorAll_area(selectors: area): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLAreaElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
@@ -228,7 +228,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelectorAll")
   def querySelectorAll_base(selectors: base): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLBaseElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_basefont(selectors: basefont): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLBaseFontElement with org.scalajs.dom.raw.Node] = js.native
+  def querySelectorAll_basefont(selectors: basefont): org.scalajs.dom.raw.NodeListOf[HTMLBaseFontElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
   def querySelectorAll_bdi(selectors: bdi): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
@@ -276,7 +276,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelectorAll")
   def querySelectorAll_dialog(selectors: dialog): org.scalajs.dom.raw.NodeListOf[HTMLDialogElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_dir(selectors: dir): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLDirectoryElement with org.scalajs.dom.raw.Node] = js.native
+  def querySelectorAll_dir(selectors: dir): org.scalajs.dom.raw.NodeListOf[HTMLDirectoryElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
   def querySelectorAll_div(selectors: div): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLDivElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
@@ -346,7 +346,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelectorAll")
   def querySelectorAll_filter(selectors: filter): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.SVGFilterElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_font(selectors: font): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLFontElement with org.scalajs.dom.raw.Node] = js.native
+  def querySelectorAll_font(selectors: font): org.scalajs.dom.raw.NodeListOf[HTMLFontElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
   def querySelectorAll_footer(selectors: footer): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
@@ -354,9 +354,9 @@ trait ParentNode extends js.Object {
   @JSName("querySelectorAll")
   def querySelectorAll_form(selectors: form): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLFormElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_frame(selectors: frame): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLFrameElement with org.scalajs.dom.raw.Node] = js.native
+  def querySelectorAll_frame(selectors: frame): org.scalajs.dom.raw.NodeListOf[HTMLFrameElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_frameset(selectors: frameset): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLFrameSetElement with org.scalajs.dom.raw.Node] = js.native
+  def querySelectorAll_frameset(selectors: frameset): org.scalajs.dom.raw.NodeListOf[HTMLFrameSetElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
   def querySelectorAll_g(selectors: g): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.SVGGElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
@@ -416,7 +416,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelectorAll")
   def querySelectorAll_marker(selectors: marker): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.SVGMarkerElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_marquee(selectors: marquee): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLMarqueeElement with org.scalajs.dom.raw.Node] = js.native
+  def querySelectorAll_marquee(selectors: marquee): org.scalajs.dom.raw.NodeListOf[HTMLMarqueeElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
   def querySelectorAll_mask(selectors: mask): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.SVGMaskElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
@@ -512,7 +512,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelectorAll")
   def querySelectorAll_tbody(selectors: tbody): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLTableSectionElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_td(selectors: td): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLTableDataCellElement with org.scalajs.dom.raw.Node] = js.native
+  def querySelectorAll_td(selectors: td): org.scalajs.dom.raw.NodeListOf[HTMLTableDataCellElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
   def querySelectorAll_template(selectors: template): org.scalajs.dom.raw.NodeListOf[HTMLTemplateElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
@@ -524,7 +524,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelectorAll")
   def querySelectorAll_tfoot(selectors: tfoot): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLTableSectionElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
-  def querySelectorAll_th(selectors: th): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLTableHeaderCellElement with org.scalajs.dom.raw.Node] = js.native
+  def querySelectorAll_th(selectors: th): org.scalajs.dom.raw.NodeListOf[HTMLTableHeaderCellElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
   def querySelectorAll_thead(selectors: thead): org.scalajs.dom.raw.NodeListOf[org.scalajs.dom.raw.HTMLTableSectionElement with org.scalajs.dom.raw.Node] = js.native
   @JSName("querySelectorAll")
@@ -561,7 +561,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelector")
   def querySelector_address(selectors: address): org.scalajs.dom.raw.HTMLElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_applet(selectors: applet): org.scalajs.dom.raw.HTMLAppletElement | Null = js.native
+  def querySelector_applet(selectors: applet): HTMLAppletElement | Null = js.native
   @JSName("querySelector")
   def querySelector_area(selectors: area): org.scalajs.dom.raw.HTMLAreaElement | Null = js.native
   @JSName("querySelector")
@@ -575,7 +575,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelector")
   def querySelector_base(selectors: base): org.scalajs.dom.raw.HTMLBaseElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_basefont(selectors: basefont): org.scalajs.dom.raw.HTMLBaseFontElement | Null = js.native
+  def querySelector_basefont(selectors: basefont): HTMLBaseFontElement | Null = js.native
   @JSName("querySelector")
   def querySelector_bdi(selectors: bdi): org.scalajs.dom.raw.HTMLElement | Null = js.native
   @JSName("querySelector")
@@ -623,7 +623,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelector")
   def querySelector_dialog(selectors: dialog): HTMLDialogElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_dir(selectors: dir): org.scalajs.dom.raw.HTMLDirectoryElement | Null = js.native
+  def querySelector_dir(selectors: dir): HTMLDirectoryElement | Null = js.native
   @JSName("querySelector")
   def querySelector_div(selectors: div): org.scalajs.dom.raw.HTMLDivElement | Null = js.native
   @JSName("querySelector")
@@ -693,7 +693,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelector")
   def querySelector_filter(selectors: filter): org.scalajs.dom.raw.SVGFilterElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_font(selectors: font): org.scalajs.dom.raw.HTMLFontElement | Null = js.native
+  def querySelector_font(selectors: font): HTMLFontElement | Null = js.native
   @JSName("querySelector")
   def querySelector_footer(selectors: footer): org.scalajs.dom.raw.HTMLElement | Null = js.native
   @JSName("querySelector")
@@ -701,9 +701,9 @@ trait ParentNode extends js.Object {
   @JSName("querySelector")
   def querySelector_form(selectors: form): org.scalajs.dom.raw.HTMLFormElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_frame(selectors: frame): org.scalajs.dom.raw.HTMLFrameElement | Null = js.native
+  def querySelector_frame(selectors: frame): HTMLFrameElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_frameset(selectors: frameset): org.scalajs.dom.raw.HTMLFrameSetElement | Null = js.native
+  def querySelector_frameset(selectors: frameset): HTMLFrameSetElement | Null = js.native
   @JSName("querySelector")
   def querySelector_g(selectors: g): org.scalajs.dom.raw.SVGGElement | Null = js.native
   @JSName("querySelector")
@@ -763,7 +763,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelector")
   def querySelector_marker(selectors: marker): org.scalajs.dom.raw.SVGMarkerElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_marquee(selectors: marquee): org.scalajs.dom.raw.HTMLMarqueeElement | Null = js.native
+  def querySelector_marquee(selectors: marquee): HTMLMarqueeElement | Null = js.native
   @JSName("querySelector")
   def querySelector_mask(selectors: mask): org.scalajs.dom.raw.SVGMaskElement | Null = js.native
   @JSName("querySelector")
@@ -859,7 +859,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelector")
   def querySelector_tbody(selectors: tbody): org.scalajs.dom.raw.HTMLTableSectionElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_td(selectors: td): org.scalajs.dom.raw.HTMLTableDataCellElement | Null = js.native
+  def querySelector_td(selectors: td): HTMLTableDataCellElement | Null = js.native
   @JSName("querySelector")
   def querySelector_template(selectors: template): HTMLTemplateElement | Null = js.native
   @JSName("querySelector")
@@ -871,7 +871,7 @@ trait ParentNode extends js.Object {
   @JSName("querySelector")
   def querySelector_tfoot(selectors: tfoot): org.scalajs.dom.raw.HTMLTableSectionElement | Null = js.native
   @JSName("querySelector")
-  def querySelector_th(selectors: th): org.scalajs.dom.raw.HTMLTableHeaderCellElement | Null = js.native
+  def querySelector_th(selectors: th): HTMLTableHeaderCellElement | Null = js.native
   @JSName("querySelector")
   def querySelector_thead(selectors: thead): org.scalajs.dom.raw.HTMLTableSectionElement | Null = js.native
   @JSName("querySelector")

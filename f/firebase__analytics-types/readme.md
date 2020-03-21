@@ -1,7 +1,7 @@
 
 # Scala.js typings for firebase__analytics-types
 
-Typings are for version 0.2.5
+Typings are for version 0.2.6
 
 ## Library description:
 @firebase/analytics Types
@@ -10,9 +10,9 @@ Typings are for version 0.2.5
 | ------------------ | :-------------: |
 | Full name          | @firebase/analytics-types |
 | Keywords           | - |
-| # releases         | 135 |
+| # releases         | 147 |
 | # dependents       | 1 |
-| # downloads        | 1668211 |
+| # downloads        | 1865947 |
 | # stars            | 0 |
 
 ## Links

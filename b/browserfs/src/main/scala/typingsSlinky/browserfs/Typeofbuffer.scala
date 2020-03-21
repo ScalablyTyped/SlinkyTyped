@@ -9,10 +9,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait Typeofbuffer extends js.Object {
-  var Buffer: (Instantiable1[/* str */ String, typingsSlinky.node.bufferMod.Buffer]) with TypeofClassBuffer
+  var Buffer: (Instantiable1[/* str */ String, typingsSlinky.node.bufferMod.Buffer]) with TypeofBuffer_
   val INSPECT_MAX_BYTES: Double
-  var SlowBuffer: (Instantiable1[/* size */ Double, typingsSlinky.node.bufferMod.SlowBuffer]) with Anon_Size
-  val constants: Anon_MAXLENGTH
+  var SlowBuffer: (Instantiable1[/* size */ Double, typingsSlinky.node.bufferMod.SlowBuffer]) with AnonInstantiable
+  val constants: AnonMAXLENGTH
   val kMaxLength: Double
   val kStringMaxLength: Double
   def transcode(
@@ -25,10 +25,10 @@ trait Typeofbuffer extends js.Object {
 object Typeofbuffer {
   @scala.inline
   def apply(
-    Buffer: (Instantiable1[/* str */ String, typingsSlinky.node.bufferMod.Buffer]) with TypeofClassBuffer,
+    Buffer: (Instantiable1[/* str */ String, typingsSlinky.node.bufferMod.Buffer]) with TypeofBuffer_,
     INSPECT_MAX_BYTES: Double,
-    SlowBuffer: (Instantiable1[/* size */ Double, SlowBuffer]) with Anon_Size,
-    constants: Anon_MAXLENGTH,
+    SlowBuffer: (Instantiable1[/* size */ Double, SlowBuffer]) with AnonInstantiable,
+    constants: AnonMAXLENGTH,
     kMaxLength: Double,
     kStringMaxLength: Double,
     transcode: (scala.scalajs.js.typedarray.Uint8Array, TranscodeEncoding, TranscodeEncoding) => Buffer

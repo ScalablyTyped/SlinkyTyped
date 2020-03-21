@@ -1,7 +1,7 @@
 package typingsSlinky.freedom.freedom
 
-import typingsSlinky.freedom.Anon_B
-import typingsSlinky.freedom.Anon_ViewName
+import typingsSlinky.freedom.AnonRemoveEventListener
+import typingsSlinky.freedom.AnonViews
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,14 +10,14 @@ import scala.scalajs.js.annotation._
 // object that describes the parent module the core provider instance has been
 // created for.
 trait CoreProviderParentApp extends js.Object {
-  var config: Anon_ViewName
-  var global: Anon_B
+  var config: AnonViews
+  var global: AnonRemoveEventListener
   var manifestId: String
 }
 
 object CoreProviderParentApp {
   @scala.inline
-  def apply(config: Anon_ViewName, global: Anon_B, manifestId: String): CoreProviderParentApp = {
+  def apply(config: AnonViews, global: AnonRemoveEventListener, manifestId: String): CoreProviderParentApp = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], global = global.asInstanceOf[js.Any], manifestId = manifestId.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[CoreProviderParentApp]

@@ -1,15 +1,15 @@
 package typingsSlinky.firebase
 
-import typingsSlinky.firebase.firebaseMod.analytics.EventNameString
-import typingsSlinky.firebase.firebaseMod.database.EventType
-import typingsSlinky.firebase.firebaseMod.firestore.DocumentChangeType
-import typingsSlinky.firebase.firebaseMod.firestore.FirestoreErrorCode
-import typingsSlinky.firebase.firebaseMod.firestore.OrderByDirection
-import typingsSlinky.firebase.firebaseMod.firestore.WhereFilterOp
-import typingsSlinky.firebase.firebaseMod.functions.FunctionsErrorCode
-import typingsSlinky.firebase.firebaseMod.remoteConfig.FetchStatus
-import typingsSlinky.firebase.firebaseMod.remoteConfig.LogLevel
-import typingsSlinky.firebase.firebaseMod.remoteConfig.ValueSource
+import typingsSlinky.firebase.mod.analytics.EventNameString
+import typingsSlinky.firebase.mod.database.EventType
+import typingsSlinky.firebase.mod.firestore.DocumentChangeType
+import typingsSlinky.firebase.mod.firestore.FirestoreErrorCode
+import typingsSlinky.firebase.mod.firestore.OrderByDirection
+import typingsSlinky.firebase.mod.firestore.WhereFilterOp
+import typingsSlinky.firebase.mod.functions.FunctionsErrorCode
+import typingsSlinky.firebase.mod.remoteConfig.FetchStatus
+import typingsSlinky.firebase.mod.remoteConfig.LogLevel
+import typingsSlinky.firebase.mod.remoteConfig.ValueSource
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -100,7 +100,7 @@ object firebaseStrings {
   @js.native
   sealed trait debug
     extends LogLevel
-       with typingsSlinky.firebase.firebaseMod.firestore.LogLevel
+       with typingsSlinky.firebase.mod.firestore.LogLevel
   
   @js.native
   sealed trait default extends ValueSource
@@ -111,7 +111,7 @@ object firebaseStrings {
   @js.native
   sealed trait error
     extends LogLevel
-       with typingsSlinky.firebase.firebaseMod.firestore.LogLevel
+       with typingsSlinky.firebase.mod.firestore.LogLevel
   
   @js.native
   sealed trait estimate extends js.Object
@@ -223,7 +223,7 @@ object firebaseStrings {
   @js.native
   sealed trait silent
     extends LogLevel
-       with typingsSlinky.firebase.firebaseMod.firestore.LogLevel
+       with typingsSlinky.firebase.mod.firestore.LogLevel
   
   @js.native
   sealed trait static extends ValueSource

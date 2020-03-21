@@ -1,6 +1,6 @@
 package typingsSlinky.aphrodite
 
-import typingsSlinky.aphrodite.typingsCssDashPropertiesMod.CSSWideKeyword
+import typingsSlinky.aphrodite.cssPropertiesMod.CSSWideKeyword
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

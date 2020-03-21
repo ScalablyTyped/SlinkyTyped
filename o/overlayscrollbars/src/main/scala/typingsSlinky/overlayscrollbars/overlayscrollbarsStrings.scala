@@ -1,11 +1,11 @@
 package typingsSlinky.overlayscrollbars
 
-import typingsSlinky.overlayscrollbars.overlayscrollbarsMod.AutoHideBehavior
-import typingsSlinky.overlayscrollbars.overlayscrollbarsMod.BlockBehavior
-import typingsSlinky.overlayscrollbars.overlayscrollbarsMod.OverflowBehavior
-import typingsSlinky.overlayscrollbars.overlayscrollbarsMod.ResizeBehavior
-import typingsSlinky.overlayscrollbars.overlayscrollbarsMod.ScrollBehavior
-import typingsSlinky.overlayscrollbars.overlayscrollbarsMod.VisibilityBehavior
+import typingsSlinky.overlayscrollbars.mod.AutoHideBehavior
+import typingsSlinky.overlayscrollbars.mod.BlockBehavior
+import typingsSlinky.overlayscrollbars.mod.OverflowBehavior
+import typingsSlinky.overlayscrollbars.mod.ResizeBehavior
+import typingsSlinky.overlayscrollbars.mod.ScrollBehavior
+import typingsSlinky.overlayscrollbars.mod.VisibilityBehavior
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

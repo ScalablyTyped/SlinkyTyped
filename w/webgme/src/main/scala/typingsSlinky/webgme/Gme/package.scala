@@ -5,11 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object Gme {
-  import org.scalablytyped.runtime.StringDictionary
-  import typingsSlinky.webgme.Core.GUID
-
   type Connection = js.Any
-  type ProjectResult = js.Array[Project] | StringDictionary[Project]
+  type ProjectResult = js.Array[typingsSlinky.webgme.Gme.Project] | org.scalablytyped.runtime.StringDictionary[typingsSlinky.webgme.Gme.Project]
   /**
     * The eventHandler is invoked whenever there are 
     * changes to the nodes matching any of the patterns.
@@ -30,6 +27,6 @@ package object Gme {
     *  * (else)
     * "Technical events" not used.
     */
-  type TerritoryEventHandler = js.Function1[/* event */ js.Array[Event], Unit]
-  type TerritoryId = GUID
+  type TerritoryEventHandler = js.Function1[/* event */ js.Array[typingsSlinky.webgme.Gme.Event], scala.Unit]
+  type TerritoryId = typingsSlinky.webgme.Core.GUID
 }

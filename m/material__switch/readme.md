@@ -10,9 +10,9 @@ The Material Components for the web switch component
 | ------------------ | :-------------: |
 | Full name          | @material/switch |
 | Keywords           | material components, material design, switch |
-| # releases         | 120 |
+| # releases         | 164 |
 | # dependents       | 45 |
-| # downloads        | 1231444 |
+| # downloads        | 1254853 |
 | # stars            | 0 |
 
 ## Links

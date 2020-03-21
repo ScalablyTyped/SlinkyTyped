@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.navermaps.naver.maps.Point
-  - typings.navermaps.naver.maps.LatLng
+  - typingsSlinky.navermaps.naver.maps.Point
+  - typingsSlinky.navermaps.naver.maps.LatLng
 */
 trait Coord extends js.Object
 

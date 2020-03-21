@@ -10,9 +10,9 @@ JupyterLab - Application Utilities Extension
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/apputils-extension |
 | Keywords           | - |
-| # releases         | 63 |
+| # releases         | 64 |
 | # dependents       | 2 |
-| # downloads        | 754956 |
+| # downloads        | 760165 |
 | # stars            | 0 |
 
 ## Links

@@ -1,7 +1,7 @@
 package typingsSlinky.history
 
 import typingsSlinky.history.createHashHistoryMod.HashType
-import typingsSlinky.history.historyMod.Action
+import typingsSlinky.history.mod.Action
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

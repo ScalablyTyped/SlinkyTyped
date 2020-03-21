@@ -8,9 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.vexflow.vexflowNumbers.`1`
-  - typings.vexflow.vexflowNumbers.`0`
-  - typings.vexflow.vexflowNumbers.`2`
+  - typingsSlinky.vexflow.vexflowNumbers.`1`
+  - typingsSlinky.vexflow.vexflowNumbers.`0`
+  - typingsSlinky.vexflow.vexflowNumbers.`2`
 */
 trait Justify extends js.Object
 

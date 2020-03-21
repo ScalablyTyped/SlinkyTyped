@@ -11,7 +11,7 @@ A postgresql driver for db-migrate
 | Keywords           | db-migrate, migrate, migration, pg, postgres, postgresql, sql, database, db, migrator, driver |
 | # releases         | 7 |
 | # dependents       | 17 |
-| # downloads        | 1201225 |
+| # downloads        | 1238748 |
 | # stars            | 2 |
 
 ## Links

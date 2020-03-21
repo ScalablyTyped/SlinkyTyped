@@ -1,12 +1,12 @@
 package typingsSlinky.dojo.dojox.mobile
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.arrow
 import typingsSlinky.dojo.dojoStrings.defaultColor
 import typingsSlinky.dojo.dojoStrings.light
 import typingsSlinky.dojo.dojoStrings.selColor
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,7 +26,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.mobile.ToolBarButton")
 @js.native
-class ToolBarButton () extends _ItemBase {
+class ToolBarButton () extends ItemBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -75,7 +75,7 @@ class ToolBarButton () extends _ItemBase {
     *
     * @param e
     */
-  def onClick(e: Event): Unit = js.native
+  def onClick(e: Event_): Unit = js.native
   @JSName("set")
   def set_arrow(property: arrow, value: String): Unit = js.native
   @JSName("set")
@@ -93,7 +93,7 @@ class ToolBarButton () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_defaultColor(
     property: defaultColor,
@@ -103,7 +103,7 @@ class ToolBarButton () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_light(
     property: light,
@@ -113,7 +113,7 @@ class ToolBarButton () extends _ItemBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_selColor(
     property: selColor,
@@ -123,6 +123,6 @@ class ToolBarButton () extends _ItemBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

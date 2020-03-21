@@ -10,9 +10,9 @@ DOM manipulation utilities for Material Components for the web
 | ------------------ | :-------------: |
 | Full name          | @material/dom |
 | Keywords           | - |
-| # releases         | 94 |
+| # releases         | 139 |
 | # dependents       | 43 |
-| # downloads        | 1662991 |
+| # downloads        | 1739788 |
 | # stars            | 0 |
 
 ## Links

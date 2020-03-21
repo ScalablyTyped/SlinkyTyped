@@ -5,7 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object declarativeContent {
-  import typingsSlinky.chrome.chrome.events.Event
-
-  type PageChangedEvent = Event[js.Function0[Unit]]
+  type PageChangedEvent = typingsSlinky.chrome.chrome.events.Event[js.Function0[scala.Unit]]
 }

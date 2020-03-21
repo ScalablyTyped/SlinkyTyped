@@ -1,6 +1,6 @@
 package typingsSlinky.portscanner
 
-import typingsSlinky.portscanner.portscannerMod.Status
+import typingsSlinky.portscanner.mod.Status
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

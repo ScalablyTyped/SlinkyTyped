@@ -1,16 +1,16 @@
 package typingsSlinky.hapi
 
-import typingsSlinky.hapi.hapiMod.Lifecycle._FailAction
-import typingsSlinky.hapi.hapiMod.PayloadOutput
-import typingsSlinky.hapi.hapiMod.ReferrerPolicy
-import typingsSlinky.hapi.hapiMod.RequestEventType
-import typingsSlinky.hapi.hapiMod.RouteOptionsAccessEntity
-import typingsSlinky.hapi.hapiMod.RouteRequestExtType
-import typingsSlinky.hapi.hapiMod.ServerExtType
-import typingsSlinky.hapi.hapiMod.ServerRequestExtType
-import typingsSlinky.hapi.hapiMod.Util.HTTP_METHODS
-import typingsSlinky.hapi.hapiMod.Util.HTTP_METHODS_PARTIAL
-import typingsSlinky.hapi.hapiMod.Util.HTTP_METHODS_PARTIAL_LOWERCASE
+import typingsSlinky.hapi.mod.Lifecycle._FailAction
+import typingsSlinky.hapi.mod.PayloadOutput
+import typingsSlinky.hapi.mod.ReferrerPolicy
+import typingsSlinky.hapi.mod.RequestEventType
+import typingsSlinky.hapi.mod.RouteOptionsAccessEntity
+import typingsSlinky.hapi.mod.RouteRequestExtType
+import typingsSlinky.hapi.mod.ServerExtType
+import typingsSlinky.hapi.mod.ServerRequestExtType
+import typingsSlinky.hapi.mod.Util.HTTP_METHODS
+import typingsSlinky.hapi.mod.Util.HTTP_METHODS_PARTIAL
+import typingsSlinky.hapi.mod.Util.HTTP_METHODS_PARTIAL_LOWERCASE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -54,9 +54,6 @@ object hapiStrings {
   sealed trait PUT
     extends HTTP_METHODS
        with HTTP_METHODS_PARTIAL
-  
-  @js.native
-  sealed trait RouteOptions extends js.Object
   
   @js.native
   sealed trait Strict extends js.Object
@@ -343,8 +340,6 @@ object hapiStrings {
   def POST: POST = "POST".asInstanceOf[POST]
   @scala.inline
   def PUT: PUT = "PUT".asInstanceOf[PUT]
-  @scala.inline
-  def RouteOptions: RouteOptions = "RouteOptions".asInstanceOf[RouteOptions]
   @scala.inline
   def Strict: Strict = "Strict".asInstanceOf[Strict]
   @scala.inline

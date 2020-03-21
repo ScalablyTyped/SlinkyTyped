@@ -1,6 +1,6 @@
 package typingsSlinky.titanium
 
-import typingsSlinky.titanium.Titanium.Platform.DisplayCaps
+import typingsSlinky.titanium.Titanium.Platform.DisplayCaps_
 import typingsSlinky.titanium.Titanium.UI.TabGroup
 import typingsSlinky.titanium.Titanium.UI.Window
 import scala.scalajs.js
@@ -65,7 +65,7 @@ trait TypeofPlatform extends js.Object {
   /**
   		 * Returns the DisplayCaps object.
   		 */
-  val displayCaps: DisplayCaps = js.native
+  val displayCaps: DisplayCaps_ = js.native
   /**
   		 * Applications's globally-unique ID (UUID).
   		 */
@@ -205,7 +205,7 @@ trait TypeofPlatform extends js.Object {
   /**
   		 * Gets the value of the <Titanium.Platform.displayCaps> property.
   		 */
-  def getDisplayCaps(): DisplayCaps = js.native
+  def getDisplayCaps(): DisplayCaps_ = js.native
   /**
   		 * Gets the value of the <Titanium.Platform.id> property.
   		 */

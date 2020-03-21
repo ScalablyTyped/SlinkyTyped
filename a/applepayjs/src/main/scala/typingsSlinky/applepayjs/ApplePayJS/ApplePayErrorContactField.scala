@@ -8,19 +8,19 @@ import scala.scalajs.js.annotation._
   * Names of the fields in the shipping or billing contact information, used to locate errors in the payment sheet.
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.applepayjs.applepayjsStrings.phoneNumber
-  - typings.applepayjs.applepayjsStrings.emailAddress
-  - typings.applepayjs.applepayjsStrings.name
-  - typings.applepayjs.applepayjsStrings.phoneticName
-  - typings.applepayjs.applepayjsStrings.postalAddress
-  - typings.applepayjs.applepayjsStrings.addressLines
-  - typings.applepayjs.applepayjsStrings.locality
-  - typings.applepayjs.applepayjsStrings.subLocality
-  - typings.applepayjs.applepayjsStrings.postalCode
-  - typings.applepayjs.applepayjsStrings.administrativeArea
-  - typings.applepayjs.applepayjsStrings.subAdministrativeArea
-  - typings.applepayjs.applepayjsStrings.country
-  - typings.applepayjs.applepayjsStrings.countryCode
+  - typingsSlinky.applepayjs.applepayjsStrings.phoneNumber
+  - typingsSlinky.applepayjs.applepayjsStrings.emailAddress
+  - typingsSlinky.applepayjs.applepayjsStrings.name
+  - typingsSlinky.applepayjs.applepayjsStrings.phoneticName
+  - typingsSlinky.applepayjs.applepayjsStrings.postalAddress
+  - typingsSlinky.applepayjs.applepayjsStrings.addressLines
+  - typingsSlinky.applepayjs.applepayjsStrings.locality
+  - typingsSlinky.applepayjs.applepayjsStrings.subLocality
+  - typingsSlinky.applepayjs.applepayjsStrings.postalCode
+  - typingsSlinky.applepayjs.applepayjsStrings.administrativeArea
+  - typingsSlinky.applepayjs.applepayjsStrings.subAdministrativeArea
+  - typingsSlinky.applepayjs.applepayjsStrings.country
+  - typingsSlinky.applepayjs.applepayjsStrings.countryCode
 */
 trait ApplePayErrorContactField extends js.Object
 

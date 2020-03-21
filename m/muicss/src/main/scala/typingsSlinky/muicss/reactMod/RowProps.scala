@@ -1,6 +1,5 @@
 package typingsSlinky.muicss.reactMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
@@ -15,11 +14,11 @@ import slinky.web.SyntheticTouchEvent
 import slinky.web.SyntheticTransitionEvent
 import slinky.web.SyntheticUIEvent
 import slinky.web.SyntheticWheelEvent
-import typingsSlinky.react.Anon_Html
-import typingsSlinky.react.reactMod.Booleanish
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.react.reactMod.DragEvent
-import typingsSlinky.react.reactMod.HTMLAttributes
+import typingsSlinky.react.AnonHtml
+import typingsSlinky.react.mod.Booleanish
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.react.mod.HTMLAttributes
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -65,6 +64,7 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
+import typingsSlinky.std.Event_
 import typingsSlinky.std.HTMLDivElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -138,7 +138,7 @@ object RowProps {
     color: String = null,
     contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
-    dangerouslySetInnerHTML: Anon_Html = null,
+    dangerouslySetInnerHTML: AnonHtml = null,
     datatype: String = null,
     defaultChecked: js.UndefOr[Boolean] = js.undefined,
     defaultValue: String | Double | js.Array[String] = null,
@@ -157,16 +157,16 @@ object RowProps {
     lang: String = null,
     lg: Int | Double = null,
     md: Int | Double = null,
-    onAbort: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onAbort: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onAnimationEnd: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onAnimationIteration: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onAnimationStart: SyntheticAnimationEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onAuxClick: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
     onBlur: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onCanPlay: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onCanPlayThrough: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event] => Unit = null,
+    onCanPlay: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onCanPlayThrough: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onChange: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
     onClick: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onCompositionEnd: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onCompositionStart: SyntheticCompositionEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
@@ -183,21 +183,21 @@ object RowProps {
     onDragOver: DragEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onDragStart: DragEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onDrop: DragEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onDurationChange: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onEmptied: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onEncrypted: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onEnded: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onError: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onDurationChange: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onEmptied: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onEncrypted: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onEnded: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onError: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onFocus: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event] => Unit = null,
-    onInvalid: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event] => Unit = null,
+    onInput: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
+    onInvalid: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
     onKeyDown: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onKeyPress: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onKeyUp: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onLoad: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onLoadStart: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onLoadedData: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onLoadedMetadata: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onLoad: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onLoadStart: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onLoadedData: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onLoadedMetadata: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onMouseDown: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onMouseEnter: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onMouseLeave: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
@@ -206,9 +206,9 @@ object RowProps {
     onMouseOver: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onMouseUp: SyntheticMouseEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onPaste: SyntheticClipboardEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPause: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPlay: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onPlaying: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onPause: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onPlay: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onPlaying: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onPointerCancel: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onPointerDown: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onPointerEnter: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
@@ -217,24 +217,24 @@ object RowProps {
     onPointerOut: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onPointerOver: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onPointerUp: SyntheticPointerEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onProgress: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onRateChange: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event] => Unit = null,
+    onProgress: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onRateChange: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
     onScroll: SyntheticUIEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onSeeked: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onSeeking: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onSelect: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onStalled: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onSubmit: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event] => Unit = null,
-    onSuspend: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onTimeUpdate: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onSeeked: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onSeeking: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onSelect: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onStalled: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onSubmit: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLDivElement, Event_] => Unit = null,
+    onSuspend: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onTimeUpdate: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onTouchCancel: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onTouchEnd: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onTouchMove: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onTouchStart: SyntheticTouchEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onTransitionEnd: SyntheticTransitionEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onVolumeChange: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
-    onWaiting: SyntheticEvent[Event, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onVolumeChange: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
+    onWaiting: SyntheticEvent[Event_, org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     onWheel: SyntheticWheelEvent[org.scalajs.dom.raw.HTMLDivElement] => Unit = null,
     placeholder: String = null,
     prefix: String = null,

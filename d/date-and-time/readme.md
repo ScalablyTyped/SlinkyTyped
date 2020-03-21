@@ -11,8 +11,8 @@ A Minimalist DateTime utility for Node.js and the browser
 | Full name          | date-and-time |
 | Keywords           | date, time, format, parse, utility |
 | # releases         | 7 |
-| # dependents       | 60 |
-| # downloads        | 16706100 |
+| # dependents       | 63 |
+| # downloads        | 19138044 |
 | # stars            | 6 |
 
 ## Links

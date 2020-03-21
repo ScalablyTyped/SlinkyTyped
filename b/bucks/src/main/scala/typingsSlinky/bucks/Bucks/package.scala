@@ -9,7 +9,7 @@ package object Bucks {
   type TaskWithNext = js.Function3[
     /* err */ js.UndefOr[js.Error], 
     /* res */ js.UndefOr[js.Any], 
-    /* next */ js.UndefOr[Task], 
+    /* next */ js.UndefOr[typingsSlinky.bucks.Bucks.Task], 
     js.Any
   ]
 }

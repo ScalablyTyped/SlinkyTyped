@@ -1,0 +1,38 @@
+package typingsSlinky.awsSdkClientDynamodbNode.typesLimitExceededExceptionMod
+
+import typingsSlinky.awsSdkClientDynamodbNode.createBackupExceptionsUnionMod.CreateBackupExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.createGlobalTableExceptionsUnionMod.CreateGlobalTableExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.createTableExceptionsUnionMod.CreateTableExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.deleteBackupExceptionsUnionMod.DeleteBackupExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.deleteTableExceptionsUnionMod.DeleteTableExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.restoreTableFromBackupExceptionsUnionMod.RestoreTableFromBackupExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.restoreTableToPointInTimeExceptionsUnionMod.RestoreTableToPointInTimeExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.tagResourceExceptionsUnionMod.TagResourceExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.untagResourceExceptionsUnionMod.UntagResourceExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.updateGlobalTableSettingsExceptionsUnionMod.UpdateGlobalTableSettingsExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.updateTableExceptionsUnionMod.UpdateTableExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.updateTimeToLiveExceptionsUnionMod.UpdateTimeToLiveExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait LimitExceededException
+  extends ServiceException[LimitExceededExceptionDetails]
+     with CreateBackupExceptionsUnion
+     with CreateGlobalTableExceptionsUnion
+     with CreateTableExceptionsUnion
+     with DeleteBackupExceptionsUnion
+     with DeleteTableExceptionsUnion
+     with RestoreTableFromBackupExceptionsUnion
+     with RestoreTableToPointInTimeExceptionsUnion
+     with TagResourceExceptionsUnion
+     with UntagResourceExceptionsUnion
+     with UpdateGlobalTableSettingsExceptionsUnion
+     with UpdateTableExceptionsUnion
+     with UpdateTimeToLiveExceptionsUnion {
+  @JSName("name")
+  var name_LimitExceededException: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.LimitExceededException = js.native
+}
+

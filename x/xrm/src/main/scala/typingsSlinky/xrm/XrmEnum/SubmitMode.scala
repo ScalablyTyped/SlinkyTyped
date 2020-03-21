@@ -12,9 +12,9 @@ import scala.scalajs.js.annotation._
   * @see {@link Xrm.SubmitMode}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.always
-  - typings.xrm.xrmStrings.dirty
-  - typings.xrm.xrmStrings.never
+  - typingsSlinky.xrm.xrmStrings.always
+  - typingsSlinky.xrm.xrmStrings.dirty
+  - typingsSlinky.xrm.xrmStrings.never
 */
 trait SubmitMode extends js.Object
 

@@ -1,6 +1,6 @@
 package typingsSlinky.timezonecomplete
 
-import typingsSlinky.timezonecomplete.distLibPeriodMod.PeriodDstJson
+import typingsSlinky.timezonecomplete.periodMod.PeriodDstJson
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

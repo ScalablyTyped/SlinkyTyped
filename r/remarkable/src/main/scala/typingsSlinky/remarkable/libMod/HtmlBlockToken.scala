@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.remarkable.libMod._Token because Already inherited */ trait HtmlBlockToken extends ContentToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait HtmlBlockToken extends ContentToken {
   @JSName("block")
   var block_HtmlBlockToken: `false`
   @JSName("content")

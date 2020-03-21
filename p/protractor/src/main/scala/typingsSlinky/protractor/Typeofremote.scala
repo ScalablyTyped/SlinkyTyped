@@ -3,10 +3,10 @@ package typingsSlinky.protractor
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import org.scalablytyped.runtime.Instantiable2
-import typingsSlinky.seleniumDashWebdriver.remoteMod.DriverService
-import typingsSlinky.seleniumDashWebdriver.remoteMod.FileDetector
-import typingsSlinky.seleniumDashWebdriver.remoteMod.SeleniumServer
-import typingsSlinky.seleniumDashWebdriver.remoteMod.ServiceOptions
+import typingsSlinky.seleniumWebdriver.remoteMod.DriverService
+import typingsSlinky.seleniumWebdriver.remoteMod.FileDetector
+import typingsSlinky.seleniumWebdriver.remoteMod.SeleniumServer
+import typingsSlinky.seleniumWebdriver.remoteMod.ServiceOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,10 +15,10 @@ trait Typeofremote extends js.Object {
   var DriverService: (Instantiable2[
     /* executable */ String, 
     /* options */ ServiceOptions, 
-    typingsSlinky.seleniumDashWebdriver.remoteMod.DriverService
+    typingsSlinky.seleniumWebdriver.remoteMod.DriverService
   ]) with TypeofDriverService
-  var FileDetector: Instantiable0[typingsSlinky.seleniumDashWebdriver.remoteMod.FileDetector]
-  var SeleniumServer: Instantiable1[/* jar */ String, typingsSlinky.seleniumDashWebdriver.remoteMod.SeleniumServer]
+  var FileDetector: Instantiable0[typingsSlinky.seleniumWebdriver.remoteMod.FileDetector]
+  var SeleniumServer: Instantiable1[/* jar */ String, typingsSlinky.seleniumWebdriver.remoteMod.SeleniumServer]
 }
 
 object Typeofremote {

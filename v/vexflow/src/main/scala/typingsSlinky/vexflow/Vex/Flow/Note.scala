@@ -1,8 +1,8 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.Anon_DotsDurationType
-import typingsSlinky.vexflow.Anon_ExtraLeftPx
-import typingsSlinky.vexflow.Anon_X
+import typingsSlinky.vexflow.AnonExtraLeftPx_
+import typingsSlinky.vexflow.AnonType
+import typingsSlinky.vexflow.AnonX
 import typingsSlinky.vexflow.Vex.IRenderContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Vex.Flow.Note")
 @js.native
 class Note protected () extends Tickable {
-  def this(note_struct: Anon_DotsDurationType) = this()
+  def this(note_struct: AnonType) = this()
   var preFormatted: Boolean = js.native
   def addModifier(modifier: Modifier, index: Double): Note = js.native
   /* CompleteClass */
@@ -36,8 +36,8 @@ class Note protected () extends Tickable {
   override def getIntrinsicTicks(): Fraction = js.native
   def getLineForRest(): Double = js.native
   def getLineNumber(): Double = js.native
-  def getMetrics(): Anon_ExtraLeftPx = js.native
-  def getModifierStartXY(): Anon_X = js.native
+  def getMetrics(): AnonExtraLeftPx_ = js.native
+  def getModifierStartXY(): AnonX = js.native
   def getNoteType(): String = js.native
   def getPlayNote(): js.Any = js.native
   def getStave(): Stave = js.native

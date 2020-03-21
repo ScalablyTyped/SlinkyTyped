@@ -1,9 +1,9 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesTree
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BorderColorBorderType
-import typingsSlinky.echarts.Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidth
+import typingsSlinky.echarts.AnonBorderType
+import typingsSlinky.echarts.AnonDistance
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonLabelAnonDistance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -111,21 +111,21 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-tree.data.emphasis
     */
-  var emphasis: js.UndefOr[Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidth] = js.undefined
+  var emphasis: js.UndefOr[AnonLabelAnonDistance] = js.undefined
   /**
     * The style of the node.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.data.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderType] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderType] = js.undefined
   /**
     * The label of the node.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.data.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth] = js.undefined
+  var label: js.UndefOr[AnonDistance] = js.undefined
   /**
     * The name of the tree node, used to identify each node.
     *
@@ -139,7 +139,7 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-tree.data.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * The value of the node, displayed in the tooltip.
     *
@@ -161,11 +161,11 @@ object DataObject {
     animationEasingUpdate: String = null,
     animationThreshold: Int | Double = null,
     children: js.Array[DataObject] = null,
-    emphasis: Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidth = null,
-    itemStyle: Anon_BorderColorBorderType = null,
-    label: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth = null,
+    emphasis: AnonLabelAnonDistance = null,
+    itemStyle: AnonBorderType = null,
+    label: AnonDistance = null,
     name: String = null,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     value: Int | Double = null
   ): DataObject = {
     val __obj = js.Dynamic.literal()

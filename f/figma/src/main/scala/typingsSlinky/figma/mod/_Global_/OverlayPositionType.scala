@@ -1,0 +1,39 @@
+package typingsSlinky.figma.mod._Global_
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.figma.figmaStrings.CENTER
+  - typingsSlinky.figma.figmaStrings.TOP_LEFT
+  - typingsSlinky.figma.figmaStrings.TOP_CENTER
+  - typingsSlinky.figma.figmaStrings.TOP_RIGHT
+  - typingsSlinky.figma.figmaStrings.BOTTOM_LEFT
+  - typingsSlinky.figma.figmaStrings.BOTTOM_CENTER
+  - typingsSlinky.figma.figmaStrings.BOTTOM_RIGHT
+  - typingsSlinky.figma.figmaStrings.MANUAL
+*/
+trait OverlayPositionType extends js.Object
+
+object OverlayPositionType {
+  @scala.inline
+  def BOTTOM_CENTER: typingsSlinky.figma.figmaStrings.BOTTOM_CENTER = this.cast("BOTTOM_CENTER")
+  @scala.inline
+  def BOTTOM_LEFT: typingsSlinky.figma.figmaStrings.BOTTOM_LEFT = this.cast("BOTTOM_LEFT")
+  @scala.inline
+  def BOTTOM_RIGHT: typingsSlinky.figma.figmaStrings.BOTTOM_RIGHT = this.cast("BOTTOM_RIGHT")
+  @scala.inline
+  def CENTER: typingsSlinky.figma.figmaStrings.CENTER = this.cast("CENTER")
+  @scala.inline
+  def MANUAL: typingsSlinky.figma.figmaStrings.MANUAL = this.cast("MANUAL")
+  @scala.inline
+  def TOP_CENTER: typingsSlinky.figma.figmaStrings.TOP_CENTER = this.cast("TOP_CENTER")
+  @scala.inline
+  def TOP_LEFT: typingsSlinky.figma.figmaStrings.TOP_LEFT = this.cast("TOP_LEFT")
+  @scala.inline
+  def TOP_RIGHT: typingsSlinky.figma.figmaStrings.TOP_RIGHT = this.cast("TOP_RIGHT")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+}
+

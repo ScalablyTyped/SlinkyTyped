@@ -56,7 +56,7 @@ object PointerEventInit {
     tiltX: Int | Double = null,
     tiltY: Int | Double = null,
     twist: Int | Double = null,
-    view: org.scalajs.dom.raw.Window = null,
+    view: Window_ = null,
     width: Int | Double = null
   ): PointerEventInit = {
     val __obj = js.Dynamic.literal()

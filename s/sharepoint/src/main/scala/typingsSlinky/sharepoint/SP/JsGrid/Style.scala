@@ -2,7 +2,7 @@ package typingsSlinky.sharepoint.SP.JsGrid
 
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.HTMLTableCellElement
-import typingsSlinky.sharepoint.Anon_Cell
+import typingsSlinky.sharepoint.AnonCell
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,7 +15,7 @@ class Style () extends js.Object
 @JSGlobal("SP.JsGrid.Style")
 @js.native
 object Style extends js.Object {
-  var Type: Anon_Cell = js.native
+  var Type: AnonCell = js.native
   def ApplyCellStyle(td: HTMLTableCellElement, style: js.Any): Unit = js.native
   def ApplyColumnContextMenuStyle(domObj: HTMLElement, style: js.Any): Unit = js.native
   def ApplyCornerHeaderBorderStyle(domObj: HTMLElement, colStyle: js.Any, rowStyle: js.Any): Unit = js.native

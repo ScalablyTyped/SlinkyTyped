@@ -1,6 +1,5 @@
 package typingsSlinky.baseui.tagMod
 
-import org.scalajs.dom.raw.Event
 import slinky.core.TagMod
 import typingsSlinky.baseui.baseuiStrings.accent
 import typingsSlinky.baseui.baseuiStrings.custom_
@@ -12,6 +11,7 @@ import typingsSlinky.baseui.baseuiStrings.positive
 import typingsSlinky.baseui.baseuiStrings.primary
 import typingsSlinky.baseui.baseuiStrings.solid
 import typingsSlinky.baseui.baseuiStrings.warning
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,11 +24,12 @@ trait TagProps extends js.Object {
   var isFocused: js.UndefOr[Boolean] = js.undefined
   var isHovered: js.UndefOr[Boolean] = js.undefined
   var kind: js.UndefOr[custom_ | accent | primary | neutral | positive | warning | negative] = js.undefined
-  var onActionClick: js.UndefOr[js.Function2[/* e */ Event, /* children */ js.UndefOr[TagMod[Any]], _]] = js.undefined
-  var onActionKeyDown: js.UndefOr[js.Function2[/* e */ Event, /* children */ js.UndefOr[TagMod[Any]], _]] = js.undefined
-  var onClick: js.UndefOr[js.Function1[/* event */ Event, _]] = js.undefined
-  var onKeyDown: js.UndefOr[js.Function1[/* event */ Event, _]] = js.undefined
+  var onActionClick: js.UndefOr[js.Function2[/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]], _]] = js.undefined
+  var onActionKeyDown: js.UndefOr[js.Function2[/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]], _]] = js.undefined
+  var onClick: js.UndefOr[js.Function1[/* event */ Event_, _]] = js.undefined
+  var onKeyDown: js.UndefOr[js.Function1[/* event */ Event_, _]] = js.undefined
   var overrides: js.UndefOr[TagOverrides] = js.undefined
+  var title: js.UndefOr[String] = js.undefined
   var variant: js.UndefOr[solid | light | outlined] = js.undefined
 }
 
@@ -42,11 +43,12 @@ object TagProps {
     isFocused: js.UndefOr[Boolean] = js.undefined,
     isHovered: js.UndefOr[Boolean] = js.undefined,
     kind: custom_ | accent | primary | neutral | positive | warning | negative = null,
-    onActionClick: (/* e */ Event, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
-    onActionKeyDown: (/* e */ Event, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
-    onClick: /* event */ Event => _ = null,
-    onKeyDown: /* event */ Event => _ = null,
+    onActionClick: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
+    onActionKeyDown: (/* e */ Event_, /* children */ js.UndefOr[TagMod[Any]]) => _ = null,
+    onClick: /* event */ Event_ => _ = null,
+    onKeyDown: /* event */ Event_ => _ = null,
     overrides: TagOverrides = null,
+    title: String = null,
     variant: solid | light | outlined = null
   ): TagProps = {
     val __obj = js.Dynamic.literal()
@@ -62,6 +64,7 @@ object TagProps {
     if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
     if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (variant != null) __obj.updateDynamic("variant")(variant.asInstanceOf[js.Any])
     __obj.asInstanceOf[TagProps]
   }

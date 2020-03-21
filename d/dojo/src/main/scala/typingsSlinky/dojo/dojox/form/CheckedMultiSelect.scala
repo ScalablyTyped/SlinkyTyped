@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.form
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.dropDown
 import typingsSlinky.dojo.dojoStrings.invalidMessage
 import typingsSlinky.dojo.dojoStrings.labelText
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("dojox.form.CheckedMultiSelect")
 @js.native
 class CheckedMultiSelect ()
-  extends typingsSlinky.dojo.dijit.form._FormSelectWidget {
+  extends typingsSlinky.dojo.dijit.form.FormSelectWidget {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -117,7 +117,7 @@ class CheckedMultiSelect ()
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_invalidMessage(
     property: invalidMessage,
@@ -127,7 +127,7 @@ class CheckedMultiSelect ()
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_labelText(
     property: labelText,
@@ -137,7 +137,7 @@ class CheckedMultiSelect ()
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_required(
     property: required,
@@ -147,7 +147,7 @@ class CheckedMultiSelect ()
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_tooltipPosition(
     property: tooltipPosition,
@@ -157,6 +157,6 @@ class CheckedMultiSelect ()
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

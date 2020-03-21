@@ -5,26 +5,27 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_ColumnsDragIndex
-import typingsSlinky.primereact.Anon_Delta
-import typingsSlinky.primereact.Anon_First
-import typingsSlinky.primereact.Anon_MultiSortMeta
-import typingsSlinky.primereact.Anon_NodeOriginalEvent
-import typingsSlinky.primereact.Anon_OriginalEventValue
-import typingsSlinky.primereact.componentsTreenodeTreeNodeMod.TreeNode
-import typingsSlinky.primereact.componentsTreetableTreeTableMod.TreeTableProps
+import typingsSlinky.primereact.AnonDelta
+import typingsSlinky.primereact.AnonDropIndex
+import typingsSlinky.primereact.AnonFirst
+import typingsSlinky.primereact.AnonMultiSortMeta
+import typingsSlinky.primereact.AnonNode
+import typingsSlinky.primereact.AnonNodeOriginalEvent
+import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.treeNodeMod.TreeNode
+import typingsSlinky.primereact.treeTableMod.TreeTableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TreeTable
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.treetableMod.TreeTable] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactTreetableMod.TreeTable] {
   @JSImport("primereact/treetable", "TreeTable")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, onContextMenu, onSelect, rows */
+  /* The following DOM/SVG props were specified: className, id, rows */
   def apply(
     alwaysShowPaginator: js.UndefOr[Boolean] = js.undefined,
     autoLayout: js.UndefOr[Boolean] = js.undefined,
@@ -50,18 +51,20 @@ object TreeTable
     loadingIcon: String = null,
     metaKeySelection: js.UndefOr[Boolean] = js.undefined,
     multiSortMeta: js.Array[_] = null,
-    onColReorder: /* e */ Anon_ColumnsDragIndex => Unit = null,
-    onCollapse: /* e */ Anon_NodeOriginalEvent => Unit = null,
-    onColumnResizeEnd: /* e */ Anon_Delta => Unit = null,
-    onContextMenuSelectionChange: /* e */ Anon_OriginalEventValue => Unit = null,
-    onExpand: /* e */ Anon_NodeOriginalEvent => Unit = null,
+    onColReorder: /* e */ AnonDropIndex => Unit = null,
+    onCollapse: /* e */ AnonNodeOriginalEvent => Unit = null,
+    onColumnResizeEnd: /* e */ AnonDelta => Unit = null,
+    onContextMenu: /* e */ AnonNode => Unit = null,
+    onContextMenuSelectionChange: /* e */ AnonValue => Unit = null,
+    onExpand: /* e */ AnonNodeOriginalEvent => Unit = null,
     onFilter: /* filters */ js.Array[_] => Unit = null,
-    onPage: /* e */ Anon_First => Unit = null,
-    onRowClick: /* e */ Anon_NodeOriginalEvent => Unit = null,
-    onSelectionChange: /* e */ Anon_OriginalEventValue => Unit = null,
-    onSort: /* e */ Anon_MultiSortMeta => Unit = null,
-    onToggle: /* e */ Anon_OriginalEventValue => Unit = null,
-    onUnselect: /* e */ Anon_NodeOriginalEvent => Unit = null,
+    onPage: /* e */ AnonFirst => Unit = null,
+    onRowClick: /* e */ AnonNodeOriginalEvent => Unit = null,
+    onSelect: /* e */ AnonNodeOriginalEvent => Unit = null,
+    onSelectionChange: /* e */ AnonValue => Unit = null,
+    onSort: /* e */ AnonMultiSortMeta => Unit = null,
+    onToggle: /* e */ AnonValue => Unit = null,
+    onUnselect: /* e */ AnonNodeOriginalEvent => Unit = null,
     pageLinkSize: Int | Double = null,
     paginator: js.UndefOr[Boolean] = js.undefined,
     paginatorLeft: js.Any = null,
@@ -88,7 +91,7 @@ object TreeTable
     totalRecords: Int | Double = null,
     value: js.Array[TreeNode] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.treetableMod.TreeTable] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTreetableMod.TreeTable] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(alwaysShowPaginator)) __obj.updateDynamic("alwaysShowPaginator")(alwaysShowPaginator.asInstanceOf[js.Any])
     if (!js.isUndefined(autoLayout)) __obj.updateDynamic("autoLayout")(autoLayout.asInstanceOf[js.Any])
@@ -117,11 +120,13 @@ object TreeTable
     if (onColReorder != null) __obj.updateDynamic("onColReorder")(js.Any.fromFunction1(onColReorder))
     if (onCollapse != null) __obj.updateDynamic("onCollapse")(js.Any.fromFunction1(onCollapse))
     if (onColumnResizeEnd != null) __obj.updateDynamic("onColumnResizeEnd")(js.Any.fromFunction1(onColumnResizeEnd))
+    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
     if (onContextMenuSelectionChange != null) __obj.updateDynamic("onContextMenuSelectionChange")(js.Any.fromFunction1(onContextMenuSelectionChange))
     if (onExpand != null) __obj.updateDynamic("onExpand")(js.Any.fromFunction1(onExpand))
     if (onFilter != null) __obj.updateDynamic("onFilter")(js.Any.fromFunction1(onFilter))
     if (onPage != null) __obj.updateDynamic("onPage")(js.Any.fromFunction1(onPage))
     if (onRowClick != null) __obj.updateDynamic("onRowClick")(js.Any.fromFunction1(onRowClick))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
     if (onSelectionChange != null) __obj.updateDynamic("onSelectionChange")(js.Any.fromFunction1(onSelectionChange))
     if (onSort != null) __obj.updateDynamic("onSort")(js.Any.fromFunction1(onSort))
     if (onToggle != null) __obj.updateDynamic("onToggle")(js.Any.fromFunction1(onToggle))
@@ -154,7 +159,9 @@ object TreeTable
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.treetableMod.TreeTable] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.treetableMod.TreeTable](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTreetableMod.TreeTable] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactTreetableMod.TreeTable](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TreeTableProps
 }
 

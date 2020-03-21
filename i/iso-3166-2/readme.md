@@ -1,7 +1,7 @@
 
 # Scala.js typings for iso-3166-2
 
-Typings are for version 0.6
+Typings are for version 1.0
 
 ## Library description:
 Lookup information about ISO-3166-2 subdivisions.
@@ -12,7 +12,7 @@ Lookup information about ISO-3166-2 subdivisions.
 | Keywords           | iso3166, iso-3166, iso-3166-2, geo |
 | # releases         | 1 |
 | # dependents       | 5 |
-| # downloads        | 195908 |
+| # downloads        | 197907 |
 | # stars            | 7 |
 
 ## Links

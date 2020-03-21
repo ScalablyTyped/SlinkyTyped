@@ -2,20 +2,20 @@ package typingsSlinky.marked
 
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.marked.markedMod.MarkedOptions
-import typingsSlinky.marked.markedMod.TokensList
+import typingsSlinky.marked.mod.MarkedOptions
+import typingsSlinky.marked.mod.TokensList
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
 trait Typeofmarked extends js.Object {
-  var InlineLexer: TypeofClassInlineLexer = js.native
-  var Lexer: TypeofClassLexer = js.native
-  var Parser: TypeofClassParser = js.native
-  var Renderer: Instantiable1[js.UndefOr[/* options */ MarkedOptions], typingsSlinky.marked.markedMod.Renderer] = js.native
-  var Slugger: Instantiable0[typingsSlinky.marked.markedMod.Slugger] = js.native
-  var TextRenderer: Instantiable0[typingsSlinky.marked.markedMod.TextRenderer] = js.native
+  var InlineLexer: TypeofInlineLexer = js.native
+  var Lexer: TypeofLexer = js.native
+  var Parser: TypeofParser = js.native
+  var Renderer: Instantiable1[js.UndefOr[/* options */ MarkedOptions], typingsSlinky.marked.mod.Renderer] = js.native
+  var Slugger: Instantiable0[typingsSlinky.marked.mod.Slugger] = js.native
+  var TextRenderer: Instantiable0[typingsSlinky.marked.mod.TextRenderer] = js.native
   val Tokens: js.Any = js.native
   val defaults: MarkedOptions = js.native
   /**

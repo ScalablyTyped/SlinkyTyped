@@ -16,17 +16,17 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.nodegit.nodegitNumbers.`0`
-  - typings.nodegit.nodegitNumbers.`1`
-  - typings.nodegit.nodegitNumbers.`2`
-  - typings.nodegit.nodegitNumbers.`3`
-  - typings.nodegit.nodegitNumbers.`4`
-  - typings.nodegit.nodegitNumbers.`5`
-  - typings.nodegit.nodegitNumbers.`6`
-  - typings.nodegit.nodegitNumbers.`7`
-  - typings.nodegit.nodegitNumbers.`8`
-  - typings.nodegit.nodegitNumbers.`9`
-  - typings.nodegit.nodegitNumbers.`10`
+  - typingsSlinky.nodegit.nodegitNumbers.`0`
+  - typingsSlinky.nodegit.nodegitNumbers.`1`
+  - typingsSlinky.nodegit.nodegitNumbers.`2`
+  - typingsSlinky.nodegit.nodegitNumbers.`3`
+  - typingsSlinky.nodegit.nodegitNumbers.`4`
+  - typingsSlinky.nodegit.nodegitNumbers.`5`
+  - typingsSlinky.nodegit.nodegitNumbers.`6`
+  - typingsSlinky.nodegit.nodegitNumbers.`7`
+  - typingsSlinky.nodegit.nodegitNumbers.`8`
+  - typingsSlinky.nodegit.nodegitNumbers.`9`
+  - typingsSlinky.nodegit.nodegitNumbers.`10`
 */
 trait DELTA extends js.Object
 

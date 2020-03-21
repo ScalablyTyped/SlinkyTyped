@@ -16,7 +16,7 @@ import typingsSlinky.baseui.baseuiStrings.top
 import typingsSlinky.baseui.checkboxMod.CheckboxOverrides
 import typingsSlinky.baseui.checkboxMod.StatefulCheckboxProps
 import typingsSlinky.baseui.checkboxMod.initialState
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,25 +1,19 @@
 package typingsSlinky.victory
 
-import typingsSlinky.victory.victoryMod.AnimationEasing
-import typingsSlinky.victory.victoryMod.ContainerType
-import typingsSlinky.victory.victoryMod.InterpolationPropType
-import typingsSlinky.victory.victoryMod.OrientationTypes
-import typingsSlinky.victory.victoryMod.ScalePropType
-import typingsSlinky.victory.victoryMod.ScatterSymbolType
-import typingsSlinky.victory.victoryMod.TextAnchorType
-import typingsSlinky.victory.victoryMod.VerticalAnchorType
-import typingsSlinky.victory.victoryMod._ColorScalePropType
+import typingsSlinky.victory.mod.AnimationEasing
+import typingsSlinky.victory.mod.ContainerType
+import typingsSlinky.victory.mod.InterpolationPropType
+import typingsSlinky.victory.mod.OrientationTypes
+import typingsSlinky.victory.mod.ScalePropType
+import typingsSlinky.victory.mod.ScatterSymbolType
+import typingsSlinky.victory.mod.TextAnchorType
+import typingsSlinky.victory.mod.VerticalAnchorType
+import typingsSlinky.victory.mod._ColorScalePropType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object victoryStrings {
-  @js.native
-  sealed trait Anon_AxisAxisLabel extends js.Object
-  
-  @js.native
-  sealed trait VictoryStyleObject extends js.Object
-  
   @js.native
   sealed trait all extends js.Object
   
@@ -108,6 +102,9 @@ object victoryStrings {
   
   @js.native
   sealed trait cool extends _ColorScalePropType
+  
+  @js.native
+  sealed trait cornerRadius extends js.Object
   
   @js.native
   sealed trait cubic extends AnimationEasing
@@ -225,6 +222,9 @@ object victoryStrings {
   sealed trait none extends js.Object
   
   @js.native
+  sealed trait padAngle extends js.Object
+  
+  @js.native
   sealed trait parallel extends js.Object
   
   @js.native
@@ -267,6 +267,9 @@ object victoryStrings {
   sealed trait radial extends InterpolationPropType
   
   @js.native
+  sealed trait radius extends js.Object
+  
+  @js.native
   sealed trait red extends _ColorScalePropType
   
   @js.native
@@ -286,6 +289,12 @@ object victoryStrings {
   
   @js.native
   sealed trait sinOut extends AnimationEasing
+  
+  @js.native
+  sealed trait sliceEndAngle extends js.Object
+  
+  @js.native
+  sealed trait sliceStartAngle extends js.Object
   
   @js.native
   sealed trait sqrt extends ScalePropType
@@ -347,10 +356,6 @@ object victoryStrings {
   sealed trait zoom extends ContainerType
   
   @scala.inline
-  def Anon_AxisAxisLabel: Anon_AxisAxisLabel = "Anon_AxisAxisLabel".asInstanceOf[Anon_AxisAxisLabel]
-  @scala.inline
-  def VictoryStyleObject: VictoryStyleObject = "VictoryStyleObject".asInstanceOf[VictoryStyleObject]
-  @scala.inline
   def all: all = "all".asInstanceOf[all]
   @scala.inline
   def axis: axis = "axis".asInstanceOf[axis]
@@ -408,6 +413,8 @@ object victoryStrings {
   def circleOut: circleOut = "circleOut".asInstanceOf[circleOut]
   @scala.inline
   def cool: cool = "cool".asInstanceOf[cool]
+  @scala.inline
+  def cornerRadius: cornerRadius = "cornerRadius".asInstanceOf[cornerRadius]
   @scala.inline
   def cubic: cubic = "cubic".asInstanceOf[cubic]
   @scala.inline
@@ -481,6 +488,8 @@ object victoryStrings {
   @scala.inline
   def none: none = "none".asInstanceOf[none]
   @scala.inline
+  def padAngle: padAngle = "padAngle".asInstanceOf[padAngle]
+  @scala.inline
   def parallel: parallel = "parallel".asInstanceOf[parallel]
   @scala.inline
   def parent: parent = "parent".asInstanceOf[parent]
@@ -509,6 +518,8 @@ object victoryStrings {
   @scala.inline
   def radial: radial = "radial".asInstanceOf[radial]
   @scala.inline
+  def radius: radius = "radius".asInstanceOf[radius]
+  @scala.inline
   def red: red = "red".asInstanceOf[red]
   @scala.inline
   def right: right = "right".asInstanceOf[right]
@@ -522,6 +533,10 @@ object victoryStrings {
   def sinInOut: sinInOut = "sinInOut".asInstanceOf[sinInOut]
   @scala.inline
   def sinOut: sinOut = "sinOut".asInstanceOf[sinOut]
+  @scala.inline
+  def sliceEndAngle: sliceEndAngle = "sliceEndAngle".asInstanceOf[sliceEndAngle]
+  @scala.inline
+  def sliceStartAngle: sliceStartAngle = "sliceStartAngle".asInstanceOf[sliceStartAngle]
   @scala.inline
   def sqrt: sqrt = "sqrt".asInstanceOf[sqrt]
   @scala.inline

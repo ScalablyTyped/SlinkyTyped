@@ -3,7 +3,6 @@ package typingsSlinky.ol.styleImageMod
 import org.scalajs.dom.raw.HTMLCanvasElement
 import org.scalajs.dom.raw.HTMLImageElement
 import org.scalajs.dom.raw.HTMLVideoElement
-import typingsSlinky.ol.eventsMod.EventsKey
 import typingsSlinky.ol.imageStateMod.ImageState
 import typingsSlinky.ol.sizeMod.Size
 import scala.scalajs.js
@@ -12,7 +11,7 @@ import scala.scalajs.js.annotation._
 
 @JSImport("ol/style/Image", JSImport.Default)
 @js.native
-class default protected () extends ImageStyle {
+abstract class default protected () extends ImageStyle {
   def this(options: Options) = this()
   /* CompleteClass */
   override def getAnchor(): js.Array[Double] = js.native
@@ -39,12 +38,7 @@ class default protected () extends ImageStyle {
   /* CompleteClass */
   override def getSize(): Size = js.native
   /* CompleteClass */
-  override def getSnapToPixel(): Boolean = js.native
-  /* CompleteClass */
-  override def listenImageChange[T](
-    listener: js.ThisFunction1[/* this */ T, /* p0 */ typingsSlinky.ol.eventsEventMod.default, Unit],
-    thisArg: T
-  ): js.UndefOr[EventsKey] = js.native
+  override def listenImageChange[T](listener: js.Function1[/* p0 */ typingsSlinky.ol.eventMod.default, Unit]): Unit = js.native
   /* CompleteClass */
   override def load(): Unit = js.native
   /* CompleteClass */
@@ -56,11 +50,6 @@ class default protected () extends ImageStyle {
   /* CompleteClass */
   override def setScale(scale: Double): Unit = js.native
   /* CompleteClass */
-  override def setSnapToPixel(snapToPixel: Boolean): Unit = js.native
-  /* CompleteClass */
-  override def unlistenImageChange[T](
-    listener: js.ThisFunction1[/* this */ T, /* p0 */ typingsSlinky.ol.eventsEventMod.default, Unit],
-    thisArg: T
-  ): Unit = js.native
+  override def unlistenImageChange[T](listener: js.Function1[/* p0 */ typingsSlinky.ol.eventMod.default, Unit]): Unit = js.native
 }
 

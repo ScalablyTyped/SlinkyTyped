@@ -1,7 +1,7 @@
 package typingsSlinky.flight
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.flight.Flight.FlightStatic
+import typingsSlinky.flight.Flight_.FlightStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

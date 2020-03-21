@@ -1,6 +1,6 @@
 package typingsSlinky.knex
 
-import typingsSlinky.knex.knexMod.ComparisionOperator
+import typingsSlinky.knex.mod.ComparisionOperator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

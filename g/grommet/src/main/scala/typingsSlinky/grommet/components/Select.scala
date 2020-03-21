@@ -4,16 +4,17 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.grommet.Anon_BottomLeft
-import typingsSlinky.grommet.Anon_Multiple
-import typingsSlinky.grommet.componentsDropMod.DropProps
-import typingsSlinky.grommet.componentsSelectMod.SelectProps
+import typingsSlinky.grommet.AnonLeft
+import typingsSlinky.grommet.AnonMultiple
+import typingsSlinky.grommet.dropMod.DropProps
 import typingsSlinky.grommet.grommetStrings.large
 import typingsSlinky.grommet.grommetStrings.medium
 import typingsSlinky.grommet.grommetStrings.small
 import typingsSlinky.grommet.grommetStrings.xlarge
 import typingsSlinky.grommet.grommetStrings.xsmall
+import typingsSlinky.grommet.selectMod.SelectProps
 import typingsSlinky.grommet.utilsMod.A11yTitleType
 import typingsSlinky.grommet.utilsMod.AlignSelfType
 import typingsSlinky.grommet.utilsMod.GridAreaType
@@ -24,23 +25,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Select
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.grommetMod.Select] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.mod.Select] {
   @JSImport("grommet", "Select")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: id, multiple, name, onChange, open, value */
+  /* The following DOM/SVG props were specified: id, multiple, name, open */
   def apply(
-    options: js.Array[
-      String | Boolean | Double | typingsSlinky.react.reactMod._Global_.JSX.Element | js.Object
-    ],
+    options: js.Array[String | Boolean | Double | ReactElement | js.Object],
     a11yTitle: A11yTitleType = null,
     alignSelf: AlignSelfType = null,
     closeOnChange: js.UndefOr[Boolean] = js.undefined,
     disabled: Boolean | (js.Array[Double | String | js.Object]) = null,
     disabledKey: String | (js.Function1[/* repeated */ js.Any, _]) = null,
-    dropAlign: Anon_BottomLeft = null,
+    dropAlign: AnonLeft = null,
     dropHeight: xsmall | small | medium | large | xlarge | String = null,
     dropProps: DropProps = null,
     dropTarget: js.Object = null,
@@ -50,7 +49,8 @@ object Select
     icon: Boolean | (js.Function1[/* repeated */ js.Any, _]) | TagMod[Any] = null,
     labelKey: String | (js.Function1[/* repeated */ js.Any, _]) = null,
     margin: MarginType = null,
-    messages: Anon_Multiple = null,
+    messages: AnonMultiple = null,
+    onChange: /* repeated */ js.Any => Unit = null,
     onClose: /* repeated */ js.Any => _ = null,
     onMore: /* repeated */ js.Any => _ = null,
     onOpen: /* repeated */ js.Any => _ = null,
@@ -61,10 +61,11 @@ object Select
     searchPlaceholder: String = null,
     selected: Double | js.Array[Double] = null,
     size: small | medium | large | xlarge | String = null,
+    value: String | ReactElement | js.Object | (js.Array[String | js.Object]) = null,
     valueKey: String | (js.Function1[/* repeated */ js.Any, _]) = null,
     valueLabel: TagMod[Any] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.grommet.grommetMod.Select] = {
+  ): BuildingComponent[tag.type, typingsSlinky.grommet.mod.Select] = {
     val __obj = js.Dynamic.literal(options = options.asInstanceOf[js.Any])
     if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
     if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
@@ -82,6 +83,7 @@ object Select
     if (labelKey != null) __obj.updateDynamic("labelKey")(labelKey.asInstanceOf[js.Any])
     if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
     if (messages != null) __obj.updateDynamic("messages")(messages.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onClose != null) __obj.updateDynamic("onClose")(js.Any.fromFunction1(onClose))
     if (onMore != null) __obj.updateDynamic("onMore")(js.Any.fromFunction1(onMore))
     if (onOpen != null) __obj.updateDynamic("onOpen")(js.Any.fromFunction1(onOpen))
@@ -92,6 +94,7 @@ object Select
     if (searchPlaceholder != null) __obj.updateDynamic("searchPlaceholder")(searchPlaceholder.asInstanceOf[js.Any])
     if (selected != null) __obj.updateDynamic("selected")(selected.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
+    if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     if (valueKey != null) __obj.updateDynamic("valueKey")(valueKey.asInstanceOf[js.Any])
     if (valueLabel != null) __obj.updateDynamic("valueLabel")(valueLabel.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

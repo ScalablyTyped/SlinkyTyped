@@ -1,7 +1,7 @@
 package typingsSlinky.chrome
 
 import typingsSlinky.chrome.chrome.extension.FetchProperties
-import typingsSlinky.chrome.chrome.extension.LastError
+import typingsSlinky.chrome.chrome.extension.LastError_
 import typingsSlinky.chrome.chrome.extension.OnRequestEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Typeofextension extends js.Object {
   var inIncognitoContext: Boolean = js.native
-  var lastError: LastError = js.native
+  var lastError: LastError_ = js.native
   var onRequest: OnRequestEvent = js.native
   var onRequestExternal: OnRequestEvent = js.native
   def getBackgroundPage(): Window | Null = js.native

@@ -33,7 +33,7 @@ object objectMod extends js.Object {
   
   @js.native
   class ObjectEvent ()
-    extends typingsSlinky.ol.eventsEventMod.default {
+    extends typingsSlinky.ol.eventMod.default {
     var key: String = js.native
     var oldValue: js.Any = js.native
   }

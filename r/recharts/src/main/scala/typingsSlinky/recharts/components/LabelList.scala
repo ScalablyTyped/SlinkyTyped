@@ -6,17 +6,17 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.recharts.rechartsMod.ContentRenderer
-import typingsSlinky.recharts.rechartsMod.LabelListProps
-import typingsSlinky.recharts.rechartsMod.LabelProps
-import typingsSlinky.recharts.rechartsMod.PositionType
-import typingsSlinky.recharts.rechartsMod.RechartsFunction
+import typingsSlinky.recharts.mod.ContentRenderer
+import typingsSlinky.recharts.mod.LabelListProps
+import typingsSlinky.recharts.mod.LabelProps
+import typingsSlinky.recharts.mod.PositionType
+import typingsSlinky.recharts.mod.RechartsFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object LabelList
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.rechartsMod.LabelList] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.LabelList] {
   @JSImport("recharts", "LabelList")
   @js.native
   object componentImport extends js.Object
@@ -34,7 +34,7 @@ object LabelList
     position: PositionType = null,
     valueAccessor: /* repeated */ js.Any => Unit = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.LabelList] = {
+  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.LabelList] = {
     val __obj = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
     if (angle != null) __obj.updateDynamic("angle")(angle.asInstanceOf[js.Any])
     if (!js.isUndefined(clockWise)) __obj.updateDynamic("clockWise")(clockWise.asInstanceOf[js.Any])

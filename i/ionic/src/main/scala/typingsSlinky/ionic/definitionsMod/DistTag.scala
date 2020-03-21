@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.ionic.ionicStrings.testing
-  - typings.ionic.ionicStrings.canary
-  - typings.ionic.ionicStrings.latest
+  - typingsSlinky.ionic.ionicStrings.testing
+  - typingsSlinky.ionic.ionicStrings.canary
+  - typingsSlinky.ionic.ionicStrings.latest
 */
 trait DistTag extends js.Object
 

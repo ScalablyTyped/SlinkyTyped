@@ -10,9 +10,9 @@ KeystoneJS Admin UI App.
 | ------------------ | :-------------: |
 | Full name          | @keystonejs/app-admin-ui |
 | Keywords           | - |
-| # releases         | 12 |
+| # releases         | 13 |
 | # dependents       | 0 |
-| # downloads        | 12334 |
+| # downloads        | 13724 |
 | # stars            | 0 |
 
 ## Links

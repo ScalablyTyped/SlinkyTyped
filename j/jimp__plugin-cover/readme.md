@@ -10,9 +10,9 @@ cover an image.
 | ------------------ | :-------------: |
 | Full name          | @jimp/plugin-cover |
 | Keywords           | - |
-| # releases         | 72 |
+| # releases         | 71 |
 | # dependents       | 1 |
-| # downloads        | 14049685 |
+| # downloads        | 14424723 |
 | # stars            | 0 |
 
 ## Links

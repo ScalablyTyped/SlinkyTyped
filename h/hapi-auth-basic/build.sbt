@@ -1,25 +1,24 @@
 organization := "org.scalablytyped.slinky"
 name := "hapi-auth-basic"
-version := "5.0.0-dt-20190322Z-34415c"
-scalaVersion := "2.12.10"
+version := "5.0.0-dt-20200225Z-7cf487"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "boom" % "7.3-dt-20190805Z-795c9f",
-  "org.scalablytyped.slinky" %%% "catbox" % "10.0-dt-20190219Z-0205e3",
-  "org.scalablytyped.slinky" %%% "hapi" % "18.0-dt-20191115Z-5bd9aa",
-  "org.scalablytyped.slinky" %%% "iron" % "5.0-dt-20180214Z-163109",
-  "org.scalablytyped.slinky" %%% "joi" % "14.3-dt-20191101Z-90164f",
-  "org.scalablytyped.slinky" %%% "mime-db" % "1.27-dt-20190322Z-d112bf",
-  "org.scalablytyped.slinky" %%% "mimos" % "3.0-dt-20190322Z-79aaab",
-  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
-  "org.scalablytyped.slinky" %%% "podium" % "1.0-dt-20190322Z-19372f",
-  "org.scalablytyped.slinky" %%% "shot" % "4.0-dt-20181002Z-78751c",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "boom" % "7.3-dt-20200226Z-402496",
+  "org.scalablytyped.slinky" %%% "catbox" % "10.0-dt-20190219Z-9090b1",
+  "org.scalablytyped.slinky" %%% "hapi" % "18.0-dt-20200227Z-306452",
+  "org.scalablytyped.slinky" %%% "iron" % "5.0-dt-20180214Z-7f7c73",
+  "org.scalablytyped.slinky" %%% "joi" % "14.3-dt-20200227Z-58a37b",
+  "org.scalablytyped.slinky" %%% "mime-db" % "1.27-dt-20190322Z-1463d3",
+  "org.scalablytyped.slinky" %%% "mimos" % "3.0-dt-20200225Z-296775",
+  "org.scalablytyped.slinky" %%% "node" % "13.7-dt-20200228Z-eb4e34",
+  "org.scalablytyped.slinky" %%% "podium" % "1.0-dt-20200225Z-6b4f0e",
+  "org.scalablytyped.slinky" %%% "shot" % "4.0-dt-20181002Z-34c89c",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * An instance of a medical-related component of a medical device
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait DeviceComponent extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait DeviceComponent extends DomainResource {
   /**
     * Contains extended information for property 'lastSystemChange'.
     */

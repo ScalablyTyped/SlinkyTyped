@@ -1,11 +1,12 @@
 package typingsSlinky.tstl.tstlMod
 
-import typingsSlinky.tstl.iteratorIForwardIteratorMod.IForwardIterator
+import typingsSlinky.tstl.comparatorMod.Comparator
+import typingsSlinky.tstl.iforwarditeratorMod.IForwardIterator
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("tstl", "PriorityQueue")
+@JSImport("tstl/container", "PriorityQueue")
 @js.native
 /**
   * Default Constructor.
@@ -13,14 +14,14 @@ import scala.scalajs.js.annotation._
   * @param comp A binary function predicates *x* element would be placed before *y*. When returns `true`, then *x* precedes *y*. Note that, because *equality* is predicated by `!comp(x, y) && !comp(y, x)`, the function must not cover the *equality* like `<=` or `>=`. It must exclude the *equality* like `<` or `>`. Default is {@link less}.
   */
 class PriorityQueue[T] ()
-  extends typingsSlinky.tstl.containerMod.PriorityQueue[T] {
-  def this(comp: js.Function2[/* x */ T, /* y */ T, Boolean]) = this()
+  extends typingsSlinky.tstl.priorityQueueMod.PriorityQueue[T] {
+  def this(comp: Comparator[T, T]) = this()
   /**
     * Copy Constructor.
     *
     * @param obj Object to copy.
     */
-  def this(obj: typingsSlinky.tstl.containerPriorityQueueMod.PriorityQueue[T]) = this()
+  def this(obj: typingsSlinky.tstl.priorityQueueMod.PriorityQueue[T]) = this()
   /**
     * Range Constructor.
     *
@@ -35,7 +36,7 @@ class PriorityQueue[T] ()
   def this(
     first: IForwardIterator[T, IForwardIterator[T, _]],
     last: IForwardIterator[T, IForwardIterator[T, _]],
-    comp: js.Function2[/* x */ T, /* y */ T, Boolean]
+    comp: Comparator[T, T]
   ) = this()
 }
 

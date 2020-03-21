@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait RTCDataChannelEvent extends Event {
+trait RTCDataChannelEvent extends Event_ {
   val channel: org.scalajs.dom.experimental.webrtc.RTCDataChannel = js.native
 }
 

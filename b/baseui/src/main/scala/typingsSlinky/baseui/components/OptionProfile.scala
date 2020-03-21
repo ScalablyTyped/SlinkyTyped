@@ -6,8 +6,8 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_Body
-import typingsSlinky.baseui.Anon_ListItemProfile
+import typingsSlinky.baseui.AnonBody
+import typingsSlinky.baseui.AnonListItemProfile
 import typingsSlinky.baseui.menuMod.OptionProfileProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,11 +23,12 @@ object OptionProfile
   def apply(
     getProfileItemImg: js.Any => String | ReactComponentClass[_],
     getProfileItemImgText: js.Any => String,
-    getProfileItemLabels: js.Any => Anon_Body,
+    getProfileItemLabels: js.Any => AnonBody,
     item: js.Any,
     $isHighlighted: js.UndefOr[Boolean] = js.undefined,
     getChildMenu: /* item */ js.Any => TagMod[Any] = null,
-    overrides: Anon_ListItemProfile = null,
+    overrides: AnonListItemProfile = null,
+    renderAll: js.UndefOr[Boolean] = js.undefined,
     resetMenu: () => Unit = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
@@ -35,6 +36,7 @@ object OptionProfile
     if (!js.isUndefined($isHighlighted)) __obj.updateDynamic("$isHighlighted")($isHighlighted.asInstanceOf[js.Any])
     if (getChildMenu != null) __obj.updateDynamic("getChildMenu")(js.Any.fromFunction1(getChildMenu))
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
+    if (!js.isUndefined(renderAll)) __obj.updateDynamic("renderAll")(renderAll.asInstanceOf[js.Any])
     if (resetMenu != null) __obj.updateDynamic("resetMenu")(js.Any.fromFunction0(resetMenu))
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])

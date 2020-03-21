@@ -1,16 +1,13 @@
 package typingsSlinky.moment
 
-import typingsSlinky.moment.momentMod.LongDateFormatKey
-import typingsSlinky.moment.momentMod.RelativeTimeKey
-import typingsSlinky.moment.momentMod._CalendarKey
-import typingsSlinky.moment.momentMod.unitOfTime.All
-import typingsSlinky.moment.momentMod.unitOfTime.Base
-import typingsSlinky.moment.momentMod.unitOfTime.Diff
-import typingsSlinky.moment.momentMod.unitOfTime.DurationConstructor
-import typingsSlinky.moment.momentMod.unitOfTime.MomentConstructor
-import typingsSlinky.moment.momentMod.unitOfTime._date
-import typingsSlinky.moment.momentMod.unitOfTime._isoWeek
-import typingsSlinky.moment.momentMod.unitOfTime._quarter
+import typingsSlinky.moment.mod.LongDateFormatKey
+import typingsSlinky.moment.mod.RelativeTimeKey
+import typingsSlinky.moment.mod._CalendarKey
+import typingsSlinky.moment.mod.unitOfTime.All
+import typingsSlinky.moment.mod.unitOfTime.Base
+import typingsSlinky.moment.mod.unitOfTime.Diff
+import typingsSlinky.moment.mod.unitOfTime.DurationConstructor
+import typingsSlinky.moment.mod.unitOfTime.MomentConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +15,7 @@ import scala.scalajs.js.annotation._
 object momentStrings {
   @js.native
   sealed trait D
-    extends _date
+    extends typingsSlinky.moment.mod.unitOfTime.date
        with All
        with MomentConstructor
   
@@ -69,14 +66,14 @@ object momentStrings {
   
   @js.native
   sealed trait Q
-    extends _quarter
+    extends typingsSlinky.moment.mod.unitOfTime.quarter
        with All
        with Diff
        with DurationConstructor
   
   @js.native
   sealed trait W
-    extends _isoWeek
+    extends typingsSlinky.moment.mod.unitOfTime.isoWeek
        with All
   
   @js.native
@@ -96,13 +93,13 @@ object momentStrings {
   
   @js.native
   sealed trait date
-    extends _date
+    extends typingsSlinky.moment.mod.unitOfTime.date
        with All
        with MomentConstructor
   
   @js.native
   sealed trait dates
-    extends _date
+    extends typingsSlinky.moment.mod.unitOfTime.date
        with All
        with MomentConstructor
   
@@ -167,7 +164,7 @@ object momentStrings {
   
   @js.native
   sealed trait isoWeek
-    extends _isoWeek
+    extends typingsSlinky.moment.mod.unitOfTime.isoWeek
        with All
   
   @js.native
@@ -184,7 +181,7 @@ object momentStrings {
   
   @js.native
   sealed trait isoWeeks
-    extends _isoWeek
+    extends typingsSlinky.moment.mod.unitOfTime.isoWeek
        with All
   
   @js.native
@@ -287,14 +284,14 @@ object momentStrings {
   
   @js.native
   sealed trait quarter
-    extends _quarter
+    extends typingsSlinky.moment.mod.unitOfTime.quarter
        with All
        with Diff
        with DurationConstructor
   
   @js.native
   sealed trait quarters
-    extends _quarter
+    extends typingsSlinky.moment.mod.unitOfTime.quarter
        with All
        with Diff
        with DurationConstructor

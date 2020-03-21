@@ -10,9 +10,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.regexpp.astMod.AnyCharacterSet
-  - typings.regexpp.astMod.EscapeCharacterSet
-  - typings.regexpp.astMod.UnicodePropertyCharacterSet
+  - typingsSlinky.regexpp.astMod.AnyCharacterSet
+  - typingsSlinky.regexpp.astMod.EscapeCharacterSet
+  - typingsSlinky.regexpp.astMod.UnicodePropertyCharacterSet
 */
 trait CharacterSet
   extends LeafNode

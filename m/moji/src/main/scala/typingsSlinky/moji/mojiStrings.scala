@@ -1,6 +1,6 @@
 package typingsSlinky.moji
 
-import typingsSlinky.moji.mojiMod.Mojisyu
+import typingsSlinky.moji.mod.Mojisyu
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,0 +1,27 @@
+package typingsSlinky.materialUiCore.collapseCollapseMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.materialUiCore.materialUiCoreStrings.container
+  - typingsSlinky.materialUiCore.materialUiCoreStrings.entered
+  - typingsSlinky.materialUiCore.materialUiCoreStrings.wrapper
+  - typingsSlinky.materialUiCore.materialUiCoreStrings.wrapperInner
+*/
+trait CollapseClassKey extends js.Object
+
+object CollapseClassKey {
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def container: typingsSlinky.materialUiCore.materialUiCoreStrings.container = this.cast("container")
+  @scala.inline
+  def entered: typingsSlinky.materialUiCore.materialUiCoreStrings.entered = this.cast("entered")
+  @scala.inline
+  def wrapper: typingsSlinky.materialUiCore.materialUiCoreStrings.wrapper = this.cast("wrapper")
+  @scala.inline
+  def wrapperInner: typingsSlinky.materialUiCore.materialUiCoreStrings.wrapperInner = this.cast("wrapperInner")
+}
+

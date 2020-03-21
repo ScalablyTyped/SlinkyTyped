@@ -10,9 +10,9 @@ A completely customizable framework for building rich text editors.
 | ------------------ | :-------------: |
 | Full name          | slate |
 | Keywords           | canvas, contenteditable, custom, document, edit, editor, html, immutable, markdown, medium, paper, react, rich, richtext, richtext, slate, text, wysiwyg, wysiwym |
-| # releases         | 126 |
-| # dependents       | 220 |
-| # downloads        | 4264400 |
+| # releases         | 125 |
+| # dependents       | 224 |
+| # downloads        | 4411160 |
 | # stars            | 16 |
 
 ## Links

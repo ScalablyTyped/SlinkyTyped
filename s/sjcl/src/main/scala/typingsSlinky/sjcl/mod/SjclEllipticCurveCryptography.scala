@@ -1,0 +1,23 @@
+package typingsSlinky.sjcl.mod
+
+import typingsSlinky.sjcl.AnonC192
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+// ________________________________________________________________________
+@js.native
+trait SjclEllipticCurveCryptography extends js.Object {
+  var basicKey: SjclECCBasic = js.native
+  var curve: SjclEllipticalCurveStatic = js.native
+  var curves: AnonC192 = js.native
+  var ecdsa: SjclECDSA = js.native
+  var elGamal: SjclElGamal = js.native
+  var point: SjclEllipticalPointStatic = js.native
+  var pointJac: SjclPointJacobianStatic = js.native
+  def curveName(curve: SjclEllipticalCurve): String = js.native
+  def deserialize(key: SjclECCKeyPairData): SjclECCPublicKey = js.native
+  @JSName("deserialize")
+  def deserialize_SjclECCSecretKey(key: SjclECCKeyPairData): SjclECCSecretKey = js.native
+}
+

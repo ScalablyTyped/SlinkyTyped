@@ -1,11 +1,11 @@
 package typingsSlinky.expo.components
 
-import typingsSlinky.expo.buildGlobalsDotWebMod.Icon.MaterialCommunityIcons
+import typingsSlinky.expo.globalsWebMod.Icon.MaterialCommunityIcons
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconMaterialCommunityIcons extends SharedApply_IconProps_207471041[MaterialCommunityIcons] {
+object IconMaterialCommunityIcons extends SharedApply_IconProps_2082878668[MaterialCommunityIcons] {
   @JSImport("expo/build/globals.web", "Icon.MaterialCommunityIcons")
   @js.native
   object componentImport extends js.Object

@@ -1,6 +1,6 @@
 package typingsSlinky.jpm
 
-import typingsSlinky.jpm.sdkPageDashModMod.attachmentMode
+import typingsSlinky.jpm.pageModMod.attachmentMode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

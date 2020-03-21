@@ -1,6 +1,6 @@
 package typingsSlinky.node.streamMod
 
-import typingsSlinky.node.Anon_Chunk
+import typingsSlinky.node.AnonChunk
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -49,7 +49,7 @@ trait TransformOptions extends DuplexOptions {
   var writev_TransformOptions: js.UndefOr[
     js.ThisFunction2[
       /* this */ Transform, 
-      /* chunks */ js.Array[Anon_Chunk], 
+      /* chunks */ js.Array[AnonChunk], 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ]
@@ -101,7 +101,7 @@ object TransformOptions {
     ] = null,
     writev: js.ThisFunction2[
       /* this */ Transform, 
-      /* chunks */ js.Array[Anon_Chunk], 
+      /* chunks */ js.Array[AnonChunk], 
       /* callback */ js.Function1[/* error */ js.UndefOr[js.Error | Null], Unit], 
       Unit
     ] = null

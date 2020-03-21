@@ -8,9 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.youtube.youtubeNumbers.`0`
-  - typings.youtube.youtubeNumbers.`1`
-  - typings.youtube.youtubeNumbers.`2`
+  - typingsSlinky.youtube.youtubeNumbers.`0`
+  - typingsSlinky.youtube.youtubeNumbers.`1`
+  - typingsSlinky.youtube.youtubeNumbers.`2`
 */
 trait Controls extends js.Object
 

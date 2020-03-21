@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.omit
-  - typings.std.stdStrings.`same-origin`
-  - typings.std.stdStrings.include
+  - typingsSlinky.std.stdStrings.include
+  - typingsSlinky.std.stdStrings.omit
+  - typingsSlinky.std.stdStrings.`same-origin`
 */
 trait RequestCredentials extends js.Object
 

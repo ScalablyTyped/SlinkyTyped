@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Investigation to increase healthcare-related patient-independent knowledge
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait ResearchStudy extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait ResearchStudy extends DomainResource {
   /**
     * Contains extended information for property 'description'.
     */

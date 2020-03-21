@@ -1,8 +1,8 @@
 package typingsSlinky.baseui.paginationMod
 
-import typingsSlinky.baseui.Anon_NextPageNumber
+import typingsSlinky.baseui.AnonNextPageNumber
 import typingsSlinky.baseui.baseuiStrings.change_
-import typingsSlinky.react.reactMod.Component
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,6 +13,6 @@ class StatefulContainer ()
   extends Component[StatefulContainerProps, State, js.Any] {
   @JSName("internalSetState")
   def internalSetState_change(changeType: change_, changes: State): Unit = js.native
-  def onPageChange(args: Anon_NextPageNumber): Unit = js.native
+  def onPageChange(args: AnonNextPageNumber): Unit = js.native
 }
 

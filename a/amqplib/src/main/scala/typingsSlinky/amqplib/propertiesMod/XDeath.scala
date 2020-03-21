@@ -1,6 +1,6 @@
 package typingsSlinky.amqplib.propertiesMod
 
-import typingsSlinky.amqplib.Anon_
+import typingsSlinky.amqplib.Anon
 import typingsSlinky.amqplib.amqplibStrings.expired
 import typingsSlinky.amqplib.amqplibStrings.maxlen
 import typingsSlinky.amqplib.amqplibStrings.rejected
@@ -15,7 +15,7 @@ trait XDeath extends js.Object {
   var queue: String
   var reason: rejected | expired | maxlen
   var `routing-keys`: js.Array[String]
-  var time: Anon_
+  var time: Anon
 }
 
 object XDeath {
@@ -26,7 +26,7 @@ object XDeath {
     queue: String,
     reason: rejected | expired | maxlen,
     `routing-keys`: js.Array[String],
-    time: Anon_,
+    time: Anon,
     `original-expiration`: js.Any = null
   ): XDeath = {
     val __obj = js.Dynamic.literal(count = count.asInstanceOf[js.Any], exchange = exchange.asInstanceOf[js.Any], queue = queue.asInstanceOf[js.Any], reason = reason.asInstanceOf[js.Any], time = time.asInstanceOf[js.Any])

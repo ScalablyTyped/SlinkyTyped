@@ -1,7 +1,7 @@
 package typingsSlinky.protobufjs.lightMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.protobufjs.protobufjsMod.IWrapper
+import typingsSlinky.protobufjs.mod.IWrapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

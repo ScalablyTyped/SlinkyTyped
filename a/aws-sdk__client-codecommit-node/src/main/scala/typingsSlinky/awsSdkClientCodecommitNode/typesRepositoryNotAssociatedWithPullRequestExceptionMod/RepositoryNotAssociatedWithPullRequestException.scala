@@ -1,0 +1,18 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesRepositoryNotAssociatedWithPullRequestExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.getCommentsForPullRequestExceptionsUnionMod.GetCommentsForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait RepositoryNotAssociatedWithPullRequestException
+  extends ServiceException[RepositoryNotAssociatedWithPullRequestExceptionDetails]
+     with GetCommentsForPullRequestExceptionsUnion
+     with PostCommentForPullRequestExceptionsUnion {
+  @JSName("name")
+  var name_RepositoryNotAssociatedWithPullRequestException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.RepositoryNotAssociatedWithPullRequestException = js.native
+}
+

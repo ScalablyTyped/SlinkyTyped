@@ -1,6 +1,6 @@
 package typingsSlinky.ebml
 
-import typingsSlinky.ebml.ebmlMod.Decoder.State
+import typingsSlinky.ebml.mod.Decoder.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

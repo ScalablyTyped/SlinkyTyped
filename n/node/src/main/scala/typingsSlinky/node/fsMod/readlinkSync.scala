@@ -1,8 +1,8 @@
 package typingsSlinky.node.fsMod
 
-import typingsSlinky.node.Anon_BufferEncoding
-import typingsSlinky.node.Anon_EncodingBufferEncoding
-import typingsSlinky.node.Anon_EncodingNull
+import typingsSlinky.node.Anon2
+import typingsSlinky.node.Anon3
+import typingsSlinky.node.AnonEncoding
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.BufferEncoding
 import scala.scalajs.js
@@ -17,16 +17,16 @@ object readlinkSync extends js.Object {
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def apply(path: PathLike): String | Buffer = js.native
+  def apply(path: PathLike): String = js.native
   def apply(path: PathLike, options: String): String | Buffer = js.native
   /**
     * Synchronous readlink(2) - read value of a symbolic link.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
     * @param options The encoding (or an object specifying the encoding), used as the encoding of the result. If not provided, `'utf8'` is used.
     */
-  def apply(path: PathLike, options: Anon_BufferEncoding): Buffer = js.native
-  def apply(path: PathLike, options: Anon_EncodingBufferEncoding): String = js.native
-  def apply(path: PathLike, options: Anon_EncodingNull): String | Buffer = js.native
+  def apply(path: PathLike, options: Anon2): Buffer = js.native
+  def apply(path: PathLike, options: Anon3): String | Buffer = js.native
+  def apply(path: PathLike, options: AnonEncoding): String = js.native
   def apply(path: PathLike, options: BufferEncoding): String = js.native
 }
 

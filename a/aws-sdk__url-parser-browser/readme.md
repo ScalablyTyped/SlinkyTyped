@@ -9,9 +9,9 @@ Typings are for version 0.1.0-preview.1
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/url-parser-browser |
 | Keywords           | - |
-| # releases         | 8 |
-| # dependents       | 185 |
-| # downloads        | 4596 |
+| # releases         | 9 |
+| # dependents       | 367 |
+| # downloads        | 5001 |
 | # stars            | 0 |
 
 ## Links

@@ -12,7 +12,7 @@ Sidecar code splitting utils
 | Keywords           | code spliting, react, sidecar |
 | # releases         | 10 |
 | # dependents       | 3 |
-| # downloads        | 806759 |
+| # downloads        | 1060794 |
 | # stars            | 0 |
 
 ## Links

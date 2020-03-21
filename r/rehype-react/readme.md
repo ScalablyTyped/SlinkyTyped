@@ -1,7 +1,7 @@
 
 # Scala.js typings for rehype-react
 
-Typings are for version 3.1
+Typings are for version 4.0
 
 ## Library description:
 rehype plugin to transform to React
@@ -11,8 +11,8 @@ rehype plugin to transform to React
 | Full name          | rehype-react |
 | Keywords           | unified, rehype, html, hast, react |
 | # releases         | 5 |
-| # dependents       | 38 |
-| # downloads        | 374341 |
+| # dependents       | 41 |
+| # downloads        | 392859 |
 | # stars            | 0 |
 
 ## Links

@@ -1,6 +1,6 @@
 package typingsSlinky.ol.tilegridMod
 
-import typingsSlinky.ol.extentCornerMod.Corner
+import typingsSlinky.ol.cornerMod.Corner
 import typingsSlinky.ol.extentMod.Extent
 import typingsSlinky.ol.sizeMod.Size
 import typingsSlinky.ol.tilegridTileGridMod.default

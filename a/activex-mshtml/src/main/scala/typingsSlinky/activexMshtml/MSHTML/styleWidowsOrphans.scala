@@ -1,0 +1,23 @@
+package typingsSlinky.activexMshtml.MSHTML
+
+import typingsSlinky.activexMshtml.activexMshtmlNumbers.`-2147483647`
+import typingsSlinky.activexMshtml.activexMshtmlNumbers.`2147483647`
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.activexMshtml.activexMshtmlNumbers.`2147483647`
+  - typingsSlinky.activexMshtml.activexMshtmlNumbers.`-2147483647`
+*/
+trait styleWidowsOrphans extends js.Object
+
+object styleWidowsOrphans {
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def styleWidowsOrphansNotSet: `-2147483647` = this.cast(-2147483647)
+  @scala.inline
+  def styleWidowsOrphans_Max: `2147483647` = this.cast(2147483647)
+}
+

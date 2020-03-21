@@ -1,0 +1,18 @@
+package typingsSlinky.awsSdkClientCodecommitNode.typesBeforeCommitIdAndAfterCommitIdAreSameExceptionMod
+
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForComparedCommitExceptionsUnionMod.PostCommentForComparedCommitExceptionsUnion
+import typingsSlinky.awsSdkClientCodecommitNode.postCommentForPullRequestExceptionsUnionMod.PostCommentForPullRequestExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait BeforeCommitIdAndAfterCommitIdAreSameException
+  extends ServiceException[BeforeCommitIdAndAfterCommitIdAreSameExceptionDetails]
+     with PostCommentForComparedCommitExceptionsUnion
+     with PostCommentForPullRequestExceptionsUnion {
+  @JSName("name")
+  var name_BeforeCommitIdAndAfterCommitIdAreSameException: typingsSlinky.awsSdkClientCodecommitNode.awsSdkClientCodecommitNodeStrings.BeforeCommitIdAndAfterCommitIdAreSameException = js.native
+}
+

@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.mvc
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.getPlainValueOptions
 import typingsSlinky.dojo.dojoStrings.getStatefulOptions
 import typingsSlinky.dojo.dojoStrings.holdModelUntilCommit
@@ -98,7 +98,7 @@ class EditModelRefController () extends ModelRefController {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_getStatefulOptions(
     property: getStatefulOptions,
@@ -108,7 +108,7 @@ class EditModelRefController () extends ModelRefController {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_holdModelUntilCommit(
     property: holdModelUntilCommit,
@@ -118,7 +118,7 @@ class EditModelRefController () extends ModelRefController {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_originalModel(
     property: originalModel,
@@ -128,7 +128,7 @@ class EditModelRefController () extends ModelRefController {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_sourceModel(
     property: sourceModel,
@@ -138,6 +138,6 @@ class EditModelRefController () extends ModelRefController {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

@@ -11,7 +11,7 @@ object removeEventListener_devicemotion extends js.Object {
   def apply(
     `type`: devicemotion,
     listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.Window, 
+      /* this */ Window_, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent, 
       _
     ]
@@ -19,7 +19,7 @@ object removeEventListener_devicemotion extends js.Object {
   def apply(
     `type`: devicemotion,
     listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.Window, 
+      /* this */ Window_, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent, 
       _
     ],
@@ -28,7 +28,7 @@ object removeEventListener_devicemotion extends js.Object {
   def apply(
     `type`: devicemotion,
     listener: js.ThisFunction1[
-      /* this */ org.scalajs.dom.raw.Window, 
+      /* this */ Window_, 
       /* ev */ org.scalajs.dom.experimental.deviceorientation.DeviceMotionEvent, 
       _
     ],

@@ -5,15 +5,15 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.atAntvG2.atAntvG2Mod.Styles.line
-import typingsSlinky.atAntvG2.atAntvG2Mod.Styles.text
-import typingsSlinky.bizcharts.bizchartsMod.LabelProps
+import typingsSlinky.antvG2.mod.Styles.line
+import typingsSlinky.antvG2.mod.Styles.text
+import typingsSlinky.bizcharts.mod.LabelProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Label
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.bizchartsMod.Label] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.mod.Label] {
   @JSImport("bizcharts", "Label")
   @js.native
   object componentImport extends js.Object
@@ -39,7 +39,7 @@ object Label
     offset: Int | Double = null,
     textStyle: text | (js.Function1[/* t */ js.UndefOr[js.Any], text]) = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Label] = {
+  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Label] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(autoRotate)) __obj.updateDynamic("autoRotate")(autoRotate.asInstanceOf[js.Any])
     if (content != null) __obj.updateDynamic("content")(content.asInstanceOf[js.Any])
@@ -52,7 +52,7 @@ object Label
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Label] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.bizchartsMod.Label](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Label] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Label](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = LabelProps
 }
 

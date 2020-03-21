@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.mvc
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojo.Stateful
 import typingsSlinky.dojo.dojo.store.DataStore
 import typingsSlinky.dojo.dojoStrings.data
@@ -264,7 +264,7 @@ class StatefulModel_ protected () extends Stateful {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_getPlainValueOptions(
     property: getPlainValueOptions,
@@ -274,7 +274,7 @@ class StatefulModel_ protected () extends Stateful {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_getStatefulOptions(
     property: getStatefulOptions,
@@ -284,7 +284,7 @@ class StatefulModel_ protected () extends Stateful {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_store(
     property: store,
@@ -294,7 +294,7 @@ class StatefulModel_ protected () extends Stateful {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_valid(
     property: valid,
@@ -304,7 +304,7 @@ class StatefulModel_ protected () extends Stateful {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_value(
     property: value,
@@ -314,6 +314,6 @@ class StatefulModel_ protected () extends Stateful {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

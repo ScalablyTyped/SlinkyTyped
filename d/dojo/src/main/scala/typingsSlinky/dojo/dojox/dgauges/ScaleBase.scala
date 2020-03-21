@@ -1,13 +1,13 @@
 package typingsSlinky.dojo.dojox.dgauges
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.font
 import typingsSlinky.dojo.dojoStrings.labelGap
 import typingsSlinky.dojo.dojoStrings.labelPosition
 import typingsSlinky.dojo.dojoStrings.scaler
 import typingsSlinky.dojo.dojoStrings.tickStroke
 import typingsSlinky.dojo.dojox.gfx.Group
-import typingsSlinky.dojo.dojox.widget._Invalidating
+import typingsSlinky.dojo.dojox.widget.Invalidating
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.dgauges.ScaleBase")
 @js.native
-class ScaleBase () extends _Invalidating {
+class ScaleBase () extends Invalidating {
   /**
     * The font used for the ticks labels.
     * This is null by default which means this scale use the font defined
@@ -134,7 +134,7 @@ class ScaleBase () extends _Invalidating {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_labelGap(
     property: labelGap,
@@ -144,7 +144,7 @@ class ScaleBase () extends _Invalidating {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_labelPosition(
     property: labelPosition,
@@ -154,7 +154,7 @@ class ScaleBase () extends _Invalidating {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_scaler(
     property: scaler,
@@ -164,7 +164,7 @@ class ScaleBase () extends _Invalidating {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_tickStroke(
     property: tickStroke,
@@ -174,6 +174,6 @@ class ScaleBase () extends _Invalidating {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

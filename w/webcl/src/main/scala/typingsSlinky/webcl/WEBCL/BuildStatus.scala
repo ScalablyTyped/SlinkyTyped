@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 
 /* cl_build_status */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0`
-  - typings.webcl.webclNumbers.`-1`
-  - typings.webcl.webclNumbers.`-2`
-  - typings.webcl.webclNumbers.`-3`
+  - typingsSlinky.webcl.webclNumbers.`0`
+  - typingsSlinky.webcl.webclNumbers.`-1`
+  - typingsSlinky.webcl.webclNumbers.`-2`
+  - typingsSlinky.webcl.webclNumbers.`-3`
 */
 trait BuildStatus extends js.Object
 

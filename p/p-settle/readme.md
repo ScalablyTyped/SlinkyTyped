@@ -12,7 +12,7 @@ Settle promises concurrently and get their fulfillment value or rejection reason
 | Keywords           | promise, settle, settled, resolved, iterator, fulfill, reject, fulfilled, rejected, reflect, inspect, error, async, await, promises, concurrently, concurrency, parallel, bluebird |
 | # releases         | 4 |
 | # dependents       | 29 |
-| # downloads        | 1114217 |
+| # downloads        | 1146845 |
 | # stars            | 1 |
 
 ## Links

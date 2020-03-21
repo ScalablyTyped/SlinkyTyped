@@ -1,6 +1,6 @@
 package typingsSlinky.lolex
 
-import typingsSlinky.lolex.lolexMod.FakeMethod
+import typingsSlinky.lolex.mod.FakeMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

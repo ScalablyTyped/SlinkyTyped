@@ -2,8 +2,8 @@ package typingsSlinky.sammy.Sammy
 
 import org.scalablytyped.runtime.Instantiable5
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery
-import typingsSlinky.sammy.Anon_Data
+import typingsSlinky.jquery.JQuery_
+import typingsSlinky.sammy.AnonData
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait EventContext
   var partials: js.Any = js.native
   var title: js.Any = js.native
   @JSName("$element")
-  def $element(): JQuery[HTMLElement] = js.native
+  def $element(): JQuery_[HTMLElement] = js.native
   def engineFor(engine: js.Any): js.Any = js.native
   def eventNamespace(): String = js.native
   def interpolate(content: js.Any, data: js.Any, engine: js.Any): EventContext = js.native
@@ -48,8 +48,8 @@ trait EventContext
   def render(location: String, data: js.Any, callback: js.Function): RenderContext = js.native
   def render(location: String, data: js.Any, callback: js.Function, partials: js.Any): RenderContext = js.native
   def renderEach(location: js.Any): RenderContext = js.native
-  def renderEach(location: js.Any, data: js.Array[Anon_Data]): RenderContext = js.native
-  def renderEach(location: js.Any, data: js.Array[Anon_Data], callback: js.Function): RenderContext = js.native
+  def renderEach(location: js.Any, data: js.Array[AnonData]): RenderContext = js.native
+  def renderEach(location: js.Any, data: js.Array[AnonData], callback: js.Function): RenderContext = js.native
   def send(params: js.Any*): RenderContext = js.native
   def swap(contents: js.Any, callback: js.Function): String = js.native
   def trigger(name: String): EventContext = js.native

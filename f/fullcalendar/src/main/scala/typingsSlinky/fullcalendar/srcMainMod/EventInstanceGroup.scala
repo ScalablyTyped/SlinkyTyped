@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("fullcalendar/src/main", "EventInstanceGroup")
 @js.native
 class EventInstanceGroup ()
-  extends typingsSlinky.fullcalendar.srcExportsMod.EventInstanceGroup {
+  extends typingsSlinky.fullcalendar.exportsMod.EventInstanceGroup {
   def this(eventInstances: js.Any) = this()
 }
 

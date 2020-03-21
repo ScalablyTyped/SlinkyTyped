@@ -1,7 +1,7 @@
 package typingsSlinky.primereact
 
-import typingsSlinky.primereact.componentsCarouselCarouselMod.CarouselProps
-import typingsSlinky.react.reactMod.Component
+import typingsSlinky.primereact.carouselCarouselMod.CarouselProps
+import typingsSlinky.react.mod.Component
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

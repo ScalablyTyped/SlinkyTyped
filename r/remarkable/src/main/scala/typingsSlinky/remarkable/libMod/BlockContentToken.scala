@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.remarkable.libMod._Token because Already inherited */ trait BlockContentToken extends TagToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait BlockContentToken extends TagToken {
   /**
     * This is initialized with an empty array (`[]`) and will be filled
     * with the inline parser tokens as the inline parsing rules are applied.

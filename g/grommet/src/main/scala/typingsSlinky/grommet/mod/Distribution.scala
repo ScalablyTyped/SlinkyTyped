@@ -1,0 +1,44 @@
+package typingsSlinky.grommet.mod
+
+import org.scalablytyped.runtime.TopLevel
+import typingsSlinky.grommet.distributionMod.DistributionProps
+import typingsSlinky.react.mod.Component
+import typingsSlinky.react.mod.ComponentClass
+import typingsSlinky.react.mod.ComponentState
+import typingsSlinky.react.mod.DetailedHTMLProps
+import typingsSlinky.react.mod.HTMLAttributes
+import typingsSlinky.std.HTMLDivElement
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("grommet", "Distribution")
+@js.native
+class Distribution protected ()
+  extends Component[
+      DistributionProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]), 
+      ComponentState, 
+      js.Any
+    ] {
+  def this(props: DistributionProps with (DetailedHTMLProps[
+        HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
+        org.scalajs.dom.raw.HTMLDivElement
+      ])) = this()
+  def this(
+    props: DistributionProps with (DetailedHTMLProps[
+        HTMLAttributes[org.scalajs.dom.raw.HTMLDivElement], 
+        org.scalajs.dom.raw.HTMLDivElement
+      ]),
+    context: js.Any
+  ) = this()
+}
+
+@JSImport("grommet", "Distribution")
+@js.native
+object Distribution extends TopLevel[
+      ComponentClass[
+        DistributionProps with (DetailedHTMLProps[HTMLAttributes[HTMLDivElement], HTMLDivElement]), 
+        ComponentState
+      ]
+    ]
+

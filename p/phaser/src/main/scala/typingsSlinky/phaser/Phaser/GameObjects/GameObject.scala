@@ -10,6 +10,7 @@ import typingsSlinky.phaser.Phaser.Types.Input.HitAreaCallback
 import typingsSlinky.phaser.Phaser.Types.Input.InputConfiguration
 import typingsSlinky.phaser.Phaser.Types.Input.InteractiveObject
 import typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType
+import typingsSlinky.phaser.Phaser.Types.Physics.Matter.MatterBody
 import typingsSlinky.phaser.integer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -24,6 +25,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class GameObject protected ()
   extends EventEmitter
+     with MatterBody
      with _ArcadeColliderType {
   /**
     * 
@@ -90,7 +92,7 @@ class GameObject protected ()
     * 
     * Phaser itself will never modify this value, although plugins may do so.
     * 
-    * Use this property to track the state of a Game Object during its lifetime. For example, it could move from
+    * Use this property to track the state of a Game Object during its lifetime. For example, it could change from
     * a state of 'moving', to 'attacking', to 'dead'. The state value should be an integer (ideally mapped to a constant
     * in your game code), or a string. These are recommended to keep it light and simple, with fast comparisons.
     * If you need to store complex data about your Game Object, look at using the Data Component instead.

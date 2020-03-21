@@ -1,7 +1,7 @@
 
 # Scala.js typings for expect-puppeteer
 
-Typings are for version 3.3
+Typings are for version 4.4
 
 ## Library description:
 Assertion toolkit for Puppeteer.
@@ -10,9 +10,9 @@ Assertion toolkit for Puppeteer.
 | ------------------ | :-------------: |
 | Full name          | expect-puppeteer |
 | Keywords           | jest, puppeteer, jest-puppeteer, chromeless, chrome-headless, expect, assert, should, assertion |
-| # releases         | 22 |
-| # dependents       | 12 |
-| # downloads        | 3848698 |
+| # releases         | 24 |
+| # dependents       | 13 |
+| # downloads        | 4099455 |
 | # stars            | 0 |
 
 ## Links

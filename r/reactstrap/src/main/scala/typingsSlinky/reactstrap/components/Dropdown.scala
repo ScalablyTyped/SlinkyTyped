@@ -1,12 +1,12 @@
 package typingsSlinky.reactstrap.components
 
-import typingsSlinky.reactstrap.libDropdownMod.default
+import typingsSlinky.reactstrap.dropdownMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Dropdown
-  extends SharedApply_DropdownProps1077169814[default[js.Any]] {
+  extends SharedApply_DropdownProps68769190[default[js.Any]] {
   @JSImport("reactstrap/lib/Dropdown", JSImport.Default)
   @js.native
   object componentImport extends js.Object

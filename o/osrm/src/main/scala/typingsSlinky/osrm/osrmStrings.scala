@@ -1,9 +1,9 @@
 package typingsSlinky.osrm
 
-import typingsSlinky.osrm.osrmMod.GeometriesTypes
-import typingsSlinky.osrm.osrmMod.Indication
-import typingsSlinky.osrm.osrmMod.OverviewTypes
-import typingsSlinky.osrm.osrmMod.StepManeuverTypes
+import typingsSlinky.osrm.mod.GeometriesTypes
+import typingsSlinky.osrm.mod.Indication
+import typingsSlinky.osrm.mod.OverviewTypes
+import typingsSlinky.osrm.mod.StepManeuverTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

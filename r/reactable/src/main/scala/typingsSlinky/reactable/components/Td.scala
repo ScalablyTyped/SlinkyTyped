@@ -4,13 +4,13 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.reactable.reactableMod.TdProperties
+import typingsSlinky.reactable.mod.TdProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Td
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactable.reactableMod.Td] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.reactable.mod.Td] {
   @JSImport("reactable", "Td")
   @js.native
   object componentImport extends js.Object
@@ -21,7 +21,7 @@ object Td
     data: js.Any = null,
     value: js.Any = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.reactable.reactableMod.Td] = {
+  ): BuildingComponent[tag.type, typingsSlinky.reactable.mod.Td] = {
     val __obj = js.Dynamic.literal(column = column.asInstanceOf[js.Any])
     if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])

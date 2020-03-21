@@ -1,8 +1,8 @@
 package typingsSlinky.yadda.libMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.yadda.libLocalisationLanguageMod.Vocabulary
-import typingsSlinky.yadda.libLocalisationLanguageMod.^
+import typingsSlinky.yadda.languageMod.Vocabulary
+import typingsSlinky.yadda.languageMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,62 +11,62 @@ import scala.scalajs.js.annotation._
 @js.native
 object localisation extends js.Object {
   @js.native
-  class Language[TLibrary /* <: typingsSlinky.yadda.libLocalisationLanguageMod.Library */] protected ()
-    extends typingsSlinky.yadda.libLocalisationMod.Language[TLibrary] {
+  class Language[TLibrary /* <: typingsSlinky.yadda.languageMod.Library */] protected ()
+    extends typingsSlinky.yadda.localisationMod.Language[TLibrary] {
     def this(name: String, vocabulary: Vocabulary) = this()
   }
   
   @js.native
   object Chinese
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationChineseMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.chineseMod.Library]]
   
   @js.native
   object Dutch
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationDutchMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.dutchMod.Library]]
   
   @js.native
   object English
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationEnglishMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.englishMod.Library]]
   
   @js.native
   object French
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationFrenchMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.frenchMod.Library]]
   
   @js.native
   object German
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationGermanMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.germanMod.Library]]
   
   @js.native
   object Norwegian
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationNorwegianMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.norwegianMod.Library]]
   
   @js.native
   object Pirate
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationPirateMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.pirateMod.Library]]
   
   @js.native
   object Polish
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationPolishMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.polishMod.Library]]
   
   @js.native
   object Portuguese
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationPortugueseMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.portugueseMod.Library]]
   
   @js.native
   object Russian
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationRussianMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.russianMod.Library]]
   
   @js.native
   object Spanish
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationSpanishMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.spanishMod.Library]]
   
   @js.native
   object Ukrainian
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationUkrainianMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.ukrainianMod.Library]]
   
   @js.native
   object default
-    extends TopLevel[^[typingsSlinky.yadda.libLocalisationEnglishMod.Library]]
+    extends TopLevel[^[typingsSlinky.yadda.englishMod.Library]]
   
 }
 

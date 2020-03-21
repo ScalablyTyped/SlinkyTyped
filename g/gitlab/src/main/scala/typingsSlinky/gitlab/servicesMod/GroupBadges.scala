@@ -1,0 +1,14 @@
+package typingsSlinky.gitlab.servicesMod
+
+import typingsSlinky.gitlab.baseServiceMod.BaseServiceOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("gitlab/dist/types/core/services", "GroupBadges")
+@js.native
+class GroupBadges ()
+  extends typingsSlinky.gitlab.groupBadgesMod.GroupBadges {
+  def this(options: BaseServiceOptions) = this()
+}
+

@@ -5,19 +5,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object omnibox {
-  import typingsSlinky.chrome.chrome.events.Event
-
-  type OmniboxInputCancelledEvent = Event[js.Function0[Unit]]
-  type OmniboxInputChangedEvent = Event[
+  type OmniboxInputCancelledEvent = typingsSlinky.chrome.chrome.events.Event[js.Function0[scala.Unit]]
+  type OmniboxInputChangedEvent = typingsSlinky.chrome.chrome.events.Event[
     js.Function2[
-      /* text */ String, 
-      /* suggest */ js.Function1[/* suggestResults */ js.Array[SuggestResult], Unit], 
-      Unit
+      /* text */ java.lang.String, 
+      /* suggest */ js.Function1[
+        /* suggestResults */ js.Array[typingsSlinky.chrome.chrome.omnibox.SuggestResult], 
+        scala.Unit
+      ], 
+      scala.Unit
     ]
   ]
-  type OmniboxInputEnteredEvent = Event[
-    js.Function2[/* text */ String, /* disposition */ OnInputEnteredDisposition, Unit]
+  type OmniboxInputEnteredEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function2[
+      /* text */ java.lang.String, 
+      /* disposition */ typingsSlinky.chrome.chrome.omnibox.OnInputEnteredDisposition, 
+      scala.Unit
+    ]
   ]
-  type OmniboxInputStartedEvent = Event[js.Function0[Unit]]
-  type OmniboxSuggestionDeletedEvent = Event[js.Function1[/* text */ String, Unit]]
+  type OmniboxInputStartedEvent = typingsSlinky.chrome.chrome.events.Event[js.Function0[scala.Unit]]
+  type OmniboxSuggestionDeletedEvent = typingsSlinky.chrome.chrome.events.Event[js.Function1[/* text */ java.lang.String, scala.Unit]]
 }

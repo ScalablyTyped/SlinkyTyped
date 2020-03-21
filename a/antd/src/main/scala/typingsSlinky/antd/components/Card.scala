@@ -1,7 +1,6 @@
 package typingsSlinky.antd.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLDivElement
 import slinky.core.BuildingComponent
@@ -27,6 +26,7 @@ import typingsSlinky.antd.antdStrings.execute
 import typingsSlinky.antd.antdStrings.grammar
 import typingsSlinky.antd.antdStrings.grid
 import typingsSlinky.antd.antdStrings.horizontal
+import typingsSlinky.antd.antdStrings.inherit
 import typingsSlinky.antd.antdStrings.link
 import typingsSlinky.antd.antdStrings.list
 import typingsSlinky.antd.antdStrings.listbox
@@ -54,12 +54,14 @@ import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
-import typingsSlinky.antd.libCardMod.CardProps
-import typingsSlinky.antd.libCardMod.CardSize
-import typingsSlinky.antd.libCardMod.CardTabListType
-import typingsSlinky.antd.libCardMod.CardType
-import typingsSlinky.antd.libCardMod.default
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.cardMod.CardProps
+import typingsSlinky.antd.cardMod.CardSize
+import typingsSlinky.antd.cardMod.CardTabListType
+import typingsSlinky.antd.cardMod.CardType
+import typingsSlinky.antd.cardMod.default
+import typingsSlinky.react.mod.Booleanish
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -71,7 +73,7 @@ object Card
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, draggable, hidden, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, spellCheck, suppressContentEditableWarning, tabIndex */
+  /* The following DOM/SVG props were specified: className, dangerouslySetInnerHTML, dir, draggable, hidden, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, spellCheck, style, suppressContentEditableWarning, tabIndex */
   def apply(
     about: String = null,
     accessKey: String = null,
@@ -131,10 +133,13 @@ object Card
     bodyStyle: CSSProperties = null,
     bordered: js.UndefOr[Boolean] = js.undefined,
     color: String = null,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
     cover: TagMod[Any] = null,
     datatype: String = null,
     defaultActiveTabKey: String = null,
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    defaultValue: String | Double | js.Array[String] = null,
     extra: TagMod[Any] = null,
     headStyle: CSSProperties = null,
     hoverable: js.UndefOr[Boolean] = js.undefined,
@@ -147,11 +152,11 @@ object Card
     itemScope: js.UndefOr[Boolean] = js.undefined,
     itemType: String = null,
     loading: js.UndefOr[Boolean] = js.undefined,
-    noHovering: js.UndefOr[Boolean] = js.undefined,
     onAuxClick: SyntheticMouseEvent[HTMLDivElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with HTMLDivElement, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLDivElement, Event_] => Unit = null,
     onTabChange: /* key */ String => Unit = null,
+    placeholder: String = null,
     prefix: String = null,
     prefixCls: String = null,
     property: String = null,
@@ -162,7 +167,6 @@ object Card
     security: String = null,
     size: CardSize = null,
     slot: String = null,
-    style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
     tabBarExtraContent: TagMod[Any] = null,
     tabList: js.Array[CardTabListType] = null,
@@ -233,10 +237,13 @@ object Card
     if (bodyStyle != null) __obj.updateDynamic("bodyStyle")(bodyStyle.asInstanceOf[js.Any])
     if (!js.isUndefined(bordered)) __obj.updateDynamic("bordered")(bordered.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (cover != null) __obj.updateDynamic("cover")(cover.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
     if (defaultActiveTabKey != null) __obj.updateDynamic("defaultActiveTabKey")(defaultActiveTabKey.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
     if (extra != null) __obj.updateDynamic("extra")(extra.asInstanceOf[js.Any])
     if (headStyle != null) __obj.updateDynamic("headStyle")(headStyle.asInstanceOf[js.Any])
     if (!js.isUndefined(hoverable)) __obj.updateDynamic("hoverable")(hoverable.asInstanceOf[js.Any])
@@ -249,11 +256,11 @@ object Card
     if (!js.isUndefined(itemScope)) __obj.updateDynamic("itemScope")(itemScope.asInstanceOf[js.Any])
     if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
     if (!js.isUndefined(loading)) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
-    if (!js.isUndefined(noHovering)) __obj.updateDynamic("noHovering")(noHovering.asInstanceOf[js.Any])
     if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
     if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
     if (onTabChange != null) __obj.updateDynamic("onTabChange")(js.Any.fromFunction1(onTabChange))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
@@ -264,7 +271,6 @@ object Card
     if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
     if (tabBarExtraContent != null) __obj.updateDynamic("tabBarExtraContent")(tabBarExtraContent.asInstanceOf[js.Any])
     if (tabList != null) __obj.updateDynamic("tabList")(tabList.asInstanceOf[js.Any])
@@ -277,7 +283,7 @@ object Card
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.antd.libCardMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.div.tag.type, typingsSlinky.antd.cardMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = CardProps
 }
 

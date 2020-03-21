@@ -1,7 +1,7 @@
 package typingsSlinky.physijs.Physijs
 
-import typingsSlinky.three.threeMod.Object3D
-import typingsSlinky.three.threeMod.Vector3
+import typingsSlinky.three.mod.Object3D
+import typingsSlinky.three.mod.Vector3
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

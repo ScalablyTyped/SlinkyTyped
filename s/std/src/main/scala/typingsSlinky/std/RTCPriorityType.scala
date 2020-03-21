@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.`very-low`
-  - typings.std.stdStrings.low
-  - typings.std.stdStrings.medium
-  - typings.std.stdStrings.high
+  - typingsSlinky.std.stdStrings.high
+  - typingsSlinky.std.stdStrings.low
+  - typingsSlinky.std.stdStrings.medium
+  - typingsSlinky.std.stdStrings.`very-low`
 */
 trait RTCPriorityType extends js.Object
 

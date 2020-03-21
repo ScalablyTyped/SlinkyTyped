@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.gsap.gsap.Timeline because Already inherited */ @JSGlobal("gsap.TimelineLite")
+- typingsSlinky.gsap.gsap.Timeline because Already inherited */ @JSGlobal("gsap.TimelineLite")
 @js.native
 class TimelineLite () extends SimpleTimeline {
   def this(vars: js.Object) = this()

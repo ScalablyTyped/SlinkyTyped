@@ -1,0 +1,8 @@
+package typingsSlinky.ckeditorCkeditor5Core.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait CKFinderAdapterConfig extends js.Object
+

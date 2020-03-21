@@ -1,7 +1,6 @@
 package typingsSlinky.reactstrap.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLLabelElement
 import slinky.core.BuildingComponent
@@ -11,7 +10,6 @@ import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
 import slinky.web.html.label.tag
-import typingsSlinky.react.reactMod.CSSProperties
 import typingsSlinky.react.reactStrings.`additions text`
 import typingsSlinky.react.reactStrings.`inline`
 import typingsSlinky.react.reactStrings.additions
@@ -56,10 +54,11 @@ import typingsSlinky.react.reactStrings.tree
 import typingsSlinky.react.reactStrings.url
 import typingsSlinky.react.reactStrings.vertical
 import typingsSlinky.react.reactStrings.yes
-import typingsSlinky.reactstrap.libColMod.ColumnProps
-import typingsSlinky.reactstrap.libLabelMod.LabelProps
-import typingsSlinky.reactstrap.libLabelMod.default
-import typingsSlinky.reactstrap.reactstrapMod.CSSModule
+import typingsSlinky.reactstrap.colMod.ColumnProps
+import typingsSlinky.reactstrap.labelMod.LabelProps
+import typingsSlinky.reactstrap.labelMod.default
+import typingsSlinky.reactstrap.mod.CSSModule
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -71,7 +70,7 @@ object Label
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, draggable, hidden, htmlFor, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, spellCheck, suppressContentEditableWarning, tabIndex */
+  /* The following DOM/SVG props were specified: className, contentEditable, dangerouslySetInnerHTML, dir, draggable, form, hidden, htmlFor, id, lang, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, spellCheck, style, suppressContentEditableWarning, tabIndex, title */
   def apply[T](
     about: String = null,
     accessKey: String = null,
@@ -131,8 +130,10 @@ object Label
     contextMenu: String = null,
     cssModule: CSSModule = null,
     datatype: String = null,
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    defaultValue: String | Double | js.Array[String] = null,
+    disabled: js.UndefOr[Boolean] = js.undefined,
     `for`: String = null,
-    form: String = null,
     `inline`: js.UndefOr[Boolean] = js.undefined,
     inlist: js.Any = null,
     inputMode: none | text | tel | url | email | numeric | decimal | search = null,
@@ -145,8 +146,9 @@ object Label
     lg: ColumnProps = null,
     md: ColumnProps = null,
     onAuxClick: SyntheticMouseEvent[HTMLLabelElement] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget with HTMLLabelElement, Event] => Unit = null,
-    onReset: SyntheticEvent[EventTarget with HTMLLabelElement, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLLabelElement, Event_] => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLLabelElement, Event_] => Unit = null,
+    placeholder: String = null,
     prefix: String = null,
     property: String = null,
     radioGroup: String = null,
@@ -157,10 +159,8 @@ object Label
     size: String = null,
     slot: String = null,
     sm: ColumnProps = null,
-    style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
     tag: String | ReactComponentClass[_] = null,
-    title: String = null,
     translate: yes | no = null,
     typeof: String = null,
     unselectable: on | off = null,
@@ -228,8 +228,10 @@ object Label
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
     if (cssModule != null) __obj.updateDynamic("cssModule")(cssModule.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (!js.isUndefined(disabled)) __obj.updateDynamic("disabled")(disabled.asInstanceOf[js.Any])
     if (`for` != null) __obj.updateDynamic("for")(`for`.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
     if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
     if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
     if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
@@ -244,6 +246,7 @@ object Label
     if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
     if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
     if (radioGroup != null) __obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])
@@ -254,10 +257,8 @@ object Label
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
     if (sm != null) __obj.updateDynamic("sm")(sm.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
     if (tag != null) __obj.updateDynamic("tag")(tag.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
     if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
@@ -265,13 +266,9 @@ object Label
     if (xl != null) __obj.updateDynamic("xl")(xl.asInstanceOf[js.Any])
     if (xs != null) __obj.updateDynamic("xs")(xs.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[
-  slinky.web.html.label.tag.type, 
-  typingsSlinky.reactstrap.libLabelMod.default[js.Any]]]
+    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.label.tag.type, typingsSlinky.reactstrap.labelMod.default[js.Any]]]
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[
-  slinky.web.html.label.tag.type, 
-  typingsSlinky.reactstrap.libLabelMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default[js.Any]] = new slinky.core.BuildingComponent[slinky.web.html.label.tag.type, typingsSlinky.reactstrap.labelMod.default[js.Any]](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = LabelProps
 }
 

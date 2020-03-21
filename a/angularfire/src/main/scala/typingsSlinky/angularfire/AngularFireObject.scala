@@ -1,8 +1,8 @@
 package typingsSlinky.angularfire
 
-import typingsSlinky.angular.angularMod.IHttpPromise
-import typingsSlinky.angular.angularMod.IPromise
-import typingsSlinky.angular.angularMod.IScope
+import typingsSlinky.angular.mod.IHttpPromise
+import typingsSlinky.angular.mod.IPromise
+import typingsSlinky.angular.mod.IScope
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

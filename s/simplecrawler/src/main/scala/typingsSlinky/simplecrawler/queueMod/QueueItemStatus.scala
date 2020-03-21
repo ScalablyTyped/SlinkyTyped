@@ -5,13 +5,13 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.simplecrawler.simplecrawlerStrings.queued
-  - typings.simplecrawler.simplecrawlerStrings.spooled
-  - typings.simplecrawler.simplecrawlerStrings.headers
-  - typings.simplecrawler.simplecrawlerStrings.downloaded
-  - typings.simplecrawler.simplecrawlerStrings.redirected
-  - typings.simplecrawler.simplecrawlerStrings.notfound
-  - typings.simplecrawler.simplecrawlerStrings.failed
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.queued
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.spooled
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.headers
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.downloaded
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.redirected
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.notfound
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.failed
 */
 trait QueueItemStatus extends js.Object
 

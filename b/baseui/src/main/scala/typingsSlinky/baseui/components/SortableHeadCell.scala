@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_HeadCell
+import typingsSlinky.baseui.AnonHeadCell
 import typingsSlinky.baseui.baseuiStrings.ASC
 import typingsSlinky.baseui.baseuiStrings.DESC
 import typingsSlinky.baseui.tableMod.SortableHeadCellProps
@@ -25,7 +25,7 @@ object SortableHeadCell
     direction: ASC | DESC = null,
     fillClickTarget: js.UndefOr[Boolean] = js.undefined,
     onSort: () => _ = null,
-    overrides: Anon_HeadCell = null,
+    overrides: AnonHeadCell = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal(title = title.asInstanceOf[js.Any])

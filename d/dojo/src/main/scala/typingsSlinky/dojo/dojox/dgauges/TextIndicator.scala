@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.dgauges
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.align
 import typingsSlinky.dojo.dojoStrings.color
 import typingsSlinky.dojo.dojoStrings.font
@@ -104,7 +104,7 @@ class TextIndicator () extends IndicatorBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_color(
     property: color,
@@ -114,7 +114,7 @@ class TextIndicator () extends IndicatorBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_font(
     property: font,
@@ -124,7 +124,7 @@ class TextIndicator () extends IndicatorBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_indicator(
     property: indicator,
@@ -134,7 +134,7 @@ class TextIndicator () extends IndicatorBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_labelFunc(
     property: labelFunc,
@@ -144,7 +144,7 @@ class TextIndicator () extends IndicatorBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_x(
     property: x,
@@ -154,7 +154,7 @@ class TextIndicator () extends IndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_y(
     property: y,
@@ -164,6 +164,6 @@ class TextIndicator () extends IndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

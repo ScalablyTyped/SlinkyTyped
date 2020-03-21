@@ -1,7 +1,7 @@
 package typingsSlinky.meteor.underscoreMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.underscore.underscoreMod.UnderscoreStatic
+import typingsSlinky.underscore.mod.UnderscoreStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

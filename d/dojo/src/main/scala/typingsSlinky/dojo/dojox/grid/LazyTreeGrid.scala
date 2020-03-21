@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.grid
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.colSpans
 import typingsSlinky.dojo.dojoStrings.defaultState
 import scala.scalajs.js
@@ -114,7 +114,7 @@ class LazyTreeGrid () extends TreeGrid {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_defaultState(
     property: defaultState,
@@ -124,6 +124,6 @@ class LazyTreeGrid () extends TreeGrid {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

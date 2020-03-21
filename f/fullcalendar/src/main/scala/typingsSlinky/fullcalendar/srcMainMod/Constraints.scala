@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("fullcalendar/src/main", "Constraints")
 @js.native
 class Constraints protected ()
-  extends typingsSlinky.fullcalendar.srcExportsMod.Constraints {
+  extends typingsSlinky.fullcalendar.exportsMod.Constraints {
   def this(eventManager: js.Any, _calendar: js.Any) = this()
 }
 

@@ -5,16 +5,16 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.spectacle.spectacleMod.DeckProps
-import typingsSlinky.spectacle.spectacleMod.Theme
-import typingsSlinky.spectacle.spectacleMod.progressType
-import typingsSlinky.spectacle.spectacleMod.transitionType
+import typingsSlinky.spectacle.mod.DeckProps
+import typingsSlinky.spectacle.mod.Theme
+import typingsSlinky.spectacle.mod.progressType
+import typingsSlinky.spectacle.mod.transitionType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Deck
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.spectacleMod.Deck] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.spectacle.mod.Deck] {
   @JSImport("spectacle", "Deck")
   @js.native
   object componentImport extends js.Object
@@ -39,7 +39,7 @@ object Deck
     transition: js.Array[transitionType] = null,
     transitionDuration: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.Deck] = {
+  ): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Deck] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(autoplay)) __obj.updateDynamic("autoplay")(autoplay.asInstanceOf[js.Any])
     if (autoplayDuration != null) __obj.updateDynamic("autoplayDuration")(autoplayDuration.asInstanceOf[js.Any])
@@ -60,7 +60,7 @@ object Deck
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.spectacleMod.Deck] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.spectacleMod.Deck](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.spectacle.mod.Deck] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.spectacle.mod.Deck](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DeckProps
 }
 

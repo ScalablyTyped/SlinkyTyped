@@ -1,7 +1,7 @@
 
 # Scala.js typings for ably
 
-Typings are for version 1.1.22
+Typings are for version 1.1.24
 
 ## Library description:
 Realtime client library for Ably.io, the realtime messaging service
@@ -10,9 +10,9 @@ Realtime client library for Ably.io, the realtime messaging service
 | ------------------ | :-------------: |
 | Full name          | ably |
 | Keywords           | - |
-| # releases         | 48 |
+| # releases         | 44 |
 | # dependents       | 14 |
-| # downloads        | 285700 |
+| # downloads        | 309826 |
 | # stars            | 0 |
 
 ## Links

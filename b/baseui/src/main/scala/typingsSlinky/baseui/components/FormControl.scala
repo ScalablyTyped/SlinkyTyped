@@ -5,14 +5,14 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.formDashControlMod.FormControlOverrides
-import typingsSlinky.baseui.formDashControlMod.FormControlProps
+import typingsSlinky.baseui.formControlMod.FormControlOverrides
+import typingsSlinky.baseui.formControlMod.FormControlProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object FormControl
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.formDashControlMod.FormControl] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.baseui.formControlMod.FormControl] {
   @JSImport("baseui/form-control", "FormControl")
   @js.native
   object componentImport extends js.Object
@@ -26,7 +26,7 @@ object FormControl
     overrides: FormControlOverrides = null,
     positive: TagMod[Any] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.baseui.formDashControlMod.FormControl] = {
+  ): BuildingComponent[tag.type, typingsSlinky.baseui.formControlMod.FormControl] = {
     val __obj = js.Dynamic.literal()
     if (caption != null) __obj.updateDynamic("caption")(caption.asInstanceOf[js.Any])
     if (error != null) __obj.updateDynamic("error")(error.asInstanceOf[js.Any])
@@ -36,7 +36,7 @@ object FormControl
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.formDashControlMod.FormControl] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.formDashControlMod.FormControl](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.baseui.formControlMod.FormControl] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.baseui.formControlMod.FormControl](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = FormControlProps
 }
 

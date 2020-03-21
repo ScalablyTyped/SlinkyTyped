@@ -5,22 +5,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.bitwise.bitwiseNumbers.`0`
-  - typings.bitwise.bitwiseNumbers.`1`
-  - typings.bitwise.bitwiseNumbers.`2`
-  - typings.bitwise.bitwiseNumbers.`3`
-  - typings.bitwise.bitwiseNumbers.`4`
-  - typings.bitwise.bitwiseNumbers.`5`
-  - typings.bitwise.bitwiseNumbers.`6`
-  - typings.bitwise.bitwiseNumbers.`7`
-  - typings.bitwise.bitwiseNumbers.`8`
-  - typings.bitwise.bitwiseNumbers.`9`
-  - typings.bitwise.bitwiseNumbers.`10`
-  - typings.bitwise.bitwiseNumbers.`11`
-  - typings.bitwise.bitwiseNumbers.`12`
-  - typings.bitwise.bitwiseNumbers.`13`
-  - typings.bitwise.bitwiseNumbers.`14`
-  - typings.bitwise.bitwiseNumbers.`15`
+  - typingsSlinky.bitwise.bitwiseNumbers.`0`
+  - typingsSlinky.bitwise.bitwiseNumbers.`1`
+  - typingsSlinky.bitwise.bitwiseNumbers.`2`
+  - typingsSlinky.bitwise.bitwiseNumbers.`3`
+  - typingsSlinky.bitwise.bitwiseNumbers.`4`
+  - typingsSlinky.bitwise.bitwiseNumbers.`5`
+  - typingsSlinky.bitwise.bitwiseNumbers.`6`
+  - typingsSlinky.bitwise.bitwiseNumbers.`7`
+  - typingsSlinky.bitwise.bitwiseNumbers.`8`
+  - typingsSlinky.bitwise.bitwiseNumbers.`9`
+  - typingsSlinky.bitwise.bitwiseNumbers.`10`
+  - typingsSlinky.bitwise.bitwiseNumbers.`11`
+  - typingsSlinky.bitwise.bitwiseNumbers.`12`
+  - typingsSlinky.bitwise.bitwiseNumbers.`13`
+  - typingsSlinky.bitwise.bitwiseNumbers.`14`
+  - typingsSlinky.bitwise.bitwiseNumbers.`15`
 */
 trait UInt4 extends js.Object
 

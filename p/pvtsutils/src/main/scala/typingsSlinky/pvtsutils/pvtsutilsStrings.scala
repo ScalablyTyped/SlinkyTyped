@@ -1,6 +1,6 @@
 package typingsSlinky.pvtsutils
 
-import typingsSlinky.pvtsutils.buildTypesConvertMod._BufferEncoding
+import typingsSlinky.pvtsutils.convertMod._BufferEncoding
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

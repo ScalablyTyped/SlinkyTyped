@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.mobile
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojo.data.api.Read
 import typingsSlinky.dojo.dojo.data.api.Request
 import typingsSlinky.dojo.dojoStrings.query
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dojox.mobile._DataMixin because Inheritance from two classes. Inlined query, queryOptions, store, refresh, setQuery, setQuery, setStore, setStore */ @JSGlobal("dojox.mobile.DataCarousel")
+- typingsSlinky.dojo.dojox.mobile.DataMixin because Inheritance from two classes. Inlined query, queryOptions, store, refresh, setQuery, setQuery, setStore, setStore */ @JSGlobal("dojox.mobile.DataCarousel")
 @js.native
 class DataCarousel () extends Carousel {
   def this(params: js.Object) = this()
@@ -98,7 +98,7 @@ class DataCarousel () extends Carousel {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_queryOptions(
     property: queryOptions,
@@ -108,7 +108,7 @@ class DataCarousel () extends Carousel {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_store(
     property: store,
@@ -118,6 +118,6 @@ class DataCarousel () extends Carousel {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

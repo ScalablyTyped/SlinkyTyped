@@ -1,11 +1,11 @@
 package typingsSlinky.josa
 
-import typingsSlinky.josa.josaMod.Conjunction
-import typingsSlinky.josa.josaMod.Josa
-import typingsSlinky.josa.josaMod.Means
-import typingsSlinky.josa.josaMod.Objective
-import typingsSlinky.josa.josaMod.Subject
-import typingsSlinky.josa.josaMod.Topic
+import typingsSlinky.josa.mod.Conjunction
+import typingsSlinky.josa.mod.Josa_
+import typingsSlinky.josa.mod.Means
+import typingsSlinky.josa.mod.Objective
+import typingsSlinky.josa.mod.Subject
+import typingsSlinky.josa.mod.Topic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,52 +13,52 @@ import scala.scalajs.js.annotation._
 object josaStrings {
   @js.native
   sealed trait 가
-    extends Josa
+    extends Josa_
        with Subject
   
   @js.native
   sealed trait 과
     extends Conjunction
-       with Josa
+       with Josa_
   
   @js.native
   sealed trait 는
-    extends Josa
+    extends Josa_
        with Topic
   
   @js.native
   sealed trait 로
-    extends Josa
+    extends Josa_
        with Means
   
   @js.native
   sealed trait 를
-    extends Josa
+    extends Josa_
        with Objective
   
   @js.native
   sealed trait 와
     extends Conjunction
-       with Josa
+       with Josa_
   
   @js.native
   sealed trait 으로
-    extends Josa
+    extends Josa_
        with Means
   
   @js.native
   sealed trait 은
-    extends Josa
+    extends Josa_
        with Topic
   
   @js.native
   sealed trait 을
-    extends Josa
+    extends Josa_
        with Objective
   
   @js.native
   sealed trait 이
-    extends Josa
+    extends Josa_
        with Subject
   
   @scala.inline

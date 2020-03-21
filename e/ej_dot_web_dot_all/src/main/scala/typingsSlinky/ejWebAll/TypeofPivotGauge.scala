@@ -1,0 +1,19 @@
+package typingsSlinky.ejWebAll
+
+import org.scalablytyped.runtime.Instantiable1
+import org.scalablytyped.runtime.Instantiable2
+import typingsSlinky.ejWebAll.ej.PivotGauge
+import typingsSlinky.ejWebAll.ej.PivotGauge.Model
+import typingsSlinky.std.Element
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TypeofPivotGauge
+  extends Instantiable1[(/* element */ Element) | (/* element */ JQuery), PivotGauge]
+     with Instantiable2[(/* element */ Element) | (/* element */ JQuery), /* options */ Model, PivotGauge] {
+  var Locale: js.Any = js.native
+  var fn: PivotGauge = js.native
+}
+

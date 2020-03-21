@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * The details of a healthcare service available at a location
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait HealthcareService extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait HealthcareService extends DomainResource {
   /**
     * Contains extended information for property 'active'.
     */

@@ -1,8 +1,8 @@
 package typingsSlinky.graphql.typeMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.graphql.typeDefinitionMod.GraphQLNullableType
-import typingsSlinky.graphql.typeDefinitionMod._GraphQLNonNull
+import typingsSlinky.graphql.definitionMod.GraphQLNullableType
+import typingsSlinky.graphql.definitionMod._GraphQLNonNull
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

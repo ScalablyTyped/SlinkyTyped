@@ -1,11 +1,11 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.Many
-import typingsSlinky.lodash.lodashMod.NotVoid
-import typingsSlinky.lodash.lodashMod.ValueIteratee
-import typingsSlinky.lodash.lodashMod.__
 import typingsSlinky.lodash.lodashStrings.asc
 import typingsSlinky.lodash.lodashStrings.desc
+import typingsSlinky.lodash.mod.Many
+import typingsSlinky.lodash.mod.NotVoid
+import typingsSlinky.lodash.mod.ValueIteratee
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

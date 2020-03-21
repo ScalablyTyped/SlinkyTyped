@@ -1,9 +1,9 @@
 package typingsSlinky.jsforce
 
 import typingsSlinky.jsforce.bulkMod.BulkLoadOperation
-import typingsSlinky.jsforce.describeDashResultMod.ExtraTypeInfo
-import typingsSlinky.jsforce.describeDashResultMod.FieldType
-import typingsSlinky.jsforce.describeDashResultMod.SOAPType
+import typingsSlinky.jsforce.describeResultMod.ExtraTypeInfo
+import typingsSlinky.jsforce.describeResultMod.FieldType
+import typingsSlinky.jsforce.describeResultMod.SOAPType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

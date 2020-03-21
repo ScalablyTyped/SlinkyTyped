@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("fullcalendar/src/main", "EventDef")
 @js.native
 abstract class EventDef protected ()
-  extends typingsSlinky.fullcalendar.srcExportsMod.EventDef {
+  extends typingsSlinky.fullcalendar.exportsMod.EventDef {
   def this(source: js.Any) = this()
 }
 

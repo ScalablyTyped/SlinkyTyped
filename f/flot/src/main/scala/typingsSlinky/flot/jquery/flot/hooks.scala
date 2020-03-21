@@ -2,14 +2,14 @@ package typingsSlinky.flot.jquery.flot
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.jquery.JQuery
+import typingsSlinky.jquery.JQuery_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait hooks extends js.Object {
   var bindEvents: js.UndefOr[
-    js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery[HTMLElement], Unit]]
+    js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery_[HTMLElement], Unit]]
   ] = js.undefined
   var draw: js.UndefOr[
     js.Array[js.Function2[/* plot */ plot, /* context */ CanvasRenderingContext2D, Unit]]
@@ -44,14 +44,14 @@ trait hooks extends js.Object {
     ]
   ] = js.undefined
   var shutdown: js.UndefOr[
-    js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery[HTMLElement], Unit]]
+    js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery_[HTMLElement], Unit]]
   ] = js.undefined
 }
 
 object hooks {
   @scala.inline
   def apply(
-    bindEvents: js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery[HTMLElement], Unit]] = null,
+    bindEvents: js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery_[HTMLElement], Unit]] = null,
     draw: js.Array[js.Function2[/* plot */ plot, /* context */ CanvasRenderingContext2D, Unit]] = null,
     drawBackground: js.Array[js.Function2[/* plot */ plot, /* context */ CanvasRenderingContext2D, Unit]] = null,
     drawOverlay: js.Array[js.Function2[/* plot */ plot, /* context */ CanvasRenderingContext2D, Unit]] = null,
@@ -72,7 +72,7 @@ object hooks {
         Unit
       ]
     ] = null,
-    shutdown: js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery[HTMLElement], Unit]] = null
+    shutdown: js.Array[js.Function2[/* plot */ plot, /* eventHolder */ JQuery_[HTMLElement], Unit]] = null
   ): hooks = {
     val __obj = js.Dynamic.literal()
     if (bindEvents != null) __obj.updateDynamic("bindEvents")(bindEvents.asInstanceOf[js.Any])

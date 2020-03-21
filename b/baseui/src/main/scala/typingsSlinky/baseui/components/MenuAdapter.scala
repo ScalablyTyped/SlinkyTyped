@@ -6,7 +6,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.`*`.tag
+import slinky.web.html.li.tag
 import typingsSlinky.baseui.listMod.ArtworkSizesT
 import typingsSlinky.baseui.listMod.MenuAdapterPropsT
 import typingsSlinky.baseui.listMod.OverridesT

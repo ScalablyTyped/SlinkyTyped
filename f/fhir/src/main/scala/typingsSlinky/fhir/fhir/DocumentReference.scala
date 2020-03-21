@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A reference to a document
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait DocumentReference extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait DocumentReference extends DomainResource {
   /**
     * Contains extended information for property 'created'.
     */

@@ -1,0 +1,17 @@
+package typingsSlinky.grammarkdown.typedObjectsMod
+
+import org.scalablytyped.runtime.TopLevel
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("grammarkdown/dist/typedObjects", "float32")
+@js.native
+object float32
+  extends TopLevel[
+      TypeObject[
+        typingsSlinky.grammarkdown.grammarkdownStrings.float32, 
+        TypeOfTypeHint[typingsSlinky.grammarkdown.grammarkdownStrings.float32]
+      ]
+    ]
+

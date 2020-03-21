@@ -5,6 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object charting {
-  type SimpleTheme = SimpleTheme_
-  type Theme = Theme_
+  type SimpleTheme = typingsSlinky.dojo.dojox.charting.SimpleTheme_
+  type Theme = typingsSlinky.dojo.dojox.charting.Theme_
 }

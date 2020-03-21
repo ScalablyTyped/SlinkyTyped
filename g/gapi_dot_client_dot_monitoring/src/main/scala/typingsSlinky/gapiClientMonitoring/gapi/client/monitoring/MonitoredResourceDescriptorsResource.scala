@@ -1,0 +1,28 @@
+package typingsSlinky.gapiClientMonitoring.gapi.client.monitoring
+
+import typingsSlinky.gapiClient.gapi.client.Request_
+import typingsSlinky.gapiClientMonitoring.AnonAccesstoken
+import typingsSlinky.gapiClientMonitoring.AnonCallback
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait MonitoredResourceDescriptorsResource extends js.Object {
+  /** Gets a single monitored resource descriptor. This method does not require a Stackdriver account. */
+  def get(request: AnonAccesstoken): Request_[MonitoredResourceDescriptor]
+  /** Lists monitored resource descriptors that match a filter. This method does not require a Stackdriver account. */
+  def list(request: AnonCallback): Request_[ListMonitoredResourceDescriptorsResponse]
+}
+
+object MonitoredResourceDescriptorsResource {
+  @scala.inline
+  def apply(
+    get: AnonAccesstoken => Request_[MonitoredResourceDescriptor],
+    list: AnonCallback => Request_[ListMonitoredResourceDescriptorsResponse]
+  ): MonitoredResourceDescriptorsResource = {
+    val __obj = js.Dynamic.literal(get = js.Any.fromFunction1(get), list = js.Any.fromFunction1(list))
+  
+    __obj.asInstanceOf[MonitoredResourceDescriptorsResource]
+  }
+}
+

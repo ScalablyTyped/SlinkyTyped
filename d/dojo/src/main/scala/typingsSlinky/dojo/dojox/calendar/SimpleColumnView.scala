@@ -2,7 +2,7 @@ package typingsSlinky.dojo.dojox.calendar
 
 import org.scalajs.dom.raw.HTMLDocument
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.attachScope
 import typingsSlinky.dojo.dojoStrings.columnCount
 import typingsSlinky.dojo.dojoStrings.columnHeaderDatePattern
@@ -41,8 +41,8 @@ import scala.scalajs.js.annotation._
   *
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit._AttachMixin because Inheritance from two classes. Inlined 
-- typings.dojo.dijit._TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.calendar.SimpleColumnView")
+- typingsSlinky.dojo.dijit.AttachMixin because Inheritance from two classes. Inlined 
+- typingsSlinky.dojo.dijit.TemplatedMixin because Inheritance from two classes. Inlined attachScope, searchContainerNode, templatePath, templateString, buildRendering, destroyRendering, getCachedTemplate, getCachedTemplate */ @JSGlobal("dojox.calendar.SimpleColumnView")
 @js.native
 class SimpleColumnView () extends ViewBase {
   /**
@@ -416,7 +416,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_columnCount(
     property: columnCount,
@@ -426,7 +426,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_columnHeaderDatePattern(
     property: columnHeaderDatePattern,
@@ -436,7 +436,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_horizontalGap(
     property: horizontalGap,
@@ -446,7 +446,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_hourSize(
     property: hourSize,
@@ -456,7 +456,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_maxHours(
     property: maxHours,
@@ -466,7 +466,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_minColumnWidth(
     property: minColumnWidth,
@@ -476,7 +476,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_minHours(
     property: minHours,
@@ -486,7 +486,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_percentOverlap(
     property: percentOverlap,
@@ -496,7 +496,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_renderData(
     property: renderData,
@@ -506,7 +506,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rowHeaderFirstLabelOffset(
     property: rowHeaderFirstLabelOffset,
@@ -516,7 +516,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rowHeaderGridSlotDuration(
     property: rowHeaderGridSlotDuration,
@@ -526,7 +526,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rowHeaderLabelOffset(
     property: rowHeaderLabelOffset,
@@ -536,7 +536,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rowHeaderLabelSlotDuration(
     property: rowHeaderLabelSlotDuration,
@@ -546,7 +546,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_rowHeaderTimePattern(
     property: rowHeaderTimePattern,
@@ -556,7 +556,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_scrollBarRTLPosition(
     property: scrollBarRTLPosition,
@@ -566,7 +566,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_searchContainerNode(
     property: searchContainerNode,
@@ -576,7 +576,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_showTimeIndicator(
     property: showTimeIndicator,
@@ -586,7 +586,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_startDate(
     property: startDate,
@@ -596,7 +596,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Date], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_startTimeOfDay(
     property: startTimeOfDay,
@@ -606,7 +606,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_styleGridCellFunc(
     property: styleGridCellFunc,
@@ -616,7 +616,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Function], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_subColumns(
     property: subColumns,
@@ -626,7 +626,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templatePath(
     property: templatePath,
@@ -636,7 +636,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_templateString(
     property: templateString,
@@ -646,7 +646,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_timeIndicatorRefreshInterval(
     property: timeIndicatorRefreshInterval,
@@ -656,7 +656,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_timeSlotDuration(
     property: timeSlotDuration,
@@ -666,7 +666,7 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_verticalRenderer(
     property: verticalRenderer,
@@ -676,6 +676,6 @@ class SimpleColumnView () extends ViewBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

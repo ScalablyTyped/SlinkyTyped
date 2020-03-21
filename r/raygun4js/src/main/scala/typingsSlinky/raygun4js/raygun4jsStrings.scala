@@ -1,6 +1,6 @@
 package typingsSlinky.raygun4js
 
-import typingsSlinky.raygun4js.raygun4jsMod.BreadcrumbLevel
+import typingsSlinky.raygun4js.mod.BreadcrumbLevel
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

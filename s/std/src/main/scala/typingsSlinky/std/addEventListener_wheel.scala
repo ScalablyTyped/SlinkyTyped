@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 object addEventListener_wheel extends js.Object {
   def apply(
     `type`: wheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.WheelEvent, _]
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.WheelEvent, _]
   ): Unit = js.native
   def apply(
     `type`: wheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.WheelEvent, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.WheelEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   def apply(
     `type`: wheel,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.WheelEvent, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.WheelEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
 }

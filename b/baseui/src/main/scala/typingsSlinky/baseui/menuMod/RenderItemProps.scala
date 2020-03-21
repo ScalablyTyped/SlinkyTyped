@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.menuMod
 
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

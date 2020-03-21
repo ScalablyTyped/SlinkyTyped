@@ -1,6 +1,6 @@
 package typingsSlinky.mdurl
 
-import typingsSlinky.mdurl.mdurlMod.Url
+import typingsSlinky.mdurl.mod.Url
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

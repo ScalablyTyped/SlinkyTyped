@@ -1,0 +1,30 @@
+package typingsSlinky.awsSdkClientDynamodbNode.typesProvisionedThroughputExceededExceptionMod
+
+import typingsSlinky.awsSdkClientDynamodbNode.batchGetItemExceptionsUnionMod.BatchGetItemExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.batchWriteItemExceptionsUnionMod.BatchWriteItemExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.deleteItemExceptionsUnionMod.DeleteItemExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.getItemExceptionsUnionMod.GetItemExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.putItemExceptionsUnionMod.PutItemExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.queryExceptionsUnionMod.QueryExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.scanExceptionsUnionMod.ScanExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.updateItemExceptionsUnionMod.UpdateItemExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ProvisionedThroughputExceededException
+  extends ServiceException[ProvisionedThroughputExceededExceptionDetails]
+     with BatchGetItemExceptionsUnion
+     with BatchWriteItemExceptionsUnion
+     with DeleteItemExceptionsUnion
+     with GetItemExceptionsUnion
+     with PutItemExceptionsUnion
+     with QueryExceptionsUnion
+     with ScanExceptionsUnion
+     with UpdateItemExceptionsUnion {
+  @JSName("name")
+  var name_ProvisionedThroughputExceededException: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.ProvisionedThroughputExceededException = js.native
+}
+

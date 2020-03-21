@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("error")
 @js.native
 object error
-  extends TopLevel[js.Function0[typingsSlinky.shelljs.shelljsMod.ShellString]]
+  extends TopLevel[js.Function0[typingsSlinky.shelljs.mod.ShellString]]
 

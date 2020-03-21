@@ -5,8 +5,8 @@ import org.scalajs.dom.raw.HTMLButtonElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.`*`.tag
-import typingsSlinky.reactour.reactourMod.CloseProps
+import slinky.web.html.button.tag
+import typingsSlinky.reactour.mod.CloseProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.ckeditor.CKEDITOR.htmlParser
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ckeditor.Anon_ApplyToAll
+import typingsSlinky.ckeditor.AnonApplyToAll
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -20,7 +20,7 @@ class filter () extends js.Object {
   var textRules: filterRulesGroup = js.native
   def addRules(rules: filterRulesDefinition): Unit = js.native
   def addRules(rules: filterRulesDefinition, options: Double): Unit = js.native
-  def addRules(rules: filterRulesDefinition, options: Anon_ApplyToAll): Unit = js.native
+  def addRules(rules: filterRulesDefinition, options: AnonApplyToAll): Unit = js.native
   def applyTo(node: node): Unit = js.native
 }
 

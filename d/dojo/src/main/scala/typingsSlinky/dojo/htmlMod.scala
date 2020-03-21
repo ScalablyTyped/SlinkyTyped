@@ -1,12 +1,12 @@
 package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.dojo.dojo.html
+import typingsSlinky.dojo.dijit._editor.html
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("dojo/html", JSImport.Namespace)
+@JSImport("dijit/_editor/html", JSImport.Namespace)
 @js.native
 object htmlMod extends TopLevel[html]
 

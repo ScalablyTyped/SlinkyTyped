@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojo
 
-import typingsSlinky.dojo.dojo._base.array
+import typingsSlinky.dojo.dojo.base.array
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -113,7 +113,7 @@ object rpc extends js.Object {
       *
       * @param deferredRequestHandler The deferred object handling a request.
       */
-    def errorCallback(deferredRequestHandler: typingsSlinky.dojo.dojo._base.Deferred): js.Function = js.native
+    def errorCallback(deferredRequestHandler: typingsSlinky.dojo.dojo.base.Deferred): js.Function = js.native
     /**
       * generate the local bind methods for the remote object
       *
@@ -142,7 +142,7 @@ object rpc extends js.Object {
       *
       * @param deferredRequestHandler The deferred object handling a request.
       */
-    def resultCallback(deferredRequestHandler: typingsSlinky.dojo.dojo._base.Deferred): js.Any = js.native
+    def resultCallback(deferredRequestHandler: typingsSlinky.dojo.dojo.base.Deferred): js.Any = js.native
   }
   
 }

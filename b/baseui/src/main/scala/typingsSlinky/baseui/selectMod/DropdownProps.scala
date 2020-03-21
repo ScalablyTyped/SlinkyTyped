@@ -1,22 +1,22 @@
 package typingsSlinky.baseui.selectMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.Anon_EventItem
-import typingsSlinky.baseui.Anon_OptionOptionState
+import typingsSlinky.baseui.AnonItem
+import typingsSlinky.baseui.AnonOptionState
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
 import typingsSlinky.baseui.baseuiStrings.search
 import typingsSlinky.baseui.baseuiStrings.select
 import typingsSlinky.baseui.menuMod.OnItemSelect
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait DropdownProps extends js.Object {
   var error: js.UndefOr[Boolean] = js.undefined
-  var getOptionLabel: js.UndefOr[js.Function1[/* args */ Anon_OptionOptionState, TagMod[Any]]] = js.undefined
+  var getOptionLabel: js.UndefOr[js.Function1[/* args */ AnonOptionState, TagMod[Any]]] = js.undefined
   var innerRef: js.UndefOr[Ref[_]] = js.undefined
   var isLoading: js.UndefOr[Boolean] = js.undefined
   var labelKey: js.UndefOr[String] = js.undefined
@@ -39,14 +39,14 @@ object DropdownProps {
   @scala.inline
   def apply(
     error: js.UndefOr[Boolean] = js.undefined,
-    getOptionLabel: /* args */ Anon_OptionOptionState => TagMod[Any] = null,
+    getOptionLabel: /* args */ AnonOptionState => TagMod[Any] = null,
     innerRef: Ref[_] = null,
     isLoading: js.UndefOr[Boolean] = js.undefined,
     labelKey: String = null,
     maxDropdownHeight: String = null,
     multi: js.UndefOr[Boolean] = js.undefined,
     noResultsMsg: TagMod[Any] = null,
-    onItemSelect: /* args */ Anon_EventItem => js.Any = null,
+    onItemSelect: /* args */ AnonItem => js.Any = null,
     options: Value = null,
     overrides: DropdownOverrides = null,
     required: js.UndefOr[Boolean] = js.undefined,

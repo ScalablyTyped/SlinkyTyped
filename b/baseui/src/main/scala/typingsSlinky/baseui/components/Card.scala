@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_Thumbnail
+import typingsSlinky.baseui.AnonThumbnail
 import typingsSlinky.baseui.cardMod.CardOverrides
 import typingsSlinky.baseui.cardMod.CardProps
 import scala.scalajs.js
@@ -21,8 +21,8 @@ object Card
   override val component: String | js.Object = this.componentImport
   def apply(
     action: TagMod[Any] = null,
-    hasThumbnail: /* props */ Anon_Thumbnail => Boolean = null,
-    headerImage: String = null,
+    hasThumbnail: /* props */ AnonThumbnail => Boolean = null,
+    headerImage: String | (/* import warning: transforms.QualifyReferences#resolveTypeRef many Couldn't qualify ImagePropsT */ js.Any) = null,
     overrides: CardOverrides = null,
     thumbnail: String = null,
     title: TagMod[Any] = null,

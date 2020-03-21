@@ -1,0 +1,12 @@
+package typingsSlinky.eggCore
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* This can be used to `require` the library as a side effect.
+  If it is a global library this will make scalajs-bundler include it */
+@JSImport("egg-core", JSImport.Namespace)
+@js.native
+object eggCoreRequire extends js.Object
+

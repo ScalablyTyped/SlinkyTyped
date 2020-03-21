@@ -29,7 +29,7 @@ import scala.scalajs.js.annotation._
   * Image and a Sprite is that you cannot animate an Image as they do not have the Animation component.
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @JSGlobal("Phaser.Physics.Impact.ImpactImage")
+- typingsSlinky.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @JSGlobal("Phaser.Physics.Impact.ImpactImage")
 @js.native
 class ImpactImage protected ()
   extends Image

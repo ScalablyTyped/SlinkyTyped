@@ -1,0 +1,24 @@
+package typingsSlinky.jsonPatchGen.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.jsonPatchGen.jsonPatchGenStrings.replace
+  - typingsSlinky.jsonPatchGen.jsonPatchGenStrings.add
+  - typingsSlinky.jsonPatchGen.jsonPatchGenStrings.remove
+*/
+trait PatchOperation extends js.Object
+
+object PatchOperation {
+  @scala.inline
+  def add: typingsSlinky.jsonPatchGen.jsonPatchGenStrings.add = this.cast("add")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def remove: typingsSlinky.jsonPatchGen.jsonPatchGenStrings.remove = this.cast("remove")
+  @scala.inline
+  def replace: typingsSlinky.jsonPatchGen.jsonPatchGenStrings.replace = this.cast("replace")
+}
+

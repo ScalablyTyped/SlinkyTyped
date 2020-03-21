@@ -1,0 +1,19 @@
+package typingsSlinky.apolloServerExpress.mod
+
+import org.scalablytyped.runtime.StringDictionary
+import typingsSlinky.apolloLink.mod.ApolloLink
+import typingsSlinky.graphql.mod.GraphQLSchema
+import typingsSlinky.graphqlTools.makeRemoteExecutableSchemaMod.Fetcher
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("apollo-server-express", "introspectSchema")
+@js.native
+object introspectSchema extends js.Object {
+  def apply(fetcher: ApolloLink): js.Promise[GraphQLSchema] = js.native
+  def apply(fetcher: ApolloLink, linkContext: StringDictionary[js.Any]): js.Promise[GraphQLSchema] = js.native
+  def apply(fetcher: Fetcher): js.Promise[GraphQLSchema] = js.native
+  def apply(fetcher: Fetcher, linkContext: StringDictionary[js.Any]): js.Promise[GraphQLSchema] = js.native
+}
+

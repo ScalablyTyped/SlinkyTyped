@@ -10,9 +10,9 @@ A pure JS Base64 <-> UInt8Array converter
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/util-base64-browser |
 | Keywords           | - |
-| # releases         | 4 |
-| # dependents       | 190 |
-| # downloads        | 4896 |
+| # releases         | 5 |
+| # dependents       | 372 |
+| # downloads        | 5305 |
 | # stars            | 0 |
 
 ## Links

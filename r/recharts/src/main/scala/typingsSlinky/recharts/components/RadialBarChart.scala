@@ -5,24 +5,23 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.recharts.rechartsMod.BaseValueType
-import typingsSlinky.recharts.rechartsMod.Margin
-import typingsSlinky.recharts.rechartsMod.RadialBarChartProps
-import typingsSlinky.recharts.rechartsMod.StackOffsetType
+import typingsSlinky.recharts.PartialMargin
+import typingsSlinky.recharts.mod.BaseValueType
+import typingsSlinky.recharts.mod.RadialBarChartProps
+import typingsSlinky.recharts.mod.StackOffsetType
 import typingsSlinky.recharts.rechartsStrings.radial
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RadialBarChart
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.rechartsMod.RadialBarChart] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.RadialBarChart] {
   @JSImport("recharts", "RadialBarChart")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, onClick, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseUp */
+  /* The following DOM/SVG props were specified: className */
   def apply(
     barCategoryGap: Double | String = null,
     barGap: Double | String = null,
@@ -36,8 +35,14 @@ object RadialBarChart
     height: Int | Double = null,
     innerRadius: String | Double = null,
     layout: radial = null,
-    margin: Partial[Margin] = null,
+    margin: PartialMargin = null,
     maxBarSize: Int | Double = null,
+    onClick: /* repeated */ js.Any => Unit = null,
+    onMouseDown: /* repeated */ js.Any => Unit = null,
+    onMouseEnter: /* repeated */ js.Any => Unit = null,
+    onMouseLeave: /* repeated */ js.Any => Unit = null,
+    onMouseMove: /* repeated */ js.Any => Unit = null,
+    onMouseUp: /* repeated */ js.Any => Unit = null,
     outerRadius: String | Double = null,
     reverseStackOrder: js.UndefOr[Boolean] = js.undefined,
     stackOffset: StackOffsetType = null,
@@ -47,7 +52,7 @@ object RadialBarChart
     throttleDelay: Int | Double = null,
     width: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.RadialBarChart] = {
+  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.RadialBarChart] = {
     val __obj = js.Dynamic.literal()
     if (barCategoryGap != null) __obj.updateDynamic("barCategoryGap")(barCategoryGap.asInstanceOf[js.Any])
     if (barGap != null) __obj.updateDynamic("barGap")(barGap.asInstanceOf[js.Any])
@@ -63,6 +68,12 @@ object RadialBarChart
     if (layout != null) __obj.updateDynamic("layout")(layout.asInstanceOf[js.Any])
     if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
     if (maxBarSize != null) __obj.updateDynamic("maxBarSize")(maxBarSize.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
+    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
     if (outerRadius != null) __obj.updateDynamic("outerRadius")(outerRadius.asInstanceOf[js.Any])
     if (!js.isUndefined(reverseStackOrder)) __obj.updateDynamic("reverseStackOrder")(reverseStackOrder.asInstanceOf[js.Any])
     if (stackOffset != null) __obj.updateDynamic("stackOffset")(stackOffset.asInstanceOf[js.Any])
@@ -74,7 +85,7 @@ object RadialBarChart
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.RadialBarChart] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.rechartsMod.RadialBarChart](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.RadialBarChart] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.RadialBarChart](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = RadialBarChartProps
 }
 

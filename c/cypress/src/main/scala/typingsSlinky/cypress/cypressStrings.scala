@@ -1,18 +1,18 @@
 package typingsSlinky.cypress
 
-import typingsSlinky.cypress.Cypress.Encodings
-import typingsSlinky.cypress.Cypress.HistoryDirection
-import typingsSlinky.cypress.Cypress.PositionType
-import typingsSlinky.cypress.Cypress.PrevSubject
-import typingsSlinky.cypress.Cypress.ViewportOrientation
-import typingsSlinky.cypress.Cypress.ViewportPreset
-import typingsSlinky.cypress.JQuery.Ajax.ErrorTextStatus
-import typingsSlinky.cypress.JQuery.Ajax.SuccessTextStatus
-import typingsSlinky.cypress.JQuery.Ajax.TextStatus
-import typingsSlinky.cypress.JQuery._Duration
-import typingsSlinky.cypress.JQuery.__Falsy
-import typingsSlinky.cypress.Mocha.Interface
-import typingsSlinky.cypress.Mocha.Reporter
+import typingsSlinky.cypress.JQuery_.Ajax.ErrorTextStatus
+import typingsSlinky.cypress.JQuery_.Ajax.SuccessTextStatus
+import typingsSlinky.cypress.JQuery_.Ajax.TextStatus
+import typingsSlinky.cypress.JQuery_._Duration
+import typingsSlinky.cypress.JQuery_._Falsy
+import typingsSlinky.cypress.Mocha_.Interface
+import typingsSlinky.cypress.Mocha_.Reporter
+import typingsSlinky.cypress.cypressMod.Cypress.Encodings
+import typingsSlinky.cypress.cypressMod.Cypress.HistoryDirection
+import typingsSlinky.cypress.cypressMod.Cypress.PositionType
+import typingsSlinky.cypress.cypressMod.Cypress.PrevSubject
+import typingsSlinky.cypress.cypressMod.Cypress.ViewportOrientation
+import typingsSlinky.cypress.cypressMod.Cypress.ViewportPreset
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -136,10 +136,7 @@ object cypressStrings {
   sealed trait XUnit extends Reporter
   
   @js.native
-  sealed trait _TypeEventHandlers extends js.Object
-  
-  @js.native
-  sealed trait _empty extends __Falsy
+  sealed trait _empty extends _Falsy
   
   @js.native
   sealed trait a extends js.Object
@@ -969,9 +966,6 @@ object cypressStrings {
   
   @js.native
   sealed trait loadedmetadata extends js.Object
-  
-  @js.native
-  sealed trait loadend extends js.Object
   
   @js.native
   sealed trait loadstart extends js.Object
@@ -1968,8 +1962,6 @@ object cypressStrings {
   @scala.inline
   def XUnit: XUnit = "XUnit".asInstanceOf[XUnit]
   @scala.inline
-  def _TypeEventHandlers: _TypeEventHandlers = "_TypeEventHandlers".asInstanceOf[_TypeEventHandlers]
-  @scala.inline
   def _empty: _empty = "".asInstanceOf[_empty]
   @scala.inline
   def a: a = "a".asInstanceOf[a]
@@ -2521,8 +2513,6 @@ object cypressStrings {
   def loadeddata: loadeddata = "loadeddata".asInstanceOf[loadeddata]
   @scala.inline
   def loadedmetadata: loadedmetadata = "loadedmetadata".asInstanceOf[loadedmetadata]
-  @scala.inline
-  def loadend: loadend = "loadend".asInstanceOf[loadend]
   @scala.inline
   def loadstart: loadstart = "loadstart".asInstanceOf[loadstart]
   @scala.inline

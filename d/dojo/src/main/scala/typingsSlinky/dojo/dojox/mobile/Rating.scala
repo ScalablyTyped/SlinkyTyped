@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dojox.mobile
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.alt
 import typingsSlinky.dojo.dojoStrings.image
 import typingsSlinky.dojo.dojoStrings.numStars
@@ -24,7 +24,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.mobile.Rating")
 @js.native
-class Rating () extends _WidgetBase {
+class Rating () extends WidgetBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -87,7 +87,7 @@ class Rating () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_image(
     property: image,
@@ -97,7 +97,7 @@ class Rating () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_numStars(
     property: numStars,
@@ -107,7 +107,7 @@ class Rating () extends _WidgetBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_value(
     property: value,
@@ -117,6 +117,6 @@ class Rating () extends _WidgetBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

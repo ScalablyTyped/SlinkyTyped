@@ -1,7 +1,7 @@
 package typingsSlinky.ical
 
-import typingsSlinky.ical.icalMod.CalendarComponentType
-import typingsSlinky.ical.icalMod.FreeBusyType
+import typingsSlinky.ical.mod.CalendarComponentType
+import typingsSlinky.ical.mod.FreeBusyType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

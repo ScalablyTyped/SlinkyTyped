@@ -5,8 +5,8 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsColorpickerColorPickerMod.ColorPickerProps
-import typingsSlinky.primereact.componentsTooltipTooltipOptionsMod.TooltipOptions
+import typingsSlinky.primereact.colorpickerColorPickerMod.ColorPickerProps
+import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,13 +18,14 @@ object ColorPicker
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, onChange */
+  /* The following DOM/SVG props were specified: className, disabled, id */
   def apply(
     appendTo: js.Any = null,
     defaultColor: String = null,
     format: String = null,
     `inline`: js.UndefOr[Boolean] = js.undefined,
     inputId: String = null,
+    onChange: /* value */ js.Any => Unit = null,
     style: js.Object = null,
     tabindex: String = null,
     tooltip: js.Any = null,
@@ -38,6 +39,7 @@ object ColorPicker
     if (format != null) __obj.updateDynamic("format")(format.asInstanceOf[js.Any])
     if (!js.isUndefined(`inline`)) __obj.updateDynamic("inline")(`inline`.asInstanceOf[js.Any])
     if (inputId != null) __obj.updateDynamic("inputId")(inputId.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (tabindex != null) __obj.updateDynamic("tabindex")(tabindex.asInstanceOf[js.Any])
     if (tooltip != null) __obj.updateDynamic("tooltip")(tooltip.asInstanceOf[js.Any])

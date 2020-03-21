@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojo.main
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -60,6 +60,6 @@ class Stateful () extends js.Object {
       /* newValue */ js.UndefOr[js.Any], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

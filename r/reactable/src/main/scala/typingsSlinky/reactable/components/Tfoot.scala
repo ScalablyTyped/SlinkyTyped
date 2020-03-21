@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Tfoot
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactable.reactableMod.Tfoot] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactable.mod.Tfoot] {
   @JSImport("reactable", "Tfoot")
   @js.native
   object componentImport extends js.Object

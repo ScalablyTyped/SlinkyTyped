@@ -5,9 +5,9 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.history.historyMod.Location
-import typingsSlinky.history.historyMod.LocationState
-import typingsSlinky.reactDashRouter.reactDashRouterMod.SwitchProps
+import typingsSlinky.history.mod.Location
+import typingsSlinky.history.mod.LocationState
+import typingsSlinky.reactRouter.mod.SwitchProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

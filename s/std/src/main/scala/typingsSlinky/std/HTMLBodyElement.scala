@@ -17,13 +17,10 @@ trait HTMLBodyElement
   var background: java.lang.String = js.native
   /** @deprecated */
   var bgColor: java.lang.String = js.native
-  var bgProperties: java.lang.String = js.native
   /** @deprecated */
   var link: java.lang.String = js.native
   /** @deprecated */
-  var noWrap: scala.Boolean = js.native
-  /** @deprecated */
-  var onorientationchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onorientationchange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   /** @deprecated */
   var text: java.lang.String = js.native
   /** @deprecated */
@@ -39,20 +36,17 @@ trait HTMLBodyElement
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_orientationchange(
-    `type`: orientationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_orientationchange(`type`: orientationchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_orientationchange(
     `type`: orientationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_orientationchange(
     `type`: orientationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   /* InferMemberOverrides */
@@ -66,20 +60,17 @@ trait HTMLBodyElement
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_orientationchange(
-    `type`: orientationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_orientationchange(`type`: orientationchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_orientationchange(
     `type`: orientationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_orientationchange(
     `type`: orientationchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
 }

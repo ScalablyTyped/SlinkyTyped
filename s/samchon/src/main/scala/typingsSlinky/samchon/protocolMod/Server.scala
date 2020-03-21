@@ -7,5 +7,5 @@ import scala.scalajs.js.annotation._
 @JSImport("samchon/protocol", "Server")
 @js.native
 abstract class Server ()
-  extends typingsSlinky.samchon.protocolServerServerMod.Server
+  extends typingsSlinky.samchon.serverMod.Server
 

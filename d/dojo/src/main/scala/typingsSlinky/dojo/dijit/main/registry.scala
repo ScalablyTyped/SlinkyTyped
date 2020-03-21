@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dijit.main
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.dijit.WidgetBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,21 +24,21 @@ trait registry extends js.Object {
     * 
     * @param widget Any dijit/_WidgetBase subclass.             
     */
-  def add(widget: _WidgetBase): Unit = js.native
+  def add(widget: WidgetBase): Unit = js.native
   /**
     * Find a widget by it's id.
     * If passed a widget then just returns the widget.
     * 
     * @param id             
     */
-  def byId(id: String): _WidgetBase = js.native
+  def byId(id: String): WidgetBase = js.native
   /**
     * Find a widget by it's id.
     * If passed a widget then just returns the widget.
     * 
     * @param id             
     */
-  def byId(id: _WidgetBase): _WidgetBase = js.native
+  def byId(id: WidgetBase): WidgetBase = js.native
   /**
     * Returns the widget corresponding to the given DOMNode
     * 

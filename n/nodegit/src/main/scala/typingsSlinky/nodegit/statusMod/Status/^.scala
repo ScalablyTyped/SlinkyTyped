@@ -1,9 +1,9 @@
 package typingsSlinky.nodegit.statusMod.Status
 
 import typingsSlinky.nodegit.repositoryMod.Repository
-import typingsSlinky.nodegit.statusDashEntryMod.StatusEntry
-import typingsSlinky.nodegit.statusDashListMod.StatusList
-import typingsSlinky.nodegit.statusDashOptionsMod.StatusOptions
+import typingsSlinky.nodegit.statusEntryMod.StatusEntry
+import typingsSlinky.nodegit.statusListMod.StatusList
+import typingsSlinky.nodegit.statusOptionsMod.StatusOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

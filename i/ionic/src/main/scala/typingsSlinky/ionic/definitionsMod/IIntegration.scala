@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.atIonicCliDashFramework.atIonicCliDashFrameworkMod.BaseConfig
+import typingsSlinky.ionicCliFramework.mod.BaseConfig
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

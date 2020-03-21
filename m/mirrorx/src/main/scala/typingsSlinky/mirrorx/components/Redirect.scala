@@ -4,15 +4,15 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.history.historyMod.LocationDescriptor
-import typingsSlinky.history.historyMod.LocationState
-import typingsSlinky.mirrorx.mirrorxMod.RedirectProps
+import typingsSlinky.history.mod.LocationDescriptor
+import typingsSlinky.history.mod.LocationState
+import typingsSlinky.mirrorx.mod.RedirectProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Redirect
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mirrorx.mirrorxMod.Redirect] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.mirrorx.mod.Redirect] {
   @JSImport("mirrorx", "Redirect")
   @js.native
   object componentImport extends js.Object
@@ -26,7 +26,7 @@ object Redirect
     push: js.UndefOr[Boolean] = js.undefined,
     strict: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.mirrorx.mirrorxMod.Redirect] = {
+  ): BuildingComponent[tag.type, typingsSlinky.mirrorx.mod.Redirect] = {
     val __obj = js.Dynamic.literal(to = to.asInstanceOf[js.Any])
     if (!js.isUndefined(exact)) __obj.updateDynamic("exact")(exact.asInstanceOf[js.Any])
     if (from != null) __obj.updateDynamic("from")(from.asInstanceOf[js.Any])

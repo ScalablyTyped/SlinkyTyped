@@ -10,9 +10,9 @@ Useful tools to create and manipulate GraphQL schemas.
 | ------------------ | :-------------: |
 | Full name          | graphql-tools |
 | Keywords           | GraphQL, Apollo, JavaScript, TypeScript, Mock, Schema, Schema Language, Tools |
-| # releases         | 53 |
-| # dependents       | 855 |
-| # downloads        | 39319409 |
+| # releases         | 45 |
+| # dependents       | 867 |
+| # downloads        | 40633461 |
 | # stars            | 21 |
 
 ## Links

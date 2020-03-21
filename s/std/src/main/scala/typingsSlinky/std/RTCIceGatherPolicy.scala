@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.all
-  - typings.std.stdStrings.nohost
-  - typings.std.stdStrings.relay
+  - typingsSlinky.std.stdStrings.all
+  - typingsSlinky.std.stdStrings.nohost
+  - typingsSlinky.std.stdStrings.relay
 */
 trait RTCIceGatherPolicy extends js.Object
 

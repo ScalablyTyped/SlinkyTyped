@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object configMod {
-  type Config = Config_
+  type Config = typingsSlinky.nodegit.configMod.Config_
 }

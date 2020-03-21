@@ -10,9 +10,9 @@ The Material Components for the web tab indicator component
 | ------------------ | :-------------: |
 | Full name          | @material/tab-indicator |
 | Keywords           | material components, material design, tab, indicator |
-| # releases         | 103 |
-| # dependents       | 17 |
-| # downloads        | 931844 |
+| # releases         | 148 |
+| # dependents       | 18 |
+| # downloads        | 958181 |
 | # stars            | 0 |
 
 ## Links

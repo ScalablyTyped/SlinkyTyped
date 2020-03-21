@@ -1,6 +1,6 @@
 package typingsSlinky.colorbrewer
 
-import typingsSlinky.colorbrewer.ColorBrewer.Base
+import typingsSlinky.colorbrewer.ColorBrewer_.Base
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

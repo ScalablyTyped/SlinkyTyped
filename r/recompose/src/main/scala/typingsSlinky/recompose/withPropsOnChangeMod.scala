@@ -1,8 +1,8 @@
 package typingsSlinky.recompose
 
-import typingsSlinky.recompose.recomposeMod.InferableComponentEnhancerWithProps
-import typingsSlinky.recompose.recomposeMod.mapper
-import typingsSlinky.recompose.recomposeMod.predicateDiff
+import typingsSlinky.recompose.mod.InferableComponentEnhancerWithProps
+import typingsSlinky.recompose.mod.mapper
+import typingsSlinky.recompose.mod.predicateDiff
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

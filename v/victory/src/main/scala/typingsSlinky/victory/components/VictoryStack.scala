@@ -6,21 +6,22 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.victory.Anon_XY
-import typingsSlinky.victory.Anon_XYD3Scale
-import typingsSlinky.victory.victoryMod.AnimatePropTypeInterface
-import typingsSlinky.victory.victoryMod.CategoryPropType
-import typingsSlinky.victory.victoryMod.ColorScalePropType
-import typingsSlinky.victory.victoryMod.D3Scale
-import typingsSlinky.victory.victoryMod.DomainPaddingPropType
-import typingsSlinky.victory.victoryMod.DomainPropType
-import typingsSlinky.victory.victoryMod.EventPropTypeInterface
-import typingsSlinky.victory.victoryMod.PaddingProps
-import typingsSlinky.victory.victoryMod.ScalePropType
-import typingsSlinky.victory.victoryMod.StringOrNumberOrCallback
-import typingsSlinky.victory.victoryMod.VictoryStackProps
-import typingsSlinky.victory.victoryMod.VictoryStyleInterface
-import typingsSlinky.victory.victoryMod.VictoryThemeDefinition
+import typingsSlinky.victory.Anon1
+import typingsSlinky.victory.AnonXBoolean
+import typingsSlinky.victory.AnonY
+import typingsSlinky.victory.mod.AnimatePropTypeInterface
+import typingsSlinky.victory.mod.CategoryPropType
+import typingsSlinky.victory.mod.ColorScalePropType
+import typingsSlinky.victory.mod.D3Scale
+import typingsSlinky.victory.mod.DomainPaddingPropType
+import typingsSlinky.victory.mod.DomainPropType
+import typingsSlinky.victory.mod.EventPropTypeInterface
+import typingsSlinky.victory.mod.PaddingProps
+import typingsSlinky.victory.mod.ScalePropType
+import typingsSlinky.victory.mod.StringOrNumberOrCallback
+import typingsSlinky.victory.mod.VictoryStackProps
+import typingsSlinky.victory.mod.VictoryStyleInterface
+import typingsSlinky.victory.mod.VictoryThemeDefinition
 import typingsSlinky.victory.victoryStrings.data
 import typingsSlinky.victory.victoryStrings.labels
 import typingsSlinky.victory.victoryStrings.parent
@@ -29,7 +30,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VictoryStack
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.VictoryStack] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryStack] {
   @JSImport("victory", "VictoryStack")
   @js.native
   object componentImport extends js.Object
@@ -50,17 +51,18 @@ object VictoryStack
     horizontal: js.UndefOr[Boolean] = js.undefined,
     labelComponent: ReactElement = null,
     labels: js.Array[String] | (js.Function1[/* data */ js.Any, String]) = null,
-    maxDomain: Double | Anon_XY = null,
-    minDomain: Double | Anon_XY = null,
+    maxDomain: Double | AnonY = null,
+    minDomain: Double | AnonY = null,
     padding: PaddingProps = null,
-    scale: ScalePropType | D3Scale | Anon_XYD3Scale = null,
+    scale: ScalePropType | D3Scale | Anon1 = null,
+    singleQuadrantDomainPadding: Boolean | AnonXBoolean = null,
     standalone: js.UndefOr[Boolean] = js.undefined,
     style: VictoryStyleInterface = null,
     theme: VictoryThemeDefinition = null,
     width: Int | Double = null,
     xOffset: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryStack] = {
+  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryStack] = {
     val __obj = js.Dynamic.literal()
     if (animate != null) __obj.updateDynamic("animate")(animate.asInstanceOf[js.Any])
     if (categories != null) __obj.updateDynamic("categories")(categories.asInstanceOf[js.Any])
@@ -79,6 +81,7 @@ object VictoryStack
     if (minDomain != null) __obj.updateDynamic("minDomain")(minDomain.asInstanceOf[js.Any])
     if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
     if (scale != null) __obj.updateDynamic("scale")(scale.asInstanceOf[js.Any])
+    if (singleQuadrantDomainPadding != null) __obj.updateDynamic("singleQuadrantDomainPadding")(singleQuadrantDomainPadding.asInstanceOf[js.Any])
     if (!js.isUndefined(standalone)) __obj.updateDynamic("standalone")(standalone.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (theme != null) __obj.updateDynamic("theme")(theme.asInstanceOf[js.Any])
@@ -87,7 +90,7 @@ object VictoryStack
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryStack] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.VictoryStack](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryStack] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryStack](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryStackProps
 }
 

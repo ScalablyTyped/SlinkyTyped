@@ -1,20 +1,19 @@
 organization := "org.scalablytyped.slinky"
 name := "d3-graphviz"
-version := "2.6-dt-20200103Z-aaed38"
-scalaVersion := "2.12.10"
+version := "2.6-dt-20200103Z-8ff95b"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "d3-color" % "1.2-dt-20190212Z-fa9d5f",
-  "org.scalablytyped.slinky" %%% "d3-interpolate" % "1.3-dt-20190212Z-01713d",
-  "org.scalablytyped.slinky" %%% "d3-selection" % "1.4-dt-20190710Z-e8dbdc",
-  "org.scalablytyped.slinky" %%% "d3-transition" % "1.1-dt-20191029Z-98e406",
-  "org.scalablytyped.slinky" %%% "d3-zoom" % "1.7-dt-20190212Z-b9901d",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "d3-color" % "1.2-dt-20200225Z-8511a4",
+  "org.scalablytyped.slinky" %%% "d3-interpolate" % "1.3-dt-20200225Z-5d6aee",
+  "org.scalablytyped.slinky" %%% "d3-selection" % "1.4-dt-20200225Z-ac6795",
+  "org.scalablytyped.slinky" %%% "d3-transition" % "1.1-dt-20200225Z-30d6dd",
+  "org.scalablytyped.slinky" %%% "d3-zoom" % "1.7-dt-20200225Z-54de45",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

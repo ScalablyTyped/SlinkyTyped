@@ -1,10 +1,14 @@
 package typingsSlinky.baseui.components
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.web.SyntheticFocusEvent
+import slinky.web.SyntheticKeyboardEvent
 import slinky.web.html.`*`.tag
 import typingsSlinky.baseui.baseuiStrings.both
 import typingsSlinky.baseui.baseuiStrings.compact
@@ -16,7 +20,8 @@ import typingsSlinky.baseui.baseuiStrings.right
 import typingsSlinky.baseui.inputMod.BaseInputOverrides
 import typingsSlinky.baseui.inputMod.BaseInputProps
 import typingsSlinky.baseui.inputMod.SharedProps
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -28,7 +33,7 @@ object BaseInput
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoComplete, autoFocus, disabled, id, name, onBlur, onChange, onFocus, onKeyDown, onKeyPress, onKeyUp, placeholder, required, rows, type */
+  /* The following DOM/SVG props were specified: autoComplete, autoFocus, disabled, id, name, placeholder, required, rows, type */
   def apply(
     adjoined: none | left | right | both = null,
     `aria-describedby`: String = null,
@@ -40,6 +45,12 @@ object BaseInput
     inputRef: Ref[HTMLInputElement] = null,
     max: Int | Double = null,
     min: Int | Double = null,
+    onBlur: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
+    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
+    onFocus: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
+    onKeyDown: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,
+    onKeyPress: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,
+    onKeyUp: SyntheticKeyboardEvent[HTMLInputElement] => Unit = null,
     overrides: BaseInputOverrides[SharedProps] = null,
     positive: js.UndefOr[Boolean] = js.undefined,
     size: default_ | compact | large_ = null,
@@ -57,6 +68,12 @@ object BaseInput
     if (inputRef != null) __obj.updateDynamic("inputRef")(inputRef.asInstanceOf[js.Any])
     if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
     if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
+    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
+    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     if (!js.isUndefined(positive)) __obj.updateDynamic("positive")(positive.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])

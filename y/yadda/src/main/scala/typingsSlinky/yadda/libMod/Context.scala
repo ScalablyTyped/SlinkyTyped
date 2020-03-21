@@ -1,7 +1,7 @@
 package typingsSlinky.yadda.libMod
 
-import typingsSlinky.yadda.libContextMod.Properties
-import typingsSlinky.yadda.libContextMod.^
+import typingsSlinky.yadda.contextMod.Properties
+import typingsSlinky.yadda.contextMod.^
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

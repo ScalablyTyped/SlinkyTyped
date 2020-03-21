@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.geo.charting
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.KeyboardEvent
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -50,6 +50,6 @@ class KeyboardInteractionSupport protected () extends js.Object {
     *
     * @param e An event.
     */
-  def onFocus(e: Event): Unit = js.native
+  def onFocus(e: Event_): Unit = js.native
 }
 

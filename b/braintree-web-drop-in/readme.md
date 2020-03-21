@@ -10,9 +10,9 @@ Typings are for version 1.18
 | ------------------ | :-------------: |
 | Full name          | braintree-web-drop-in |
 | Keywords           | - |
-| # releases         | 22 |
+| # releases         | 21 |
 | # dependents       | 10 |
-| # downloads        | 701752 |
+| # downloads        | 728045 |
 | # stars            | 0 |
 
 ## Links

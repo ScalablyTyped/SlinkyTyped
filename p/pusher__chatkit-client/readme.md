@@ -10,9 +10,9 @@ Pusher Chatkit client SDK for browsers and react native
 | ------------------ | :-------------: |
 | Full name          | @pusher/chatkit-client |
 | Keywords           | - |
-| # releases         | 35 |
+| # releases         | 37 |
 | # dependents       | 11 |
-| # downloads        | 132917 |
+| # downloads        | 134244 |
 | # stars            | 0 |
 
 ## Links

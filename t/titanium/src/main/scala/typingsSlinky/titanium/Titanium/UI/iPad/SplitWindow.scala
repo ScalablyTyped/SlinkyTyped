@@ -1,6 +1,6 @@
 package typingsSlinky.titanium.Titanium.UI.iPad
 
-import typingsSlinky.titanium.AnimationOption
+import typingsSlinky.titanium.AnimationOption_
 import typingsSlinky.titanium.Dimension
 import typingsSlinky.titanium.Gradient
 import typingsSlinky.titanium.Point
@@ -733,7 +733,7 @@ trait SplitWindow extends Proxy {
   				 * Hides this view.
   				 */
   def hide(): Unit = js.native
-  def hide(options: AnimationOption): Unit = js.native
+  def hide(options: AnimationOption_): Unit = js.native
   /**
   				 * Hides the navigation bar.
   				 */
@@ -1110,7 +1110,7 @@ trait SplitWindow extends Proxy {
   				 * Makes this view visible.
   				 */
   def show(): Unit = js.native
-  def show(options: AnimationOption): Unit = js.native
+  def show(options: AnimationOption_): Unit = js.native
   /**
   				 * Makes the navigation bar visible.
   				 */

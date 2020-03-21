@@ -10,11 +10,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.sharepoint.sharepointNumbers.`1`
-  - typings.sharepoint.sharepointNumbers.`2`
-  - typings.sharepoint.sharepointNumbers.`3`
-  - typings.sharepoint.sharepointNumbers.`4`
-  - typings.sharepoint.sharepointNumbers.`5`
+  - typingsSlinky.sharepoint.sharepointNumbers.`1`
+  - typingsSlinky.sharepoint.sharepointNumbers.`2`
+  - typingsSlinky.sharepoint.sharepointNumbers.`3`
+  - typingsSlinky.sharepoint.sharepointNumbers.`4`
+  - typingsSlinky.sharepoint.sharepointNumbers.`5`
 */
 trait Sods extends js.Object
 

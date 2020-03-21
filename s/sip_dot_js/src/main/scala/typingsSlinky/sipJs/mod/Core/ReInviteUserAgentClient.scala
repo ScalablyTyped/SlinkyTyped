@@ -1,0 +1,21 @@
+package typingsSlinky.sipJs.mod.Core
+
+import typingsSlinky.sipJs.inviteMod.OutgoingInviteRequestDelegate
+import typingsSlinky.sipJs.outgoingRequestMod.RequestOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("sip.js", "Core.ReInviteUserAgentClient")
+@js.native
+class ReInviteUserAgentClient protected ()
+  extends typingsSlinky.sipJs.coreMod.ReInviteUserAgentClient {
+  def this(dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog) = this()
+  def this(dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog, delegate: OutgoingInviteRequestDelegate) = this()
+  def this(
+    dialog: typingsSlinky.sipJs.dialogsMod.SessionDialog,
+    delegate: OutgoingInviteRequestDelegate,
+    options: RequestOptions
+  ) = this()
+}
+

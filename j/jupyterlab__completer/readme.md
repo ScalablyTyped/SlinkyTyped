@@ -10,9 +10,9 @@ JupyterLab - Completer
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/completer |
 | Keywords           | - |
-| # releases         | 64 |
+| # releases         | 65 |
 | # dependents       | 11 |
-| # downloads        | 761232 |
+| # downloads        | 766490 |
 | # stars            | 0 |
 
 ## Links

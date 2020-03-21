@@ -6,16 +6,16 @@ import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.formik.distTypesMod.FormikActions
-import typingsSlinky.formik.distTypesMod.FormikConfig
-import typingsSlinky.formik.distTypesMod.FormikErrors
-import typingsSlinky.formik.distTypesMod.FormikProps
+import typingsSlinky.formik.typesMod.FormikActions
+import typingsSlinky.formik.typesMod.FormikConfig
+import typingsSlinky.formik.typesMod.FormikErrors
+import typingsSlinky.formik.typesMod.FormikProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Formik
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.formik.formikMod.Formik[js.Any]] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.formik.mod.Formik[js.Any]] {
   @JSImport("formik", "Formik")
   @js.native
   object componentImport extends js.Object
@@ -35,7 +35,7 @@ object Formik
     validateOnChange: js.UndefOr[Boolean] = js.undefined,
     validationSchema: js.Any | js.Function0[_] = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.formik.formikMod.Formik[js.Any]] = {
+  ): BuildingComponent[tag.type, typingsSlinky.formik.mod.Formik[js.Any]] = {
     val __obj = js.Dynamic.literal(initialValues = initialValues.asInstanceOf[js.Any], onSubmit = js.Any.fromFunction2(onSubmit))
     if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
     if (!js.isUndefined(enableReinitialize)) __obj.updateDynamic("enableReinitialize")(enableReinitialize.asInstanceOf[js.Any])
@@ -48,7 +48,7 @@ object Formik
     if (!js.isUndefined(validateOnChange)) __obj.updateDynamic("validateOnChange")(validateOnChange.asInstanceOf[js.Any])
     if (validationSchema != null) __obj.updateDynamic("validationSchema")(validationSchema.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
-    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.formik.formikMod.Formik[js.Any]]]
+    super.apply(__obj.asInstanceOf[Props]).asInstanceOf[slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.formik.mod.Formik[js.Any]]]
   }
   type Props = FormikConfig[js.Any]
 }

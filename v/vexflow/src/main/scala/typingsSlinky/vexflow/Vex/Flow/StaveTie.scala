@@ -1,8 +1,8 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.Anon_DirectionFirstxpx
-import typingsSlinky.vexflow.Anon_FamilySize
-import typingsSlinky.vexflow.Anon_FirstindicesFirstnoteLastindices
+import typingsSlinky.vexflow.AnonFirstxpx
+import typingsSlinky.vexflow.AnonLastnote
+import typingsSlinky.vexflow.AnonSize
 import typingsSlinky.vexflow.Vex.IRenderContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,14 +26,14 @@ class StaveTie protected () extends js.Object {
     * two ties can be used, each with either "first_note" or "last_note" missing.
     *
     **/
-  def this(notes: Anon_FirstindicesFirstnoteLastindices) = this()
-  def this(notes: Anon_FirstindicesFirstnoteLastindices, text: String) = this()
+  def this(notes: AnonLastnote) = this()
+  def this(notes: AnonLastnote, text: String) = this()
   def draw(): Boolean = js.native
   def isPartial(): Boolean = js.native
   def renderText(first_x_px: Double, last_x_px: Double): Unit = js.native
-  def renderTie(params: Anon_DirectionFirstxpx): Unit = js.native
+  def renderTie(params: AnonFirstxpx): Unit = js.native
   def setContext(context: IRenderContext): StaveTie = js.native
-  def setFont(font: Anon_FamilySize): StaveTie = js.native
-  def setNotes(notes: Anon_FirstindicesFirstnoteLastindices): StaveTie = js.native
+  def setFont(font: AnonSize): StaveTie = js.native
+  def setNotes(notes: AnonLastnote): StaveTie = js.native
 }
 

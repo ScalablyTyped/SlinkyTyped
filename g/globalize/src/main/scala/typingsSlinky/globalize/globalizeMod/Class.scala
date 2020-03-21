@@ -1,12 +1,11 @@
 package typingsSlinky.globalize.globalizeMod
 
-import typingsSlinky.cldrjs.cldrjsMod.CldrStatic
-import typingsSlinky.globalize.distGlobalizeMod.Shared
+import typingsSlinky.cldrjs.mod.CldrStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("globalize", JSImport.Namespace)
+@JSImport("globalize/dist/globalize", JSImport.Namespace)
 @js.native
 class Class protected () extends Shared {
   /**

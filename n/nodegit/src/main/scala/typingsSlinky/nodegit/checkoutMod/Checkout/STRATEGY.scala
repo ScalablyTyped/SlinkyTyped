@@ -27,28 +27,28 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.nodegit.nodegitNumbers.`0`
-  - typings.nodegit.nodegitNumbers.`1`
-  - typings.nodegit.nodegitNumbers.`2`
-  - typings.nodegit.nodegitNumbers.`4`
-  - typings.nodegit.nodegitNumbers.`16`
-  - typings.nodegit.nodegitNumbers.`32`
-  - typings.nodegit.nodegitNumbers.`64`
-  - typings.nodegit.nodegitNumbers.`128`
-  - typings.nodegit.nodegitNumbers.`256`
-  - typings.nodegit.nodegitNumbers.`512`
-  - typings.nodegit.nodegitNumbers.`1024`
-  - typings.nodegit.nodegitNumbers.`2048`
-  - typings.nodegit.nodegitNumbers.`4096`
-  - typings.nodegit.nodegitNumbers.`8192`
-  - typings.nodegit.nodegitNumbers.`262144`
-  - typings.nodegit.nodegitNumbers.`524288`
-  - typings.nodegit.nodegitNumbers.`1048576`
-  - typings.nodegit.nodegitNumbers.`2097152`
-  - typings.nodegit.nodegitNumbers.`4194304`
-  - typings.nodegit.nodegitNumbers.`8388608`
-  - typings.nodegit.nodegitNumbers.`65536`
-  - typings.nodegit.nodegitNumbers.`131072`
+  - typingsSlinky.nodegit.nodegitNumbers.`0`
+  - typingsSlinky.nodegit.nodegitNumbers.`1`
+  - typingsSlinky.nodegit.nodegitNumbers.`2`
+  - typingsSlinky.nodegit.nodegitNumbers.`4`
+  - typingsSlinky.nodegit.nodegitNumbers.`16`
+  - typingsSlinky.nodegit.nodegitNumbers.`32`
+  - typingsSlinky.nodegit.nodegitNumbers.`64`
+  - typingsSlinky.nodegit.nodegitNumbers.`128`
+  - typingsSlinky.nodegit.nodegitNumbers.`256`
+  - typingsSlinky.nodegit.nodegitNumbers.`512`
+  - typingsSlinky.nodegit.nodegitNumbers.`1024`
+  - typingsSlinky.nodegit.nodegitNumbers.`2048`
+  - typingsSlinky.nodegit.nodegitNumbers.`4096`
+  - typingsSlinky.nodegit.nodegitNumbers.`8192`
+  - typingsSlinky.nodegit.nodegitNumbers.`262144`
+  - typingsSlinky.nodegit.nodegitNumbers.`524288`
+  - typingsSlinky.nodegit.nodegitNumbers.`1048576`
+  - typingsSlinky.nodegit.nodegitNumbers.`2097152`
+  - typingsSlinky.nodegit.nodegitNumbers.`4194304`
+  - typingsSlinky.nodegit.nodegitNumbers.`8388608`
+  - typingsSlinky.nodegit.nodegitNumbers.`65536`
+  - typingsSlinky.nodegit.nodegitNumbers.`131072`
 */
 trait STRATEGY extends js.Object
 

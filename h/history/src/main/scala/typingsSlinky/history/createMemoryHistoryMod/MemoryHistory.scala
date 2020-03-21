@@ -1,7 +1,7 @@
 package typingsSlinky.history.createMemoryHistoryMod
 
-import typingsSlinky.history.historyMod.History
-import typingsSlinky.history.historyMod.Location
+import typingsSlinky.history.mod.History
+import typingsSlinky.history.mod.Location
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

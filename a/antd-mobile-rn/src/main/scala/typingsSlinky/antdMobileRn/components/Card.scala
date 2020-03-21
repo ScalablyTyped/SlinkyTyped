@@ -1,0 +1,39 @@
+package typingsSlinky.antdMobileRn.components
+
+import org.scalablytyped.runtime.StringDictionary
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.TagMod
+import slinky.web.html.`*`.tag
+import typingsSlinky.antdMobileRn.cardIndexNativeMod.CardNativeProps
+import typingsSlinky.antdMobileRn.cardStyleIndexNativeMod.ICardStyle
+import typingsSlinky.reactNative.mod.StyleProp
+import typingsSlinky.reactNative.mod.ViewStyle
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object Card
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.antdMobileRn.mod.Card] {
+  @JSImport("antd-mobile-rn", "Card")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  def apply(
+    full: js.UndefOr[Boolean] = js.undefined,
+    style: StyleProp[ViewStyle] = null,
+    styles: ICardStyle = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, typingsSlinky.antdMobileRn.mod.Card] = {
+    val __obj = js.Dynamic.literal()
+    if (!js.isUndefined(full)) __obj.updateDynamic("full")(full.asInstanceOf[js.Any])
+    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
+    if (styles != null) __obj.updateDynamic("styles")(styles.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.antdMobileRn.mod.Card] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antdMobileRn.mod.Card](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = CardNativeProps
+}
+

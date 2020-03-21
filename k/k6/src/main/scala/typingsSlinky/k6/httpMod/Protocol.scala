@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.k6.k6Strings.HTTPSlash1Dot0
-  - typings.k6.k6Strings.HTTPSlash1Dot1
-  - typings.k6.k6Strings.HTTPSlash2Dot0
+  - typingsSlinky.k6.k6Strings.HTTPSlash1Dot0
+  - typingsSlinky.k6.k6Strings.HTTPSlash1Dot1
+  - typingsSlinky.k6.k6Strings.HTTPSlash2Dot0
 */
 trait Protocol extends js.Object
 

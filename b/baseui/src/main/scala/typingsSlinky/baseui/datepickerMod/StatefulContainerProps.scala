@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.datepickerMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.Anon_Date
+import typingsSlinky.baseui.AnonDate
 import typingsSlinky.baseui.baseuiStrings.change_
 import typingsSlinky.baseui.baseuiStrings.mouseLeave
 import typingsSlinky.baseui.baseuiStrings.mouseOver
@@ -26,7 +26,7 @@ object StatefulContainerProps {
   def apply[T](
     children: /* args */ T => TagMod[Any] = null,
     initialState: ContainerState = null,
-    onChange: /* args */ Anon_Date => js.Any = null,
+    onChange: /* args */ AnonDate => js.Any = null,
     range: js.UndefOr[Boolean] = js.undefined,
     stateReducer: (/* stateType */ mouseLeave | moveRight | moveDown | moveUp | mouseOver | change_ | moveLeft, /* nextState */ ContainerState, /* currentState */ ContainerState) => ContainerState = null
   ): StatefulContainerProps[T] = {

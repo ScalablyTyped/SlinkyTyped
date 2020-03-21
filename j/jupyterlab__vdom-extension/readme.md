@@ -10,9 +10,9 @@ JupyterLab - VDOM Renderer
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/vdom-extension |
 | Keywords           | - |
-| # releases         | 64 |
+| # releases         | 65 |
 | # dependents       | 1 |
-| # downloads        | 748045 |
+| # downloads        | 753276 |
 | # stars            | 0 |
 
 ## Links

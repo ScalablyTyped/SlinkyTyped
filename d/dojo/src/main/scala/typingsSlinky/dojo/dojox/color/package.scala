@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object color {
-  type Palette = Palette_
+  type Palette = typingsSlinky.dojo.dojox.color.Palette_
 }

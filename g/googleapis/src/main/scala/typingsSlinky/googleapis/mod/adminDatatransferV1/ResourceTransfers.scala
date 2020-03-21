@@ -1,0 +1,14 @@
+package typingsSlinky.googleapis.mod.adminDatatransferV1
+
+import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("googleapis", "admin_datatransfer_v1.Resource$Transfers")
+@js.native
+class ResourceTransfers protected ()
+  extends typingsSlinky.googleapis.datatransferV1Mod.adminDatatransferV1.ResourceTransfers {
+  def this(context: APIRequestContext) = this()
+}
+

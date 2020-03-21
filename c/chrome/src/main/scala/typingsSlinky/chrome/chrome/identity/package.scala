@@ -5,7 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object identity {
-  import typingsSlinky.chrome.chrome.events.Event
-
-  type SignInChangeEvent = Event[js.Function2[/* account */ AccountInfo, /* signedIn */ Boolean, Unit]]
+  type SignInChangeEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function2[
+      /* account */ typingsSlinky.chrome.chrome.identity.AccountInfo, 
+      /* signedIn */ scala.Boolean, 
+      scala.Unit
+    ]
+  ]
 }

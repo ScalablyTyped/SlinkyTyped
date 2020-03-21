@@ -10,9 +10,9 @@ Default Jimp gif encoder/decoder.
 | ------------------ | :-------------: |
 | Full name          | @jimp/gif |
 | Keywords           | - |
-| # releases         | 65 |
+| # releases         | 64 |
 | # dependents       | 2 |
-| # downloads        | 14062778 |
+| # downloads        | 14442374 |
 | # stars            | 0 |
 
 ## Links

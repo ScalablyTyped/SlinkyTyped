@@ -1,12 +1,12 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_AnimationAnimationDelay
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdate
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDuration
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BorderColorBorderTypeBorderWidthColor
-import typingsSlinky.echarts.Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColor
+import typingsSlinky.echarts.AnonAnimationDelay
+import typingsSlinky.echarts.AnonAnimationDelayUpdate
+import typingsSlinky.echarts.AnonAnimationDuration
+import typingsSlinky.echarts.AnonBorderRadius
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonLabelAnonBorderRadius
+import typingsSlinky.echarts.AnonShadowOffsetY
 import typingsSlinky.echarts.echarts.EChartOption.SeriesScatter.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -37,7 +37,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-scatter
   */
-@JSName("SeriesScatter")
 trait SeriesScatter_ extends js.Object {
   /**
     * Whether to enable animation.
@@ -386,7 +385,7 @@ trait SeriesScatter_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-scatter.emphasis
     */
-  var emphasis: js.UndefOr[Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColor] = js.undefined
+  var emphasis: js.UndefOr[AnonLabelAnonBorderRadius] = js.undefined
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -457,7 +456,7 @@ trait SeriesScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderTypeBorderWidthColor] = js.undefined
+  var itemStyle: js.UndefOr[AnonShadowOffsetY] = js.undefined
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -469,7 +468,7 @@ trait SeriesScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColor] = js.undefined
+  var label: js.UndefOr[AnonBorderRadius] = js.undefined
   /**
     * Whether to enable the optimization of large-scale data.
     * It could be set when large data causes performance problem.
@@ -511,21 +510,21 @@ trait SeriesScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markArea
     */
-  var markArea: js.UndefOr[Anon_AnimationAnimationDelayAnimationDelayUpdate] = js.undefined
+  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.undefined
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markLine
     */
-  var markLine: js.UndefOr[Anon_AnimationAnimationDelay] = js.undefined
+  var markLine: js.UndefOr[AnonAnimationDelay] = js.undefined
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.markPoint
     */
-  var markPoint: js.UndefOr[Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDuration] = js.undefined
+  var markPoint: js.UndefOr[AnonAnimationDuration] = js.undefined
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -716,7 +715,7 @@ trait SeriesScatter_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-scatter.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * @default
     * "scatter"
@@ -795,19 +794,19 @@ object SeriesScatter_ {
     ] = null,
     datasetIndex: Int | Double = null,
     dimensions: js.Array[_] = null,
-    emphasis: Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColor = null,
+    emphasis: AnonLabelAnonBorderRadius = null,
     encode: js.Object = null,
     geoIndex: Int | Double = null,
     hoverAnimation: js.UndefOr[Boolean] = js.undefined,
     id: String = null,
-    itemStyle: Anon_BorderColorBorderTypeBorderWidthColor = null,
-    label: Anon_AlignBackgroundColorBorderColor = null,
+    itemStyle: AnonShadowOffsetY = null,
+    label: AnonBorderRadius = null,
     large: js.UndefOr[Boolean] = js.undefined,
     largeThreshold: Int | Double = null,
     legendHoverLink: js.UndefOr[Boolean] = js.undefined,
-    markArea: Anon_AnimationAnimationDelayAnimationDelayUpdate = null,
-    markLine: Anon_AnimationAnimationDelay = null,
-    markPoint: Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDuration = null,
+    markArea: AnonAnimationDelayUpdate = null,
+    markLine: AnonAnimationDelay = null,
+    markPoint: AnonAnimationDuration = null,
     name: String = null,
     polarIndex: Int | Double = null,
     progressive: Int | Double = null,
@@ -819,7 +818,7 @@ object SeriesScatter_ {
     symbolOffset: js.Array[_] = null,
     symbolRotate: Int | Double = null,
     symbolSize: js.Array[_] | js.Function | Double = null,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     `type`: String = null,
     xAxisIndex: Int | Double = null,
     yAxisIndex: Int | Double = null,

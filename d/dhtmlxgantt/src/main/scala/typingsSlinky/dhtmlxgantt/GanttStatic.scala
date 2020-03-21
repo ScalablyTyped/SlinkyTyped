@@ -1,8 +1,8 @@
 package typingsSlinky.dhtmlxgantt
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.Date
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -870,7 +870,7 @@ trait GanttStatic extends js.Object {
   	 * gets the id of a task from the specified HTML event
   	 * @param e a native event
   	*/
-  def locate(e: Event): String | Double = js.native
+  def locate(e: Event_): String | Double = js.native
   /**
   	 * calls a message box of the specified type
   	 * @param config the message box's configuration

@@ -5,15 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.grommet.grommetStrings.solid
-  - typings.grommet.grommetStrings.dashed
-  - typings.grommet.grommetStrings.dotted
-  - typings.grommet.grommetStrings.double
-  - typings.grommet.grommetStrings.groove
-  - typings.grommet.grommetStrings.ridge
-  - typings.grommet.grommetStrings.inset
-  - typings.grommet.grommetStrings.outset
-  - typings.grommet.grommetStrings.hidden
+  - typingsSlinky.grommet.grommetStrings.solid
+  - typingsSlinky.grommet.grommetStrings.dashed
+  - typingsSlinky.grommet.grommetStrings.dotted
+  - typingsSlinky.grommet.grommetStrings.double
+  - typingsSlinky.grommet.grommetStrings.groove
+  - typingsSlinky.grommet.grommetStrings.ridge
+  - typingsSlinky.grommet.grommetStrings.inset
+  - typingsSlinky.grommet.grommetStrings.outset
+  - typingsSlinky.grommet.grommetStrings.hidden
 */
 trait BoxStyleType extends js.Object
 

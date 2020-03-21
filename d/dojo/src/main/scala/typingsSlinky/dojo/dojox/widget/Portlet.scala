@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.widget
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dijit.TitlePane
 import typingsSlinky.dojo.dojoStrings.closable
 import typingsSlinky.dojo.dojoStrings.dragRestriction
@@ -88,7 +88,7 @@ class Portlet () extends TitlePane {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_dragRestriction(
     property: dragRestriction,
@@ -98,7 +98,7 @@ class Portlet () extends TitlePane {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_resizeChildren(
     property: resizeChildren,
@@ -108,6 +108,6 @@ class Portlet () extends TitlePane {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

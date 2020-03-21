@@ -5,15 +5,15 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_OriginalEventValue
-import typingsSlinky.primereact.componentsMenuitemMenuItemMod.MenuItem
-import typingsSlinky.primereact.componentsTabmenuTabMenuMod.TabMenuProps
+import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.menuItemMod.MenuItem
+import typingsSlinky.primereact.tabMenuMod.TabMenuProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object TabMenu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.tabmenuMod.TabMenu] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactTabmenuMod.TabMenu] {
   @JSImport("primereact/tabmenu", "TabMenu")
   @js.native
   object componentImport extends js.Object
@@ -23,10 +23,10 @@ object TabMenu
   def apply(
     activeItem: js.Any = null,
     model: js.Array[MenuItem] = null,
-    onTabChange: /* e */ Anon_OriginalEventValue => Unit = null,
+    onTabChange: /* e */ AnonValue => Unit = null,
     style: js.Any = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.tabmenuMod.TabMenu] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTabmenuMod.TabMenu] = {
     val __obj = js.Dynamic.literal()
     if (activeItem != null) __obj.updateDynamic("activeItem")(activeItem.asInstanceOf[js.Any])
     if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
@@ -35,7 +35,9 @@ object TabMenu
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.tabmenuMod.TabMenu] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.tabmenuMod.TabMenu](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactTabmenuMod.TabMenu] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactTabmenuMod.TabMenu](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = TabMenuProps
 }
 

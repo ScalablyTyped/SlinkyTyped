@@ -10,9 +10,9 @@ The Material Components for the web slider component
 | ------------------ | :-------------: |
 | Full name          | @material/slider |
 | Keywords           | material components, material design, slider |
-| # releases         | 111 |
-| # dependents       | 28 |
-| # downloads        | 1061830 |
+| # releases         | 155 |
+| # dependents       | 29 |
+| # downloads        | 1078070 |
 | # stars            | 0 |
 
 ## Links

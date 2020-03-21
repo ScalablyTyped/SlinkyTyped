@@ -10,9 +10,9 @@ AWS credential provider that sources credential_process from ~/.aws/credentials 
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/credential-provider-process |
 | Keywords           | aws, credentials |
-| # releases         | 5 |
+| # releases         | 6 |
 | # dependents       | 0 |
-| # downloads        | 14313 |
+| # downloads        | 14738 |
 | # stars            | 0 |
 
 ## Links

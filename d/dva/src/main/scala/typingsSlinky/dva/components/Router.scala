@@ -4,9 +4,9 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.history.historyMod.History
-import typingsSlinky.history.historyMod.LocationState
-import typingsSlinky.reactDashRouter.reactDashRouterMod.RouterProps
+import typingsSlinky.history.mod.History
+import typingsSlinky.history.mod.LocationState
+import typingsSlinky.reactRouter.mod.RouterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

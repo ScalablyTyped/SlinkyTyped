@@ -12,26 +12,51 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.regexpp.astMod.BoundaryAssertion
-  - typings.regexpp.astMod.CharacterSet
-  - typings.regexpp.astMod.Character
-  - typings.regexpp.astMod.Backreference
-  - typings.regexpp.astMod.Flags
+  - typingsSlinky.regexpp.astMod.BoundaryAssertion
+  - typingsSlinky.regexpp.astMod.CharacterSet
+  - typingsSlinky.regexpp.astMod.Character
+  - typingsSlinky.regexpp.astMod.Backreference
+  - typingsSlinky.regexpp.astMod.Flags
 */
 trait LeafNode extends Node
 
 object LeafNode {
   @scala.inline
-  def EscapeCharacterSet(
+  def EdgeAssertion(
     end: Double,
-    kind: digit | space | word,
-    negate: Boolean,
-    parent: Alternative | Quantifier | CharacterClass,
+    kind: start | end,
+    parent: Alternative | Quantifier,
+    raw: String,
+    start: Double,
+    `type`: typingsSlinky.regexpp.regexppStrings.Assertion
+  ): LeafNode = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LeafNode]
+  }
+  @scala.inline
+  def AnyCharacterSet(
+    end: Double,
+    kind: any,
+    parent: Alternative | Quantifier,
     raw: String,
     start: Double,
     `type`: typingsSlinky.regexpp.regexppStrings.CharacterSet
   ): LeafNode = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], negate = negate.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LeafNode]
+  }
+  @scala.inline
+  def Character(
+    end: Double,
+    parent: Alternative | Quantifier | CharacterClass | CharacterClassRange,
+    raw: String,
+    start: Double,
+    `type`: typingsSlinky.regexpp.regexppStrings.Character,
+    value: Double
+  ): LeafNode = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LeafNode]
   }
@@ -55,15 +80,16 @@ object LeafNode {
     __obj.asInstanceOf[LeafNode]
   }
   @scala.inline
-  def AnyCharacterSet(
+  def EscapeCharacterSet(
     end: Double,
-    kind: any,
-    parent: Alternative | Quantifier,
+    kind: digit | space | word,
+    negate: Boolean,
+    parent: Alternative | Quantifier | CharacterClass,
     raw: String,
     start: Double,
     `type`: typingsSlinky.regexpp.regexppStrings.CharacterSet
   ): LeafNode = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], negate = negate.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LeafNode]
   }
@@ -82,6 +108,20 @@ object LeafNode {
     __obj.asInstanceOf[LeafNode]
   }
   @scala.inline
+  def Backreference(
+    end: Double,
+    parent: Alternative | Quantifier,
+    raw: String,
+    ref: Double | String,
+    resolved: CapturingGroup,
+    start: Double,
+    `type`: typingsSlinky.regexpp.regexppStrings.Backreference
+  ): LeafNode = {
+    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], ref = ref.asInstanceOf[js.Any], resolved = resolved.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
+    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
+    __obj.asInstanceOf[LeafNode]
+  }
+  @scala.inline
   def UnicodePropertyCharacterSet(
     end: Double,
     key: String,
@@ -96,46 +136,6 @@ object LeafNode {
     val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], key = key.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], negate = negate.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
     __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LeafNode]
-  }
-  @scala.inline
-  def EdgeAssertion(
-    end: Double,
-    kind: start | end,
-    parent: Alternative | Quantifier,
-    raw: String,
-    start: Double,
-    `type`: typingsSlinky.regexpp.regexppStrings.Assertion
-  ): LeafNode = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], kind = kind.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LeafNode]
-  }
-  @scala.inline
-  def Character(
-    end: Double,
-    parent: Alternative | Quantifier | CharacterClass | CharacterClassRange,
-    raw: String,
-    start: Double,
-    `type`: typingsSlinky.regexpp.regexppStrings.Character,
-    value: Double
-  ): LeafNode = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any], value = value.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
-    __obj.asInstanceOf[LeafNode]
-  }
-  @scala.inline
-  def Backreference(
-    end: Double,
-    parent: Alternative | Quantifier,
-    raw: String,
-    ref: Double | String,
-    resolved: CapturingGroup,
-    start: Double,
-    `type`: typingsSlinky.regexpp.regexppStrings.Backreference
-  ): LeafNode = {
-    val __obj = js.Dynamic.literal(end = end.asInstanceOf[js.Any], parent = parent.asInstanceOf[js.Any], raw = raw.asInstanceOf[js.Any], ref = ref.asInstanceOf[js.Any], resolved = resolved.asInstanceOf[js.Any], start = start.asInstanceOf[js.Any])
-    __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     __obj.asInstanceOf[LeafNode]
   }
 }

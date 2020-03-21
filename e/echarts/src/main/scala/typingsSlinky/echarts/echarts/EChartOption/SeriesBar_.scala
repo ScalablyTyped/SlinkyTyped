@@ -1,12 +1,12 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColor
-import typingsSlinky.echarts.Anon_Animation
-import typingsSlinky.echarts.Anon_AnimationAnimationDelay
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdate
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BarBorderColor
-import typingsSlinky.echarts.Anon_ItemStyle
+import typingsSlinky.echarts.AnonAnimation
+import typingsSlinky.echarts.AnonAnimationDelay
+import typingsSlinky.echarts.AnonAnimationDelayUpdate
+import typingsSlinky.echarts.AnonBarBorderColor
+import typingsSlinky.echarts.AnonDictunknownProperty
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonItemStyle
 import typingsSlinky.echarts.echarts.EChartOption.SeriesBar.DataObject
 import typingsSlinky.echarts.echartsStrings.bar
 import scala.scalajs.js
@@ -24,7 +24,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-bar
   */
-@JSName("SeriesBar")
 trait SeriesBar_ extends js.Object {
   /**
     * Whether to enable animation.
@@ -425,7 +424,7 @@ trait SeriesBar_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-bar.emphasis
     */
-  var emphasis: js.UndefOr[Anon_ItemStyle] = js.undefined
+  var emphasis: js.UndefOr[AnonItemStyle] = js.undefined
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -479,7 +478,7 @@ trait SeriesBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BarBorderColor] = js.undefined
+  var itemStyle: js.UndefOr[AnonBarBorderColor] = js.undefined
   /**
     * Text label of , to explain some data information about graphic
     * item like value, name and so on.
@@ -491,7 +490,7 @@ trait SeriesBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColor] = js.undefined
+  var label: js.UndefOr[AnonDictunknownProperty] = js.undefined
   /**
     * Whether to enable the optimization of large-scale data.
     * It could be set when large data causes performance problem.
@@ -533,21 +532,21 @@ trait SeriesBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.markArea
     */
-  var markArea: js.UndefOr[Anon_AnimationAnimationDelayAnimationDelayUpdate] = js.undefined
+  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.undefined
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.markLine
     */
-  var markLine: js.UndefOr[Anon_AnimationAnimationDelay] = js.undefined
+  var markLine: js.UndefOr[AnonAnimationDelay] = js.undefined
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.markPoint
     */
-  var markPoint: js.UndefOr[Anon_Animation] = js.undefined
+  var markPoint: js.UndefOr[AnonAnimation] = js.undefined
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -637,7 +636,7 @@ trait SeriesBar_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-bar.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * @default
     * "bar"
@@ -720,24 +719,24 @@ object SeriesBar_ {
     ] = null,
     datasetIndex: Int | Double = null,
     dimensions: js.Array[_] = null,
-    emphasis: Anon_ItemStyle = null,
+    emphasis: AnonItemStyle = null,
     encode: js.Object = null,
     id: String = null,
-    itemStyle: Anon_BarBorderColor = null,
-    label: Anon_AlignBackgroundColor = null,
+    itemStyle: AnonBarBorderColor = null,
+    label: AnonDictunknownProperty = null,
     large: js.UndefOr[Boolean] = js.undefined,
     largeThreshold: Int | Double = null,
     legendHoverLink: js.UndefOr[Boolean] = js.undefined,
-    markArea: Anon_AnimationAnimationDelayAnimationDelayUpdate = null,
-    markLine: Anon_AnimationAnimationDelay = null,
-    markPoint: Anon_Animation = null,
+    markArea: AnonAnimationDelayUpdate = null,
+    markLine: AnonAnimationDelay = null,
+    markPoint: AnonAnimation = null,
     name: String = null,
     progressive: Int | Double = null,
     progressiveChunkMode: String = null,
     progressiveThreshold: Int | Double = null,
     seriesLayoutBy: String = null,
     stack: String = null,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     `type`: bar = null,
     xAxisIndex: Int | Double = null,
     yAxisIndex: Int | Double = null,

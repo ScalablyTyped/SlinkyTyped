@@ -5,7 +5,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object RiseLoader
-  extends SharedApply_MarginLoaderProps929156443[typingsSlinky.halogenium.halogeniumMod.RiseLoader] {
+  extends SharedApply_MarginLoaderProps_1324934918[typingsSlinky.halogenium.mod.RiseLoader] {
   @JSImport("halogenium", "RiseLoader")
   @js.native
   object componentImport extends js.Object

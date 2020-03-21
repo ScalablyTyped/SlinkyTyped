@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dijit.form
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.constraints
 import typingsSlinky.dojo.dojoStrings.labelStyle
 import typingsSlinky.dojo.dojoStrings.labels
@@ -93,7 +93,7 @@ class HorizontalRuleLabels () extends HorizontalRule {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_labelStyle(
     property: labelStyle,
@@ -103,7 +103,7 @@ class HorizontalRuleLabels () extends HorizontalRule {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_labels(
     property: labels,
@@ -113,7 +113,7 @@ class HorizontalRuleLabels () extends HorizontalRule {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_maximum(
     property: maximum,
@@ -123,7 +123,7 @@ class HorizontalRuleLabels () extends HorizontalRule {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_minimum(
     property: minimum,
@@ -133,7 +133,7 @@ class HorizontalRuleLabels () extends HorizontalRule {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_numericMargin(
     property: numericMargin,
@@ -143,6 +143,6 @@ class HorizontalRuleLabels () extends HorizontalRule {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

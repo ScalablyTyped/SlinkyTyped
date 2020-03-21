@@ -1,7 +1,7 @@
 package typingsSlinky.helmet
 
-import typingsSlinky.helmet.helmetMod._HelmetCspRequireSriForValue
-import typingsSlinky.helmet.helmetMod._HelmetCspSandboxDirective
+import typingsSlinky.helmet.mod._HelmetCspRequireSriForValue
+import typingsSlinky.helmet.mod._HelmetCspSandboxDirective
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -28,29 +28,29 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.mfiles.mfilesNumbers.`0`
-  - typings.mfiles.mfilesNumbers.`1`
-  - typings.mfiles.mfilesNumbers.`2`
-  - typings.mfiles.mfilesNumbers.`4`
-  - typings.mfiles.mfilesNumbers.`5`
-  - typings.mfiles.mfilesNumbers.`6`
-  - typings.mfiles.mfilesNumbers.`8`
-  - typings.mfiles.mfilesNumbers.`9`
-  - typings.mfiles.mfilesNumbers.`11`
-  - typings.mfiles.mfilesNumbers.`12`
-  - typings.mfiles.mfilesNumbers.`13`
-  - typings.mfiles.mfilesNumbers.`14`
-  - typings.mfiles.mfilesNumbers.`15`
-  - typings.mfiles.mfilesNumbers.`16`
-  - typings.mfiles.mfilesNumbers.`17`
-  - typings.mfiles.mfilesNumbers.`18`
-  - typings.mfiles.mfilesNumbers.`19`
-  - typings.mfiles.mfilesNumbers.`20`
-  - typings.mfiles.mfilesNumbers.`21`
-  - typings.mfiles.mfilesNumbers.`22`
-  - typings.mfiles.mfilesNumbers.`24`
-  - typings.mfiles.mfilesNumbers.`25`
-  - typings.mfiles.mfilesNumbers.`26`
+  - typingsSlinky.mfiles.mfilesNumbers.`0`
+  - typingsSlinky.mfiles.mfilesNumbers.`1`
+  - typingsSlinky.mfiles.mfilesNumbers.`2`
+  - typingsSlinky.mfiles.mfilesNumbers.`4`
+  - typingsSlinky.mfiles.mfilesNumbers.`5`
+  - typingsSlinky.mfiles.mfilesNumbers.`6`
+  - typingsSlinky.mfiles.mfilesNumbers.`8`
+  - typingsSlinky.mfiles.mfilesNumbers.`9`
+  - typingsSlinky.mfiles.mfilesNumbers.`11`
+  - typingsSlinky.mfiles.mfilesNumbers.`12`
+  - typingsSlinky.mfiles.mfilesNumbers.`13`
+  - typingsSlinky.mfiles.mfilesNumbers.`14`
+  - typingsSlinky.mfiles.mfilesNumbers.`15`
+  - typingsSlinky.mfiles.mfilesNumbers.`16`
+  - typingsSlinky.mfiles.mfilesNumbers.`17`
+  - typingsSlinky.mfiles.mfilesNumbers.`18`
+  - typingsSlinky.mfiles.mfilesNumbers.`19`
+  - typingsSlinky.mfiles.mfilesNumbers.`20`
+  - typingsSlinky.mfiles.mfilesNumbers.`21`
+  - typingsSlinky.mfiles.mfilesNumbers.`22`
+  - typingsSlinky.mfiles.mfilesNumbers.`24`
+  - typingsSlinky.mfiles.mfilesNumbers.`25`
+  - typingsSlinky.mfiles.mfilesNumbers.`26`
 */
 trait DefaultIcon extends js.Object
 

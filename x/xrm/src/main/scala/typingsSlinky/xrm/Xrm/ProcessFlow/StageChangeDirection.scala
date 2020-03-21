@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
   * @see {@link XrmEnum.StageChangeDirection}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.Next
-  - typings.xrm.xrmStrings.Previous
+  - typingsSlinky.xrm.xrmStrings.Next
+  - typingsSlinky.xrm.xrmStrings.Previous
 */
 trait StageChangeDirection extends js.Object
 

@@ -1,8 +1,8 @@
 package typingsSlinky.siesta.Siesta.Harness
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import typingsSlinky.siesta.Siesta.ITest
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   * @singleton
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.siesta.Siesta.Harness.IBrowserExtJSCore because var conflicts: coverageUnit, excludeCoverageUnits. Inlined installLoaderInstrumentationHook */ trait IBrowserExtJS extends IBrowser {
+- typingsSlinky.siesta.Siesta.Harness.IBrowserExtJSCore because var conflicts: coverageUnit, excludeCoverageUnits. Inlined installLoaderInstrumentationHook */ trait IBrowserExtJS extends IBrowser {
   var allowExtVersionChange: Boolean
   var installLoaderInstrumentationHook: Boolean
   var loaderPath: js.Any
@@ -43,7 +43,7 @@ object IBrowserExtJS {
     isReadyTimeout: Double,
     keepNLastResults: Double,
     keepResults: Boolean,
-    listenters: StringDictionary[js.Function2[/* event */ Event, /* repeated */ js.Any, Unit]],
+    listenters: StringDictionary[js.Function2[/* event */ Event_, /* repeated */ js.Any, Unit]],
     loaderPath: js.Any,
     maintainViewportSize: Boolean,
     maxThreads: Double,

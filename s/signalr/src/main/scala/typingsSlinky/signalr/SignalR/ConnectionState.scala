@@ -9,10 +9,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.signalr.signalrNumbers.`0`
-  - typings.signalr.signalrNumbers.`1`
-  - typings.signalr.signalrNumbers.`2`
-  - typings.signalr.signalrNumbers.`4`
+  - typingsSlinky.signalr.signalrNumbers.`0`
+  - typingsSlinky.signalr.signalrNumbers.`1`
+  - typingsSlinky.signalr.signalrNumbers.`2`
+  - typingsSlinky.signalr.signalrNumbers.`4`
 */
 trait ConnectionState extends js.Object
 

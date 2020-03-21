@@ -1,7 +1,7 @@
 package typingsSlinky.tsutils
 
-import typingsSlinky.typescript.typescriptMod.Node
-import typingsSlinky.typescript.typescriptMod.Type
+import typingsSlinky.typescript.mod.Node
+import typingsSlinky.typescript.mod.Type
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -164,7 +164,7 @@ object typeguardMod extends js.Object {
   def isTryStatement(node: Node): /* is typescript.typescript.TryStatement */ Boolean = js.native
   def isTupleType(`type`: Type): /* is typescript.typescript.TupleType */ Boolean = js.native
   def isTupleTypeNode(node: Node): /* is typescript.typescript.TupleTypeNode */ Boolean = js.native
-  def isTupleTypeReference(`type`: Type): Boolean = js.native
+  def isTupleTypeReference(`type`: Type): /* is tsutils.TypeReferencetargetTupleT */ Boolean = js.native
   def isTypeAliasDeclaration(node: Node): /* is typescript.typescript.TypeAliasDeclaration */ Boolean = js.native
   def isTypeAssertion(node: Node): /* is typescript.typescript.TypeAssertion */ Boolean = js.native
   def isTypeLiteralNode(node: Node): /* is typescript.typescript.TypeLiteralNode */ Boolean = js.native

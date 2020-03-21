@@ -1,0 +1,14 @@
+package typingsSlinky.stormReactDiagrams.mod
+
+import typingsSlinky.stormReactDiagrams.defaultNodeWidgetMod.DefaultNodeProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("storm-react-diagrams", "DefaultNodeWidget")
+@js.native
+class DefaultNodeWidget protected ()
+  extends typingsSlinky.stormReactDiagrams.defaultNodeWidgetMod.DefaultNodeWidget {
+  def this(props: DefaultNodeProps) = this()
+}
+

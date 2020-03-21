@@ -1,7 +1,7 @@
 
 # Scala.js typings for ionic__core
 
-Typings are for version 4.11.7
+Typings are for version 4.11.10
 
 ## Library description:
 Base components for Ionic
@@ -10,9 +10,9 @@ Base components for Ionic
 | ------------------ | :-------------: |
 | Full name          | @ionic/core |
 | Keywords           | ionic, framework, stencil, mobile, app, webapp, capacitor, cordova, electron, progressive web app, pwa |
-| # releases         | 512 |
-| # dependents       | 100 |
-| # downloads        | 4205408 |
+| # releases         | 507 |
+| # dependents       | 103 |
+| # downloads        | 4252758 |
 | # stars            | 0 |
 
 ## Links

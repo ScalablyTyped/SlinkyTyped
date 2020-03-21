@@ -5,48 +5,46 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object libMod {
-  import org.scalablytyped.runtime.StringDictionary
-
-  type Annotations = StringDictionary[String]
+  type Annotations = org.scalablytyped.runtime.StringDictionary[java.lang.String]
   type Converter = (js.Function2[
-    /* arg1 */ String, 
-    /* next */ js.Function2[/* err */ js.Error | Null, /* value */ js.Any, Unit], 
-    Unit
+    /* arg1 */ java.lang.String, 
+    /* next */ js.Function2[/* err */ js.Error | scala.Null, /* value */ js.Any, scala.Unit], 
+    scala.Unit
   ]) | (js.Function3[
-    /* arg1 */ String, 
-    /* arg2 */ String, 
-    /* next */ js.Function2[/* err */ js.Error | Null, /* value */ js.Any, Unit], 
-    Unit
+    /* arg1 */ java.lang.String, 
+    /* arg2 */ java.lang.String, 
+    /* next */ js.Function2[/* err */ js.Error | scala.Null, /* value */ js.Any, scala.Unit], 
+    scala.Unit
   ]) | (js.Function4[
-    /* arg1 */ String, 
-    /* arg2 */ String, 
-    /* arg3 */ String, 
-    /* next */ js.Function2[/* err */ js.Error | Null, /* value */ js.Any, Unit], 
-    Unit
+    /* arg1 */ java.lang.String, 
+    /* arg2 */ java.lang.String, 
+    /* arg3 */ java.lang.String, 
+    /* next */ js.Function2[/* err */ js.Error | scala.Null, /* value */ js.Any, scala.Unit], 
+    scala.Unit
   ]) | (js.Function5[
-    /* arg1 */ String, 
-    /* arg2 */ String, 
-    /* arg3 */ String, 
-    /* arg4 */ String, 
-    /* next */ js.Function2[/* err */ js.Error | Null, /* value */ js.Any, Unit], 
-    Unit
+    /* arg1 */ java.lang.String, 
+    /* arg2 */ java.lang.String, 
+    /* arg3 */ java.lang.String, 
+    /* arg4 */ java.lang.String, 
+    /* next */ js.Function2[/* err */ js.Error | scala.Null, /* value */ js.Any, scala.Unit], 
+    scala.Unit
   ]) | (js.Function6[
-    /* arg1 */ String, 
-    /* arg2 */ String, 
-    /* arg3 */ String, 
-    /* arg4 */ String, 
-    /* arg5 */ String, 
-    /* next */ js.Function2[/* err */ js.Error | Null, /* value */ js.Any, Unit], 
-    Unit
+    /* arg1 */ java.lang.String, 
+    /* arg2 */ java.lang.String, 
+    /* arg3 */ java.lang.String, 
+    /* arg4 */ java.lang.String, 
+    /* arg5 */ java.lang.String, 
+    /* next */ js.Function2[/* err */ js.Error | scala.Null, /* value */ js.Any, scala.Unit], 
+    scala.Unit
   ]) | (js.Function7[
-    /* arg1 */ String, 
-    /* arg2 */ String, 
-    /* arg3 */ String, 
-    /* arg4 */ String, 
-    /* arg5 */ String, 
-    /* arg6 */ String, 
-    /* next */ js.Function2[/* err */ js.Error | Null, /* value */ js.Any, Unit], 
-    Unit
+    /* arg1 */ java.lang.String, 
+    /* arg2 */ java.lang.String, 
+    /* arg3 */ java.lang.String, 
+    /* arg4 */ java.lang.String, 
+    /* arg5 */ java.lang.String, 
+    /* arg6 */ java.lang.String, 
+    /* next */ js.Function2[/* err */ js.Error | scala.Null, /* value */ js.Any, scala.Unit], 
+    scala.Unit
   ])
-  type Step = String
+  type Step = java.lang.String
 }

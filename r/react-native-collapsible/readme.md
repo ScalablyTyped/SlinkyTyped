@@ -10,9 +10,9 @@ Animated collapsible component for React Native using the Animated API. Good for
 | ------------------ | :-------------: |
 | Full name          | react-native-collapsible |
 | Keywords           | react-native, react-component, react-native-component, react, mobile, ios, android, ui, collapse, collapsible, toggle, accordion |
-| # releases         | 18 |
-| # dependents       | 65 |
-| # downloads        | 1564711 |
+| # releases         | 17 |
+| # dependents       | 67 |
+| # downloads        | 1595686 |
 | # stars            | 7 |
 
 ## Links

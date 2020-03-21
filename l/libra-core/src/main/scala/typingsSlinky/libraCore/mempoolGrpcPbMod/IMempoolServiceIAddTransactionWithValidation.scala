@@ -1,0 +1,12 @@
+package typingsSlinky.libraCore.mempoolGrpcPbMod
+
+import typingsSlinky.grpc.mod.MethodDefinition
+import typingsSlinky.libraCore.mempoolPbMod.AddTransactionWithValidationRequest
+import typingsSlinky.libraCore.mempoolPbMod.AddTransactionWithValidationResponse
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait IMempoolServiceIAddTransactionWithValidation extends MethodDefinition[AddTransactionWithValidationRequest, AddTransactionWithValidationResponse]
+

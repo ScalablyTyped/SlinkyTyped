@@ -4,10 +4,10 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.radium.radiumMod.Radium.StyleProps
-import typingsSlinky.radium.radiumMod.Radium.StyleRules
-import typingsSlinky.radium.radiumMod.default.Style
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.radium.mod.Radium.StyleProps
+import typingsSlinky.radium.mod.Radium.StyleRules
+import typingsSlinky.radium.mod.default.Style
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

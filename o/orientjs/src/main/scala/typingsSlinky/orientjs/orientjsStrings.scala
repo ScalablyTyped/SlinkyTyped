@@ -1,6 +1,6 @@
 package typingsSlinky.orientjs
 
-import typingsSlinky.orientjs.orientjsMod.PropertyType
+import typingsSlinky.orientjs.mod.PropertyType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

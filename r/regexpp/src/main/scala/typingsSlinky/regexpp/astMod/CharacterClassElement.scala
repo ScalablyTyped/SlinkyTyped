@@ -9,10 +9,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.regexpp.astMod.EscapeCharacterSet
-  - typings.regexpp.astMod.UnicodePropertyCharacterSet
-  - typings.regexpp.astMod.Character
-  - typings.regexpp.astMod.CharacterClassRange
+  - typingsSlinky.regexpp.astMod.EscapeCharacterSet
+  - typingsSlinky.regexpp.astMod.UnicodePropertyCharacterSet
+  - typingsSlinky.regexpp.astMod.Character
+  - typingsSlinky.regexpp.astMod.CharacterClassRange
 */
 trait CharacterClassElement extends js.Object
 

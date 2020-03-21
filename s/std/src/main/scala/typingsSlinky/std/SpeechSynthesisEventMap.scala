@@ -5,12 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait SpeechSynthesisEventMap extends js.Object {
-  var voiceschanged: org.scalajs.dom.raw.Event
+  var voiceschanged: Event_
 }
 
 object SpeechSynthesisEventMap {
   @scala.inline
-  def apply(voiceschanged: org.scalajs.dom.raw.Event): SpeechSynthesisEventMap = {
+  def apply(voiceschanged: Event_): SpeechSynthesisEventMap = {
     val __obj = js.Dynamic.literal(voiceschanged = voiceschanged.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[SpeechSynthesisEventMap]

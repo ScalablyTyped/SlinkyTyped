@@ -5,8 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object engine {
-  import typingsSlinky.extjs.Ext.IBase
-
-  type IImageExporter = IBase
-  type ISvgExporter = IBase
+  type IImageExporter = typingsSlinky.extjs.Ext.IBase
+  type ISvgExporter = typingsSlinky.extjs.Ext.IBase
 }

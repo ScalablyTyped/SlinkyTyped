@@ -1,9 +1,9 @@
 package typingsSlinky.recompose
 
-import typingsSlinky.recompose.recomposeMod.InferableComponentEnhancerWithProps
-import typingsSlinky.recompose.recomposeMod.StateHandlerMap
-import typingsSlinky.recompose.recomposeMod.StateUpdaters
-import typingsSlinky.recompose.recomposeMod.mapper
+import typingsSlinky.recompose.mod.InferableComponentEnhancerWithProps
+import typingsSlinky.recompose.mod.StateHandlerMap
+import typingsSlinky.recompose.mod.StateUpdaters
+import typingsSlinky.recompose.mod.mapper
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

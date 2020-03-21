@@ -10,16 +10,16 @@ import scala.scalajs.js.annotation._
 object addEventListener_messageerror extends js.Object {
   def apply(
     `type`: messageerror,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _]
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.MessageEvent, _]
   ): Unit = js.native
   def apply(
     `type`: messageerror,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
     options: scala.Boolean
   ): Unit = js.native
   def apply(
     `type`: messageerror,
-    listener: js.ThisFunction1[/* this */ org.scalajs.dom.raw.Window, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
+    listener: js.ThisFunction1[/* this */ Window_, /* ev */ org.scalajs.dom.raw.MessageEvent, _],
     options: AddEventListenerOptions
   ): Unit = js.native
 }

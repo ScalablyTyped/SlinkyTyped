@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings._empty
-  - typings.std.stdStrings.left
-  - typings.std.stdStrings.right
+  - typingsSlinky.std.stdStrings._empty
+  - typingsSlinky.std.stdStrings.left
+  - typingsSlinky.std.stdStrings.right
 */
 trait GamepadHand extends js.Object
 

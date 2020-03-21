@@ -4,14 +4,14 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.Anon_EventValueBoolean
-import typingsSlinky.gestalt.gestaltMod.SwitchProps
+import typingsSlinky.gestalt.AnonEventValue
+import typingsSlinky.gestalt.mod.SwitchProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Switch
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Switch] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Switch] {
   @JSImport("gestalt", "Switch")
   @js.native
   object componentImport extends js.Object
@@ -20,10 +20,10 @@ object Switch
   /* The following DOM/SVG props were specified: disabled, name */
   def apply(
     id: String,
-    onChange: Anon_EventValueBoolean => Unit,
+    onChange: AnonEventValue => Unit,
     switched: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Switch] = {
+  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Switch] = {
     val __obj = js.Dynamic.literal(id = id.asInstanceOf[js.Any], onChange = js.Any.fromFunction1(onChange))
     if (!js.isUndefined(switched)) __obj.updateDynamic("switched")(switched.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

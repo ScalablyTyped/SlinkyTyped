@@ -1,7 +1,7 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.MemoIteratorCappedRight
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.MemoIteratorCappedRight
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

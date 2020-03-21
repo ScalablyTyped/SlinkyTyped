@@ -1,6 +1,6 @@
 package typingsSlinky.execa
 
-import typingsSlinky.execa.execaMod._StdioOption
+import typingsSlinky.execa.mod._StdioOption
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

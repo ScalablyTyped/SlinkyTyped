@@ -5,6 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object text {
-  type TextDirectionHeuristics = TextDirectionHeuristics_
-  type TextUtils = TextUtils_
+  type TextDirectionHeuristics = typingsSlinky.androiduix.android.text.TextDirectionHeuristics_
+  type TextUtils = typingsSlinky.androiduix.android.text.TextUtils_
 }

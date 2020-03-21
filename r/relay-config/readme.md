@@ -10,9 +10,9 @@ Config parser for Relay applications.
 | ------------------ | :-------------: |
 | Full name          | relay-config |
 | Keywords           | graphql, relay |
-| # releases         | 163 |
+| # releases         | 177 |
 | # dependents       | 3 |
-| # downloads        | 139180 |
+| # downloads        | 152784 |
 | # stars            | 0 |
 
 ## Links

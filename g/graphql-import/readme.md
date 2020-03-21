@@ -10,9 +10,9 @@ Typings are for version 0.7.1
 | ------------------ | :-------------: |
 | Full name          | graphql-import |
 | Keywords           | - |
-| # releases         | 59 |
+| # releases         | 115 |
 | # dependents       | 103 |
-| # downloads        | 30200080 |
+| # downloads        | 31083768 |
 | # stars            | 2 |
 
 ## Links

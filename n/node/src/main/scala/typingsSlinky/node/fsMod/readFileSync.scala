@@ -1,8 +1,8 @@
 package typingsSlinky.node.fsMod
 
-import typingsSlinky.node.Anon_EncodingFlag
-import typingsSlinky.node.Anon_EncodingFlagNull
-import typingsSlinky.node.Anon_EncodingFlagString
+import typingsSlinky.node.AnonEncodingFlag
+import typingsSlinky.node.AnonFlag
+import typingsSlinky.node.AnonFlagString
 import typingsSlinky.node.Buffer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,10 +12,10 @@ import scala.scalajs.js.annotation._
 @js.native
 object readFileSync extends js.Object {
   def apply(path: Double): String | Buffer = js.native
-  def apply(path: Double, options: String): String | Buffer = js.native
-  def apply(path: Double, options: Anon_EncodingFlag): Buffer = js.native
-  def apply(path: Double, options: Anon_EncodingFlagNull): String | Buffer = js.native
-  def apply(path: Double, options: Anon_EncodingFlagString): String = js.native
+  def apply(path: Double, options: String): String = js.native
+  def apply(path: Double, options: AnonEncodingFlag): String = js.native
+  def apply(path: Double, options: AnonFlag): Buffer = js.native
+  def apply(path: Double, options: AnonFlagString): String | Buffer = js.native
   /**
     * Synchronously reads the entire contents of a file.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -25,9 +25,7 @@ object readFileSync extends js.Object {
     * If a flag is not provided, it defaults to `'r'`.
     */
   def apply(path: PathLike): String | Buffer = js.native
-  def apply(path: PathLike, options: String): String | Buffer = js.native
-  def apply(path: PathLike, options: Anon_EncodingFlag): Buffer = js.native
-  def apply(path: PathLike, options: Anon_EncodingFlagNull): String | Buffer = js.native
+  def apply(path: PathLike, options: String): String = js.native
   /**
     * Synchronously reads the entire contents of a file.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -36,6 +34,8 @@ object readFileSync extends js.Object {
     * @param options Either the encoding for the result, or an object that contains the encoding and an optional flag.
     * If a flag is not provided, it defaults to `'r'`.
     */
-  def apply(path: PathLike, options: Anon_EncodingFlagString): String = js.native
+  def apply(path: PathLike, options: AnonEncodingFlag): String = js.native
+  def apply(path: PathLike, options: AnonFlag): Buffer = js.native
+  def apply(path: PathLike, options: AnonFlagString): String | Buffer = js.native
 }
 

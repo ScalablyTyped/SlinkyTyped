@@ -1,7 +1,7 @@
 
 # Scala.js typings for normalizr
 
-Typings are for version 3.4.1
+Typings are for version 3.5.0
 
 ## Library description:
 Normalizes and denormalizes JSON according to schema for Redux and Flux applications
@@ -11,8 +11,8 @@ Normalizes and denormalizes JSON according to schema for Redux and Flux applicat
 | Full name          | normalizr |
 | Keywords           | flux, redux, normalize, denormalize, api, json |
 | # releases         | 4 |
-| # dependents       | 281 |
-| # downloads        | 9231179 |
+| # dependents       | 284 |
+| # downloads        | 9471952 |
 | # stars            | 59 |
 
 ## Links

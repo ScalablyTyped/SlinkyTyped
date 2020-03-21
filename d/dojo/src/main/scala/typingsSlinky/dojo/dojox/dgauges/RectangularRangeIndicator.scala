@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.dgauges
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.endThickness
 import typingsSlinky.dojo.dojoStrings.fill
 import typingsSlinky.dojo.dojoStrings.paddingBottom
@@ -117,7 +117,7 @@ class RectangularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_fill(
     property: fill,
@@ -127,7 +127,7 @@ class RectangularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_paddingBottom(
     property: paddingBottom,
@@ -137,7 +137,7 @@ class RectangularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_paddingLeft(
     property: paddingLeft,
@@ -147,7 +147,7 @@ class RectangularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_paddingRight(
     property: paddingRight,
@@ -157,7 +157,7 @@ class RectangularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_paddingTop(
     property: paddingTop,
@@ -167,7 +167,7 @@ class RectangularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_start(
     property: start,
@@ -177,7 +177,7 @@ class RectangularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_startThickness(
     property: startThickness,
@@ -187,7 +187,7 @@ class RectangularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_stroke(
     property: stroke,
@@ -197,6 +197,6 @@ class RectangularRangeIndicator () extends ScaleIndicatorBase {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

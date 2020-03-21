@@ -7,9 +7,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.usb_
-  - typings.std.stdStrings.nfc_
-  - typings.std.stdStrings.ble
+  - typingsSlinky.std.stdStrings.ble
+  - typingsSlinky.std.stdStrings.nfc_
+  - typingsSlinky.std.stdStrings.usb_
 */
 trait Transport extends js.Object
 

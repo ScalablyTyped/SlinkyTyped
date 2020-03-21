@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.hidden
-  - typings.std.stdStrings.visible
+  - typingsSlinky.std.stdStrings.hidden
+  - typingsSlinky.std.stdStrings.visible
 */
 trait VisibilityState extends js.Object
 

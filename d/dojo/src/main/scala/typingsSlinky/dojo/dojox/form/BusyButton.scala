@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.form
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dijit.form.Button
 import typingsSlinky.dojo.dojoStrings.busyLabel
 import typingsSlinky.dojo.dojoStrings.isBusy
@@ -88,7 +88,7 @@ class BusyButton () extends Button {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_isBusy(
     property: isBusy,
@@ -98,7 +98,7 @@ class BusyButton () extends Button {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_timeout(
     property: timeout,
@@ -108,7 +108,7 @@ class BusyButton () extends Button {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_useIcon(
     property: useIcon,
@@ -118,6 +118,6 @@ class BusyButton () extends Button {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

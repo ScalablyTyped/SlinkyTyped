@@ -9,10 +9,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.nodegit.nodegitNumbers.`0`
-  - typings.nodegit.nodegitNumbers.`1`
-  - typings.nodegit.nodegitNumbers.`2`
-  - typings.nodegit.nodegitNumbers.`4`
+  - typingsSlinky.nodegit.nodegitNumbers.`0`
+  - typingsSlinky.nodegit.nodegitNumbers.`1`
+  - typingsSlinky.nodegit.nodegitNumbers.`2`
+  - typingsSlinky.nodegit.nodegitNumbers.`4`
 */
 trait FLAGS extends js.Object
 

@@ -1,7 +1,7 @@
 package typingsSlinky.protobufjs.minimalMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.protobufjs.protobufjsMod.IToJSONOptions
+import typingsSlinky.protobufjs.mod.IToJSONOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,7 +9,7 @@ import scala.scalajs.js.annotation._
 @JSImport("protobufjs/minimal", "Namespace")
 @js.native
 class Namespace protected ()
-  extends typingsSlinky.protobufjs.protobufjsMod.Namespace {
+  extends typingsSlinky.protobufjs.mod.Namespace {
   /**
     * Constructs a new namespace instance.
     * @param name Namespace name
@@ -29,11 +29,8 @@ object Namespace extends js.Object {
     * @param [toJSONOptions] JSON conversion options
     * @returns JSON object or `undefined` when array is empty
     */
-  def arrayToJSON(array: js.Array[typingsSlinky.protobufjs.protobufjsMod.ReflectionObject]): js.UndefOr[StringDictionary[js.Any]] = js.native
-  def arrayToJSON(
-    array: js.Array[typingsSlinky.protobufjs.protobufjsMod.ReflectionObject],
-    toJSONOptions: IToJSONOptions
-  ): js.UndefOr[StringDictionary[js.Any]] = js.native
+  def arrayToJSON(array: js.Array[typingsSlinky.protobufjs.mod.ReflectionObject]): js.UndefOr[StringDictionary[js.Any]] = js.native
+  def arrayToJSON(array: js.Array[typingsSlinky.protobufjs.mod.ReflectionObject], toJSONOptions: IToJSONOptions): js.UndefOr[StringDictionary[js.Any]] = js.native
   /**
     * Constructs a namespace from JSON.
     * @param name Namespace name
@@ -41,7 +38,7 @@ object Namespace extends js.Object {
     * @returns Created namespace
     * @throws {TypeError} If arguments are invalid
     */
-  def fromJSON(name: String, json: StringDictionary[js.Any]): typingsSlinky.protobufjs.protobufjsMod.Namespace = js.native
+  def fromJSON(name: String, json: StringDictionary[js.Any]): typingsSlinky.protobufjs.mod.Namespace = js.native
   def isReservedId(reserved: js.UndefOr[scala.Nothing], id: Double): Boolean = js.native
   /**
     * Tests if the specified id is reserved.

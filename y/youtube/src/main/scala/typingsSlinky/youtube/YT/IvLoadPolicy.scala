@@ -7,8 +7,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.youtube.youtubeNumbers.`1`
-  - typings.youtube.youtubeNumbers.`3`
+  - typingsSlinky.youtube.youtubeNumbers.`1`
+  - typingsSlinky.youtube.youtubeNumbers.`3`
 */
 trait IvLoadPolicy extends js.Object
 

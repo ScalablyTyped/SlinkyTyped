@@ -6,7 +6,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_Backdrop
+import typingsSlinky.baseui.AnonCloseSource
 import typingsSlinky.baseui.baseuiStrings.alertdialog
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -32,7 +32,7 @@ object Modal
     closeable: js.UndefOr[Boolean] = js.undefined,
     isOpen: js.UndefOr[Boolean] = js.undefined,
     mountNode: HTMLElement = null,
-    onClose: /* args */ Anon_Backdrop => _ = null,
+    onClose: /* args */ AnonCloseSource => _ = null,
     overrides: ModalOverrides = null,
     role: dialog | alertdialog = null,
     size: default_ | full | auto = null,

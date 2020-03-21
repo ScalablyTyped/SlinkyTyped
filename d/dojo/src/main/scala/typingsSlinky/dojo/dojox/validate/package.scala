@@ -5,10 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object validate {
-  import org.scalajs.dom.raw.HTMLFormElement
-
-  type _base = _base_
-  type br = br_
+  type base = typingsSlinky.dojo.dojox.validate.base_
+  type br = typingsSlinky.dojo.dojox.validate.br_
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dojox/validate/check.html
     *
@@ -18,7 +16,7 @@ package object validate {
     * @param form form to be validated
     * @param profile specifies how the form fields are to be validated{trim:Array, uppercase:Array, lowercase:Array, ucfirst:Array, digit:Array,required:Array, dependencies:Object, constraints:Object, confirm:Object}
     */
-  type check = js.Function2[/* form */ HTMLFormElement, /* profile */ js.Object, Unit]
+  type check = js.Function2[/* form */ org.scalajs.dom.raw.HTMLFormElement, /* profile */ js.Object, scala.Unit]
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dojox/validate/isbn.html
     *
@@ -26,8 +24,8 @@ package object validate {
     *
     * @param value An ISBN to validate
     */
-  type isbn = js.Function1[/* value */ String, Unit]
-  type regexp = regexp_
-  type us = us_
-  type web = web_
+  type isbn = js.Function1[/* value */ java.lang.String, scala.Unit]
+  type regexp = typingsSlinky.dojo.dojox.validate.regexp_
+  type us = typingsSlinky.dojo.dojox.validate.us_
+  type web = typingsSlinky.dojo.dojox.validate.web_
 }

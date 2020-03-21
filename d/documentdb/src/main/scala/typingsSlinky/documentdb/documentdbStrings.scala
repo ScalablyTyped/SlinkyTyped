@@ -1,12 +1,12 @@
 package typingsSlinky.documentdb
 
-import typingsSlinky.documentdb.documentdbMod.ConsistencyLevel
-import typingsSlinky.documentdb.documentdbMod.IndexKind
-import typingsSlinky.documentdb.documentdbMod.IndexingMode
-import typingsSlinky.documentdb.documentdbMod.MediaReadMode
-import typingsSlinky.documentdb.documentdbMod.PermissionMode
-import typingsSlinky.documentdb.documentdbMod.TriggerOperation
-import typingsSlinky.documentdb.documentdbMod.TriggerType
+import typingsSlinky.documentdb.mod.ConsistencyLevel
+import typingsSlinky.documentdb.mod.IndexKind
+import typingsSlinky.documentdb.mod.IndexingMode
+import typingsSlinky.documentdb.mod.MediaReadMode
+import typingsSlinky.documentdb.mod.PermissionMode
+import typingsSlinky.documentdb.mod.TriggerOperation
+import typingsSlinky.documentdb.mod.TriggerType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

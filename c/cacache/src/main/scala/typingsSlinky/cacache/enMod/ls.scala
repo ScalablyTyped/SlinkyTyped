@@ -1,6 +1,6 @@
 package typingsSlinky.cacache.enMod
 
-import typingsSlinky.cacache.Anon_Size
+import typingsSlinky.cacache.CacheObjectsizenumber
 import typingsSlinky.node.NodeJS.ReadableStream
 import typingsSlinky.std.Record
 import scala.scalajs.js
@@ -19,6 +19,6 @@ object ls extends js.Object {
     * `'data'` events on the returned stream.
     */
   def stream(cachePath: String): ReadableStream = js.native
-  type Cache = Record[String, CacheObject with Anon_Size]
+  type Cache = Record[String, CacheObjectsizenumber]
 }
 

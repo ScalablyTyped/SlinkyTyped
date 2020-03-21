@@ -5,22 +5,21 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.recharts.rechartsMod.BrushProps
-import typingsSlinky.recharts.rechartsMod.DataKey
-import typingsSlinky.recharts.rechartsMod.Margin
-import typingsSlinky.std.Partial
+import typingsSlinky.recharts.PartialMargin
+import typingsSlinky.recharts.mod.BrushProps
+import typingsSlinky.recharts.mod.DataKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Brush
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.rechartsMod.Brush] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.Brush] {
   @JSImport("recharts", "Brush")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, onChange */
+  /* The following DOM/SVG props were specified: className */
   def apply(
     data: js.Array[_] = null,
     dataKey: DataKey = null,
@@ -29,7 +28,8 @@ object Brush
     gap: Int | Double = null,
     height: Int | Double = null,
     leaveTimeOut: Int | Double = null,
-    padding: Partial[Margin] = null,
+    onChange: /* repeated */ js.Any => Unit = null,
+    padding: PartialMargin = null,
     startIndex: Int | Double = null,
     stroke: String = null,
     tickFormatter: /* value */ js.Any => js.Any = null,
@@ -39,7 +39,7 @@ object Brush
     x: Int | Double = null,
     y: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.Brush] = {
+  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Brush] = {
     val __obj = js.Dynamic.literal()
     if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
     if (dataKey != null) __obj.updateDynamic("dataKey")(dataKey.asInstanceOf[js.Any])
@@ -48,6 +48,7 @@ object Brush
     if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
     if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
     if (leaveTimeOut != null) __obj.updateDynamic("leaveTimeOut")(leaveTimeOut.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (padding != null) __obj.updateDynamic("padding")(padding.asInstanceOf[js.Any])
     if (startIndex != null) __obj.updateDynamic("startIndex")(startIndex.asInstanceOf[js.Any])
     if (stroke != null) __obj.updateDynamic("stroke")(stroke.asInstanceOf[js.Any])
@@ -60,7 +61,7 @@ object Brush
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.Brush] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.rechartsMod.Brush](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.recharts.mod.Brush] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.recharts.mod.Brush](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = BrushProps
 }
 

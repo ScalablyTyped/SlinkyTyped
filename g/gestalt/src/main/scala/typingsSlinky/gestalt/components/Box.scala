@@ -5,10 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.Anon_Key
-import typingsSlinky.gestalt.gestaltMod.BoxProps
-import typingsSlinky.gestalt.gestaltMod.SignedUpTo12
-import typingsSlinky.gestalt.gestaltMod.UnsignedUpTo12
+import typingsSlinky.gestalt.AnonStyle
 import typingsSlinky.gestalt.gestaltStrings.absolute
 import typingsSlinky.gestalt.gestaltStrings.around
 import typingsSlinky.gestalt.gestaltStrings.auto
@@ -64,12 +61,15 @@ import typingsSlinky.gestalt.gestaltStrings.visible
 import typingsSlinky.gestalt.gestaltStrings.visuallyHidden
 import typingsSlinky.gestalt.gestaltStrings.watermelon
 import typingsSlinky.gestalt.gestaltStrings.white
+import typingsSlinky.gestalt.mod.BoxProps
+import typingsSlinky.gestalt.mod.SignedUpTo12
+import typingsSlinky.gestalt.mod.UnsignedUpTo12
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Box
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Box] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Box] {
   @JSImport("gestalt", "Box")
   @js.native
   object componentImport extends js.Object
@@ -83,7 +83,7 @@ object Box
     bottom: js.UndefOr[Boolean] = js.undefined,
     color: blue | darkGray | darkWash | eggplant | gray | green | lightGray | lightWash | maroon | midnight | navy | olive | orange | orchid | pine | purple | red | transparent | transparentDarkGray | watermelon | white = null,
     column: UnsignedUpTo12 = null,
-    dangerouslySetInlineStyle: Anon_Key = null,
+    dangerouslySetInlineStyle: AnonStyle = null,
     direction: row | column = null,
     display: none | flex | block | inlineBlock | visuallyHidden = null,
     fit: js.UndefOr[Boolean] = js.undefined,
@@ -150,7 +150,7 @@ object Box
     top: js.UndefOr[Boolean] = js.undefined,
     wrap: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Box] = {
+  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Box] = {
     val __obj = js.Dynamic.literal()
     if (alignContent != null) __obj.updateDynamic("alignContent")(alignContent.asInstanceOf[js.Any])
     if (alignItems != null) __obj.updateDynamic("alignItems")(alignItems.asInstanceOf[js.Any])
@@ -227,7 +227,7 @@ object Box
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Box] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.gestaltMod.Box](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Box] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.gestalt.mod.Box](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = BoxProps
 }
 

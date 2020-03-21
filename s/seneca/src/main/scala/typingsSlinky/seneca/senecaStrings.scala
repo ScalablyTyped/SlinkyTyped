@@ -1,7 +1,7 @@
 package typingsSlinky.seneca
 
-import typingsSlinky.seneca.senecaMod.LogLevel
-import typingsSlinky.seneca.senecaMod.LogSpec
+import typingsSlinky.seneca.mod.LogLevel
+import typingsSlinky.seneca.mod.LogSpec
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

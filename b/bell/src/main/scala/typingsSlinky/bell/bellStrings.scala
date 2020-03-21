@@ -1,6 +1,6 @@
 package typingsSlinky.bell
 
-import typingsSlinky.bell.bellMod.Provider
+import typingsSlinky.bell.mod.Provider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dijit.layout
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.ChildWidgetProperties
 import typingsSlinky.dojo.dojoStrings.activeSizing
 import typingsSlinky.dojo.dojoStrings.orientation
@@ -27,7 +27,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dijit.layout.SplitContainer")
 @js.native
-class SplitContainer_ () extends _LayoutWidget {
+class SplitContainer_ () extends LayoutWidget {
   /**
     * These properties can be specified for the children of a SplitContainer.
     * 
@@ -108,7 +108,7 @@ class SplitContainer_ () extends _LayoutWidget {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_activeSizing(
     property: activeSizing,
@@ -118,7 +118,7 @@ class SplitContainer_ () extends _LayoutWidget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_orientation(
     property: orientation,
@@ -128,7 +128,7 @@ class SplitContainer_ () extends _LayoutWidget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_persist(
     property: persist,
@@ -138,7 +138,7 @@ class SplitContainer_ () extends _LayoutWidget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_sizerWidth(
     property: sizerWidth,
@@ -148,6 +148,6 @@ class SplitContainer_ () extends _LayoutWidget {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

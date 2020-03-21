@@ -1,6 +1,6 @@
 package typingsSlinky.samchon.protocolMod
 
-import typingsSlinky.sxml.sxmlMod.XML
+import typingsSlinky.sxml.mod.XML
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,7 +11,7 @@ import scala.scalajs.js.annotation._
   * Default Constructor.
   */
 class InvokeParameter ()
-  extends typingsSlinky.samchon.protocolInvokeInvokeParameterMod.InvokeParameter {
+  extends typingsSlinky.samchon.invokeParameterMod.InvokeParameter {
   def this(`val`: String) = this()
   def this(`val`: Boolean) = this()
   def this(`val`: Double) = this()

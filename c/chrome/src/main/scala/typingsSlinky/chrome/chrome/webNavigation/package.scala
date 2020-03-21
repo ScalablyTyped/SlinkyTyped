@@ -5,10 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object webNavigation {
-  type WebNavigationFramedErrorEvent = WebNavigationEvent[WebNavigationFramedErrorCallbackDetails]
-  type WebNavigationFramedEvent = WebNavigationEvent[WebNavigationFramedCallbackDetails]
-  type WebNavigationParentedEvent = WebNavigationEvent[WebNavigationParentedCallbackDetails]
-  type WebNavigationReplacementEvent = WebNavigationEvent[WebNavigationReplacementCallbackDetails]
-  type WebNavigationSourceEvent = WebNavigationEvent[WebNavigationSourceCallbackDetails]
-  type WebNavigationTransitionalEvent = WebNavigationEvent[WebNavigationTransitionCallbackDetails]
+  type WebNavigationFramedErrorEvent = typingsSlinky.chrome.chrome.webNavigation.WebNavigationEvent[
+    typingsSlinky.chrome.chrome.webNavigation.WebNavigationFramedErrorCallbackDetails
+  ]
+  type WebNavigationFramedEvent = typingsSlinky.chrome.chrome.webNavigation.WebNavigationEvent[typingsSlinky.chrome.chrome.webNavigation.WebNavigationFramedCallbackDetails]
+  type WebNavigationParentedEvent = typingsSlinky.chrome.chrome.webNavigation.WebNavigationEvent[typingsSlinky.chrome.chrome.webNavigation.WebNavigationParentedCallbackDetails]
+  type WebNavigationReplacementEvent = typingsSlinky.chrome.chrome.webNavigation.WebNavigationEvent[
+    typingsSlinky.chrome.chrome.webNavigation.WebNavigationReplacementCallbackDetails
+  ]
+  type WebNavigationSourceEvent = typingsSlinky.chrome.chrome.webNavigation.WebNavigationEvent[typingsSlinky.chrome.chrome.webNavigation.WebNavigationSourceCallbackDetails]
+  type WebNavigationTransitionalEvent = typingsSlinky.chrome.chrome.webNavigation.WebNavigationEvent[typingsSlinky.chrome.chrome.webNavigation.WebNavigationTransitionCallbackDetails]
 }

@@ -1,17 +1,17 @@
 package typingsSlinky.handsontable
 
-import typingsSlinky.handsontable.handsontableMod.Handsontable.CellType
-import typingsSlinky.handsontable.handsontableMod.Handsontable.ChangeSource
-import typingsSlinky.handsontable.handsontableMod.Handsontable.EditorType
-import typingsSlinky.handsontable.handsontableMod.Handsontable.RendererType
-import typingsSlinky.handsontable.handsontableMod.Handsontable.ValidatorType
-import typingsSlinky.handsontable.handsontableMod.Handsontable._editors.EditorState
-import typingsSlinky.handsontable.handsontableMod.Handsontable.columnSorting.SortOrderType
-import typingsSlinky.handsontable.handsontableMod.Handsontable.contextMenu.PredefinedMenuItemKey
-import typingsSlinky.handsontable.handsontableMod.Handsontable.plugins.FiltersPlugin.ConditionName
-import typingsSlinky.handsontable.handsontableMod.Handsontable.plugins.FiltersPlugin.OperationType
-import typingsSlinky.handsontable.handsontableMod.Handsontable.plugins.PasteModeType
-import typingsSlinky.handsontable.handsontableMod.Handsontable.wot.OverlayType
+import typingsSlinky.handsontable.mod.Handsontable.CellType
+import typingsSlinky.handsontable.mod.Handsontable.ChangeSource
+import typingsSlinky.handsontable.mod.Handsontable.EditorType
+import typingsSlinky.handsontable.mod.Handsontable.RendererType
+import typingsSlinky.handsontable.mod.Handsontable.ValidatorType
+import typingsSlinky.handsontable.mod.Handsontable._editors.EditorState
+import typingsSlinky.handsontable.mod.Handsontable.columnSorting.SortOrderType
+import typingsSlinky.handsontable.mod.Handsontable.contextMenu.PredefinedMenuItemKey
+import typingsSlinky.handsontable.mod.Handsontable.plugins.FiltersPlugin.ConditionName
+import typingsSlinky.handsontable.mod.Handsontable.plugins.FiltersPlugin.OperationType
+import typingsSlinky.handsontable.mod.Handsontable.plugins.PasteModeType
+import typingsSlinky.handsontable.mod.Handsontable.wot.OverlayType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -22,9 +22,6 @@ object handsontableStrings {
   
   @js.native
   sealed trait AutofillDotfill extends ChangeSource
-  
-  @js.native
-  sealed trait Bucket extends js.Object
   
   @js.native
   sealed trait ColumnSummaryDotreset extends ChangeSource
@@ -607,8 +604,6 @@ object handsontableStrings {
   def `---------`: `---------` = "---------".asInstanceOf[`---------`]
   @scala.inline
   def AutofillDotfill: AutofillDotfill = "Autofill.fill".asInstanceOf[AutofillDotfill]
-  @scala.inline
-  def Bucket: Bucket = "Bucket".asInstanceOf[Bucket]
   @scala.inline
   def ColumnSummaryDotreset: ColumnSummaryDotreset = "ColumnSummary.reset".asInstanceOf[ColumnSummaryDotreset]
   @scala.inline

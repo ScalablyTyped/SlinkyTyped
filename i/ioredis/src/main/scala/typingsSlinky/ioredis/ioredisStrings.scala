@@ -1,7 +1,7 @@
 package typingsSlinky.ioredis
 
-import typingsSlinky.ioredis.ioredisMod.NodeRole
-import typingsSlinky.ioredis.ioredisMod.SecureVersion
+import typingsSlinky.ioredis.mod.NodeRole
+import typingsSlinky.ioredis.mod.SecureVersion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.stripejs.elementMod
 
-import typingsSlinky.stripejs.Anon_BaseCompleteEmpty
-import typingsSlinky.stripejs.Anon_BaseCompleteEmptyInvalid
+import typingsSlinky.stripejs.AnonEmpty
+import typingsSlinky.stripejs.AnonInvalid
 import typingsSlinky.stripejs.stripejsStrings.default
 import typingsSlinky.stripejs.stripejsStrings.solid
 import scala.scalajs.js
@@ -27,12 +27,12 @@ trait IBANElementOptions extends BaseOptions {
 object IBANElementOptions {
   @scala.inline
   def apply(
-    classes: Anon_BaseCompleteEmpty = null,
+    classes: AnonEmpty = null,
     disabled: js.UndefOr[Boolean] = js.undefined,
     hideIcon: js.UndefOr[Boolean] = js.undefined,
     iconStyle: solid | default = null,
     placeholderCountry: String = null,
-    style: Anon_BaseCompleteEmptyInvalid = null,
+    style: AnonInvalid = null,
     supportedCountries: js.Array[String] = null
   ): IBANElementOptions = {
     val __obj = js.Dynamic.literal()

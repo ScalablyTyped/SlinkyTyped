@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint.SP
 
-import typingsSlinky.microsoftDashAjax.Sys.EventArgs
+import typingsSlinky.microsoftAjax.Sys.EventArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojo.dnd
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,19 +63,19 @@ class Selector protected () extends Container {
     *
     * @param e mouse event
     */
-  def onMouseDown(e: Event): Unit = js.native
+  def onMouseDown(e: Event_): Unit = js.native
   /**
     * event processor for onmousemove
     *
     * @param e mouse event
     */
-  def onMouseMove(e: Event): Unit = js.native
+  def onMouseMove(e: Event_): Unit = js.native
   /**
     * event processor for onmouseup
     *
     * @param e mouse event
     */
-  def onMouseUp(e: Event): Unit = js.native
+  def onMouseUp(e: Event_): Unit = js.native
   /**
     * selects all items
     *

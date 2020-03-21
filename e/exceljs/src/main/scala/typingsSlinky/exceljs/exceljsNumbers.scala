@@ -1,10 +1,10 @@
 package typingsSlinky.exceljs
 
-import typingsSlinky.exceljs.exceljsMod.FormulaType
-import typingsSlinky.exceljs.exceljsMod.PaperSize
-import typingsSlinky.exceljs.exceljsMod.ReadingOrder
-import typingsSlinky.exceljs.exceljsMod.RelationshipType
-import typingsSlinky.exceljs.exceljsMod.ValueType
+import typingsSlinky.exceljs.mod.FormulaType
+import typingsSlinky.exceljs.mod.PaperSize
+import typingsSlinky.exceljs.mod.ReadingOrder
+import typingsSlinky.exceljs.mod.RelationshipType
+import typingsSlinky.exceljs.mod.ValueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

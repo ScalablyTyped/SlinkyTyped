@@ -4,31 +4,32 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.Anon_Columns
-import typingsSlinky.primereact.Anon_Data
-import typingsSlinky.primereact.Anon_DataField
-import typingsSlinky.primereact.Anon_DataIndex
-import typingsSlinky.primereact.Anon_DataOriginalEvent
-import typingsSlinky.primereact.Anon_DataOriginalEventAny
-import typingsSlinky.primereact.Anon_Delta
-import typingsSlinky.primereact.Anon_DragIndex
-import typingsSlinky.primereact.Anon_First
-import typingsSlinky.primereact.Anon_MultiSortMeta
-import typingsSlinky.primereact.Anon_OriginalEventValue
-import typingsSlinky.primereact.componentsDatatableDataTableMod.DataTableProps
+import typingsSlinky.primereact.AnonColumns
+import typingsSlinky.primereact.AnonData
+import typingsSlinky.primereact.AnonDataField
+import typingsSlinky.primereact.AnonDataIndex
+import typingsSlinky.primereact.AnonDataOriginalEvent
+import typingsSlinky.primereact.AnonDelta
+import typingsSlinky.primereact.AnonDragIndex
+import typingsSlinky.primereact.AnonFirst
+import typingsSlinky.primereact.AnonMultiSortMeta
+import typingsSlinky.primereact.AnonType
+import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.dataTableMod.DataTableProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object DataTable
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.datatableMod.DataTable] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactDatatableMod.DataTable] {
   @JSImport("primereact/datatable", "DataTable")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, id, onContextMenu, rows */
+  /* The following DOM/SVG props were specified: className, id, rows */
   def apply(
     alwaysShowPaginator: js.UndefOr[Boolean] = js.undefined,
     autoLayout: js.UndefOr[Boolean] = js.undefined,
@@ -41,9 +42,10 @@ object DataTable
     defaultSortOrder: Int | Double = null,
     editMode: String = null,
     emptyMessage: String = null,
+    expandableRowGroups: js.UndefOr[Boolean] = js.undefined,
     expandedRows: js.Array[_] = null,
     exportFilename: String = null,
-    exportFunction: /* e */ Anon_DataField => _ = null,
+    exportFunction: /* e */ AnonDataField => _ = null,
     filters: js.Object = null,
     first: Int | Double = null,
     footer: js.Any = null,
@@ -61,38 +63,40 @@ object DataTable
     loadingIcon: String = null,
     metaKeySelection: js.UndefOr[Boolean] = js.undefined,
     multiSortMeta: js.Array[_] = null,
-    onColReorder: /* e */ Anon_Columns => Unit = null,
-    onColumnResizeEnd: /* e */ Anon_Delta => Unit = null,
-    onContextMenuSelectionChange: /* e */ Anon_OriginalEventValue => Unit = null,
+    onColReorder: /* e */ AnonColumns => Unit = null,
+    onColumnResizeEnd: /* e */ AnonDelta => Unit = null,
+    onContextMenu: /* e */ AnonDataOriginalEvent => Unit = null,
+    onContextMenuSelectionChange: /* e */ AnonValue => Unit = null,
     onFilter: /* filters */ js.Array[_] => Unit = null,
-    onPage: /* e */ Anon_First => Unit = null,
-    onRowClick: /* e */ Anon_DataIndex => Unit = null,
-    onRowCollapse: /* e */ Anon_DataOriginalEventAny => Unit = null,
-    onRowDoubleClick: /* e */ Anon_DataIndex => Unit = null,
-    onRowEditCancel: /* e */ Anon_DataIndex => Unit = null,
-    onRowEditInit: /* e */ Anon_DataOriginalEventAny => Unit = null,
-    onRowEditSave: /* e */ Anon_DataOriginalEventAny => Unit = null,
-    onRowExpand: /* e */ Anon_DataOriginalEventAny => Unit = null,
-    onRowReorder: /* e */ Anon_DragIndex => Unit = null,
-    onRowSelect: /* e */ Anon_DataOriginalEvent => Unit = null,
-    onRowToggle: /* e */ Anon_Data => Unit = null,
-    onRowUnselect: /* e */ Anon_DataOriginalEvent => Unit = null,
-    onSelectionChange: /* e */ Anon_OriginalEventValue => Unit = null,
-    onSort: /* e */ Anon_MultiSortMeta => Unit = null,
+    onPage: /* e */ AnonFirst => Unit = null,
+    onRowClick: /* e */ AnonDataIndex => Unit = null,
+    onRowCollapse: /* e */ AnonDataOriginalEvent => Unit = null,
+    onRowDoubleClick: /* e */ AnonDataIndex => Unit = null,
+    onRowEditCancel: /* e */ AnonDataIndex => Unit = null,
+    onRowEditInit: /* e */ AnonDataOriginalEvent => Unit = null,
+    onRowEditSave: /* e */ AnonDataOriginalEvent => Unit = null,
+    onRowExpand: /* e */ AnonDataOriginalEvent => Unit = null,
+    onRowReorder: /* e */ AnonDragIndex => Unit = null,
+    onRowSelect: /* e */ AnonType => Unit = null,
+    onRowToggle: /* e */ AnonData => Unit = null,
+    onRowUnselect: /* e */ AnonType => Unit = null,
+    onSelectionChange: /* e */ AnonValue => Unit = null,
+    onSort: /* e */ AnonMultiSortMeta => Unit = null,
     onValueChange: /* value */ js.Array[_] => Unit = null,
-    onVirtualScroll: /* e */ Anon_First => Unit = null,
+    onVirtualScroll: /* e */ AnonFirst => Unit = null,
     pageLinkSize: Int | Double = null,
     paginator: js.UndefOr[Boolean] = js.undefined,
     paginatorLeft: js.Any = null,
     paginatorPosition: String = null,
     paginatorRight: js.Any = null,
     paginatorTemplate: String = null,
+    removableSort: js.UndefOr[Boolean] = js.undefined,
     reorderableColumns: js.UndefOr[Boolean] = js.undefined,
     resizableColumns: js.UndefOr[Boolean] = js.undefined,
     responsive: js.UndefOr[Boolean] = js.undefined,
     rowClassName: /* rowData */ js.Any => js.Object = null,
     rowEditorValidator: /* rowData */ js.Any => Boolean = null,
-    rowExpansionTemplate: /* data */ js.Any => js.UndefOr[typingsSlinky.react.reactMod._Global_.JSX.Element] = null,
+    rowExpansionTemplate: /* data */ js.Any => js.UndefOr[ReactElement] = null,
     rowGroupFooterTemplate: (/* data */ js.Any, /* index */ Double) => js.UndefOr[TagMod[Any]] = null,
     rowGroupHeaderTemplate: (/* data */ js.Any, /* index */ Double) => js.UndefOr[TagMod[Any]] = null,
     rowGroupMode: String = null,
@@ -116,7 +120,7 @@ object DataTable
     virtualScroll: js.UndefOr[Boolean] = js.undefined,
     virtualScrollDelay: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.datatableMod.DataTable] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDatatableMod.DataTable] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(alwaysShowPaginator)) __obj.updateDynamic("alwaysShowPaginator")(alwaysShowPaginator.asInstanceOf[js.Any])
     if (!js.isUndefined(autoLayout)) __obj.updateDynamic("autoLayout")(autoLayout.asInstanceOf[js.Any])
@@ -129,6 +133,7 @@ object DataTable
     if (defaultSortOrder != null) __obj.updateDynamic("defaultSortOrder")(defaultSortOrder.asInstanceOf[js.Any])
     if (editMode != null) __obj.updateDynamic("editMode")(editMode.asInstanceOf[js.Any])
     if (emptyMessage != null) __obj.updateDynamic("emptyMessage")(emptyMessage.asInstanceOf[js.Any])
+    if (!js.isUndefined(expandableRowGroups)) __obj.updateDynamic("expandableRowGroups")(expandableRowGroups.asInstanceOf[js.Any])
     if (expandedRows != null) __obj.updateDynamic("expandedRows")(expandedRows.asInstanceOf[js.Any])
     if (exportFilename != null) __obj.updateDynamic("exportFilename")(exportFilename.asInstanceOf[js.Any])
     if (exportFunction != null) __obj.updateDynamic("exportFunction")(js.Any.fromFunction1(exportFunction))
@@ -151,6 +156,7 @@ object DataTable
     if (multiSortMeta != null) __obj.updateDynamic("multiSortMeta")(multiSortMeta.asInstanceOf[js.Any])
     if (onColReorder != null) __obj.updateDynamic("onColReorder")(js.Any.fromFunction1(onColReorder))
     if (onColumnResizeEnd != null) __obj.updateDynamic("onColumnResizeEnd")(js.Any.fromFunction1(onColumnResizeEnd))
+    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
     if (onContextMenuSelectionChange != null) __obj.updateDynamic("onContextMenuSelectionChange")(js.Any.fromFunction1(onContextMenuSelectionChange))
     if (onFilter != null) __obj.updateDynamic("onFilter")(js.Any.fromFunction1(onFilter))
     if (onPage != null) __obj.updateDynamic("onPage")(js.Any.fromFunction1(onPage))
@@ -175,6 +181,7 @@ object DataTable
     if (paginatorPosition != null) __obj.updateDynamic("paginatorPosition")(paginatorPosition.asInstanceOf[js.Any])
     if (paginatorRight != null) __obj.updateDynamic("paginatorRight")(paginatorRight.asInstanceOf[js.Any])
     if (paginatorTemplate != null) __obj.updateDynamic("paginatorTemplate")(paginatorTemplate.asInstanceOf[js.Any])
+    if (!js.isUndefined(removableSort)) __obj.updateDynamic("removableSort")(removableSort.asInstanceOf[js.Any])
     if (!js.isUndefined(reorderableColumns)) __obj.updateDynamic("reorderableColumns")(reorderableColumns.asInstanceOf[js.Any])
     if (!js.isUndefined(resizableColumns)) __obj.updateDynamic("resizableColumns")(resizableColumns.asInstanceOf[js.Any])
     if (!js.isUndefined(responsive)) __obj.updateDynamic("responsive")(responsive.asInstanceOf[js.Any])
@@ -206,7 +213,9 @@ object DataTable
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.datatableMod.DataTable] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.datatableMod.DataTable](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactDatatableMod.DataTable] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactDatatableMod.DataTable](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DataTableProps
 }
 

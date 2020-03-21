@@ -1,7 +1,7 @@
 
 # Scala.js typings for material-ui__types
 
-Typings are for version 4.1.1
+Typings are for version 5.0.0
 
 ## Library description:
 Material-UI Types - Utility types for Material-UI.
@@ -10,9 +10,9 @@ Material-UI Types - Utility types for Material-UI.
 | ------------------ | :-------------: |
 | Full name          | @material-ui/types |
 | Keywords           | react, react-component, material design, material-ui, types |
-| # releases         | 9 |
-| # dependents       | 12 |
-| # downloads        | 9274185 |
+| # releases         | 10 |
+| # dependents       | 15 |
+| # downloads        | 13501226 |
 | # stars            | 0 |
 
 ## Links

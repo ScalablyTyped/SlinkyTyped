@@ -5,10 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings.sendrecv
-  - typings.std.stdStrings.sendonly
-  - typings.std.stdStrings.recvonly
-  - typings.std.stdStrings.inactive
+  - typingsSlinky.std.stdStrings.inactive
+  - typingsSlinky.std.stdStrings.recvonly
+  - typingsSlinky.std.stdStrings.sendonly
+  - typingsSlinky.std.stdStrings.sendrecv
+  - typingsSlinky.std.stdStrings.stopped
 */
 trait RTCRtpTransceiverDirection extends js.Object
 
@@ -23,5 +24,7 @@ object RTCRtpTransceiverDirection {
   def sendonly: typingsSlinky.std.stdStrings.sendonly = this.cast("sendonly")
   @scala.inline
   def sendrecv: typingsSlinky.std.stdStrings.sendrecv = this.cast("sendrecv")
+  @scala.inline
+  def stopped: typingsSlinky.std.stdStrings.stopped = this.cast("stopped")
 }
 

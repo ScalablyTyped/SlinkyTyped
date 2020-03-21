@@ -1,6 +1,6 @@
 package typingsSlinky.autolinker
 
-import typingsSlinky.autolinker.distCommonjsHtmlParserStateMod.State
+import typingsSlinky.autolinker.stateMod.State
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,0 +1,283 @@
+package typingsSlinky.rcFieldForm.components
+
+import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLFormElement
+import slinky.core.BuildingComponent
+import slinky.core.ExternalComponentWithAttributesWithRefType
+import slinky.core.ReactComponentClass
+import slinky.core.SyntheticEvent
+import slinky.core.TagMod
+import slinky.web.SyntheticMouseEvent
+import slinky.web.html.form.tag
+import typingsSlinky.rcFieldForm.formMod.FormProps
+import typingsSlinky.rcFieldForm.interfaceMod.FieldData
+import typingsSlinky.rcFieldForm.interfaceMod.FormInstance
+import typingsSlinky.rcFieldForm.interfaceMod.Store
+import typingsSlinky.rcFieldForm.interfaceMod.ValidateErrorEntity
+import typingsSlinky.rcFieldForm.interfaceMod.ValidateMessages
+import typingsSlinky.rcFieldForm.rcFieldFormBooleans.`false`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`additions text`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.`inline`
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.additions
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.all
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.ascending
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.assertive
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.both
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.copy
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.date
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.decimal
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.descending
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.dialog
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.email
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.execute
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.grammar
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.grid
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.horizontal
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.inherit
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.link
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.list
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.listbox
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.location
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.menu
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.mixed
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.move
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.no
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.none
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.numeric
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.off
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.on
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.other
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.page
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.polite
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.popup
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.removals
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.search
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.spelling
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.step
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.tel
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.text
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.time
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.tree
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.url
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.vertical
+import typingsSlinky.rcFieldForm.rcFieldFormStrings.yes
+import typingsSlinky.react.mod.Booleanish
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.react.mod.RefAttributes
+import typingsSlinky.std.Event_
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object Lib
+  extends ExternalComponentWithAttributesWithRefType[tag.type, Ref[js.Any] with js.Object] {
+  @JSImport("rc-field-form/lib", JSImport.Default)
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+  /* The following DOM/SVG props were specified: action, autoComplete, className, dangerouslySetInnerHTML, dir, draggable, hidden, id, lang, method, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, spellCheck, style, suppressContentEditableWarning, tabIndex, target, title */
+  def apply(
+    about: String = null,
+    acceptCharset: String = null,
+    accessKey: String = null,
+    `aria-activedescendant`: String = null,
+    `aria-atomic`: js.UndefOr[Boolean] = js.undefined,
+    `aria-autocomplete`: none | `inline` | list | both = null,
+    `aria-busy`: js.UndefOr[Boolean] = js.undefined,
+    `aria-checked`: Boolean | mixed = null,
+    `aria-colcount`: Int | Double = null,
+    `aria-colindex`: Int | Double = null,
+    `aria-colspan`: Int | Double = null,
+    `aria-controls`: String = null,
+    `aria-current`: Boolean | page | step | location | date | time = null,
+    `aria-describedby`: String = null,
+    `aria-details`: String = null,
+    `aria-disabled`: js.UndefOr[Boolean] = js.undefined,
+    `aria-dropeffect`: none | copy | execute | link | move | popup = null,
+    `aria-errormessage`: String = null,
+    `aria-expanded`: js.UndefOr[Boolean] = js.undefined,
+    `aria-flowto`: String = null,
+    `aria-grabbed`: js.UndefOr[Boolean] = js.undefined,
+    `aria-haspopup`: Boolean | menu | listbox | tree | grid | dialog = null,
+    `aria-hidden`: js.UndefOr[Boolean] = js.undefined,
+    `aria-invalid`: Boolean | grammar | spelling = null,
+    `aria-keyshortcuts`: String = null,
+    `aria-label`: String = null,
+    `aria-labelledby`: String = null,
+    `aria-level`: Int | Double = null,
+    `aria-live`: off | assertive | polite = null,
+    `aria-modal`: js.UndefOr[Boolean] = js.undefined,
+    `aria-multiline`: js.UndefOr[Boolean] = js.undefined,
+    `aria-multiselectable`: js.UndefOr[Boolean] = js.undefined,
+    `aria-orientation`: horizontal | vertical = null,
+    `aria-owns`: String = null,
+    `aria-placeholder`: String = null,
+    `aria-posinset`: Int | Double = null,
+    `aria-pressed`: Boolean | mixed = null,
+    `aria-readonly`: js.UndefOr[Boolean] = js.undefined,
+    `aria-relevant`: additions | (`additions text`) | all | removals | text = null,
+    `aria-required`: js.UndefOr[Boolean] = js.undefined,
+    `aria-roledescription`: String = null,
+    `aria-rowcount`: Int | Double = null,
+    `aria-rowindex`: Int | Double = null,
+    `aria-rowspan`: Int | Double = null,
+    `aria-selected`: js.UndefOr[Boolean] = js.undefined,
+    `aria-setsize`: Int | Double = null,
+    `aria-sort`: none | ascending | descending | other = null,
+    `aria-valuemax`: Int | Double = null,
+    `aria-valuemin`: Int | Double = null,
+    `aria-valuenow`: Int | Double = null,
+    `aria-valuetext`: String = null,
+    autoCapitalize: String = null,
+    autoCorrect: String = null,
+    autoSave: String = null,
+    color: String = null,
+    component: `false` | String | ReactComponentClass[_] = null,
+    contentEditable: Booleanish | inherit = null,
+    contextMenu: String = null,
+    datatype: String = null,
+    defaultChecked: js.UndefOr[Boolean] = js.undefined,
+    defaultValue: String | Double | js.Array[String] = null,
+    encType: String = null,
+    fields: js.Array[FieldData] = null,
+    form: FormInstance = null,
+    initialValues: Store = null,
+    inlist: js.Any = null,
+    inputMode: none | text | tel | url | email | numeric | decimal | search = null,
+    is: String = null,
+    itemID: String = null,
+    itemProp: String = null,
+    itemRef: String = null,
+    itemScope: js.UndefOr[Boolean] = js.undefined,
+    itemType: String = null,
+    noValidate: js.UndefOr[Boolean] = js.undefined,
+    onAuxClick: SyntheticMouseEvent[HTMLFormElement] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget with HTMLFormElement, Event_] => Unit = null,
+    onFieldsChange: (/* changedFields */ js.Array[FieldData], /* allFields */ js.Array[FieldData]) => Unit = null,
+    onFinish: /* values */ Store => Unit = null,
+    onFinishFailed: /* errorInfo */ ValidateErrorEntity => Unit = null,
+    onReset: SyntheticEvent[EventTarget with HTMLFormElement, Event_] => Unit = null,
+    onValuesChange: (/* changedValues */ Store, /* values */ Store) => Unit = null,
+    placeholder: String = null,
+    prefix: String = null,
+    property: String = null,
+    radioGroup: String = null,
+    resource: String = null,
+    results: Int | Double = null,
+    role: String = null,
+    security: String = null,
+    slot: String = null,
+    suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
+    translate: yes | no = null,
+    typeof: String = null,
+    unselectable: on | off = null,
+    validateMessages: ValidateMessages = null,
+    vocab: String = null,
+    _overrides: StringDictionary[js.Any] = null
+  ): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = {
+    val __obj = js.Dynamic.literal()
+    if (about != null) __obj.updateDynamic("about")(about.asInstanceOf[js.Any])
+    if (acceptCharset != null) __obj.updateDynamic("acceptCharset")(acceptCharset.asInstanceOf[js.Any])
+    if (accessKey != null) __obj.updateDynamic("accessKey")(accessKey.asInstanceOf[js.Any])
+    if (`aria-activedescendant` != null) __obj.updateDynamic("aria-activedescendant")(`aria-activedescendant`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-atomic`)) __obj.updateDynamic("aria-atomic")(`aria-atomic`.asInstanceOf[js.Any])
+    if (`aria-autocomplete` != null) __obj.updateDynamic("aria-autocomplete")(`aria-autocomplete`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-busy`)) __obj.updateDynamic("aria-busy")(`aria-busy`.asInstanceOf[js.Any])
+    if (`aria-checked` != null) __obj.updateDynamic("aria-checked")(`aria-checked`.asInstanceOf[js.Any])
+    if (`aria-colcount` != null) __obj.updateDynamic("aria-colcount")(`aria-colcount`.asInstanceOf[js.Any])
+    if (`aria-colindex` != null) __obj.updateDynamic("aria-colindex")(`aria-colindex`.asInstanceOf[js.Any])
+    if (`aria-colspan` != null) __obj.updateDynamic("aria-colspan")(`aria-colspan`.asInstanceOf[js.Any])
+    if (`aria-controls` != null) __obj.updateDynamic("aria-controls")(`aria-controls`.asInstanceOf[js.Any])
+    if (`aria-current` != null) __obj.updateDynamic("aria-current")(`aria-current`.asInstanceOf[js.Any])
+    if (`aria-describedby` != null) __obj.updateDynamic("aria-describedby")(`aria-describedby`.asInstanceOf[js.Any])
+    if (`aria-details` != null) __obj.updateDynamic("aria-details")(`aria-details`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-disabled`)) __obj.updateDynamic("aria-disabled")(`aria-disabled`.asInstanceOf[js.Any])
+    if (`aria-dropeffect` != null) __obj.updateDynamic("aria-dropeffect")(`aria-dropeffect`.asInstanceOf[js.Any])
+    if (`aria-errormessage` != null) __obj.updateDynamic("aria-errormessage")(`aria-errormessage`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-expanded`)) __obj.updateDynamic("aria-expanded")(`aria-expanded`.asInstanceOf[js.Any])
+    if (`aria-flowto` != null) __obj.updateDynamic("aria-flowto")(`aria-flowto`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-grabbed`)) __obj.updateDynamic("aria-grabbed")(`aria-grabbed`.asInstanceOf[js.Any])
+    if (`aria-haspopup` != null) __obj.updateDynamic("aria-haspopup")(`aria-haspopup`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-hidden`)) __obj.updateDynamic("aria-hidden")(`aria-hidden`.asInstanceOf[js.Any])
+    if (`aria-invalid` != null) __obj.updateDynamic("aria-invalid")(`aria-invalid`.asInstanceOf[js.Any])
+    if (`aria-keyshortcuts` != null) __obj.updateDynamic("aria-keyshortcuts")(`aria-keyshortcuts`.asInstanceOf[js.Any])
+    if (`aria-label` != null) __obj.updateDynamic("aria-label")(`aria-label`.asInstanceOf[js.Any])
+    if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
+    if (`aria-level` != null) __obj.updateDynamic("aria-level")(`aria-level`.asInstanceOf[js.Any])
+    if (`aria-live` != null) __obj.updateDynamic("aria-live")(`aria-live`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-modal`)) __obj.updateDynamic("aria-modal")(`aria-modal`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-multiline`)) __obj.updateDynamic("aria-multiline")(`aria-multiline`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-multiselectable`)) __obj.updateDynamic("aria-multiselectable")(`aria-multiselectable`.asInstanceOf[js.Any])
+    if (`aria-orientation` != null) __obj.updateDynamic("aria-orientation")(`aria-orientation`.asInstanceOf[js.Any])
+    if (`aria-owns` != null) __obj.updateDynamic("aria-owns")(`aria-owns`.asInstanceOf[js.Any])
+    if (`aria-placeholder` != null) __obj.updateDynamic("aria-placeholder")(`aria-placeholder`.asInstanceOf[js.Any])
+    if (`aria-posinset` != null) __obj.updateDynamic("aria-posinset")(`aria-posinset`.asInstanceOf[js.Any])
+    if (`aria-pressed` != null) __obj.updateDynamic("aria-pressed")(`aria-pressed`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-readonly`)) __obj.updateDynamic("aria-readonly")(`aria-readonly`.asInstanceOf[js.Any])
+    if (`aria-relevant` != null) __obj.updateDynamic("aria-relevant")(`aria-relevant`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-required`)) __obj.updateDynamic("aria-required")(`aria-required`.asInstanceOf[js.Any])
+    if (`aria-roledescription` != null) __obj.updateDynamic("aria-roledescription")(`aria-roledescription`.asInstanceOf[js.Any])
+    if (`aria-rowcount` != null) __obj.updateDynamic("aria-rowcount")(`aria-rowcount`.asInstanceOf[js.Any])
+    if (`aria-rowindex` != null) __obj.updateDynamic("aria-rowindex")(`aria-rowindex`.asInstanceOf[js.Any])
+    if (`aria-rowspan` != null) __obj.updateDynamic("aria-rowspan")(`aria-rowspan`.asInstanceOf[js.Any])
+    if (!js.isUndefined(`aria-selected`)) __obj.updateDynamic("aria-selected")(`aria-selected`.asInstanceOf[js.Any])
+    if (`aria-setsize` != null) __obj.updateDynamic("aria-setsize")(`aria-setsize`.asInstanceOf[js.Any])
+    if (`aria-sort` != null) __obj.updateDynamic("aria-sort")(`aria-sort`.asInstanceOf[js.Any])
+    if (`aria-valuemax` != null) __obj.updateDynamic("aria-valuemax")(`aria-valuemax`.asInstanceOf[js.Any])
+    if (`aria-valuemin` != null) __obj.updateDynamic("aria-valuemin")(`aria-valuemin`.asInstanceOf[js.Any])
+    if (`aria-valuenow` != null) __obj.updateDynamic("aria-valuenow")(`aria-valuenow`.asInstanceOf[js.Any])
+    if (`aria-valuetext` != null) __obj.updateDynamic("aria-valuetext")(`aria-valuetext`.asInstanceOf[js.Any])
+    if (autoCapitalize != null) __obj.updateDynamic("autoCapitalize")(autoCapitalize.asInstanceOf[js.Any])
+    if (autoCorrect != null) __obj.updateDynamic("autoCorrect")(autoCorrect.asInstanceOf[js.Any])
+    if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
+    if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (component != null) __obj.updateDynamic("component")(component.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
+    if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
+    if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
+    if (!js.isUndefined(defaultChecked)) __obj.updateDynamic("defaultChecked")(defaultChecked.asInstanceOf[js.Any])
+    if (defaultValue != null) __obj.updateDynamic("defaultValue")(defaultValue.asInstanceOf[js.Any])
+    if (encType != null) __obj.updateDynamic("encType")(encType.asInstanceOf[js.Any])
+    if (fields != null) __obj.updateDynamic("fields")(fields.asInstanceOf[js.Any])
+    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
+    if (initialValues != null) __obj.updateDynamic("initialValues")(initialValues.asInstanceOf[js.Any])
+    if (inlist != null) __obj.updateDynamic("inlist")(inlist.asInstanceOf[js.Any])
+    if (inputMode != null) __obj.updateDynamic("inputMode")(inputMode.asInstanceOf[js.Any])
+    if (is != null) __obj.updateDynamic("is")(is.asInstanceOf[js.Any])
+    if (itemID != null) __obj.updateDynamic("itemID")(itemID.asInstanceOf[js.Any])
+    if (itemProp != null) __obj.updateDynamic("itemProp")(itemProp.asInstanceOf[js.Any])
+    if (itemRef != null) __obj.updateDynamic("itemRef")(itemRef.asInstanceOf[js.Any])
+    if (!js.isUndefined(itemScope)) __obj.updateDynamic("itemScope")(itemScope.asInstanceOf[js.Any])
+    if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
+    if (!js.isUndefined(noValidate)) __obj.updateDynamic("noValidate")(noValidate.asInstanceOf[js.Any])
+    if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
+    if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
+    if (onFieldsChange != null) __obj.updateDynamic("onFieldsChange")(js.Any.fromFunction2(onFieldsChange))
+    if (onFinish != null) __obj.updateDynamic("onFinish")(js.Any.fromFunction1(onFinish))
+    if (onFinishFailed != null) __obj.updateDynamic("onFinishFailed")(js.Any.fromFunction1(onFinishFailed))
+    if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
+    if (onValuesChange != null) __obj.updateDynamic("onValuesChange")(js.Any.fromFunction2(onValuesChange))
+    if (placeholder != null) __obj.updateDynamic("placeholder")(placeholder.asInstanceOf[js.Any])
+    if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
+    if (property != null) __obj.updateDynamic("property")(property.asInstanceOf[js.Any])
+    if (radioGroup != null) __obj.updateDynamic("radioGroup")(radioGroup.asInstanceOf[js.Any])
+    if (resource != null) __obj.updateDynamic("resource")(resource.asInstanceOf[js.Any])
+    if (results != null) __obj.updateDynamic("results")(results.asInstanceOf[js.Any])
+    if (role != null) __obj.updateDynamic("role")(role.asInstanceOf[js.Any])
+    if (security != null) __obj.updateDynamic("security")(security.asInstanceOf[js.Any])
+    if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
+    if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
+    if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
+    if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
+    if (unselectable != null) __obj.updateDynamic("unselectable")(unselectable.asInstanceOf[js.Any])
+    if (validateMessages != null) __obj.updateDynamic("validateMessages")(validateMessages.asInstanceOf[js.Any])
+    if (vocab != null) __obj.updateDynamic("vocab")(vocab.asInstanceOf[js.Any])
+    if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
+    super.apply(__obj.asInstanceOf[Props])
+  }
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Ref[js.Any] with js.Object] = new slinky.core.BuildingComponent[slinky.web.html.form.tag.type, typingsSlinky.react.mod.Ref[js.Any] with js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  type Props = FormProps with RefAttributes[FormInstance]
+}
+

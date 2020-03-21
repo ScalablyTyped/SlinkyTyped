@@ -1,7 +1,8 @@
 package typingsSlinky.ol
 
-import typingsSlinky.ol.formatEsriJSONMod.Options
-import typingsSlinky.ol.formatEsriJSONMod.default
+import typingsSlinky.ol.esriJSONMod.Options
+import typingsSlinky.ol.esriJSONMod.default
+import typingsSlinky.ol.iiifinfoMod.ImageInformationResponse
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,76 +17,84 @@ object formatMod extends js.Object {
   
   @js.native
   class GPX ()
-    extends typingsSlinky.ol.formatGPXMod.default {
-    def this(opt_options: typingsSlinky.ol.formatGPXMod.Options) = this()
+    extends typingsSlinky.ol.gpxMod.default {
+    def this(opt_options: typingsSlinky.ol.gpxMod.Options) = this()
   }
   
   @js.native
   class GeoJSON ()
-    extends typingsSlinky.ol.formatGeoJSONMod.default {
-    def this(opt_options: typingsSlinky.ol.formatGeoJSONMod.Options) = this()
+    extends typingsSlinky.ol.geoJSONMod.default {
+    def this(opt_options: typingsSlinky.ol.geoJSONMod.Options) = this()
   }
   
   @js.native
   class IGC ()
-    extends typingsSlinky.ol.formatIGCMod.default {
-    def this(opt_options: typingsSlinky.ol.formatIGCMod.Options) = this()
+    extends typingsSlinky.ol.igcMod.default {
+    def this(opt_options: typingsSlinky.ol.igcMod.Options) = this()
+  }
+  
+  @js.native
+  class IIIFInfo protected ()
+    extends typingsSlinky.ol.iiifinfoMod.default {
+    def this(imageInfo: String) = this()
+    def this(imageInfo: ImageInformationResponse) = this()
   }
   
   @js.native
   class KML ()
-    extends typingsSlinky.ol.formatKMLMod.default {
-    def this(opt_options: typingsSlinky.ol.formatKMLMod.Options) = this()
+    extends typingsSlinky.ol.kmlMod.default {
+    def this(opt_options: typingsSlinky.ol.kmlMod.Options) = this()
   }
   
   @js.native
   class MVT ()
-    extends typingsSlinky.ol.formatMVTMod.default {
-    def this(opt_options: typingsSlinky.ol.formatMVTMod.Options) = this()
+    extends typingsSlinky.ol.mvtMod.default {
+    def this(opt_options: typingsSlinky.ol.mvtMod.Options) = this()
   }
   
   @js.native
   class OWS ()
-    extends typingsSlinky.ol.formatOWSMod.default
+    extends typingsSlinky.ol.owsMod.default
   
   @js.native
   class Polyline ()
-    extends typingsSlinky.ol.formatPolylineMod.default {
-    def this(opt_options: typingsSlinky.ol.formatPolylineMod.Options) = this()
+    extends typingsSlinky.ol.polylineMod.default {
+    def this(opt_options: typingsSlinky.ol.polylineMod.Options) = this()
   }
   
   @js.native
   class TopoJSON ()
-    extends typingsSlinky.ol.formatTopoJSONMod.default {
-    def this(opt_options: typingsSlinky.ol.formatTopoJSONMod.Options) = this()
+    extends typingsSlinky.ol.topoJSONMod.default {
+    def this(opt_options: typingsSlinky.ol.topoJSONMod.Options) = this()
   }
   
   @js.native
   class WFS ()
-    extends typingsSlinky.ol.formatWFSMod.default {
-    def this(opt_options: typingsSlinky.ol.formatWFSMod.Options) = this()
+    extends typingsSlinky.ol.wfsMod.default {
+    def this(opt_options: typingsSlinky.ol.wfsMod.Options) = this()
   }
   
   @js.native
   class WKT ()
-    extends typingsSlinky.ol.formatWKTMod.default {
-    def this(opt_options: typingsSlinky.ol.formatWKTMod.Options) = this()
+    extends typingsSlinky.ol.wktMod.default {
+    def this(opt_options: typingsSlinky.ol.wktMod.Options) = this()
   }
   
   @js.native
   class WMSCapabilities ()
-    extends typingsSlinky.ol.formatWMSCapabilitiesMod.default
+    extends typingsSlinky.ol.wmscapabilitiesMod.default
   
   @js.native
   class WMSGetFeatureInfo ()
-    extends typingsSlinky.ol.formatWMSGetFeatureInfoMod.default {
-    def this(opt_options: typingsSlinky.ol.formatWMSGetFeatureInfoMod.Options) = this()
+    extends typingsSlinky.ol.wmsgetfeatureinfoMod.default {
+    def this(opt_options: typingsSlinky.ol.wmsgetfeatureinfoMod.Options) = this()
   }
   
   @js.native
   class WMTSCapabilities ()
-    extends typingsSlinky.ol.formatWMTSCapabilitiesMod.default
+    extends typingsSlinky.ol.wmtscapabilitiesMod.default
   
-  val GML: typingsSlinky.ol.formatGML3Mod.default = js.native
+  def GML(): Unit = js.native
+  def GML(opt_options: typingsSlinky.ol.gmlbaseMod.Options): Unit = js.native
 }
 

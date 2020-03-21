@@ -11,8 +11,8 @@ Clean up error stack traces
 | Full name          | clean-stack |
 | Keywords           | clean, stack, trace, traces, error, err, electron |
 | # releases         | 4 |
-| # dependents       | 60 |
-| # downloads        | 65807596 |
+| # dependents       | 62 |
+| # downloads        | 75031278 |
 | # stars            | 3 |
 
 ## Links

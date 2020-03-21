@@ -1,7 +1,7 @@
 
 # Scala.js typings for ol
 
-Typings are for version 5.3
+Typings are for version 6.1
 
 ## Library description:
 OpenLayers mapping library
@@ -10,9 +10,9 @@ OpenLayers mapping library
 | ------------------ | :-------------: |
 | Full name          | ol |
 | Keywords           | map, mapping, ol |
-| # releases         | 327 |
-| # dependents       | 163 |
-| # downloads        | 2062854 |
+| # releases         | 347 |
+| # dependents       | 169 |
+| # downloads        | 2126071 |
 | # stars            | 10 |
 
 ## Links

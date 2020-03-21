@@ -10,11 +10,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.mfiles.mfilesNumbers.`1`
-  - typings.mfiles.mfilesNumbers.`2`
-  - typings.mfiles.mfilesNumbers.`3`
-  - typings.mfiles.mfilesNumbers.`4`
-  - typings.mfiles.mfilesNumbers.`5`
+  - typingsSlinky.mfiles.mfilesNumbers.`1`
+  - typingsSlinky.mfiles.mfilesNumbers.`2`
+  - typingsSlinky.mfiles.mfilesNumbers.`3`
+  - typingsSlinky.mfiles.mfilesNumbers.`4`
+  - typingsSlinky.mfiles.mfilesNumbers.`5`
 */
 trait MFTriggerWeekOfMonth extends js.Object
 

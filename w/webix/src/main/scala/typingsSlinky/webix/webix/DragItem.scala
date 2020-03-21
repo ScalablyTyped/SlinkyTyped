@@ -1,8 +1,8 @@
 package typingsSlinky.webix.webix
 
 import org.scalablytyped.runtime.TopLevel
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -16,17 +16,17 @@ trait DragItem extends js.Object {
   @JSName("$dropHTML")
   var $dropHTML_Original: WebixCallback = js.native
   @JSName("$drag")
-  def $drag(source: HTMLElement, ev: Event): String = js.native
+  def $drag(source: HTMLElement, ev: Event_): String = js.native
   @JSName("$dragHTML")
   def $dragHTML(args: js.Any*): js.Any = js.native
   @JSName("$dragIn")
-  def $dragIn(source: HTMLElement, target: HTMLElement, ev: Event): HTMLElement = js.native
+  def $dragIn(source: HTMLElement, target: HTMLElement, ev: Event_): HTMLElement = js.native
   @JSName("$dragMark")
-  def $dragMark(context: js.Any, ev: Event): Boolean = js.native
+  def $dragMark(context: js.Any, ev: Event_): Boolean = js.native
   @JSName("$dragOut")
-  def $dragOut(source: HTMLElement, old_target: HTMLElement, new_target: HTMLElement, ev: Event): Unit = js.native
+  def $dragOut(source: HTMLElement, old_target: HTMLElement, new_target: HTMLElement, ev: Event_): Unit = js.native
   @JSName("$drop")
-  def $drop(source: HTMLElement, target: HTMLElement, ev: Event): Unit = js.native
+  def $drop(source: HTMLElement, target: HTMLElement, ev: Event_): Unit = js.native
   @JSName("$dropAllow")
   def $dropAllow(args: js.Any*): js.Any = js.native
   @JSName("$dropHTML")

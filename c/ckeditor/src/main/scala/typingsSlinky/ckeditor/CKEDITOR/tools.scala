@@ -1,15 +1,15 @@
 package typingsSlinky.ckeditor.CKEDITOR
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.ckeditor.Anon_Aria
-import typingsSlinky.ckeditor.Anon_AriaDisplay
-import typingsSlinky.ckeditor.Anon_Bottom
-import typingsSlinky.ckeditor.Anon_Color
-import typingsSlinky.ckeditor.Anon_ColorStyle
-import typingsSlinky.ckeditor.Anon_Input
+import typingsSlinky.ckeditor.AnonAria
+import typingsSlinky.ckeditor.AnonBottom
+import typingsSlinky.ckeditor.AnonColor
+import typingsSlinky.ckeditor.AnonDisplay
+import typingsSlinky.ckeditor.AnonInput
+import typingsSlinky.ckeditor.AnonStyle
 import typingsSlinky.ckeditor.Window
-import typingsSlinky.std.Document
 import typingsSlinky.std.DocumentFragment
+import typingsSlinky.std.Document_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,12 +27,12 @@ object tools extends js.Object {
   def cssVendorPrefix(property: String, value: String): StringDictionary[String | Double] = js.native
   def cssVendorPrefix(property: String, value: String, asString: Boolean): StringDictionary[String | Double] = js.native
   def defer[T /* <: js.Function */](fn: T): T = js.native
-  def enableHtml5Elements(doc: Document): Unit = js.native
   def enableHtml5Elements(doc: DocumentFragment): Unit = js.native
   def enableHtml5Elements(doc: DocumentFragment, withAppend: Boolean): Unit = js.native
-  def enableHtml5Elements(doc: Document, withAppend: Boolean): Unit = js.native
+  def enableHtml5Elements(doc: Document_): Unit = js.native
+  def enableHtml5Elements(doc: Document_, withAppend: Boolean): Unit = js.native
   def escapeCss(selector: String): String = js.native
-  def eventsBuffer(minInterval: Double, output: js.Function0[Unit], scopeObj: js.Any): Anon_Input = js.native
+  def eventsBuffer(minInterval: Double, output: js.Function0[Unit], scopeObj: js.Any): AnonInput = js.native
   def extend(
     target: StringDictionary[js.Any],
     source: StringDictionary[js.Any],
@@ -56,8 +56,8 @@ object tools extends js.Object {
   def indexOf[T](array: js.Array[T], value: js.Function1[/* el */ T, Boolean]): Double = js.native
   def isArray[T](`object`: js.Any): /* is std.Array<T> */ Boolean = js.native
   def isEmpty(`object`: StringDictionary[js.Any]): Boolean = js.native
-  def keystrokeToArray(lang: StringDictionary[js.Any], keystroke: Double): Anon_Aria = js.native
-  def keystrokeToString(lang: StringDictionary[js.Any], keystroke: Double): Anon_AriaDisplay = js.native
+  def keystrokeToArray(lang: StringDictionary[js.Any], keystroke: Double): AnonAria = js.native
+  def keystrokeToString(lang: StringDictionary[js.Any], keystroke: Double): AnonDisplay = js.native
   def ltrim(str: String): String = js.native
   def normalizeCssText(styleText: String, nativeNormalize: Boolean): String = js.native
   def normalizeHex(styleText: String): String = js.native
@@ -146,9 +146,9 @@ object tools extends js.Object {
   object style extends js.Object {
     @js.native
     object parse extends js.Object {
-      def background(value: String): Anon_Color = js.native
-      def border(value: String): Anon_ColorStyle = js.native
-      def margin(value: String): Anon_Bottom = js.native
+      def background(value: String): AnonColor = js.native
+      def border(value: String): AnonStyle = js.native
+      def margin(value: String): AnonBottom = js.native
     }
     
   }

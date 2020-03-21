@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 
 /* cl_filter_mode */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1140`
-  - typings.webcl.webclNumbers.`0x1141`
+  - typingsSlinky.webcl.webclNumbers.`0x1140`
+  - typingsSlinky.webcl.webclNumbers.`0x1141`
 */
 trait FilterMode extends js.Object
 

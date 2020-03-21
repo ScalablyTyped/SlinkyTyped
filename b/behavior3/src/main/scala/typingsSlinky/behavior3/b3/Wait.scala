@@ -1,6 +1,6 @@
 package typingsSlinky.behavior3.b3
 
-import typingsSlinky.behavior3.Anon_Milliseconds
+import typingsSlinky.behavior3.AnonMilliseconds
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ import scala.scalajs.js.annotation._
   * Creates an instance of Wait.
   */
 class Wait () extends Action {
-  def this(hasMilliseconds: Anon_Milliseconds) = this()
+  def this(hasMilliseconds: AnonMilliseconds) = this()
 }
 

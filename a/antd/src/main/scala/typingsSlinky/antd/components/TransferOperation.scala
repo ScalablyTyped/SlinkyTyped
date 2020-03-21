@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object TransferOperation extends SharedApply_TransferOperationProps757685487 {
+object TransferOperation extends SharedApply_TransferOperationProps1907930677 {
   @JSImport("antd", "Transfer.Operation")
   @js.native
   object componentImport extends js.Object

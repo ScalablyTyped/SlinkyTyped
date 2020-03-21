@@ -1,6 +1,6 @@
 package typingsSlinky.winrt.Windows.ApplicationModel.DataTransfer
 
-import typingsSlinky.winrt.Anon_First
+import typingsSlinky.winrt.AnonFirst
 import typingsSlinky.winrt.Windows.Foundation.Collections.IIterator
 import typingsSlinky.winrt.Windows.Foundation.Collections.IKeyValuePair
 import typingsSlinky.winrt.Windows.Foundation.Collections.IMapView
@@ -32,7 +32,7 @@ object IDataPackagePropertySetView {
     hasKey: String => Boolean,
     lookup: String => js.Any,
     size: Double,
-    split: () => Anon_First[String, js.Any],
+    split: () => AnonFirst[String, js.Any],
     thumbnail: RandomAccessStreamReference,
     title: String
   ): IDataPackagePropertySetView = {

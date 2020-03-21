@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Resource data element
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait DataElement extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait DataElement extends DomainResource {
   /**
     * Contains extended information for property 'copyright'.
     */

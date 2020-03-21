@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A clinical assessment performed when planning treatments and management strategies for a patient
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait ClinicalImpression extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait ClinicalImpression extends DomainResource {
   /**
     * Contains extended information for property 'date'.
     */

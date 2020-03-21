@@ -1,6 +1,6 @@
 package typingsSlinky.kineticjs.Kinetic
 
-import typingsSlinky.kineticjs.Anon_X
+import typingsSlinky.kineticjs.AnonX
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -56,7 +56,7 @@ trait INode extends js.Object {
   def isDraggable(): Boolean = js.native
   def isDragging(): Boolean = js.native
   def isListening(): Boolean = js.native
-  def move(change: Anon_X): Unit = js.native
+  def move(change: AnonX): Unit = js.native
   def moveDown(): Unit = js.native
   def moveTo(newContainer: IContainer): Unit = js.native
   def moveToBottom(): Unit = js.native

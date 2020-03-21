@@ -6,10 +6,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.`*`.tag
-import typingsSlinky.reactour.reactourMod.ReactourProps
-import typingsSlinky.reactour.reactourMod.ReactourStep
-import typingsSlinky.reactour.reactourMod.default
+import slinky.web.html.div.tag
+import typingsSlinky.reactour.mod.ReactourProps
+import typingsSlinky.reactour.mod.ReactourStep
+import typingsSlinky.reactour.mod.default
 import typingsSlinky.reactour.reactourStrings.esc
 import typingsSlinky.reactour.reactourStrings.left
 import typingsSlinky.reactour.reactourStrings.right

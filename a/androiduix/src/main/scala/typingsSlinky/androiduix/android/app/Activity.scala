@@ -4,8 +4,8 @@ import typingsSlinky.androiduix.android.content.Context
 import typingsSlinky.androiduix.android.content.Intent
 import typingsSlinky.androiduix.android.os.Bundle
 import typingsSlinky.androiduix.android.view.KeyEvent
-import typingsSlinky.androiduix.android.view.Menu
 import typingsSlinky.androiduix.android.view.MenuItem
+import typingsSlinky.androiduix.android.view.Menu_
 import typingsSlinky.androiduix.android.view.MotionEvent
 import typingsSlinky.androiduix.android.view.View
 import typingsSlinky.androiduix.android.view.ViewGroup.LayoutParams
@@ -64,7 +64,7 @@ class Activity protected ()
   def getWindow(): Window = js.native
   def hasWindowFocus(): Boolean = js.native
   /* private */ def invalidateOptionsMenu(): js.Any = js.native
-  /* protected */ def invalidateOptionsMenuPopupHelper(menu: Menu): MenuPopupHelper = js.native
+  /* protected */ def invalidateOptionsMenuPopupHelper(menu: Menu_): MenuPopupHelper = js.native
   def isDestroyed(): Boolean = js.native
   def isFinishing(): Boolean = js.native
   def isResumed(): Boolean = js.native
@@ -79,7 +79,7 @@ class Activity protected ()
   override def onContentChanged(): Unit = js.native
   /* protected */ def onCreate(): Unit = js.native
   /* protected */ def onCreate(savedInstanceState: Bundle): Unit = js.native
-  def onCreateOptionsMenu(menu: Menu): Boolean = js.native
+  def onCreateOptionsMenu(menu: Menu_): Boolean = js.native
   /* protected */ def onDestroy(): Unit = js.native
   /* CompleteClass */
   override def onDetachedFromWindow(): Unit = js.native
@@ -92,11 +92,11 @@ class Activity protected ()
   override def onKeyUp(keyCode: Double, event: KeyEvent): Boolean = js.native
   /* protected */ def onNewIntent(intent: Intent): Unit = js.native
   def onOptionsItemSelected(item: MenuItem): Boolean = js.native
-  def onOptionsMenuClosed(menu: Menu): Unit = js.native
+  def onOptionsMenuClosed(menu: Menu_): Unit = js.native
   /* protected */ def onPause(): Unit = js.native
   /* protected */ def onPostCreate(savedInstanceState: Bundle): Unit = js.native
   /* protected */ def onPostResume(): Unit = js.native
-  def onPrepareOptionsMenu(menu: Menu): Boolean = js.native
+  def onPrepareOptionsMenu(menu: Menu_): Boolean = js.native
   /* protected */ def onRestart(): Unit = js.native
   /* protected */ def onRestoreInstanceState(savedInstanceState: Bundle): Unit = js.native
   /* protected */ def onResume(): Unit = js.native

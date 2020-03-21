@@ -1,6 +1,6 @@
 package typingsSlinky.trouter
 
-import typingsSlinky.trouter.trouterMod.HTTPMethod
+import typingsSlinky.trouter.mod.HTTPMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

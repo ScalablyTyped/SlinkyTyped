@@ -34,7 +34,7 @@ object TouchEventInit {
     shiftKey: js.UndefOr[scala.Boolean] = js.undefined,
     targetTouches: js.Array[org.scalajs.dom.raw.Touch] = null,
     touches: js.Array[org.scalajs.dom.raw.Touch] = null,
-    view: org.scalajs.dom.raw.Window = null
+    view: Window_ = null
   ): TouchEventInit = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(altKey)) __obj.updateDynamic("altKey")(altKey.asInstanceOf[js.Any])

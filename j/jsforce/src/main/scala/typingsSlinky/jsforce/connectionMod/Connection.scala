@@ -1,14 +1,14 @@
 package typingsSlinky.jsforce.connectionMod
 
-import typingsSlinky.jsforce.apiAnalyticsMod.Analytics
-import typingsSlinky.jsforce.apiApexMod.Apex
-import typingsSlinky.jsforce.apiChatterMod.Chatter
-import typingsSlinky.jsforce.apiMetadataMod.Metadata
+import typingsSlinky.jsforce.analyticsMod.Analytics
+import typingsSlinky.jsforce.apexMod.Apex
 import typingsSlinky.jsforce.bulkMod.Bulk
 import typingsSlinky.jsforce.cacheMod.Cache
-import typingsSlinky.jsforce.jsforceMod.OAuth2
-import typingsSlinky.jsforce.jsforceMod.Streaming
-import typingsSlinky.jsforce.limitsDashInfoMod.LimitsInfo
+import typingsSlinky.jsforce.chatterMod.Chatter
+import typingsSlinky.jsforce.limitsInfoMod.LimitsInfo
+import typingsSlinky.jsforce.metadataMod.Metadata
+import typingsSlinky.jsforce.mod.OAuth2
+import typingsSlinky.jsforce.mod.Streaming
 import typingsSlinky.jsforce.queryMod.Query
 import typingsSlinky.jsforce.queryMod.QueryResult
 import typingsSlinky.std.Error

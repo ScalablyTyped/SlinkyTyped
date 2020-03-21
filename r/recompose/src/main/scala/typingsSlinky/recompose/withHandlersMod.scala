@@ -1,8 +1,8 @@
 package typingsSlinky.recompose
 
-import typingsSlinky.recompose.recomposeMod.HandleCreators
-import typingsSlinky.recompose.recomposeMod.HandleCreatorsFactory
-import typingsSlinky.recompose.recomposeMod.InferableComponentEnhancerWithProps
+import typingsSlinky.recompose.mod.HandleCreators
+import typingsSlinky.recompose.mod.HandleCreatorsFactory
+import typingsSlinky.recompose.mod.InferableComponentEnhancerWithProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

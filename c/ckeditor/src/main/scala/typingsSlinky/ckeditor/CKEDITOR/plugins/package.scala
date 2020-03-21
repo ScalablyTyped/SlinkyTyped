@@ -5,6 +5,6 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object plugins {
-  type notification = notification_
-  type widget = widget_
+  type notification = typingsSlinky.ckeditor.CKEDITOR.plugins.notification_
+  type widget = typingsSlinky.ckeditor.CKEDITOR.plugins.widget_
 }

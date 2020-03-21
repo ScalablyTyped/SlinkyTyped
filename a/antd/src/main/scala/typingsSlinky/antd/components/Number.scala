@@ -4,9 +4,9 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.libStatisticNumberMod.NumberProps
-import typingsSlinky.antd.libStatisticUtilsMod.Formatter
-import typingsSlinky.antd.libStatisticUtilsMod.valueType
+import typingsSlinky.antd.numberMod.NumberProps
+import typingsSlinky.antd.statisticUtilsMod.Formatter
+import typingsSlinky.antd.statisticUtilsMod.valueType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

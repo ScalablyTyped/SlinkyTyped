@@ -18,7 +18,7 @@ trait AudioTrackList
   var iterator: js.Function0[IterableIterator[org.scalajs.dom.raw.AudioTrack]] = js.native
   val length: Double = js.native
   var onaddtrack: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _]) | Null = js.native
-  var onchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onchange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   var onremovetrack: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.TrackEvent, _]) | Null = js.native
   @JSName("addEventListener")
   def addEventListener_addtrack(
@@ -38,20 +38,17 @@ trait AudioTrackList
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_change(
-    `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
@@ -91,20 +88,17 @@ trait AudioTrackList
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_change(
-    `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_change(`type`: change, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_change(
     `type`: change,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")

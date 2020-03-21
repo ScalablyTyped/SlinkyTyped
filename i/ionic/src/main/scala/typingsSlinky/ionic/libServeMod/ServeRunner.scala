@@ -1,15 +1,14 @@
 package typingsSlinky.ionic.libServeMod
 
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandLineInputs
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandLineOptions
-import typingsSlinky.atIonicUtilsDashNetwork.atIonicUtilsDashNetworkMod.NetworkInterface
-import typingsSlinky.ionic.definitionsMod.CommandMetadata
+import typingsSlinky.ionic.PartialCommandMetadata
 import typingsSlinky.ionic.definitionsMod.DevAppDetails
 import typingsSlinky.ionic.definitionsMod.LabServeDetails
 import typingsSlinky.ionic.definitionsMod.Runner
 import typingsSlinky.ionic.definitionsMod.ServeDetails
 import typingsSlinky.ionic.definitionsMod.ServeOptions
-import typingsSlinky.std.Partial
+import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineInputs
+import typingsSlinky.ionicCliFramework.definitionsMod.CommandLineOptions
+import typingsSlinky.ionicUtilsNetwork.mod.NetworkInterface
 import typingsSlinky.std.Set
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -26,7 +25,7 @@ abstract class ServeRunner[T /* <: ServeOptions */] () extends Runner[T, ServeDe
   def determineEngineFromCommandLine(options: CommandLineOptions): String = js.native
   def displayDevAppMessage(options: T): js.Promise[Unit] = js.native
   def gatherDevAppDetails(options: T, details: ServeDetails): js.Promise[js.UndefOr[DevAppDetails]] = js.native
-  def getCommandMetadata(): js.Promise[Partial[CommandMetadata]] = js.native
+  def getCommandMetadata(): js.Promise[PartialCommandMetadata] = js.native
   def getPkgManagerServeCLI(): PkgManagerServeCLI = js.native
   def getSupportedDevAppPlugins(): js.Promise[Set[String]] = js.native
   def getUsedPorts(options: T, details: ServeDetails): js.Array[Double] = js.native

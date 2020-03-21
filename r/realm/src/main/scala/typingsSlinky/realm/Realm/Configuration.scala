@@ -1,7 +1,6 @@
 package typingsSlinky.realm.Realm
 
-import typingsSlinky.realm.Realm.Sync.SyncConfiguration
-import typingsSlinky.std.Partial
+import typingsSlinky.realm.PartialSyncConfiguration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +23,7 @@ trait Configuration extends js.Object {
   var schema: js.UndefOr[js.Array[ObjectClass | ObjectSchema]] = js.undefined
   var schemaVersion: js.UndefOr[Double] = js.undefined
   var shouldCompactOnLaunch: js.UndefOr[js.Function2[/* totalBytes */ Double, /* usedBytes */ Double, Boolean]] = js.undefined
-  var sync: js.UndefOr[Partial[SyncConfiguration]] = js.undefined
+  var sync: js.UndefOr[PartialSyncConfiguration] = js.undefined
 }
 
 object Configuration {
@@ -41,7 +40,7 @@ object Configuration {
     schema: js.Array[ObjectClass | ObjectSchema] = null,
     schemaVersion: Int | Double = null,
     shouldCompactOnLaunch: (/* totalBytes */ Double, /* usedBytes */ Double) => Boolean = null,
-    sync: Partial[SyncConfiguration] = null
+    sync: PartialSyncConfiguration = null
   ): Configuration = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(deleteRealmIfMigrationNeeded)) __obj.updateDynamic("deleteRealmIfMigrationNeeded")(deleteRealmIfMigrationNeeded.asInstanceOf[js.Any])

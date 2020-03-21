@@ -1,7 +1,7 @@
 package typingsSlinky.parse.nodeMod
 
 import org.scalablytyped.runtime.Instantiable1
-import typingsSlinky.parse.parseMod._Global_.Parse.Attributes
+import typingsSlinky.parse.mod._Global_.Parse.Attributes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -63,12 +63,12 @@ import scala.scalajs.js.annotation._
   */
 @JSImport("parse/node", "Query")
 @js.native
-class Query[T /* <: typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes] */] protected ()
-  extends typingsSlinky.parse.parseMod.Query[T] {
+class Query[T /* <: typingsSlinky.parse.mod._Global_.Parse.Object[Attributes] */] protected ()
+  extends typingsSlinky.parse.mod.Query[T] {
   def this(objectClass: String) = this()
   def this(objectClass: Instantiable1[
         /* args (repeated) */ js.Any, 
-        T | typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes]
+        T | typingsSlinky.parse.mod._Global_.Parse.Object[Attributes]
       ]) = this()
 }
 
@@ -76,9 +76,9 @@ class Query[T /* <: typingsSlinky.parse.parseMod._Global_.Parse.Object[Attribute
 @JSImport("parse/node", "Query")
 @js.native
 object Query extends js.Object {
-  def and[U /* <: typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes] */](args: typingsSlinky.parse.parseMod._Global_.Parse.Query[U]*): typingsSlinky.parse.parseMod._Global_.Parse.Query[U] = js.native
-  def fromJSON[U /* <: typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes] */](className: String, json: js.Any): typingsSlinky.parse.parseMod._Global_.Parse.Query[U] = js.native
-  def nor[U /* <: typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes] */](args: typingsSlinky.parse.parseMod._Global_.Parse.Query[U]*): typingsSlinky.parse.parseMod._Global_.Parse.Query[U] = js.native
-  def or[U /* <: typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes] */](var_args: typingsSlinky.parse.parseMod._Global_.Parse.Query[U]*): typingsSlinky.parse.parseMod._Global_.Parse.Query[U] = js.native
+  def and[U /* <: typingsSlinky.parse.mod._Global_.Parse.Object[Attributes] */](args: typingsSlinky.parse.mod._Global_.Parse.Query[U]*): typingsSlinky.parse.mod._Global_.Parse.Query[U] = js.native
+  def fromJSON[U /* <: typingsSlinky.parse.mod._Global_.Parse.Object[Attributes] */](className: String, json: js.Any): typingsSlinky.parse.mod._Global_.Parse.Query[U] = js.native
+  def nor[U /* <: typingsSlinky.parse.mod._Global_.Parse.Object[Attributes] */](args: typingsSlinky.parse.mod._Global_.Parse.Query[U]*): typingsSlinky.parse.mod._Global_.Parse.Query[U] = js.native
+  def or[U /* <: typingsSlinky.parse.mod._Global_.Parse.Object[Attributes] */](var_args: typingsSlinky.parse.mod._Global_.Parse.Query[U]*): typingsSlinky.parse.mod._Global_.Parse.Query[U] = js.native
 }
 

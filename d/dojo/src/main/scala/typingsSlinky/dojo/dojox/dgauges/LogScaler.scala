@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.dgauges
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojo.Stateful
 import typingsSlinky.dojo.dojoStrings.majorTicks
 import typingsSlinky.dojo.dojoStrings.maximum
@@ -107,7 +107,7 @@ class LogScaler () extends Stateful {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_maximum(
     property: maximum,
@@ -117,7 +117,7 @@ class LogScaler () extends Stateful {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_minimum(
     property: minimum,
@@ -127,7 +127,7 @@ class LogScaler () extends Stateful {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_multiplier(
     property: multiplier,
@@ -137,6 +137,6 @@ class LogScaler () extends Stateful {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

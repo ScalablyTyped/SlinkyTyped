@@ -1,8 +1,8 @@
 package typingsSlinky.winjs.WinJS.UI
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.winjs.Anon_None
+import typingsSlinky.std.Event_
+import typingsSlinky.winjs.AnonNone
 import typingsSlinky.winjs.WinJS.Promise
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -84,7 +84,7 @@ class ContentDialog () extends js.Object {
     * Raised immediately after a dialog is fully shown.
     * @param eventInfo An object that contains information about the event.
     **/
-  def onaftershow(eventInfo: Event): Unit = js.native
+  def onaftershow(eventInfo: Event_): Unit = js.native
   /**
     * Raised just before hiding a dialog. Call preventDefault on this event to stop the dialog from being hidden.
     * @param eventInfo An object that contains information about the event.
@@ -94,7 +94,7 @@ class ContentDialog () extends js.Object {
     * Raised just before showing a dialog. Call preventDefault on this event to stop the dialog from being shown.
     * @param eventInfo An object that contains information about the event.
     **/
-  def onbeforeshow(eventInfo: Event): Unit = js.native
+  def onbeforeshow(eventInfo: Event_): Unit = js.native
   /**
     * Removes an event handler that the addEventListener method registered.
     * @param eventName The name of the event that the event handler is registered for.
@@ -117,7 +117,7 @@ object ContentDialog extends js.Object {
   /**
     * Specifies the result of dismissing the ContentDialog.
     **/
-  var DismissalResult: Anon_None = js.native
+  var DismissalResult: AnonNone = js.native
   /**
     * Indicates that the object is compatibile with declarative processing.
     **/

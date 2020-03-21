@@ -1,13 +1,13 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorFontFamily
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdate
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasing
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasingAnimationEasingUpdate
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BorderColorBorderTypeBorderWidthColor
-import typingsSlinky.echarts.Anon_EmphasisLength
-import typingsSlinky.echarts.Anon_ItemStyleLabelLabelLine
+import typingsSlinky.echarts.AnonAnimationDurationUpdate
+import typingsSlinky.echarts.AnonAnimationEasing
+import typingsSlinky.echarts.AnonAnimationEasingUpdate
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonFontStyle
+import typingsSlinky.echarts.AnonLabelLine
+import typingsSlinky.echarts.AnonLength
+import typingsSlinky.echarts.AnonShadowOffsetY
 import typingsSlinky.echarts.echarts.EChartOption.SeriesFunnel.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-funnel
   */
-@JSName("SeriesFunnel")
 trait SeriesFunnel_ extends js.Object {
   /**
     * Whether to enable animation.
@@ -173,7 +172,7 @@ trait SeriesFunnel_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-funnel.emphasis
     */
-  var emphasis: js.UndefOr[Anon_ItemStyleLabelLabelLine] = js.undefined
+  var emphasis: js.UndefOr[AnonLabelLine] = js.undefined
   /**
     * Horizontal align.
     * Defaults to align center. Can be 'left', 'right', 'center'.
@@ -207,7 +206,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderTypeBorderWidthColor] = js.undefined
+  var itemStyle: js.UndefOr[AnonShadowOffsetY] = js.undefined
   /**
     * Text label of funnel chart, to explain some data information
     * about graphic item like value, name and so on.
@@ -219,7 +218,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorFontFamily] = js.undefined
+  var label: js.UndefOr[AnonFontStyle] = js.undefined
   /**
     * The visual guide line style of label. When
     * [label position](https://echarts.apache.org/en/option.html#series-funnel.label.position)
@@ -228,7 +227,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.labelLine
     */
-  var labelLine: js.UndefOr[Anon_EmphasisLength] = js.undefined
+  var labelLine: js.UndefOr[AnonLength] = js.undefined
   /**
     * Whether to enable highlighting chart when
     * [legend](https://echarts.apache.org/en/option.html#legend)
@@ -247,27 +246,21 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.markArea
     */
-  var markArea: js.UndefOr[
-    Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasingAnimationEasingUpdate
-  ] = js.undefined
+  var markArea: js.UndefOr[AnonAnimationEasingUpdate] = js.undefined
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.markLine
     */
-  var markLine: js.UndefOr[
-    Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasing
-  ] = js.undefined
+  var markLine: js.UndefOr[AnonAnimationEasing] = js.undefined
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.markPoint
     */
-  var markPoint: js.UndefOr[
-    Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdate
-  ] = js.undefined
+  var markPoint: js.UndefOr[AnonAnimationDurationUpdate] = js.undefined
   /**
     * The specified maximum value.
     *
@@ -366,7 +359,7 @@ trait SeriesFunnel_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-funnel.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * @default
     * "funnel"
@@ -388,17 +381,17 @@ object SeriesFunnel_ {
     animationThreshold: Int | Double = null,
     data: js.Array[js.Array[Double] | DataObject | Double] = null,
     datasetIndex: Int | Double = null,
-    emphasis: Anon_ItemStyleLabelLabelLine = null,
+    emphasis: AnonLabelLine = null,
     funnelAlign: String = null,
     gap: Int | Double = null,
     id: String = null,
-    itemStyle: Anon_BorderColorBorderTypeBorderWidthColor = null,
-    label: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorFontFamily = null,
-    labelLine: Anon_EmphasisLength = null,
+    itemStyle: AnonShadowOffsetY = null,
+    label: AnonFontStyle = null,
+    labelLine: AnonLength = null,
     legendHoverLink: js.UndefOr[Boolean] = js.undefined,
-    markArea: Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasingAnimationEasingUpdate = null,
-    markLine: Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdateAnimationEasing = null,
-    markPoint: Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDurationAnimationDurationUpdate = null,
+    markArea: AnonAnimationEasingUpdate = null,
+    markLine: AnonAnimationEasing = null,
+    markPoint: AnonAnimationDurationUpdate = null,
     max: Int | Double = null,
     maxSize: String = null,
     min: Int | Double = null,
@@ -406,7 +399,7 @@ object SeriesFunnel_ {
     name: String = null,
     seriesLayoutBy: String = null,
     sort: String = null,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     `type`: String = null
   ): SeriesFunnel_ = {
     val __obj = js.Dynamic.literal()

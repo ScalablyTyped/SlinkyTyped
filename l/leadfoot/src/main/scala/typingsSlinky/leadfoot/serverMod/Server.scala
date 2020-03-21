@@ -1,7 +1,7 @@
 package typingsSlinky.leadfoot.serverMod
 
 import org.scalablytyped.runtime.Instantiable3
-import typingsSlinky.dojo.promisePromiseMod.Promise
+import typingsSlinky.dojo.promiseMod.Promise
 import typingsSlinky.leadfoot.leadfoot.Capabilities
 import scala.scalajs.js
 import scala.scalajs.js.`|`

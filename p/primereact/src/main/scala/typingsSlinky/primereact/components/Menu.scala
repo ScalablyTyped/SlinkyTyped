@@ -1,19 +1,19 @@
 package typingsSlinky.primereact.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsMenuMenuMod.MenuProps
-import typingsSlinky.primereact.componentsMenuitemMenuItemMod.MenuItem
+import typingsSlinky.primereact.menuItemMod.MenuItem
+import typingsSlinky.primereact.menuMod.MenuProps
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Menu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.menuMod.Menu] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactMenuMod.Menu] {
   @JSImport("primereact/menu", "Menu")
   @js.native
   object componentImport extends js.Object
@@ -25,12 +25,12 @@ object Menu
     autoZIndex: js.UndefOr[Boolean] = js.undefined,
     bazeZIndex: Int | Double = null,
     model: js.Array[MenuItem] = null,
-    onHide: /* e */ Event => Unit = null,
-    onShow: /* e */ Event => Unit = null,
+    onHide: /* e */ Event_ => Unit = null,
+    onShow: /* e */ Event_ => Unit = null,
     popup: js.UndefOr[Boolean] = js.undefined,
     style: js.Object = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.menuMod.Menu] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactMenuMod.Menu] = {
     val __obj = js.Dynamic.literal()
     if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
     if (!js.isUndefined(autoZIndex)) __obj.updateDynamic("autoZIndex")(autoZIndex.asInstanceOf[js.Any])
@@ -43,7 +43,7 @@ object Menu
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.menuMod.Menu] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.menuMod.Menu](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactMenuMod.Menu] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.primereactMenuMod.Menu](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = MenuProps
 }
 

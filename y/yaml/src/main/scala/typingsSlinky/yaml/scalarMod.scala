@@ -1,6 +1,6 @@
 package typingsSlinky.yaml
 
-import typingsSlinky.yaml.yamlMod.ast.ScalarConstructor
+import typingsSlinky.yaml.mod.ast.ScalarConstructor
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

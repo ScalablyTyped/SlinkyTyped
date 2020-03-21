@@ -1,0 +1,54 @@
+package typingsSlinky.reactTypingAnimation.mod
+
+import slinky.core.TagMod
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait TypingProps extends js.Object {
+  var children: TagMod[Any]
+  var className: js.UndefOr[String] = js.undefined
+  var cursor: js.UndefOr[TagMod[Any]] = js.undefined
+  var cursorClassName: js.UndefOr[String] = js.undefined
+  var hideCursor: js.UndefOr[Boolean] = js.undefined
+  var loop: js.UndefOr[Boolean] = js.undefined
+  var onAfterType: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onBeforeType: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onFinishedTyping: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var onStartedTyping: js.UndefOr[js.Function0[Unit]] = js.undefined
+  var speed: js.UndefOr[Double] = js.undefined
+  var startDelay: js.UndefOr[Double] = js.undefined
+}
+
+object TypingProps {
+  @scala.inline
+  def apply(
+    children: TagMod[Any],
+    className: String = null,
+    cursor: TagMod[Any] = null,
+    cursorClassName: String = null,
+    hideCursor: js.UndefOr[Boolean] = js.undefined,
+    loop: js.UndefOr[Boolean] = js.undefined,
+    onAfterType: () => Unit = null,
+    onBeforeType: () => Unit = null,
+    onFinishedTyping: () => Unit = null,
+    onStartedTyping: () => Unit = null,
+    speed: Int | Double = null,
+    startDelay: Int | Double = null
+  ): TypingProps = {
+    val __obj = js.Dynamic.literal(children = children.asInstanceOf[js.Any])
+    if (className != null) __obj.updateDynamic("className")(className.asInstanceOf[js.Any])
+    if (cursor != null) __obj.updateDynamic("cursor")(cursor.asInstanceOf[js.Any])
+    if (cursorClassName != null) __obj.updateDynamic("cursorClassName")(cursorClassName.asInstanceOf[js.Any])
+    if (!js.isUndefined(hideCursor)) __obj.updateDynamic("hideCursor")(hideCursor.asInstanceOf[js.Any])
+    if (!js.isUndefined(loop)) __obj.updateDynamic("loop")(loop.asInstanceOf[js.Any])
+    if (onAfterType != null) __obj.updateDynamic("onAfterType")(js.Any.fromFunction0(onAfterType))
+    if (onBeforeType != null) __obj.updateDynamic("onBeforeType")(js.Any.fromFunction0(onBeforeType))
+    if (onFinishedTyping != null) __obj.updateDynamic("onFinishedTyping")(js.Any.fromFunction0(onFinishedTyping))
+    if (onStartedTyping != null) __obj.updateDynamic("onStartedTyping")(js.Any.fromFunction0(onStartedTyping))
+    if (speed != null) __obj.updateDynamic("speed")(speed.asInstanceOf[js.Any])
+    if (startDelay != null) __obj.updateDynamic("startDelay")(startDelay.asInstanceOf[js.Any])
+    __obj.asInstanceOf[TypingProps]
+  }
+}
+

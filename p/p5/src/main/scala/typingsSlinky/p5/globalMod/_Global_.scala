@@ -1,46 +1,57 @@
 package typingsSlinky.p5.globalMod
 
-import org.scalajs.dom.raw.Event
-import typingsSlinky.p5.p5Mod.ANGLE_MODE
-import typingsSlinky.p5.p5Mod.ARC_MODE
-import typingsSlinky.p5.p5Mod.BEGIN_KIND
-import typingsSlinky.p5.p5Mod.BLEND_MODE
-import typingsSlinky.p5.p5Mod.COLOR_MODE
-import typingsSlinky.p5.p5Mod.CURSOR_TYPE
-import typingsSlinky.p5.p5Mod.Camera
-import typingsSlinky.p5.p5Mod.Color
-import typingsSlinky.p5.p5Mod.DEBUG_MODE
-import typingsSlinky.p5.p5Mod.ELLIPSE_MODE
-import typingsSlinky.p5.p5Mod.END_MODE
-import typingsSlinky.p5.p5Mod.Element
-import typingsSlinky.p5.p5Mod.FILTER_TYPE
-import typingsSlinky.p5.p5Mod.Font
-import typingsSlinky.p5.p5Mod.Geometry
-import typingsSlinky.p5.p5Mod.Graphics
-import typingsSlinky.p5.p5Mod.HORIZ_ALIGN
-import typingsSlinky.p5.p5Mod.IMAGE_MODE
-import typingsSlinky.p5.p5Mod.Image
-import typingsSlinky.p5.p5Mod.MediaElement
-import typingsSlinky.p5.p5Mod.NumberDict
-import typingsSlinky.p5.p5Mod.PrintWriter
-import typingsSlinky.p5.p5Mod.RECT_MODE
-import typingsSlinky.p5.p5Mod.RENDERER
-import typingsSlinky.p5.p5Mod.Renderer
-import typingsSlinky.p5.p5Mod.STROKE_CAP
-import typingsSlinky.p5.p5Mod.STROKE_JOIN
-import typingsSlinky.p5.p5Mod.Shader
-import typingsSlinky.p5.p5Mod.SoundFile
-import typingsSlinky.p5.p5Mod.StringDict
-import typingsSlinky.p5.p5Mod.TEXTURE_MODE
-import typingsSlinky.p5.p5Mod.THE_STYLE
-import typingsSlinky.p5.p5Mod.TYPE
-import typingsSlinky.p5.p5Mod.Table
-import typingsSlinky.p5.p5Mod.UNKNOWN_P5_CONSTANT
-import typingsSlinky.p5.p5Mod.VERT_ALIGN
-import typingsSlinky.p5.p5Mod.Vector
-import typingsSlinky.p5.p5Mod.WRAP_X
-import typingsSlinky.p5.p5Mod.WRAP_Y
-import typingsSlinky.p5.p5Mod.^
+import typingsSlinky.p5.mod.ANGLE_MODE
+import typingsSlinky.p5.mod.ARC_MODE
+import typingsSlinky.p5.mod.BEGIN_KIND
+import typingsSlinky.p5.mod.BEZIER
+import typingsSlinky.p5.mod.BLEND
+import typingsSlinky.p5.mod.BLEND_MODE
+import typingsSlinky.p5.mod.COLOR_MODE
+import typingsSlinky.p5.mod.CURSOR_TYPE
+import typingsSlinky.p5.mod.CURVE
+import typingsSlinky.p5.mod.Camera
+import typingsSlinky.p5.mod.Color
+import typingsSlinky.p5.mod.DEBUG_MODE
+import typingsSlinky.p5.mod.DEGREES
+import typingsSlinky.p5.mod.ELLIPSE_MODE
+import typingsSlinky.p5.mod.END_MODE
+import typingsSlinky.p5.mod.Element
+import typingsSlinky.p5.mod.FILL
+import typingsSlinky.p5.mod.FILTER_TYPE
+import typingsSlinky.p5.mod.Font
+import typingsSlinky.p5.mod.Geometry
+import typingsSlinky.p5.mod.Graphics
+import typingsSlinky.p5.mod.HORIZ_ALIGN
+import typingsSlinky.p5.mod.IMAGE_MODE
+import typingsSlinky.p5.mod.Image
+import typingsSlinky.p5.mod.MediaElement
+import typingsSlinky.p5.mod.NumberDict
+import typingsSlinky.p5.mod.PrintWriter
+import typingsSlinky.p5.mod.RADIANS
+import typingsSlinky.p5.mod.RECT_MODE
+import typingsSlinky.p5.mod.RENDERER_
+import typingsSlinky.p5.mod.ROUND
+import typingsSlinky.p5.mod.Renderer
+import typingsSlinky.p5.mod.SQUARE
+import typingsSlinky.p5.mod.STROKE
+import typingsSlinky.p5.mod.STROKE_CAP
+import typingsSlinky.p5.mod.STROKE_JOIN
+import typingsSlinky.p5.mod.Shader
+import typingsSlinky.p5.mod.SoundFile
+import typingsSlinky.p5.mod.StringDict
+import typingsSlinky.p5.mod.TEXT
+import typingsSlinky.p5.mod.TEXTURE
+import typingsSlinky.p5.mod.TEXTURE_MODE
+import typingsSlinky.p5.mod.THE_STYLE
+import typingsSlinky.p5.mod.TYPE
+import typingsSlinky.p5.mod.Table
+import typingsSlinky.p5.mod.UNKNOWN_P5_CONSTANT
+import typingsSlinky.p5.mod.VERT_ALIGN
+import typingsSlinky.p5.mod.Vector
+import typingsSlinky.p5.mod.WRAP_X
+import typingsSlinky.p5.mod.WRAP_Y
+import typingsSlinky.p5.mod.^
+import typingsSlinky.std.Event_
 import typingsSlinky.std.HTMLCanvasElement
 import typingsSlinky.std.HTMLElement
 import scala.scalajs.js
@@ -50,10 +61,10 @@ import scala.scalajs.js.annotation._
 @JSGlobalScope
 @js.native
 object _Global_ extends js.Object {
-  val ADD: typingsSlinky.p5.p5Mod.ADD = js.native
+  val ADD: typingsSlinky.p5.mod.ADD = js.native
   val ALT: Double = js.native
-  val ARROW: typingsSlinky.p5.p5Mod.ARROW = js.native
-  val AUDIO: typingsSlinky.p5.p5Mod.AUDIO = js.native
+  val ARROW: typingsSlinky.p5.mod.ARROW = js.native
+  val AUDIO: typingsSlinky.p5.mod.AUDIO = js.native
   /**
     *   AUTO allows us to automatically set the width or
     *   height of an element (but not both), based on the
@@ -61,46 +72,51 @@ object _Global_ extends js.Object {
     *   parameter can be passed to the size function as
     *   AUTO, at a time.
     */
-  val AUTO: typingsSlinky.p5.p5Mod.AUTO = js.native
-  val AXES: typingsSlinky.p5.p5Mod.AXES = js.native
+  val AUTO: typingsSlinky.p5.mod.AUTO = js.native
+  val AXES: typingsSlinky.p5.mod.AXES = js.native
   val BACKSPACE: Double = js.native
-  val BASELINE: typingsSlinky.p5.p5Mod.BASELINE = js.native
-  val BEVEL: typingsSlinky.p5.p5Mod.BEVEL = js.native
-  val BEZIER: typingsSlinky.p5.p5Mod.BEZIER = js.native
-  val BLEND: typingsSlinky.p5.p5Mod.BLEND = js.native
-  val BLUR: typingsSlinky.p5.p5Mod.BLUR = js.native
-  val BOLD: typingsSlinky.p5.p5Mod.BOLD = js.native
-  val BOLDITALIC: typingsSlinky.p5.p5Mod.BOLDITALIC = js.native
-  val BOTTOM: typingsSlinky.p5.p5Mod.BOTTOM = js.native
-  val BURN: typingsSlinky.p5.p5Mod.BURN = js.native
-  val CENTER: typingsSlinky.p5.p5Mod.CENTER = js.native
-  val CHORD: typingsSlinky.p5.p5Mod.CHORD = js.native
-  val CLAMP: typingsSlinky.p5.p5Mod.CLAMP = js.native
-  val CLOSE: typingsSlinky.p5.p5Mod.CLOSE = js.native
+  val BASELINE: typingsSlinky.p5.mod.BASELINE = js.native
+  val BEVEL: typingsSlinky.p5.mod.BEVEL = js.native
+  @JSName("BEZIER")
+  val BEZIER_ : BEZIER = js.native
+  @JSName("BLEND")
+  val BLEND_ : BLEND = js.native
+  val BLUR: typingsSlinky.p5.mod.BLUR = js.native
+  val BOLD: typingsSlinky.p5.mod.BOLD = js.native
+  val BOLDITALIC: typingsSlinky.p5.mod.BOLDITALIC = js.native
+  val BOTTOM: typingsSlinky.p5.mod.BOTTOM = js.native
+  val BURN: typingsSlinky.p5.mod.BURN = js.native
+  val CENTER: typingsSlinky.p5.mod.CENTER = js.native
+  val CHORD: typingsSlinky.p5.mod.CHORD = js.native
+  val CLAMP: typingsSlinky.p5.mod.CLAMP = js.native
+  val CLOSE: typingsSlinky.p5.mod.CLOSE = js.native
   val CONTROL: Double = js.native
-  val CORNER: typingsSlinky.p5.p5Mod.CORNER = js.native
-  val CORNERS: typingsSlinky.p5.p5Mod.CORNERS = js.native
-  val CROSS: typingsSlinky.p5.p5Mod.CROSS = js.native
-  val CURVE: typingsSlinky.p5.p5Mod.CURVE = js.native
-  val DARKEST: typingsSlinky.p5.p5Mod.DARKEST = js.native
+  val CORNER: typingsSlinky.p5.mod.CORNER = js.native
+  val CORNERS: typingsSlinky.p5.mod.CORNERS = js.native
+  val CROSS: typingsSlinky.p5.mod.CROSS = js.native
+  @JSName("CURVE")
+  val CURVE_ : CURVE = js.native
+  val DARKEST: typingsSlinky.p5.mod.DARKEST = js.native
   /**
     *   Constant to be used with angleMode() function, to
     *   set the mode which p5.js interprates and
     *   calculates angles (either DEGREES or RADIANS).
     */
-  val DEGREES: typingsSlinky.p5.p5Mod.DEGREES = js.native
+  @JSName("DEGREES")
+  val DEGREES_ : DEGREES = js.native
   val DELETE: Double = js.native
-  val DIFFERENCE: typingsSlinky.p5.p5Mod.DIFFERENCE = js.native
-  val DILATE: typingsSlinky.p5.p5Mod.DILATE = js.native
-  val DODGE: typingsSlinky.p5.p5Mod.DODGE = js.native
+  val DIFFERENCE: typingsSlinky.p5.mod.DIFFERENCE = js.native
+  val DILATE: typingsSlinky.p5.mod.DILATE = js.native
+  val DODGE: typingsSlinky.p5.mod.DODGE = js.native
   val DOWN_ARROW: Double = js.native
   val ENTER: Double = js.native
-  val ERODE: typingsSlinky.p5.p5Mod.ERODE = js.native
+  val ERODE: typingsSlinky.p5.mod.ERODE = js.native
   val ESCAPE: Double = js.native
-  val EXCLUSION: typingsSlinky.p5.p5Mod.EXCLUSION = js.native
-  val FILL: typingsSlinky.p5.p5Mod.FILL = js.native
-  val GRAY: typingsSlinky.p5.p5Mod.GRAY = js.native
-  val GRID: typingsSlinky.p5.p5Mod.GRID = js.native
+  val EXCLUSION: typingsSlinky.p5.mod.EXCLUSION = js.native
+  @JSName("FILL")
+  val FILL_ : FILL = js.native
+  val GRAY: typingsSlinky.p5.mod.GRAY = js.native
+  val GRID: typingsSlinky.p5.mod.GRID = js.native
   /**
     *   HALF_PI is a mathematical constant with the value
     *   1.57079632679489661923. It is half the ratio of
@@ -109,36 +125,37 @@ object _Global_ extends js.Object {
     *   functions sin() and cos().
     */
   val HALF_PI: Double = js.native
-  val HAND: typingsSlinky.p5.p5Mod.HAND = js.native
-  val HARD_LIGHT: typingsSlinky.p5.p5Mod.HARD_LIGHT = js.native
-  val HSB: typingsSlinky.p5.p5Mod.HSB = js.native
-  val HSL: typingsSlinky.p5.p5Mod.HSL = js.native
-  val IMAGE: typingsSlinky.p5.p5Mod.IMAGE = js.native
-  val IMMEDIATE: typingsSlinky.p5.p5Mod.IMMEDIATE = js.native
-  val INVERT: typingsSlinky.p5.p5Mod.INVERT = js.native
-  val ITALIC: typingsSlinky.p5.p5Mod.ITALIC = js.native
-  val LANDSCAPE: typingsSlinky.p5.p5Mod.LANDSCAPE = js.native
-  val LEFT: typingsSlinky.p5.p5Mod.LEFT = js.native
+  val HAND: typingsSlinky.p5.mod.HAND = js.native
+  val HARD_LIGHT: typingsSlinky.p5.mod.HARD_LIGHT = js.native
+  val HSB: typingsSlinky.p5.mod.HSB = js.native
+  val HSL: typingsSlinky.p5.mod.HSL = js.native
+  @JSName("IMAGE")
+  val IMAGE_ : typingsSlinky.p5.mod.IMAGE_ = js.native
+  val IMMEDIATE: typingsSlinky.p5.mod.IMMEDIATE = js.native
+  val INVERT: typingsSlinky.p5.mod.INVERT = js.native
+  val ITALIC: typingsSlinky.p5.mod.ITALIC = js.native
+  val LANDSCAPE: typingsSlinky.p5.mod.LANDSCAPE = js.native
+  val LEFT: typingsSlinky.p5.mod.LEFT = js.native
   val LEFT_ARROW: Double = js.native
-  val LIGHTEST: typingsSlinky.p5.p5Mod.LIGHTEST = js.native
-  val LINEAR: typingsSlinky.p5.p5Mod.LINEAR = js.native
-  val LINES: typingsSlinky.p5.p5Mod.LINES = js.native
-  val LINE_LOOP: typingsSlinky.p5.p5Mod.LINE_LOOP = js.native
-  val LINE_STRIP: typingsSlinky.p5.p5Mod.LINE_STRIP = js.native
-  val MIRROR: typingsSlinky.p5.p5Mod.MIRROR = js.native
-  val MITER: typingsSlinky.p5.p5Mod.MITER = js.native
-  val MOVE: typingsSlinky.p5.p5Mod.MOVE = js.native
-  val MULTIPLY: typingsSlinky.p5.p5Mod.MULTIPLY = js.native
-  val NEAREST: typingsSlinky.p5.p5Mod.NEAREST = js.native
-  val NORMAL: typingsSlinky.p5.p5Mod.NORMAL = js.native
-  val OPAQUE: typingsSlinky.p5.p5Mod.OPAQUE = js.native
-  val OPEN: typingsSlinky.p5.p5Mod.OPEN = js.native
+  val LIGHTEST: typingsSlinky.p5.mod.LIGHTEST = js.native
+  val LINEAR: typingsSlinky.p5.mod.LINEAR = js.native
+  val LINES: typingsSlinky.p5.mod.LINES = js.native
+  val LINE_LOOP: typingsSlinky.p5.mod.LINE_LOOP = js.native
+  val LINE_STRIP: typingsSlinky.p5.mod.LINE_STRIP = js.native
+  val MIRROR: typingsSlinky.p5.mod.MIRROR = js.native
+  val MITER: typingsSlinky.p5.mod.MITER = js.native
+  val MOVE: typingsSlinky.p5.mod.MOVE = js.native
+  val MULTIPLY: typingsSlinky.p5.mod.MULTIPLY = js.native
+  val NEAREST: typingsSlinky.p5.mod.NEAREST = js.native
+  val NORMAL: typingsSlinky.p5.mod.NORMAL = js.native
+  val OPAQUE: typingsSlinky.p5.mod.OPAQUE = js.native
+  val OPEN: typingsSlinky.p5.mod.OPEN = js.native
   val OPTION: Double = js.native
-  val OVERLAY: typingsSlinky.p5.p5Mod.OVERLAY = js.native
+  val OVERLAY: typingsSlinky.p5.mod.OVERLAY = js.native
   /**
     *   The default, two-dimensional renderer.
     */
-  val P2D: typingsSlinky.p5.p5Mod.P2D = js.native
+  val P2D: typingsSlinky.p5.mod.P2D = js.native
   /**
     *   PI is a mathematical constant with the value
     *   3.14159265358979323846. It is the ratio of the
@@ -147,14 +164,14 @@ object _Global_ extends js.Object {
     *   functions sin() and cos().
     */
   val PI: Double = js.native
-  val PIE: typingsSlinky.p5.p5Mod.PIE = js.native
-  val POINTS: typingsSlinky.p5.p5Mod.POINTS = js.native
-  val PORTRAIT: typingsSlinky.p5.p5Mod.PORTRAIT = js.native
-  val POSTERIZE: typingsSlinky.p5.p5Mod.POSTERIZE = js.native
-  val PROJECT: typingsSlinky.p5.p5Mod.PROJECT = js.native
-  val QUADRATIC: typingsSlinky.p5.p5Mod.QUADRATIC = js.native
-  val QUADS: typingsSlinky.p5.p5Mod.QUADS = js.native
-  val QUAD_STRIP: typingsSlinky.p5.p5Mod.QUAD_STRIP = js.native
+  val PIE: typingsSlinky.p5.mod.PIE = js.native
+  val POINTS: typingsSlinky.p5.mod.POINTS = js.native
+  val PORTRAIT: typingsSlinky.p5.mod.PORTRAIT = js.native
+  val POSTERIZE: typingsSlinky.p5.mod.POSTERIZE = js.native
+  val PROJECT: typingsSlinky.p5.mod.PROJECT = js.native
+  val QUADRATIC: typingsSlinky.p5.mod.QUADRATIC = js.native
+  val QUADS: typingsSlinky.p5.mod.QUADS = js.native
+  val QUAD_STRIP: typingsSlinky.p5.mod.QUAD_STRIP = js.native
   /**
     *   QUARTER_PI is a mathematical constant with the
     *   value 0.7853982. It is one quarter the ratio of
@@ -168,21 +185,25 @@ object _Global_ extends js.Object {
     *   set the mode which p5.js interprates and
     *   calculates angles (either RADIANS or DEGREES).
     */
-  val RADIANS: typingsSlinky.p5.p5Mod.RADIANS = js.native
-  val RADIUS: typingsSlinky.p5.p5Mod.RADIUS = js.native
-  val REPEAT: typingsSlinky.p5.p5Mod.REPEAT = js.native
-  val REPLACE: typingsSlinky.p5.p5Mod.REPLACE = js.native
+  @JSName("RADIANS")
+  val RADIANS_ : RADIANS = js.native
+  val RADIUS: typingsSlinky.p5.mod.RADIUS = js.native
+  val REPEAT: typingsSlinky.p5.mod.REPEAT = js.native
+  val REPLACE: typingsSlinky.p5.mod.REPLACE = js.native
   val RETURN: Double = js.native
-  val RGB: typingsSlinky.p5.p5Mod.RGB = js.native
-  val RIGHT: typingsSlinky.p5.p5Mod.RIGHT = js.native
+  val RGB: typingsSlinky.p5.mod.RGB = js.native
+  val RIGHT: typingsSlinky.p5.mod.RIGHT = js.native
   val RIGHT_ARROW: Double = js.native
-  val ROUND: typingsSlinky.p5.p5Mod.ROUND = js.native
-  val SCREEN: typingsSlinky.p5.p5Mod.SCREEN = js.native
+  @JSName("ROUND")
+  val ROUND_ : ROUND = js.native
+  val SCREEN: typingsSlinky.p5.mod.SCREEN = js.native
   val SHIFT: Double = js.native
-  val SOFT_LIGHT: typingsSlinky.p5.p5Mod.SOFT_LIGHT = js.native
-  val SQUARE: typingsSlinky.p5.p5Mod.SQUARE = js.native
-  val STROKE: typingsSlinky.p5.p5Mod.STROKE = js.native
-  val SUBTRACT: typingsSlinky.p5.p5Mod.SUBTRACT = js.native
+  val SOFT_LIGHT: typingsSlinky.p5.mod.SOFT_LIGHT = js.native
+  @JSName("SQUARE")
+  val SQUARE_ : SQUARE = js.native
+  @JSName("STROKE")
+  val STROKE_ : STROKE = js.native
+  val SUBTRACT: typingsSlinky.p5.mod.SUBTRACT = js.native
   val TAB: Double = js.native
   /**
     *   TAU is an alias for TWO_PI, a mathematical
@@ -193,13 +214,15 @@ object _Global_ extends js.Object {
     *   and cos().
     */
   val TAU: Double = js.native
-  val TEXT: typingsSlinky.p5.p5Mod.TEXT = js.native
-  val TEXTURE: typingsSlinky.p5.p5Mod.TEXTURE = js.native
-  val THRESHOLD: typingsSlinky.p5.p5Mod.THRESHOLD = js.native
-  val TOP: typingsSlinky.p5.p5Mod.TOP = js.native
-  val TRIANGLES: typingsSlinky.p5.p5Mod.TRIANGLES = js.native
-  val TRIANGLE_FAN: typingsSlinky.p5.p5Mod.TRIANGLE_FAN = js.native
-  val TRIANGLE_STRIP: typingsSlinky.p5.p5Mod.TRIANGLE_STRIP = js.native
+  @JSName("TEXTURE")
+  val TEXTURE_ : TEXTURE = js.native
+  @JSName("TEXT")
+  val TEXT_ : TEXT = js.native
+  val THRESHOLD: typingsSlinky.p5.mod.THRESHOLD = js.native
+  val TOP: typingsSlinky.p5.mod.TOP = js.native
+  val TRIANGLES: typingsSlinky.p5.mod.TRIANGLES = js.native
+  val TRIANGLE_FAN: typingsSlinky.p5.mod.TRIANGLE_FAN = js.native
+  val TRIANGLE_STRIP: typingsSlinky.p5.mod.TRIANGLE_STRIP = js.native
   /**
     *   TWO_PI is a mathematical constant with the value
     *   6.28318530717958647693. It is twice the ratio of
@@ -209,14 +232,14 @@ object _Global_ extends js.Object {
     */
   val TWO_PI: Double = js.native
   val UP_ARROW: Double = js.native
-  val VIDEO: typingsSlinky.p5.p5Mod.VIDEO = js.native
-  val WAIT: typingsSlinky.p5.p5Mod.WAIT = js.native
+  val VIDEO: typingsSlinky.p5.mod.VIDEO = js.native
+  val WAIT: typingsSlinky.p5.mod.WAIT = js.native
   /**
     *   One of the two render modes in p5.js: P2D (default
     *   renderer) and WEBGL Enables 3D render by
     *   introducing the third dimension: Z
     */
-  val WEBGL: typingsSlinky.p5.p5Mod.WEBGL = js.native
+  val WEBGL: typingsSlinky.p5.mod.WEBGL = js.native
   /**
     *   The system variable accelerationX always contains
     *   the acceleration of the device along the x axis.
@@ -1968,7 +1991,7 @@ object _Global_ extends js.Object {
     *   @param [renderer] either P2D or WEBGL
     */
   def createCanvas(w: Double, h: Double): Renderer = js.native
-  def createCanvas(w: Double, h: Double, renderer: RENDERER): Renderer = js.native
+  def createCanvas(w: Double, h: Double, renderer: RENDERER_): Renderer = js.native
   /**
     *   Creates a new HTML5 <video> element that contains
     *   the audio/video feed from a webcam. The element is
@@ -2070,7 +2093,7 @@ object _Global_ extends js.Object {
     *   @return offscreen graphics buffer
     */
   def createGraphics(w: Double, h: Double): Graphics = js.native
-  def createGraphics(w: Double, h: Double, renderer: RENDERER): Graphics = js.native
+  def createGraphics(w: Double, h: Double, renderer: RENDERER_): Graphics = js.native
   /**
     *   Creates a new p5.Image (the datatype for storing
     *   images). This provides a fresh buffer of pixels to
@@ -4100,7 +4123,7 @@ object _Global_ extends js.Object {
   def loadImage(
     path: String,
     successCallback: js.Function1[/* p1 */ Image, _],
-    failureCallback: js.Function1[/* p1 */ Event, _]
+    failureCallback: js.Function1[/* p1 */ Event_, _]
   ): Image = js.native
   /**
     *   Loads a JSON file from a file or a URL, and
@@ -4258,13 +4281,13 @@ object _Global_ extends js.Object {
     path: String,
     normalize: Boolean,
     successCallback: js.Function1[/* p1 */ Geometry, _],
-    failureCallback: js.Function1[/* p1 */ Event, _]
+    failureCallback: js.Function1[/* p1 */ Event_, _]
   ): Geometry = js.native
   def loadModel(path: String, successCallback: js.Function1[/* p1 */ Geometry, _]): Geometry = js.native
   def loadModel(
     path: String,
     successCallback: js.Function1[/* p1 */ Geometry, _],
-    failureCallback: js.Function1[/* p1 */ typingsSlinky.std.Event, _]
+    failureCallback: js.Function1[/* p1 */ Event_, _]
   ): Geometry = js.native
   /**
     *   Loads the pixel data for the display window into

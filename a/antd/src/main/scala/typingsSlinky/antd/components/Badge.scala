@@ -9,9 +9,8 @@ import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.processing
 import typingsSlinky.antd.antdStrings.success
 import typingsSlinky.antd.antdStrings.warning
-import typingsSlinky.antd.libBadgeMod.BadgeProps
-import typingsSlinky.antd.libBadgeMod.default
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.badgeMod.BadgeProps
+import typingsSlinky.antd.badgeMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +22,7 @@ object Badge
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className */
+  /* The following DOM/SVG props were specified: className, style, title */
   def apply(
     color: String = null,
     count: TagMod[Any] = null,
@@ -34,9 +33,7 @@ object Badge
     scrollNumberPrefixCls: String = null,
     showZero: js.UndefOr[Boolean] = js.undefined,
     status: success | processing | typingsSlinky.antd.antdStrings.default | error | warning = null,
-    style: CSSProperties = null,
     text: TagMod[Any] = null,
-    title: String = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, default] = {
     val __obj = js.Dynamic.literal()
@@ -49,13 +46,11 @@ object Badge
     if (scrollNumberPrefixCls != null) __obj.updateDynamic("scrollNumberPrefixCls")(scrollNumberPrefixCls.asInstanceOf[js.Any])
     if (!js.isUndefined(showZero)) __obj.updateDynamic("showZero")(showZero.asInstanceOf[js.Any])
     if (status != null) __obj.updateDynamic("status")(status.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (text != null) __obj.updateDynamic("text")(text.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libBadgeMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.badgeMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = BadgeProps
 }
 

@@ -1,7 +1,7 @@
 package typingsSlinky.ol.interactionMod
 
-import typingsSlinky.ol.interactionDragRotateAndZoomMod.Options
-import typingsSlinky.ol.interactionDragRotateAndZoomMod.default
+import typingsSlinky.ol.dragRotateAndZoomMod.Options
+import typingsSlinky.ol.dragRotateAndZoomMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

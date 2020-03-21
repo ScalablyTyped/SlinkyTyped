@@ -1,7 +1,7 @@
 
 # Scala.js typings for react-jsonschema-form
 
-Typings are for version 1.6.1
+Typings are for version 1.7.0
 
 ## Library description:
 A simple React component capable of building HTML forms out of a JSON schema.
@@ -10,9 +10,9 @@ A simple React component capable of building HTML forms out of a JSON schema.
 | ------------------ | :-------------: |
 | Full name          | react-jsonschema-form |
 | Keywords           | react, form, json-schema |
-| # releases         | 20 |
-| # dependents       | 115 |
-| # downloads        | 2177073 |
+| # releases         | 22 |
+| # dependents       | 121 |
+| # downloads        | 2247884 |
 | # stars            | 8 |
 
 ## Links

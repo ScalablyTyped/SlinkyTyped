@@ -1,8 +1,8 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.Dictionary
-import typingsSlinky.lodash.lodashMod.ValueKeyIteratee
-import typingsSlinky.lodash.lodashMod.ValueKeyIterateeTypeGuard
+import typingsSlinky.lodash.mod.Dictionary
+import typingsSlinky.lodash.mod.ValueKeyIteratee
+import typingsSlinky.lodash.mod.ValueKeyIterateeTypeGuard
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

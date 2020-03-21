@@ -6,15 +6,15 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.ReactComponentClass
 import slinky.web.html.`*`.tag
-import typingsSlinky.gestalt.gestaltMod.MasonryProps
 import typingsSlinky.gestalt.gestaltStrings.MasonryDefaultLayout
 import typingsSlinky.gestalt.gestaltStrings.MasonryUniformRowLayout
+import typingsSlinky.gestalt.mod.MasonryProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Masonry
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.gestaltMod.Masonry] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.gestalt.mod.Masonry] {
   @JSImport("gestalt", "Masonry")
   @js.native
   object componentImport extends js.Object
@@ -33,7 +33,7 @@ object Masonry
     scrollContainer: () => HTMLElement = null,
     virtualize: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.gestalt.gestaltMod.Masonry] = {
+  ): BuildingComponent[tag.type, typingsSlinky.gestalt.mod.Masonry] = {
     val __obj = js.Dynamic.literal(comp = comp.asInstanceOf[js.Any], items = items.asInstanceOf[js.Any])
     if (columnWidth != null) __obj.updateDynamic("columnWidth")(columnWidth.asInstanceOf[js.Any])
     if (!js.isUndefined(flexible)) __obj.updateDynamic("flexible")(flexible.asInstanceOf[js.Any])

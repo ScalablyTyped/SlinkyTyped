@@ -5,13 +5,13 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_Active
+import typingsSlinky.baseui.AnonActiveKey
+import typingsSlinky.baseui.SharedPropsactiveboolean
 import typingsSlinky.baseui.baseuiStrings.horizontal
 import typingsSlinky.baseui.baseuiStrings.vertical
-import typingsSlinky.baseui.tabsMod.SharedProps
 import typingsSlinky.baseui.tabsMod.TabsOverrides
 import typingsSlinky.baseui.tabsMod.TabsProps
-import typingsSlinky.react.reactMod.Key
+import typingsSlinky.react.mod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,16 +23,18 @@ object Tabs
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: disabled, onChange */
+  /* The following DOM/SVG props were specified: disabled */
   def apply(
     activeKey: Key = null,
+    onChange: /* args */ AnonActiveKey => _ = null,
     orientation: horizontal | vertical = null,
-    overrides: TabsOverrides[SharedProps with Anon_Active] = null,
+    overrides: TabsOverrides[SharedPropsactiveboolean] = null,
     renderAll: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()
     if (activeKey != null) __obj.updateDynamic("activeKey")(activeKey.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (orientation != null) __obj.updateDynamic("orientation")(orientation.asInstanceOf[js.Any])
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     if (!js.isUndefined(renderAll)) __obj.updateDynamic("renderAll")(renderAll.asInstanceOf[js.Any])

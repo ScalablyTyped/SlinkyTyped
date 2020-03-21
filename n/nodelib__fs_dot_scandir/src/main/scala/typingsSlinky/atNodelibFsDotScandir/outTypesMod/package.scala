@@ -1,9 +1,0 @@
-package typingsSlinky.atNodelibFsDotScandir
-
-import scala.scalajs.js
-import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
-
-package object outTypesMod {
-  type Stats = typingsSlinky.node.fsMod.Stats
-}

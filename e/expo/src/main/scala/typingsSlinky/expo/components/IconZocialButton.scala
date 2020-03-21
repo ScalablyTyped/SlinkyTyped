@@ -1,11 +1,11 @@
 package typingsSlinky.expo.components
 
-import typingsSlinky.expo.buildGlobalsDotWebMod.Icon.Zocial.Button
+import typingsSlinky.expo.globalsWebMod.Icon.Zocial.Button
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconZocialButton extends SharedApply_IconButtonProps_1447369838[Button] {
+object IconZocialButton extends SharedApply_IconButtonProps_225706644[Button] {
   @JSImport("expo/build/globals.web", "Icon.Zocial.Button")
   @js.native
   object componentImport extends js.Object

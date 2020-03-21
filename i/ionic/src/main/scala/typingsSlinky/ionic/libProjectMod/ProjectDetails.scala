@@ -4,7 +4,7 @@ import org.scalablytyped.runtime.StringDictionary
 import typingsSlinky.ionic.definitionsMod.IMultiProjectConfig
 import typingsSlinky.ionic.definitionsMod.IProjectConfig
 import typingsSlinky.ionic.definitionsMod.ProjectType
-import typingsSlinky.minimist.minimistMod.ParsedArgs
+import typingsSlinky.minimist.mod.ParsedArgs
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

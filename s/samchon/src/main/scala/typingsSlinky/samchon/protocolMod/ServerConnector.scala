@@ -1,6 +1,6 @@
 package typingsSlinky.samchon.protocolMod
 
-import typingsSlinky.samchon.protocolInvokeIProtocolMod.IProtocol
+import typingsSlinky.samchon.iprotocolMod.IProtocol
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @JSImport("samchon/protocol", "ServerConnector")
 @js.native
 class ServerConnector protected ()
-  extends typingsSlinky.samchon.protocolCommunicatorServerUnderscoreConnectorServerConnectorMod.ServerConnector {
+  extends typingsSlinky.samchon.serverConnectorMod.ServerConnector {
   /**
     * Construct from *listener*.
     *

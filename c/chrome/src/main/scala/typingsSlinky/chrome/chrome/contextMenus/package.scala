@@ -5,8 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object contextMenus {
-  import typingsSlinky.chrome.chrome.events.Event
-  import typingsSlinky.chrome.chrome.tabs.Tab
-
-  type MenuClickedEvent = Event[js.Function2[/* info */ OnClickData, /* tab */ js.UndefOr[Tab], Unit]]
+  type MenuClickedEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function2[
+      /* info */ typingsSlinky.chrome.chrome.contextMenus.OnClickData, 
+      /* tab */ js.UndefOr[typingsSlinky.chrome.chrome.tabs.Tab], 
+      scala.Unit
+    ]
+  ]
 }

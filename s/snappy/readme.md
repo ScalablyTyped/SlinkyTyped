@@ -12,7 +12,7 @@ Nodejs bindings to Google's Snappy compression library
 | Keywords           | - |
 | # releases         | 10 |
 | # dependents       | 58 |
-| # downloads        | 4244014 |
+| # downloads        | 4241338 |
 | # stars            | 6 |
 
 ## Links

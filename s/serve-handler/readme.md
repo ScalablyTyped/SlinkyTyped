@@ -10,9 +10,9 @@ The routing foundation of `serve` and static deployments on Now
 | ------------------ | :-------------: |
 | Full name          | serve-handler |
 | Keywords           | static, deployment, server |
-| # releases         | 65 |
+| # releases         | 64 |
 | # dependents       | 102 |
-| # downloads        | 9349306 |
+| # downloads        | 9468859 |
 | # stars            | 2 |
 
 ## Links

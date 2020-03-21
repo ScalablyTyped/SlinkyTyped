@@ -1,7 +1,7 @@
 
 # Scala.js typings for vscode-languageserver-types
 
-Typings are for version 3.14.0
+Typings are for version 3.15.1
 
 ## Library description:
 Types used by the Language server for node
@@ -10,9 +10,9 @@ Types used by the Language server for node
 | ------------------ | :-------------: |
 | Full name          | vscode-languageserver-types |
 | Keywords           | - |
-| # releases         | 29 |
-| # dependents       | 78 |
-| # downloads        | 18851261 |
+| # releases         | 30 |
+| # dependents       | 79 |
+| # downloads        | 22292628 |
 | # stars            | 0 |
 
 ## Links

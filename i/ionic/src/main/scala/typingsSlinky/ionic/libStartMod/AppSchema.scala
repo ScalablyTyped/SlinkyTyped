@@ -8,8 +8,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.ionic.libStartMod.NewAppSchema
-  - typings.ionic.libStartMod.ClonedAppSchema
+  - typingsSlinky.ionic.libStartMod.NewAppSchema
+  - typingsSlinky.ionic.libStartMod.ClonedAppSchema
 */
 trait AppSchema extends js.Object
 

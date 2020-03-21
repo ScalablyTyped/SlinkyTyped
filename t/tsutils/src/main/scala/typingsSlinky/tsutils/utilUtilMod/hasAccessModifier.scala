@@ -1,7 +1,7 @@
 package typingsSlinky.tsutils.utilUtilMod
 
-import typingsSlinky.typescript.typescriptMod.ClassElement
-import typingsSlinky.typescript.typescriptMod.ParameterDeclaration
+import typingsSlinky.typescript.mod.ClassElement
+import typingsSlinky.typescript.mod.ParameterDeclaration
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

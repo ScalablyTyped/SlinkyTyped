@@ -10,9 +10,9 @@ A powerful PDF tool for NodeJS based on HummusJS
 | ------------------ | :-------------: |
 | Full name          | hummus-recipe |
 | Keywords           | pdf, pdfhummus, hummus |
-| # releases         | 45 |
+| # releases         | 46 |
 | # dependents       | 2 |
-| # downloads        | 193525 |
+| # downloads        | 195771 |
 | # stars            | 1 |
 
 ## Links

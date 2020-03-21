@@ -1,6 +1,6 @@
 package typingsSlinky.boxen
 
-import typingsSlinky.boxen.boxenMod.BorderStyle
+import typingsSlinky.boxen.mod.BorderStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.memcached
 
-import typingsSlinky.memcached.memcachedMod.EventNames
+import typingsSlinky.memcached.mod.EventNames
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

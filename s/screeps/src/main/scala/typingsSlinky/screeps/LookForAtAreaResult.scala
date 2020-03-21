@@ -1,11 +1,26 @@
 package typingsSlinky.screeps
 
+import typingsSlinky.screeps.screepsStrings.constructionSite
+import typingsSlinky.screeps.screepsStrings.creep
+import typingsSlinky.screeps.screepsStrings.deposit
+import typingsSlinky.screeps.screepsStrings.energy
+import typingsSlinky.screeps.screepsStrings.exit
+import typingsSlinky.screeps.screepsStrings.flag
+import typingsSlinky.screeps.screepsStrings.mineral
+import typingsSlinky.screeps.screepsStrings.nuke
+import typingsSlinky.screeps.screepsStrings.powerCreep
+import typingsSlinky.screeps.screepsStrings.resource
+import typingsSlinky.screeps.screepsStrings.ruin
+import typingsSlinky.screeps.screepsStrings.source
+import typingsSlinky.screeps.screepsStrings.structure
+import typingsSlinky.screeps.screepsStrings.terrain
+import typingsSlinky.screeps.screepsStrings.tombstone
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 @js.native
-trait LookForAtAreaResult[T, K /* <: String */] extends js.Object {
+trait LookForAtAreaResult[T, K /* <: exit | structure | source | nuke | deposit | powerCreep | terrain | tombstone | resource | flag | mineral | ruin | constructionSite | creep | energy */] extends js.Object {
   var `type`: K = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.wordwrap
 
-import typingsSlinky.wordwrap.wordwrapMod.Mode
+import typingsSlinky.wordwrap.mod.Mode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

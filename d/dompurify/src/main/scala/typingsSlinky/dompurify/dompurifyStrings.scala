@@ -1,6 +1,6 @@
 package typingsSlinky.dompurify
 
-import typingsSlinky.dompurify.dompurifyMod.HookName
+import typingsSlinky.dompurify.mod.HookName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

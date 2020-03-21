@@ -1,6 +1,5 @@
 package typingsSlinky.baseui.textareaMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import slinky.core.SyntheticEvent
 import slinky.web.SyntheticFocusEvent
@@ -15,7 +14,8 @@ import typingsSlinky.baseui.baseuiStrings.right
 import typingsSlinky.baseui.inputMod.BaseInputOverrides
 import typingsSlinky.baseui.inputMod.BaseInputProps
 import typingsSlinky.baseui.inputMod.SharedProps
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.std.Event_
 import typingsSlinky.std.HTMLTextAreaElement
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -42,7 +42,7 @@ object TextareaProps {
     min: Int | Double = null,
     name: String = null,
     onBlur: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event] => Unit = null,
+    onChange: SyntheticEvent[EventTarget with org.scalajs.dom.raw.HTMLTextAreaElement, Event_] => Unit = null,
     onFocus: SyntheticFocusEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onKeyDown: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,
     onKeyPress: SyntheticKeyboardEvent[org.scalajs.dom.raw.HTMLTextAreaElement] => Unit = null,

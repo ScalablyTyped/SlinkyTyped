@@ -1,6 +1,6 @@
 package typingsSlinky.protobufjs.lightMod
 
-import typingsSlinky.protobufjs.protobufjsMod.ITokenizerHandle
+import typingsSlinky.protobufjs.mod.ITokenizerHandle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

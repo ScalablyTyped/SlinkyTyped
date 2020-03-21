@@ -1,7 +1,7 @@
 
 # Scala.js typings for evernote
 
-Typings are for version 1.25.8
+Typings are for version 2.0
 
 ## Library description:
 Evernote JavaScript SDK
@@ -10,9 +10,9 @@ Evernote JavaScript SDK
 | ------------------ | :-------------: |
 | Full name          | evernote |
 | Keywords           | - |
-| # releases         | 4 |
+| # releases         | 1 |
 | # dependents       | 29 |
-| # downloads        | 34017 |
+| # downloads        | 34208 |
 | # stars            | 8 |
 
 ## Links

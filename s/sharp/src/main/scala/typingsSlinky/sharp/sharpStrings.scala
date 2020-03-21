@@ -1,7 +1,7 @@
 package typingsSlinky.sharp
 
-import typingsSlinky.sharp.sharpMod.Blend
-import typingsSlinky.sharp.sharpMod.TileLayout
+import typingsSlinky.sharp.mod.Blend
+import typingsSlinky.sharp.mod.TileLayout
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.ionic.ionicStrings.capacitor
-  - typings.ionic.ionicStrings.cordova
-  - typings.ionic.ionicStrings.enterprise
+  - typingsSlinky.ionic.ionicStrings.capacitor
+  - typingsSlinky.ionic.ionicStrings.cordova
+  - typingsSlinky.ionic.ionicStrings.enterprise
 */
 trait IntegrationName extends js.Object
 

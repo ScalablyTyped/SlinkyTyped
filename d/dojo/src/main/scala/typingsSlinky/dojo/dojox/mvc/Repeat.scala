@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.mvc
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.children
 import typingsSlinky.dojo.dojoStrings.index
 import typingsSlinky.dojo.dojoStrings.removeRepeatNode
@@ -25,7 +25,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.mvc.Repeat")
 @js.native
-class Repeat () extends _Container {
+class Repeat () extends Container {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -97,7 +97,7 @@ class Repeat () extends _Container {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_index(
     property: index,
@@ -107,7 +107,7 @@ class Repeat () extends _Container {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_removeRepeatNode(
     property: removeRepeatNode,
@@ -117,7 +117,7 @@ class Repeat () extends _Container {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_useParent(
     property: useParent,
@@ -127,6 +127,6 @@ class Repeat () extends _Container {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

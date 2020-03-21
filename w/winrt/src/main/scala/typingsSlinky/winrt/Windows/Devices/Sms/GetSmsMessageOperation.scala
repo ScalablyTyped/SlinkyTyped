@@ -1,6 +1,6 @@
 package typingsSlinky.winrt.Windows.Devices.Sms
 
-import typingsSlinky.winrt.Anon_CompletedGetResultsAsyncOperationCompletedHandler
+import typingsSlinky.winrt.AnonCompletedAsyncOperationCompletedHandler
 import typingsSlinky.winrt.Windows.Foundation.AsyncOperationCompletedHandler
 import typingsSlinky.winrt.Windows.Foundation.AsyncStatus
 import typingsSlinky.winrt.Windows.Foundation.IAsyncInfo
@@ -21,7 +21,7 @@ class GetSmsMessageOperation ()
   /* CompleteClass */
   override var id: Double = js.native
   @JSName("operation")
-  var operation_GetSmsMessageOperation: Anon_CompletedGetResultsAsyncOperationCompletedHandler = js.native
+  var operation_GetSmsMessageOperation: AnonCompletedAsyncOperationCompletedHandler = js.native
   /* CompleteClass */
   override var status: AsyncStatus = js.native
   /* InferMemberOverrides */

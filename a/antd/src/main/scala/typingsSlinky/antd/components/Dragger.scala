@@ -11,17 +11,17 @@ import typingsSlinky.antd.antdStrings.POST
 import typingsSlinky.antd.antdStrings.PUT
 import typingsSlinky.antd.antdStrings.post_
 import typingsSlinky.antd.antdStrings.put_
-import typingsSlinky.antd.libUploadDraggerMod.DraggerProps
-import typingsSlinky.antd.libUploadDraggerMod.default
-import typingsSlinky.antd.libUploadInterfaceMod.HttpRequestHeader
-import typingsSlinky.antd.libUploadInterfaceMod.RcCustomRequestOptions
-import typingsSlinky.antd.libUploadInterfaceMod.RcFile
-import typingsSlinky.antd.libUploadInterfaceMod.ShowUploadListInterface
-import typingsSlinky.antd.libUploadInterfaceMod.UploadFile
-import typingsSlinky.antd.libUploadInterfaceMod.UploadListType
-import typingsSlinky.antd.libUploadInterfaceMod.UploadLocale
-import typingsSlinky.antd.libUploadInterfaceMod.UploadType
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.draggerMod.DraggerProps
+import typingsSlinky.antd.draggerMod.default
+import typingsSlinky.antd.uploadInterfaceMod.HttpRequestHeader
+import typingsSlinky.antd.uploadInterfaceMod.RcCustomRequestOptions
+import typingsSlinky.antd.uploadInterfaceMod.RcFile
+import typingsSlinky.antd.uploadInterfaceMod.ShowUploadListInterface
+import typingsSlinky.antd.uploadInterfaceMod.UploadChangeParam
+import typingsSlinky.antd.uploadInterfaceMod.UploadFile
+import typingsSlinky.antd.uploadInterfaceMod.UploadListType
+import typingsSlinky.antd.uploadInterfaceMod.UploadLocale
+import typingsSlinky.antd.uploadInterfaceMod.UploadType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +33,7 @@ object Dragger
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: accept, className, disabled, id, multiple, name, onChange */
+  /* The following DOM/SVG props were specified: accept, className, disabled, id, multiple, name, style */
   def apply(
     action: String | (js.Function1[/* file */ RcFile, String | js.Thenable[String]]) = null,
     beforeUpload: (/* file */ RcFile, /* FileList */ js.Array[RcFile]) => Boolean | js.Thenable[Unit] = null,
@@ -44,9 +44,11 @@ object Dragger
     fileList: js.Array[UploadFile[_]] = null,
     headers: HttpRequestHeader = null,
     height: Int | Double = null,
+    iconRender: (/* file */ UploadFile[_], /* listType */ js.UndefOr[UploadListType]) => TagMod[Any] = null,
     listType: UploadListType = null,
     locale: UploadLocale = null,
     method: POST | PUT | post_ | put_ = null,
+    onChange: /* info */ UploadChangeParam[UploadFile[_]] => Unit = null,
     onDownload: /* file */ UploadFile[_] => Unit = null,
     onPreview: /* file */ UploadFile[_] => Unit = null,
     onRemove: /* file */ UploadFile[_] => Unit | Boolean | (js.Promise[Unit | Boolean]) = null,
@@ -54,7 +56,6 @@ object Dragger
     prefixCls: String = null,
     previewFile: /* file */ File | Blob => js.Thenable[String] = null,
     showUploadList: Boolean | ShowUploadListInterface = null,
-    style: CSSProperties = null,
     supportServerRender: js.UndefOr[Boolean] = js.undefined,
     transformFile: /* file */ RcFile => String | Blob | File | (js.Thenable[String | Blob | File]) = null,
     `type`: UploadType = null,
@@ -71,9 +72,11 @@ object Dragger
     if (fileList != null) __obj.updateDynamic("fileList")(fileList.asInstanceOf[js.Any])
     if (headers != null) __obj.updateDynamic("headers")(headers.asInstanceOf[js.Any])
     if (height != null) __obj.updateDynamic("height")(height.asInstanceOf[js.Any])
+    if (iconRender != null) __obj.updateDynamic("iconRender")(js.Any.fromFunction2(iconRender))
     if (listType != null) __obj.updateDynamic("listType")(listType.asInstanceOf[js.Any])
     if (locale != null) __obj.updateDynamic("locale")(locale.asInstanceOf[js.Any])
     if (method != null) __obj.updateDynamic("method")(method.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onDownload != null) __obj.updateDynamic("onDownload")(js.Any.fromFunction1(onDownload))
     if (onPreview != null) __obj.updateDynamic("onPreview")(js.Any.fromFunction1(onPreview))
     if (onRemove != null) __obj.updateDynamic("onRemove")(js.Any.fromFunction1(onRemove))
@@ -81,7 +84,6 @@ object Dragger
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
     if (previewFile != null) __obj.updateDynamic("previewFile")(js.Any.fromFunction1(previewFile))
     if (showUploadList != null) __obj.updateDynamic("showUploadList")(showUploadList.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(supportServerRender)) __obj.updateDynamic("supportServerRender")(supportServerRender.asInstanceOf[js.Any])
     if (transformFile != null) __obj.updateDynamic("transformFile")(js.Any.fromFunction1(transformFile))
     if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
@@ -89,7 +91,7 @@ object Dragger
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libUploadDraggerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.draggerMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = DraggerProps
 }
 

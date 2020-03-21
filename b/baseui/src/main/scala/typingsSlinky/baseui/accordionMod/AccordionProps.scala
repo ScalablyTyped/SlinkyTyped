@@ -1,7 +1,8 @@
 package typingsSlinky.baseui.accordionMod
 
 import slinky.core.TagMod
-import typingsSlinky.baseui.Anon_Expanded
+import typingsSlinky.baseui.AnonExpanded
+import typingsSlinky.baseui.SharedPropsexpandednever
 import typingsSlinky.baseui.baseuiStrings.expand
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,8 +13,8 @@ trait AccordionProps extends js.Object {
   var children: TagMod[Any]
   var disabled: js.UndefOr[Boolean] = js.undefined
   var initialState: js.UndefOr[AccordionState] = js.undefined
-  var onChange: js.UndefOr[js.Function1[/* args */ Anon_Expanded, _]] = js.undefined
-  var overrides: js.UndefOr[AccordionOverrides[SharedProps with js.Object]] = js.undefined
+  var onChange: js.UndefOr[js.Function1[/* args */ AnonExpanded, _]] = js.undefined
+  var overrides: js.UndefOr[AccordionOverrides[SharedPropsexpandednever]] = js.undefined
   var renderAll: js.UndefOr[Boolean] = js.undefined
   var renderPanelContent: js.UndefOr[Boolean] = js.undefined
   var stateReducer: js.UndefOr[StateReducer[AccordionState]] = js.undefined
@@ -26,8 +27,8 @@ object AccordionProps {
     accordion: js.UndefOr[Boolean] = js.undefined,
     disabled: js.UndefOr[Boolean] = js.undefined,
     initialState: AccordionState = null,
-    onChange: /* args */ Anon_Expanded => _ = null,
-    overrides: AccordionOverrides[SharedProps with js.Object] = null,
+    onChange: /* args */ AnonExpanded => _ = null,
+    overrides: AccordionOverrides[SharedPropsexpandednever] = null,
     renderAll: js.UndefOr[Boolean] = js.undefined,
     renderPanelContent: js.UndefOr[Boolean] = js.undefined,
     stateReducer: (expand, AccordionState, AccordionState) => AccordionState = null

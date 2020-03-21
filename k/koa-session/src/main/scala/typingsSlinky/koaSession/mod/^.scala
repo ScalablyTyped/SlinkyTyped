@@ -1,0 +1,17 @@
+package typingsSlinky.koaSession.mod
+
+import typingsSlinky.koa.mod.DefaultContext
+import typingsSlinky.koa.mod.DefaultState
+import typingsSlinky.koa.mod.Middleware
+import typingsSlinky.koaSession.Partialopts
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("koa-session", JSImport.Namespace)
+@js.native
+object ^ extends js.Object {
+  def apply(CONFIG: Partialopts, app: typingsSlinky.koa.mod.^[DefaultState, DefaultContext]): Middleware[DefaultState, DefaultContext] = js.native
+  def apply(app: typingsSlinky.koa.mod.^[DefaultState, DefaultContext]): Middleware[DefaultState, DefaultContext] = js.native
+}
+

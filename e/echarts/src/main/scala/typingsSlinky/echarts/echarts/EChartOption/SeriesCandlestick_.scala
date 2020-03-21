@@ -1,11 +1,11 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.Anon_AnimationAnimationDelay
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdate
-import typingsSlinky.echarts.Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDuration
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BorderColorBorderColor0
-import typingsSlinky.echarts.Anon_ItemStyleAnonBorderColorBorderColor0
+import typingsSlinky.echarts.AnonAnimationDelay
+import typingsSlinky.echarts.AnonAnimationDelayUpdate
+import typingsSlinky.echarts.AnonAnimationDuration
+import typingsSlinky.echarts.AnonBorderColor0
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonItemStyleAnonBorderColor0
 import typingsSlinky.echarts.echarts.EChartOption.SeriesCandlestick.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -53,7 +53,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-candlestick
   */
-@JSName("SeriesCandlestick")
 trait SeriesCandlestick_ extends js.Object {
   /**
     * Delay before updating the first animation, which supports callback
@@ -208,7 +207,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.emphasis
     */
-  var emphasis: js.UndefOr[Anon_ItemStyleAnonBorderColorBorderColor0] = js.undefined
+  var emphasis: js.UndefOr[AnonItemStyleAnonBorderColor0] = js.undefined
   /**
     * Define what is encoded to for each dimension of `data`.
     * For example:
@@ -270,7 +269,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderColor0] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderColor0] = js.undefined
   /**
     * Whether to enable the optimization of large-scale data.
     * It could be set when large data causes performance problem.
@@ -332,21 +331,21 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.markArea
     */
-  var markArea: js.UndefOr[Anon_AnimationAnimationDelayAnimationDelayUpdate] = js.undefined
+  var markArea: js.UndefOr[AnonAnimationDelayUpdate] = js.undefined
   /**
     * Use a line in the chart to illustrate.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.markLine
     */
-  var markLine: js.UndefOr[Anon_AnimationAnimationDelay] = js.undefined
+  var markLine: js.UndefOr[AnonAnimationDelay] = js.undefined
   /**
     * Mark point in a chart.
     *
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.markPoint
     */
-  var markPoint: js.UndefOr[Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDuration] = js.undefined
+  var markPoint: js.UndefOr[AnonAnimationDuration] = js.undefined
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -414,7 +413,7 @@ trait SeriesCandlestick_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-candlestick.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * @default
     * "candlestick"
@@ -486,24 +485,24 @@ object SeriesCandlestick_ {
     coordinateSystem: String = null,
     data: js.Array[js.Array[Double | DataObject]] = null,
     dimensions: js.Array[_] = null,
-    emphasis: Anon_ItemStyleAnonBorderColorBorderColor0 = null,
+    emphasis: AnonItemStyleAnonBorderColor0 = null,
     encode: js.Object = null,
     hoverAnimation: js.UndefOr[Boolean] = js.undefined,
     id: String = null,
-    itemStyle: Anon_BorderColorBorderColor0 = null,
+    itemStyle: AnonBorderColor0 = null,
     large: js.UndefOr[Boolean] = js.undefined,
     largeThreshold: Int | Double = null,
     layout: String = null,
     legendHoverLink: js.UndefOr[Boolean] = js.undefined,
-    markArea: Anon_AnimationAnimationDelayAnimationDelayUpdate = null,
-    markLine: Anon_AnimationAnimationDelay = null,
-    markPoint: Anon_AnimationAnimationDelayAnimationDelayUpdateAnimationDuration = null,
+    markArea: AnonAnimationDelayUpdate = null,
+    markLine: AnonAnimationDelay = null,
+    markPoint: AnonAnimationDuration = null,
     name: String = null,
     progressive: Int | Double = null,
     progressiveChunkMode: String = null,
     progressiveThreshold: Int | Double = null,
     silent: js.UndefOr[Boolean] = js.undefined,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     `type`: String = null,
     xAxisIndex: Int | Double = null,
     yAxisIndex: Int | Double = null,

@@ -1,19 +1,19 @@
 package typingsSlinky.primereact.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsContextmenuContextMenuMod.ContextMenuProps
-import typingsSlinky.primereact.componentsMenuitemMenuItemMod.MenuItem
+import typingsSlinky.primereact.contextMenuMod.ContextMenuProps
+import typingsSlinky.primereact.menuItemMod.MenuItem
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ContextMenu
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.contextmenuMod.ContextMenu] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactMod.ContextMenu] {
   @JSImport("primereact/contextmenu", "ContextMenu")
   @js.native
   object componentImport extends js.Object
@@ -23,18 +23,18 @@ object ContextMenu
   def apply(
     appendTo: js.Any = null,
     autoZIndex: js.UndefOr[Boolean] = js.undefined,
-    bazeZIndex: Int | Double = null,
+    baseZIndex: Int | Double = null,
     global: js.UndefOr[Boolean] = js.undefined,
     model: js.Array[MenuItem] = null,
-    onHide: /* e */ Event => Unit = null,
-    onShow: /* e */ Event => Unit = null,
+    onHide: /* e */ Event_ => Unit = null,
+    onShow: /* e */ Event_ => Unit = null,
     style: js.Object = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.contextmenuMod.ContextMenu] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactMod.ContextMenu] = {
     val __obj = js.Dynamic.literal()
     if (appendTo != null) __obj.updateDynamic("appendTo")(appendTo.asInstanceOf[js.Any])
     if (!js.isUndefined(autoZIndex)) __obj.updateDynamic("autoZIndex")(autoZIndex.asInstanceOf[js.Any])
-    if (bazeZIndex != null) __obj.updateDynamic("bazeZIndex")(bazeZIndex.asInstanceOf[js.Any])
+    if (baseZIndex != null) __obj.updateDynamic("baseZIndex")(baseZIndex.asInstanceOf[js.Any])
     if (!js.isUndefined(global)) __obj.updateDynamic("global")(global.asInstanceOf[js.Any])
     if (model != null) __obj.updateDynamic("model")(model.asInstanceOf[js.Any])
     if (onHide != null) __obj.updateDynamic("onHide")(js.Any.fromFunction1(onHide))
@@ -43,7 +43,7 @@ object ContextMenu
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.contextmenuMod.ContextMenu] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.contextmenuMod.ContextMenu](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactMod.ContextMenu] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.primereactMod.ContextMenu](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ContextMenuProps
 }
 

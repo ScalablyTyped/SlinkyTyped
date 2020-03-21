@@ -1,8 +1,8 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.List
-import typingsSlinky.lodash.lodashMod.MemoIteratorCappedRight
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.MemoIteratorCappedRight
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 @js.native
 trait LodashReduceRight extends js.Object {
   def apply[TResult](callback: __, accumulator: TResult): LodashReduceRight1x2[TResult] = js.native
-  def apply[T](callback: __, accumulator: __): LodashReduceRight1x4[T] = js.native
+  def apply[T](callback: __, accumulator: __): LodashReduceRight2x4[T] = js.native
   def apply[T /* <: js.Object */](callback: __, accumulator: __, collection: T): LodashReduceRight3x4[T] = js.native
   def apply[T](callback: __, accumulator: __, collection: js.Array[T]): LodashReduceRight1x4[T] = js.native
   def apply[T](callback: __, accumulator: __, collection: List[T]): LodashReduceRight2x4[T] = js.native
@@ -21,7 +21,7 @@ trait LodashReduceRight extends js.Object {
       TResult
     ],
     accumulator: TResult
-  ): TResult = js.native
+  ): LodashReduceRight3x3[T, TResult] = js.native
   def apply[T /* <: js.Object */, TResult](
     callback: MemoIteratorCappedRight[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 
@@ -32,7 +32,7 @@ trait LodashReduceRight extends js.Object {
   ): TResult = js.native
   def apply[T, TResult](callback: MemoIteratorCappedRight[T, TResult], accumulator: TResult, collection: js.Array[T]): TResult = js.native
   def apply[T, TResult](callback: MemoIteratorCappedRight[T, TResult], accumulator: TResult, collection: List[T]): TResult = js.native
-  def apply[T, TResult](callback: MemoIteratorCappedRight[T, TResult], accumulator: __): LodashReduceRight2x5[TResult] = js.native
+  def apply[T, TResult](callback: MemoIteratorCappedRight[T, TResult], accumulator: __): LodashReduceRight1x5[TResult] = js.native
   def apply[T /* <: js.Object */, TResult](
     callback: MemoIteratorCappedRight[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ js.Any, 

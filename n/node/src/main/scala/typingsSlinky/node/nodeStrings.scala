@@ -4,9 +4,9 @@ import typingsSlinky.node.NodeJS.MultipleResolveType
 import typingsSlinky.node.NodeJS.Platform
 import typingsSlinky.node.NodeJS.Signals
 import typingsSlinky.node.bufferMod.TranscodeEncoding
-import typingsSlinky.node.childUnderscoreProcessMod.SerializationType
-import typingsSlinky.node.childUnderscoreProcessMod.StdioNull
-import typingsSlinky.node.childUnderscoreProcessMod._StdioOptions
+import typingsSlinky.node.childProcessMod.SerializationType
+import typingsSlinky.node.childProcessMod.StdioNull
+import typingsSlinky.node.childProcessMod._StdioOptions
 import typingsSlinky.node.cryptoMod.CipherCCMTypes
 import typingsSlinky.node.cryptoMod.CipherGCMTypes
 import typingsSlinky.node.cryptoMod.ECDHKeyFormat
@@ -19,7 +19,9 @@ import typingsSlinky.node.cryptoMod.Utf8AsciiBinaryEncoding
 import typingsSlinky.node.cryptoMod.Utf8AsciiLatin1Encoding
 import typingsSlinky.node.dgramMod.SocketType
 import typingsSlinky.node.fsMod.symlink.Type
+import typingsSlinky.node.perfHooksMod.EntryType
 import typingsSlinky.node.tlsMod.SecureVersion
+import typingsSlinky.node.utilMod.Style
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -506,9 +508,6 @@ object nodeStrings {
   sealed trait SchemaDotgetDomains extends js.Object
   
   @js.native
-  sealed trait SignalConstants extends js.Object
-  
-  @js.native
   sealed trait TLSv1 extends SecureVersion
   
   @js.native
@@ -582,6 +581,9 @@ object nodeStrings {
   sealed trait beforeExit extends js.Object
   
   @js.native
+  sealed trait bigint extends Style
+  
+  @js.native
   sealed trait binary
     extends BufferEncoding
        with HexBase64BinaryEncoding
@@ -589,7 +591,13 @@ object nodeStrings {
        with Utf8AsciiBinaryEncoding
   
   @js.native
+  sealed trait boolean extends Style
+  
+  @js.native
   sealed trait buffer_ extends js.Object
+  
+  @js.native
+  sealed trait `chacha20-poly1305` extends CipherCCMTypes
   
   @js.native
   sealed trait change extends js.Object
@@ -620,6 +628,9 @@ object nodeStrings {
   
   @js.native
   sealed trait data extends js.Object
+  
+  @js.native
+  sealed trait date extends Style
   
   @js.native
   sealed trait der extends KeyFormat
@@ -664,6 +675,12 @@ object nodeStrings {
   sealed trait freebsd extends Platform
   
   @js.native
+  sealed trait function extends EntryType
+  
+  @js.native
+  sealed trait gc extends EntryType
+  
+  @js.native
   sealed trait get extends js.Object
   
   @js.native
@@ -677,6 +694,18 @@ object nodeStrings {
     extends BufferEncoding
        with HexBase64BinaryEncoding
        with HexBase64Latin1Encoding
+  
+  @js.native
+  sealed trait http extends EntryType
+  
+  @js.native
+  sealed trait http2 extends EntryType
+  
+  @js.native
+  sealed trait httpColon extends js.Object
+  
+  @js.native
+  sealed trait httpsColon extends js.Object
   
   @js.native
   sealed trait hybrid extends ECDHKeyFormat
@@ -732,7 +761,16 @@ object nodeStrings {
   sealed trait lookup extends js.Object
   
   @js.native
+  sealed trait mark extends EntryType
+  
+  @js.native
+  sealed trait measure extends EntryType
+  
+  @js.native
   sealed trait message extends js.Object
+  
+  @js.native
+  sealed trait module extends Style
   
   @js.native
   sealed trait multipleResolves extends js.Object
@@ -745,6 +783,15 @@ object nodeStrings {
   
   @js.native
   sealed trait newSession extends js.Object
+  
+  @js.native
+  sealed trait node extends EntryType
+  
+  @js.native
+  sealed trait `null` extends Style
+  
+  @js.native
+  sealed trait number extends Style
   
   @js.native
   sealed trait online extends js.Object
@@ -787,6 +834,9 @@ object nodeStrings {
   
   @js.native
   sealed trait readable extends js.Object
+  
+  @js.native
+  sealed trait regexp extends Style
   
   @js.native
   sealed trait reject extends MultipleResolveType
@@ -852,6 +902,9 @@ object nodeStrings {
   sealed trait socket extends js.Object
   
   @js.native
+  sealed trait special extends Style
+  
+  @js.native
   sealed trait spki extends js.Object
   
   @js.native
@@ -861,7 +914,13 @@ object nodeStrings {
   sealed trait streamClosed extends js.Object
   
   @js.native
+  sealed trait string extends Style
+  
+  @js.native
   sealed trait sunos extends Platform
+  
+  @js.native
+  sealed trait symbol extends Style
   
   @js.native
   sealed trait timeout extends js.Object
@@ -891,6 +950,9 @@ object nodeStrings {
   
   @js.native
   sealed trait uncompressed extends ECDHKeyFormat
+  
+  @js.native
+  sealed trait undefined extends Style
   
   @js.native
   sealed trait unhandledRejection extends js.Object
@@ -1249,8 +1311,6 @@ object nodeStrings {
   @scala.inline
   def SchemaDotgetDomains: SchemaDotgetDomains = "Schema.getDomains".asInstanceOf[SchemaDotgetDomains]
   @scala.inline
-  def SignalConstants: SignalConstants = "SignalConstants".asInstanceOf[SignalConstants]
-  @scala.inline
   def TLSv1: TLSv1 = "TLSv1".asInstanceOf[TLSv1]
   @scala.inline
   def TLSv1Dot1: TLSv1Dot1 = "TLSv1.1".asInstanceOf[TLSv1Dot1]
@@ -1295,9 +1355,15 @@ object nodeStrings {
   @scala.inline
   def beforeExit: beforeExit = "beforeExit".asInstanceOf[beforeExit]
   @scala.inline
+  def bigint: bigint = "bigint".asInstanceOf[bigint]
+  @scala.inline
   def binary: binary = "binary".asInstanceOf[binary]
   @scala.inline
+  def boolean: boolean = "boolean".asInstanceOf[boolean]
+  @scala.inline
   def buffer_ : buffer_ = "buffer".asInstanceOf[buffer_]
+  @scala.inline
+  def `chacha20-poly1305`: `chacha20-poly1305` = "chacha20-poly1305".asInstanceOf[`chacha20-poly1305`]
   @scala.inline
   def change: change = "change".asInstanceOf[change]
   @scala.inline
@@ -1318,6 +1384,8 @@ object nodeStrings {
   def darwin: darwin = "darwin".asInstanceOf[darwin]
   @scala.inline
   def data: data = "data".asInstanceOf[data]
+  @scala.inline
+  def date: date = "date".asInstanceOf[date]
   @scala.inline
   def der: der = "der".asInstanceOf[der]
   @scala.inline
@@ -1347,6 +1415,10 @@ object nodeStrings {
   @scala.inline
   def freebsd: freebsd = "freebsd".asInstanceOf[freebsd]
   @scala.inline
+  def function: function = "function".asInstanceOf[function]
+  @scala.inline
+  def gc: gc = "gc".asInstanceOf[gc]
+  @scala.inline
   def get: get = "get".asInstanceOf[get]
   @scala.inline
   def goaway: goaway = "goaway".asInstanceOf[goaway]
@@ -1354,6 +1426,14 @@ object nodeStrings {
   def headers: headers = "headers".asInstanceOf[headers]
   @scala.inline
   def hex: hex = "hex".asInstanceOf[hex]
+  @scala.inline
+  def http: http = "http".asInstanceOf[http]
+  @scala.inline
+  def http2: http2 = "http2".asInstanceOf[http2]
+  @scala.inline
+  def httpColon: httpColon = "http:".asInstanceOf[httpColon]
+  @scala.inline
+  def httpsColon: httpsColon = "https:".asInstanceOf[httpsColon]
   @scala.inline
   def hybrid: hybrid = "hybrid".asInstanceOf[hybrid]
   @scala.inline
@@ -1385,7 +1465,13 @@ object nodeStrings {
   @scala.inline
   def lookup: lookup = "lookup".asInstanceOf[lookup]
   @scala.inline
+  def mark: mark = "mark".asInstanceOf[mark]
+  @scala.inline
+  def measure: measure = "measure".asInstanceOf[measure]
+  @scala.inline
   def message: message = "message".asInstanceOf[message]
+  @scala.inline
+  def module: module = "module".asInstanceOf[module]
   @scala.inline
   def multipleResolves: multipleResolves = "multipleResolves".asInstanceOf[multipleResolves]
   @scala.inline
@@ -1394,6 +1480,12 @@ object nodeStrings {
   def newListener: newListener = "newListener".asInstanceOf[newListener]
   @scala.inline
   def newSession: newSession = "newSession".asInstanceOf[newSession]
+  @scala.inline
+  def node: node = "node".asInstanceOf[node]
+  @scala.inline
+  def `null`: `null` = "null".asInstanceOf[`null`]
+  @scala.inline
+  def number: number = "number".asInstanceOf[number]
   @scala.inline
   def online: online = "online".asInstanceOf[online]
   @scala.inline
@@ -1422,6 +1514,8 @@ object nodeStrings {
   def push: push = "push".asInstanceOf[push]
   @scala.inline
   def readable: readable = "readable".asInstanceOf[readable]
+  @scala.inline
+  def regexp: regexp = "regexp".asInstanceOf[regexp]
   @scala.inline
   def reject: reject = "reject".asInstanceOf[reject]
   @scala.inline
@@ -1465,13 +1559,19 @@ object nodeStrings {
   @scala.inline
   def socket: socket = "socket".asInstanceOf[socket]
   @scala.inline
+  def special: special = "special".asInstanceOf[special]
+  @scala.inline
   def spki: spki = "spki".asInstanceOf[spki]
   @scala.inline
   def stream: stream = "stream".asInstanceOf[stream]
   @scala.inline
   def streamClosed: streamClosed = "streamClosed".asInstanceOf[streamClosed]
   @scala.inline
+  def string: string = "string".asInstanceOf[string]
+  @scala.inline
   def sunos: sunos = "sunos".asInstanceOf[sunos]
+  @scala.inline
+  def symbol: symbol = "symbol".asInstanceOf[symbol]
   @scala.inline
   def timeout: timeout = "timeout".asInstanceOf[timeout]
   @scala.inline
@@ -1490,6 +1590,8 @@ object nodeStrings {
   def uncaughtException: uncaughtException = "uncaughtException".asInstanceOf[uncaughtException]
   @scala.inline
   def uncompressed: uncompressed = "uncompressed".asInstanceOf[uncompressed]
+  @scala.inline
+  def undefined: undefined = "undefined".asInstanceOf[undefined]
   @scala.inline
   def unhandledRejection: unhandledRejection = "unhandledRejection".asInstanceOf[unhandledRejection]
   @scala.inline

@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.mobile
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,7 +19,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class TransitionEvent protected () extends js.Object {
   def this(target: HTMLElement, transitionOptions: js.Object) = this()
-  def this(target: HTMLElement, transitionOptions: js.Object, triggerEvent: Event) = this()
+  def this(target: HTMLElement, transitionOptions: js.Object, triggerEvent: Event_) = this()
   /**
     * Dispatches this transition event. Emits a "startTransition" event on the target.
     *

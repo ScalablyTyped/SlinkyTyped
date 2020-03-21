@@ -1,0 +1,13 @@
+package typingsSlinky.materialUi.mod
+
+import typingsSlinky.materialUi.MaterialUI.SvgIconProps
+import typingsSlinky.react.mod.Component
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("material-ui", "SvgIcon")
+@js.native
+class SvgIcon ()
+  extends Component[SvgIconProps, js.Object, js.Any]
+

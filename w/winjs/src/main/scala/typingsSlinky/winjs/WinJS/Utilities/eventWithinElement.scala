@@ -1,7 +1,7 @@
 package typingsSlinky.winjs.WinJS.Utilities
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -15,6 +15,6 @@ object eventWithinElement extends js.Object {
     * @param event The event.
     * @returns true if the event occurred within the element; otherwise, false.
     **/
-  def apply(element: HTMLElement, event: Event): Boolean = js.native
+  def apply(element: HTMLElement, event: Event_): Boolean = js.native
 }
 

@@ -1,6 +1,6 @@
 package typingsSlinky.jssha
 
-import typingsSlinky.jssha.jsshaMod.StringDataFormat
+import typingsSlinky.jssha.mod.StringDataFormat
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

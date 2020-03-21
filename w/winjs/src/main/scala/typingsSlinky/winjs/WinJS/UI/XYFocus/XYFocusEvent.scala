@@ -1,7 +1,7 @@
 package typingsSlinky.winjs.WinJS.UI.XYFocus
 
 import typingsSlinky.std.CustomEvent
-import typingsSlinky.winjs.Anon_KeyCode
+import typingsSlinky.winjs.AnonKeyCode
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,6 +10,6 @@ import scala.scalajs.js.annotation._
 trait XYFocusEvent
   extends CustomEvent[js.Any] {
   @JSName("detail")
-  var detail_XYFocusEvent: Anon_KeyCode = js.native
+  var detail_XYFocusEvent: AnonKeyCode = js.native
 }
 

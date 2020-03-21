@@ -1,6 +1,6 @@
 package typingsSlinky.grommet.utilsMod
 
-import typingsSlinky.grommet.Anon_Dark
+import typingsSlinky.grommet.AnonLight
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object normalizeColor extends js.Object {
   def apply(color: String, theme: js.Object): String = js.native
   def apply(color: String, theme: js.Object, required: Boolean): String = js.native
-  def apply(color: Anon_Dark, theme: js.Object): String = js.native
-  def apply(color: Anon_Dark, theme: js.Object, required: Boolean): String = js.native
+  def apply(color: AnonLight, theme: js.Object): String = js.native
+  def apply(color: AnonLight, theme: js.Object, required: Boolean): String = js.native
 }
 

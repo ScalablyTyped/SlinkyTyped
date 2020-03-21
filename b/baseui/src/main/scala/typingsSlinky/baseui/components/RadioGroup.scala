@@ -1,6 +1,7 @@
 package typingsSlinky.baseui.components
 
 import org.scalablytyped.runtime.StringDictionary
+import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
@@ -14,6 +15,7 @@ import typingsSlinky.baseui.baseuiStrings.vertical
 import typingsSlinky.baseui.radioMod.RadioGroupOverrides
 import typingsSlinky.baseui.radioMod.RadioGroupProps
 import typingsSlinky.baseui.radioMod.RadioOverrides
+import typingsSlinky.react.mod.ChangeEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,13 +27,14 @@ object RadioGroup
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, disabled, name, onBlur, onChange, onFocus, onMouseEnter, onMouseLeave, required */
+  /* The following DOM/SVG props were specified: autoFocus, disabled, name, onBlur, onFocus, onMouseEnter, onMouseLeave, required */
   def apply(
     align: horizontal | vertical = null,
     `aria-label`: String = null,
     `aria-labelledby`: String = null,
     isError: js.UndefOr[Boolean] = js.undefined,
     labelPlacement: top | right | bottom | left = null,
+    onChange: ChangeEvent[HTMLInputElement] => Unit = null,
     overrides: RadioOverrides with RadioGroupOverrides = null,
     value: String = null,
     _overrides: StringDictionary[js.Any] = null
@@ -42,6 +45,7 @@ object RadioGroup
     if (`aria-labelledby` != null) __obj.updateDynamic("aria-labelledby")(`aria-labelledby`.asInstanceOf[js.Any])
     if (!js.isUndefined(isError)) __obj.updateDynamic("isError")(isError.asInstanceOf[js.Any])
     if (labelPlacement != null) __obj.updateDynamic("labelPlacement")(labelPlacement.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     if (value != null) __obj.updateDynamic("value")(value.asInstanceOf[js.Any])
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)

@@ -26,8 +26,8 @@ import scala.scalajs.js.annotation._
   * If you do not require animation then you can safely use Arcade Images instead of Arcade Sprites.
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited
-- typings.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @JSGlobal("Phaser.Physics.Arcade.Sprite")
+- typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited
+- typingsSlinky.phaser.Phaser.GameObjects.Components.Texture because var conflicts: frame, texture. Inlined  */ @JSGlobal("Phaser.Physics.Arcade.Sprite")
 @js.native
 class Sprite protected ()
   extends typingsSlinky.phaser.Phaser.GameObjects.Sprite
@@ -119,11 +119,17 @@ class Sprite protected ()
   /* CompleteClass */
   override def setMass(value: Double): this.type = js.native
   /**
-    * Sets the size of this physics body. Setting the size does not adjust the dimensions
-    * of the parent Game Object.
-    * @param width The new width of the physics body, in pixels.
-    * @param height The new height of the physics body, in pixels.
-    * @param center Should the body be re-positioned so its center aligns with the parent Game Object? Default true.
+    * Sets the internal size of this Game Object, as used for frame or physics body creation.
+    * 
+    * This will not change the size that the Game Object is rendered in-game.
+    * For that you need to either set the scale of the Game Object (`setScale`) or call the
+    * `setDisplaySize` method, which is the same thing as changing the scale but allows you
+    * to do so by giving pixel values.
+    * 
+    * If you have enabled this Game Object for input, changing the size will _not_ change the
+    * size of the hit area. To do this you should adjust the `input.hitArea` object directly.
+    * @param width The width of this Game Object.
+    * @param height The height of this Game Object.
     */
   /* InferMemberOverrides */
   override def setSize(width: Double, height: Double): this.type = js.native

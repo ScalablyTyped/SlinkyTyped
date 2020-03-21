@@ -13,8 +13,8 @@ import scala.scalajs.js.annotation._
   * "rejected" - the promise has rejected
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.when.When.FulfilledDescriptor[T]
-  - typings.when.When.RejectedDescriptor
+  - typingsSlinky.when.When.FulfilledDescriptor[T]
+  - typingsSlinky.when.When.RejectedDescriptor
 */
 trait Descriptor[T] extends js.Object
 

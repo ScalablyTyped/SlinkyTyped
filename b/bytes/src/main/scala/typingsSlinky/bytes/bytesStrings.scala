@@ -1,6 +1,6 @@
 package typingsSlinky.bytes
 
-import typingsSlinky.bytes.bytesMod.Unit
+import typingsSlinky.bytes.mod.Unit
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,0 +1,11 @@
+package typingsSlinky.sharepoint.CUI.Controls
+
+import typingsSlinky.sharepoint.CUI.MenuLauncher
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSGlobal("CUI.Controls.JewelMenuLauncher")
+@js.native
+class JewelMenuLauncher () extends MenuLauncher
+

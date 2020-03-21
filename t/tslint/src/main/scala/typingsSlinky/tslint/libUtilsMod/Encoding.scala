@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.tslint.tslintStrings.utf8
-  - typings.tslint.tslintStrings.`utf8-bom`
-  - typings.tslint.tslintStrings.utf16le
-  - typings.tslint.tslintStrings.utf16be
+  - typingsSlinky.tslint.tslintStrings.utf8
+  - typingsSlinky.tslint.tslintStrings.`utf8-bom`
+  - typingsSlinky.tslint.tslintStrings.utf16le
+  - typingsSlinky.tslint.tslintStrings.utf16be
 */
 trait Encoding extends js.Object
 

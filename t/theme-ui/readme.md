@@ -1,7 +1,7 @@
 
 # Scala.js typings for theme-ui
 
-Typings are for version 0.2
+Typings are for version 0.3
 
 ## Library description:
 Build consistent, themeable React UIs based on design system constraints
@@ -10,9 +10,9 @@ Build consistent, themeable React UIs based on design system constraints
 | ------------------ | :-------------: |
 | Full name          | theme-ui |
 | Keywords           | theme-ui, emotion, mdx, css, styles, css-in-js |
-| # releases         | 74 |
-| # dependents       | 309 |
-| # downloads        | 367695 |
+| # releases         | 77 |
+| # dependents       | 326 |
+| # downloads        | 419735 |
 | # stars            | 0 |
 
 ## Links

@@ -1,6 +1,6 @@
 package typingsSlinky.baseui.tabsMod
 
-import typingsSlinky.react.reactMod.Key
+import typingsSlinky.react.mod.Key
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

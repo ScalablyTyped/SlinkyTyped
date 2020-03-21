@@ -1,10 +1,9 @@
 package typingsSlinky.dojo.dijit._editor
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._Widget
-import typingsSlinky.dojo.dojo._base.url
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.Widget
+import typingsSlinky.dojo.dojo.base.url
 import typingsSlinky.dojo.dojoStrings.active
 import typingsSlinky.dojo.dojoStrings.captureEvents
 import typingsSlinky.dojo.dojoStrings.cssStateNodes
@@ -23,6 +22,7 @@ import typingsSlinky.dojo.dojoStrings.onLoadDeferred
 import typingsSlinky.dojo.dojoStrings.style
 import typingsSlinky.dojo.dojoStrings.styleSheets
 import typingsSlinky.dojo.dojoStrings.updateInterval
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -43,9 +43,9 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef The widget replaces the specified DOMNode.     
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit._CssStateMixin because Inheritance from two classes. Inlined active, cssStateNodes, hovering */ @JSGlobal("dijit._editor.RichText")
+- typingsSlinky.dojo.dijit.CssStateMixin because Inheritance from two classes. Inlined active, cssStateNodes, hovering */ @JSGlobal("dijit._editor.RichText")
 @js.native
-class RichText protected () extends _Widget {
+class RichText protected () extends Widget {
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
     * True if mouse was pressed while over this widget, and hasn't been released yet
@@ -268,7 +268,7 @@ class RichText protected () extends _Widget {
     * 
     * @param e             
     */
-  def onKeyDown(e: Event): Boolean = js.native
+  def onKeyDown(e: Event_): Boolean = js.native
   /**
     * Handler after the iframe finishes loading.
     * 
@@ -375,7 +375,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_captureEvents(
     property: captureEvents,
@@ -385,7 +385,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_cssStateNodes(
     property: cssStateNodes,
@@ -395,7 +395,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_disableSpellCheck(
     property: disableSpellCheck,
@@ -405,7 +405,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_disabled(
     property: disabled,
@@ -415,7 +415,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_focusOnLoad(
     property: focusOnLoad,
@@ -425,7 +425,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_height(
     property: height,
@@ -435,7 +435,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_hovering(
     property: hovering,
@@ -445,7 +445,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_inheritWidth(
     property: inheritWidth,
@@ -455,7 +455,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_isClosed(
     property: isClosed,
@@ -465,7 +465,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_isLoaded(
     property: isLoaded,
@@ -475,7 +475,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_isTabIndent(
     property: isTabIndent,
@@ -485,7 +485,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_minHeight(
     property: minHeight,
@@ -495,7 +495,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_name(
     property: name,
@@ -505,7 +505,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_onLoadDeferred(
     property: onLoadDeferred,
@@ -515,7 +515,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_styleSheets(
     property: styleSheets,
@@ -525,7 +525,7 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_updateInterval(
     property: updateInterval,
@@ -535,6 +535,6 @@ class RichText protected () extends _Widget {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

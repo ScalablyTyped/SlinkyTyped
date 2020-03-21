@@ -1,0 +1,19 @@
+package typingsSlinky.vscodeLanguageclient.clientMod
+
+import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DocumentOnTypeFormattingParams
+import typingsSlinky.vscodeLanguageserverProtocol.protocolMod.DocumentOnTypeFormattingRegistrationOptions
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("vscode-languageclient/lib/client", "DocumentOnTypeFormattingRequest")
+@js.native
+object DocumentOnTypeFormattingRequest extends js.Object {
+  val `type`: typingsSlinky.vscodeJsonrpc.mod.RequestType[
+    DocumentOnTypeFormattingParams, 
+    js.Array[typingsSlinky.vscodeLanguageserverTypes.mod.TextEdit] | Null, 
+    Unit, 
+    DocumentOnTypeFormattingRegistrationOptions
+  ] = js.native
+}
+

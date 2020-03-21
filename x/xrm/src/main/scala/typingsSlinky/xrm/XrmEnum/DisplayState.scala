@@ -11,8 +11,8 @@ import scala.scalajs.js.annotation._
   * @see {@link Xrm.DisplayState}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.expanded
-  - typings.xrm.xrmStrings.collapsed
+  - typingsSlinky.xrm.xrmStrings.expanded
+  - typingsSlinky.xrm.xrmStrings.collapsed
 */
 trait DisplayState extends js.Object
 

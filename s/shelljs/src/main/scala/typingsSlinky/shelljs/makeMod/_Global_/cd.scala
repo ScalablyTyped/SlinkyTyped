@@ -9,6 +9,6 @@ import scala.scalajs.js.annotation._
 @js.native
 object cd
   extends TopLevel[
-      js.Function1[/* dir */ js.UndefOr[String], typingsSlinky.shelljs.shelljsMod.ShellString]
+      js.Function1[/* dir */ js.UndefOr[String], typingsSlinky.shelljs.mod.ShellString]
     ]
 

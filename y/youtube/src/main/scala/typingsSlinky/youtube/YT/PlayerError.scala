@@ -10,11 +10,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.youtube.youtubeNumbers.`2`
-  - typings.youtube.youtubeNumbers.`5`
-  - typings.youtube.youtubeNumbers.`100`
-  - typings.youtube.youtubeNumbers.`101`
-  - typings.youtube.youtubeNumbers.`150`
+  - typingsSlinky.youtube.youtubeNumbers.`2`
+  - typingsSlinky.youtube.youtubeNumbers.`5`
+  - typingsSlinky.youtube.youtubeNumbers.`100`
+  - typingsSlinky.youtube.youtubeNumbers.`101`
+  - typingsSlinky.youtube.youtubeNumbers.`150`
 */
 trait PlayerError extends js.Object
 

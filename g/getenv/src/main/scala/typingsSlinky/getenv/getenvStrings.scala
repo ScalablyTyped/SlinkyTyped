@@ -1,6 +1,6 @@
 package typingsSlinky.getenv
 
-import typingsSlinky.getenv.getenvMod.ParseTypes
+import typingsSlinky.getenv.mod.ParseTypes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

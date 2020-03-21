@@ -1,6 +1,6 @@
 package typingsSlinky.vcf
 
-import typingsSlinky.vcf.vcfMod.CardVersion
+import typingsSlinky.vcf.mod.CardVersion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,12 +1,12 @@
 package typingsSlinky.validator
 
-import typingsSlinky.validator.validatorMod.validator.AlphaLocale
-import typingsSlinky.validator.validatorMod.validator.AlphanumericLocale
-import typingsSlinky.validator.validatorMod.validator.FloatLocale
-import typingsSlinky.validator.validatorMod.validator.HashAlgorithm
-import typingsSlinky.validator.validatorMod.validator.IdentityCardLocale
-import typingsSlinky.validator.validatorMod.validator.MobilePhoneLocale
-import typingsSlinky.validator.validatorMod.validator.PostalCodeLocale
+import typingsSlinky.validator.mod.validator.AlphaLocale
+import typingsSlinky.validator.mod.validator.AlphanumericLocale
+import typingsSlinky.validator.mod.validator.FloatLocale
+import typingsSlinky.validator.mod.validator.HashAlgorithm
+import typingsSlinky.validator.mod.validator.IdentityCardLocale
+import typingsSlinky.validator.mod.validator.MobilePhoneLocale
+import typingsSlinky.validator.mod.validator.PostalCodeLocale
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

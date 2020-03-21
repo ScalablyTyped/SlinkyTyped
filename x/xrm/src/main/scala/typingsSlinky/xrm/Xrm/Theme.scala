@@ -10,9 +10,9 @@ import scala.scalajs.js.annotation._
   * @see {@link XrmEnum.Theme}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.default
-  - typings.xrm.xrmStrings.Office12Blue
-  - typings.xrm.xrmStrings.Office14Silver
+  - typingsSlinky.xrm.xrmStrings.default
+  - typingsSlinky.xrm.xrmStrings.Office12Blue
+  - typingsSlinky.xrm.xrmStrings.Office14Silver
 */
 trait Theme extends js.Object
 

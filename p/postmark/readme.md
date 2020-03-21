@@ -1,7 +1,7 @@
 
 # Scala.js typings for postmark
 
-Typings are for version 2.3.4
+Typings are for version 2.3.5
 
 ## Library description:
 Official Node.js client library for the Postmark HTTP API - http://www.postmarkapp.com
@@ -12,7 +12,7 @@ Official Node.js client library for the Postmark HTTP API - http://www.postmarka
 | Keywords           | - |
 | # releases         | 20 |
 | # dependents       | 41 |
-| # downloads        | 1152129 |
+| # downloads        | 1180249 |
 | # stars            | 7 |
 
 ## Links

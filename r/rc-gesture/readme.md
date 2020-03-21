@@ -12,7 +12,7 @@ Support gesture for react component
 | Keywords           | react, react-component, react-gesture, gesture, touch |
 | # releases         | 8 |
 | # dependents       | 16 |
-| # downloads        | 712645 |
+| # downloads        | 740425 |
 | # stars            | 2 |
 
 ## Links

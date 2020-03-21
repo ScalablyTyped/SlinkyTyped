@@ -6,11 +6,12 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.SyntheticMouseEvent
-import slinky.web.html.`*`.tag
+import slinky.web.html.button.tag
 import typingsSlinky.baseui.baseuiStrings.checkbox
 import typingsSlinky.baseui.baseuiStrings.compact
 import typingsSlinky.baseui.baseuiStrings.default_
 import typingsSlinky.baseui.baseuiStrings.large_
+import typingsSlinky.baseui.baseuiStrings.mini
 import typingsSlinky.baseui.baseuiStrings.minimal
 import typingsSlinky.baseui.baseuiStrings.pill
 import typingsSlinky.baseui.baseuiStrings.primary
@@ -19,11 +20,11 @@ import typingsSlinky.baseui.baseuiStrings.round
 import typingsSlinky.baseui.baseuiStrings.secondary
 import typingsSlinky.baseui.baseuiStrings.square
 import typingsSlinky.baseui.baseuiStrings.tertiary
-import typingsSlinky.baseui.buttonDashGroupMod.ButtonGroupOverrides
-import typingsSlinky.baseui.buttonDashGroupMod.InitialState
-import typingsSlinky.baseui.buttonDashGroupMod.STATE_CHANGE_TYPE
-import typingsSlinky.baseui.buttonDashGroupMod.State
-import typingsSlinky.baseui.buttonDashGroupMod.StatefulButtonGroupProps
+import typingsSlinky.baseui.buttonGroupMod.ButtonGroupOverrides
+import typingsSlinky.baseui.buttonGroupMod.InitialState
+import typingsSlinky.baseui.buttonGroupMod.STATE_CHANGE_TYPE
+import typingsSlinky.baseui.buttonGroupMod.State
+import typingsSlinky.baseui.buttonGroupMod.StatefulButtonGroupProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -45,7 +46,7 @@ object StatefulButtonGroup
     overrides: ButtonGroupOverrides = null,
     selected: Double | js.Array[Double] = null,
     shape: default_ | pill | round | square = null,
-    size: compact | default_ | large_ = null,
+    size: compact | default_ | large_ | mini = null,
     stateReducer: (/* stateType */ STATE_CHANGE_TYPE, /* nextState */ State, /* currentState */ State) => State = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
@@ -63,7 +64,7 @@ object StatefulButtonGroup
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, js.Object] = new slinky.core.BuildingComponent[slinky.web.html.button.tag.type, js.Object](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = StatefulButtonGroupProps
 }
 

@@ -12,7 +12,7 @@ Wait for localhost to be ready
 | Keywords           | wait, localhost, server, port, delay, sleep, ready |
 | # releases         | 9 |
 | # dependents       | 6 |
-| # downloads        | 63989 |
+| # downloads        | 67183 |
 | # stars            | 0 |
 
 ## Links

@@ -13,8 +13,8 @@ trait XSLTProcessor extends js.Object {
   def removeParameter(namespaceURI: java.lang.String, localName: java.lang.String): Unit
   def reset(): Unit
   def setParameter(namespaceURI: java.lang.String, localName: java.lang.String, value: js.Any): Unit
-  def transformToDocument(source: org.scalajs.dom.raw.Node): org.scalajs.dom.raw.Document
-  def transformToFragment(source: org.scalajs.dom.raw.Node, document: org.scalajs.dom.raw.Document): org.scalajs.dom.raw.DocumentFragment
+  def transformToDocument(source: org.scalajs.dom.raw.Node): Document_
+  def transformToFragment(source: org.scalajs.dom.raw.Node, document: Document_): org.scalajs.dom.raw.DocumentFragment
 }
 
 @JSGlobal("XSLTProcessor")

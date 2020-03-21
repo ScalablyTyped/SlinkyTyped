@@ -1,11 +1,11 @@
 package typingsSlinky.expo.components
 
-import typingsSlinky.expo.buildGlobalsDotWebMod.Icon.AntDesign
+import typingsSlinky.expo.globalsWebMod.Icon.AntDesign
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object IconAntDesign extends SharedApply_IconProps_207471041[AntDesign] {
+object IconAntDesign extends SharedApply_IconProps_2082878668[AntDesign] {
   @JSImport("expo/build/globals.web", "Icon.AntDesign")
   @js.native
   object componentImport extends js.Object

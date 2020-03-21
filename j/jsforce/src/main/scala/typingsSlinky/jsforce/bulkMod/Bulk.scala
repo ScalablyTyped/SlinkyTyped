@@ -4,8 +4,8 @@ import typingsSlinky.jsforce.batchMod.Batch
 import typingsSlinky.jsforce.batchMod.BatchResultInfo
 import typingsSlinky.jsforce.connectionMod.Connection
 import typingsSlinky.jsforce.jobMod.Job
-import typingsSlinky.jsforce.recordDashResultMod.RecordResult
 import typingsSlinky.jsforce.recordMod.Record
+import typingsSlinky.jsforce.recordResultMod.RecordResult
 import typingsSlinky.node.streamMod.Stream
 import scala.scalajs.js
 import scala.scalajs.js.`|`

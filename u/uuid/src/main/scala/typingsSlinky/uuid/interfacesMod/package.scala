@@ -5,34 +5,54 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object interfacesMod {
-  import typingsSlinky.node.Buffer
-  import typingsSlinky.std.ArrayLike
-
-  type InputBuffer = ArrayLike[Double] | Buffer
-  type OutputBuffer = ArrayLike[Double] | Buffer
-  type v1 = v1Buffer with v1String
+  type InputBuffer = typingsSlinky.std.ArrayLike[scala.Double]
+  type OutputBuffer = typingsSlinky.std.ArrayLike[scala.Double]
+  type v1 = typingsSlinky.uuid.interfacesMod.v1Buffer with typingsSlinky.uuid.interfacesMod.v1String
   type v1Buffer = js.Function3[
-    /* options */ js.UndefOr[V1Options | Null], 
-    /* buffer */ OutputBuffer, 
-    /* offset */ js.UndefOr[Double], 
-    OutputBuffer
+    /* options */ js.UndefOr[typingsSlinky.uuid.interfacesMod.V1Options | scala.Null], 
+    /* buffer */ typingsSlinky.uuid.interfacesMod.OutputBuffer, 
+    /* offset */ js.UndefOr[scala.Double], 
+    typingsSlinky.uuid.interfacesMod.OutputBuffer
   ]
-  type v1String = js.Function1[/* options */ js.UndefOr[V1Options], String]
-  type v4 = v4Buffer with v4String
+  type v1String = js.Function1[
+    /* options */ js.UndefOr[typingsSlinky.uuid.interfacesMod.V1Options], 
+    java.lang.String
+  ]
+  type v3 = typingsSlinky.uuid.interfacesMod.v3Buffer with typingsSlinky.uuid.interfacesMod.v3String with typingsSlinky.uuid.interfacesMod.v3Static
+  type v3Buffer = js.Function4[
+    /* name */ java.lang.String | typingsSlinky.uuid.interfacesMod.InputBuffer, 
+    /* namespace */ java.lang.String | typingsSlinky.uuid.interfacesMod.InputBuffer, 
+    /* buffer */ typingsSlinky.uuid.interfacesMod.OutputBuffer, 
+    /* offset */ js.UndefOr[scala.Double], 
+    typingsSlinky.uuid.interfacesMod.OutputBuffer
+  ]
+  type v3String = js.Function2[
+    /* name */ java.lang.String | typingsSlinky.uuid.interfacesMod.InputBuffer, 
+    /* namespace */ java.lang.String | typingsSlinky.uuid.interfacesMod.InputBuffer, 
+    java.lang.String
+  ]
+  type v4 = typingsSlinky.uuid.interfacesMod.v4Buffer with typingsSlinky.uuid.interfacesMod.v4String
   type v4Buffer = js.Function3[
-    /* options */ js.UndefOr[V4Options | Null], 
-    /* buffer */ OutputBuffer, 
-    /* offset */ js.UndefOr[Double], 
-    OutputBuffer
+    /* options */ js.UndefOr[typingsSlinky.uuid.interfacesMod.V4Options | scala.Null], 
+    /* buffer */ typingsSlinky.uuid.interfacesMod.OutputBuffer, 
+    /* offset */ js.UndefOr[scala.Double], 
+    typingsSlinky.uuid.interfacesMod.OutputBuffer
   ]
-  type v4String = js.Function1[/* options */ js.UndefOr[V4Options], String]
-  type v5 = v5Buffer with v5String
+  type v4String = js.Function1[
+    /* options */ js.UndefOr[typingsSlinky.uuid.interfacesMod.V4Options], 
+    java.lang.String
+  ]
+  type v5 = typingsSlinky.uuid.interfacesMod.v5Buffer with typingsSlinky.uuid.interfacesMod.v5String with typingsSlinky.uuid.interfacesMod.v5Static
   type v5Buffer = js.Function4[
-    /* name */ String | InputBuffer, 
-    /* namespace */ String | InputBuffer, 
-    /* buffer */ OutputBuffer, 
-    /* offset */ js.UndefOr[Double], 
-    OutputBuffer
+    /* name */ java.lang.String | typingsSlinky.uuid.interfacesMod.InputBuffer, 
+    /* namespace */ java.lang.String | typingsSlinky.uuid.interfacesMod.InputBuffer, 
+    /* buffer */ typingsSlinky.uuid.interfacesMod.OutputBuffer, 
+    /* offset */ js.UndefOr[scala.Double], 
+    typingsSlinky.uuid.interfacesMod.OutputBuffer
   ]
-  type v5String = js.Function2[/* name */ String | InputBuffer, /* namespace */ String | InputBuffer, String]
+  type v5String = js.Function2[
+    /* name */ java.lang.String | typingsSlinky.uuid.interfacesMod.InputBuffer, 
+    /* namespace */ java.lang.String | typingsSlinky.uuid.interfacesMod.InputBuffer, 
+    java.lang.String
+  ]
 }

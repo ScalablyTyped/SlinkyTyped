@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.ionic.ionicStrings.yarn_
-  - typings.ionic.ionicStrings.npm
+  - typingsSlinky.ionic.ionicStrings.yarn_
+  - typingsSlinky.ionic.ionicStrings.npm
 */
 trait NpmClient extends js.Object
 

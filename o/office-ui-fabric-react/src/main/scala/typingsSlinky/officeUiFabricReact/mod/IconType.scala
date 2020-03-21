@@ -1,0 +1,17 @@
+package typingsSlinky.officeUiFabricReact.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("office-ui-fabric-react", "IconType")
+@js.native
+object IconType extends js.Object {
+  /* 100000 */ val Default: typingsSlinky.officeUiFabricReact.iconTypesMod.IconType.Default with Double = js.native
+  /* 100001 */ val Image: typingsSlinky.officeUiFabricReact.iconTypesMod.IconType.Image with Double = js.native
+  /* 0 */ val default: typingsSlinky.officeUiFabricReact.iconTypesMod.IconType.default with Double = js.native
+  /* 1 */ val image: typingsSlinky.officeUiFabricReact.iconTypesMod.IconType.image with Double = js.native
+  @JSBracketAccess
+  def apply(value: Double): js.UndefOr[typingsSlinky.officeUiFabricReact.iconTypesMod.IconType with Double] = js.native
+}
+

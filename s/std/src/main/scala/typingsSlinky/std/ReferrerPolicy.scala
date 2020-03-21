@@ -5,15 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings._empty
-  - typings.std.stdStrings.`no-referrer`
-  - typings.std.stdStrings.`no-referrer-when-downgrade`
-  - typings.std.stdStrings.`same-origin`
-  - typings.std.stdStrings.origin
-  - typings.std.stdStrings.`strict-origin`
-  - typings.std.stdStrings.`origin-when-cross-origin`
-  - typings.std.stdStrings.`strict-origin-when-cross-origin`
-  - typings.std.stdStrings.`unsafe-url`
+  - typingsSlinky.std.stdStrings._empty
+  - typingsSlinky.std.stdStrings.`no-referrer`
+  - typingsSlinky.std.stdStrings.`no-referrer-when-downgrade`
+  - typingsSlinky.std.stdStrings.origin
+  - typingsSlinky.std.stdStrings.`origin-when-cross-origin`
+  - typingsSlinky.std.stdStrings.`same-origin`
+  - typingsSlinky.std.stdStrings.`strict-origin`
+  - typingsSlinky.std.stdStrings.`strict-origin-when-cross-origin`
+  - typingsSlinky.std.stdStrings.`unsafe-url`
 */
 trait ReferrerPolicy extends js.Object
 

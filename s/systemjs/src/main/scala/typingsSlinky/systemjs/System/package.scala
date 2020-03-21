@@ -5,14 +5,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object System {
-  type DeclareFn = js.Function2[/* _export */ ExportFn, /* _context */ Context, Declare]
+  type DeclareFn = js.Function2[
+    /* _export */ typingsSlinky.systemjs.System.ExportFn, 
+    /* _context */ typingsSlinky.systemjs.System.Context, 
+    typingsSlinky.systemjs.System.Declare
+  ]
   type ExecuteFn = js.Function0[js.Any]
-  type GetFn = GetFnModule | GetFnGeneric
+  type GetFn = typingsSlinky.systemjs.System.GetFnModule | typingsSlinky.systemjs.System.GetFnGeneric
   // tslint:disable-next-line no-unnecessary-generics
-  type GetFnGeneric = js.Function1[/* moduleId */ String, js.Any]
-  type GetFnModule = js.Function1[/* moduleId */ String, Module]
+  type GetFnGeneric = js.Function1[/* moduleId */ java.lang.String, js.Any]
+  type GetFnModule = js.Function1[/* moduleId */ java.lang.String, typingsSlinky.systemjs.System.Module]
   // tslint:disable-next-line no-unnecessary-generics
-  type ImportFn = js.Function2[/* moduleId */ String, /* parentUrl */ js.UndefOr[String], js.Promise[Module]]
-  type SetterFn = js.Function1[/* moduleValue */ Module, js.Any]
-  type UpdateModuleFn = js.Function0[Unit]
+  type ImportFn = js.Function2[
+    /* moduleId */ java.lang.String, 
+    /* parentUrl */ js.UndefOr[java.lang.String], 
+    js.Promise[typingsSlinky.systemjs.System.Module]
+  ]
+  type SetterFn = js.Function1[/* moduleValue */ typingsSlinky.systemjs.System.Module, js.Any]
+  type UpdateModuleFn = js.Function0[scala.Unit]
 }

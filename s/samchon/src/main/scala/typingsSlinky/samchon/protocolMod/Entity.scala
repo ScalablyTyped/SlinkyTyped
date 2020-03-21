@@ -10,5 +10,5 @@ import scala.scalajs.js.annotation._
   * Default Constructor.
   */
 abstract class Entity ()
-  extends typingsSlinky.samchon.protocolEntityEntityMod.Entity
+  extends typingsSlinky.samchon.entityMod.Entity
 

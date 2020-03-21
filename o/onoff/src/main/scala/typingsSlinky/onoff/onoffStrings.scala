@@ -1,7 +1,7 @@
 package typingsSlinky.onoff
 
-import typingsSlinky.onoff.onoffMod.Direction
-import typingsSlinky.onoff.onoffMod.Edge
+import typingsSlinky.onoff.mod.Direction
+import typingsSlinky.onoff.mod.Edge
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

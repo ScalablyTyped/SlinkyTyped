@@ -1,6 +1,6 @@
 package typingsSlinky.jsqubits
 
-import typingsSlinky.jsqubits.jsqubitsMod._SingleQubitOperatorTargetQubits
+import typingsSlinky.jsqubits.mod._SingleQubitOperatorTargetQubits
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

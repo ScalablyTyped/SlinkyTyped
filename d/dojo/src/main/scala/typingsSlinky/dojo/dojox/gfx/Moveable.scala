@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.gfx
 
-import org.scalajs.dom.raw.Event
 import typingsSlinky.dojo.dojox.gfx.shape.Shape
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -34,19 +34,19 @@ class Moveable protected () extends js.Object {
     *
     * @param e mouse event
     */
-  def onMouseDown(e: Event): Unit = js.native
+  def onMouseDown(e: Event_): Unit = js.native
   /**
     * event processor for onmousemove, used only for delayed drags
     *
     * @param e mouse event
     */
-  def onMouseMove(e: Event): Unit = js.native
+  def onMouseMove(e: Event_): Unit = js.native
   /**
     * event processor for onmouseup, used only for delayed delayed drags
     *
     * @param e mouse event
     */
-  def onMouseUp(e: Event): Unit = js.native
+  def onMouseUp(e: Event_): Unit = js.native
   /**
     * called during every move notification,
     * should actually move the node, can be overwritten.

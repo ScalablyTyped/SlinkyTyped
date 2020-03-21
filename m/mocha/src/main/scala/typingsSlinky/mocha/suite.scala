@@ -1,7 +1,7 @@
 package typingsSlinky.mocha
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.mocha.Mocha.SuiteFunction
+import typingsSlinky.mocha.Mocha_.SuiteFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

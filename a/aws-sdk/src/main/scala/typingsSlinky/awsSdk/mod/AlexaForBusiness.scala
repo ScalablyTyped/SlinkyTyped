@@ -1,0 +1,17 @@
+package typingsSlinky.awsSdk.mod
+
+import typingsSlinky.awsSdk.alexaforbusinessMod.ClientConfiguration
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("aws-sdk", "AlexaForBusiness")
+@js.native
+/**
+  * Constructs a service object. This object has one method for each API operation.
+  */
+class AlexaForBusiness ()
+  extends typingsSlinky.awsSdk.allMod.AlexaForBusiness {
+  def this(options: ClientConfiguration) = this()
+}
+

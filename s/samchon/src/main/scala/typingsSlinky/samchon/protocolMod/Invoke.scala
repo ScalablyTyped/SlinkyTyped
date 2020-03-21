@@ -1,6 +1,6 @@
 package typingsSlinky.samchon.protocolMod
 
-import typingsSlinky.sxml.sxmlMod.XML
+import typingsSlinky.sxml.mod.XML
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -11,13 +11,13 @@ import scala.scalajs.js.annotation._
   * Default Constructor.
   */
 class Invoke ()
-  extends typingsSlinky.samchon.protocolInvokeInvokeMod.Invoke {
+  extends typingsSlinky.samchon.invokeMod.Invoke {
   /**
     * Copy Constructor.
     *
     * @param invoke
     */
-  def this(invoke: typingsSlinky.samchon.protocolInvokeInvokeMod.Invoke) = this()
+  def this(invoke: typingsSlinky.samchon.invokeMod.Invoke) = this()
   def this(listener: String) = this()
   /**
     * Construct from listener and parametric values.

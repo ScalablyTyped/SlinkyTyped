@@ -1,6 +1,6 @@
 package typingsSlinky.prettier
 
-import typingsSlinky.prettier.prettierMod.BuiltInParserName
+import typingsSlinky.prettier.mod.BuiltInParserName
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

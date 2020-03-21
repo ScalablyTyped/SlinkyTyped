@@ -1,6 +1,6 @@
 package typingsSlinky.jsplumb
 
-import typingsSlinky.jsplumb.jsplumbMod.AnchorOrientationHint
+import typingsSlinky.jsplumb.mod.AnchorOrientationHint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

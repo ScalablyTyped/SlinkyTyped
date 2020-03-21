@@ -6,8 +6,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.arangodb.ArangoDB.ObjectWithId
-  - typings.arangodb.ArangoDB.ObjectWithKey
+  - typingsSlinky.arangodb.ArangoDB.ObjectWithId
+  - typingsSlinky.arangodb.ArangoDB.ObjectWithKey
 */
 trait DocumentLike extends js.Object
 

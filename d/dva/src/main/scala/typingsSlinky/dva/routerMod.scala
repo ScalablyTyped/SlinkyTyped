@@ -4,36 +4,36 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.ReactComponentClass
 import typingsSlinky.dva.dvaStrings.`@@routerSlashCALL_HISTORY_METHOD`
 import typingsSlinky.dva.dvaStrings.`@@routerSlashLOCATION_CHANGE`
-import typingsSlinky.history.historyMod.History
-import typingsSlinky.history.historyMod.Location
-import typingsSlinky.history.historyMod.LocationDescriptor
-import typingsSlinky.history.historyMod.LocationState
-import typingsSlinky.react.reactMod.Component
-import typingsSlinky.reactDashRouter.reactDashRouterMod.MemoryRouterProps
-import typingsSlinky.reactDashRouter.reactDashRouterMod.Omit
-import typingsSlinky.reactDashRouter.reactDashRouterMod.PromptProps
-import typingsSlinky.reactDashRouter.reactDashRouterMod.RedirectProps
-import typingsSlinky.reactDashRouter.reactDashRouterMod.RouteComponentProps
-import typingsSlinky.reactDashRouter.reactDashRouterMod.RouteProps
-import typingsSlinky.reactDashRouter.reactDashRouterMod.RouterProps
-import typingsSlinky.reactDashRouter.reactDashRouterMod.StaticContext
-import typingsSlinky.reactDashRouter.reactDashRouterMod.StaticRouterProps
-import typingsSlinky.reactDashRouter.reactDashRouterMod.SwitchProps
-import typingsSlinky.reactDashRouter.reactDashRouterMod.WithRouterProps
-import typingsSlinky.reactDashRouter.reactDashRouterMod.WithRouterStatics
-import typingsSlinky.reactDashRouter.reactDashRouterMod.`match`
-import typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.BrowserRouterProps
-import typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.HashRouterProps
-import typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.LinkProps
-import typingsSlinky.reactDashRouterDashDom.reactDashRouterDashDomMod.NavLinkProps
-import typingsSlinky.reactDashRouterDashRedux.Anon_Router
-import typingsSlinky.reactDashRouterDashRedux.reactDashRouterDashReduxMod.ConnectedRouterProps
-import typingsSlinky.reactDashRouterDashRedux.reactDashRouterDashReduxMod.RouterAction
-import typingsSlinky.reactDashRouterDashRedux.reactDashRouterDashReduxMod.RouterState
-import typingsSlinky.redux.reduxMod.AnyAction
-import typingsSlinky.redux.reduxMod.Dispatch
-import typingsSlinky.redux.reduxMod.Middleware
-import typingsSlinky.redux.reduxMod.Reducer
+import typingsSlinky.history.mod.History
+import typingsSlinky.history.mod.Location
+import typingsSlinky.history.mod.LocationDescriptor
+import typingsSlinky.history.mod.LocationState
+import typingsSlinky.react.mod.Component
+import typingsSlinky.reactRouter.mod.MemoryRouterProps
+import typingsSlinky.reactRouter.mod.Omit
+import typingsSlinky.reactRouter.mod.PromptProps
+import typingsSlinky.reactRouter.mod.RedirectProps
+import typingsSlinky.reactRouter.mod.RouteComponentProps
+import typingsSlinky.reactRouter.mod.RouteProps
+import typingsSlinky.reactRouter.mod.RouterProps
+import typingsSlinky.reactRouter.mod.StaticContext
+import typingsSlinky.reactRouter.mod.StaticRouterProps
+import typingsSlinky.reactRouter.mod.SwitchProps
+import typingsSlinky.reactRouter.mod.WithRouterProps
+import typingsSlinky.reactRouter.mod.WithRouterStatics
+import typingsSlinky.reactRouter.mod.`match`
+import typingsSlinky.reactRouterDom.mod.BrowserRouterProps
+import typingsSlinky.reactRouterDom.mod.HashRouterProps
+import typingsSlinky.reactRouterDom.mod.LinkProps
+import typingsSlinky.reactRouterDom.mod.NavLinkProps
+import typingsSlinky.reactRouterRedux.AnonRouter
+import typingsSlinky.reactRouterRedux.mod.ConnectedRouterProps
+import typingsSlinky.reactRouterRedux.mod.RouterAction
+import typingsSlinky.reactRouterRedux.mod.RouterState
+import typingsSlinky.redux.mod.AnyAction
+import typingsSlinky.redux.mod.Dispatch
+import typingsSlinky.redux.mod.Middleware
+import typingsSlinky.redux.mod.Reducer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -134,7 +134,7 @@ object routerMod extends js.Object {
     val CALL_HISTORY_METHOD: `@@routerSlashCALL_HISTORY_METHOD` = js.native
     val LOCATION_CHANGE: `@@routerSlashLOCATION_CHANGE` = js.native
     val routerReducer: Reducer[RouterState, AnyAction] = js.native
-    def createMatchSelector(path: String): js.Function1[/* state */ Anon_Router, `match`[js.Object] | Null] = js.native
+    def createMatchSelector(path: String): js.Function1[/* state */ AnonRouter, `match`[js.Object] | Null] = js.native
     def go(n: Double): RouterAction = js.native
     def goBack(): RouterAction = js.native
     def goForward(): RouterAction = js.native

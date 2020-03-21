@@ -1,7 +1,7 @@
 package typingsSlinky.recompose
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.recompose.recomposeMod.ComponentEnhancer
+import typingsSlinky.recompose.mod.ComponentEnhancer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

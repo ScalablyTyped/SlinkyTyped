@@ -1,7 +1,7 @@
 package typingsSlinky.muicss.reactMod
 
 import slinky.core.TagMod
-import typingsSlinky.muicss.libReactTabMod.default
+import typingsSlinky.muicss.tabMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dojox.mobile
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.WidgetBase
 import typingsSlinky.dojo.dojoStrings.editable
 import typingsSlinky.dojo.dojoStrings.editableMixinClass
 import typingsSlinky.dojo.dojoStrings.filterBoxClass
@@ -28,10 +28,10 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit._Contained because Inheritance from two classes. Inlined getIndexInParent, getNextSibling, getPreviousSibling
-- typings.dojo.dijit._Container because Inheritance from two classes. Inlined addChild, addChild, buildRendering, getIndexOfChild, hasChildren, removeChild, removeChild */ @JSGlobal("dojox.mobile.RoundRectList")
+- typingsSlinky.dojo.dijit.Contained because Inheritance from two classes. Inlined getIndexInParent, getNextSibling, getPreviousSibling
+- typingsSlinky.dojo.dijit.Container because Inheritance from two classes. Inlined addChild, addChild, buildRendering, getIndexOfChild, hasChildren, removeChild, removeChild */ @JSGlobal("dojox.mobile.RoundRectList")
 @js.native
-class RoundRectList () extends _WidgetBase {
+class RoundRectList () extends WidgetBase {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -115,8 +115,8 @@ class RoundRectList () extends _WidgetBase {
     * @param widget             
     * @param insertIndex               Optional            
     */
-  def addChild(widget: _WidgetBase): Unit = js.native
-  def addChild(widget: _WidgetBase, insertIndex: Double): Unit = js.native
+  def addChild(widget: WidgetBase): Unit = js.native
+  def addChild(widget: WidgetBase, insertIndex: Double): Unit = js.native
   /**
     * Deselects all the items.
     *
@@ -151,7 +151,7 @@ class RoundRectList () extends _WidgetBase {
     * 
     * @param child             
     */
-  def getIndexOfChild(child: _WidgetBase): js.Any = js.native
+  def getIndexOfChild(child: WidgetBase): js.Any = js.native
   /**
     * Returns null if this is the last child of the parent,
     * otherwise returns the next element sibling to the "right".
@@ -210,7 +210,7 @@ class RoundRectList () extends _WidgetBase {
     * @param listItem
     * @param newState
     */
-  def onCheckStateChanged(listItem: _WidgetBase, newState: String): Unit = js.native
+  def onCheckStateChanged(listItem: WidgetBase, newState: String): Unit = js.native
   /**
     * Track specified handles and remove/destroy them when this instance is destroyed, unless they were
     * already removed/destroyed manually.
@@ -252,7 +252,7 @@ class RoundRectList () extends _WidgetBase {
     * 
     * @param widget             
     */
-  def removeChild(widget: _WidgetBase): Unit = js.native
+  def removeChild(widget: WidgetBase): Unit = js.native
   /**
     * Calls resize() of each child widget.
     *
@@ -295,7 +295,7 @@ class RoundRectList () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_editableMixinClass(
     property: editableMixinClass,
@@ -305,7 +305,7 @@ class RoundRectList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_filterBoxClass(
     property: filterBoxClass,
@@ -315,7 +315,7 @@ class RoundRectList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_iconBase(
     property: iconBase,
@@ -325,7 +325,7 @@ class RoundRectList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_iconPos(
     property: iconPos,
@@ -335,7 +335,7 @@ class RoundRectList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_select(
     property: select,
@@ -345,7 +345,7 @@ class RoundRectList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_stateful(
     property: stateful,
@@ -355,7 +355,7 @@ class RoundRectList () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_syncWithViews(
     property: syncWithViews,
@@ -365,7 +365,7 @@ class RoundRectList () extends _WidgetBase {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_tag(
     property: tag,
@@ -375,7 +375,7 @@ class RoundRectList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_transition(
     property: typingsSlinky.dojo.dojoStrings.transition,
@@ -385,6 +385,6 @@ class RoundRectList () extends _WidgetBase {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

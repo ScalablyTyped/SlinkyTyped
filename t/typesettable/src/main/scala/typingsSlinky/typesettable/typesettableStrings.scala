@@ -1,16 +1,13 @@
 package typingsSlinky.typesettable
 
-import typingsSlinky.typesettable.buildSrcContextsSvgMod.IAnchor
-import typingsSlinky.typesettable.buildSrcWritersWriterMod.IXAlign
-import typingsSlinky.typesettable.buildSrcWritersWriterMod.IYAlign
+import typingsSlinky.typesettable.svgMod.IAnchor
+import typingsSlinky.typesettable.writerMod.IXAlign
+import typingsSlinky.typesettable.writerMod.IYAlign
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object typesettableStrings {
-  @js.native
-  sealed trait Writer extends js.Object
-  
   @js.native
   sealed trait bottom extends IYAlign
   
@@ -37,8 +34,6 @@ object typesettableStrings {
   @js.native
   sealed trait top extends IYAlign
   
-  @scala.inline
-  def Writer: Writer = "Writer".asInstanceOf[Writer]
   @scala.inline
   def bottom: bottom = "bottom".asInstanceOf[bottom]
   @scala.inline

@@ -6,9 +6,9 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. QualifiedName(List(Name(scala), Name(scalajs), Name(js), Name(Any))) was not a @ScalaJSDefined trait */
+/* This component has complicated props, you'll have to assemble `props` yourself using js.Dynamic.literal(...) or similar. Could't extract props from TypeRef(QualifiedName(IArray(Name(scala), Name(scalajs), Name(js), Name(Any))),IArray(),NoComments) because couldn't resolve ClassTree. */
 object FastField
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.formik.formikMod.FastField] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.formik.mod.FastField] {
   @JSImport("formik", "FastField")
   @js.native
   object componentImport extends js.Object

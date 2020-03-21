@@ -30,31 +30,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.nodegit.nodegitNumbers.`0`
-  - typings.nodegit.nodegitNumbers.`-1`
-  - typings.nodegit.nodegitNumbers.`-3`
-  - typings.nodegit.nodegitNumbers.`-4`
-  - typings.nodegit.nodegitNumbers.`-5`
-  - typings.nodegit.nodegitNumbers.`-6`
-  - typings.nodegit.nodegitNumbers.`-7`
-  - typings.nodegit.nodegitNumbers.`-8`
-  - typings.nodegit.nodegitNumbers.`-9`
-  - typings.nodegit.nodegitNumbers.`-10`
-  - typings.nodegit.nodegitNumbers.`-11`
-  - typings.nodegit.nodegitNumbers.`-12`
-  - typings.nodegit.nodegitNumbers.`-13`
-  - typings.nodegit.nodegitNumbers.`-14`
-  - typings.nodegit.nodegitNumbers.`-15`
-  - typings.nodegit.nodegitNumbers.`-16`
-  - typings.nodegit.nodegitNumbers.`-17`
-  - typings.nodegit.nodegitNumbers.`-18`
-  - typings.nodegit.nodegitNumbers.`-19`
-  - typings.nodegit.nodegitNumbers.`-20`
-  - typings.nodegit.nodegitNumbers.`-21`
-  - typings.nodegit.nodegitNumbers.`-22`
-  - typings.nodegit.nodegitNumbers.`-23`
-  - typings.nodegit.nodegitNumbers.`-30`
-  - typings.nodegit.nodegitNumbers.`-31`
+  - typingsSlinky.nodegit.nodegitNumbers.`0`
+  - typingsSlinky.nodegit.nodegitNumbers.`-1`
+  - typingsSlinky.nodegit.nodegitNumbers.`-3`
+  - typingsSlinky.nodegit.nodegitNumbers.`-4`
+  - typingsSlinky.nodegit.nodegitNumbers.`-5`
+  - typingsSlinky.nodegit.nodegitNumbers.`-6`
+  - typingsSlinky.nodegit.nodegitNumbers.`-7`
+  - typingsSlinky.nodegit.nodegitNumbers.`-8`
+  - typingsSlinky.nodegit.nodegitNumbers.`-9`
+  - typingsSlinky.nodegit.nodegitNumbers.`-10`
+  - typingsSlinky.nodegit.nodegitNumbers.`-11`
+  - typingsSlinky.nodegit.nodegitNumbers.`-12`
+  - typingsSlinky.nodegit.nodegitNumbers.`-13`
+  - typingsSlinky.nodegit.nodegitNumbers.`-14`
+  - typingsSlinky.nodegit.nodegitNumbers.`-15`
+  - typingsSlinky.nodegit.nodegitNumbers.`-16`
+  - typingsSlinky.nodegit.nodegitNumbers.`-17`
+  - typingsSlinky.nodegit.nodegitNumbers.`-18`
+  - typingsSlinky.nodegit.nodegitNumbers.`-19`
+  - typingsSlinky.nodegit.nodegitNumbers.`-20`
+  - typingsSlinky.nodegit.nodegitNumbers.`-21`
+  - typingsSlinky.nodegit.nodegitNumbers.`-22`
+  - typingsSlinky.nodegit.nodegitNumbers.`-23`
+  - typingsSlinky.nodegit.nodegitNumbers.`-30`
+  - typingsSlinky.nodegit.nodegitNumbers.`-31`
 */
 trait CODE extends js.Object
 

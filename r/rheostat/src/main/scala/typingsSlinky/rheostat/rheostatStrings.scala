@@ -1,6 +1,6 @@
 package typingsSlinky.rheostat
 
-import typingsSlinky.rheostat.rheostatMod.Orientation
+import typingsSlinky.rheostat.mod.Orientation
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

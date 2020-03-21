@@ -5,24 +5,24 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.std.stdStrings._empty
-  - typings.std.stdStrings.audio
-  - typings.std.stdStrings.audioworklet
-  - typings.std.stdStrings.document
-  - typings.std.stdStrings.embed
-  - typings.std.stdStrings.font
-  - typings.std.stdStrings.image
-  - typings.std.stdStrings.manifest
-  - typings.std.stdStrings.`object`
-  - typings.std.stdStrings.paintworklet
-  - typings.std.stdStrings.report
-  - typings.std.stdStrings.script
-  - typings.std.stdStrings.sharedworker
-  - typings.std.stdStrings.style
-  - typings.std.stdStrings.track
-  - typings.std.stdStrings.video
-  - typings.std.stdStrings.worker
-  - typings.std.stdStrings.xslt
+  - typingsSlinky.std.stdStrings._empty
+  - typingsSlinky.std.stdStrings.audio
+  - typingsSlinky.std.stdStrings.audioworklet
+  - typingsSlinky.std.stdStrings.document
+  - typingsSlinky.std.stdStrings.embed
+  - typingsSlinky.std.stdStrings.font
+  - typingsSlinky.std.stdStrings.image
+  - typingsSlinky.std.stdStrings.manifest
+  - typingsSlinky.std.stdStrings.`object`
+  - typingsSlinky.std.stdStrings.paintworklet
+  - typingsSlinky.std.stdStrings.report
+  - typingsSlinky.std.stdStrings.script
+  - typingsSlinky.std.stdStrings.sharedworker
+  - typingsSlinky.std.stdStrings.style
+  - typingsSlinky.std.stdStrings.track
+  - typingsSlinky.std.stdStrings.video
+  - typingsSlinky.std.stdStrings.worker
+  - typingsSlinky.std.stdStrings.xslt
 */
 trait RequestDestination extends js.Object
 

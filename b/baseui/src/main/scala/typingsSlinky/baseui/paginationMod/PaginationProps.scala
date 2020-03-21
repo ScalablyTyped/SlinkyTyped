@@ -1,7 +1,7 @@
 package typingsSlinky.baseui.paginationMod
 
-import typingsSlinky.baseui.Anon_EventAny
-import typingsSlinky.baseui.Anon_NextPage
+import typingsSlinky.baseui.AnonEventAny
+import typingsSlinky.baseui.AnonNextPage
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -19,9 +19,9 @@ object PaginationProps {
     currentPage: Double,
     numPages: Double,
     labels: Labels = null,
-    onNextClick: /* args */ Anon_EventAny => _ = null,
-    onPageChange: /* args */ Anon_NextPage => _ = null,
-    onPrevClick: /* args */ Anon_EventAny => _ = null,
+    onNextClick: /* args */ AnonEventAny => _ = null,
+    onPageChange: /* args */ AnonNextPage => _ = null,
+    onPrevClick: /* args */ AnonEventAny => _ = null,
     overrides: PaginationOverrides = null
   ): PaginationProps = {
     val __obj = js.Dynamic.literal(currentPage = currentPage.asInstanceOf[js.Any], numPages = numPages.asInstanceOf[js.Any])

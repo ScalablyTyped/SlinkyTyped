@@ -1,7 +1,7 @@
 
 # Scala.js typings for emscripten
 
-Typings are for version 1.38.33
+Typings are for version 1.39.5
 
 ## Library description:
 Node API for Emscripten SDK
@@ -12,7 +12,7 @@ Node API for Emscripten SDK
 | Keywords           | node, emscripten, emcc, sdk, wasm, webassembly |
 | # releases         | 5 |
 | # dependents       | 0 |
-| # downloads        | 328 |
+| # downloads        | 361 |
 | # stars            | 0 |
 
 ## Links

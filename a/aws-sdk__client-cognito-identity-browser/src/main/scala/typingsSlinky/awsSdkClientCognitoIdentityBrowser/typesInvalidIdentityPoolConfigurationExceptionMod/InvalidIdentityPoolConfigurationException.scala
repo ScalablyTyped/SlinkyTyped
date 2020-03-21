@@ -1,0 +1,16 @@
+package typingsSlinky.awsSdkClientCognitoIdentityBrowser.typesInvalidIdentityPoolConfigurationExceptionMod
+
+import typingsSlinky.awsSdkClientCognitoIdentityBrowser.getCredentialsForIdentityExceptionsUnionMod.GetCredentialsForIdentityExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait InvalidIdentityPoolConfigurationException
+  extends ServiceException[InvalidIdentityPoolConfigurationExceptionDetails]
+     with GetCredentialsForIdentityExceptionsUnion {
+  @JSName("name")
+  var name_InvalidIdentityPoolConfigurationException: typingsSlinky.awsSdkClientCognitoIdentityBrowser.awsSdkClientCognitoIdentityBrowserStrings.InvalidIdentityPoolConfigurationException = js.native
+}
+

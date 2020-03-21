@@ -1,7 +1,7 @@
 
 # Scala.js typings for camunda-external-task-client-js
 
-Typings are for version 1.2
+Typings are for version 1.3
 
 ## Library description:
 Implement your [BPMN Service Task](https://docs.camunda.org/manual/latest/user-guide/process-engine/external-tasks/) in NodeJS.
@@ -11,8 +11,8 @@ Implement your [BPMN Service Task](https://docs.camunda.org/manual/latest/user-g
 | Full name          | camunda-external-task-client-js |
 | Keywords           | - |
 | # releases         | 13 |
-| # dependents       | 2 |
-| # downloads        | 36147 |
+| # dependents       | 3 |
+| # downloads        | 37478 |
 | # stars            | 0 |
 
 ## Links

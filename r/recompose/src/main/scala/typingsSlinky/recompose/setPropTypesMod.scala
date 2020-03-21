@@ -1,7 +1,7 @@
 package typingsSlinky.recompose
 
 import slinky.core.ReactComponentClass
-import typingsSlinky.react.reactMod.ValidationMap
+import typingsSlinky.react.mod.ValidationMap
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

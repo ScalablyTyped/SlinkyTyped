@@ -1,13 +1,13 @@
 package typingsSlinky.auth0
 
-import typingsSlinky.auth0.auth0Mod.ClientAppType
-import typingsSlinky.auth0.auth0Mod.DeleteDeleteMultifactorParamsProvider
-import typingsSlinky.auth0.auth0Mod.Grant
-import typingsSlinky.auth0.auth0Mod.JobFormat
-import typingsSlinky.auth0.auth0Mod.JobStatus
-import typingsSlinky.auth0.auth0Mod.SendType
-import typingsSlinky.auth0.auth0Mod.Strategy
-import typingsSlinky.auth0.auth0Mod.UnlinkAccountsParamsProvider
+import typingsSlinky.auth0.mod.ClientAppType
+import typingsSlinky.auth0.mod.DeleteDeleteMultifactorParamsProvider
+import typingsSlinky.auth0.mod.Grant
+import typingsSlinky.auth0.mod.JobFormat
+import typingsSlinky.auth0.mod.JobStatus
+import typingsSlinky.auth0.mod.SendType
+import typingsSlinky.auth0.mod.Strategy
+import typingsSlinky.auth0.mod.UnlinkAccountsParamsProvider
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -313,9 +313,6 @@ object auth0Strings {
        with UnlinkAccountsParamsProvider
   
   @js.native
-  sealed trait scope extends js.Object
-  
-  @js.native
   sealed trait sentry extends ClientAppType
   
   @js.native
@@ -570,8 +567,6 @@ object auth0Strings {
   def `salesforce-sandbox`: `salesforce-sandbox` = "salesforce-sandbox".asInstanceOf[`salesforce-sandbox`]
   @scala.inline
   def samlp: samlp = "samlp".asInstanceOf[samlp]
-  @scala.inline
-  def scope: scope = "scope".asInstanceOf[scope]
   @scala.inline
   def sentry: sentry = "sentry".asInstanceOf[sentry]
   @scala.inline

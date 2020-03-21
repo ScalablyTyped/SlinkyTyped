@@ -1,19 +1,17 @@
 organization := "org.scalablytyped.slinky"
 name := "relay-config"
-version := "6.0-dt-20190924Z-f85ce0"
-scalaVersion := "2.12.10"
+version := "6.0-dt-20200225Z-a04c39"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "graphql" % "14.5.8-ffbf48",
-  "org.scalablytyped.slinky" %%% "relay-compiler" % "7.0-dt-20191126Z-b7af3a",
-  "org.scalablytyped.slinky" %%% "relay-runtime" % "8.0-dt-20191227Z-e50b71",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43",
-  "org.scalablytyped.slinky" %%% "typescript" % "3.7.4-87e177")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "graphql" % "14.6.0-1eff51",
+  "org.scalablytyped.slinky" %%% "relay-compiler" % "8.0-dt-20200225Z-a1dbe5",
+  "org.scalablytyped.slinky" %%% "relay-runtime" % "8.0-dt-20200225Z-7c57db",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

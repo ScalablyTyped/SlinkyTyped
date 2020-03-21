@@ -1,0 +1,18 @@
+package typingsSlinky.angularCompiler.publicApiMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@angular/compiler/public_api", "Quote")
+@js.native
+class Quote protected ()
+  extends typingsSlinky.angularCompiler.srcCompilerMod.Quote {
+  def this(
+    span: typingsSlinky.angularCompiler.astMod.ParseSpan,
+    prefix: String,
+    uninterpretedExpression: String,
+    location: js.Any
+  ) = this()
+}
+

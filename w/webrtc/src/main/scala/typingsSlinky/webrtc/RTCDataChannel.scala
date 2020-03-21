@@ -1,12 +1,12 @@
 package typingsSlinky.webrtc
 
 import org.scalajs.dom.experimental.webrtc.RTCDataChannelState
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.MessageEvent
 import typingsSlinky.std.ArrayBuffer
 import typingsSlinky.std.ArrayBufferView
 import typingsSlinky.std.Blob
 import typingsSlinky.std.EventTarget
+import typingsSlinky.std.Event_
 import typingsSlinky.std.RTCErrorEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -22,11 +22,11 @@ trait RTCDataChannel extends EventTarget {
   val maxPacketLifeTime: Double | Null = js.native
   val maxRetransmits: Double | Null = js.native
   val negotiated: Boolean = js.native
-  var onbufferedamountlow: DataChannelEventHandler[Event] = js.native
-  var onclose: DataChannelEventHandler[Event] = js.native
+  var onbufferedamountlow: DataChannelEventHandler[Event_] = js.native
+  var onclose: DataChannelEventHandler[Event_] = js.native
   var onerror: DataChannelEventHandler[RTCErrorEvent] = js.native
   var onmessage: DataChannelEventHandler[MessageEvent] = js.native
-  var onopen: DataChannelEventHandler[Event] = js.native
+  var onopen: DataChannelEventHandler[Event_] = js.native
   val ordered: Boolean = js.native
   val protocol: String = js.native
   val readyState: RTCDataChannelState = js.native

@@ -1,6 +1,6 @@
 package typingsSlinky.sharepoint
 
-import org.scalajs.dom.raw.Event
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,6 +21,6 @@ class CalloutActionOptions () extends js.Object {
   /** Callback that is executed when the action link is clicked.
     @param event Standard javascript event object
     @param action The action object */
-  def onClickCallback(event: Event, action: CalloutAction): js.Any = js.native
+  def onClickCallback(event: Event_, action: CalloutAction): js.Any = js.native
 }
 

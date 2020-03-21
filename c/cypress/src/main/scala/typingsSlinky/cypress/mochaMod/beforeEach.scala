@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.mochaMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.cypress.Mocha.HookFunction
+import typingsSlinky.cypress.Mocha_.HookFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

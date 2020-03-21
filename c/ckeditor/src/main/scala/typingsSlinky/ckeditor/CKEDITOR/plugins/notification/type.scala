@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.ckeditor.ckeditorStrings.info
-  - typings.ckeditor.ckeditorStrings.warning
-  - typings.ckeditor.ckeditorStrings.success
-  - typings.ckeditor.ckeditorStrings.progress
+  - typingsSlinky.ckeditor.ckeditorStrings.info
+  - typingsSlinky.ckeditor.ckeditorStrings.warning
+  - typingsSlinky.ckeditor.ckeditorStrings.success
+  - typingsSlinky.ckeditor.ckeditorStrings.progress
 */
 trait `type` extends js.Object
 

@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dijit.layout
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dijit._WidgetBase
+import typingsSlinky.dojo.dijit.WidgetBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -25,7 +25,7 @@ trait utils extends js.Object {
   def layoutChildren(
     container: HTMLElement,
     dim: js.Object,
-    children: js.Array[_WidgetBase],
+    children: js.Array[WidgetBase],
     changedRegionId: String,
     changedRegionSize: Double
   ): Unit
@@ -43,7 +43,7 @@ trait utils extends js.Object {
 object utils {
   @scala.inline
   def apply(
-    layoutChildren: (HTMLElement, js.Object, js.Array[_WidgetBase], String, Double) => Unit,
+    layoutChildren: (HTMLElement, js.Object, js.Array[WidgetBase], String, Double) => Unit,
     marginBox2contentBox: (HTMLElement, js.Object) => js.Object
   ): utils = {
     val __obj = js.Dynamic.literal(layoutChildren = js.Any.fromFunction5(layoutChildren), marginBox2contentBox = js.Any.fromFunction2(marginBox2contentBox))

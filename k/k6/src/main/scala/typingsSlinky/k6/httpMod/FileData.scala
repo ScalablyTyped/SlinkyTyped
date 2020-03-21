@@ -1,6 +1,6 @@
 package typingsSlinky.k6.httpMod
 
-import typingsSlinky.k6.k6Mod.bytes
+import typingsSlinky.k6.mod.bytes
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

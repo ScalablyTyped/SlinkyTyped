@@ -1,6 +1,5 @@
 package typingsSlinky.baseui.checkboxMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
@@ -14,10 +13,11 @@ import typingsSlinky.baseui.baseuiStrings.right
 import typingsSlinky.baseui.baseuiStrings.toggle
 import typingsSlinky.baseui.baseuiStrings.toggle_round
 import typingsSlinky.baseui.baseuiStrings.top
-import typingsSlinky.react.reactMod.FocusEventHandler
-import typingsSlinky.react.reactMod.FormEventHandler
-import typingsSlinky.react.reactMod.MouseEventHandler
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.FocusEventHandler
+import typingsSlinky.react.mod.FormEventHandler
+import typingsSlinky.react.mod.MouseEventHandler
+import typingsSlinky.react.mod.Ref
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +61,7 @@ object CheckboxProps {
     labelPlacement: top | right | bottom | left = null,
     name: String = null,
     onBlur: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
-    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
     onFocus: SyntheticFocusEvent[HTMLInputElement] => Unit = null,
     onMouseDown: SyntheticMouseEvent[HTMLInputElement] => Unit = null,
     onMouseEnter: SyntheticMouseEvent[HTMLInputElement] => Unit = null,

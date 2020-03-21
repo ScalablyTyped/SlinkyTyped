@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
 @js.native
 /** Constructs a new writer instance. */
 class Writer ()
-  extends typingsSlinky.protobufjs.protobufjsMod.Writer
+  extends typingsSlinky.protobufjs.mod.Writer
 
 /* static members */
 @JSImport("protobufjs/light", "Writer")
@@ -24,6 +24,6 @@ object Writer extends js.Object {
     * Creates a new writer.
     * @returns A {@link BufferWriter} when Buffers are supported, otherwise a {@link Writer}
     */
-  def create(): typingsSlinky.protobufjs.protobufjsMod.BufferWriter | typingsSlinky.protobufjs.protobufjsMod.Writer = js.native
+  def create(): typingsSlinky.protobufjs.mod.BufferWriter | typingsSlinky.protobufjs.mod.Writer = js.native
 }
 

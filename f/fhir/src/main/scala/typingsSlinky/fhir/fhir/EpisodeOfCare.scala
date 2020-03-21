@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * An association of a Patient with an Organization and  Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait EpisodeOfCare extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait EpisodeOfCare extends DomainResource {
   /**
     * Contains extended information for property 'status'.
     */

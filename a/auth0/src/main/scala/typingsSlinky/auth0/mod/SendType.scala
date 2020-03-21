@@ -1,0 +1,21 @@
+package typingsSlinky.auth0.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.auth0.auth0Strings.link
+  - typingsSlinky.auth0.auth0Strings.code
+*/
+trait SendType extends js.Object
+
+object SendType {
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def code: typingsSlinky.auth0.auth0Strings.code = this.cast("code")
+  @scala.inline
+  def link: typingsSlinky.auth0.auth0Strings.link = this.cast("link")
+}
+

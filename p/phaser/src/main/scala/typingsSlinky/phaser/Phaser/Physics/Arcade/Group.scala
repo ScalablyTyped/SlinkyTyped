@@ -1,6 +1,5 @@
 package typingsSlinky.phaser.Phaser.Physics.Arcade
 
-import org.scalablytyped.runtime.TopLevel
 import typingsSlinky.phaser.Phaser.GameObjects.GameObject
 import typingsSlinky.phaser.Phaser.Scene
 import typingsSlinky.phaser.Phaser.Types.GameObjects.Group.GroupCreateConfig
@@ -19,7 +18,7 @@ import scala.scalajs.js.annotation._
   * Its static counterpart is {@link Phaser.Physics.Arcade.StaticGroup}.
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited */ @JSGlobal("Phaser.Physics.Arcade.Group")
+- typingsSlinky.phaser.Phaser.Types.Physics.Arcade._ArcadeColliderType because Already inherited */ @JSGlobal("Phaser.Physics.Arcade.Group")
 @js.native
 class Group protected ()
   extends typingsSlinky.phaser.Phaser.GameObjects.Group {
@@ -85,11 +84,4 @@ class Group protected ()
   def setVelocityY(value: Double): Group = js.native
   def setVelocityY(value: Double, step: Double): Group = js.native
 }
-
-/**
-  * Arcade Physics Group containing Dynamic Bodies.
-  */
-@JSGlobal("Phaser.Physics.Arcade.GROUP")
-@js.native
-object GROUP extends TopLevel[Double]
 

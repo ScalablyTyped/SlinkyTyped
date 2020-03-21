@@ -1,0 +1,44 @@
+package typingsSlinky.awsSdkClientDynamodbBrowser
+
+import typingsSlinky.awsSdkClientDynamodbBrowser.dynamoDBConfigurationMod.DynamoDBResolvedConfiguration
+import typingsSlinky.awsSdkClientDynamodbBrowser.inputTypesUnionMod.InputTypesUnion
+import typingsSlinky.awsSdkClientDynamodbBrowser.outputTypesUnionMod.OutputTypesUnion
+import typingsSlinky.awsSdkClientDynamodbBrowser.typesUpdateTableInputMod.UpdateTableInput
+import typingsSlinky.awsSdkClientDynamodbBrowser.typesUpdateTableOutputMod.UpdateTableOutput
+import typingsSlinky.awsSdkMiddlewareStack.mod.MiddlewareStack
+import typingsSlinky.awsSdkTypes.commandMod.Command
+import typingsSlinky.awsSdkTypes.middlewareMod.Handler
+import typingsSlinky.std.Blob
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("@aws-sdk/client-dynamodb-browser/commands/UpdateTableCommand", JSImport.Namespace)
+@js.native
+object updateTableCommandMod extends js.Object {
+  @js.native
+  class UpdateTableCommand protected () extends Command[
+          InputTypesUnion, 
+          UpdateTableInput, 
+          OutputTypesUnion, 
+          UpdateTableOutput, 
+          DynamoDBResolvedConfiguration, 
+          Blob
+        ] {
+    def this(input: UpdateTableInput) = this()
+    /* CompleteClass */
+    override val input: UpdateTableInput = js.native
+    val middlewareStack: MiddlewareStack[UpdateTableInput, UpdateTableOutput, org.scalajs.dom.raw.Blob] = js.native
+    def resolveMiddleware(
+      clientStack: MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[UpdateTableInput, UpdateTableOutput] = js.native
+    /* CompleteClass */
+    override def resolveMiddleware(
+      stack: typingsSlinky.awsSdkTypes.middlewareMod.MiddlewareStack[InputTypesUnion, OutputTypesUnion, Blob],
+      configuration: DynamoDBResolvedConfiguration
+    ): Handler[UpdateTableInput, UpdateTableOutput] = js.native
+  }
+  
+}
+

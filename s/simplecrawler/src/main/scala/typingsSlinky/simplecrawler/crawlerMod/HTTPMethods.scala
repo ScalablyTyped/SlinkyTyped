@@ -5,15 +5,15 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.simplecrawler.simplecrawlerStrings.GET
-  - typings.simplecrawler.simplecrawlerStrings.POST
-  - typings.simplecrawler.simplecrawlerStrings.HEAD
-  - typings.simplecrawler.simplecrawlerStrings.PUT
-  - typings.simplecrawler.simplecrawlerStrings.DELETE
-  - typings.simplecrawler.simplecrawlerStrings.CONNECT
-  - typings.simplecrawler.simplecrawlerStrings.OPTIONS
-  - typings.simplecrawler.simplecrawlerStrings.TRACE
-  - typings.simplecrawler.simplecrawlerStrings.PATCH
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.GET
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.POST
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.HEAD
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.PUT
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.DELETE
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.CONNECT
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.OPTIONS
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.TRACE
+  - typingsSlinky.simplecrawler.simplecrawlerStrings.PATCH
 */
 trait HTTPMethods extends js.Object
 

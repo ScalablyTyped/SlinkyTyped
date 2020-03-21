@@ -1,9 +1,9 @@
 package typingsSlinky.node.NodeJS
 
-import typingsSlinky.node.Console
-import typingsSlinky.node.Fn_Radix
-import typingsSlinky.node.Fn_UriComponent
-import typingsSlinky.node.TypeofClassBuffer
+import typingsSlinky.node.Console_
+import typingsSlinky.node.FnCallSRadix
+import typingsSlinky.node.FnCallUriComponent
+import typingsSlinky.node.TypeofBuffer
 import typingsSlinky.node.TypeofIntl
 import typingsSlinky.std.ArrayBufferConstructor
 import typingsSlinky.std.ArrayConstructor
@@ -47,7 +47,7 @@ trait Global extends js.Object {
   var Array_Original: ArrayConstructor = js.native
   @JSName("Boolean")
   var Boolean_Original: BooleanConstructor = js.native
-  var Buffer: TypeofClassBuffer = js.native
+  var Buffer: TypeofBuffer = js.native
   var DataView: DataViewConstructor = js.native
   @JSName("Date")
   var Date_Original: DateConstructor = js.native
@@ -96,13 +96,13 @@ trait Global extends js.Object {
   var Uint8ClampedArray: Uint8ClampedArrayConstructor = js.native
   var WeakMap: WeakMapConstructor = js.native
   var WeakSet: WeakSetConstructor = js.native
-  var console: Console = js.native
+  var console: Console_ = js.native
   @JSName("decodeURIComponent")
   var decodeURIComponent_Original: js.Function1[/* encodedURIComponent */ String, String] = js.native
   @JSName("decodeURI")
   var decodeURI_Original: js.Function1[/* encodedURI */ String, String] = js.native
   @JSName("encodeURIComponent")
-  var encodeURIComponent_Original: Fn_UriComponent = js.native
+  var encodeURIComponent_Original: FnCallUriComponent = js.native
   @JSName("encodeURI")
   var encodeURI_Original: js.Function1[/* uri */ String, String] = js.native
   @JSName("eval")
@@ -115,7 +115,7 @@ trait Global extends js.Object {
   @JSName("parseFloat")
   var parseFloat_Original: js.Function1[/* string */ String, Double] = js.native
   @JSName("parseInt")
-  var parseInt_Original: Fn_Radix = js.native
+  var parseInt_Original: FnCallSRadix = js.native
   var process: Process = js.native
   @JSName("queueMicrotask")
   var queueMicrotask_Original: js.Function1[/* callback */ js.Function0[Unit], Unit] = js.native
@@ -137,6 +137,10 @@ trait Global extends js.Object {
   def Error(message: String): js.Error = js.native
   def EvalError(): js.EvalError = js.native
   def EvalError(message: String): js.EvalError = js.native
+  @JSName("EvalError")
+  def EvalError_Error(): js.Error = js.native
+  @JSName("EvalError")
+  def EvalError_Error(message: String): js.Error = js.native
   def Function(args: String*): js.Function = js.native
   def Number(): Double = js.native
   def Number(value: js.Any): Double = js.native
@@ -144,8 +148,16 @@ trait Global extends js.Object {
   def Object(value: js.Any): js.Any = js.native
   def RangeError(): js.RangeError = js.native
   def RangeError(message: String): js.RangeError = js.native
+  @JSName("RangeError")
+  def RangeError_Error(): js.Error = js.native
+  @JSName("RangeError")
+  def RangeError_Error(message: String): js.Error = js.native
   def ReferenceError(): js.ReferenceError = js.native
   def ReferenceError(message: String): js.ReferenceError = js.native
+  @JSName("ReferenceError")
+  def ReferenceError_Error(): js.Error = js.native
+  @JSName("ReferenceError")
+  def ReferenceError_Error(message: String): js.Error = js.native
   def RegExp(pattern: String): js.RegExp = js.native
   def RegExp(pattern: String, flags: String): js.RegExp = js.native
   def RegExp(pattern: typingsSlinky.std.RegExp): js.RegExp = js.native
@@ -154,10 +166,22 @@ trait Global extends js.Object {
   def String(value: js.Any): java.lang.String = js.native
   def SyntaxError(): js.SyntaxError = js.native
   def SyntaxError(message: String): js.SyntaxError = js.native
-  def TypeError(): js.TypeError = js.native
-  def TypeError(message: String): js.TypeError = js.native
+  @JSName("SyntaxError")
+  def SyntaxError_Error(): js.Error = js.native
+  @JSName("SyntaxError")
+  def SyntaxError_Error(message: String): js.Error = js.native
+  def TypeError(): js.Error = js.native
+  def TypeError(message: String): js.Error = js.native
+  @JSName("TypeError")
+  def TypeError_TypeError(): js.TypeError = js.native
+  @JSName("TypeError")
+  def TypeError_TypeError(message: String): js.TypeError = js.native
   def URIError(): js.URIError = js.native
   def URIError(message: String): js.URIError = js.native
+  @JSName("URIError")
+  def URIError_Error(): js.Error = js.native
+  @JSName("URIError")
+  def URIError_Error(message: String): js.Error = js.native
   def clearImmediate(immediateId: Immediate): Unit = js.native
   def clearInterval(intervalId: Timeout): Unit = js.native
   def clearTimeout(timeoutId: Timeout): Unit = js.native

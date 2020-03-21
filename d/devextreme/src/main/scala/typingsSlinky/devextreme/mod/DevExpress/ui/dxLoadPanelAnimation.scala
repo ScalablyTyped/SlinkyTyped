@@ -1,0 +1,19 @@
+package typingsSlinky.devextreme.mod.DevExpress.ui
+
+import typingsSlinky.devextreme.mod.DevExpress.animationConfig
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+trait dxLoadPanelAnimation extends dxOverlayAnimation
+
+object dxLoadPanelAnimation {
+  @scala.inline
+  def apply(hide: animationConfig = null, show: animationConfig = null): dxLoadPanelAnimation = {
+    val __obj = js.Dynamic.literal()
+    if (hide != null) __obj.updateDynamic("hide")(hide.asInstanceOf[js.Any])
+    if (show != null) __obj.updateDynamic("show")(show.asInstanceOf[js.Any])
+    __obj.asInstanceOf[dxLoadPanelAnimation]
+  }
+}
+

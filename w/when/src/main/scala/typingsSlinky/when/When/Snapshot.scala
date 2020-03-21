@@ -15,9 +15,9 @@ import scala.scalajs.js.annotation._
   * "pending" - the promise is still pending to resolve/reject
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.when.When.FulfilledDescriptor[T]
-  - typings.when.When.RejectedDescriptor
-  - typings.when.When.PendingDescriptor
+  - typingsSlinky.when.When.FulfilledDescriptor[T]
+  - typingsSlinky.when.When.RejectedDescriptor
+  - typingsSlinky.when.When.PendingDescriptor
 */
 trait Snapshot[T] extends js.Object
 

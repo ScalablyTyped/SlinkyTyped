@@ -3,6 +3,24 @@
 
 Typings are for version 1.2.2
 
+## Library description:
+JupyterLab - Extension Manager
+
+|                    |                 |
+| ------------------ | :-------------: |
+| Full name          | @jupyterlab/extensionmanager |
+| Keywords           | - |
+| # releases         | 57 |
+| # dependents       | 2 |
+| # downloads        | 739192 |
+| # stars            | 0 |
+
+## Links
+- [Homepage](https://github.com/jupyterlab/jupyterlab)
+- [Bugs](https://github.com/jupyterlab/jupyterlab/issues)
+- [Repository](https://github.com/jupyterlab/jupyterlab)
+- [Npm](https://www.npmjs.com/package/%40jupyterlab%2Fextensionmanager)
+    
 
 
 ## Note

@@ -1,0 +1,24 @@
+package typingsSlinky.googleapis.osloginV1alphaMod.osloginV1alpha
+
+import typingsSlinky.googleAuthLibrary.mod.Compute
+import typingsSlinky.googleAuthLibrary.mod.JWT
+import typingsSlinky.googleAuthLibrary.mod.OAuth2Client
+import typingsSlinky.googleAuthLibrary.mod.UserRefreshClient
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ParamsResourceUsersSshpublickeysDelete extends StandardParameters {
+  /**
+    * Auth client or API Key for the request
+    */
+  var auth: js.UndefOr[String | OAuth2Client | JWT | Compute | UserRefreshClient] = js.native
+  /**
+    * The fingerprint of the public key to update. Public keys are identified
+    * by their SHA-256 fingerprint. The fingerprint of the public key is in
+    * format `users/{user}/sshPublicKeys/{fingerprint}`.
+    */
+  var name: js.UndefOr[String] = js.native
+}
+

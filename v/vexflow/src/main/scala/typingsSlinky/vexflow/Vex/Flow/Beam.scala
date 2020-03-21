@@ -1,8 +1,8 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.Anon_Beammiddleonly
-import typingsSlinky.vexflow.Anon_End
-import typingsSlinky.vexflow.Anon_FillStyle
+import typingsSlinky.vexflow.AnonBeammiddleonly
+import typingsSlinky.vexflow.AnonEnd
+import typingsSlinky.vexflow.AnonFillStyle_
 import typingsSlinky.vexflow.Vex.IRenderContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,13 +21,13 @@ class Beam protected () extends js.Object {
   def drawBeamLines(): Unit = js.native
   def drawStems(): Unit = js.native
   def getBeamCount(): Double = js.native
-  def getBeamLines(duration: String): js.Array[Anon_End] = js.native
+  def getBeamLines(duration: String): js.Array[AnonEnd] = js.native
   def getNotes(): js.Array[StemmableNote] = js.native
   def getSlopeY(): Double = js.native
   def postFormat(): Beam = js.native
   def preFormat(): Beam = js.native
   def setContext(context: IRenderContext): Beam = js.native
-  def setStyle(style: Anon_FillStyle): Beam = js.native
+  def setStyle(style: AnonFillStyle_): Beam = js.native
 }
 
 /* static members */
@@ -36,7 +36,7 @@ class Beam protected () extends js.Object {
 object Beam extends js.Object {
   def applyAndGetBeams(voice: Voice, stem_direction: Double, groups: js.Array[Fraction]): js.Array[Beam] = js.native
   def generateBeams(notes: js.Array[StemmableNote]): js.Array[Beam] = js.native
-  def generateBeams(notes: js.Array[StemmableNote], config: Anon_Beammiddleonly): js.Array[Beam] = js.native
+  def generateBeams(notes: js.Array[StemmableNote], config: AnonBeammiddleonly): js.Array[Beam] = js.native
   def getDefaultBeamGroups(time_sig: String): js.Array[Fraction] = js.native
 }
 

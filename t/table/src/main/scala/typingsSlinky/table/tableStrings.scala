@@ -1,6 +1,6 @@
 package typingsSlinky.table
 
-import typingsSlinky.table.tableMod.BorderType
+import typingsSlinky.table.mod.BorderType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

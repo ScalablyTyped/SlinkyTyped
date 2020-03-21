@@ -1,6 +1,6 @@
 package typingsSlinky.nodegit.branchMod.Branch
 
-import typingsSlinky.nodegit.annotatedDashCommitMod.AnnotatedCommit
+import typingsSlinky.nodegit.annotatedCommitMod.AnnotatedCommit
 import typingsSlinky.nodegit.commitMod.Commit
 import typingsSlinky.nodegit.referenceMod.Reference
 import typingsSlinky.nodegit.repositoryMod.Repository

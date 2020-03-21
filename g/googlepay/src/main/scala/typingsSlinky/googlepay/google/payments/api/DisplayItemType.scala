@@ -5,8 +5,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.googlepay.googlepayStrings.LINE_ITEM
-  - typings.googlepay.googlepayStrings.SUBTOTAL
+  - typingsSlinky.googlepay.googlepayStrings.LINE_ITEM
+  - typingsSlinky.googlepay.googlepayStrings.SUBTOTAL
 */
 trait DisplayItemType extends js.Object
 

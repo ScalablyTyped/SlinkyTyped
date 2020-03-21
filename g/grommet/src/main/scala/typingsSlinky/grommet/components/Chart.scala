@@ -4,11 +4,11 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.grommet.Anon_Args
-import typingsSlinky.grommet.Anon_Color
-import typingsSlinky.grommet.Anon_ColorValue
-import typingsSlinky.grommet.Anon_Full
-import typingsSlinky.grommet.componentsChartMod.ChartProps
+import typingsSlinky.grommet.AnonColor
+import typingsSlinky.grommet.AnonHeight
+import typingsSlinky.grommet.AnonLabel
+import typingsSlinky.grommet.AnonValue
+import typingsSlinky.grommet.chartMod.ChartProps
 import typingsSlinky.grommet.grommetStrings.area
 import typingsSlinky.grommet.grommetStrings.bar
 import typingsSlinky.grommet.grommetStrings.full
@@ -32,30 +32,30 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Chart
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.grommetMod.Chart] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.grommet.mod.Chart] {
   @JSImport("grommet", "Chart")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: onClick */
   def apply(
-    values: js.Array[Double | js.Array[Double] | Anon_Args],
+    values: js.Array[Double | js.Array[Double] | AnonLabel],
     a11yTitle: A11yTitleType = null,
     alignSelf: AlignSelfType = null,
     bounds: js.Array[js.Array[Double]] = null,
-    color: String | Anon_Color | js.Array[Anon_ColorValue] = null,
+    color: String | AnonColor | js.Array[AnonValue] = null,
     gap: GapType = null,
     gridArea: GridAreaType = null,
     margin: MarginType = null,
+    onClick: /* repeated */ js.Any => _ = null,
     onHover: /* repeated */ js.Any => _ = null,
     overflow: js.UndefOr[Boolean] = js.undefined,
     round: js.UndefOr[Boolean] = js.undefined,
-    size: xxsmall | xsmall | small | medium | large | xlarge | full | Anon_Full | String = null,
+    size: xxsmall | xsmall | small | medium | large | xlarge | full | AnonHeight | String = null,
     thickness: hair | xsmall | small | medium | large | xlarge | none | String = null,
     `type`: bar | line | area | point = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.grommet.grommetMod.Chart] = {
+  ): BuildingComponent[tag.type, typingsSlinky.grommet.mod.Chart] = {
     val __obj = js.Dynamic.literal(values = values.asInstanceOf[js.Any])
     if (a11yTitle != null) __obj.updateDynamic("a11yTitle")(a11yTitle.asInstanceOf[js.Any])
     if (alignSelf != null) __obj.updateDynamic("alignSelf")(alignSelf.asInstanceOf[js.Any])
@@ -64,6 +64,7 @@ object Chart
     if (gap != null) __obj.updateDynamic("gap")(gap.asInstanceOf[js.Any])
     if (gridArea != null) __obj.updateDynamic("gridArea")(gridArea.asInstanceOf[js.Any])
     if (margin != null) __obj.updateDynamic("margin")(margin.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
     if (onHover != null) __obj.updateDynamic("onHover")(js.Any.fromFunction1(onHover))
     if (!js.isUndefined(overflow)) __obj.updateDynamic("overflow")(overflow.asInstanceOf[js.Any])
     if (!js.isUndefined(round)) __obj.updateDynamic("round")(round.asInstanceOf[js.Any])

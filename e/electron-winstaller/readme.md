@@ -12,7 +12,7 @@ Module to generate Windows installers for Electron apps
 | Keywords           | - |
 | # releases         | 7 |
 | # dependents       | 16 |
-| # downloads        | 565141 |
+| # downloads        | 561523 |
 | # stars            | 5 |
 
 ## Links

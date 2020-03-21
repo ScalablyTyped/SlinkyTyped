@@ -1,7 +1,7 @@
 
 # Scala.js typings for ecmarkup
 
-Typings are for version 3.16.0
+Typings are for version 3.17.0
 
 ## Library description:
 Custom element definitions and core utilities for markup that specifies ECMAScript and related technologies.
@@ -12,7 +12,7 @@ Custom element definitions and core utilities for markup that specifies ECMAScri
 | Keywords           | ecmascript, javascript, specs, specifications, markup, markdown, html, code |
 | # releases         | 8 |
 | # dependents       | 3 |
-| # downloads        | 10158 |
+| # downloads        | 10040 |
 | # stars            | 0 |
 
 ## Links

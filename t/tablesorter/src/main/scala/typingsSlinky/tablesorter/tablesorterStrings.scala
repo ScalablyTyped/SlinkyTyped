@@ -1,28 +1,25 @@
 package typingsSlinky.tablesorter
 
-import typingsSlinky.tablesorter.designCoreThemeMod.CoreTheme
-import typingsSlinky.tablesorter.filteringColumnFilterMod.ColumnFilter
-import typingsSlinky.tablesorter.filteringFilterBoxMod.FilterBox
-import typingsSlinky.tablesorter.filteringMatchTypeMod.MatchType
-import typingsSlinky.tablesorter.pagingPagerEventMapMod.PagerEventMap
-import typingsSlinky.tablesorter.parsingParserTypeMod.ParserType
-import typingsSlinky.tablesorter.sortingEmptySortingMod.EmptySorting
-import typingsSlinky.tablesorter.sortingRelativeSortingMod.RelativeSorting
-import typingsSlinky.tablesorter.sortingSortInitiatorMod.SortInitiator
-import typingsSlinky.tablesorter.sortingSortOrderMod.SortOrder
-import typingsSlinky.tablesorter.sortingStringSortingMod.StringSorting
-import typingsSlinky.tablesorter.storageStorageTypeMod.StorageType
-import typingsSlinky.tablesorter.systemConfigEventMapMod.ConfigEventMap
-import typingsSlinky.tablesorter.systemEventMapMod.EventMap
-import typingsSlinky.tablesorter.systemParameterlessTriggerNameMapMod.ParameterlessTriggerNameMap
+import typingsSlinky.tablesorter.columnFilterMod.ColumnFilter
+import typingsSlinky.tablesorter.configEventMapMod.ConfigEventMap
+import typingsSlinky.tablesorter.coreThemeMod.CoreTheme
+import typingsSlinky.tablesorter.emptySortingMod.EmptySorting
+import typingsSlinky.tablesorter.eventMapMod.EventMap
+import typingsSlinky.tablesorter.filterBoxMod.FilterBox
+import typingsSlinky.tablesorter.matchTypeMod.MatchType
+import typingsSlinky.tablesorter.pagerEventMapMod.PagerEventMap
+import typingsSlinky.tablesorter.parameterlessTriggerNameMapMod.ParameterlessTriggerNameMap
+import typingsSlinky.tablesorter.parserTypeMod.ParserType
+import typingsSlinky.tablesorter.relativeSortingMod.RelativeSorting
+import typingsSlinky.tablesorter.sortInitiatorMod.SortInitiator
+import typingsSlinky.tablesorter.sortOrderMod.SortOrder
+import typingsSlinky.tablesorter.storageTypeMod.StorageType
+import typingsSlinky.tablesorter.stringSortingMod.StringSorting
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object tablesorterStrings {
-  @js.native
-  sealed trait FilterPlaceholders extends js.Object
-  
   @js.native
   sealed trait a extends RelativeSorting
   
@@ -381,8 +378,6 @@ object tablesorterStrings {
     extends EmptySorting
        with StringSorting
   
-  @scala.inline
-  def FilterPlaceholders: FilterPlaceholders = "FilterPlaceholders".asInstanceOf[FilterPlaceholders]
   @scala.inline
   def a: a = "a".asInstanceOf[a]
   @scala.inline

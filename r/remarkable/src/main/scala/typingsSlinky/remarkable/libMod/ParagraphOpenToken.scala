@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.remarkable.libMod._Token because Already inherited */ trait ParagraphOpenToken extends ParagraphToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait ParagraphOpenToken extends ParagraphToken {
   @JSName("type")
   var type_ParagraphOpenToken: paragraph_open
 }

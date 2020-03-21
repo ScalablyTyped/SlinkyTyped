@@ -1,8 +1,8 @@
 package typingsSlinky.aos
 
-import typingsSlinky.aos.aosMod.AosEventType
-import typingsSlinky.aos.aosMod.anchorPlacementOptions
-import typingsSlinky.aos.aosMod.easingOptions
+import typingsSlinky.aos.mod.AosEventType
+import typingsSlinky.aos.mod.anchorPlacementOptions
+import typingsSlinky.aos.mod.easingOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

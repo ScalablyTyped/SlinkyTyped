@@ -11,12 +11,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.youtube.youtubeNumbers.`-1`
-  - typings.youtube.youtubeNumbers.`0`
-  - typings.youtube.youtubeNumbers.`1`
-  - typings.youtube.youtubeNumbers.`2`
-  - typings.youtube.youtubeNumbers.`3`
-  - typings.youtube.youtubeNumbers.`5`
+  - typingsSlinky.youtube.youtubeNumbers.`-1`
+  - typingsSlinky.youtube.youtubeNumbers.`0`
+  - typingsSlinky.youtube.youtubeNumbers.`1`
+  - typingsSlinky.youtube.youtubeNumbers.`2`
+  - typingsSlinky.youtube.youtubeNumbers.`3`
+  - typingsSlinky.youtube.youtubeNumbers.`5`
 */
 trait PlayerState extends js.Object
 

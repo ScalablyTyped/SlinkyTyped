@@ -18,19 +18,19 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.mfiles.mfilesNumbers.`5`
-  - typings.mfiles.mfilesNumbers.`6`
-  - typings.mfiles.mfilesNumbers.`7`
-  - typings.mfiles.mfilesNumbers.`8`
-  - typings.mfiles.mfilesNumbers.`9`
-  - typings.mfiles.mfilesNumbers.`11`
-  - typings.mfiles.mfilesNumbers.`12`
-  - typings.mfiles.mfilesNumbers.`13`
-  - typings.mfiles.mfilesNumbers.`14`
-  - typings.mfiles.mfilesNumbers.`15`
-  - typings.mfiles.mfilesNumbers.`-1`
-  - typings.mfiles.mfilesNumbers.`-9000`
-  - typings.mfiles.mfilesNumbers.`-9001`
+  - typingsSlinky.mfiles.mfilesNumbers.`5`
+  - typingsSlinky.mfiles.mfilesNumbers.`6`
+  - typingsSlinky.mfiles.mfilesNumbers.`7`
+  - typingsSlinky.mfiles.mfilesNumbers.`8`
+  - typingsSlinky.mfiles.mfilesNumbers.`9`
+  - typingsSlinky.mfiles.mfilesNumbers.`11`
+  - typingsSlinky.mfiles.mfilesNumbers.`12`
+  - typingsSlinky.mfiles.mfilesNumbers.`13`
+  - typingsSlinky.mfiles.mfilesNumbers.`14`
+  - typingsSlinky.mfiles.mfilesNumbers.`15`
+  - typingsSlinky.mfiles.mfilesNumbers.`-1`
+  - typingsSlinky.mfiles.mfilesNumbers.`-9000`
+  - typingsSlinky.mfiles.mfilesNumbers.`-9001`
 */
 trait MFBuiltInView extends js.Object
 

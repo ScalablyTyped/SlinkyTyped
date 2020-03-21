@@ -5,9 +5,9 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_CountrySelectDropdown
-import typingsSlinky.baseui.phoneDashInputMod.Country
-import typingsSlinky.baseui.phoneDashInputMod.CountrySelectDropdownProps
+import typingsSlinky.baseui.AnonCountrySelectDropdown
+import typingsSlinky.baseui.phoneInputMod.Country
+import typingsSlinky.baseui.phoneInputMod.CountrySelectDropdownProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ object CountrySelectDropdown
     country: Country = null,
     mapIsoToLabel: /* iso */ String => String = null,
     maxDropdownHeight: String = null,
-    overrides: Anon_CountrySelectDropdown = null,
+    overrides: AnonCountrySelectDropdown = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()

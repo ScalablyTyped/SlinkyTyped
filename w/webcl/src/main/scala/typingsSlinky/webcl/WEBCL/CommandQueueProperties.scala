@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 
 /* cl_command_queue_properties - bitfield */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1`
-  - typings.webcl.webclNumbers.`0x2`
+  - typingsSlinky.webcl.webclNumbers.`0x1`
+  - typingsSlinky.webcl.webclNumbers.`0x2`
 */
 trait CommandQueueProperties extends js.Object
 

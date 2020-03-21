@@ -5,11 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.knockout.KnockoutSubscribableFunctions because Already inherited
-- typings.knockout.KnockoutObservableFunctions because Already inherited
-- typings.knockout.KnockoutSubscribable because Already inherited
-- typings.knockout.KnockoutReadonlyObservable because Already inherited
-- typings.knockout.KnockoutObservable because var conflicts: valueHasMutated, valueWillMutate. Inlined  */ @js.native
+- typingsSlinky.knockout.KnockoutSubscribableFunctions because Already inherited
+- typingsSlinky.knockout.KnockoutObservableFunctions because Already inherited
+- typingsSlinky.knockout.KnockoutSubscribable because Already inherited
+- typingsSlinky.knockout.KnockoutReadonlyObservable because Already inherited
+- typingsSlinky.knockout.KnockoutObservable because var conflicts: valueHasMutated, valueWillMutate. Inlined  */ @js.native
 trait KnockoutComputed[T]
   extends KnockoutReadonlyComputed[T]
      with KnockoutComputedFunctions[T] {

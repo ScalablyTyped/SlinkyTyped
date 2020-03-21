@@ -1,0 +1,13 @@
+package typingsSlinky.reactNativeScrollableTabView.mod
+
+import typingsSlinky.react.mod.Component
+import typingsSlinky.reactNativeScrollableTabView.TabBarPropsScrollableTabB
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("react-native-scrollable-tab-view", "ScrollableTabBar")
+@js.native
+class ScrollableTabBar ()
+  extends Component[TabBarPropsScrollableTabB, js.Object, js.Any]
+

@@ -1,0 +1,23 @@
+package typingsSlinky.awsSdk.chimeMod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait UpdateVoiceConnectorGroupResponse extends js.Object {
+  /**
+    * The updated Amazon Chime Voice Connector group details.
+    */
+  var VoiceConnectorGroup: js.UndefOr[typingsSlinky.awsSdk.chimeMod.VoiceConnectorGroup] = js.native
+}
+
+object UpdateVoiceConnectorGroupResponse {
+  @scala.inline
+  def apply(VoiceConnectorGroup: VoiceConnectorGroup = null): UpdateVoiceConnectorGroupResponse = {
+    val __obj = js.Dynamic.literal()
+    if (VoiceConnectorGroup != null) __obj.updateDynamic("VoiceConnectorGroup")(VoiceConnectorGroup.asInstanceOf[js.Any])
+    __obj.asInstanceOf[UpdateVoiceConnectorGroupResponse]
+  }
+}
+

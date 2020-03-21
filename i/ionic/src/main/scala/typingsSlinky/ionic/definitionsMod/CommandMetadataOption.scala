@@ -1,14 +1,14 @@
 package typingsSlinky.ionic.definitionsMod
 
-import typingsSlinky.atIonicCliDashFramework.Anon_Value
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandOptionType
-import typingsSlinky.atIonicCliDashFramework.definitionsMod.Footnote
+import typingsSlinky.ionicCliFramework.AnonValue
+import typingsSlinky.ionicCliFramework.definitionsMod.CommandOptionType
+import typingsSlinky.ionicCliFramework.definitionsMod.Footnote
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait CommandMetadataOption
-  extends typingsSlinky.atIonicCliDashFramework.definitionsMod.CommandMetadataOption {
+  extends typingsSlinky.ionicCliFramework.definitionsMod.CommandMetadataOption {
   var hint: js.UndefOr[String] = js.undefined
   var `private`: js.UndefOr[Boolean] = js.undefined
 }
@@ -25,7 +25,7 @@ object CommandMetadataOption {
     groups: js.Array[String] = null,
     hint: String = null,
     `private`: js.UndefOr[Boolean] = js.undefined,
-    spec: Anon_Value = null,
+    spec: AnonValue = null,
     `type`: CommandOptionType = null
   ): CommandMetadataOption = {
     val __obj = js.Dynamic.literal(name = name.asInstanceOf[js.Any], summary = summary.asInstanceOf[js.Any])

@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dijit
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.checked
 import typingsSlinky.dojo.dojoStrings.checkedChar
 import typingsSlinky.dojo.dojoStrings.role
@@ -63,7 +63,7 @@ class CheckedMenuItem () extends MenuItem {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_checkedChar(
     property: checkedChar,
@@ -73,7 +73,7 @@ class CheckedMenuItem () extends MenuItem {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_role(
     property: role,
@@ -83,6 +83,6 @@ class CheckedMenuItem () extends MenuItem {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

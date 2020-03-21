@@ -9,9 +9,9 @@ Typings are for version 0.59.1
 | ------------------ | :-------------: |
 | Full name          | @nivo/annotations |
 | Keywords           | nivo, dataviz, react, charts, annotations |
-| # releases         | 8 |
+| # releases         | 10 |
 | # dependents       | 5 |
-| # downloads        | 325633 |
+| # downloads        | 383297 |
 | # stars            | 0 |
 
 ## Links

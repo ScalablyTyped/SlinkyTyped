@@ -4,27 +4,31 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
+import slinky.core.facade.ReactElement
 import slinky.web.html.`*`.tag
-import typingsSlinky.primereact.componentsListboxListBoxMod.ListBoxProps
-import typingsSlinky.primereact.componentsTooltipTooltipOptionsMod.TooltipOptions
+import typingsSlinky.primereact.AnonValue
+import typingsSlinky.primereact.listBoxMod.ListBoxProps
+import typingsSlinky.primereact.tooltipOptionsMod.TooltipOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ListBox
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.listboxMod.ListBox] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.primereact.primereactListboxMod.ListBox] {
   @JSImport("primereact/listbox", "ListBox")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: className, disabled, id, multiple, onChange */
+  /* The following DOM/SVG props were specified: className, disabled, id, multiple */
   def apply(
+    ariaLabelledBy: String = null,
     dataKey: String = null,
     filter: js.UndefOr[Boolean] = js.undefined,
-    itemTemplate: /* item */ js.Any => js.UndefOr[typingsSlinky.react.reactMod._Global_.JSX.Element] = null,
+    itemTemplate: /* item */ js.Any => js.UndefOr[ReactElement] = null,
     listStyle: js.Object = null,
     metaKeySelection: js.UndefOr[Boolean] = js.undefined,
+    onChange: /* e */ AnonValue => Unit = null,
     optionLabel: String = null,
     options: js.Array[_] = null,
     style: js.Object = null,
@@ -33,13 +37,15 @@ object ListBox
     tooltipOptions: TooltipOptions = null,
     value: js.Any = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.primereact.listboxMod.ListBox] = {
+  ): BuildingComponent[tag.type, typingsSlinky.primereact.primereactListboxMod.ListBox] = {
     val __obj = js.Dynamic.literal()
+    if (ariaLabelledBy != null) __obj.updateDynamic("ariaLabelledBy")(ariaLabelledBy.asInstanceOf[js.Any])
     if (dataKey != null) __obj.updateDynamic("dataKey")(dataKey.asInstanceOf[js.Any])
     if (!js.isUndefined(filter)) __obj.updateDynamic("filter")(filter.asInstanceOf[js.Any])
     if (itemTemplate != null) __obj.updateDynamic("itemTemplate")(js.Any.fromFunction1(itemTemplate))
     if (listStyle != null) __obj.updateDynamic("listStyle")(listStyle.asInstanceOf[js.Any])
     if (!js.isUndefined(metaKeySelection)) __obj.updateDynamic("metaKeySelection")(metaKeySelection.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (optionLabel != null) __obj.updateDynamic("optionLabel")(optionLabel.asInstanceOf[js.Any])
     if (options != null) __obj.updateDynamic("options")(options.asInstanceOf[js.Any])
     if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
@@ -50,7 +56,9 @@ object ListBox
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.listboxMod.ListBox] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.primereact.listboxMod.ListBox](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.primereact.primereactListboxMod.ListBox] = new slinky.core.BuildingComponent[
+  slinky.web.html.`*`.tag.type, 
+  typingsSlinky.primereact.primereactListboxMod.ListBox](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ListBoxProps
 }
 

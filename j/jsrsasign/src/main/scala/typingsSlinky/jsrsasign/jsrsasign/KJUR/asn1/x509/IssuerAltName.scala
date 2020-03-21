@@ -1,7 +1,6 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.Anon_CriticalBooleanOptional
-import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.ArrayParam
+import typingsSlinky.jsrsasign.ArrayParamUriParamcritica
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -37,7 +36,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("jsrsasign.KJUR.asn1.x509.IssuerAltName")
 @js.native
 class IssuerAltName () extends Extension {
-  def this(params: ArrayParam[UriParam] with Anon_CriticalBooleanOptional) = this()
+  def this(params: ArrayParamUriParamcritica) = this()
   def getExtnValueHex(): String = js.native
   def setNameArray(paramsArray: js.Array[UriParam]): Unit = js.native
 }

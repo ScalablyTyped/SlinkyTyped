@@ -1,6 +1,6 @@
 package typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.x509
 
-import typingsSlinky.jsrsasign.Anon_Critical
+import typingsSlinky.jsrsasign.AnonCritical
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.BigIntegerParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.HexParam
 import typingsSlinky.jsrsasign.jsrsasign.KJUR.asn1.IntegerParam
@@ -32,7 +32,7 @@ import scala.scalajs.js.annotation._
 @JSGlobal("jsrsasign.KJUR.asn1.x509.AuthorityKeyIdentifier")
 @js.native
 class AuthorityKeyIdentifier () extends Extension {
-  def this(params: Anon_Critical) = this()
+  def this(params: AnonCritical) = this()
   def getExtnValueHex(): String = js.native
   /**
     * set authorityCertIssuer value by X500Name parameter

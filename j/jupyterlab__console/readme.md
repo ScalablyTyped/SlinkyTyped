@@ -10,9 +10,9 @@ JupyterLab - Code Console
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/console |
 | Keywords           | - |
-| # releases         | 64 |
+| # releases         | 65 |
 | # dependents       | 36 |
-| # downloads        | 784062 |
+| # downloads        | 789323 |
 | # stars            | 0 |
 
 ## Links

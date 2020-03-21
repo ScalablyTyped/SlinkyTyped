@@ -11,8 +11,8 @@ An XML builder for node.js
 | Full name          | xmlbuilder |
 | Keywords           | xml, xmlbuilder |
 | # releases         | 14 |
-| # dependents       | 777 |
-| # downloads        | 332420883 |
+| # dependents       | 786 |
+| # downloads        | 340281079 |
 | # stars            | 29 |
 
 ## Links

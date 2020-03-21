@@ -20,21 +20,21 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.nodegit.nodegitNumbers.`0`
-  - typings.nodegit.nodegitNumbers.`1`
-  - typings.nodegit.nodegitNumbers.`2`
-  - typings.nodegit.nodegitNumbers.`4`
-  - typings.nodegit.nodegitNumbers.`8`
-  - typings.nodegit.nodegitNumbers.`16`
-  - typings.nodegit.nodegitNumbers.`32`
-  - typings.nodegit.nodegitNumbers.`48`
-  - typings.nodegit.nodegitNumbers.`64`
-  - typings.nodegit.nodegitNumbers.`255`
-  - typings.nodegit.nodegitNumbers.`4096`
-  - typings.nodegit.nodegitNumbers.`8192`
-  - typings.nodegit.nodegitNumbers.`16384`
-  - typings.nodegit.nodegitNumbers.`32768`
-  - typings.nodegit.nodegitNumbers.`65536`
+  - typingsSlinky.nodegit.nodegitNumbers.`0`
+  - typingsSlinky.nodegit.nodegitNumbers.`1`
+  - typingsSlinky.nodegit.nodegitNumbers.`2`
+  - typingsSlinky.nodegit.nodegitNumbers.`4`
+  - typingsSlinky.nodegit.nodegitNumbers.`8`
+  - typingsSlinky.nodegit.nodegitNumbers.`16`
+  - typingsSlinky.nodegit.nodegitNumbers.`32`
+  - typingsSlinky.nodegit.nodegitNumbers.`48`
+  - typingsSlinky.nodegit.nodegitNumbers.`64`
+  - typingsSlinky.nodegit.nodegitNumbers.`255`
+  - typingsSlinky.nodegit.nodegitNumbers.`4096`
+  - typingsSlinky.nodegit.nodegitNumbers.`8192`
+  - typingsSlinky.nodegit.nodegitNumbers.`16384`
+  - typingsSlinky.nodegit.nodegitNumbers.`32768`
+  - typingsSlinky.nodegit.nodegitNumbers.`65536`
 */
 trait FIND extends js.Object
 

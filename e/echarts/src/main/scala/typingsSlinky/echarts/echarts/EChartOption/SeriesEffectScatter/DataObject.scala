@@ -1,9 +1,9 @@
 package typingsSlinky.echarts.echarts.EChartOption.SeriesEffectScatter
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BorderColorBorderType
-import typingsSlinky.echarts.Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidth
+import typingsSlinky.echarts.AnonBorderType
+import typingsSlinky.echarts.AnonDistance
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonLabelAnonDistance
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -12,15 +12,15 @@ trait DataObject extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.data.emphasis
     */
-  var emphasis: js.UndefOr[Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidth] = js.undefined
+  var emphasis: js.UndefOr[AnonLabelAnonDistance] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.data.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderType] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderType] = js.undefined
   /**
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.data.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth] = js.undefined
+  var label: js.UndefOr[AnonDistance] = js.undefined
   /**
     * Symbol of single data.
     *
@@ -121,21 +121,21 @@ trait DataObject extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-effectScatter.data.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
 }
 
 object DataObject {
   @scala.inline
   def apply(
-    emphasis: Anon_ItemStyleLabelAnonAlignBackgroundColorBorderColorBorderRadiusBorderWidth = null,
-    itemStyle: Anon_BorderColorBorderType = null,
-    label: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidth = null,
+    emphasis: AnonLabelAnonDistance = null,
+    itemStyle: AnonBorderType = null,
+    label: AnonDistance = null,
     symbol: String = null,
     symbolKeepAspect: js.UndefOr[Boolean] = js.undefined,
     symbolOffset: js.Array[_] = null,
     symbolRotate: Int | Double = null,
     symbolSize: js.Array[_] | Double = null,
-    tooltip: Anon_BackgroundColorBorderColor = null
+    tooltip: AnonExtraCssText = null
   ): DataObject = {
     val __obj = js.Dynamic.literal()
     if (emphasis != null) __obj.updateDynamic("emphasis")(emphasis.asInstanceOf[js.Any])

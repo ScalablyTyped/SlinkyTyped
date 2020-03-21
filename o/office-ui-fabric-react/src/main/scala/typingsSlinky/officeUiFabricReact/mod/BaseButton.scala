@@ -1,0 +1,22 @@
+package typingsSlinky.officeUiFabricReact.mod
+
+import typingsSlinky.officeUiFabricReact.PartialIBaseButtonProps
+import typingsSlinky.officeUiFabricReact.baseButtonMod.IBaseButtonProps
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("office-ui-fabric-react", "BaseButton")
+@js.native
+class BaseButton protected ()
+  extends typingsSlinky.officeUiFabricReact.libButtonMod.BaseButton {
+  def this(props: IBaseButtonProps, rootClassName: String) = this()
+}
+
+/* static members */
+@JSImport("office-ui-fabric-react", "BaseButton")
+@js.native
+object BaseButton extends js.Object {
+  var defaultProps: PartialIBaseButtonProps = js.native
+}
+

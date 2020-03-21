@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
   * @see {@link XrmEnum.StageStatus}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.active
-  - typings.xrm.xrmStrings.inactive
+  - typingsSlinky.xrm.xrmStrings.active
+  - typingsSlinky.xrm.xrmStrings.inactive
 */
 trait StageStatus extends js.Object
 

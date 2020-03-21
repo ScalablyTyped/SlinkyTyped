@@ -1,12 +1,12 @@
 package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.dojo.dojo.robot
+import typingsSlinky.dojo.doh.robot
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("dojo/robot", JSImport.Namespace)
+@JSImport("doh/robot", JSImport.Namespace)
 @js.native
 object robotMod extends TopLevel[robot]
 

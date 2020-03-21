@@ -1,15 +1,15 @@
 package typingsSlinky.winrt.Windows.Media.Devices
 
-import typingsSlinky.winrt.Anon_SucceededValue
-import typingsSlinky.winrt.Anon_SucceededValueBoolean
+import typingsSlinky.winrt.AnonSucceededBoolean
+import typingsSlinky.winrt.AnonSucceededValue
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait IMediaDeviceControl extends js.Object {
   var capabilities: MediaDeviceControlCapabilities
-  def tryGetAuto(): Anon_SucceededValueBoolean
-  def tryGetValue(): Anon_SucceededValue
+  def tryGetAuto(): AnonSucceededBoolean
+  def tryGetValue(): AnonSucceededValue
   def trySetAuto(value: Boolean): Boolean
   def trySetValue(value: Double): Boolean
 }
@@ -18,8 +18,8 @@ object IMediaDeviceControl {
   @scala.inline
   def apply(
     capabilities: MediaDeviceControlCapabilities,
-    tryGetAuto: () => Anon_SucceededValueBoolean,
-    tryGetValue: () => Anon_SucceededValue,
+    tryGetAuto: () => AnonSucceededBoolean,
+    tryGetValue: () => AnonSucceededValue,
     trySetAuto: Boolean => Boolean,
     trySetValue: Double => Boolean
   ): IMediaDeviceControl = {

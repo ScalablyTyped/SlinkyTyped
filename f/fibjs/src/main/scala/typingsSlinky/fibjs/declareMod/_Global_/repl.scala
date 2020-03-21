@@ -1,6 +1,6 @@
 package typingsSlinky.fibjs.declareMod._Global_
 
-import typingsSlinky.fibjs.Class_Stream
+import typingsSlinky.fibjs.ClassStream
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -10,7 +10,7 @@ import scala.scalajs.js.annotation._
 object repl extends js.Object {
   def apply(): Unit = js.native
   def apply(cmds: js.Array[_]): Unit = js.native
-  def apply(out: Class_Stream): Unit = js.native
-  def apply(out: Class_Stream, cmds: js.Array[_]): Unit = js.native
+  def apply(out: ClassStream): Unit = js.native
+  def apply(out: ClassStream, cmds: js.Array[_]): Unit = js.native
 }
 

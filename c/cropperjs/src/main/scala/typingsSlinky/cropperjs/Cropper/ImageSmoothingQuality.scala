@@ -5,9 +5,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.cropperjs.cropperjsStrings.low
-  - typings.cropperjs.cropperjsStrings.medium
-  - typings.cropperjs.cropperjsStrings.high
+  - typingsSlinky.cropperjs.cropperjsStrings.low
+  - typingsSlinky.cropperjs.cropperjsStrings.medium
+  - typingsSlinky.cropperjs.cropperjsStrings.high
 */
 trait ImageSmoothingQuality extends js.Object
 

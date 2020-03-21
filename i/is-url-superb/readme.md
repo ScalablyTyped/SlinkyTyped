@@ -11,8 +11,8 @@ Check if a string is a URL
 | Full name          | is-url-superb |
 | Keywords           | url, uri, string, validate, check, is |
 | # releases         | 2 |
-| # dependents       | 43 |
-| # downloads        | 2724019 |
+| # dependents       | 49 |
+| # downloads        | 2981484 |
 | # stars            | 1 |
 
 ## Links

@@ -1,9 +1,19 @@
 package typingsSlinky.chance.Chance
 
-import typingsSlinky.chance.Anon_4
-import typingsSlinky.chance.Anon_Likelihood
-import typingsSlinky.chance.Anon_Region
+import typingsSlinky.chance.AnonLikelihood
+import typingsSlinky.chance.AnonRegion
+import typingsSlinky.chance.AnonVersion
 import typingsSlinky.chance.AtLeastOneKey
+import typingsSlinky.chance.KinkeyofCharacterOptionsP
+import typingsSlinky.chance.KinkeyofEmailOptionsPickE
+import typingsSlinky.chance.KinkeyofFirstNameOptionsP
+import typingsSlinky.chance.KinkeyofIntegerOptionsPic
+import typingsSlinky.chance.KinkeyofNameOptionsPickNa
+import typingsSlinky.chance.KinkeyofPrefixOptionsPick
+import typingsSlinky.chance.KinkeyofSentenceOptionsPi
+import typingsSlinky.chance.KinkeyofStringOptionsPick
+import typingsSlinky.chance.KinkeyofUrlOptionsPickUrl
+import typingsSlinky.chance.KinkeyofWordOptionsPickWo
 import typingsSlinky.chance.chanceStrings.Friday
 import typingsSlinky.chance.chanceStrings.Monday
 import typingsSlinky.chance.chanceStrings.Saturday
@@ -56,7 +66,7 @@ trait Chance extends Seeded {
   def birthday_Date(): js.Date = js.native
   // Basics
   def bool(): Boolean = js.native
-  def bool(opts: Anon_Likelihood): Boolean = js.native
+  def bool(opts: AnonLikelihood): Boolean = js.native
   // Helpers
   def capitalize(str: String): String = js.native
   // Finance
@@ -69,14 +79,7 @@ trait Chance extends Seeded {
   def cf(): String = js.native
   def cf(opts: Options): String = js.native
   def character(): String = js.native
-  def character(
-    opts: AtLeastOneKey[
-      CharacterOptions, 
-      /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in 'casing' | 'pool' | 'alpha' | 'numeric' | 'symbols' ]: std.Pick<chance.Chance.CharacterOptions, K>}
-    */ typingsSlinky.chance.chanceStrings.Chance with js.Any
-    ]
-  ): String = js.native
+  def character(opts: AtLeastOneKey[CharacterOptions, KinkeyofCharacterOptionsP]): String = js.native
   def city(): String = js.native
   // Miscellaneous
   def coin(): String = js.native
@@ -107,14 +110,7 @@ trait Chance extends Seeded {
   def domain(): String = js.native
   def domain(opts: Options): String = js.native
   def email(): String = js.native
-  def email(
-    opts: AtLeastOneKey[
-      EmailOptions, 
-      /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in 'length' | 'domain' ]: std.Pick<chance.Chance.EmailOptions, K>}
-    */ typingsSlinky.chance.chanceStrings.Chance with js.Any
-    ]
-  ): String = js.native
+  def email(opts: AtLeastOneKey[EmailOptions, KinkeyofEmailOptionsPickE]): String = js.native
   def euro(): String = js.native
   def euro(opts: Options): String = js.native
   def exp(): String = js.native
@@ -125,14 +121,7 @@ trait Chance extends Seeded {
   def exp_year(opts: Options): String = js.native
   def fbid(): String = js.native
   def first(): String = js.native
-  def first(
-    opts: AtLeastOneKey[
-      FirstNameOptions, 
-      /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in 'gender' | 'nationality' ]: std.Pick<chance.Chance.FirstNameOptions, K>}
-    */ typingsSlinky.chance.chanceStrings.Chance with js.Any
-    ]
-  ): String = js.native
+  def first(opts: AtLeastOneKey[FirstNameOptions, KinkeyofFirstNameOptionsP]): String = js.native
   def floating(): Double = js.native
   def floating(opts: Options): Double = js.native
   def gender(): String = js.native
@@ -140,7 +129,7 @@ trait Chance extends Seeded {
   def geohash(opts: Options): String = js.native
   def google_analytics(): String = js.native
   def guid(): String = js.native
-  def guid(options: Anon_4): String = js.native
+  def guid(options: AnonVersion): String = js.native
   def hammertime(): Double = js.native
   def hash(): String = js.native
   def hash(opts: Options): String = js.native
@@ -148,14 +137,7 @@ trait Chance extends Seeded {
   def hour(): Double = js.native
   def hour(opts: Options): Double = js.native
   def integer(): Double = js.native
-  def integer(
-    opts: AtLeastOneKey[
-      IntegerOptions, 
-      /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in 'min' | 'max' ]: std.Pick<chance.Chance.IntegerOptions, K>}
-    */ typingsSlinky.chance.chanceStrings.Chance with js.Any
-    ]
-  ): Double = js.native
+  def integer(opts: AtLeastOneKey[IntegerOptions, KinkeyofIntegerOptionsPic]): Double = js.native
   def ip(): String = js.native
   def ipv6(): String = js.native
   def klout(): String = js.native
@@ -166,9 +148,9 @@ trait Chance extends Seeded {
   def letter(): String = js.native
   def letter(opts: Options): String = js.native
   def locale(): String = js.native
-  def locale(opts: Anon_Region): String = js.native
+  def locale(opts: AnonRegion): String = js.native
   def locales(): js.Array[String] = js.native
-  def locales(opts: Anon_Region): js.Array[String] = js.native
+  def locales(opts: AnonRegion): js.Array[String] = js.native
   def longitude(): Double = js.native
   def longitude(opts: Options): Double = js.native
   def mersenne_twister(): js.Any = js.native
@@ -183,23 +165,9 @@ trait Chance extends Seeded {
   def n[T](generator: js.Function0[T], count: Double): js.Array[T] = js.native
   def n[T, O /* <: Options */](generator: js.Function1[/* options */ O, T], count: Double, options: O): js.Array[T] = js.native
   def name(): String = js.native
-  def name(
-    opts: AtLeastOneKey[
-      NameOptions, 
-      /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in keyof chance.Chance.NameOptions ]: std.Pick<chance.Chance.NameOptions, K>}
-    */ typingsSlinky.chance.chanceStrings.Chance with js.Any
-    ]
-  ): String = js.native
+  def name(opts: AtLeastOneKey[NameOptions, KinkeyofNameOptionsPickNa]): String = js.native
   def name_prefix(): String = js.native
-  def name_prefix(
-    opts: AtLeastOneKey[
-      PrefixOptions, 
-      /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in keyof chance.Chance.PrefixOptions ]: std.Pick<chance.Chance.PrefixOptions, K>}
-    */ typingsSlinky.chance.chanceStrings.Chance with js.Any
-    ]
-  ): String = js.native
+  def name_prefix(opts: AtLeastOneKey[PrefixOptions, KinkeyofPrefixOptionsPick]): String = js.native
   def name_prefixes(): js.Array[Name] = js.native
   def name_suffix(): String = js.native
   def name_suffix(opts: SuffixOptions): String = js.native
@@ -228,14 +196,7 @@ trait Chance extends Seeded {
   def postal(): String = js.native
   def postcode(): String = js.native
   def prefix(): String = js.native
-  def prefix(
-    opts: AtLeastOneKey[
-      PrefixOptions, 
-      /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in keyof chance.Chance.PrefixOptions ]: std.Pick<chance.Chance.PrefixOptions, K>}
-    */ typingsSlinky.chance.chanceStrings.Chance with js.Any
-    ]
-  ): String = js.native
+  def prefix(opts: AtLeastOneKey[PrefixOptions, KinkeyofPrefixOptionsPick]): String = js.native
   def profession(): String = js.native
   def profession(opts: Options): String = js.native
   def province(): String = js.native
@@ -249,14 +210,7 @@ trait Chance extends Seeded {
   def rpg_Array(dice: String): js.Array[Double] = js.native
   def second(): Double = js.native
   def sentence(): String = js.native
-  def sentence(
-    opts: AtLeastOneKey[
-      SentenceOptions, 
-      /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in 'words' | 'punctuation' ]: std.Pick<chance.Chance.SentenceOptions, K>}
-    */ typingsSlinky.chance.chanceStrings.Chance with js.Any
-    ]
-  ): String = js.native
+  def sentence(opts: AtLeastOneKey[SentenceOptions, KinkeyofSentenceOptionsPi]): String = js.native
   def set[T](key: String, values: js.Array[T]): js.Any = js.native
   @JSName("set")
   def set_armedforces(key: armed_forces, values: js.Array[String]): js.Any = js.native
@@ -289,14 +243,7 @@ trait Chance extends Seeded {
   def street_suffix(): Name = js.native
   def street_suffixes(): js.Array[Name] = js.native
   def string(): String = js.native
-  def string(
-    opts: AtLeastOneKey[
-      StringOptions, 
-      /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in keyof chance.Chance.StringOptions ]: std.Pick<chance.Chance.StringOptions, K>}
-    */ typingsSlinky.chance.chanceStrings.Chance with js.Any
-    ]
-  ): String = js.native
+  def string(opts: AtLeastOneKey[StringOptions, KinkeyofStringOptionsPick]): String = js.native
   def suffix(): String = js.native
   def suffix(opts: SuffixOptions): String = js.native
   def syllable(): String = js.native
@@ -310,25 +257,11 @@ trait Chance extends Seeded {
   def unique[T](generator: js.Function0[T], count: Double): js.Array[T] = js.native
   def unique[T, O /* <: UniqueOptions[T] */](generator: js.Function1[/* options */ O, T], count: Double, options: O): js.Array[T] = js.native
   def url(): String = js.native
-  def url(
-    opts: AtLeastOneKey[
-      UrlOptions, 
-      /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in 'protocol' | 'domain' | 'domain_prefix' | 'path' | 'extensions' ]: std.Pick<chance.Chance.UrlOptions, K>}
-    */ typingsSlinky.chance.chanceStrings.Chance with js.Any
-    ]
-  ): String = js.native
+  def url(opts: AtLeastOneKey[UrlOptions, KinkeyofUrlOptionsPickUrl]): String = js.native
   def weekday(opts: Options): Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday = js.native
   def weighted[T](values: js.Array[T], weights: js.Array[Double]): T = js.native
   def word(): String = js.native
-  def word(
-    opts: AtLeastOneKey[
-      WordOptions, 
-      /* import warning: importer.ImportType#apply c Unsupported type mapping: 
-  {[ K in 'length' | 'syllables' | 'capitalize' ]: std.Pick<chance.Chance.WordOptions, K>}
-    */ typingsSlinky.chance.chanceStrings.Chance with js.Any
-    ]
-  ): String = js.native
+  def word(opts: AtLeastOneKey[WordOptions, KinkeyofWordOptionsPickWo]): String = js.native
   def wp7_anid(): String = js.native
   def wp8_anid2(): String = js.native
   def year(): String = js.native

@@ -1,9 +1,0 @@
-package typingsSlinky.awsDashSdk.clientsGameliftMod
-
-import scala.scalajs.js
-import scala.scalajs.js.`|`
-import scala.scalajs.js.annotation._
-
-@js.native
-trait DeleteVpcPeeringAuthorizationOutput extends js.Object
-

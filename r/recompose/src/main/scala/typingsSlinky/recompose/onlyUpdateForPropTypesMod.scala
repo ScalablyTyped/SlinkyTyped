@@ -1,6 +1,6 @@
 package typingsSlinky.recompose
 
-import typingsSlinky.recompose.recomposeMod.InferableComponentEnhancer
+import typingsSlinky.recompose.mod.InferableComponentEnhancer
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -5,12 +5,12 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.fancybox.fancyboxBooleans.`false`
-  - typings.fancybox.fancyboxStrings.close
-  - typings.fancybox.fancyboxStrings.next
-  - typings.fancybox.fancyboxStrings.nextOrClose
-  - typings.fancybox.fancyboxStrings.toggleControls
-  - typings.fancybox.fancyboxStrings.zoom
+  - typingsSlinky.fancybox.fancyboxBooleans.`false`
+  - typingsSlinky.fancybox.fancyboxStrings.close
+  - typingsSlinky.fancybox.fancyboxStrings.next
+  - typingsSlinky.fancybox.fancyboxStrings.nextOrClose
+  - typingsSlinky.fancybox.fancyboxStrings.toggleControls
+  - typingsSlinky.fancybox.fancyboxStrings.zoom
 */
 trait FancyBoxInteractionTypes extends js.Object
 

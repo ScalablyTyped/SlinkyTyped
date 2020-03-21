@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object cloneMod {
-  type Clone = Clone_
+  type Clone = typingsSlinky.nodegit.cloneMod.Clone_
 }

@@ -10,8 +10,8 @@ import scala.scalajs.js.annotation._
   * An enumeration for Relationship Type Metadata
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmNumbers.`0`
-  - typings.xrm.xrmNumbers.`1`
+  - typingsSlinky.xrm.xrmNumbers.`0`
+  - typingsSlinky.xrm.xrmNumbers.`1`
 */
 trait RelationshipType extends js.Object
 

@@ -11,9 +11,9 @@ import typingsSlinky.baseui.blockMod.JustifyItems
 import typingsSlinky.baseui.blockMod.JustifySelf
 import typingsSlinky.baseui.blockMod.Overflow
 import typingsSlinky.baseui.blockMod.Position
-import typingsSlinky.baseui.dataDashTableMod._SortDirectionsT
+import typingsSlinky.baseui.dataTableMod._SortDirectionsT
 import typingsSlinky.baseui.listMod.ArtworkSizesT
-import typingsSlinky.baseui.phoneDashInputMod.StateChange
+import typingsSlinky.baseui.phoneInputMod.StateChange
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -57,6 +57,9 @@ object baseuiStrings {
   
   @js.native
   sealed trait AM extends js.Object
+  
+  @js.native
+  sealed trait ANCHOR extends js.Object
   
   @js.native
   sealed trait AO extends js.Object
@@ -396,6 +399,9 @@ object baseuiStrings {
   
   @js.native
   sealed trait `Côte dRightsinglequotationmarkIvoire` extends js.Object
+  
+  @js.native
+  sealed trait DATETIME extends js.Object
   
   @js.native
   sealed trait DE extends js.Object
@@ -2842,6 +2848,9 @@ object baseuiStrings {
   sealed trait meter extends js.Object
   
   @js.native
+  sealed trait mini extends js.Object
+  
+  @js.native
   sealed trait minimal extends js.Object
   
   @js.native
@@ -2899,9 +2908,6 @@ object baseuiStrings {
   
   @js.native
   sealed trait ol extends js.Object
-  
-  @js.native
-  sealed trait onChange extends js.Object
   
   @js.native
   sealed trait open extends js.Object
@@ -3346,6 +3352,8 @@ object baseuiStrings {
   @scala.inline
   def AM: AM = "AM".asInstanceOf[AM]
   @scala.inline
+  def ANCHOR: ANCHOR = "ANCHOR".asInstanceOf[ANCHOR]
+  @scala.inline
   def AO: AO = "AO".asInstanceOf[AO]
   @scala.inline
   def AR: AR = "AR".asInstanceOf[AR]
@@ -3571,6 +3579,8 @@ object baseuiStrings {
   def `Czech Republic LeftparenthesisČeská republikaRightparenthesis`: `Czech Republic LeftparenthesisČeská republikaRightparenthesis` = "Czech Republic (\u010Cesk\u00E1 republika)".asInstanceOf[`Czech Republic LeftparenthesisČeská republikaRightparenthesis`]
   @scala.inline
   def `Côte dRightsinglequotationmarkIvoire`: `Côte dRightsinglequotationmarkIvoire` = "C\u00F4te d\u2019Ivoire".asInstanceOf[`Côte dRightsinglequotationmarkIvoire`]
+  @scala.inline
+  def DATETIME: DATETIME = "DATETIME".asInstanceOf[DATETIME]
   @scala.inline
   def DE: DE = "DE".asInstanceOf[DE]
   @scala.inline
@@ -5156,6 +5166,8 @@ object baseuiStrings {
   @scala.inline
   def meter: meter = "meter".asInstanceOf[meter]
   @scala.inline
+  def mini: mini = "mini".asInstanceOf[mini]
+  @scala.inline
   def minimal: minimal = "minimal".asInstanceOf[minimal]
   @scala.inline
   def mouseEnter: mouseEnter = "mouseEnter".asInstanceOf[mouseEnter]
@@ -5191,8 +5203,6 @@ object baseuiStrings {
   def `object`: `object` = "object".asInstanceOf[`object`]
   @scala.inline
   def ol: ol = "ol".asInstanceOf[ol]
-  @scala.inline
-  def onChange: onChange = "onChange".asInstanceOf[onChange]
   @scala.inline
   def open: open = "open".asInstanceOf[open]
   @scala.inline

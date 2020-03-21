@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.mobile
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.checked
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -17,7 +17,7 @@ import scala.scalajs.js.annotation._
   * @param srcNodeRef       OptionalIf a srcNodeRef (DOM node) is specified:use srcNodeRef.innerHTML as my contentsif this is a behavioral widget then apply behavior to that srcNodeRefotherwise, replace srcNodeRef with my generated DOM tree
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dijit.form._ToggleButtonMixin because Inheritance from two classes. Inlined checked, postCreate, reset */ @JSGlobal("dojox.mobile.ToggleButton")
+- typingsSlinky.dojo.dijit.form.ToggleButtonMixin because Inheritance from two classes. Inlined checked, postCreate, reset */ @JSGlobal("dojox.mobile.ToggleButton")
 @js.native
 class ToggleButton () extends Button {
   def this(params: js.Object) = this()
@@ -58,6 +58,6 @@ class ToggleButton () extends Button {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

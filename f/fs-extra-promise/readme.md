@@ -11,8 +11,8 @@ Node file system library and fs-extra module promisified with bluebird
 | Full name          | fs-extra-promise |
 | Keywords           | fs, fs-extra, file, promise, bluebird, extend |
 | # releases         | 0 |
-| # dependents       | 238 |
-| # downloads        | 515945 |
+| # dependents       | 239 |
+| # downloads        | 520625 |
 | # stars            | 8 |
 
 ## Links

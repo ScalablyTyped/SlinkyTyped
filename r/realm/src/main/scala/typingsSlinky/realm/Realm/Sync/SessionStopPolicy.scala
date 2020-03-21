@@ -8,9 +8,9 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.realm.realmStrings.`after-upload`
-  - typings.realm.realmStrings.immediately
-  - typings.realm.realmStrings.never
+  - typingsSlinky.realm.realmStrings.`after-upload`
+  - typingsSlinky.realm.realmStrings.immediately
+  - typingsSlinky.realm.realmStrings.never
 */
 trait SessionStopPolicy extends js.Object
 

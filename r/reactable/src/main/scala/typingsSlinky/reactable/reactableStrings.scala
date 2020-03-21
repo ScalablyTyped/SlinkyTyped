@@ -1,6 +1,6 @@
 package typingsSlinky.reactable
 
-import typingsSlinky.reactable.reactableMod.SortDirection
+import typingsSlinky.reactable.mod.SortDirection
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

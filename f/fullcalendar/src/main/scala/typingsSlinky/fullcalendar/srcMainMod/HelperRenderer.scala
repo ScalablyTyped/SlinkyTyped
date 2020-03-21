@@ -7,7 +7,7 @@ import scala.scalajs.js.annotation._
 @JSImport("fullcalendar/src/main", "HelperRenderer")
 @js.native
 class HelperRenderer protected ()
-  extends typingsSlinky.fullcalendar.srcExportsMod.HelperRenderer {
+  extends typingsSlinky.fullcalendar.exportsMod.HelperRenderer {
   def this(component: js.Any, eventRenderer: js.Any) = this()
 }
 

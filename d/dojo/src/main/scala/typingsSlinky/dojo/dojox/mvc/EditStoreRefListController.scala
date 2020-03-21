@@ -1,6 +1,6 @@
 package typingsSlinky.dojo.dojox.mvc
 
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.cursor
 import typingsSlinky.dojo.dojoStrings.cursorId
 import typingsSlinky.dojo.dojoStrings.cursorIndex
@@ -18,11 +18,11 @@ import scala.scalajs.js.annotation._
   *
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.dojo.dojox.mvc._atBindingMixin because Already inherited
-- typings.dojo.dojo.Stateful because Already inherited
-- typings.dojo.dojox.mvc._Controller because Already inherited
-- typings.dojo.dojox.mvc.ModelRefController because Already inherited
-- typings.dojo.dojox.mvc.ListController because Inheritance from two classes. Inlined cursor, set_cursor, get_cursor, watch_cursor, cursorId, set_cursorId, get_cursorId, watch_cursorId, cursorIndex, set_cursorIndex, get_cursorIndex, watch_cursorIndex, set_datamvcbindings, get_datamvcbindings, watch_datamvcbindings, set_dataBindAttr, get_dataBindAttr, watch_dataBindAttr, idProperty, set_idProperty, get_idProperty, watch_idProperty, set_model, get_model, watch_model, set_ownProps, get_ownProps, watch_ownProps, destroy, get, hasControllerProperty, postscript, postscript, set, startup, watch */ @JSGlobal("dojox.mvc.EditStoreRefListController")
+- typingsSlinky.dojo.dojox.mvc.atBindingMixin because Already inherited
+- typingsSlinky.dojo.dojo.Stateful because Already inherited
+- typingsSlinky.dojo.dojox.mvc.Controller because Already inherited
+- typingsSlinky.dojo.dojox.mvc.ModelRefController because Already inherited
+- typingsSlinky.dojo.dojox.mvc.ListController because Inheritance from two classes. Inlined cursor, set_cursor, get_cursor, watch_cursor, cursorId, set_cursorId, get_cursorId, watch_cursorId, cursorIndex, set_cursorIndex, get_cursorIndex, watch_cursorIndex, set_datamvcbindings, get_datamvcbindings, watch_datamvcbindings, set_dataBindAttr, get_dataBindAttr, watch_dataBindAttr, idProperty, set_idProperty, get_idProperty, watch_idProperty, set_model, get_model, watch_model, set_ownProps, get_ownProps, watch_ownProps, destroy, get, hasControllerProperty, postscript, postscript, set, startup, watch */ @JSGlobal("dojox.mvc.EditStoreRefListController")
 @js.native
 class EditStoreRefListController () extends EditStoreRefController {
   /**
@@ -70,21 +70,21 @@ class EditStoreRefListController () extends EditStoreRefController {
   def watch_cursor(
     property: cursor,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[js.Object], js.UndefOr[js.Object], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_cursorId(
     property: cursorId,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[String], js.UndefOr[String], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_cursorIndex(
     property: cursorIndex,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[Double], js.UndefOr[Double], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_idProperty(
     property: idProperty,
     callback: js.Function3[js.UndefOr[String], js.UndefOr[String], js.UndefOr[String], Unit]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

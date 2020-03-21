@@ -12,7 +12,7 @@ trait ServiceWorker
   extends EventTarget
      with AbstractWorker
      with _MessageEventSource {
-  var onstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onstatechange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   val scriptURL: java.lang.String = js.native
   val state: org.scalajs.dom.experimental.serviceworkers.ServiceWorkerState = js.native
   /**
@@ -22,7 +22,7 @@ trait ServiceWorker
     * 
     * When set to true, options's capture prevents callback from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not present), callback will not be invoked when event's eventPhase attribute value is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase attribute value is AT_TARGET.
     * 
-    * When set to true, options's passive indicates that the callback will not cancel the event by invoking preventDefault(). This is used to enable performance optimizations described in §2.8 Observing event listeners.
+    * When set to true, options's passive indicates that the callback will not cancel the event by invoking preventDefault(). This is used to enable performance optimizations described in § 2.8 Observing event listeners.
     * 
     * When set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.
     * 
@@ -39,20 +39,17 @@ trait ServiceWorker
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_statechange(
-    `type`: statechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_statechange(`type`: statechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_statechange(
     `type`: statechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_statechange(
     `type`: statechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   def postMessage(message: js.Any): Unit = js.native
@@ -72,20 +69,17 @@ trait ServiceWorker
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_statechange(
-    `type`: statechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_statechange(`type`: statechange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_statechange(
     `type`: statechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_statechange(
     `type`: statechange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
 }

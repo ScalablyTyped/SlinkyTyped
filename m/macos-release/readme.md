@@ -12,7 +12,7 @@ Get the name and version of a macOS release from the Darwin version
 | Keywords           | macos, os, darwin, operating, system, platform, name, title, release, version |
 | # releases         | 5 |
 | # dependents       | 13 |
-| # downloads        | 53601595 |
+| # downloads        | 57226249 |
 | # stars            | 0 |
 
 ## Links

@@ -2,7 +2,7 @@ package typingsSlinky.sharepoint.Srch
 
 import org.scalablytyped.runtime.StringDictionary
 import org.scalajs.dom.raw.HTMLCollection
-import typingsSlinky.sharepoint.Anon_ContextTitle
+import typingsSlinky.sharepoint.AnonContextTitle
 import typingsSlinky.sharepoint.SP.ClientRuntimeContext
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -12,7 +12,7 @@ import scala.scalajs.js.annotation._
 @js.native
 class ScriptApplicationManager () extends js.Object {
   var queryGroups: StringDictionary[QueryGroup] = js.native
-  var states: Anon_ContextTitle = js.native
+  var states: AnonContextTitle = js.native
   /** Adds handler for the load event */
   def add_load(handlerFunction: js.Function2[/* instance */ js.Any, /* eventArgs */ js.Any, Unit]): Unit = js.native
   /** Adds handler for the postload event */

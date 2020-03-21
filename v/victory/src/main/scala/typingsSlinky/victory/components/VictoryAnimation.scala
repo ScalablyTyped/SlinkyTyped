@@ -5,15 +5,15 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.victory.victoryMod.AnimationData
-import typingsSlinky.victory.victoryMod.AnimationEasing
-import typingsSlinky.victory.victoryMod.VictoryAnimationProps
+import typingsSlinky.victory.mod.AnimationData
+import typingsSlinky.victory.mod.AnimationEasing
+import typingsSlinky.victory.mod.VictoryAnimationProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VictoryAnimation
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.VictoryAnimation] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryAnimation] {
   @JSImport("victory", "VictoryAnimation")
   @js.native
   object componentImport extends js.Object
@@ -26,7 +26,7 @@ object VictoryAnimation
     easing: AnimationEasing = null,
     onEnd: () => Unit = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryAnimation] = {
+  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryAnimation] = {
     val __obj = js.Dynamic.literal()
     if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
     if (delay != null) __obj.updateDynamic("delay")(delay.asInstanceOf[js.Any])
@@ -36,7 +36,7 @@ object VictoryAnimation
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryAnimation] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.VictoryAnimation](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryAnimation] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryAnimation](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryAnimationProps
 }
 

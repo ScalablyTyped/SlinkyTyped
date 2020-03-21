@@ -2,7 +2,7 @@ package typingsSlinky.nodegit.submoduleMod.Submodule
 
 import typingsSlinky.nodegit.bufMod.Buf
 import typingsSlinky.nodegit.repositoryMod.Repository
-import typingsSlinky.nodegit.submoduleDashUpdateDashOptionsMod.SubmoduleUpdateOptions
+import typingsSlinky.nodegit.submoduleUpdateOptionsMod.SubmoduleUpdateOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

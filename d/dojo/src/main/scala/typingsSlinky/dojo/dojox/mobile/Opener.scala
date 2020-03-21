@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.mobile
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.`lazy`
 import typingsSlinky.dojo.dojoStrings.requires
 import scala.scalajs.js
@@ -74,7 +74,7 @@ class Opener () extends Tooltip {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_requires(
     property: requires,
@@ -84,6 +84,6 @@ class Opener () extends Tooltip {
       /* newValue */ js.UndefOr[String], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

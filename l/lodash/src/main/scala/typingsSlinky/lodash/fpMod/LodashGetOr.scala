@@ -1,8 +1,8 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.NumericDictionary
-import typingsSlinky.lodash.lodashMod.PropertyPath
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.NumericDictionary
+import typingsSlinky.lodash.mod.PropertyPath
+import typingsSlinky.lodash.mod.__
 import typingsSlinky.std.Exclude
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -21,7 +21,7 @@ trait LodashGetOr extends js.Object {
   def apply(defaultValue: __, path: __, `object`: js.Any): LodashGetOr7x4 = js.native
   def apply[TDefault](defaultValue: TDefault): LodashGetOr1x1[TDefault] = js.native
   def apply[TDefault](defaultValue: TDefault, path: Double): LodashGetOr5x3[TDefault] = js.native
-  def apply[TDefault](defaultValue: TDefault, path: PropertyPath): TDefault = js.native
+  def apply[TDefault](defaultValue: TDefault, path: PropertyPath): LodashGetOr6x3[TDefault] = js.native
   def apply[TDefault](defaultValue: TDefault, path: __): LodashGetOr6x5[TDefault] = js.native
   def apply[T](defaultValue: __, path: Double, `object`: NumericDictionary[T]): LodashGetOr5x6[T] = js.native
   def apply[TObject /* <: js.Object */](defaultValue: __, path: __, `object`: TObject): LodashGetOr1x4[TObject] = js.native
@@ -53,9 +53,12 @@ trait LodashGetOr extends js.Object {
     /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2] */ js.Any, 
     js.UndefOr[scala.Nothing]
   ]) | TDefault = js.native
-  def apply[TObject /* <: js.Object */, TKey1 /* <: String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */](defaultValue: __, path: js.Tuple3[TKey1, TKey2, TKey3]): LodashGetOr3x6[TObject, TKey1, TKey2, TKey3] = js.native
+  def apply[TObject /* <: js.Object */, TKey1 /* <: String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */](defaultValue: __, path: js.Tuple3[TKey1, TKey2, TKey3]): LodashGetOr3x2[TObject, TKey1, TKey2, TKey3] = js.native
   def apply[TObject /* <: js.Object */, TKey1 /* <: String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */](defaultValue: __, path: js.Tuple3[TKey1, TKey2, TKey3], `object`: TObject): LodashGetOr3x6[TObject, TKey1, TKey2, TKey3] = js.native
-  def apply[TObject /* <: js.Object */, TKey1 /* <: String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */, TDefault](defaultValue: TDefault, path: js.Tuple3[TKey1, TKey2, TKey3]): LodashGetOr3x3[TObject, TKey1, TKey2, TKey3, TDefault] = js.native
+  def apply[TObject /* <: js.Object */, TKey1 /* <: String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */, TDefault](defaultValue: TDefault, path: js.Tuple3[TKey1, TKey2, TKey3]): (Exclude[
+    /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3] */ js.Any, 
+    js.UndefOr[scala.Nothing]
+  ]) | TDefault = js.native
   def apply[TObject /* <: js.Object */, TKey1 /* <: String */, TKey2 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1] */ js.Any */, TKey3 /* <: /* import warning: importer.ImportType#apply Failed type conversion: keyof TObject[TKey1][TKey2] */ js.Any */, TDefault](defaultValue: TDefault, path: js.Tuple3[TKey1, TKey2, TKey3], `object`: TObject): (Exclude[
     /* import warning: importer.ImportType#apply Failed type conversion: TObject[TKey1][TKey2][TKey3] */ js.Any, 
     js.UndefOr[scala.Nothing]

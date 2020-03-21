@@ -1,7 +1,7 @@
 package typingsSlinky.rxjs.ajaxMod
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.rxjs.internalObservableDomAjaxObservableMod.AjaxCreationMethod
+import typingsSlinky.rxjs.ajaxObservableMod.AjaxCreationMethod
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

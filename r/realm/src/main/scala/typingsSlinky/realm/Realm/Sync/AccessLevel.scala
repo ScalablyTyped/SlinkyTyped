@@ -5,10 +5,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.realm.realmStrings.none
-  - typings.realm.realmStrings.read
-  - typings.realm.realmStrings.write
-  - typings.realm.realmStrings.admin
+  - typingsSlinky.realm.realmStrings.none
+  - typingsSlinky.realm.realmStrings.read
+  - typingsSlinky.realm.realmStrings.write
+  - typingsSlinky.realm.realmStrings.admin
 */
 trait AccessLevel extends js.Object
 

@@ -2,7 +2,7 @@ package typingsSlinky.baseui.modalMod
 
 import org.scalajs.dom.raw.HTMLElement
 import slinky.core.TagMod
-import typingsSlinky.baseui.Anon_Backdrop
+import typingsSlinky.baseui.AnonCloseSource
 import typingsSlinky.baseui.baseuiStrings.alertdialog
 import typingsSlinky.baseui.baseuiStrings.auto
 import typingsSlinky.baseui.baseuiStrings.default_
@@ -20,7 +20,7 @@ trait ModalProps extends js.Object {
   var closeable: js.UndefOr[Boolean] = js.undefined
   var isOpen: js.UndefOr[Boolean] = js.undefined
   var mountNode: js.UndefOr[HTMLElement] = js.undefined
-  var onClose: js.UndefOr[js.Function1[/* args */ Anon_Backdrop, _]] = js.undefined
+  var onClose: js.UndefOr[js.Function1[/* args */ AnonCloseSource, _]] = js.undefined
   var overrides: js.UndefOr[ModalOverrides] = js.undefined
   var role: js.UndefOr[dialog | alertdialog] = js.undefined
   var size: js.UndefOr[default_ | full | auto] = js.undefined
@@ -37,7 +37,7 @@ object ModalProps {
     closeable: js.UndefOr[Boolean] = js.undefined,
     isOpen: js.UndefOr[Boolean] = js.undefined,
     mountNode: HTMLElement = null,
-    onClose: /* args */ Anon_Backdrop => _ = null,
+    onClose: /* args */ AnonCloseSource => _ = null,
     overrides: ModalOverrides = null,
     role: dialog | alertdialog = null,
     size: default_ | full | auto = null,

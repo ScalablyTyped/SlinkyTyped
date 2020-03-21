@@ -12,7 +12,7 @@ the Grammar of Graphics in Javascript
 | Keywords           | g2, chart |
 | # releases         | 119 |
 | # dependents       | 63 |
-| # downloads        | 1144363 |
+| # downloads        | 1157373 |
 | # stars            | 2 |
 
 ## Links

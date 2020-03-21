@@ -1,7 +1,7 @@
 package typingsSlinky.aframe
 
-import typingsSlinky.three.srcConstantsMod.Mapping
-import typingsSlinky.three.srcTexturesTextureMod.Texture
+import typingsSlinky.three.constantsMod.Mapping
+import typingsSlinky.three.textureMod.Texture
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

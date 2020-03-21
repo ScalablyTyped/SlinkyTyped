@@ -5,41 +5,41 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onAfterContextMenu
-  - typings.webix.webixStrings.onAfterDateSelect
-  - typings.webix.webixStrings.onAfterMonthChange
-  - typings.webix.webixStrings.onAfterRender
-  - typings.webix.webixStrings.onAfterScroll
-  - typings.webix.webixStrings.onAfterZoom
-  - typings.webix.webixStrings.onBeforeContextMenu
-  - typings.webix.webixStrings.onBeforeDateSelect
-  - typings.webix.webixStrings.onBeforeMonthChange
-  - typings.webix.webixStrings.onBeforeRender
-  - typings.webix.webixStrings.onBeforeZoom
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onBlur
-  - typings.webix.webixStrings.onChange
-  - typings.webix.webixStrings.onDateClear
-  - typings.webix.webixStrings.onDateSelect
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onEnter
-  - typings.webix.webixStrings.onFocus
-  - typings.webix.webixStrings.onItemClick
-  - typings.webix.webixStrings.onItemDblClick
-  - typings.webix.webixStrings.onKeyPress
-  - typings.webix.webixStrings.onLongTouch
-  - typings.webix.webixStrings.onMouseMove
-  - typings.webix.webixStrings.onMouseMoving
-  - typings.webix.webixStrings.onMouseOut
-  - typings.webix.webixStrings.onSwipeX
-  - typings.webix.webixStrings.onSwipeY
-  - typings.webix.webixStrings.onTimedKeyPress
-  - typings.webix.webixStrings.onTodaySet
-  - typings.webix.webixStrings.onTouchEnd
-  - typings.webix.webixStrings.onTouchMove
-  - typings.webix.webixStrings.onTouchStart
-  - typings.webix.webixStrings.onViewResize
-  - typings.webix.webixStrings.onViewShow
+  - typingsSlinky.webix.webixStrings.onAfterContextMenu
+  - typingsSlinky.webix.webixStrings.onAfterDateSelect
+  - typingsSlinky.webix.webixStrings.onAfterMonthChange
+  - typingsSlinky.webix.webixStrings.onAfterRender
+  - typingsSlinky.webix.webixStrings.onAfterScroll
+  - typingsSlinky.webix.webixStrings.onAfterZoom
+  - typingsSlinky.webix.webixStrings.onBeforeContextMenu
+  - typingsSlinky.webix.webixStrings.onBeforeDateSelect
+  - typingsSlinky.webix.webixStrings.onBeforeMonthChange
+  - typingsSlinky.webix.webixStrings.onBeforeRender
+  - typingsSlinky.webix.webixStrings.onBeforeZoom
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onBlur
+  - typingsSlinky.webix.webixStrings.onChange
+  - typingsSlinky.webix.webixStrings.onDateClear
+  - typingsSlinky.webix.webixStrings.onDateSelect
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onEnter
+  - typingsSlinky.webix.webixStrings.onFocus
+  - typingsSlinky.webix.webixStrings.onItemClick
+  - typingsSlinky.webix.webixStrings.onItemDblClick
+  - typingsSlinky.webix.webixStrings.onKeyPress
+  - typingsSlinky.webix.webixStrings.onLongTouch
+  - typingsSlinky.webix.webixStrings.onMouseMove
+  - typingsSlinky.webix.webixStrings.onMouseMoving
+  - typingsSlinky.webix.webixStrings.onMouseOut
+  - typingsSlinky.webix.webixStrings.onSwipeX
+  - typingsSlinky.webix.webixStrings.onSwipeY
+  - typingsSlinky.webix.webixStrings.onTimedKeyPress
+  - typingsSlinky.webix.webixStrings.onTodaySet
+  - typingsSlinky.webix.webixStrings.onTouchEnd
+  - typingsSlinky.webix.webixStrings.onTouchMove
+  - typingsSlinky.webix.webixStrings.onTouchStart
+  - typingsSlinky.webix.webixStrings.onViewResize
+  - typingsSlinky.webix.webixStrings.onViewShow
 */
 trait calendarEventName extends js.Object
 

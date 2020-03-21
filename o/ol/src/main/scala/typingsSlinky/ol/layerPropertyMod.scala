@@ -19,7 +19,13 @@ object layerPropertyMod extends js.Object {
     sealed trait MAX_RESOLUTION extends Property
     
     @js.native
+    sealed trait MAX_ZOOM extends Property
+    
+    @js.native
     sealed trait MIN_RESOLUTION extends Property
+    
+    @js.native
+    sealed trait MIN_ZOOM extends Property
     
     @js.native
     sealed trait OPACITY extends Property
@@ -39,7 +45,9 @@ object layerPropertyMod extends js.Object {
   object default extends js.Object {
     /* "extent" */ val EXTENT: typingsSlinky.ol.layerPropertyMod.Property.EXTENT with String = js.native
     /* "maxResolution" */ val MAX_RESOLUTION: typingsSlinky.ol.layerPropertyMod.Property.MAX_RESOLUTION with String = js.native
+    /* "maxZoom" */ val MAX_ZOOM: typingsSlinky.ol.layerPropertyMod.Property.MAX_ZOOM with String = js.native
     /* "minResolution" */ val MIN_RESOLUTION: typingsSlinky.ol.layerPropertyMod.Property.MIN_RESOLUTION with String = js.native
+    /* "minZoom" */ val MIN_ZOOM: typingsSlinky.ol.layerPropertyMod.Property.MIN_ZOOM with String = js.native
     /* "opacity" */ val OPACITY: typingsSlinky.ol.layerPropertyMod.Property.OPACITY with String = js.native
     /* "source" */ val SOURCE: typingsSlinky.ol.layerPropertyMod.Property.SOURCE with String = js.native
     /* "visible" */ val VISIBLE: typingsSlinky.ol.layerPropertyMod.Property.VISIBLE with String = js.native

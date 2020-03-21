@@ -1,6 +1,6 @@
 package typingsSlinky.annyang
 
-import typingsSlinky.annyang.annyangMod.Events
+import typingsSlinky.annyang.mod.Events
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

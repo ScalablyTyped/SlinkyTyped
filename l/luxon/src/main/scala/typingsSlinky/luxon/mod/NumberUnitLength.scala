@@ -1,0 +1,21 @@
+package typingsSlinky.luxon.mod
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+/* Rewritten from type alias, can be one of: 
+  - typingsSlinky.luxon.luxonStrings.numeric
+  - typingsSlinky.luxon.luxonStrings.`2-digit`
+*/
+trait NumberUnitLength extends js.Object
+
+object NumberUnitLength {
+  @scala.inline
+  def `2-digit`: typingsSlinky.luxon.luxonStrings.`2-digit` = this.cast("2-digit")
+  @scala.inline
+  /* private */ def cast[T](in: js.Any): T = in.asInstanceOf[T]
+  @scala.inline
+  def numeric: typingsSlinky.luxon.luxonStrings.numeric = this.cast("numeric")
+}
+

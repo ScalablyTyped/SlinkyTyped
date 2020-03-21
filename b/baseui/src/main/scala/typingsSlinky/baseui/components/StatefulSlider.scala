@@ -19,11 +19,11 @@ object StatefulSlider
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: onChange */
   def apply(
     initialState: State = null,
     max: Int | Double = null,
     min: Int | Double = null,
+    onChange: /* e */ State => _ = null,
     onFinalChange: /* e */ State => _ = null,
     overrides: SliderOverrides = null,
     step: Int | Double = null,
@@ -33,6 +33,7 @@ object StatefulSlider
     if (initialState != null) __obj.updateDynamic("initialState")(initialState.asInstanceOf[js.Any])
     if (max != null) __obj.updateDynamic("max")(max.asInstanceOf[js.Any])
     if (min != null) __obj.updateDynamic("min")(min.asInstanceOf[js.Any])
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
     if (onFinalChange != null) __obj.updateDynamic("onFinalChange")(js.Any.fromFunction1(onFinalChange))
     if (overrides != null) __obj.updateDynamic("overrides")(overrides.asInstanceOf[js.Any])
     if (step != null) __obj.updateDynamic("step")(step.asInstanceOf[js.Any])

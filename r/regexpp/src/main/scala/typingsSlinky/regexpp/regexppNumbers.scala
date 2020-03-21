@@ -1,6 +1,6 @@
 package typingsSlinky.regexpp
 
-import typingsSlinky.regexpp.ecmaDashVersionsMod.EcmaVersion
+import typingsSlinky.regexpp.ecmaVersionsMod.EcmaVersion
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

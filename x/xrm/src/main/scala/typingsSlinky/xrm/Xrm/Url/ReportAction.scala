@@ -9,8 +9,8 @@ import scala.scalajs.js.annotation._
   * @see {@link XrmEnum.ReportAction}
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmStrings.filter
-  - typings.xrm.xrmStrings.run
+  - typingsSlinky.xrm.xrmStrings.filter
+  - typingsSlinky.xrm.xrmStrings.run
 */
 trait ReportAction extends js.Object
 

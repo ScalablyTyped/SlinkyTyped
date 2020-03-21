@@ -5,11 +5,11 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onBeforeBack
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onViewChange
-  - typings.webix.webixStrings.onViewShow
+  - typingsSlinky.webix.webixStrings.onBeforeBack
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onViewChange
+  - typingsSlinky.webix.webixStrings.onViewShow
 */
 trait multiviewEventName extends js.Object
 

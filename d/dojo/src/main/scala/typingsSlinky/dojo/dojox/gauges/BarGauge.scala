@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.gauges
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.dataHeight
 import typingsSlinky.dojo.dojoStrings.dataWidth
 import typingsSlinky.dojo.dojoStrings.dataX
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.gauges.BarGauge")
 @js.native
-class BarGauge () extends _Gauge {
+class BarGauge () extends Gauge {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -85,7 +85,7 @@ class BarGauge () extends _Gauge {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_dataWidth(
     property: dataWidth,
@@ -95,7 +95,7 @@ class BarGauge () extends _Gauge {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_dataX(
     property: dataX,
@@ -105,7 +105,7 @@ class BarGauge () extends _Gauge {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_dataY(
     property: dataY,
@@ -115,6 +115,6 @@ class BarGauge () extends _Gauge {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

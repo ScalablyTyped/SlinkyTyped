@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 
 /* cl_kernel_info */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1190`
-  - typings.webcl.webclNumbers.`0x1191`
-  - typings.webcl.webclNumbers.`0x1193`
-  - typings.webcl.webclNumbers.`0x1194`
+  - typingsSlinky.webcl.webclNumbers.`0x1190`
+  - typingsSlinky.webcl.webclNumbers.`0x1191`
+  - typingsSlinky.webcl.webclNumbers.`0x1193`
+  - typingsSlinky.webcl.webclNumbers.`0x1194`
 */
 trait KernelInfo extends js.Object
 

@@ -77,7 +77,7 @@ object Seq extends js.Object {
   
   def apply(): Seq[_, _] = js.native
   def apply[T](collection: typingsSlinky.immutable.Immutable.Collection.Indexed[T]): Indexed[T] = js.native
-  def apply[T](collection: typingsSlinky.immutable.Immutable.Collection.Set[T]): typingsSlinky.immutable.Immutable.Seq.Set[T] = js.native
+  def apply[T](collection: typingsSlinky.immutable.Immutable.Collection.Set[T]): Set[T] = js.native
   def apply[T](collection: Iterable[T]): Indexed[T] = js.native
   def apply[V](obj: StringDictionary[V]): Keyed[String, V] = js.native
   def apply[S /* <: Seq[_, _] */](seq: S): S = js.native
@@ -109,12 +109,12 @@ object Seq extends js.Object {
   
   @js.native
   object Set extends js.Object {
-    def apply(): typingsSlinky.immutable.Immutable.Seq.Set[_] = js.native
-    def apply[T](collection: js.Iterable[T]): typingsSlinky.immutable.Immutable.Seq.Set[T] = js.native
+    def apply(): Set[_] = js.native
+    def apply[T](collection: js.Iterable[T]): Set[T] = js.native
     /**
       * Returns a Seq.Set of the provided values
       */
-    def of[T](values: T*): typingsSlinky.immutable.Immutable.Seq.Set[T] = js.native
+    def of[T](values: T*): Set[T] = js.native
   }
   
 }

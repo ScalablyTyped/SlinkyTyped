@@ -1,0 +1,22 @@
+package typingsSlinky.fundamentalReact.mod
+
+import typingsSlinky.fundamentalReact.ComponentClassSideNavList
+import typingsSlinky.fundamentalReact.ComponentClassSideNavListInstantiable
+import typingsSlinky.fundamentalReact.sideNavMod.default
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("fundamental-react", "SideNav")
+@js.native
+class SideNav () extends default
+
+/* static members */
+@JSImport("fundamental-react", "SideNav")
+@js.native
+object SideNav extends js.Object {
+  var List: ComponentClassSideNavList = js.native
+  var ListItem: ComponentClassSideNavListInstantiable = js.native
+  var displayName: typingsSlinky.fundamentalReact.fundamentalReactStrings.SideNav = js.native
+}
+

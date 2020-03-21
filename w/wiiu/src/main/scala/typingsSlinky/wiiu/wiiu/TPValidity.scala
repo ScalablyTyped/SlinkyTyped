@@ -9,10 +9,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.wiiu.wiiuNumbers.`0`
-  - typings.wiiu.wiiuNumbers.`1`
-  - typings.wiiu.wiiuNumbers.`2`
-  - typings.wiiu.wiiuNumbers.`3`
+  - typingsSlinky.wiiu.wiiuNumbers.`0`
+  - typingsSlinky.wiiu.wiiuNumbers.`1`
+  - typingsSlinky.wiiu.wiiuNumbers.`2`
+  - typingsSlinky.wiiu.wiiuNumbers.`3`
 */
 trait TPValidity extends js.Object
 

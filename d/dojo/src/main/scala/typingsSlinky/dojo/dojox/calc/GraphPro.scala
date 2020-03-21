@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dojox.calc
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.aFloatingPane
 import typingsSlinky.dojo.dojoStrings.funcMaker
 import typingsSlinky.dojo.dojoStrings.grapher
@@ -65,7 +65,7 @@ class GraphPro () extends Standard {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_funcMaker(
     property: funcMaker,
@@ -75,7 +75,7 @@ class GraphPro () extends Standard {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_grapher(
     property: grapher,
@@ -85,6 +85,6 @@ class GraphPro () extends Standard {
       /* newValue */ js.UndefOr[js.Object], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

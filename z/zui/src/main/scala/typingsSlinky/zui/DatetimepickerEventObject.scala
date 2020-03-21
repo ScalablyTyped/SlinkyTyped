@@ -6,10 +6,10 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.std.Event because Already inherited
-- typings.jquery.BaseJQueryEventObject because Already inherited
-- typings.jquery.JQueryInputEventObject because Already inherited
-- typings.jquery.JQueryKeyEventObject because var conflicts: altKey, cancelBubble, ctrlKey, currentTarget_BaseJQueryEventObject, data, delegateTarget, metaKey, namespace, originalEvent, pageX, pageY, relatedTarget, result, returnValue, shiftKey, target_BaseJQueryEventObject, which. Inlined char, charCode, key, keyCode */ @js.native
+- typingsSlinky.std.Event_ because Already inherited
+- typingsSlinky.jquery.BaseJQueryEventObject because Already inherited
+- typingsSlinky.jquery.JQueryInputEventObject because Already inherited
+- typingsSlinky.jquery.JQueryKeyEventObject because var conflicts: altKey, cancelBubble, ctrlKey, currentTarget_BaseJQueryEventObject, data, delegateTarget, metaKey, namespace, originalEvent, pageX, pageY, relatedTarget, result, returnValue, shiftKey, target_BaseJQueryEventObject, which. Inlined char, charCode, key, keyCode */ @js.native
 trait DatetimepickerEventObject extends JQueryMouseEventObject {
   /** @deprecated */
   var char: String = js.native

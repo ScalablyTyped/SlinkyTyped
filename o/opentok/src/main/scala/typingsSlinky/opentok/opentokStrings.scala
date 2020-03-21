@@ -1,10 +1,10 @@
 package typingsSlinky.opentok
 
-import typingsSlinky.opentok.opentokMod.ArchiveMode
-import typingsSlinky.opentok.opentokMod.ArchiveStatus
-import typingsSlinky.opentok.opentokMod.MediaMode
-import typingsSlinky.opentok.opentokMod.OutputMode
-import typingsSlinky.opentok.opentokMod.Role
+import typingsSlinky.opentok.mod.ArchiveMode
+import typingsSlinky.opentok.mod.ArchiveStatus
+import typingsSlinky.opentok.mod.MediaMode
+import typingsSlinky.opentok.mod.OutputMode
+import typingsSlinky.opentok.mod.Role
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

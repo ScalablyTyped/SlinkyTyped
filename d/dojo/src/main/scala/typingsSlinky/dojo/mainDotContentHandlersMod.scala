@@ -1,12 +1,12 @@
 package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.dojo.dojo.main.contentHandlers
+import typingsSlinky.dojo.dojo.main._contentHandlers
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("dojo/main.contentHandlers", JSImport.Namespace)
+@JSImport("dojo/main._contentHandlers", JSImport.Namespace)
 @js.native
-object mainDotContentHandlersMod extends TopLevel[contentHandlers]
+object mainDotContentHandlersMod extends TopLevel[_contentHandlers]
 

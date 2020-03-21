@@ -1,6 +1,6 @@
 package typingsSlinky.deployjava
 
-import typingsSlinky.deployjava.DeployJava.DeployJavaStatic
+import typingsSlinky.deployjava.DeployJava_.DeployJavaStatic
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

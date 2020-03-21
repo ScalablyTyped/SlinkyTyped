@@ -1,9 +1,9 @@
 package typingsSlinky.theo
 
-import typingsSlinky.theo.theoMod.Format
-import typingsSlinky.theo.theoMod.StyleProperty
-import typingsSlinky.theo.theoMod.Transform
-import typingsSlinky.theo.theoMod.ValueTransform
+import typingsSlinky.theo.mod.Format
+import typingsSlinky.theo.mod.StyleProperty
+import typingsSlinky.theo.mod.Transform
+import typingsSlinky.theo.mod.ValueTransform
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,14 +1,14 @@
 package typingsSlinky.coinbase
 
-import typingsSlinky.coinbase.coinbaseMod.AccountType
-import typingsSlinky.coinbase.coinbaseMod.BuyStatus
-import typingsSlinky.coinbase.coinbaseMod.DepositStatus
-import typingsSlinky.coinbase.coinbaseMod.PaymentMethodType
-import typingsSlinky.coinbase.coinbaseMod.ResourceType
-import typingsSlinky.coinbase.coinbaseMod.SellStatus
-import typingsSlinky.coinbase.coinbaseMod.TransactionStatus
-import typingsSlinky.coinbase.coinbaseMod.TransactionType
-import typingsSlinky.coinbase.coinbaseMod.WithdrawalStatus
+import typingsSlinky.coinbase.mod.AccountType
+import typingsSlinky.coinbase.mod.BuyStatus
+import typingsSlinky.coinbase.mod.DepositStatus
+import typingsSlinky.coinbase.mod.PaymentMethodType
+import typingsSlinky.coinbase.mod.ResourceType
+import typingsSlinky.coinbase.mod.SellStatus
+import typingsSlinky.coinbase.mod.TransactionStatus
+import typingsSlinky.coinbase.mod.TransactionType
+import typingsSlinky.coinbase.mod.WithdrawalStatus
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

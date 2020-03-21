@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object highlight {
-  type _base = _base_
+  type base = typingsSlinky.dojo.dojox.highlight.base_
 }

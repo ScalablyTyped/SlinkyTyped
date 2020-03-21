@@ -1,7 +1,7 @@
 
 # Scala.js typings for is-mobile
 
-Typings are for version 2.1.0
+Typings are for version 2.2.0
 
 ## Library description:
 Check if mobile browser.
@@ -11,8 +11,8 @@ Check if mobile browser.
 | Full name          | is-mobile |
 | Keywords           | mobile, desktop, check, browser |
 | # releases         | 8 |
-| # dependents       | 40 |
-| # downloads        | 2479696 |
+| # dependents       | 43 |
+| # downloads        | 2728010 |
 | # stars            | 6 |
 
 ## Links

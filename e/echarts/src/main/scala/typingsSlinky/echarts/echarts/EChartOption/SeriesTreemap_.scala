@@ -1,13 +1,13 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistanceEllipsis
-import typingsSlinky.echarts.Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistanceEllipsisFontFamily
-import typingsSlinky.echarts.Anon_BackgroundColorBorderColor
-import typingsSlinky.echarts.Anon_BorderColorBorderColorSaturation
-import typingsSlinky.echarts.Anon_Bottom
-import typingsSlinky.echarts.Anon_ChildrenLink
-import typingsSlinky.echarts.Anon_ChildrenVisibleMin
-import typingsSlinky.echarts.Anon_ItemStyleLabelUpperLabel
+import typingsSlinky.echarts.AnonBorderColorSaturation
+import typingsSlinky.echarts.AnonBottom
+import typingsSlinky.echarts.AnonChildrenVisibleMin
+import typingsSlinky.echarts.AnonEllipsis
+import typingsSlinky.echarts.AnonExtraCssText
+import typingsSlinky.echarts.AnonLink
+import typingsSlinky.echarts.AnonTextShadowOffsetX
+import typingsSlinky.echarts.AnonUpperLabel
 import typingsSlinky.echarts.echarts.EChartOption.SeriesTreemap.DataObject
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -74,7 +74,6 @@ import scala.scalajs.js.annotation._
   *
   * @see https://echarts.apache.org/en/option.html#series-treemap
   */
-@JSName("SeriesTreemap")
 trait SeriesTreemap_ extends js.Object {
   /**
     * Delay before updating the first animation, which supports callback
@@ -137,7 +136,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.breadcrumb
     */
-  var breadcrumb: js.UndefOr[Anon_Bottom] = js.undefined
+  var breadcrumb: js.UndefOr[AnonBottom] = js.undefined
   /**
     * Children will not be shown when area size of a node is smaller
     * than this value (unit: px square).
@@ -320,7 +319,7 @@ trait SeriesTreemap_ extends js.Object {
   /**
     * @see https://echarts.apache.org/en/option.html#series-treemap.emphasis
     */
-  var emphasis: js.UndefOr[Anon_ItemStyleLabelUpperLabel] = js.undefined
+  var emphasis: js.UndefOr[AnonUpperLabel] = js.undefined
   /**
     * Height of treemap component.
     *
@@ -360,7 +359,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.itemStyle
     */
-  var itemStyle: js.UndefOr[Anon_BorderColorBorderColorSaturation] = js.undefined
+  var itemStyle: js.UndefOr[AnonBorderColorSaturation] = js.undefined
   /**
     * `label` decribes the style of the label in each node.
     *
@@ -383,7 +382,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.label
     */
-  var label: js.UndefOr[Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistanceEllipsis] = js.undefined
+  var label: js.UndefOr[AnonEllipsis] = js.undefined
   /**
     * When `leafDepth` is set, the feature "drill down" is enabled,
     * which means when clicking a tree node, this node will be set
@@ -516,7 +515,7 @@ trait SeriesTreemap_ extends js.Object {
     * []
     * @see https://echarts.apache.org/en/option.html#series-treemap.levels
     */
-  var levels: js.UndefOr[Anon_ChildrenVisibleMin] = js.undefined
+  var levels: js.UndefOr[AnonChildrenVisibleMin] = js.undefined
   /**
     * Series name used for displaying in
     * [tooltip](https://echarts.apache.org/en/option.html#tooltip)
@@ -581,7 +580,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.silent
     */
-  var silent: js.UndefOr[Anon_ChildrenLink] = js.undefined
+  var silent: js.UndefOr[AnonLink] = js.undefined
   /**
     * The expected square ratio.
     * Layout would approach the ratio as close as possible.
@@ -599,7 +598,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.tooltip
     */
-  var tooltip: js.UndefOr[Anon_BackgroundColorBorderColor] = js.undefined
+  var tooltip: js.UndefOr[AnonExtraCssText] = js.undefined
   /**
     * Distance between treemap component and the top side of the container.
     *
@@ -667,9 +666,7 @@ trait SeriesTreemap_ extends js.Object {
     *
     * @see https://echarts.apache.org/en/option.html#series-treemap.upperLabel
     */
-  var upperLabel: js.UndefOr[
-    Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistanceEllipsisFontFamily
-  ] = js.undefined
+  var upperLabel: js.UndefOr[AnonTextShadowOffsetX] = js.undefined
   /**
     * A node will not be shown when its area size is smaller than this
     * value (unit: px square).
@@ -830,31 +827,31 @@ object SeriesTreemap_ {
     animationDuration: js.Function | Double = null,
     animationEasing: String = null,
     bottom: Double | String = null,
-    breadcrumb: Anon_Bottom = null,
+    breadcrumb: AnonBottom = null,
     childrenVisibleMin: Int | Double = null,
     colorAlpha: js.Array[_] = null,
     colorMappingBy: String = null,
     colorSaturation: Int | Double = null,
     data: js.Array[DataObject] = null,
     drillDownIcon: String = null,
-    emphasis: Anon_ItemStyleLabelUpperLabel = null,
+    emphasis: AnonUpperLabel = null,
     height: Double | String = null,
     id: String = null,
-    itemStyle: Anon_BorderColorBorderColorSaturation = null,
-    label: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistanceEllipsis = null,
+    itemStyle: AnonBorderColorSaturation = null,
+    label: AnonEllipsis = null,
     leafDepth: Int | Double = null,
     left: Double | String = null,
-    levels: Anon_ChildrenVisibleMin = null,
+    levels: AnonChildrenVisibleMin = null,
     name: String = null,
     nodeClick: Boolean | String = null,
     right: Double | String = null,
     roam: Boolean | String = null,
-    silent: Anon_ChildrenLink = null,
+    silent: AnonLink = null,
     squareRatio: Int | Double = null,
-    tooltip: Anon_BackgroundColorBorderColor = null,
+    tooltip: AnonExtraCssText = null,
     top: Double | String = null,
     `type`: String = null,
-    upperLabel: Anon_AlignBackgroundColorBorderColorBorderRadiusBorderWidthColorDistanceEllipsisFontFamily = null,
+    upperLabel: AnonTextShadowOffsetX = null,
     visibleMin: Int | Double = null,
     visualDimension: Int | Double = null,
     visualMax: Int | Double = null,

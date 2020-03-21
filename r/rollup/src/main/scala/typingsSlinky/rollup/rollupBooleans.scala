@@ -1,6 +1,6 @@
 package typingsSlinky.rollup
 
-import typingsSlinky.rollup.rollupMod._ResolveIdResult
+import typingsSlinky.rollup.mod._ResolveIdResult
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

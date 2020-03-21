@@ -19,8 +19,7 @@ trait JQuery extends js.Object {
   def collapse(): JQuery = js.native
   def collapse(options: String): JQuery = js.native
   def collapse(options: CollapseOptions): JQuery = js.native
-   // $('#modal').modalTrigger()
-  def data(value: String): JQuery = js.native
+  def data(cmd: String): ImageCutter = js.native
   // off(events: "dp.change", selector?: string, handler?: (eventobject: DatetimepickerChangeEventObject) => any): JQuery;
   // off(events: "dp.change", handler: (eventobject: DatetimepickerChangeEventObject) => any): JQuery;
   // on(events: "dp.change", selector: string, data: any, handler?: (eventobject: DatetimepickerChangeEventObject) => any): JQuery;
@@ -43,8 +42,9 @@ trait JQuery extends js.Object {
   // on(events: 'dp.error', handler: (eventObject: DatetimepickerEventObject) => any): JQuery;
   @JSName("data")
   def data_DateTimePicker(key: DateTimePicker): Datetimepicker = js.native
+   // $('#modal').modalTrigger()
   @JSName("data")
-  def data_ImageCutter(cmd: String): ImageCutter = js.native
+  def data_JQuery(value: String): JQuery = js.native
   def datatable(): JQuery = js.native
   def datatable(command: String, optionOrData: DataTableData): JQuery = js.native
   def datatable(command: String, optionOrData: DataTableOption): JQuery = js.native

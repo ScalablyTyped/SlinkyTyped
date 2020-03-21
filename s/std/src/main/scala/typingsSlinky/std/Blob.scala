@@ -15,10 +15,13 @@ trait Blob
      with _BodyInit {
   val size: Double = js.native
   val `type`: java.lang.String = js.native
+  def arrayBuffer(): js.Promise[scala.scalajs.js.typedarray.ArrayBuffer] = js.native
   def slice(): org.scalajs.dom.raw.Blob = js.native
   def slice(start: Double): org.scalajs.dom.raw.Blob = js.native
   def slice(start: Double, end: Double): org.scalajs.dom.raw.Blob = js.native
   def slice(start: Double, end: Double, contentType: java.lang.String): org.scalajs.dom.raw.Blob = js.native
+  def stream(): org.scalajs.dom.experimental.ReadableStream[_] = js.native
+  def text(): js.Promise[java.lang.String] = js.native
 }
 
 @JSGlobal("Blob")

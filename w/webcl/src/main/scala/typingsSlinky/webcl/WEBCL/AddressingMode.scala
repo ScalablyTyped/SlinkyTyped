@@ -10,10 +10,10 @@ import scala.scalajs.js.annotation._
 
 /* cl_addressing_mode */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1131`
-  - typings.webcl.webclNumbers.`0x1132`
-  - typings.webcl.webclNumbers.`0x1133`
-  - typings.webcl.webclNumbers.`0x1134`
+  - typingsSlinky.webcl.webclNumbers.`0x1131`
+  - typingsSlinky.webcl.webclNumbers.`0x1132`
+  - typingsSlinky.webcl.webclNumbers.`0x1133`
+  - typingsSlinky.webcl.webclNumbers.`0x1134`
 */
 trait AddressingMode extends js.Object
 

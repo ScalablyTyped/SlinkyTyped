@@ -1,8 +1,8 @@
 package typingsSlinky.chessboardjs
 
-import typingsSlinky.chessboardjs.chessboardjsMod.DropOffBoardType
-import typingsSlinky.chessboardjs.chessboardjsMod.OrientationType
-import typingsSlinky.chessboardjs.chessboardjsMod.SpeedType
+import typingsSlinky.chessboardjs.mod.DropOffBoardType
+import typingsSlinky.chessboardjs.mod.OrientationType
+import typingsSlinky.chessboardjs.mod.SpeedType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -3,7 +3,7 @@ package typingsSlinky.pdfkit.PDFKit
 import org.scalablytyped.runtime.Instantiable0
 import org.scalablytyped.runtime.Instantiable1
 import typingsSlinky.node.NodeJS.ReadableStream
-import typingsSlinky.pdfkit.Anon_Count
+import typingsSlinky.pdfkit.AnonCount
 import typingsSlinky.pdfkit.PDFKit.Mixins.PDFAnnotation
 import typingsSlinky.pdfkit.PDFKit.Mixins.PDFColor
 import typingsSlinky.pdfkit.PDFKit.Mixins.PDFFont
@@ -50,7 +50,7 @@ trait PDFDocument
   def addContent(data: js.Any): PDFDocument = js.native
   def addPage(): PDFDocument = js.native
   def addPage(options: PDFDocumentOptions): PDFDocument = js.native
-  def bufferedPageRange(): Anon_Count = js.native
+  def bufferedPageRange(): AnonCount = js.native
   def end(): Unit = js.native
   def flushPages(): Unit = js.native
   /**

@@ -12,7 +12,7 @@ A simple tool for accessing the VexDB
 | Keywords           | vexdb, vrc, vex, robotics, database, rest, api |
 | # releases         | 33 |
 | # dependents       | 0 |
-| # downloads        | 4423 |
+| # downloads        | 3967 |
 | # stars            | 2 |
 
 ## Links

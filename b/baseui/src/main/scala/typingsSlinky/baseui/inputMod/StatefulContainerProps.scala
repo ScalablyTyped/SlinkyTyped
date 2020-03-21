@@ -1,12 +1,12 @@
 package typingsSlinky.baseui.inputMod
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
 import org.scalajs.dom.raw.HTMLInputElement
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
 import typingsSlinky.baseui.baseuiStrings.change_
-import typingsSlinky.react.reactMod.FormEventHandler
+import typingsSlinky.react.mod.FormEventHandler
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -23,7 +23,7 @@ object StatefulContainerProps {
   def apply(
     children: TagMod[Any] = null,
     initialState: State = null,
-    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event] => Unit = null,
+    onChange: SyntheticEvent[EventTarget with HTMLInputElement, Event_] => Unit = null,
     stateReducer: (change_, /* nextState */ State, /* currentState */ State) => State = null
   ): StatefulContainerProps = {
     val __obj = js.Dynamic.literal()

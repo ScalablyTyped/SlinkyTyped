@@ -1,6 +1,6 @@
 package typingsSlinky.roll
 
-import typingsSlinky.roll.rollMod.RollTransformationKey
+import typingsSlinky.roll.mod.RollTransformationKey
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -4,15 +4,15 @@ import org.scalablytyped.runtime.StringDictionary
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.web.html.`*`.tag
-import typingsSlinky.recharts.Anon_ErrorVal
-import typingsSlinky.recharts.rechartsMod.DataKey
-import typingsSlinky.recharts.rechartsMod.ErrorBarProps
+import typingsSlinky.recharts.AnonErrorVal
+import typingsSlinky.recharts.mod.DataKey
+import typingsSlinky.recharts.mod.ErrorBarProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object ErrorBar
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.rechartsMod.ErrorBar] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.recharts.mod.ErrorBar] {
   @JSImport("recharts", "ErrorBar")
   @js.native
   object componentImport extends js.Object
@@ -21,7 +21,7 @@ object ErrorBar
   def apply(
     dataKey: DataKey,
     data: js.Array[_] = null,
-    dataPointFormatter: (/* entry */ js.Any, /* dataKey */ DataKey) => Anon_ErrorVal = null,
+    dataPointFormatter: (/* entry */ js.Any, /* dataKey */ DataKey) => AnonErrorVal = null,
     layout: String = null,
     offset: Int | Double = null,
     stroke: String = null,
@@ -30,7 +30,7 @@ object ErrorBar
     xAxis: js.Object = null,
     yAxis: js.Object = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.recharts.rechartsMod.ErrorBar] = {
+  ): BuildingComponent[tag.type, typingsSlinky.recharts.mod.ErrorBar] = {
     val __obj = js.Dynamic.literal(dataKey = dataKey.asInstanceOf[js.Any])
     if (data != null) __obj.updateDynamic("data")(data.asInstanceOf[js.Any])
     if (dataPointFormatter != null) __obj.updateDynamic("dataPointFormatter")(js.Any.fromFunction2(dataPointFormatter))

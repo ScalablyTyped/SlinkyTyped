@@ -1,25 +1,24 @@
 organization := "org.scalablytyped.slinky"
 name := "jupyterlab__codeeditor"
-version := "1.2.0-8c6d3e"
-scalaVersion := "2.12.10"
+version := "1.2.0-bda77c"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "jupyterlab__coreutils" % "3.2.0-c162bd",
-  "org.scalablytyped.slinky" %%% "jupyterlab__observables" % "2.4.0-2065f7",
-  "org.scalablytyped.slinky" %%% "phosphor__algorithm" % "1.2.0-7269d5",
-  "org.scalablytyped.slinky" %%% "phosphor__commands" % "1.7.2-9c4df5",
-  "org.scalablytyped.slinky" %%% "phosphor__coreutils" % "1.3.1-0f6ecf",
-  "org.scalablytyped.slinky" %%% "phosphor__disposable" % "1.3.1-ef4010",
-  "org.scalablytyped.slinky" %%% "phosphor__messaging" % "1.3.0-5a119e",
-  "org.scalablytyped.slinky" %%% "phosphor__signaling" % "1.3.1-42cd00",
-  "org.scalablytyped.slinky" %%% "phosphor__virtualdom" % "1.2.0-caae32",
-  "org.scalablytyped.slinky" %%% "phosphor__widgets" % "1.9.3-64685d",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "jupyterlab__coreutils" % "3.2.0-e6afe6",
+  "org.scalablytyped.slinky" %%% "jupyterlab__observables" % "2.4.0-2bae43",
+  "org.scalablytyped.slinky" %%% "phosphor__algorithm" % "1.2.0-d3d95d",
+  "org.scalablytyped.slinky" %%% "phosphor__commands" % "1.7.2-916dfd",
+  "org.scalablytyped.slinky" %%% "phosphor__coreutils" % "1.3.1-033be8",
+  "org.scalablytyped.slinky" %%% "phosphor__disposable" % "1.3.1-b805f2",
+  "org.scalablytyped.slinky" %%% "phosphor__messaging" % "1.3.0-f79ad3",
+  "org.scalablytyped.slinky" %%% "phosphor__signaling" % "1.3.1-955913",
+  "org.scalablytyped.slinky" %%% "phosphor__virtualdom" % "1.2.0-08ae4c",
+  "org.scalablytyped.slinky" %%% "phosphor__widgets" % "1.9.3-683f6b",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

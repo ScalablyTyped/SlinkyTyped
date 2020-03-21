@@ -1,6 +1,6 @@
 package typingsSlinky.arangodb.Foxx
 
-import typingsSlinky.arangodb.Fn_Handler
+import typingsSlinky.arangodb.FnCall
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -8,17 +8,17 @@ import scala.scalajs.js.annotation._
 @js.native
 trait Router extends js.Object {
   @JSName("all")
-  var all_Original: Fn_Handler = js.native
+  var all_Original: FnCall = js.native
   @JSName("delete")
-  var delete_Original: Fn_Handler = js.native
+  var delete_Original: FnCall = js.native
   @JSName("get")
-  var get_Original: Fn_Handler = js.native
+  var get_Original: FnCall = js.native
   @JSName("patch")
-  var patch_Original: Fn_Handler = js.native
+  var patch_Original: FnCall = js.native
   @JSName("post")
-  var post_Original: Fn_Handler = js.native
+  var post_Original: FnCall = js.native
   @JSName("put")
-  var put_Original: Fn_Handler = js.native
+  var put_Original: FnCall = js.native
   def all(handler: Handler): Endpoint = js.native
   def all(handler: Handler, name: String): Endpoint = js.native
   def all(pathOrMiddleware: String, handler: Handler): Endpoint = js.native

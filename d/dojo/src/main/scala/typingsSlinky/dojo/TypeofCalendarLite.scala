@@ -2,7 +2,7 @@ package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dijit.CalendarLite._MonthWidget
+import typingsSlinky.dojo.dijit.CalendarLite.MonthWidget
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,7 +27,7 @@ trait TypeofCalendarLite extends js.Object {
   var _MonthWidget: Instantiable2[
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
-    typingsSlinky.dojo.dijit.CalendarLite._MonthWidget
+    MonthWidget
   ]
 }
 
@@ -37,7 +37,7 @@ object TypeofCalendarLite {
     _MonthWidget: Instantiable2[
       js.UndefOr[/* params */ js.Object], 
       js.UndefOr[/* srcNodeRef */ HTMLElement], 
-      _MonthWidget
+      MonthWidget
     ]
   ): TypeofCalendarLite = {
     val __obj = js.Dynamic.literal(_MonthWidget = _MonthWidget.asInstanceOf[js.Any])

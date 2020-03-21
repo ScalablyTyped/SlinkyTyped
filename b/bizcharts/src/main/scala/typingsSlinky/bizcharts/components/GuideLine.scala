@@ -5,10 +5,10 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.atAntvG2.atAntvG2Mod.Styles.line
-import typingsSlinky.bizcharts.Anon_AutoRotate
-import typingsSlinky.bizcharts.bizchartsMod.Guide.Line
-import typingsSlinky.bizcharts.bizchartsMod.Guide.LineProps
+import typingsSlinky.antvG2.mod.Styles.line
+import typingsSlinky.bizcharts.AnonAutoRotate
+import typingsSlinky.bizcharts.mod.Guide.Line
+import typingsSlinky.bizcharts.mod.Guide.LineProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ object GuideLine
     end: js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _]) = null,
     lineStyle: line = null,
     start: js.Object | js.Array[_] | (js.Function2[/* xScale */ js.UndefOr[js.Any], /* yScale */ js.UndefOr[js.Any], _]) = null,
-    text: Anon_AutoRotate = null,
+    text: AnonAutoRotate = null,
     top: js.UndefOr[Boolean] = js.undefined,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, Line] = {
@@ -37,7 +37,7 @@ object GuideLine
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Line] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.bizchartsMod.Guide.Line](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, Line] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Guide.Line](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = LineProps
 }
 

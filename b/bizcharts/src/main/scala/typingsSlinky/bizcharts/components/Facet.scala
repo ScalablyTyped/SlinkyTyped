@@ -5,16 +5,16 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.bizcharts.Anon_OffsetX
-import typingsSlinky.bizcharts.Anon_OffsetY
-import typingsSlinky.bizcharts.bizchartsMod.FacetProps
-import typingsSlinky.bizcharts.bizchartsMod.FacetType
+import typingsSlinky.bizcharts.AnonOffsetX
+import typingsSlinky.bizcharts.AnonOffsetY
+import typingsSlinky.bizcharts.mod.FacetProps
+import typingsSlinky.bizcharts.mod.FacetType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Facet
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.bizchartsMod.Facet] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.mod.Facet] {
   @JSImport("bizcharts", "Facet")
   @js.native
   object componentImport extends js.Object
@@ -22,16 +22,16 @@ object Facet
   override val component: String | js.Object = this.componentImport
   def apply(
     autoSetAxis: js.UndefOr[Boolean] = js.undefined,
-    colTitle: Anon_OffsetY = null,
+    colTitle: AnonOffsetY = null,
     eachView: (/* view */ js.UndefOr[js.Any], /* facet */ js.UndefOr[js.Any]) => Unit = null,
     fields: String | js.Array[_] = null,
     margin: Double | js.Array[Double] = null,
     padding: Double | js.Array[Double] = null,
-    rowTitle: Anon_OffsetX = null,
+    rowTitle: AnonOffsetX = null,
     showTitle: js.UndefOr[Boolean] = js.undefined,
     `type`: FacetType = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Facet] = {
+  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Facet] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(autoSetAxis)) __obj.updateDynamic("autoSetAxis")(autoSetAxis.asInstanceOf[js.Any])
     if (colTitle != null) __obj.updateDynamic("colTitle")(colTitle.asInstanceOf[js.Any])
@@ -45,7 +45,7 @@ object Facet
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Facet] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.bizchartsMod.Facet](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Facet] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Facet](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = FacetProps
 }
 

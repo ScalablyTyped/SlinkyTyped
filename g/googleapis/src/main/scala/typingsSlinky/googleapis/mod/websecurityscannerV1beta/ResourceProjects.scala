@@ -1,0 +1,14 @@
+package typingsSlinky.googleapis.mod.websecurityscannerV1beta
+
+import typingsSlinky.googleapisCommon.apiMod.APIRequestContext
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("googleapis", "websecurityscanner_v1beta.Resource$Projects")
+@js.native
+class ResourceProjects protected ()
+  extends typingsSlinky.googleapis.websecurityscannerV1betaMod.websecurityscannerV1beta.ResourceProjects {
+  def this(context: APIRequestContext) = this()
+}
+

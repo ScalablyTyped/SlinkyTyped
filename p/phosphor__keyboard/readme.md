@@ -12,7 +12,7 @@ PhosphorJS - Keyboard
 | Keywords           | - |
 | # releases         | 2 |
 | # dependents       | 3 |
-| # downloads        | 1188987 |
+| # downloads        | 1238269 |
 | # stars            | 0 |
 
 ## Links

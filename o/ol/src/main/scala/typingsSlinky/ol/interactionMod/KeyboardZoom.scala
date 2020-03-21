@@ -1,7 +1,7 @@
 package typingsSlinky.ol.interactionMod
 
-import typingsSlinky.ol.interactionKeyboardZoomMod.Options
-import typingsSlinky.ol.interactionKeyboardZoomMod.default
+import typingsSlinky.ol.keyboardZoomMod.Options
+import typingsSlinky.ol.keyboardZoomMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,7 +1,7 @@
 package typingsSlinky.antlr4
 
-import typingsSlinky.antlr4.errorErrorListenerMod.ErrorListener
-import typingsSlinky.antlr4.errorErrorListenerMod.ProxyErrorListener
+import typingsSlinky.antlr4.errorListenerMod.ErrorListener
+import typingsSlinky.antlr4.errorListenerMod.ProxyErrorListener
 import typingsSlinky.antlr4.parserRuleContextMod.ParserRuleContext
 import typingsSlinky.antlr4.tokenMod.Token
 import scala.scalajs.js

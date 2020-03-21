@@ -1,6 +1,6 @@
 package typingsSlinky.halogen
 
-import typingsSlinky.halogen.halogenMod.VerticalAlign
+import typingsSlinky.halogen.mod.VerticalAlign
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

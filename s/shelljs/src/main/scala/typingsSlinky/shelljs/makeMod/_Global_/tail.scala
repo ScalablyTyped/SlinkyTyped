@@ -1,7 +1,7 @@
 package typingsSlinky.shelljs.makeMod._Global_
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.shelljs.shelljsMod.TailFunction
+import typingsSlinky.shelljs.mod.TailFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

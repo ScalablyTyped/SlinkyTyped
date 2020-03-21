@@ -1,10 +1,10 @@
 package typingsSlinky.cypress
 
-import typingsSlinky.cypress.Mocha.HookFunction
-import typingsSlinky.cypress.Mocha.PendingSuiteFunction
-import typingsSlinky.cypress.Mocha.PendingTestFunction
-import typingsSlinky.cypress.Mocha.SuiteFunction
-import typingsSlinky.cypress.Mocha.TestFunction
+import typingsSlinky.cypress.Mocha_.HookFunction
+import typingsSlinky.cypress.Mocha_.PendingSuiteFunction
+import typingsSlinky.cypress.Mocha_.PendingTestFunction
+import typingsSlinky.cypress.Mocha_.SuiteFunction
+import typingsSlinky.cypress.Mocha_.TestFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

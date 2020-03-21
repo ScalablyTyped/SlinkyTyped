@@ -1,6 +1,7 @@
 
 # Scala.js typings for errorhandler
 
+Typings are for version 1.5
 
 ## Library description:
 Development-only error handler middleware
@@ -10,8 +11,8 @@ Development-only error handler middleware
 | Full name          | errorhandler |
 | Keywords           | - |
 | # releases         | 2 |
-| # dependents       | 640 |
-| # downloads        | 28536611 |
+| # dependents       | 645 |
+| # downloads        | 28967298 |
 | # stars            | 60 |
 
 ## Links

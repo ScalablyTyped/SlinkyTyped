@@ -3,36 +3,36 @@ package typingsSlinky.cypress
 import org.scalajs.dom.raw.Element
 import org.scalajs.dom.raw.HTMLElement
 import org.scalajs.dom.raw.Node
-import typingsSlinky.cypress.JQuery.AjaxSettings
-import typingsSlinky.cypress.JQuery.AnimationStatic
-import typingsSlinky.cypress.JQuery.CSSHooks
-import typingsSlinky.cypress.JQuery.CallbacksStatic
-import typingsSlinky.cypress.JQuery.DeferredStatic
-import typingsSlinky.cypress.JQuery.Duration
-import typingsSlinky.cypress.JQuery.Easings
-import typingsSlinky.cypress.JQuery.Effects
-import typingsSlinky.cypress.JQuery.EffectsOptions
-import typingsSlinky.cypress.JQuery.EventExtensions
-import typingsSlinky.cypress.JQuery.EventStatic
-import typingsSlinky.cypress.JQuery.PlainObject
-import typingsSlinky.cypress.JQuery.Promise
-import typingsSlinky.cypress.JQuery.Promise2
-import typingsSlinky.cypress.JQuery.Promise3
-import typingsSlinky.cypress.JQuery.Queue
-import typingsSlinky.cypress.JQuery.QueueFunction
-import typingsSlinky.cypress.JQuery.Selector
-import typingsSlinky.cypress.JQuery.Selectors
-import typingsSlinky.cypress.JQuery.SpeedSettings
-import typingsSlinky.cypress.JQuery.Thenable
-import typingsSlinky.cypress.JQuery.TickFunction
-import typingsSlinky.cypress.JQuery.Transport
-import typingsSlinky.cypress.JQuery.TweenStatic
-import typingsSlinky.cypress.JQuery.TypeOrArray
-import typingsSlinky.cypress.JQuery.UrlAjaxSettings
-import typingsSlinky.cypress.JQuery.ValHooks
-import typingsSlinky.cypress.JQuery.htmlString
-import typingsSlinky.cypress.JQuery.jqXHR
-import typingsSlinky.cypress.JQuery.jqXHR.DoneCallback
+import typingsSlinky.cypress.JQuery_.AjaxSettings
+import typingsSlinky.cypress.JQuery_.AnimationStatic
+import typingsSlinky.cypress.JQuery_.CSSHooks
+import typingsSlinky.cypress.JQuery_.CallbacksStatic
+import typingsSlinky.cypress.JQuery_.DeferredStatic
+import typingsSlinky.cypress.JQuery_.Duration
+import typingsSlinky.cypress.JQuery_.Easings
+import typingsSlinky.cypress.JQuery_.Effects
+import typingsSlinky.cypress.JQuery_.EffectsOptions
+import typingsSlinky.cypress.JQuery_.EventExtensions
+import typingsSlinky.cypress.JQuery_.EventStatic
+import typingsSlinky.cypress.JQuery_.PlainObject
+import typingsSlinky.cypress.JQuery_.Promise
+import typingsSlinky.cypress.JQuery_.Promise2
+import typingsSlinky.cypress.JQuery_.Promise3
+import typingsSlinky.cypress.JQuery_.Queue
+import typingsSlinky.cypress.JQuery_.QueueFunction
+import typingsSlinky.cypress.JQuery_.Selector
+import typingsSlinky.cypress.JQuery_.Selectors
+import typingsSlinky.cypress.JQuery_.SpeedSettings
+import typingsSlinky.cypress.JQuery_.Thenable
+import typingsSlinky.cypress.JQuery_.TickFunction
+import typingsSlinky.cypress.JQuery_.Transport
+import typingsSlinky.cypress.JQuery_.TweenStatic
+import typingsSlinky.cypress.JQuery_.TypeOrArray
+import typingsSlinky.cypress.JQuery_.UrlAjaxSettings
+import typingsSlinky.cypress.JQuery_.ValHooks
+import typingsSlinky.cypress.JQuery_.htmlString
+import typingsSlinky.cypress.JQuery_.jqXHR
+import typingsSlinky.cypress.JQuery_.jqXHR.DoneCallback
 import typingsSlinky.cypress.cypressBooleans.`true`
 import typingsSlinky.cypress.cypressStrings.`null`
 import typingsSlinky.cypress.cypressStrings.array
@@ -47,9 +47,9 @@ import typingsSlinky.cypress.cypressStrings.string
 import typingsSlinky.cypress.cypressStrings.symbol
 import typingsSlinky.cypress.cypressStrings.undefined
 import typingsSlinky.std.ArrayLike
-import typingsSlinky.std.Document
+import typingsSlinky.std.Document_
 import typingsSlinky.std.HTMLSelectElement
-import typingsSlinky.std.Window
+import typingsSlinky.std.Window_
 import typingsSlinky.std.XMLDocument
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -91,7 +91,7 @@ trait JQueryStatic extends js.Object {
   var event: EventExtensions = js.native
   var expr: Selectors = js.native
   // Set to HTMLElement to minimize breaks but should probably be Element.
-  val fn: JQuery[HTMLElement] = js.native
+  val fn: JQuery_[HTMLElement] = js.native
   var fx: Effects = js.native
   /**
     * A Promise-like object (or "thenable") that resolves when the document is ready.
@@ -135,17 +135,17 @@ trait JQueryStatic extends js.Object {
   ```
     */
   // NOTE: `HTMLSelectElement` is both an Element and an Array-Like Object but jQuery treats it as an Element.
-  def apply(element: HTMLSelectElement): JQuery[org.scalajs.dom.raw.HTMLSelectElement] = js.native
+  def apply(element: HTMLSelectElement): JQuery_[org.scalajs.dom.raw.HTMLSelectElement] = js.native
   // HACK: This is the factory function returned when importing jQuery without a DOM. Declaring it separately breaks using the type parameter on JQueryStatic.
   // HACK: The discriminator parameter handles the edge case of passing a Window object to JQueryStatic. It doesn't actually exist on the factory function.
-  def apply(window: Window, discriminator: Boolean): JQueryStatic = js.native
+  def apply(window: Window_, discriminator: Boolean): JQueryStatic = js.native
   /**
     * Returns an empty jQuery set.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.4
     */
   // tslint:disable-next-line:no-unnecessary-generics
-  def apply[TElement](): JQuery[TElement] = js.native
+  def apply[TElement](): JQuery_[TElement] = js.native
   /**
     * Binds a function to be executed when the DOM has finished loading.
     * @param callback The function to execute when the DOM is ready.
@@ -165,23 +165,34 @@ trait JQueryStatic extends js.Object {
   ```
     */
   // tslint:disable-next-line:no-unnecessary-generics unified-signatures
-  def apply[TElement](callback: js.ThisFunction1[/* this */ Document, /* $ */ this.type, Unit]): JQuery[TElement] = js.native
-  def apply[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery[T] = js.native
-  def apply[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery[TElement] = js.native
+  def apply[TElement](callback: js.ThisFunction1[/* this */ Document_, /* $ */ this.type, Unit]): JQuery_[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
-    * @param object A plain object to wrap in a jQuery object.
+    * @param element_elementArray _&#x40;param_ `element_elementArray`
+    * <br>
+    * * `element` — A DOM element to wrap in a jQuery object. <br>
+    * * `elementArray` — An array containing a set of DOM elements to wrap in a jQuery object.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
+    * @example ​ ````Set the background color of the page to black.
+  ```javascript
+  $( document.body ).css( "background", "black" );
+  ```
+    * @example ​ ````Hide all the input elements within a form.
+  ```javascript
+  $( myForm.elements ).hide();
+  ```
     */
-  def apply[T /* <: PlainObject[_] */](`object`: T): JQuery[T] = js.native
+  def apply[T /* <: Element */](element_elementArray: T): JQuery_[T] = js.native
+  def apply[T /* <: Element */](element_elementArray: ArrayLike[T]): JQuery_[T] = js.native
+  def apply[TElement /* <: HTMLElement */](html: htmlString, ownerDocument_attributes: PlainObject[_]): JQuery_[TElement] = js.native
   /**
     * Return a collection of matched elements either found in the DOM based on passed argument(s) or created by passing an HTML string.
     * @param selection An existing jQuery object to clone.
     * @see \`{@link https://api.jquery.com/jQuery/ }\`
     * @since 1.0
     */
-  def apply[T](selection: JQuery[T]): JQuery[T] = js.native
+  def apply[T](selection: JQuery_[T]): JQuery_[T] = js.native
   /**
     * Accepts a string containing a CSS selector which is then used to match a set of elements.
     * @param selector A string containing a selector expression
@@ -220,31 +231,31 @@ trait JQueryStatic extends js.Object {
   ​
     */
   // tslint:disable-next-line:no-unnecessary-generics
-  def apply[TElement /* <: Element */](selector: Selector): JQuery[TElement] = js.native
-  def apply[TElement /* <: Element */](selector: Selector, context: JQuery[typingsSlinky.std.HTMLElement]): JQuery[TElement] = js.native
-  def apply[TElement /* <: Element */](selector: Selector, context: Document): JQuery[TElement] = js.native
-  def apply[TElement /* <: Element */](selector: Selector, context: typingsSlinky.std.Element): JQuery[TElement] = js.native
+  def apply[TElement /* <: Element */](selector: Selector): JQuery_[TElement] = js.native
+  def apply[TElement /* <: Element */](selector: Selector, context: JQuery_[typingsSlinky.std.HTMLElement]): JQuery_[TElement] = js.native
+  def apply[TElement /* <: Element */](selector: Selector, context: Document_): JQuery_[TElement] = js.native
+  def apply[TElement /* <: Element */](selector: Selector, context: typingsSlinky.std.Element): JQuery_[TElement] = js.native
   /**
     * @see \`{@link https://gist.github.com/gnarf/54829d408993526fe475#animation-factory }\`
     * @since 1.8
     */
-  def Animation[TElement](element: TElement, props: PlainObject[_], opts: EffectsOptions[TElement]): typingsSlinky.cypress.JQuery.Animation[TElement] = js.native
-  def Callbacks[T /* <: js.Function */](): typingsSlinky.cypress.JQuery.Callbacks[T] = js.native
-  def Callbacks[T /* <: js.Function */](flags: String): typingsSlinky.cypress.JQuery.Callbacks[T] = js.native
+  def Animation[TElement](element: TElement, props: PlainObject[_], opts: EffectsOptions[TElement]): typingsSlinky.cypress.JQuery_.Animation[TElement] = js.native
+  def Callbacks[T /* <: js.Function */](): typingsSlinky.cypress.JQuery_.Callbacks[T] = js.native
+  def Callbacks[T /* <: js.Function */](flags: String): typingsSlinky.cypress.JQuery_.Callbacks[T] = js.native
   /**
     * A factory function that returns a chainable utility object with methods to register multiple callbacks into callback queues, invoke callback queues, and relay the success or failure state of any synchronous or asynchronous function.
     * @param beforeStart A function that is called just before the constructor returns.
     * @see \`{@link https://api.jquery.com/jQuery.Deferred/ }\`
     * @since 1.5
     */
-  def Deferred[TR, TJ, TN](): typingsSlinky.cypress.JQuery.Deferred[TR, TJ, TN] = js.native
+  def Deferred[TR, TJ, TN](): typingsSlinky.cypress.JQuery_.Deferred[TR, TJ, TN] = js.native
   def Deferred[TR, TJ, TN](
     beforeStart: js.ThisFunction1[
-      /* this */ typingsSlinky.cypress.JQuery.Deferred[TR, TJ, TN], 
-      /* deferred */ typingsSlinky.cypress.JQuery.Deferred[TR, TJ, TN], 
+      /* this */ typingsSlinky.cypress.JQuery_.Deferred[TR, TJ, TN], 
+      /* deferred */ typingsSlinky.cypress.JQuery_.Deferred[TR, TJ, TN], 
       Unit
     ]
-  ): typingsSlinky.cypress.JQuery.Deferred[TR, TJ, TN] = js.native
+  ): typingsSlinky.cypress.JQuery_.Deferred[TR, TJ, TN] = js.native
   /**
     * The jQuery.Event constructor is exposed and can be used when calling trigger. The new operator is optional.
     *
@@ -268,14 +279,14 @@ trait JQueryStatic extends js.Object {
   jQuery( "body" ).trigger( e );
   ```
     */
-  def Event[T /* <: js.Object */](event: String): typingsSlinky.cypress.JQuery.Event with T = js.native
-  def Event[T /* <: js.Object */](event: String, properties: T): typingsSlinky.cypress.JQuery.Event with T = js.native
+  def Event[T /* <: js.Object */](event: String): typingsSlinky.cypress.JQuery_.Event with T = js.native
+  def Event[T /* <: js.Object */](event: String, properties: T): typingsSlinky.cypress.JQuery_.Event with T = js.native
   /**
     * @see \`{@link https://gist.github.com/gnarf/54829d408993526fe475#tweens }\`
     * @since 1.8
     */
-  def Tween[TElement](elem: TElement, options: EffectsOptions[TElement], prop: String, end: Double): typingsSlinky.cypress.JQuery.Tween[TElement] = js.native
-  def Tween[TElement](elem: TElement, options: EffectsOptions[TElement], prop: String, end: Double, easing: String): typingsSlinky.cypress.JQuery.Tween[TElement] = js.native
+  def Tween[TElement](elem: TElement, options: EffectsOptions[TElement], prop: String, end: Double): typingsSlinky.cypress.JQuery_.Tween[TElement] = js.native
+  def Tween[TElement](elem: TElement, options: EffectsOptions[TElement], prop: String, end: Double, easing: String): typingsSlinky.cypress.JQuery_.Tween[TElement] = js.native
   def Tween[TElement](
     elem: TElement,
     options: EffectsOptions[TElement],
@@ -283,7 +294,7 @@ trait JQueryStatic extends js.Object {
     end: Double,
     easing: String,
     unit: String
-  ): typingsSlinky.cypress.JQuery.Tween[TElement] = js.native
+  ): typingsSlinky.cypress.JQuery_.Tween[TElement] = js.native
   /**
     * Perform an asynchronous HTTP (Ajax) request.
     * @param settings A set of key/value pairs that configure the Ajax request. All settings are optional. A default can
@@ -428,11 +439,7 @@ trait JQueryStatic extends js.Object {
     * @deprecated ​ Deprecated since 3.3. Internal. See \`{@link https://github.com/jquery/jquery/issues/3384 }\`.
     */
   def camelCase(value: String): String = js.native
-  def cleanData(
-    elems: ArrayLike[
-      Element | org.scalajs.dom.raw.Document | org.scalajs.dom.raw.Window | PlainObject[_]
-    ]
-  ): Unit = js.native
+  def cleanData(elems: ArrayLike[Element | Document_ | Window_ | PlainObject[_]]): Unit = js.native
   /**
     * Check to see if a DOM element is a descendant of another DOM element.
     * @param container The DOM element that may contain the other element.
@@ -448,17 +455,17 @@ trait JQueryStatic extends js.Object {
   def contains(container: Element, contained: Element): Boolean = js.native
   def css(elem: Element, name: String): js.Any = js.native
   def data(element: PlainObject[_]): js.Any = js.native
-  def data(element: PlainObject[_], key: String): Null = js.native
+  def data(element: PlainObject[_], key: String): js.Any = js.native
   def data(element: PlainObject[_], key: String, value: String): String = js.native
   def data(element: PlainObject[_], key: String, value: js.Symbol): js.Symbol = js.native
   def data(element: PlainObject[_], key: String, value: Boolean): Boolean = js.native
   def data(element: PlainObject[_], key: String, value: Double): Double = js.native
-  def data(element: Document): js.Any = js.native
-  def data(element: Document, key: String): Null = js.native
-  def data(element: Document, key: String, value: String): String = js.native
-  def data(element: Document, key: String, value: js.Symbol): js.Symbol = js.native
-  def data(element: Document, key: String, value: Boolean): Boolean = js.native
-  def data(element: Document, key: String, value: Double): Double = js.native
+  def data(element: Document_): js.Any = js.native
+  def data(element: Document_, key: String): js.Any = js.native
+  def data(element: Document_, key: String, value: String): String = js.native
+  def data(element: Document_, key: String, value: js.Symbol): js.Symbol = js.native
+  def data(element: Document_, key: String, value: Boolean): Boolean = js.native
+  def data(element: Document_, key: String, value: Double): Double = js.native
   /**
     * Returns value at named data store for the element, as set by `jQuery.data(element, name, value)`, or the full data store for the element.
     * @param element The DOM element to query for the data.
@@ -507,7 +514,19 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def data(element: typingsSlinky.std.Element): js.Any = js.native
-  def data(element: typingsSlinky.std.Element, key: String): Null = js.native
+  /**
+    * Returns value at named data store for the element, as set by `jQuery.data(element, name, value)`, or the full data store for the element.
+    * @param element The DOM element to query for the data.
+    * @param key Name of the data stored.
+    * @param value `undefined` is not recognized as a data value. Calls such as `jQuery.data( el, "name", undefined )`
+    *              will return the corresponding data for "name", and is therefore the same as `jQuery.data( el, "name" )`
+    * @see \`{@link https://api.jquery.com/jQuery.data/ }\`
+    * @since 1.2.3
+    */
+  // `unified-signatures` is disabled so that behavior when passing `undefined` to `value` can be documented. Unifying the signatures
+  // results in potential confusion for users from an unexpected parameter.
+  // tslint:disable-next-line:unified-signatures
+  def data(element: typingsSlinky.std.Element, key: String): js.Any = js.native
   /**
     * Store arbitrary data associated with the specified element. Returns the value that was set.
     * @param element The DOM element to associate with the data.
@@ -583,36 +602,24 @@ trait JQueryStatic extends js.Object {
   def data(element: typingsSlinky.std.Element, key: String, value: js.Symbol): js.Symbol = js.native
   def data(element: typingsSlinky.std.Element, key: String, value: Boolean): Boolean = js.native
   def data(element: typingsSlinky.std.Element, key: String, value: Double): Double = js.native
-  def data(element: Window): js.Any = js.native
-  def data(element: Window, key: String): Null = js.native
-  def data(element: Window, key: String, value: String): String = js.native
-  def data(element: Window, key: String, value: js.Symbol): js.Symbol = js.native
-  def data(element: Window, key: String, value: Boolean): Boolean = js.native
-  def data(element: Window, key: String, value: Double): Double = js.native
+  def data(element: Window_): js.Any = js.native
+  def data(element: Window_, key: String): js.Any = js.native
+  def data(element: Window_, key: String, value: String): String = js.native
+  def data(element: Window_, key: String, value: js.Symbol): js.Symbol = js.native
+  def data(element: Window_, key: String, value: Boolean): Boolean = js.native
+  def data(element: Window_, key: String, value: Double): Double = js.native
   def data[T /* <: js.Object */](element: PlainObject[_], key: String, value: T): T = js.native
-  def data[T /* <: js.Object */](element: Document, key: String, value: T): T = js.native
+  def data[T /* <: js.Object */](element: Document_, key: String, value: T): T = js.native
   def data[T /* <: js.Object */](element: typingsSlinky.std.Element, key: String, value: T): T = js.native
-  def data[T /* <: js.Object */](element: Window, key: String, value: T): T = js.native
+  def data[T /* <: js.Object */](element: Window_, key: String, value: T): T = js.native
   @JSName("data")
-  def data_Any(element: PlainObject[_], key: String): js.Any = js.native
+  def data_Null(element: PlainObject[_], key: String): Null = js.native
   @JSName("data")
-  def data_Any(element: Document, key: String): js.Any = js.native
-  /**
-    * Returns value at named data store for the element, as set by `jQuery.data(element, name, value)`, or the full data store for the element.
-    * @param element The DOM element to query for the data.
-    * @param key Name of the data stored.
-    * @param value `undefined` is not recognized as a data value. Calls such as `jQuery.data( el, "name", undefined )`
-    *              will return the corresponding data for "name", and is therefore the same as `jQuery.data( el, "name" )`
-    * @see \`{@link https://api.jquery.com/jQuery.data/ }\`
-    * @since 1.2.3
-    */
-  // `unified-signatures` is disabled so that behavior when passing `undefined` to `value` can be documented. Unifying the signatures
-  // results in potential confusion for users from an unexpected parameter.
-  // tslint:disable-next-line:unified-signatures
+  def data_Null(element: Document_, key: String): Null = js.native
   @JSName("data")
-  def data_Any(element: typingsSlinky.std.Element, key: String): js.Any = js.native
+  def data_Null(element: typingsSlinky.std.Element, key: String): Null = js.native
   @JSName("data")
-  def data_Any(element: Window, key: String): js.Any = js.native
+  def data_Null(element: Window_, key: String): Null = js.native
   /**
     * Execute the next function on the queue for the matched element.
     * @param element A DOM element from which to remove and execute a queued function.
@@ -2030,7 +2037,7 @@ trait JQueryStatic extends js.Object {
     invert: Boolean
   ): js.Array[T] = js.native
   def hasData(element: PlainObject[_]): Boolean = js.native
-  def hasData(element: Document): Boolean = js.native
+  def hasData(element: Document_): Boolean = js.native
   /**
     * Determine whether an element has any jQuery data associated with it.
     * @param element A DOM element to be checked for data.
@@ -2071,7 +2078,7 @@ trait JQueryStatic extends js.Object {
   ```
     */
   def hasData(element: typingsSlinky.std.Element): Boolean = js.native
-  def hasData(element: Window): Boolean = js.native
+  def hasData(element: Window_): Boolean = js.native
   /**
     * Holds or releases the execution of jQuery's ready event.
     * @param hold Indicates whether the ready hold is being requested or released
@@ -2471,7 +2478,7 @@ trait JQueryStatic extends js.Object {
   def map[T, TReturn](
     array: js.Array[T],
     callback: js.ThisFunction2[
-      /* this */ Window, 
+      /* this */ Window_, 
       /* elementOfArray */ T, 
       /* indexInArray */ Double, 
       js.UndefOr[TypeOrArray[TReturn] | Null]
@@ -2504,7 +2511,7 @@ trait JQueryStatic extends js.Object {
   def map[T, K /* <: String */, TReturn](
     obj: T,
     callback: js.ThisFunction2[
-      /* this */ Window, 
+      /* this */ Window_, 
       /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ /* propertyOfObject */ js.Any, 
       /* key */ K, 
       js.UndefOr[TypeOrArray[TReturn] | Null]
@@ -2700,10 +2707,10 @@ trait JQueryStatic extends js.Object {
     */
   def param(obj: js.Array[_]): String = js.native
   def param(obj: js.Array[_], traditional: Boolean): String = js.native
-  def param(obj: JQuery[typingsSlinky.std.HTMLElement]): String = js.native
+  def param(obj: JQuery_[typingsSlinky.std.HTMLElement]): String = js.native
   def param(obj: PlainObject[_]): String = js.native
   def param(obj: PlainObject[_], traditional: Boolean): String = js.native
-  def param(obj: JQuery[typingsSlinky.std.HTMLElement], traditional: Boolean): String = js.native
+  def param(obj: JQuery_[typingsSlinky.std.HTMLElement], traditional: Boolean): String = js.native
   /**
     * Parses a string into an array of DOM nodes.
     * @param data HTML string to be parsed
@@ -2753,11 +2760,11 @@ trait JQueryStatic extends js.Object {
   </html>
   ```
     */
-  def parseHTML(data: String): js.Array[typingsSlinky.cypress.JQuery.Node] = js.native
-  def parseHTML(data: String, context_keepScripts: Boolean): js.Array[typingsSlinky.cypress.JQuery.Node] = js.native
-  def parseHTML(data: String, context_keepScripts: Document): js.Array[typingsSlinky.cypress.JQuery.Node] = js.native
-  def parseHTML(data: String, context: js.UndefOr[scala.Nothing], keepScripts: Boolean): js.Array[typingsSlinky.cypress.JQuery.Node] = js.native
-  def parseHTML(data: String, context: Null, keepScripts: Boolean): js.Array[typingsSlinky.cypress.JQuery.Node] = js.native
+  def parseHTML(data: String): js.Array[typingsSlinky.cypress.JQuery_.Node] = js.native
+  def parseHTML(data: String, context_keepScripts: Boolean): js.Array[typingsSlinky.cypress.JQuery_.Node] = js.native
+  def parseHTML(data: String, context_keepScripts: Document_): js.Array[typingsSlinky.cypress.JQuery_.Node] = js.native
+  def parseHTML(data: String, context: js.UndefOr[scala.Nothing], keepScripts: Boolean): js.Array[typingsSlinky.cypress.JQuery_.Node] = js.native
+  def parseHTML(data: String, context: Null, keepScripts: Boolean): js.Array[typingsSlinky.cypress.JQuery_.Node] = js.native
   /**
     * Parses a string into an array of DOM nodes.
     * @param data HTML string to be parsed
@@ -2766,7 +2773,7 @@ trait JQueryStatic extends js.Object {
     * @see \`{@link https://api.jquery.com/jQuery.parseHTML/ }\`
     * @since 1.8
     */
-  def parseHTML(data: String, context: Document, keepScripts: Boolean): js.Array[typingsSlinky.cypress.JQuery.Node] = js.native
+  def parseHTML(data: String, context: Document_, keepScripts: Boolean): js.Array[typingsSlinky.cypress.JQuery_.Node] = js.native
   /**
     * Takes a well-formed JSON string and returns the resulting JavaScript value.
     * @param json The JSON string to parse.
@@ -15087,8 +15094,8 @@ trait JQueryStatic extends js.Object {
   def readyException(error: js.Error): js.Any = js.native
   def removeData(element: PlainObject[_]): Unit = js.native
   def removeData(element: PlainObject[_], name: String): Unit = js.native
-  def removeData(element: Document): Unit = js.native
-  def removeData(element: Document, name: String): Unit = js.native
+  def removeData(element: Document_): Unit = js.native
+  def removeData(element: Document_, name: String): Unit = js.native
   /**
     * Remove a previously-stored piece of data.
     * @param element A DOM element from which to remove data.
@@ -15137,8 +15144,8 @@ trait JQueryStatic extends js.Object {
     */
   def removeData(element: typingsSlinky.std.Element): Unit = js.native
   def removeData(element: typingsSlinky.std.Element, name: String): Unit = js.native
-  def removeData(element: Window): Unit = js.native
-  def removeData(element: Window, name: String): Unit = js.native
+  def removeData(element: Window_): Unit = js.native
+  def removeData(element: Window_, name: String): Unit = js.native
   /**
     * Creates an object containing a set of properties ready to be used in the definition of custom animations.
     * @param duration_complete_settings _&#x40;param_ `duration_complete_settings`

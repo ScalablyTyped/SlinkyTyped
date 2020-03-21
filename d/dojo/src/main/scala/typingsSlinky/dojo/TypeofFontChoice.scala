@@ -2,10 +2,10 @@ package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dijit._editor.plugins.FontChoice._FontDropDown
-import typingsSlinky.dojo.dijit._editor.plugins.FontChoice._FontNameDropDown
-import typingsSlinky.dojo.dijit._editor.plugins.FontChoice._FontSizeDropDown
-import typingsSlinky.dojo.dijit._editor.plugins.FontChoice._FormatBlockDropDown
+import typingsSlinky.dojo.dijit._editor.plugins.FontChoice.FontDropDown
+import typingsSlinky.dojo.dijit._editor.plugins.FontChoice.FontNameDropDown
+import typingsSlinky.dojo.dijit._editor.plugins.FontChoice.FontSizeDropDown
+import typingsSlinky.dojo.dijit._editor.plugins.FontChoice.FormatBlockDropDown
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -24,7 +24,7 @@ trait TypeofFontChoice extends js.Object {
   var _FontDropDown: Instantiable2[
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
-    typingsSlinky.dojo.dijit._editor.plugins.FontChoice._FontDropDown
+    FontDropDown
   ]
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/_editor/plugins/FontChoice._FontNameDropDown.html
@@ -37,7 +37,7 @@ trait TypeofFontChoice extends js.Object {
   var _FontNameDropDown: Instantiable2[
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
-    typingsSlinky.dojo.dijit._editor.plugins.FontChoice._FontNameDropDown
+    FontNameDropDown
   ]
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/_editor/plugins/FontChoice._FontSizeDropDown.html
@@ -50,7 +50,7 @@ trait TypeofFontChoice extends js.Object {
   var _FontSizeDropDown: Instantiable2[
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
-    typingsSlinky.dojo.dijit._editor.plugins.FontChoice._FontSizeDropDown
+    FontSizeDropDown
   ]
   /**
     * Permalink: http://dojotoolkit.org/api/1.9/dijit/_editor/plugins/FontChoice._FormatBlockDropDown.html
@@ -63,7 +63,7 @@ trait TypeofFontChoice extends js.Object {
   var _FormatBlockDropDown: Instantiable2[
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
-    typingsSlinky.dojo.dijit._editor.plugins.FontChoice._FormatBlockDropDown
+    FormatBlockDropDown
   ]
 }
 
@@ -73,22 +73,22 @@ object TypeofFontChoice {
     _FontDropDown: Instantiable2[
       js.UndefOr[/* params */ js.Object], 
       js.UndefOr[/* srcNodeRef */ HTMLElement], 
-      _FontDropDown
+      FontDropDown
     ],
     _FontNameDropDown: Instantiable2[
       js.UndefOr[/* params */ js.Object], 
       js.UndefOr[/* srcNodeRef */ HTMLElement], 
-      _FontNameDropDown
+      FontNameDropDown
     ],
     _FontSizeDropDown: Instantiable2[
       js.UndefOr[/* params */ js.Object], 
       js.UndefOr[/* srcNodeRef */ HTMLElement], 
-      _FontSizeDropDown
+      FontSizeDropDown
     ],
     _FormatBlockDropDown: Instantiable2[
       js.UndefOr[/* params */ js.Object], 
       js.UndefOr[/* srcNodeRef */ HTMLElement], 
-      _FormatBlockDropDown
+      FormatBlockDropDown
     ]
   ): TypeofFontChoice = {
     val __obj = js.Dynamic.literal(_FontDropDown = _FontDropDown.asInstanceOf[js.Any], _FontNameDropDown = _FontNameDropDown.asInstanceOf[js.Any], _FontSizeDropDown = _FontSizeDropDown.asInstanceOf[js.Any], _FormatBlockDropDown = _FormatBlockDropDown.asInstanceOf[js.Any])

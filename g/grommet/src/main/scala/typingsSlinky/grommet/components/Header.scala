@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Header extends SharedApply_BoxProps_663876578 {
+object Header extends SharedApply_BoxProps_1703373612 {
   @JSImport("grommet", "Header")
   @js.native
   object componentImport extends js.Object

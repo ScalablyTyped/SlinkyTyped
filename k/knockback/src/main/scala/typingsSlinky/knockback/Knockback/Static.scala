@@ -1,8 +1,8 @@
 package typingsSlinky.knockback.Knockback
 
 import org.scalajs.dom.raw.Element
-import typingsSlinky.backbone.backboneMod.Collection
-import typingsSlinky.backbone.backboneMod.Model
+import typingsSlinky.backbone.mod.Collection
+import typingsSlinky.backbone.mod.Model
 import typingsSlinky.knockout.KnockoutObservable
 import scala.scalajs.js
 import scala.scalajs.js.`|`

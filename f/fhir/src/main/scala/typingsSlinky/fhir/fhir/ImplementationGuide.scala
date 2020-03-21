@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A set of rules about how FHIR is used
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait ImplementationGuide extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait ImplementationGuide extends DomainResource {
   /**
     * Contains extended information for property 'binary'.
     */

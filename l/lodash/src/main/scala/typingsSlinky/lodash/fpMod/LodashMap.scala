@@ -1,9 +1,9 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.Dictionary
-import typingsSlinky.lodash.lodashMod.List
-import typingsSlinky.lodash.lodashMod.NumericDictionary
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.Dictionary
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.NumericDictionary
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,11 +18,11 @@ trait LodashMap extends js.Object {
   def apply[T](iteratee: js.Object, collection: Dictionary[T]): js.Array[Boolean] = js.native
   def apply[T](iteratee: js.Object, collection: List[T]): js.Array[Boolean] = js.native
   def apply[T](iteratee: js.Object, collection: NumericDictionary[T]): js.Array[Boolean] = js.native
-  def apply[T](iteratee: __): LodashMap1x2[T] = js.native
+  def apply[T /* <: js.Object */](iteratee: __): LodashMap3x2[T] = js.native
   def apply[T /* <: js.Object */](iteratee: __, collection: T): LodashMap3x2[T] = js.native
   def apply[T](iteratee: __, collection: js.Array[T]): LodashMap1x2[T] = js.native
   def apply[T](iteratee: __, collection: Dictionary[T]): LodashMap4x2[T] = js.native
-  def apply[T](iteratee: __, collection: List[T]): LodashMap4x2[T] = js.native
+  def apply[T](iteratee: __, collection: List[T]): LodashMap2x2[T] = js.native
   def apply[T](iteratee: __, collection: NumericDictionary[T]): LodashMap4x2[T] = js.native
   def apply[T, K /* <: String */](iteratee: K): js.Array[
     /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
@@ -36,12 +36,7 @@ trait LodashMap extends js.Object {
   def apply[T, K /* <: String */](iteratee: K, collection: NumericDictionary[T]): js.Array[
     /* import warning: importer.ImportType#apply Failed type conversion: T[K] */ js.Any
   ] = js.native
-  def apply[T /* <: js.Object */, TResult](
-    iteratee: js.Function1[
-      /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
-      TResult
-    ]
-  ): js.Array[TResult] = js.native
+  def apply[T, TResult](iteratee: js.Function1[/* value */ T, TResult]): LodashMap1x1[T, TResult] = js.native
   def apply[T /* <: js.Object */, TResult](
     iteratee: js.Function1[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 

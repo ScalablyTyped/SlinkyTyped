@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * Definition of an operation or a named query
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait OperationDefinition extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait OperationDefinition extends DomainResource {
   /**
     * Contains extended information for property 'code'.
     */

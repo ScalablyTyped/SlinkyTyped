@@ -1,6 +1,6 @@
 package typingsSlinky.emittery.legacyMod
 
-import typingsSlinky.emittery.emitteryMod.Events
+import typingsSlinky.emittery.mod.Events
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -26,5 +26,5 @@ import scala.scalajs.js.annotation._
 @JSImport("emittery/legacy", "Typed")
 @js.native
 class Typed[EventDataMap /* <: Events */, EmptyEvents /* <: String */] ()
-  extends typingsSlinky.emittery.emitteryMod.Typed[EventDataMap, EmptyEvents]
+  extends typingsSlinky.emittery.mod.Typed[EventDataMap, EmptyEvents]
 

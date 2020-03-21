@@ -1,9 +1,9 @@
 package typingsSlinky.history
 
-import typingsSlinky.history.historyMod.Action
-import typingsSlinky.history.historyMod.Location
-import typingsSlinky.history.historyMod.LocationListener
-import typingsSlinky.history.historyMod.UnregisterCallback
+import typingsSlinky.history.mod.Action
+import typingsSlinky.history.mod.Location
+import typingsSlinky.history.mod.LocationListener
+import typingsSlinky.history.mod.UnregisterCallback
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

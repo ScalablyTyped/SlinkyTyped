@@ -1,11 +1,11 @@
 package typingsSlinky.watchpack.directoryWatcherMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.gracefulDashFs.gracefulDashFsMod.Stats
+import typingsSlinky.gracefulFs.mod.Stats
 import typingsSlinky.node.eventsMod.EventEmitter
 import typingsSlinky.node.fsMod.FSWatcher
+import typingsSlinky.watchpack.mod.WatcherOptions
 import typingsSlinky.watchpack.watchpackBooleans.`true`
-import typingsSlinky.watchpack.watchpackMod.WatcherOptions
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

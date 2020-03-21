@@ -4,7 +4,7 @@ import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-object Delete extends SharedApply_IconProps_550943370 {
+object Delete extends SharedApply_IconProps2081198742 {
   @JSImport("baseui/icon", "Delete")
   @js.native
   object componentImport extends js.Object

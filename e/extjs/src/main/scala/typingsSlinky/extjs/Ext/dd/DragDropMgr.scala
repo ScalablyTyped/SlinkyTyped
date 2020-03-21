@@ -1,11 +1,11 @@
 package typingsSlinky.extjs.Ext.dd
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.extjs.Ext.Array
 import typingsSlinky.extjs.Ext.IBase
 import typingsSlinky.extjs.Ext.IClass
 import typingsSlinky.extjs.Ext.util.IRegion
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -174,7 +174,7 @@ object DragDropMgr extends js.Object {
   		* @param e Event the event as returned by this.getEvent()
   		*/
   def stopEvent(): Unit = js.native
-  def stopEvent(e: Event): Unit = js.native
+  def stopEvent(e: Event_): Unit = js.native
   /** [Method] Unlock all drag and drop functionality */
   def unlock(): Unit = js.native
   /** [Method] This checks to make sure an element exists and is in the DOM

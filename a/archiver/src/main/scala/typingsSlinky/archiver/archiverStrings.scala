@@ -1,11 +1,14 @@
 package typingsSlinky.archiver
 
-import typingsSlinky.archiver.archiverMod.Format
+import typingsSlinky.archiver.mod.Format
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object archiverStrings {
+  @js.native
+  sealed trait Partial extends js.Object
+  
   @js.native
   sealed trait close extends js.Object
   
@@ -42,6 +45,8 @@ object archiverStrings {
   @js.native
   sealed trait zip extends Format
   
+  @scala.inline
+  def Partial: Partial = "Partial".asInstanceOf[Partial]
   @scala.inline
   def close: close = "close".asInstanceOf[close]
   @scala.inline

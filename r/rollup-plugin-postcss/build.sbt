@@ -1,21 +1,20 @@
 organization := "org.scalablytyped.slinky"
 name := "rollup-plugin-postcss"
-version := "2.0-dt-20190808Z-007985"
-scalaVersion := "2.12.10"
+version := "2.0-dt-20200225Z-d33e2a"
+scalaVersion := "2.13.1"
 enablePlugins(ScalaJSPlugin)
 libraryDependencies ++= Seq(
   "com.olvind" %%% "scalablytyped-runtime" % "2.1.0",
-  "me.shadaj" %%% "slinky-web" % "0.6.2",
-  "org.scalablytyped.slinky" %%% "cssnano" % "4.0-dt-20180802Z-2fd920",
-  "org.scalablytyped.slinky" %%% "estree" % "0.0-unknown-dt-20191223Z-3dd043",
-  "org.scalablytyped.slinky" %%% "node" % "13.1-dt-20200103Z-c18ea7",
-  "org.scalablytyped.slinky" %%% "postcss" % "7.0.18-f03e86",
-  "org.scalablytyped.slinky" %%% "rollup" % "1.27.14-9701af",
-  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-6d51e7",
-  "org.scalablytyped.slinky" %%% "std" % "3.7-9f4f43")
+  "me.shadaj" %%% "slinky-web" % "0.6.4",
+  "org.scalablytyped.slinky" %%% "cssnano" % "4.0-dt-20180802Z-36eb17",
+  "org.scalablytyped.slinky" %%% "estree" % "0.0-unknown-dt-20200225Z-7e1416",
+  "org.scalablytyped.slinky" %%% "node" % "13.7-dt-20200228Z-eb4e34",
+  "org.scalablytyped.slinky" %%% "postcss" % "7.0.18-22585d",
+  "org.scalablytyped.slinky" %%% "rollup" % "1.31.1-0097d2",
+  "org.scalablytyped.slinky" %%% "source-map" % "0.7.3-63359b",
+  "org.scalablytyped.slinky" %%% "std" % "3.8-16327f")
 publishArtifact in packageDoc := false
-scalacOptions ++= List("-P:scalajs:sjsDefinedByDefault", "-g:notailcalls")
+scalacOptions ++= List("-encoding", "utf-8", "-g:notailcalls", "-P:scalajs:sjsDefinedByDefault")
 licenses += ("MIT", url("http://opensource.org/licenses/MIT"))
 bintrayRepository := "SlinkyTyped"
 resolvers += Resolver.bintrayRepo("oyvindberg", "SlinkyTyped")
-        

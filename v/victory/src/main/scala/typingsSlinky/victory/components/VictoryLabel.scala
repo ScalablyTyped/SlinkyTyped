@@ -5,13 +5,13 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.react.reactMod.DOMAttributes
-import typingsSlinky.victory.Anon_X
-import typingsSlinky.victory.victoryMod.StringOrNumberOrCallback
-import typingsSlinky.victory.victoryMod.TextAnchorType
-import typingsSlinky.victory.victoryMod.VerticalAnchorType
-import typingsSlinky.victory.victoryMod.VictoryLabelProps
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.DOMAttributes
+import typingsSlinky.victory.AnonX
+import typingsSlinky.victory.mod.StringOrNumberOrCallback
+import typingsSlinky.victory.mod.TextAnchorType
+import typingsSlinky.victory.mod.VerticalAnchorType
+import typingsSlinky.victory.mod.VictoryLabelProps
 import typingsSlinky.victory.victoryStrings.parallel
 import typingsSlinky.victory.victoryStrings.perpendicular
 import typingsSlinky.victory.victoryStrings.vertical
@@ -20,7 +20,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object VictoryLabel
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.victoryMod.VictoryLabel] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.victory.mod.VictoryLabel] {
   @JSImport("victory", "VictoryLabel")
   @js.native
   object componentImport extends js.Object
@@ -37,7 +37,7 @@ object VictoryLabel
     events: DOMAttributes[_] = null,
     labelPlacement: parallel | perpendicular | vertical = null,
     lineHeight: StringOrNumberOrCallback = null,
-    origin: Anon_X = null,
+    origin: AnonX = null,
     polar: js.UndefOr[Boolean] = js.undefined,
     renderInPortal: js.UndefOr[Boolean] = js.undefined,
     style: CSSProperties | js.Array[CSSProperties] = null,
@@ -48,7 +48,7 @@ object VictoryLabel
     x: Int | Double = null,
     y: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryLabel] = {
+  ): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryLabel] = {
     val __obj = js.Dynamic.literal()
     if (angle != null) __obj.updateDynamic("angle")(angle.asInstanceOf[js.Any])
     if (capHeight != null) __obj.updateDynamic("capHeight")(capHeight.asInstanceOf[js.Any])
@@ -72,7 +72,7 @@ object VictoryLabel
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.victoryMod.VictoryLabel] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.victoryMod.VictoryLabel](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.victory.mod.VictoryLabel] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.victory.mod.VictoryLabel](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = VictoryLabelProps
 }
 

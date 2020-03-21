@@ -1,20 +1,91 @@
 package typingsSlinky.yadda.yaddaMod
 
-import typingsSlinky.yadda.libContextMod.Properties
-import typingsSlinky.yadda.libLibraryMod.^
+import typingsSlinky.std.Error
+import typingsSlinky.yadda.contextMod.Properties
+import typingsSlinky.yadda.libMod.Scenario
+import typingsSlinky.yadda.libMod.Step
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-@JSImport("yadda", "Yadda")
 @js.native
-class Yadda protected ()
-  extends typingsSlinky.yadda.libMod.Yadda {
-  def this(libraries: js.Array[^]) = this()
-  def this(libraries: ^) = this()
-  def this(libraries: js.Array[^], interpreter_context: Properties) = this()
-  def this(libraries: js.Array[^], interpreter_context: typingsSlinky.yadda.libContextMod.^) = this()
-  def this(libraries: ^, interpreter_context: Properties) = this()
-  def this(libraries: ^, interpreter_context: typingsSlinky.yadda.libContextMod.^) = this()
+trait Yadda extends js.Object {
+  var interpreter: typingsSlinky.yadda.interpreterMod.^ = js.native
+  def run(scenario: js.Array[Scenario | Step]): Unit = js.native
+  def run(scenario: js.Array[Scenario | Step], next: js.Function1[Error | Null, Unit]): Unit = js.native
+  def run(scenario: js.Array[Scenario | Step], scenario_context: Properties): Unit = js.native
+  def run(
+    scenario: js.Array[Scenario | Step],
+    scenario_context: Properties,
+    next: js.Function1[js.Error | Null, Unit]
+  ): Unit = js.native
+  def run(scenario: js.Array[Scenario | Step], scenario_context: typingsSlinky.yadda.contextMod.^): Unit = js.native
+  def run(
+    scenario: js.Array[Scenario | Step],
+    scenario_context: typingsSlinky.yadda.contextMod.^,
+    next: js.Function1[js.Error | Null, Unit]
+  ): Unit = js.native
+  def run(scenario: Scenario): Unit = js.native
+  def run(scenario: Scenario, next: js.Function1[/* err */ Error | Null, Unit]): Unit = js.native
+  def run(scenario: Scenario, scenario_context: Properties): Unit = js.native
+  def run(
+    scenario: Scenario,
+    scenario_context: Properties,
+    next: js.Function1[/* err */ js.Error | Null, Unit]
+  ): Unit = js.native
+  def run(scenario: Scenario, scenario_context: typingsSlinky.yadda.contextMod.^): Unit = js.native
+  def run(
+    scenario: Scenario,
+    scenario_context: typingsSlinky.yadda.contextMod.^,
+    next: js.Function1[/* err */ js.Error | Null, Unit]
+  ): Unit = js.native
+  def run(step: Step): Unit = js.native
+  def run(step: Step, next: js.Function1[/* err */ Error | Null, Unit]): Unit = js.native
+  def run(step: Step, scenario_context: Properties): Unit = js.native
+  def run(step: Step, scenario_context: Properties, next: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
+  def run(step: Step, scenario_context: typingsSlinky.yadda.contextMod.^): Unit = js.native
+  def run(
+    step: Step,
+    scenario_context: typingsSlinky.yadda.contextMod.^,
+    next: js.Function1[/* err */ js.Error | Null, Unit]
+  ): Unit = js.native
+  def yadda(scenario: js.Array[Scenario | Step]): Unit = js.native
+  def yadda(scenario: js.Array[Scenario | Step], next: js.Function1[Error | Null, Unit]): Unit = js.native
+  def yadda(scenario: js.Array[Scenario | Step], scenario_context: Properties): Unit = js.native
+  def yadda(
+    scenario: js.Array[Scenario | Step],
+    scenario_context: Properties,
+    next: js.Function1[js.Error | Null, Unit]
+  ): Unit = js.native
+  def yadda(scenario: js.Array[Scenario | Step], scenario_context: typingsSlinky.yadda.contextMod.^): Unit = js.native
+  def yadda(
+    scenario: js.Array[Scenario | Step],
+    scenario_context: typingsSlinky.yadda.contextMod.^,
+    next: js.Function1[js.Error | Null, Unit]
+  ): Unit = js.native
+  def yadda(scenario: Scenario): Unit = js.native
+  def yadda(scenario: Scenario, next: js.Function1[/* err */ Error | Null, Unit]): Unit = js.native
+  def yadda(scenario: Scenario, scenario_context: Properties): Unit = js.native
+  def yadda(
+    scenario: Scenario,
+    scenario_context: Properties,
+    next: js.Function1[/* err */ js.Error | Null, Unit]
+  ): Unit = js.native
+  def yadda(scenario: Scenario, scenario_context: typingsSlinky.yadda.contextMod.^): Unit = js.native
+  def yadda(
+    scenario: Scenario,
+    scenario_context: typingsSlinky.yadda.contextMod.^,
+    next: js.Function1[/* err */ js.Error | Null, Unit]
+  ): Unit = js.native
+  def yadda(step: Step): Unit = js.native
+  def yadda(step: Step, next: js.Function1[/* err */ Error | Null, Unit]): Unit = js.native
+  def yadda(step: Step, scenario_context: Properties): Unit = js.native
+  def yadda(step: Step, scenario_context: Properties, next: js.Function1[/* err */ js.Error | Null, Unit]): Unit = js.native
+  def yadda(step: Step, scenario_context: typingsSlinky.yadda.contextMod.^): Unit = js.native
+  def yadda(
+    step: Step,
+    scenario_context: typingsSlinky.yadda.contextMod.^,
+    next: js.Function1[/* err */ js.Error | Null, Unit]
+  ): Unit = js.native
 }
 

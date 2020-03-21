@@ -210,8 +210,8 @@ trait Element
     * Returns the local name.
     */
   val localName: java.lang.String = js.native
-  var onfullscreenchange: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
-  var onfullscreenerror: (js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]) | Null = js.native
+  var onfullscreenchange: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
+  var onfullscreenerror: (js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]) | Null = js.native
   var outerHTML: java.lang.String = js.native
   /**
     * Returns the namespace prefix.
@@ -234,37 +234,31 @@ trait Element
     */
   val tagName: java.lang.String = js.native
   @JSName("addEventListener")
-  def addEventListener_fullscreenchange(
-    `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   @JSName("addEventListener")
-  def addEventListener_fullscreenerror(
-    `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def addEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("addEventListener")
   def addEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: AddEventListenerOptions
   ): Unit = js.native
   /**
@@ -282,7 +276,7 @@ trait Element
   @JSName("closest")
   def closest_address(selector: address): org.scalajs.dom.raw.HTMLElement | Null = js.native
   @JSName("closest")
-  def closest_applet(selector: applet): org.scalajs.dom.raw.HTMLAppletElement | Null = js.native
+  def closest_applet(selector: applet): HTMLAppletElement | Null = js.native
   @JSName("closest")
   def closest_area(selector: area): org.scalajs.dom.raw.HTMLAreaElement | Null = js.native
   @JSName("closest")
@@ -296,7 +290,7 @@ trait Element
   @JSName("closest")
   def closest_base(selector: base): org.scalajs.dom.raw.HTMLBaseElement | Null = js.native
   @JSName("closest")
-  def closest_basefont(selector: basefont): org.scalajs.dom.raw.HTMLBaseFontElement | Null = js.native
+  def closest_basefont(selector: basefont): HTMLBaseFontElement | Null = js.native
   @JSName("closest")
   def closest_bdi(selector: bdi): org.scalajs.dom.raw.HTMLElement | Null = js.native
   @JSName("closest")
@@ -344,7 +338,7 @@ trait Element
   @JSName("closest")
   def closest_dialog(selector: dialog): HTMLDialogElement | Null = js.native
   @JSName("closest")
-  def closest_dir(selector: dir): org.scalajs.dom.raw.HTMLDirectoryElement | Null = js.native
+  def closest_dir(selector: dir): HTMLDirectoryElement | Null = js.native
   @JSName("closest")
   def closest_div(selector: div): org.scalajs.dom.raw.HTMLDivElement | Null = js.native
   @JSName("closest")
@@ -414,7 +408,7 @@ trait Element
   @JSName("closest")
   def closest_filter(selector: filter): org.scalajs.dom.raw.SVGFilterElement | Null = js.native
   @JSName("closest")
-  def closest_font(selector: font): org.scalajs.dom.raw.HTMLFontElement | Null = js.native
+  def closest_font(selector: font): HTMLFontElement | Null = js.native
   @JSName("closest")
   def closest_footer(selector: footer): org.scalajs.dom.raw.HTMLElement | Null = js.native
   @JSName("closest")
@@ -422,9 +416,9 @@ trait Element
   @JSName("closest")
   def closest_form(selector: form): org.scalajs.dom.raw.HTMLFormElement | Null = js.native
   @JSName("closest")
-  def closest_frame(selector: frame): org.scalajs.dom.raw.HTMLFrameElement | Null = js.native
+  def closest_frame(selector: frame): HTMLFrameElement | Null = js.native
   @JSName("closest")
-  def closest_frameset(selector: frameset): org.scalajs.dom.raw.HTMLFrameSetElement | Null = js.native
+  def closest_frameset(selector: frameset): HTMLFrameSetElement | Null = js.native
   @JSName("closest")
   def closest_g(selector: g): org.scalajs.dom.raw.SVGGElement | Null = js.native
   @JSName("closest")
@@ -484,7 +478,7 @@ trait Element
   @JSName("closest")
   def closest_marker(selector: marker): org.scalajs.dom.raw.SVGMarkerElement | Null = js.native
   @JSName("closest")
-  def closest_marquee(selector: marquee): org.scalajs.dom.raw.HTMLMarqueeElement | Null = js.native
+  def closest_marquee(selector: marquee): HTMLMarqueeElement | Null = js.native
   @JSName("closest")
   def closest_mask(selector: mask): org.scalajs.dom.raw.SVGMaskElement | Null = js.native
   @JSName("closest")
@@ -580,7 +574,7 @@ trait Element
   @JSName("closest")
   def closest_tbody(selector: tbody): org.scalajs.dom.raw.HTMLTableSectionElement | Null = js.native
   @JSName("closest")
-  def closest_td(selector: td): org.scalajs.dom.raw.HTMLTableDataCellElement | Null = js.native
+  def closest_td(selector: td): HTMLTableDataCellElement | Null = js.native
   @JSName("closest")
   def closest_template(selector: template): HTMLTemplateElement | Null = js.native
   @JSName("closest")
@@ -592,7 +586,7 @@ trait Element
   @JSName("closest")
   def closest_tfoot(selector: tfoot): org.scalajs.dom.raw.HTMLTableSectionElement | Null = js.native
   @JSName("closest")
-  def closest_th(selector: th): org.scalajs.dom.raw.HTMLTableHeaderCellElement | Null = js.native
+  def closest_th(selector: th): HTMLTableHeaderCellElement | Null = js.native
   @JSName("closest")
   def closest_thead(selector: thead): org.scalajs.dom.raw.HTMLTableSectionElement | Null = js.native
   @JSName("closest")
@@ -653,7 +647,7 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_address(qualifiedName: address): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_applet(qualifiedName: applet): HTMLCollectionOf[org.scalajs.dom.raw.HTMLAppletElement] = js.native
+  def getElementsByTagName_applet(qualifiedName: applet): HTMLCollectionOf[HTMLAppletElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_area(qualifiedName: area): HTMLCollectionOf[org.scalajs.dom.raw.HTMLAreaElement] = js.native
   @JSName("getElementsByTagName")
@@ -667,7 +661,7 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_base(qualifiedName: base): HTMLCollectionOf[org.scalajs.dom.raw.HTMLBaseElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_basefont(qualifiedName: basefont): HTMLCollectionOf[org.scalajs.dom.raw.HTMLBaseFontElement] = js.native
+  def getElementsByTagName_basefont(qualifiedName: basefont): HTMLCollectionOf[HTMLBaseFontElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_bdi(qualifiedName: bdi): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
   @JSName("getElementsByTagName")
@@ -715,7 +709,7 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_dialog(qualifiedName: dialog): HTMLCollectionOf[HTMLDialogElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_dir(qualifiedName: dir): HTMLCollectionOf[org.scalajs.dom.raw.HTMLDirectoryElement] = js.native
+  def getElementsByTagName_dir(qualifiedName: dir): HTMLCollectionOf[HTMLDirectoryElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_div(qualifiedName: div): HTMLCollectionOf[org.scalajs.dom.raw.HTMLDivElement] = js.native
   @JSName("getElementsByTagName")
@@ -785,7 +779,7 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_filter(qualifiedName: filter): HTMLCollectionOf[org.scalajs.dom.raw.SVGFilterElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_font(qualifiedName: font): HTMLCollectionOf[org.scalajs.dom.raw.HTMLFontElement] = js.native
+  def getElementsByTagName_font(qualifiedName: font): HTMLCollectionOf[HTMLFontElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_footer(qualifiedName: footer): HTMLCollectionOf[org.scalajs.dom.raw.HTMLElement] = js.native
   @JSName("getElementsByTagName")
@@ -793,9 +787,9 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_form(qualifiedName: form): HTMLCollectionOf[org.scalajs.dom.raw.HTMLFormElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_frame(qualifiedName: frame): HTMLCollectionOf[org.scalajs.dom.raw.HTMLFrameElement] = js.native
+  def getElementsByTagName_frame(qualifiedName: frame): HTMLCollectionOf[HTMLFrameElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_frameset(qualifiedName: frameset): HTMLCollectionOf[org.scalajs.dom.raw.HTMLFrameSetElement] = js.native
+  def getElementsByTagName_frameset(qualifiedName: frameset): HTMLCollectionOf[HTMLFrameSetElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_g(qualifiedName: g): HTMLCollectionOf[org.scalajs.dom.raw.SVGGElement] = js.native
   @JSName("getElementsByTagName")
@@ -855,7 +849,7 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_marker(qualifiedName: marker): HTMLCollectionOf[org.scalajs.dom.raw.SVGMarkerElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_marquee(qualifiedName: marquee): HTMLCollectionOf[org.scalajs.dom.raw.HTMLMarqueeElement] = js.native
+  def getElementsByTagName_marquee(qualifiedName: marquee): HTMLCollectionOf[HTMLMarqueeElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_mask(qualifiedName: mask): HTMLCollectionOf[org.scalajs.dom.raw.SVGMaskElement] = js.native
   @JSName("getElementsByTagName")
@@ -951,7 +945,7 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_tbody(qualifiedName: tbody): HTMLCollectionOf[org.scalajs.dom.raw.HTMLTableSectionElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_td(qualifiedName: td): HTMLCollectionOf[org.scalajs.dom.raw.HTMLTableDataCellElement] = js.native
+  def getElementsByTagName_td(qualifiedName: td): HTMLCollectionOf[HTMLTableDataCellElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_template(qualifiedName: template): HTMLCollectionOf[HTMLTemplateElement] = js.native
   @JSName("getElementsByTagName")
@@ -963,7 +957,7 @@ trait Element
   @JSName("getElementsByTagName")
   def getElementsByTagName_tfoot(qualifiedName: tfoot): HTMLCollectionOf[org.scalajs.dom.raw.HTMLTableSectionElement] = js.native
   @JSName("getElementsByTagName")
-  def getElementsByTagName_th(qualifiedName: th): HTMLCollectionOf[org.scalajs.dom.raw.HTMLTableHeaderCellElement] = js.native
+  def getElementsByTagName_th(qualifiedName: th): HTMLCollectionOf[HTMLTableHeaderCellElement] = js.native
   @JSName("getElementsByTagName")
   def getElementsByTagName_thead(qualifiedName: thead): HTMLCollectionOf[org.scalajs.dom.raw.HTMLTableSectionElement] = js.native
   @JSName("getElementsByTagName")
@@ -1024,37 +1018,31 @@ trait Element
   def removeAttributeNS(namespace: Null, localName: java.lang.String): Unit = js.native
   def removeAttributeNode(attr: org.scalajs.dom.raw.Attr): org.scalajs.dom.raw.Attr = js.native
   @JSName("removeEventListener")
-  def removeEventListener_fullscreenchange(
-    `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_fullscreenchange(`type`: fullscreenchange, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenchange(
     `type`: fullscreenchange,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   @JSName("removeEventListener")
-  def removeEventListener_fullscreenerror(
-    `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _]
-  ): Unit = js.native
+  def removeEventListener_fullscreenerror(`type`: fullscreenerror, listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _]): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: scala.Boolean
   ): Unit = js.native
   @JSName("removeEventListener")
   def removeEventListener_fullscreenerror(
     `type`: fullscreenerror,
-    listener: js.ThisFunction1[/* this */ this.type, /* ev */ org.scalajs.dom.raw.Event, _],
+    listener: js.ThisFunction1[/* this */ this.type, /* ev */ Event_, _],
     options: EventListenerOptions
   ): Unit = js.native
   /**

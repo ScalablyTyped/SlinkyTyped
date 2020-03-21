@@ -1,16 +1,16 @@
 package typingsSlinky.bootstrap
 
-import typingsSlinky.bootstrap.bootstrapMod.AlertEvent
-import typingsSlinky.bootstrap.bootstrapMod.CarouselEvent
-import typingsSlinky.bootstrap.bootstrapMod.CollapseEvent
-import typingsSlinky.bootstrap.bootstrapMod.DropdownEvent
-import typingsSlinky.bootstrap.bootstrapMod.ModalEvent
-import typingsSlinky.bootstrap.bootstrapMod.Placement
-import typingsSlinky.bootstrap.bootstrapMod.PopoverEvent
-import typingsSlinky.bootstrap.bootstrapMod.TapEvent
-import typingsSlinky.bootstrap.bootstrapMod.ToastEvent
-import typingsSlinky.bootstrap.bootstrapMod.TooltipEvent
-import typingsSlinky.bootstrap.bootstrapMod.Trigger
+import typingsSlinky.bootstrap.mod.AlertEvent
+import typingsSlinky.bootstrap.mod.CarouselEvent
+import typingsSlinky.bootstrap.mod.CollapseEvent
+import typingsSlinky.bootstrap.mod.DropdownEvent
+import typingsSlinky.bootstrap.mod.ModalEvent
+import typingsSlinky.bootstrap.mod.Placement
+import typingsSlinky.bootstrap.mod.PopoverEvent
+import typingsSlinky.bootstrap.mod.TapEvent
+import typingsSlinky.bootstrap.mod.ToastEvent
+import typingsSlinky.bootstrap.mod.TooltipEvent
+import typingsSlinky.bootstrap.mod.Trigger
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

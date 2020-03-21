@@ -1,15 +1,15 @@
 package typingsSlinky.snabbdom.vnodeMod
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.snabbdom.helpersAttachtoMod.AttachData
+import typingsSlinky.snabbdom.attachtoMod.AttachData
+import typingsSlinky.snabbdom.attributesMod.Attrs
+import typingsSlinky.snabbdom.classMod.Classes
+import typingsSlinky.snabbdom.datasetMod.Dataset
+import typingsSlinky.snabbdom.eventlistenersMod.On
+import typingsSlinky.snabbdom.heroMod.Hero
 import typingsSlinky.snabbdom.hooksMod.Hooks
-import typingsSlinky.snabbdom.modulesAttributesMod.Attrs
-import typingsSlinky.snabbdom.modulesClassMod.Classes
-import typingsSlinky.snabbdom.modulesDatasetMod.Dataset
-import typingsSlinky.snabbdom.modulesEventlistenersMod.On
-import typingsSlinky.snabbdom.modulesHeroMod.Hero
-import typingsSlinky.snabbdom.modulesPropsMod.Props
-import typingsSlinky.snabbdom.modulesStyleMod.VNodeStyle
+import typingsSlinky.snabbdom.propsMod.Props
+import typingsSlinky.snabbdom.styleMod.VNodeStyle
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -21,7 +21,7 @@ trait VNodeData
   var attrs: js.UndefOr[Attrs] = js.undefined
   var `class`: js.UndefOr[Classes] = js.undefined
   var dataset: js.UndefOr[Dataset] = js.undefined
-  var fn: js.UndefOr[js.Function0[VNode]] = js.undefined
+  var fn: js.UndefOr[js.Function0[VNode_]] = js.undefined
   var hero: js.UndefOr[Hero] = js.undefined
   var hook: js.UndefOr[Hooks] = js.undefined
   var key: js.UndefOr[Key] = js.undefined
@@ -40,7 +40,7 @@ object VNodeData {
     attrs: Attrs = null,
     `class`: Classes = null,
     dataset: Dataset = null,
-    fn: () => VNode = null,
+    fn: () => VNode_ = null,
     hero: Hero = null,
     hook: Hooks = null,
     key: Key = null,

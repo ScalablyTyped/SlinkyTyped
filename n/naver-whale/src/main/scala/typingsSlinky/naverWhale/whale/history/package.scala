@@ -1,0 +1,14 @@
+package typingsSlinky.naverWhale.whale
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object history {
+  type HistoryVisitRemovedEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function1[/* removed */ typingsSlinky.chrome.chrome.history.RemovedResult, scala.Unit]
+  ]
+  type HistoryVisitedEvent = typingsSlinky.chrome.chrome.events.Event[
+    js.Function1[/* result */ typingsSlinky.chrome.chrome.history.HistoryItem, scala.Unit]
+  ]
+}

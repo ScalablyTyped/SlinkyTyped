@@ -1,7 +1,7 @@
 package typingsSlinky.cypress.cypressMod
 
+import typingsSlinky.cypress.PartialCypressConfigurati
 import typingsSlinky.cypress.cypressBooleans.`false`
-import typingsSlinky.std.Partial
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -13,7 +13,7 @@ trait CypressCommonOptions extends js.Object {
   /**
     * Specify configuration
     */
-  var config: Partial[CypressConfiguration]
+  var config: PartialCypressConfigurati
   /**
     * Path to the config file to be used.
     *
@@ -34,12 +34,7 @@ trait CypressCommonOptions extends js.Object {
 
 object CypressCommonOptions {
   @scala.inline
-  def apply(
-    config: Partial[CypressConfiguration],
-    configFile: String | `false`,
-    env: js.Object,
-    project: String
-  ): CypressCommonOptions = {
+  def apply(config: PartialCypressConfigurati, configFile: String | `false`, env: js.Object, project: String): CypressCommonOptions = {
     val __obj = js.Dynamic.literal(config = config.asInstanceOf[js.Any], configFile = configFile.asInstanceOf[js.Any], env = env.asInstanceOf[js.Any], project = project.asInstanceOf[js.Any])
   
     __obj.asInstanceOf[CypressCommonOptions]

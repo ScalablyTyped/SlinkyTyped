@@ -8,8 +8,8 @@ import scala.scalajs.js.annotation._
 
 /* cl_device_local_mem_type */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x1`
-  - typings.webcl.webclNumbers.`0x2`
+  - typingsSlinky.webcl.webclNumbers.`0x1`
+  - typingsSlinky.webcl.webclNumbers.`0x2`
 */
 trait DeviceLocalMemType extends js.Object
 

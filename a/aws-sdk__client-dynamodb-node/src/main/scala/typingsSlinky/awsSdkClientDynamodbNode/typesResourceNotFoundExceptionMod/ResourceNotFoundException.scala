@@ -1,0 +1,46 @@
+package typingsSlinky.awsSdkClientDynamodbNode.typesResourceNotFoundExceptionMod
+
+import typingsSlinky.awsSdkClientDynamodbNode.batchGetItemExceptionsUnionMod.BatchGetItemExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.batchWriteItemExceptionsUnionMod.BatchWriteItemExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.deleteItemExceptionsUnionMod.DeleteItemExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.deleteTableExceptionsUnionMod.DeleteTableExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.describeTableExceptionsUnionMod.DescribeTableExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.describeTimeToLiveExceptionsUnionMod.DescribeTimeToLiveExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.getItemExceptionsUnionMod.GetItemExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.listTagsOfResourceExceptionsUnionMod.ListTagsOfResourceExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.putItemExceptionsUnionMod.PutItemExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.queryExceptionsUnionMod.QueryExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.scanExceptionsUnionMod.ScanExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.tagResourceExceptionsUnionMod.TagResourceExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.untagResourceExceptionsUnionMod.UntagResourceExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.updateItemExceptionsUnionMod.UpdateItemExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.updateTableExceptionsUnionMod.UpdateTableExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbNode.updateTimeToLiveExceptionsUnionMod.UpdateTimeToLiveExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ResourceNotFoundException
+  extends ServiceException[ResourceNotFoundExceptionDetails]
+     with BatchGetItemExceptionsUnion
+     with BatchWriteItemExceptionsUnion
+     with DeleteItemExceptionsUnion
+     with DeleteTableExceptionsUnion
+     with DescribeTableExceptionsUnion
+     with DescribeTimeToLiveExceptionsUnion
+     with GetItemExceptionsUnion
+     with ListTagsOfResourceExceptionsUnion
+     with PutItemExceptionsUnion
+     with QueryExceptionsUnion
+     with ScanExceptionsUnion
+     with TagResourceExceptionsUnion
+     with UntagResourceExceptionsUnion
+     with UpdateItemExceptionsUnion
+     with UpdateTableExceptionsUnion
+     with UpdateTimeToLiveExceptionsUnion {
+  @JSName("name")
+  var name_ResourceNotFoundException: typingsSlinky.awsSdkClientDynamodbNode.awsSdkClientDynamodbNodeStrings.ResourceNotFoundException = js.native
+}
+

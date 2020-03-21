@@ -10,9 +10,9 @@ JupyterLab - Terminal Emulator Widget
 | ------------------ | :-------------: |
 | Full name          | @jupyterlab/terminal |
 | Keywords           | - |
-| # releases         | 63 |
+| # releases         | 64 |
 | # dependents       | 21 |
-| # downloads        | 769293 |
+| # downloads        | 774543 |
 | # stars            | 0 |
 
 ## Links

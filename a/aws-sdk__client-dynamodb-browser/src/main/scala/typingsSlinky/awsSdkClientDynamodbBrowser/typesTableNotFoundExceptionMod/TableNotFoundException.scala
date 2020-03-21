@@ -1,0 +1,26 @@
+package typingsSlinky.awsSdkClientDynamodbBrowser.typesTableNotFoundExceptionMod
+
+import typingsSlinky.awsSdkClientDynamodbBrowser.createBackupExceptionsUnionMod.CreateBackupExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbBrowser.createGlobalTableExceptionsUnionMod.CreateGlobalTableExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbBrowser.describeContinuousBackupsExceptionsUnionMod.DescribeContinuousBackupsExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbBrowser.restoreTableToPointInTimeExceptionsUnionMod.RestoreTableToPointInTimeExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbBrowser.updateContinuousBackupsExceptionsUnionMod.UpdateContinuousBackupsExceptionsUnion
+import typingsSlinky.awsSdkClientDynamodbBrowser.updateGlobalTableExceptionsUnionMod.UpdateGlobalTableExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait TableNotFoundException
+  extends ServiceException[TableNotFoundExceptionDetails]
+     with CreateBackupExceptionsUnion
+     with CreateGlobalTableExceptionsUnion
+     with DescribeContinuousBackupsExceptionsUnion
+     with RestoreTableToPointInTimeExceptionsUnion
+     with UpdateContinuousBackupsExceptionsUnion
+     with UpdateGlobalTableExceptionsUnion {
+  @JSName("name")
+  var name_TableNotFoundException: typingsSlinky.awsSdkClientDynamodbBrowser.awsSdkClientDynamodbBrowserStrings.TableNotFoundException = js.native
+}
+

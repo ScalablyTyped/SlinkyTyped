@@ -1,9 +1,9 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.RightCurriedFunction2
-import typingsSlinky.lodash.lodashMod.RightCurriedFunction3
-import typingsSlinky.lodash.lodashMod.RightCurriedFunction4
-import typingsSlinky.lodash.lodashMod.RightCurriedFunction5
+import typingsSlinky.lodash.mod.RightCurriedFunction2
+import typingsSlinky.lodash.mod.RightCurriedFunction3
+import typingsSlinky.lodash.mod.RightCurriedFunction4
+import typingsSlinky.lodash.mod.RightCurriedFunction5
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

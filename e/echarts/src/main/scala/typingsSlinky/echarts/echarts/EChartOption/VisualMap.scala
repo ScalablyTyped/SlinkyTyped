@@ -1,6 +1,6 @@
 package typingsSlinky.echarts.echarts.EChartOption
 
-import typingsSlinky.echarts.Anon_InRange
+import typingsSlinky.echarts.AnonInRange
 import typingsSlinky.echarts.echarts.VisualMap.PiecesObject
 import typingsSlinky.echarts.echarts.VisualMap.RangeObject
 import typingsSlinky.echarts.echartsStrings.auto
@@ -19,8 +19,8 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.echarts.echarts.VisualMap.Continuous
-  - typings.echarts.echarts.VisualMap.Piecewise
+  - typingsSlinky.echarts.echarts.VisualMap.Continuous
+  - typingsSlinky.echarts.echarts.VisualMap.Piecewise
 */
 trait VisualMap extends js.Object
 
@@ -34,7 +34,7 @@ object VisualMap {
     bottom: Double | String = null,
     calculable: js.UndefOr[Boolean] = js.undefined,
     color: js.Array[String] = null,
-    controller: Anon_InRange = null,
+    controller: AnonInRange = null,
     dimension: String | Double = null,
     formatter: String | js.Function = null,
     hoverLink: js.UndefOr[Boolean] = js.undefined,
@@ -110,7 +110,7 @@ object VisualMap {
     bottom: Double | String = null,
     categories: js.Array[String] = null,
     color: js.Array[String] = null,
-    controller: Anon_InRange = null,
+    controller: AnonInRange = null,
     dimension: String | Double = null,
     formatter: String | js.Function = null,
     hoverLink: js.UndefOr[Boolean] = js.undefined,

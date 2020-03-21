@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A photo, video, or audio recording acquired or used in healthcare. The actual content may be inline or provided by direct reference
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait Media extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait Media extends DomainResource {
   /**
     * Contains extended information for property 'duration'.
     */

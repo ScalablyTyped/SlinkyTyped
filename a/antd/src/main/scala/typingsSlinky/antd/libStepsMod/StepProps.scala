@@ -7,8 +7,8 @@ import typingsSlinky.antd.antdStrings.error
 import typingsSlinky.antd.antdStrings.finish
 import typingsSlinky.antd.antdStrings.process
 import typingsSlinky.antd.antdStrings.wait
-import typingsSlinky.react.reactMod.CSSProperties
-import typingsSlinky.react.reactMod.MouseEventHandler
+import typingsSlinky.react.mod.CSSProperties
+import typingsSlinky.react.mod.MouseEventHandler
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

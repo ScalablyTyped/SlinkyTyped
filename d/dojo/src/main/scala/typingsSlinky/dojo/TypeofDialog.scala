@@ -2,7 +2,7 @@ package typingsSlinky.dojo
 
 import org.scalablytyped.runtime.Instantiable2
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.dijit.Dialog._DialogBase
+import typingsSlinky.dojo.dijit.Dialog.DialogBase
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,7 +18,7 @@ trait TypeofDialog extends js.Object {
   var _DialogBase: Instantiable2[
     js.UndefOr[/* params */ js.Object], 
     js.UndefOr[/* srcNodeRef */ HTMLElement], 
-    typingsSlinky.dojo.dijit.Dialog._DialogBase
+    DialogBase
   ]
 }
 
@@ -28,7 +28,7 @@ object TypeofDialog {
     _DialogBase: Instantiable2[
       js.UndefOr[/* params */ js.Object], 
       js.UndefOr[/* srcNodeRef */ HTMLElement], 
-      _DialogBase
+      DialogBase
     ]
   ): TypeofDialog = {
     val __obj = js.Dynamic.literal(_DialogBase = _DialogBase.asInstanceOf[js.Any])

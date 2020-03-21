@@ -1,8 +1,8 @@
 package typingsSlinky.tooltipster.JQueryTooltipster
 
 import org.scalablytyped.runtime.StringDictionary
-import typingsSlinky.tooltipster.Anon_Click
-import typingsSlinky.tooltipster.Anon_ClickMouseenter
+import typingsSlinky.tooltipster.AnonClick
+import typingsSlinky.tooltipster.AnonMouseenter
 import typingsSlinky.tooltipster.JQuery
 import typingsSlinky.tooltipster.tooltipsterStrings.current
 import typingsSlinky.tooltipster.tooltipsterStrings.fade
@@ -234,13 +234,13 @@ trait ITooltipsterOptions
   		 * allows you to reactivate the triggers of your choice to create a customized behavior. Only applies 
   		 * if 'trigger' is set to 'custom'. See http://iamceege.github.io/tooltipster/#triggers.
   		 */
-  var triggerClose: js.UndefOr[Anon_Click] = js.undefined
+  var triggerClose: js.UndefOr[AnonClick] = js.undefined
   /**
   		 * When 'trigger' is set to 'custom', all built-in open triggers are disabled by default. This option 
   		 * allows you to reactivate the triggers of your choice to create a customized behavior. Only applies 
   		 * if 'trigger' is set to 'custom'. See http://iamceege.github.io/tooltipster/#triggers.
   		 */
-  var triggerOpen: js.UndefOr[Anon_ClickMouseenter] = js.undefined
+  var triggerOpen: js.UndefOr[AnonMouseenter] = js.undefined
   /**
   		 * Plays a subtle animation when the content of the tooltip is updated (if the tooltip is open). You 
   		 * may create custom animations in your CSS files. Set to null to disable the animation. 
@@ -302,8 +302,8 @@ object ITooltipsterOptions {
     trackTooltip: js.UndefOr[Boolean] = js.undefined,
     trackerInterval: Int | Double = null,
     trigger: String = null,
-    triggerClose: Anon_Click = null,
-    triggerOpen: Anon_ClickMouseenter = null,
+    triggerClose: AnonClick = null,
+    triggerOpen: AnonMouseenter = null,
     updateAnimation: fade | rotate | scale = null,
     viewportAware: js.UndefOr[Boolean] = js.undefined,
     zIndex: Int | Double = null

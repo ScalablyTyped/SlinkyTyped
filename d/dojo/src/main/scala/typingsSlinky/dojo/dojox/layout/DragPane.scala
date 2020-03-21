@@ -1,8 +1,8 @@
 package typingsSlinky.dojo.dojox.layout
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
-import typingsSlinky.dojo.dijit._Widget
+import typingsSlinky.dojo.AnonUnwatch
+import typingsSlinky.dojo.dijit.Widget
 import typingsSlinky.dojo.dojoStrings.invert
 import typingsSlinky.dojo.dojoStrings.style
 import scala.scalajs.js
@@ -22,7 +22,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dojox.layout.DragPane")
 @js.native
-class DragPane () extends _Widget {
+class DragPane () extends Widget {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -53,6 +53,6 @@ class DragPane () extends _Widget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

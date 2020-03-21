@@ -1,0 +1,30 @@
+package typingsSlinky.awsSdkClientKmsNode.typesUnsupportedOperationExceptionMod
+
+import typingsSlinky.awsSdkClientKmsNode.createKeyExceptionsUnionMod.CreateKeyExceptionsUnion
+import typingsSlinky.awsSdkClientKmsNode.deleteImportedKeyMaterialExceptionsUnionMod.DeleteImportedKeyMaterialExceptionsUnion
+import typingsSlinky.awsSdkClientKmsNode.disableKeyRotationExceptionsUnionMod.DisableKeyRotationExceptionsUnion
+import typingsSlinky.awsSdkClientKmsNode.enableKeyRotationExceptionsUnionMod.EnableKeyRotationExceptionsUnion
+import typingsSlinky.awsSdkClientKmsNode.getKeyRotationStatusExceptionsUnionMod.GetKeyRotationStatusExceptionsUnion
+import typingsSlinky.awsSdkClientKmsNode.getParametersForImportExceptionsUnionMod.GetParametersForImportExceptionsUnion
+import typingsSlinky.awsSdkClientKmsNode.importKeyMaterialExceptionsUnionMod.ImportKeyMaterialExceptionsUnion
+import typingsSlinky.awsSdkClientKmsNode.putKeyPolicyExceptionsUnionMod.PutKeyPolicyExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait UnsupportedOperationException
+  extends ServiceException[UnsupportedOperationExceptionDetails]
+     with CreateKeyExceptionsUnion
+     with DeleteImportedKeyMaterialExceptionsUnion
+     with DisableKeyRotationExceptionsUnion
+     with EnableKeyRotationExceptionsUnion
+     with GetKeyRotationStatusExceptionsUnion
+     with GetParametersForImportExceptionsUnion
+     with ImportKeyMaterialExceptionsUnion
+     with PutKeyPolicyExceptionsUnion {
+  @JSName("name")
+  var name_UnsupportedOperationException: typingsSlinky.awsSdkClientKmsNode.awsSdkClientKmsNodeStrings.UnsupportedOperationException = js.native
+}
+

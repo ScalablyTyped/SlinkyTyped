@@ -1,7 +1,7 @@
 package typingsSlinky.w2ui
 
 import org.scalablytyped.runtime.TopLevel
-import typingsSlinky.w2ui.W2UI.W2Popup
+import typingsSlinky.w2ui.W2UI_.W2Popup
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,6 +1,6 @@
 package typingsSlinky.dbus
 
-import typingsSlinky.dbus.dbusMod.busType
+import typingsSlinky.dbus.mod.busType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

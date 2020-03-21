@@ -11,11 +11,11 @@ import scala.scalajs.js.annotation._
 
 /* cl_platforinfo */
 /* Rewritten from type alias, can be one of: 
-  - typings.webcl.webclNumbers.`0x0900`
-  - typings.webcl.webclNumbers.`0x0901`
-  - typings.webcl.webclNumbers.`0x0902`
-  - typings.webcl.webclNumbers.`0x0903`
-  - typings.webcl.webclNumbers.`0x0904`
+  - typingsSlinky.webcl.webclNumbers.`0x0900`
+  - typingsSlinky.webcl.webclNumbers.`0x0901`
+  - typingsSlinky.webcl.webclNumbers.`0x0902`
+  - typingsSlinky.webcl.webclNumbers.`0x0903`
+  - typingsSlinky.webcl.webclNumbers.`0x0904`
 */
 trait PlatformInfo extends js.Object
 

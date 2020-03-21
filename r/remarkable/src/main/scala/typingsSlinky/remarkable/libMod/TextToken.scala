@@ -6,7 +6,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.remarkable.libMod._Token because Already inherited */ trait TextToken extends TagToken {
+- typingsSlinky.remarkable.libMod._Token because Already inherited */ trait TextToken extends TagToken {
   var content: js.UndefOr[String] = js.undefined
   @JSName("type")
   var type_TextToken: text

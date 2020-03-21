@@ -1,8 +1,8 @@
 package typingsSlinky.dhtmlxscheduler
 
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.HTMLElement
 import typingsSlinky.std.Date
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -282,7 +282,7 @@ trait SchedulerStatic extends js.Object {
   	 * returns the current cursor-pointed date and section (if defined)
   	 * @param e a native event object
   	*/
-  def getActionData(e: Event): js.Any = js.native
+  def getActionData(e: Event_): js.Any = js.native
   /**
   	 * returns the event object by its id
   	 * @param event_id the  event's id

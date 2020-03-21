@@ -1,0 +1,454 @@
+package typingsSlinky.awsSdk
+
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+package object glueMod {
+  type ActionList = js.Array[typingsSlinky.awsSdk.glueMod.Action]
+  type AttemptCount = scala.Double
+  type BatchDeletePartitionValueList = js.Array[typingsSlinky.awsSdk.glueMod.PartitionValueList]
+  type BatchDeleteTableNameList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type BatchDeleteTableVersionList = js.Array[typingsSlinky.awsSdk.glueMod.VersionString]
+  type BatchGetPartitionValueList = js.Array[typingsSlinky.awsSdk.glueMod.PartitionValueList]
+  type BatchStopJobRunErrorList = js.Array[typingsSlinky.awsSdk.glueMod.BatchStopJobRunError]
+  type BatchStopJobRunJobRunIdList = js.Array[typingsSlinky.awsSdk.glueMod.IdString]
+  type BatchStopJobRunSuccessfulSubmissionList = js.Array[typingsSlinky.awsSdk.glueMod.BatchStopJobRunSuccessfulSubmission]
+  type Boolean = scala.Boolean
+  type BooleanNullable = scala.Boolean
+  type BooleanValue = scala.Boolean
+  type BoundedPartitionValueList = js.Array[typingsSlinky.awsSdk.glueMod.ValueString]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.`SSE-KMS`
+    - java.lang.String
+  */
+  type CatalogEncryptionMode = typingsSlinky.awsSdk.glueMod._CatalogEncryptionMode | java.lang.String
+  type CatalogEntries = js.Array[typingsSlinky.awsSdk.glueMod.CatalogEntry]
+  type CatalogIdString = java.lang.String
+  type CatalogTablesList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type CatalogTargetList = js.Array[typingsSlinky.awsSdk.glueMod.CatalogTarget]
+  type Classification = java.lang.String
+  type ClassifierList = js.Array[typingsSlinky.awsSdk.glueMod.Classifier]
+  type ClassifierNameList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type ClientConfiguration = typingsSlinky.awsSdk.serviceMod.ServiceConfigurationOptions with typingsSlinky.awsSdk.glueMod.ClientApiVersions
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.`SSE-KMS`
+    - java.lang.String
+  */
+  type CloudWatchEncryptionMode = typingsSlinky.awsSdk.glueMod._CloudWatchEncryptionMode | java.lang.String
+  type CodeGenArgName = java.lang.String
+  type CodeGenArgValue = java.lang.String
+  type CodeGenIdentifier = java.lang.String
+  type CodeGenNodeArgs = js.Array[typingsSlinky.awsSdk.glueMod.CodeGenNodeArg]
+  type CodeGenNodeType = java.lang.String
+  type ColumnList = js.Array[typingsSlinky.awsSdk.glueMod.Column]
+  type ColumnNameString = java.lang.String
+  type ColumnTypeString = java.lang.String
+  type ColumnValueStringList = js.Array[typingsSlinky.awsSdk.glueMod.ColumnValuesString]
+  type ColumnValuesString = java.lang.String
+  type CommentString = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.EQUALS
+    - typingsSlinky.awsSdk.awsSdkStrings.GREATER_THAN
+    - typingsSlinky.awsSdk.awsSdkStrings.LESS_THAN
+    - typingsSlinky.awsSdk.awsSdkStrings.GREATER_THAN_EQUALS
+    - typingsSlinky.awsSdk.awsSdkStrings.LESS_THAN_EQUALS
+    - java.lang.String
+  */
+  type Comparator = typingsSlinky.awsSdk.glueMod._Comparator | java.lang.String
+  type ConditionList = js.Array[typingsSlinky.awsSdk.glueMod.Condition]
+  type ConnectionList = js.Array[typingsSlinky.awsSdk.glueMod.Connection]
+  type ConnectionName = java.lang.String
+  type ConnectionProperties = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.ValueString]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.HOST
+    - typingsSlinky.awsSdk.awsSdkStrings.PORT
+    - typingsSlinky.awsSdk.awsSdkStrings.USERNAME
+    - typingsSlinky.awsSdk.awsSdkStrings.PASSWORD
+    - typingsSlinky.awsSdk.awsSdkStrings.ENCRYPTED_PASSWORD
+    - typingsSlinky.awsSdk.awsSdkStrings.JDBC_DRIVER_JAR_URI
+    - typingsSlinky.awsSdk.awsSdkStrings.JDBC_DRIVER_CLASS_NAME
+    - typingsSlinky.awsSdk.awsSdkStrings.JDBC_ENGINE
+    - typingsSlinky.awsSdk.awsSdkStrings.JDBC_ENGINE_VERSION
+    - typingsSlinky.awsSdk.awsSdkStrings.CONFIG_FILES
+    - typingsSlinky.awsSdk.awsSdkStrings.INSTANCE_ID
+    - typingsSlinky.awsSdk.awsSdkStrings.JDBC_CONNECTION_URL
+    - typingsSlinky.awsSdk.awsSdkStrings.JDBC_ENFORCE_SSL
+    - typingsSlinky.awsSdk.awsSdkStrings.CUSTOM_JDBC_CERT
+    - typingsSlinky.awsSdk.awsSdkStrings.SKIP_CUSTOM_JDBC_CERT_VALIDATION
+    - typingsSlinky.awsSdk.awsSdkStrings.CUSTOM_JDBC_CERT_STRING
+    - java.lang.String
+  */
+  type ConnectionPropertyKey = typingsSlinky.awsSdk.glueMod._ConnectionPropertyKey | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.JDBC
+    - typingsSlinky.awsSdk.awsSdkStrings.SFTP
+    - java.lang.String
+  */
+  type ConnectionType = typingsSlinky.awsSdk.glueMod._ConnectionType | java.lang.String
+  type CrawlList = js.Array[typingsSlinky.awsSdk.glueMod.Crawl]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
+    - typingsSlinky.awsSdk.awsSdkStrings.SUCCEEDED
+    - typingsSlinky.awsSdk.awsSdkStrings.CANCELLED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - java.lang.String
+  */
+  type CrawlState = typingsSlinky.awsSdk.glueMod._CrawlState | java.lang.String
+  type CrawlerConfiguration = java.lang.String
+  type CrawlerList = js.Array[typingsSlinky.awsSdk.glueMod.Crawler]
+  type CrawlerMetricsList = js.Array[typingsSlinky.awsSdk.glueMod.CrawlerMetrics]
+  type CrawlerNameList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type CrawlerSecurityConfiguration = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.READY
+    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
+    - typingsSlinky.awsSdk.awsSdkStrings.STOPPING
+    - java.lang.String
+  */
+  type CrawlerState = typingsSlinky.awsSdk.glueMod._CrawlerState | java.lang.String
+  type CronExpression = java.lang.String
+  type CsvColumnDelimiter = java.lang.String
+  type CsvHeader = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.UNKNOWN
+    - typingsSlinky.awsSdk.awsSdkStrings.PRESENT
+    - typingsSlinky.awsSdk.awsSdkStrings.ABSENT
+    - java.lang.String
+  */
+  type CsvHeaderOption = typingsSlinky.awsSdk.glueMod._CsvHeaderOption | java.lang.String
+  type CsvQuoteSymbol = java.lang.String
+  type CustomPatterns = java.lang.String
+  type DagEdges = js.Array[typingsSlinky.awsSdk.glueMod.CodeGenEdge]
+  type DagNodes = js.Array[typingsSlinky.awsSdk.glueMod.CodeGenNode]
+  type DataLakePrincipalString = java.lang.String
+  type DatabaseList = js.Array[typingsSlinky.awsSdk.glueMod.Database]
+  type DatabaseName = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.LOG
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE_FROM_DATABASE
+    - typingsSlinky.awsSdk.awsSdkStrings.DEPRECATE_IN_DATABASE
+    - java.lang.String
+  */
+  type DeleteBehavior = typingsSlinky.awsSdk.glueMod._DeleteBehavior | java.lang.String
+  type DeleteConnectionNameList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type DescriptionString = java.lang.String
+  type DescriptionStringRemovable = java.lang.String
+  type DevEndpointList = js.Array[typingsSlinky.awsSdk.glueMod.DevEndpoint]
+  type DevEndpointNameList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type DevEndpointNames = js.Array[typingsSlinky.awsSdk.glueMod.GenericString]
+  type DynamoDBTargetList = js.Array[typingsSlinky.awsSdk.glueMod.DynamoDBTarget]
+  type EdgeList = js.Array[typingsSlinky.awsSdk.glueMod.Edge]
+  type ErrorByName = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.ErrorDetail]
+  type ErrorString = java.lang.String
+  type ExecutionTime = scala.Double
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.MUST_EXIST
+    - typingsSlinky.awsSdk.awsSdkStrings.NOT_EXIST
+    - typingsSlinky.awsSdk.awsSdkStrings.NONE
+    - java.lang.String
+  */
+  type ExistCondition = typingsSlinky.awsSdk.glueMod._ExistCondition | java.lang.String
+  type FieldType = java.lang.String
+  type FilterString = java.lang.String
+  type FormatString = java.lang.String
+  type GenericBoundedDouble = scala.Double
+  type GenericMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.GenericString]
+  type GenericString = java.lang.String
+  type GetTableVersionsList = js.Array[typingsSlinky.awsSdk.glueMod.TableVersion]
+  type GlueResourceArn = java.lang.String
+  type GlueTables = js.Array[typingsSlinky.awsSdk.glueMod.GlueTable]
+  type GlueVersionString = java.lang.String
+  type GrokPattern = java.lang.String
+  type HashString = java.lang.String
+  type IdString = java.lang.String
+  type Integer = scala.Double
+  type IntegerFlag = scala.Double
+  type IntegerValue = scala.Double
+  type JdbcTargetList = js.Array[typingsSlinky.awsSdk.glueMod.JdbcTarget]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.`CSE-KMS`
+    - java.lang.String
+  */
+  type JobBookmarksEncryptionMode = typingsSlinky.awsSdk.glueMod._JobBookmarksEncryptionMode | java.lang.String
+  type JobList = js.Array[typingsSlinky.awsSdk.glueMod.Job]
+  type JobName = java.lang.String
+  type JobNameList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type JobRunList = js.Array[typingsSlinky.awsSdk.glueMod.JobRun]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.STARTING
+    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
+    - typingsSlinky.awsSdk.awsSdkStrings.STOPPING
+    - typingsSlinky.awsSdk.awsSdkStrings.STOPPED
+    - typingsSlinky.awsSdk.awsSdkStrings.SUCCEEDED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.TIMEOUT
+    - java.lang.String
+  */
+  type JobRunState = typingsSlinky.awsSdk.glueMod._JobRunState | java.lang.String
+  type JsonPath = java.lang.String
+  type JsonValue = java.lang.String
+  type KeyString = java.lang.String
+  type KmsKeyArn = java.lang.String
+  type LabelCount = scala.Double
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.PYTHON
+    - typingsSlinky.awsSdk.awsSdkStrings.SCALA
+    - java.lang.String
+  */
+  type Language = typingsSlinky.awsSdk.glueMod._Language | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SUCCEEDED
+    - typingsSlinky.awsSdk.awsSdkStrings.CANCELLED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - java.lang.String
+  */
+  type LastCrawlStatus = typingsSlinky.awsSdk.glueMod._LastCrawlStatus | java.lang.String
+  type LocationMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.ColumnValuesString]
+  type LocationString = java.lang.String
+  type LogGroup = java.lang.String
+  type LogStream = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.AND
+    - typingsSlinky.awsSdk.awsSdkStrings.ANY
+    - java.lang.String
+  */
+  type Logical = typingsSlinky.awsSdk.glueMod._Logical | java.lang.String
+  type LogicalOperator = typingsSlinky.awsSdk.awsSdkStrings.EQUALS | java.lang.String
+  type MapValue = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.GenericString]
+  type MappingList = js.Array[typingsSlinky.awsSdk.glueMod.MappingEntry]
+  type MatchCriteria = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type MaxConcurrentRuns = scala.Double
+  type MaxRetries = scala.Double
+  type MessagePrefix = java.lang.String
+  type MillisecondsCount = scala.Double
+  type NameString = java.lang.String
+  type NameStringList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type NodeList = js.Array[typingsSlinky.awsSdk.glueMod.Node]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CRAWLER
+    - typingsSlinky.awsSdk.awsSdkStrings.JOB
+    - typingsSlinky.awsSdk.awsSdkStrings.TRIGGER
+    - java.lang.String
+  */
+  type NodeType = typingsSlinky.awsSdk.glueMod._NodeType | java.lang.String
+  type NonNegativeDouble = scala.Double
+  type NonNegativeInteger = scala.Double
+  type NotifyDelayAfter = scala.Double
+  type NullableBoolean = scala.Boolean
+  type NullableDouble = scala.Double
+  type NullableInteger = scala.Double
+  type OrchestrationStringList = js.Array[typingsSlinky.awsSdk.glueMod.GenericString]
+  type OrderList = js.Array[typingsSlinky.awsSdk.glueMod.Order]
+  type PageSize = scala.Double
+  type PaginationToken = java.lang.String
+  type ParametersMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.ParametersMapValue]
+  type ParametersMapValue = java.lang.String
+  type PartitionErrors = js.Array[typingsSlinky.awsSdk.glueMod.PartitionError]
+  type PartitionInputList = js.Array[typingsSlinky.awsSdk.glueMod.PartitionInput]
+  type PartitionList = js.Array[typingsSlinky.awsSdk.glueMod.Partition]
+  type Path = java.lang.String
+  type PathList = js.Array[typingsSlinky.awsSdk.glueMod.Path]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ALL
+    - typingsSlinky.awsSdk.awsSdkStrings.SELECT
+    - typingsSlinky.awsSdk.awsSdkStrings.ALTER
+    - typingsSlinky.awsSdk.awsSdkStrings.DROP
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETE
+    - typingsSlinky.awsSdk.awsSdkStrings.INSERT
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATE_DATABASE
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATE_TABLE
+    - typingsSlinky.awsSdk.awsSdkStrings.DATA_LOCATION_ACCESS
+    - java.lang.String
+  */
+  type Permission = typingsSlinky.awsSdk.glueMod._Permission | java.lang.String
+  type PermissionList = js.Array[typingsSlinky.awsSdk.glueMod.Permission]
+  type PolicyJsonString = java.lang.String
+  type PredecessorList = js.Array[typingsSlinky.awsSdk.glueMod.Predecessor]
+  type PredicateString = java.lang.String
+  type PrincipalPermissionsList = js.Array[typingsSlinky.awsSdk.glueMod.PrincipalPermissions]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.USER
+    - typingsSlinky.awsSdk.awsSdkStrings.ROLE
+    - typingsSlinky.awsSdk.awsSdkStrings.GROUP
+    - java.lang.String
+  */
+  type PrincipalType = typingsSlinky.awsSdk.glueMod._PrincipalType | java.lang.String
+  type PublicKeysList = js.Array[typingsSlinky.awsSdk.glueMod.GenericString]
+  type PythonScript = java.lang.String
+  type PythonVersionString = java.lang.String
+  type RecordsCount = scala.Double
+  type ReplaceBoolean = scala.Boolean
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.JAR
+    - typingsSlinky.awsSdk.awsSdkStrings.FILE
+    - typingsSlinky.awsSdk.awsSdkStrings.ARCHIVE
+    - java.lang.String
+  */
+  type ResourceType = typingsSlinky.awsSdk.glueMod._ResourceType | java.lang.String
+  type ResourceUriList = js.Array[typingsSlinky.awsSdk.glueMod.ResourceUri]
+  type Role = java.lang.String
+  type RoleArn = java.lang.String
+  type RoleString = java.lang.String
+  type RowTag = java.lang.String
+  type RunId = java.lang.String
+  type S3EncryptionList = js.Array[typingsSlinky.awsSdk.glueMod.S3Encryption]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DISABLED
+    - typingsSlinky.awsSdk.awsSdkStrings.`SSE-KMS`
+    - typingsSlinky.awsSdk.awsSdkStrings.`SSE-S3`
+    - java.lang.String
+  */
+  type S3EncryptionMode = typingsSlinky.awsSdk.glueMod._S3EncryptionMode | java.lang.String
+  type S3TargetList = js.Array[typingsSlinky.awsSdk.glueMod.S3Target]
+  type ScalaCode = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SCHEDULED
+    - typingsSlinky.awsSdk.awsSdkStrings.NOT_SCHEDULED
+    - typingsSlinky.awsSdk.awsSdkStrings.TRANSITIONING
+    - java.lang.String
+  */
+  type ScheduleState = typingsSlinky.awsSdk.glueMod._ScheduleState | java.lang.String
+  type SchemaPathString = java.lang.String
+  type ScriptLocationString = java.lang.String
+  type SearchPropertyPredicates = js.Array[typingsSlinky.awsSdk.glueMod.PropertyPredicate]
+  type SecurityConfigurationList = js.Array[typingsSlinky.awsSdk.glueMod.SecurityConfiguration]
+  type SecurityGroupIdList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.ASC
+    - typingsSlinky.awsSdk.awsSdkStrings.DESC
+    - java.lang.String
+  */
+  type Sort = typingsSlinky.awsSdk.glueMod._Sort | java.lang.String
+  type SortCriteria = js.Array[typingsSlinky.awsSdk.glueMod.SortCriterion]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.DESCENDING
+    - typingsSlinky.awsSdk.awsSdkStrings.ASCENDING
+    - java.lang.String
+  */
+  type SortDirectionType = typingsSlinky.awsSdk.glueMod._SortDirectionType | java.lang.String
+  type StringList = js.Array[typingsSlinky.awsSdk.glueMod.GenericString]
+  type TableErrors = js.Array[typingsSlinky.awsSdk.glueMod.TableError]
+  type TableList = js.Array[typingsSlinky.awsSdk.glueMod.Table]
+  type TableName = java.lang.String
+  type TablePrefix = java.lang.String
+  type TableTypeString = java.lang.String
+  type TableVersionErrors = js.Array[typingsSlinky.awsSdk.glueMod.TableVersionError]
+  type TagKey = java.lang.String
+  type TagKeysList = js.Array[typingsSlinky.awsSdk.glueMod.TagKey]
+  type TagValue = java.lang.String
+  type TagsMap = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.TagValue]
+  type TaskRunList = js.Array[typingsSlinky.awsSdk.glueMod.TaskRun]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.TASK_RUN_TYPE
+    - typingsSlinky.awsSdk.awsSdkStrings.STATUS
+    - typingsSlinky.awsSdk.awsSdkStrings.STARTED
+    - java.lang.String
+  */
+  type TaskRunSortColumnType = typingsSlinky.awsSdk.glueMod._TaskRunSortColumnType | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.STARTING
+    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
+    - typingsSlinky.awsSdk.awsSdkStrings.STOPPING
+    - typingsSlinky.awsSdk.awsSdkStrings.STOPPED
+    - typingsSlinky.awsSdk.awsSdkStrings.SUCCEEDED
+    - typingsSlinky.awsSdk.awsSdkStrings.FAILED
+    - typingsSlinky.awsSdk.awsSdkStrings.TIMEOUT
+    - java.lang.String
+  */
+  type TaskStatusType = typingsSlinky.awsSdk.glueMod._TaskStatusType | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.EVALUATION
+    - typingsSlinky.awsSdk.awsSdkStrings.LABELING_SET_GENERATION
+    - typingsSlinky.awsSdk.awsSdkStrings.IMPORT_LABELS
+    - typingsSlinky.awsSdk.awsSdkStrings.EXPORT_LABELS
+    - typingsSlinky.awsSdk.awsSdkStrings.FIND_MATCHES
+    - java.lang.String
+  */
+  type TaskType = typingsSlinky.awsSdk.glueMod._TaskType | java.lang.String
+  type Timeout = scala.Double
+  type Timestamp = js.Date
+  type TimestampValue = js.Date
+  type Token = java.lang.String
+  type TotalSegmentsInteger = scala.Double
+  type TransformList = js.Array[typingsSlinky.awsSdk.glueMod.MLTransform]
+  type TransformSchema = js.Array[typingsSlinky.awsSdk.glueMod.SchemaColumn]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NAME
+    - typingsSlinky.awsSdk.awsSdkStrings.TRANSFORM_TYPE
+    - typingsSlinky.awsSdk.awsSdkStrings.STATUS
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATED
+    - typingsSlinky.awsSdk.awsSdkStrings.LAST_MODIFIED
+    - java.lang.String
+  */
+  type TransformSortColumnType = typingsSlinky.awsSdk.glueMod._TransformSortColumnType | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.NOT_READY
+    - typingsSlinky.awsSdk.awsSdkStrings.READY
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - java.lang.String
+  */
+  type TransformStatusType = typingsSlinky.awsSdk.glueMod._TransformStatusType | java.lang.String
+  type TransformType = typingsSlinky.awsSdk.awsSdkStrings.FIND_MATCHES | java.lang.String
+  type TriggerList = js.Array[typingsSlinky.awsSdk.glueMod.Trigger]
+  type TriggerNameList = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATING
+    - typingsSlinky.awsSdk.awsSdkStrings.CREATED
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVATING
+    - typingsSlinky.awsSdk.awsSdkStrings.ACTIVATED
+    - typingsSlinky.awsSdk.awsSdkStrings.DEACTIVATING
+    - typingsSlinky.awsSdk.awsSdkStrings.DEACTIVATED
+    - typingsSlinky.awsSdk.awsSdkStrings.DELETING
+    - typingsSlinky.awsSdk.awsSdkStrings.UPDATING
+    - java.lang.String
+  */
+  type TriggerState = typingsSlinky.awsSdk.glueMod._TriggerState | java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.SCHEDULED
+    - typingsSlinky.awsSdk.awsSdkStrings.CONDITIONAL
+    - typingsSlinky.awsSdk.awsSdkStrings.ON_DEMAND
+    - java.lang.String
+  */
+  type TriggerType = typingsSlinky.awsSdk.glueMod._TriggerType | java.lang.String
+  type URI = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.LOG
+    - typingsSlinky.awsSdk.awsSdkStrings.UPDATE_IN_DATABASE
+    - java.lang.String
+  */
+  type UpdateBehavior = typingsSlinky.awsSdk.glueMod._UpdateBehavior | java.lang.String
+  type UriString = java.lang.String
+  type UserDefinedFunctionList = js.Array[typingsSlinky.awsSdk.glueMod.UserDefinedFunction]
+  type ValueString = java.lang.String
+  type ValueStringList = js.Array[typingsSlinky.awsSdk.glueMod.ValueString]
+  type VersionId = scala.Double
+  type VersionString = java.lang.String
+  type ViewTextString = java.lang.String
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.Standard_
+    - typingsSlinky.awsSdk.awsSdkStrings.GDot1X
+    - typingsSlinky.awsSdk.awsSdkStrings.GDot2X
+    - java.lang.String
+  */
+  type WorkerType = typingsSlinky.awsSdk.glueMod._WorkerType | java.lang.String
+  type WorkflowNames = js.Array[typingsSlinky.awsSdk.glueMod.NameString]
+  type WorkflowRunProperties = org.scalablytyped.runtime.StringDictionary[typingsSlinky.awsSdk.glueMod.GenericString]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.RUNNING
+    - typingsSlinky.awsSdk.awsSdkStrings.COMPLETED
+    - java.lang.String
+  */
+  type WorkflowRunStatus = typingsSlinky.awsSdk.glueMod._WorkflowRunStatus | java.lang.String
+  type WorkflowRuns = js.Array[typingsSlinky.awsSdk.glueMod.WorkflowRun]
+  type Workflows = js.Array[typingsSlinky.awsSdk.glueMod.Workflow]
+  /* Rewritten from type alias, can be one of: 
+    - typingsSlinky.awsSdk.awsSdkStrings.`2017-03-31`
+    - typingsSlinky.awsSdk.awsSdkStrings.latest_
+    - java.lang.String
+  */
+  type apiVersion = typingsSlinky.awsSdk.glueMod._apiVersion | java.lang.String
+}

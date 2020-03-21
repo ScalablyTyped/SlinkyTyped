@@ -8,7 +8,7 @@ import scala.scalajs.js.annotation._
   * A map from one set of concepts to one or more other concepts
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.fhir.fhir.Resource because Already inherited */ trait ConceptMap extends DomainResource {
+- typingsSlinky.fhir.fhir.Resource because Already inherited */ trait ConceptMap extends DomainResource {
   /**
     * Contains extended information for property 'copyright'.
     */

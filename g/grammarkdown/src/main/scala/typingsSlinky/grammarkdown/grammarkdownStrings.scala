@@ -1,14 +1,11 @@
 package typingsSlinky.grammarkdown
 
-import typingsSlinky.grammarkdown.distTypedObjectsMod.TypeHint
+import typingsSlinky.grammarkdown.typedObjectsMod.TypeHint
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object grammarkdownStrings {
-  @js.native
-  sealed trait ProseFragmentLiteralTypes extends js.Object
-  
   @js.native
   sealed trait TypedObject extends js.Object
   
@@ -45,8 +42,6 @@ object grammarkdownStrings {
   @js.native
   sealed trait uint8 extends TypeHint
   
-  @scala.inline
-  def ProseFragmentLiteralTypes: ProseFragmentLiteralTypes = "ProseFragmentLiteralTypes".asInstanceOf[ProseFragmentLiteralTypes]
   @scala.inline
   def TypedObject: TypedObject = "TypedObject".asInstanceOf[TypedObject]
   @scala.inline

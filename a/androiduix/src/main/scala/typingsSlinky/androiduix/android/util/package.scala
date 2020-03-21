@@ -5,5 +5,5 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object util {
-  type Pools = Pools_
+  type Pools = typingsSlinky.androiduix.android.util.Pools_
 }

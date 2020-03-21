@@ -11,15 +11,20 @@ object ^ extends js.Object {
   var MSOWebPartPageFormName: String = js.native
   var SPClientRenderer: typingsSlinky.sharepoint.SPClientRenderer = js.native
   var Strings: js.Any = js.native
-  var _spBodyOnLoadCalled: Boolean = js.native
-  var _spBodyOnLoadFunctionNames: js.Array[String] = js.native
-  var _spBodyOnLoadFunctions: js.Array[js.Function0[Unit]] = js.native
-  var _spFriendlyUrlPageContextInfo: typingsSlinky.sharepoint._spFriendlyUrlPageContextInfo = js.native
-  var _spPageContextInfo: typingsSlinky.sharepoint._spPageContextInfo = js.native
-  var ajaxNavigate: AjaxNavigate = js.native
-  var browseris: Browseris = js.native
+  var ajaxNavigate: AjaxNavigate_ = js.native
+  var browseris: Browseris_ = js.native
   @JSName("m$")
-  var m$: MQuery = js.native
-  var spMgr: SPMgr = js.native
+  var m: MQuery = js.native
+  @JSName("_spBodyOnLoadCalled")
+  var spBodyOnLoadCalled: Boolean = js.native
+  @JSName("_spBodyOnLoadFunctionNames")
+  var spBodyOnLoadFunctionNames: js.Array[String] = js.native
+  @JSName("_spBodyOnLoadFunctions")
+  var spBodyOnLoadFunctions: js.Array[js.Function0[Unit]] = js.native
+  @JSName("_spFriendlyUrlPageContextInfo")
+  var spFriendlyUrlPageContextInfo: typingsSlinky.sharepoint.spFriendlyUrlPageContextInfo = js.native
+  var spMgr: SPMgr_ = js.native
+  @JSName("_spPageContextInfo")
+  var spPageContextInfo: typingsSlinky.sharepoint.spPageContextInfo = js.native
 }
 

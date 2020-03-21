@@ -1,7 +1,7 @@
 package typingsSlinky.umbraco.umbraco.resources
 
-import typingsSlinky.angular.angularMod.IPromise
-import typingsSlinky.umbraco.Anon_Filter
+import typingsSlinky.angular.mod.IPromise
+import typingsSlinky.umbraco.AnonFilter
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -193,7 +193,7 @@ trait IContentResource extends js.Object {
     *
     */
   def getChildren(parentId: Double): IPromise[IResourcePromise] = js.native
-  def getChildren(parentId: Double, options: Anon_Filter): IPromise[IResourcePromise] = js.native
+  def getChildren(parentId: Double, options: AnonFilter): IPromise[IResourcePromise] = js.native
   /**
     * @ngdoc method
     * @name umbraco.resources.contentResource#getNiceUrl

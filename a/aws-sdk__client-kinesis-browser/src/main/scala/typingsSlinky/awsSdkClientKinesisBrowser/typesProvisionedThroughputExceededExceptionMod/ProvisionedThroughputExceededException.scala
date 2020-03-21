@@ -1,0 +1,22 @@
+package typingsSlinky.awsSdkClientKinesisBrowser.typesProvisionedThroughputExceededExceptionMod
+
+import typingsSlinky.awsSdkClientKinesisBrowser.getRecordsExceptionsUnionMod.GetRecordsExceptionsUnion
+import typingsSlinky.awsSdkClientKinesisBrowser.getShardIteratorExceptionsUnionMod.GetShardIteratorExceptionsUnion
+import typingsSlinky.awsSdkClientKinesisBrowser.putRecordExceptionsUnionMod.PutRecordExceptionsUnion
+import typingsSlinky.awsSdkClientKinesisBrowser.putRecordsExceptionsUnionMod.PutRecordsExceptionsUnion
+import typingsSlinky.awsSdkTypes.exceptionMod.ServiceException
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@js.native
+trait ProvisionedThroughputExceededException
+  extends ServiceException[ProvisionedThroughputExceededExceptionDetails]
+     with GetRecordsExceptionsUnion
+     with GetShardIteratorExceptionsUnion
+     with PutRecordExceptionsUnion
+     with PutRecordsExceptionsUnion {
+  @JSName("name")
+  var name_ProvisionedThroughputExceededException: typingsSlinky.awsSdkClientKinesisBrowser.awsSdkClientKinesisBrowserStrings.ProvisionedThroughputExceededException = js.native
+}
+

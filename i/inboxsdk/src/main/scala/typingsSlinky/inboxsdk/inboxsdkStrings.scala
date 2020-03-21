@@ -1,10 +1,10 @@
 package typingsSlinky.inboxsdk
 
-import typingsSlinky.inboxsdk.inboxsdkMod.Conversations.MessageViewViewStates
-import typingsSlinky.inboxsdk.inboxsdkMod.NavMenu.NavItemTypes
-import typingsSlinky.inboxsdk.inboxsdkMod.Router.RouteTypes
-import typingsSlinky.inboxsdk.inboxsdkMod.Toolbars.SectionNames
-import typingsSlinky.inboxsdk.inboxsdkMod.Toolbars.ToolbarButtonPosition
+import typingsSlinky.inboxsdk.mod.Conversations.MessageViewViewStates
+import typingsSlinky.inboxsdk.mod.NavMenu.NavItemTypes
+import typingsSlinky.inboxsdk.mod.Router.RouteTypes
+import typingsSlinky.inboxsdk.mod.Toolbars.SectionNames
+import typingsSlinky.inboxsdk.mod.Toolbars.ToolbarButtonPosition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -9,9 +9,9 @@ Typings are for version 0.1.0-preview.2
 | ------------------ | :-------------: |
 | Full name          | @aws-sdk/eventstream-marshaller |
 | Keywords           | - |
-| # releases         | 11 |
+| # releases         | 13 |
 | # dependents       | 1 |
-| # downloads        | 900016 |
+| # downloads        | 970922 |
 | # stars            | 0 |
 
 ## Links

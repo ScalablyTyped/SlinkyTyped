@@ -15,7 +15,7 @@ import typingsSlinky.baseui.baseuiStrings.rightTop
 import typingsSlinky.baseui.baseuiStrings.top
 import typingsSlinky.baseui.baseuiStrings.topLeft
 import typingsSlinky.baseui.baseuiStrings.topRight
-import typingsSlinky.react.reactMod.Ref
+import typingsSlinky.react.mod.Ref
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

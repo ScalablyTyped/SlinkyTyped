@@ -1,14 +1,13 @@
 package typingsSlinky.nodegit.treeMod
 
-import typingsSlinky.node.NodeJS.EventEmitter
-import typingsSlinky.nodegit.Anon_Start
-import typingsSlinky.nodegit.diffDashFileMod.DiffFile
+import typingsSlinky.nodegit.EventEmitterstartvoid
+import typingsSlinky.nodegit.diffFileMod.DiffFile
 import typingsSlinky.nodegit.objectMod.Object
 import typingsSlinky.nodegit.oidMod.Oid
 import typingsSlinky.nodegit.repositoryMod.Repository
-import typingsSlinky.nodegit.treeDashBuilderMod.Treebuilder
-import typingsSlinky.nodegit.treeDashEntryMod.TreeEntry
-import typingsSlinky.nodegit.treeDashUpdateMod.TreeUpdate
+import typingsSlinky.nodegit.treeBuilderMod.Treebuilder
+import typingsSlinky.nodegit.treeEntryMod.TreeEntry
+import typingsSlinky.nodegit.treeUpdateMod.TreeUpdate
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -66,7 +65,7 @@ class Tree_ () extends js.Object {
   /**
     * Recursively walk the tree in breadth-first order. Fires an event for each entry.
     */
-  def walk(): EventEmitter with Anon_Start = js.native
-  def walk(blobsOnly: Boolean): EventEmitter with Anon_Start = js.native
+  def walk(): EventEmitterstartvoid = js.native
+  def walk(blobsOnly: Boolean): EventEmitterstartvoid = js.native
 }
 

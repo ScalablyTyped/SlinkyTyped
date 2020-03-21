@@ -1,13 +1,13 @@
 package typingsSlinky.antlr4
 
 import typingsSlinky.antlr4.commonTokenStreamMod.CommonTokenStream
-import typingsSlinky.antlr4.errorErrorStrategyMod.ErrorStrategy
+import typingsSlinky.antlr4.errorStrategyMod.ErrorStrategy
 import typingsSlinky.antlr4.inputStreamMod.InputStream
 import typingsSlinky.antlr4.lexerMod.Lexer
 import typingsSlinky.antlr4.parserRuleContextMod.ParserRuleContext
 import typingsSlinky.antlr4.recognizerMod.Recognizer
 import typingsSlinky.antlr4.tokenMod.Token
-import typingsSlinky.antlr4.treeTreeMod.ParseTreeListener
+import typingsSlinky.antlr4.treeMod.ParseTreeListener
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -10,9 +10,9 @@ Tools for building completely customizable richtext editors with React.
 | ------------------ | :-------------: |
 | Full name          | slate-react |
 | Keywords           | canvas, contenteditable, docs, document, edit, editor, editable, html, immutable, markdown, medium, paper, react, rich, richtext, richtext, slate, text, wysiwyg, wysiwym |
-| # releases         | 148 |
-| # dependents       | 171 |
-| # downloads        | 3713078 |
+| # releases         | 147 |
+| # dependents       | 174 |
+| # downloads        | 3843087 |
 | # stars            | 1 |
 
 ## Links

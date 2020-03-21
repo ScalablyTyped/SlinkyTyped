@@ -1,15 +1,25 @@
 package typingsSlinky.antd.components
 
 import org.scalablytyped.runtime.StringDictionary
-import org.scalajs.dom.raw.Event
 import org.scalajs.dom.raw.EventTarget
+import org.scalajs.dom.raw.HTMLElement
 import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.SyntheticEvent
 import slinky.core.TagMod
+import slinky.web.SyntheticAnimationEvent
+import slinky.web.SyntheticClipboardEvent
+import slinky.web.SyntheticCompositionEvent
+import slinky.web.SyntheticFocusEvent
+import slinky.web.SyntheticKeyboardEvent
 import slinky.web.SyntheticMouseEvent
+import slinky.web.SyntheticPointerEvent
+import slinky.web.SyntheticTouchEvent
+import slinky.web.SyntheticTransitionEvent
+import slinky.web.SyntheticUIEvent
+import slinky.web.SyntheticWheelEvent
 import slinky.web.html.`*`.tag
-import typingsSlinky.antd.Anon_Delay
+import typingsSlinky.antd.AnonDelay
 import typingsSlinky.antd.antdStrings.`additions text`
 import typingsSlinky.antd.antdStrings.`inline`
 import typingsSlinky.antd.antdStrings.additions
@@ -27,6 +37,7 @@ import typingsSlinky.antd.antdStrings.execute
 import typingsSlinky.antd.antdStrings.grammar
 import typingsSlinky.antd.antdStrings.grid
 import typingsSlinky.antd.antdStrings.horizontal
+import typingsSlinky.antd.antdStrings.inherit
 import typingsSlinky.antd.antdStrings.link
 import typingsSlinky.antd.antdStrings.list
 import typingsSlinky.antd.antdStrings.listbox
@@ -54,13 +65,15 @@ import typingsSlinky.antd.antdStrings.tree
 import typingsSlinky.antd.antdStrings.url
 import typingsSlinky.antd.antdStrings.vertical
 import typingsSlinky.antd.antdStrings.yes
-import typingsSlinky.antd.libButtonButtonMod.ButtonHTMLType
-import typingsSlinky.antd.libButtonButtonMod.ButtonProps
-import typingsSlinky.antd.libButtonButtonMod.ButtonShape
-import typingsSlinky.antd.libButtonButtonMod.ButtonSize
-import typingsSlinky.antd.libButtonButtonMod.ButtonType
-import typingsSlinky.antd.libButtonMod.default
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.antd.buttonButtonMod.ButtonHTMLType
+import typingsSlinky.antd.buttonButtonMod.ButtonProps
+import typingsSlinky.antd.buttonButtonMod.ButtonShape
+import typingsSlinky.antd.buttonButtonMod.ButtonType
+import typingsSlinky.antd.buttonMod.default
+import typingsSlinky.antd.sizeContextMod.SizeType
+import typingsSlinky.react.mod.Booleanish
+import typingsSlinky.react.mod.DragEvent
+import typingsSlinky.std.Event_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -72,7 +85,7 @@ object Button
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: autoFocus, className, contentEditable, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, download, draggable, hidden, href, id, lang, media, name, onAbort, onAnimationEnd, onAnimationIteration, onAnimationStart, onBlur, onCanPlay, onCanPlayThrough, onChange, onClick, onCompositionEnd, onCompositionStart, onCompositionUpdate, onContextMenu, onCopy, onCut, onDoubleClick, onDrag, onDragEnd, onDragEnter, onDragExit, onDragLeave, onDragOver, onDragStart, onDrop, onDurationChange, onEmptied, onEncrypted, onEnded, onError, onFocus, onInput, onInvalid, onKeyDown, onKeyPress, onKeyUp, onLoad, onLoadStart, onLoadedData, onLoadedMetadata, onMouseDown, onMouseEnter, onMouseLeave, onMouseMove, onMouseOut, onMouseOver, onMouseUp, onPaste, onPause, onPlay, onPlaying, onPointerCancel, onPointerDown, onPointerEnter, onPointerLeave, onPointerMove, onPointerOut, onPointerOver, onPointerUp, onProgress, onRateChange, onScroll, onSeeked, onSeeking, onSelect, onStalled, onSubmit, onSuspend, onTimeUpdate, onTouchCancel, onTouchEnd, onTouchMove, onTouchStart, onTransitionEnd, onVolumeChange, onWaiting, onWheel, placeholder, rel, spellCheck, suppressContentEditableWarning, tabIndex, target, value */
+  /* The following DOM/SVG props were specified: autoFocus, className, dangerouslySetInnerHTML, defaultChecked, defaultValue, dir, disabled, download, draggable, form, hidden, href, id, lang, media, name, placeholder, rel, spellCheck, style, suppressContentEditableWarning, tabIndex, target, title, value */
   def apply(
     about: String = null,
     accessKey: String = null,
@@ -129,9 +142,10 @@ object Button
     autoSave: String = null,
     block: js.UndefOr[Boolean] = js.undefined,
     color: String = null,
+    contentEditable: Booleanish | inherit = null,
     contextMenu: String = null,
+    danger: js.UndefOr[Boolean] = js.undefined,
     datatype: String = null,
-    form: String = null,
     formAction: String = null,
     formEncType: String = null,
     formMethod: String = null,
@@ -140,7 +154,7 @@ object Button
     ghost: js.UndefOr[Boolean] = js.undefined,
     hrefLang: String = null,
     htmlType: ButtonHTMLType = null,
-    icon: String = null,
+    icon: TagMod[Any] = null,
     inlist: js.Any = null,
     inputMode: none | text | tel | url | email | numeric | decimal | search = null,
     is: String = null,
@@ -149,10 +163,86 @@ object Button
     itemRef: String = null,
     itemScope: js.UndefOr[Boolean] = js.undefined,
     itemType: String = null,
-    loading: Boolean | Anon_Delay = null,
+    loading: Boolean | AnonDelay = null,
+    onAbort: SyntheticEvent[Event_, _] => Unit = null,
+    onAnimationEnd: SyntheticAnimationEvent[_] => Unit = null,
+    onAnimationIteration: SyntheticAnimationEvent[_] => Unit = null,
+    onAnimationStart: SyntheticAnimationEvent[_] => Unit = null,
     onAuxClick: SyntheticMouseEvent[_] => Unit = null,
-    onBeforeInput: SyntheticEvent[EventTarget, Event] => Unit = null,
-    onReset: SyntheticEvent[EventTarget, Event] => Unit = null,
+    onBeforeInput: SyntheticEvent[EventTarget, Event_] => Unit = null,
+    onBlur: SyntheticFocusEvent[_] => Unit = null,
+    onCanPlay: SyntheticEvent[Event_, _] => Unit = null,
+    onCanPlayThrough: SyntheticEvent[Event_, _] => Unit = null,
+    onChange: SyntheticEvent[EventTarget, Event_] => Unit = null,
+    onClick: SyntheticMouseEvent[HTMLElement] => Unit = null,
+    onCompositionEnd: SyntheticCompositionEvent[_] => Unit = null,
+    onCompositionStart: SyntheticCompositionEvent[_] => Unit = null,
+    onCompositionUpdate: SyntheticCompositionEvent[_] => Unit = null,
+    onContextMenu: SyntheticMouseEvent[_] => Unit = null,
+    onCopy: SyntheticClipboardEvent[_] => Unit = null,
+    onCut: SyntheticClipboardEvent[_] => Unit = null,
+    onDoubleClick: SyntheticMouseEvent[_] => Unit = null,
+    onDrag: DragEvent[_] => Unit = null,
+    onDragEnd: DragEvent[_] => Unit = null,
+    onDragEnter: DragEvent[_] => Unit = null,
+    onDragExit: DragEvent[_] => Unit = null,
+    onDragLeave: DragEvent[_] => Unit = null,
+    onDragOver: DragEvent[_] => Unit = null,
+    onDragStart: DragEvent[_] => Unit = null,
+    onDrop: DragEvent[_] => Unit = null,
+    onDurationChange: SyntheticEvent[Event_, _] => Unit = null,
+    onEmptied: SyntheticEvent[Event_, _] => Unit = null,
+    onEncrypted: SyntheticEvent[Event_, _] => Unit = null,
+    onEnded: SyntheticEvent[Event_, _] => Unit = null,
+    onError: SyntheticEvent[Event_, _] => Unit = null,
+    onFocus: SyntheticFocusEvent[_] => Unit = null,
+    onInput: SyntheticEvent[EventTarget, Event_] => Unit = null,
+    onInvalid: SyntheticEvent[EventTarget, Event_] => Unit = null,
+    onKeyDown: SyntheticKeyboardEvent[_] => Unit = null,
+    onKeyPress: SyntheticKeyboardEvent[_] => Unit = null,
+    onKeyUp: SyntheticKeyboardEvent[_] => Unit = null,
+    onLoad: SyntheticEvent[Event_, _] => Unit = null,
+    onLoadStart: SyntheticEvent[Event_, _] => Unit = null,
+    onLoadedData: SyntheticEvent[Event_, _] => Unit = null,
+    onLoadedMetadata: SyntheticEvent[Event_, _] => Unit = null,
+    onMouseDown: SyntheticMouseEvent[_] => Unit = null,
+    onMouseEnter: SyntheticMouseEvent[_] => Unit = null,
+    onMouseLeave: SyntheticMouseEvent[_] => Unit = null,
+    onMouseMove: SyntheticMouseEvent[_] => Unit = null,
+    onMouseOut: SyntheticMouseEvent[_] => Unit = null,
+    onMouseOver: SyntheticMouseEvent[_] => Unit = null,
+    onMouseUp: SyntheticMouseEvent[_] => Unit = null,
+    onPaste: SyntheticClipboardEvent[_] => Unit = null,
+    onPause: SyntheticEvent[Event_, _] => Unit = null,
+    onPlay: SyntheticEvent[Event_, _] => Unit = null,
+    onPlaying: SyntheticEvent[Event_, _] => Unit = null,
+    onPointerCancel: SyntheticPointerEvent[_] => Unit = null,
+    onPointerDown: SyntheticPointerEvent[_] => Unit = null,
+    onPointerEnter: SyntheticPointerEvent[_] => Unit = null,
+    onPointerLeave: SyntheticPointerEvent[_] => Unit = null,
+    onPointerMove: SyntheticPointerEvent[_] => Unit = null,
+    onPointerOut: SyntheticPointerEvent[_] => Unit = null,
+    onPointerOver: SyntheticPointerEvent[_] => Unit = null,
+    onPointerUp: SyntheticPointerEvent[_] => Unit = null,
+    onProgress: SyntheticEvent[Event_, _] => Unit = null,
+    onRateChange: SyntheticEvent[Event_, _] => Unit = null,
+    onReset: SyntheticEvent[EventTarget, Event_] => Unit = null,
+    onScroll: SyntheticUIEvent[_] => Unit = null,
+    onSeeked: SyntheticEvent[Event_, _] => Unit = null,
+    onSeeking: SyntheticEvent[Event_, _] => Unit = null,
+    onSelect: SyntheticEvent[Event_, _] => Unit = null,
+    onStalled: SyntheticEvent[Event_, _] => Unit = null,
+    onSubmit: SyntheticEvent[EventTarget, Event_] => Unit = null,
+    onSuspend: SyntheticEvent[Event_, _] => Unit = null,
+    onTimeUpdate: SyntheticEvent[Event_, _] => Unit = null,
+    onTouchCancel: SyntheticTouchEvent[_] => Unit = null,
+    onTouchEnd: SyntheticTouchEvent[_] => Unit = null,
+    onTouchMove: SyntheticTouchEvent[_] => Unit = null,
+    onTouchStart: SyntheticTouchEvent[_] => Unit = null,
+    onTransitionEnd: SyntheticTransitionEvent[_] => Unit = null,
+    onVolumeChange: SyntheticEvent[Event_, _] => Unit = null,
+    onWaiting: SyntheticEvent[Event_, _] => Unit = null,
+    onWheel: SyntheticWheelEvent[_] => Unit = null,
     ping: String = null,
     prefix: String = null,
     prefixCls: String = null,
@@ -164,11 +254,9 @@ object Button
     role: String = null,
     security: String = null,
     shape: ButtonShape = null,
-    size: ButtonSize = null,
+    size: SizeType = null,
     slot: String = null,
-    style: CSSProperties = null,
     suppressHydrationWarning: js.UndefOr[Boolean] = js.undefined,
-    title: String = null,
     translate: yes | no = null,
     `type`: ButtonType = null,
     typeof: String = null,
@@ -232,9 +320,10 @@ object Button
     if (autoSave != null) __obj.updateDynamic("autoSave")(autoSave.asInstanceOf[js.Any])
     if (!js.isUndefined(block)) __obj.updateDynamic("block")(block.asInstanceOf[js.Any])
     if (color != null) __obj.updateDynamic("color")(color.asInstanceOf[js.Any])
+    if (contentEditable != null) __obj.updateDynamic("contentEditable")(contentEditable.asInstanceOf[js.Any])
     if (contextMenu != null) __obj.updateDynamic("contextMenu")(contextMenu.asInstanceOf[js.Any])
+    if (!js.isUndefined(danger)) __obj.updateDynamic("danger")(danger.asInstanceOf[js.Any])
     if (datatype != null) __obj.updateDynamic("datatype")(datatype.asInstanceOf[js.Any])
-    if (form != null) __obj.updateDynamic("form")(form.asInstanceOf[js.Any])
     if (formAction != null) __obj.updateDynamic("formAction")(formAction.asInstanceOf[js.Any])
     if (formEncType != null) __obj.updateDynamic("formEncType")(formEncType.asInstanceOf[js.Any])
     if (formMethod != null) __obj.updateDynamic("formMethod")(formMethod.asInstanceOf[js.Any])
@@ -253,9 +342,85 @@ object Button
     if (!js.isUndefined(itemScope)) __obj.updateDynamic("itemScope")(itemScope.asInstanceOf[js.Any])
     if (itemType != null) __obj.updateDynamic("itemType")(itemType.asInstanceOf[js.Any])
     if (loading != null) __obj.updateDynamic("loading")(loading.asInstanceOf[js.Any])
+    if (onAbort != null) __obj.updateDynamic("onAbort")(js.Any.fromFunction1(onAbort))
+    if (onAnimationEnd != null) __obj.updateDynamic("onAnimationEnd")(js.Any.fromFunction1(onAnimationEnd))
+    if (onAnimationIteration != null) __obj.updateDynamic("onAnimationIteration")(js.Any.fromFunction1(onAnimationIteration))
+    if (onAnimationStart != null) __obj.updateDynamic("onAnimationStart")(js.Any.fromFunction1(onAnimationStart))
     if (onAuxClick != null) __obj.updateDynamic("onAuxClick")(js.Any.fromFunction1(onAuxClick))
     if (onBeforeInput != null) __obj.updateDynamic("onBeforeInput")(js.Any.fromFunction1(onBeforeInput))
+    if (onBlur != null) __obj.updateDynamic("onBlur")(js.Any.fromFunction1(onBlur))
+    if (onCanPlay != null) __obj.updateDynamic("onCanPlay")(js.Any.fromFunction1(onCanPlay))
+    if (onCanPlayThrough != null) __obj.updateDynamic("onCanPlayThrough")(js.Any.fromFunction1(onCanPlayThrough))
+    if (onChange != null) __obj.updateDynamic("onChange")(js.Any.fromFunction1(onChange))
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
+    if (onCompositionEnd != null) __obj.updateDynamic("onCompositionEnd")(js.Any.fromFunction1(onCompositionEnd))
+    if (onCompositionStart != null) __obj.updateDynamic("onCompositionStart")(js.Any.fromFunction1(onCompositionStart))
+    if (onCompositionUpdate != null) __obj.updateDynamic("onCompositionUpdate")(js.Any.fromFunction1(onCompositionUpdate))
+    if (onContextMenu != null) __obj.updateDynamic("onContextMenu")(js.Any.fromFunction1(onContextMenu))
+    if (onCopy != null) __obj.updateDynamic("onCopy")(js.Any.fromFunction1(onCopy))
+    if (onCut != null) __obj.updateDynamic("onCut")(js.Any.fromFunction1(onCut))
+    if (onDoubleClick != null) __obj.updateDynamic("onDoubleClick")(js.Any.fromFunction1(onDoubleClick))
+    if (onDrag != null) __obj.updateDynamic("onDrag")(js.Any.fromFunction1(onDrag))
+    if (onDragEnd != null) __obj.updateDynamic("onDragEnd")(js.Any.fromFunction1(onDragEnd))
+    if (onDragEnter != null) __obj.updateDynamic("onDragEnter")(js.Any.fromFunction1(onDragEnter))
+    if (onDragExit != null) __obj.updateDynamic("onDragExit")(js.Any.fromFunction1(onDragExit))
+    if (onDragLeave != null) __obj.updateDynamic("onDragLeave")(js.Any.fromFunction1(onDragLeave))
+    if (onDragOver != null) __obj.updateDynamic("onDragOver")(js.Any.fromFunction1(onDragOver))
+    if (onDragStart != null) __obj.updateDynamic("onDragStart")(js.Any.fromFunction1(onDragStart))
+    if (onDrop != null) __obj.updateDynamic("onDrop")(js.Any.fromFunction1(onDrop))
+    if (onDurationChange != null) __obj.updateDynamic("onDurationChange")(js.Any.fromFunction1(onDurationChange))
+    if (onEmptied != null) __obj.updateDynamic("onEmptied")(js.Any.fromFunction1(onEmptied))
+    if (onEncrypted != null) __obj.updateDynamic("onEncrypted")(js.Any.fromFunction1(onEncrypted))
+    if (onEnded != null) __obj.updateDynamic("onEnded")(js.Any.fromFunction1(onEnded))
+    if (onError != null) __obj.updateDynamic("onError")(js.Any.fromFunction1(onError))
+    if (onFocus != null) __obj.updateDynamic("onFocus")(js.Any.fromFunction1(onFocus))
+    if (onInput != null) __obj.updateDynamic("onInput")(js.Any.fromFunction1(onInput))
+    if (onInvalid != null) __obj.updateDynamic("onInvalid")(js.Any.fromFunction1(onInvalid))
+    if (onKeyDown != null) __obj.updateDynamic("onKeyDown")(js.Any.fromFunction1(onKeyDown))
+    if (onKeyPress != null) __obj.updateDynamic("onKeyPress")(js.Any.fromFunction1(onKeyPress))
+    if (onKeyUp != null) __obj.updateDynamic("onKeyUp")(js.Any.fromFunction1(onKeyUp))
+    if (onLoad != null) __obj.updateDynamic("onLoad")(js.Any.fromFunction1(onLoad))
+    if (onLoadStart != null) __obj.updateDynamic("onLoadStart")(js.Any.fromFunction1(onLoadStart))
+    if (onLoadedData != null) __obj.updateDynamic("onLoadedData")(js.Any.fromFunction1(onLoadedData))
+    if (onLoadedMetadata != null) __obj.updateDynamic("onLoadedMetadata")(js.Any.fromFunction1(onLoadedMetadata))
+    if (onMouseDown != null) __obj.updateDynamic("onMouseDown")(js.Any.fromFunction1(onMouseDown))
+    if (onMouseEnter != null) __obj.updateDynamic("onMouseEnter")(js.Any.fromFunction1(onMouseEnter))
+    if (onMouseLeave != null) __obj.updateDynamic("onMouseLeave")(js.Any.fromFunction1(onMouseLeave))
+    if (onMouseMove != null) __obj.updateDynamic("onMouseMove")(js.Any.fromFunction1(onMouseMove))
+    if (onMouseOut != null) __obj.updateDynamic("onMouseOut")(js.Any.fromFunction1(onMouseOut))
+    if (onMouseOver != null) __obj.updateDynamic("onMouseOver")(js.Any.fromFunction1(onMouseOver))
+    if (onMouseUp != null) __obj.updateDynamic("onMouseUp")(js.Any.fromFunction1(onMouseUp))
+    if (onPaste != null) __obj.updateDynamic("onPaste")(js.Any.fromFunction1(onPaste))
+    if (onPause != null) __obj.updateDynamic("onPause")(js.Any.fromFunction1(onPause))
+    if (onPlay != null) __obj.updateDynamic("onPlay")(js.Any.fromFunction1(onPlay))
+    if (onPlaying != null) __obj.updateDynamic("onPlaying")(js.Any.fromFunction1(onPlaying))
+    if (onPointerCancel != null) __obj.updateDynamic("onPointerCancel")(js.Any.fromFunction1(onPointerCancel))
+    if (onPointerDown != null) __obj.updateDynamic("onPointerDown")(js.Any.fromFunction1(onPointerDown))
+    if (onPointerEnter != null) __obj.updateDynamic("onPointerEnter")(js.Any.fromFunction1(onPointerEnter))
+    if (onPointerLeave != null) __obj.updateDynamic("onPointerLeave")(js.Any.fromFunction1(onPointerLeave))
+    if (onPointerMove != null) __obj.updateDynamic("onPointerMove")(js.Any.fromFunction1(onPointerMove))
+    if (onPointerOut != null) __obj.updateDynamic("onPointerOut")(js.Any.fromFunction1(onPointerOut))
+    if (onPointerOver != null) __obj.updateDynamic("onPointerOver")(js.Any.fromFunction1(onPointerOver))
+    if (onPointerUp != null) __obj.updateDynamic("onPointerUp")(js.Any.fromFunction1(onPointerUp))
+    if (onProgress != null) __obj.updateDynamic("onProgress")(js.Any.fromFunction1(onProgress))
+    if (onRateChange != null) __obj.updateDynamic("onRateChange")(js.Any.fromFunction1(onRateChange))
     if (onReset != null) __obj.updateDynamic("onReset")(js.Any.fromFunction1(onReset))
+    if (onScroll != null) __obj.updateDynamic("onScroll")(js.Any.fromFunction1(onScroll))
+    if (onSeeked != null) __obj.updateDynamic("onSeeked")(js.Any.fromFunction1(onSeeked))
+    if (onSeeking != null) __obj.updateDynamic("onSeeking")(js.Any.fromFunction1(onSeeking))
+    if (onSelect != null) __obj.updateDynamic("onSelect")(js.Any.fromFunction1(onSelect))
+    if (onStalled != null) __obj.updateDynamic("onStalled")(js.Any.fromFunction1(onStalled))
+    if (onSubmit != null) __obj.updateDynamic("onSubmit")(js.Any.fromFunction1(onSubmit))
+    if (onSuspend != null) __obj.updateDynamic("onSuspend")(js.Any.fromFunction1(onSuspend))
+    if (onTimeUpdate != null) __obj.updateDynamic("onTimeUpdate")(js.Any.fromFunction1(onTimeUpdate))
+    if (onTouchCancel != null) __obj.updateDynamic("onTouchCancel")(js.Any.fromFunction1(onTouchCancel))
+    if (onTouchEnd != null) __obj.updateDynamic("onTouchEnd")(js.Any.fromFunction1(onTouchEnd))
+    if (onTouchMove != null) __obj.updateDynamic("onTouchMove")(js.Any.fromFunction1(onTouchMove))
+    if (onTouchStart != null) __obj.updateDynamic("onTouchStart")(js.Any.fromFunction1(onTouchStart))
+    if (onTransitionEnd != null) __obj.updateDynamic("onTransitionEnd")(js.Any.fromFunction1(onTransitionEnd))
+    if (onVolumeChange != null) __obj.updateDynamic("onVolumeChange")(js.Any.fromFunction1(onVolumeChange))
+    if (onWaiting != null) __obj.updateDynamic("onWaiting")(js.Any.fromFunction1(onWaiting))
+    if (onWheel != null) __obj.updateDynamic("onWheel")(js.Any.fromFunction1(onWheel))
     if (ping != null) __obj.updateDynamic("ping")(ping.asInstanceOf[js.Any])
     if (prefix != null) __obj.updateDynamic("prefix")(prefix.asInstanceOf[js.Any])
     if (prefixCls != null) __obj.updateDynamic("prefixCls")(prefixCls.asInstanceOf[js.Any])
@@ -269,9 +434,7 @@ object Button
     if (shape != null) __obj.updateDynamic("shape")(shape.asInstanceOf[js.Any])
     if (size != null) __obj.updateDynamic("size")(size.asInstanceOf[js.Any])
     if (slot != null) __obj.updateDynamic("slot")(slot.asInstanceOf[js.Any])
-    if (style != null) __obj.updateDynamic("style")(style.asInstanceOf[js.Any])
     if (!js.isUndefined(suppressHydrationWarning)) __obj.updateDynamic("suppressHydrationWarning")(suppressHydrationWarning.asInstanceOf[js.Any])
-    if (title != null) __obj.updateDynamic("title")(title.asInstanceOf[js.Any])
     if (translate != null) __obj.updateDynamic("translate")(translate.asInstanceOf[js.Any])
     if (`type` != null) __obj.updateDynamic("type")(`type`.asInstanceOf[js.Any])
     if (typeof != null) __obj.updateDynamic("typeof")(typeof.asInstanceOf[js.Any])
@@ -280,7 +443,7 @@ object Button
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.libButtonMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, default] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.antd.buttonMod.default](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = ButtonProps
 }
 

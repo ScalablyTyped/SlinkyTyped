@@ -8,5 +8,5 @@ import scala.scalajs.js.annotation._
 @JSImport("graphql/type", "GraphQLBoolean")
 @js.native
 object GraphQLBoolean
-  extends TopLevel[typingsSlinky.graphql.typeDefinitionMod.GraphQLScalarType]
+  extends TopLevel[typingsSlinky.graphql.definitionMod.GraphQLScalarType]
 

@@ -1,21 +1,24 @@
 package typingsSlinky.node.http2Mod
 
+import typingsSlinky.node.nodeStrings.httpColon
+import typingsSlinky.node.nodeStrings.httpsColon
 import typingsSlinky.node.streamMod.Duplex
-import typingsSlinky.node.urlMod.URL
+import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 trait ClientSessionOptions extends SessionOptions {
   @JSName("createConnection")
-  var createConnection_ClientSessionOptions: js.UndefOr[js.Function2[/* authority */ URL, /* option */ SessionOptions, Duplex]] = js.undefined
+  var createConnection_ClientSessionOptions: js.UndefOr[js.Function2[/* authority */ URL_, /* option */ SessionOptions, Duplex]] = js.undefined
   var maxReservedRemoteStreams: js.UndefOr[Double] = js.undefined
+  var protocol: js.UndefOr[httpColon | httpsColon] = js.undefined
 }
 
 object ClientSessionOptions {
   @scala.inline
   def apply(
-    createConnection: (/* authority */ URL, /* option */ SessionOptions) => Duplex = null,
+    createConnection: (/* authority */ URL_, /* option */ SessionOptions) => Duplex = null,
     maxDeflateDynamicTableSize: Int | Double = null,
     maxHeaderListPairs: Int | Double = null,
     maxOutstandingPings: Int | Double = null,
@@ -24,6 +27,7 @@ object ClientSessionOptions {
     maxSessionMemory: Int | Double = null,
     paddingStrategy: Int | Double = null,
     peerMaxConcurrentStreams: Int | Double = null,
+    protocol: httpColon | httpsColon = null,
     selectPadding: (/* frameLen */ Double, /* maxFrameLen */ Double) => Double = null,
     settings: Settings = null
   ): ClientSessionOptions = {
@@ -37,6 +41,7 @@ object ClientSessionOptions {
     if (maxSessionMemory != null) __obj.updateDynamic("maxSessionMemory")(maxSessionMemory.asInstanceOf[js.Any])
     if (paddingStrategy != null) __obj.updateDynamic("paddingStrategy")(paddingStrategy.asInstanceOf[js.Any])
     if (peerMaxConcurrentStreams != null) __obj.updateDynamic("peerMaxConcurrentStreams")(peerMaxConcurrentStreams.asInstanceOf[js.Any])
+    if (protocol != null) __obj.updateDynamic("protocol")(protocol.asInstanceOf[js.Any])
     if (selectPadding != null) __obj.updateDynamic("selectPadding")(js.Any.fromFunction2(selectPadding))
     if (settings != null) __obj.updateDynamic("settings")(settings.asInstanceOf[js.Any])
     __obj.asInstanceOf[ClientSessionOptions]

@@ -12,7 +12,7 @@ Sort an array of numbers
 | Keywords           | sort, sorter, compare, comparator, number, numbers, order, asc, ascending, desc, descending |
 | # releases         | 2 |
 | # dependents       | 17 |
-| # downloads        | 101330 |
+| # downloads        | 104445 |
 | # stars            | 1 |
 
 ## Links

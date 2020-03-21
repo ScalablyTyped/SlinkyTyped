@@ -1,7 +1,7 @@
 package typingsSlinky.jsforce.batchMod
 
-import typingsSlinky.jsforce.recordDashResultMod.RecordResult
 import typingsSlinky.jsforce.recordMod.Record
+import typingsSlinky.jsforce.recordResultMod.RecordResult
 import typingsSlinky.node.streamMod.Stream
 import typingsSlinky.node.streamMod.Writable
 import scala.scalajs.js

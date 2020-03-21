@@ -1,27 +1,64 @@
 package typingsSlinky.ol.graticuleMod
 
+import typingsSlinky.ol.eventsMod.EventsKey
+import typingsSlinky.ol.extentMod.Extent
+import typingsSlinky.ol.olStrings.postcompose
+import typingsSlinky.ol.olStrings.precompose
+import typingsSlinky.ol.olStrings.rendercomplete
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
-trait Graticule extends js.Object {
-  def getMap(): typingsSlinky.ol.pluggableMapMod.default
-  def getMeridians(): js.Array[typingsSlinky.ol.geomLineStringMod.default]
-  def getParallels(): js.Array[typingsSlinky.ol.geomLineStringMod.default]
-  def setMap(map: typingsSlinky.ol.pluggableMapMod.default): Unit
-}
-
-object Graticule {
-  @scala.inline
-  def apply(
-    getMap: () => typingsSlinky.ol.pluggableMapMod.default,
-    getMeridians: () => js.Array[typingsSlinky.ol.geomLineStringMod.default],
-    getParallels: () => js.Array[typingsSlinky.ol.geomLineStringMod.default],
-    setMap: typingsSlinky.ol.pluggableMapMod.default => Unit
-  ): Graticule = {
-    val __obj = js.Dynamic.literal(getMap = js.Any.fromFunction0(getMap), getMeridians = js.Any.fromFunction0(getMeridians), getParallels = js.Any.fromFunction0(getParallels), setMap = js.Any.fromFunction1(setMap))
-  
-    __obj.asInstanceOf[Graticule]
-  }
+@js.native
+trait Graticule
+  extends typingsSlinky.ol.vectorMod.default {
+  def getMeridians(): js.Array[typingsSlinky.ol.lineStringMod.default] = js.native
+  def getParallels(): js.Array[typingsSlinky.ol.lineStringMod.default] = js.native
+  def loaderFunction(extent: Extent, resolution: Double, projection: typingsSlinky.ol.projectionMod.default): Unit = js.native
+  @JSName("on")
+  def on_postcompose(
+    `type`: postcompose,
+    listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
+  ): EventsKey = js.native
+  @JSName("on")
+  def on_precompose(
+    `type`: precompose,
+    listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
+  ): EventsKey = js.native
+  @JSName("on")
+  def on_rendercomplete(
+    `type`: rendercomplete,
+    listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
+  ): EventsKey = js.native
+  @JSName("once")
+  def once_postcompose(
+    `type`: postcompose,
+    listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
+  ): EventsKey = js.native
+  @JSName("once")
+  def once_precompose(
+    `type`: precompose,
+    listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
+  ): EventsKey = js.native
+  @JSName("once")
+  def once_rendercomplete(
+    `type`: rendercomplete,
+    listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
+  ): EventsKey = js.native
+  @JSName("un")
+  def un_postcompose(
+    `type`: postcompose,
+    listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
+  ): Unit = js.native
+  @JSName("un")
+  def un_precompose(
+    `type`: precompose,
+    listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
+  ): Unit = js.native
+  @JSName("un")
+  def un_rendercomplete(
+    `type`: rendercomplete,
+    listener: js.Function1[/* evt */ typingsSlinky.ol.renderEventMod.default, Unit]
+  ): Unit = js.native
 }
 

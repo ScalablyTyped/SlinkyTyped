@@ -1,12 +1,12 @@
 package typingsSlinky.escpos
 
-import typingsSlinky.escpos.escposMod.BARCODE_TYPE
-import typingsSlinky.escpos.escposMod.BITMAP_FORMAT_TYPE
-import typingsSlinky.escpos.escposMod.FEED_CONTROL_TYPE
-import typingsSlinky.escpos.escposMod.MIME_TYPE
-import typingsSlinky.escpos.escposMod.QRCODE_LEVEL
-import typingsSlinky.escpos.escposMod.TXT_ALIGN
-import typingsSlinky.escpos.escposMod.TXT_STYLE
+import typingsSlinky.escpos.mod.BARCODE_TYPE
+import typingsSlinky.escpos.mod.BITMAP_FORMAT_TYPE
+import typingsSlinky.escpos.mod.FEED_CONTROL_TYPE
+import typingsSlinky.escpos.mod.MIME_TYPE
+import typingsSlinky.escpos.mod.QRCODE_LEVEL
+import typingsSlinky.escpos.mod.TXT_ALIGN
+import typingsSlinky.escpos.mod.TXT_STYLE
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -61,7 +61,7 @@ object escposStrings {
   sealed trait Backspace extends js.Object
   
   @js.native
-  sealed trait Bell extends js.Object
+  sealed trait Bel extends js.Object
   
   @js.native
   sealed trait CENTER extends js.Object
@@ -543,7 +543,7 @@ object escposStrings {
   @scala.inline
   def Backspace: Backspace = "\b".asInstanceOf[Backspace]
   @scala.inline
-  def Bell: Bell = "\u0007".asInstanceOf[Bell]
+  def Bel: Bel = "\u0007".asInstanceOf[Bel]
   @scala.inline
   def CENTER: CENTER = "CENTER".asInstanceOf[CENTER]
   @scala.inline

@@ -19,17 +19,17 @@ import scala.scalajs.js.annotation._
   * Enumeration of entity form save modes.
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmNumbers.`1`
-  - typings.xrm.xrmNumbers.`2`
-  - typings.xrm.xrmNumbers.`59`
-  - typings.xrm.xrmNumbers.`70`
-  - typings.xrm.xrmNumbers.`58`
-  - typings.xrm.xrmNumbers.`5`
-  - typings.xrm.xrmNumbers.`6`
-  - typings.xrm.xrmNumbers.`47`
-  - typings.xrm.xrmNumbers.`7`
-  - typings.xrm.xrmNumbers.`16`
-  - typings.xrm.xrmNumbers.`15`
+  - typingsSlinky.xrm.xrmNumbers.`1`
+  - typingsSlinky.xrm.xrmNumbers.`2`
+  - typingsSlinky.xrm.xrmNumbers.`59`
+  - typingsSlinky.xrm.xrmNumbers.`70`
+  - typingsSlinky.xrm.xrmNumbers.`58`
+  - typingsSlinky.xrm.xrmNumbers.`5`
+  - typingsSlinky.xrm.xrmNumbers.`6`
+  - typingsSlinky.xrm.xrmNumbers.`47`
+  - typingsSlinky.xrm.xrmNumbers.`7`
+  - typingsSlinky.xrm.xrmNumbers.`16`
+  - typingsSlinky.xrm.xrmNumbers.`15`
 */
 trait SaveMode extends js.Object
 

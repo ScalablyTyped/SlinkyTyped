@@ -5,14 +5,14 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.arangodb.arangodbStrings.integer
-  - typings.arangodb.arangodbStrings.boolean
-  - typings.arangodb.arangodbStrings.string
-  - typings.arangodb.arangodbStrings.number
-  - typings.arangodb.arangodbStrings.json
-  - typings.arangodb.arangodbStrings.password
-  - typings.arangodb.arangodbStrings.int
-  - typings.arangodb.arangodbStrings.bool
+  - typingsSlinky.arangodb.arangodbStrings.integer
+  - typingsSlinky.arangodb.arangodbStrings.boolean
+  - typingsSlinky.arangodb.arangodbStrings.string
+  - typingsSlinky.arangodb.arangodbStrings.number
+  - typingsSlinky.arangodb.arangodbStrings.json
+  - typingsSlinky.arangodb.arangodbStrings.password
+  - typingsSlinky.arangodb.arangodbStrings.int
+  - typingsSlinky.arangodb.arangodbStrings.bool
 */
 trait ConfigurationType extends js.Object
 

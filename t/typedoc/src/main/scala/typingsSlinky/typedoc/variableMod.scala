@@ -1,0 +1,19 @@
+package typingsSlinky.typedoc
+
+import typingsSlinky.typedoc.componentsMod.ConverterNodeComponent
+import typingsSlinky.typescript.mod.ObjectLiteralExpression
+import typingsSlinky.typescript.mod.VariableDeclaration
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+@JSImport("typedoc/dist/lib/converter/nodes/variable", JSImport.Namespace)
+@js.native
+object variableMod extends js.Object {
+  @js.native
+  class VariableConverter () extends ConverterNodeComponent[VariableDeclaration] {
+    def isSimpleObjectLiteral(objectLiteral: ObjectLiteralExpression): Boolean = js.native
+  }
+  
+}
+

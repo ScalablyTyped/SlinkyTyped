@@ -7,27 +7,27 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.atAntvG2.atAntvG2Mod.Styles.background
-import typingsSlinky.atAntvG2.atAntvG2Mod.Styles.text
-import typingsSlinky.bizcharts.bizchartsMod.LegendLayoutType
-import typingsSlinky.bizcharts.bizchartsMod.LegendPositionType
-import typingsSlinky.bizcharts.bizchartsMod.LegendProps
-import typingsSlinky.bizcharts.bizchartsMod.MarkerType
+import typingsSlinky.antvG2.mod.Styles.background
+import typingsSlinky.antvG2.mod.Styles.text
 import typingsSlinky.bizcharts.bizchartsStrings.multiple
 import typingsSlinky.bizcharts.bizchartsStrings.single
-import typingsSlinky.react.reactMod.CSSProperties
+import typingsSlinky.bizcharts.mod.LegendLayoutType
+import typingsSlinky.bizcharts.mod.LegendPositionType
+import typingsSlinky.bizcharts.mod.LegendProps
+import typingsSlinky.bizcharts.mod.MarkerType
+import typingsSlinky.react.mod.CSSProperties
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Legend
-  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.bizchartsMod.Legend] {
+  extends ExternalComponentWithAttributesWithRefType[tag.type, typingsSlinky.bizcharts.mod.Legend] {
   @JSImport("bizcharts", "Legend")
   @js.native
   object componentImport extends js.Object
   
   override val component: String | js.Object = this.componentImport
-  /* The following DOM/SVG props were specified: name, onClick */
+  /* The following DOM/SVG props were specified: name */
   def apply(
     allowAllCanceled: js.UndefOr[Boolean] = js.undefined,
     background: background = null,
@@ -64,6 +64,7 @@ object Legend
     ]) = null,
     offsetX: Int | Double = null,
     offsetY: Int | Double = null,
+    onClick: /* ev */ MouseEvent => Unit = null,
     onHover: /* ev */ MouseEvent => Unit = null,
     position: LegendPositionType = null,
     scroll: js.UndefOr[Boolean] = js.undefined,
@@ -76,7 +77,7 @@ object Legend
     visible: js.UndefOr[Boolean] = js.undefined,
     width: Int | Double = null,
     _overrides: StringDictionary[js.Any] = null
-  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Legend] = {
+  ): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Legend] = {
     val __obj = js.Dynamic.literal()
     if (!js.isUndefined(allowAllCanceled)) __obj.updateDynamic("allowAllCanceled")(allowAllCanceled.asInstanceOf[js.Any])
     if (background != null) __obj.updateDynamic("background")(background.asInstanceOf[js.Any])
@@ -101,6 +102,7 @@ object Legend
     if (marker != null) __obj.updateDynamic("marker")(marker.asInstanceOf[js.Any])
     if (offsetX != null) __obj.updateDynamic("offsetX")(offsetX.asInstanceOf[js.Any])
     if (offsetY != null) __obj.updateDynamic("offsetY")(offsetY.asInstanceOf[js.Any])
+    if (onClick != null) __obj.updateDynamic("onClick")(js.Any.fromFunction1(onClick))
     if (onHover != null) __obj.updateDynamic("onHover")(js.Any.fromFunction1(onHover))
     if (position != null) __obj.updateDynamic("position")(position.asInstanceOf[js.Any])
     if (!js.isUndefined(scroll)) __obj.updateDynamic("scroll")(scroll.asInstanceOf[js.Any])
@@ -115,7 +117,7 @@ object Legend
     if (_overrides != null) js.Dynamic.global.Object.assign(__obj, _overrides)
     super.apply(__obj.asInstanceOf[Props])
   }
-  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.bizchartsMod.Legend] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.bizchartsMod.Legend](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
+  def apply(mods: TagMod[tag.type]*): BuildingComponent[tag.type, typingsSlinky.bizcharts.mod.Legend] = new slinky.core.BuildingComponent[slinky.web.html.`*`.tag.type, typingsSlinky.bizcharts.mod.Legend](js.Array(component.asInstanceOf[js.Any], js.Dictionary.empty)).apply(mods: _*)
   type Props = LegendProps
 }
 

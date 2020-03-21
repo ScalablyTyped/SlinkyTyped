@@ -1,0 +1,17 @@
+package typingsSlinky.reactInstantsearch.components
+
+import slinky.core.ExternalComponentNoPropsWithAttributesWithRefType
+import slinky.web.html.`*`.tag
+import scala.scalajs.js
+import scala.scalajs.js.`|`
+import scala.scalajs.js.annotation._
+
+object Stats
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.reactInstantsearch.domMod.Stats] {
+  @JSImport("react-instantsearch/dom", "Stats")
+  @js.native
+  object componentImport extends js.Object
+  
+  override val component: String | js.Object = this.componentImport
+}
+

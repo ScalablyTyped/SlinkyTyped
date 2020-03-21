@@ -12,10 +12,10 @@ import scala.scalajs.js.annotation._
   * An enumeration for Attribute required level metadata
   */
 /* Rewritten from type alias, can be one of: 
-  - typings.xrm.xrmNumbers.`0`
-  - typings.xrm.xrmNumbers.`1`
-  - typings.xrm.xrmNumbers.`2`
-  - typings.xrm.xrmNumbers.`3`
+  - typingsSlinky.xrm.xrmNumbers.`0`
+  - typingsSlinky.xrm.xrmNumbers.`1`
+  - typingsSlinky.xrm.xrmNumbers.`2`
+  - typingsSlinky.xrm.xrmNumbers.`3`
 */
 trait AttributeRequiredLevel extends js.Object
 

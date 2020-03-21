@@ -5,31 +5,31 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 /* Rewritten from type alias, can be one of: 
-  - typings.webix.webixStrings.onAfterAdd
-  - typings.webix.webixStrings.onAfterContextMenu
-  - typings.webix.webixStrings.onAfterDelete
-  - typings.webix.webixStrings.onAfterLoad
-  - typings.webix.webixStrings.onAfterRender
-  - typings.webix.webixStrings.onAfterScroll
-  - typings.webix.webixStrings.onAfterSort
-  - typings.webix.webixStrings.onBeforeAdd
-  - typings.webix.webixStrings.onBeforeContextMenu
-  - typings.webix.webixStrings.onBeforeDelete
-  - typings.webix.webixStrings.onBeforeLoad
-  - typings.webix.webixStrings.onBeforeRender
-  - typings.webix.webixStrings.onBeforeSort
-  - typings.webix.webixStrings.onBindRequest
-  - typings.webix.webixStrings.onDataRequest
-  - typings.webix.webixStrings.onDataUpdate
-  - typings.webix.webixStrings.onDestruct
-  - typings.webix.webixStrings.onItemClick
-  - typings.webix.webixStrings.onItemDblClick
-  - typings.webix.webixStrings.onItemRender
-  - typings.webix.webixStrings.onLoadError
-  - typings.webix.webixStrings.onMouseMove
-  - typings.webix.webixStrings.onMouseMoving
-  - typings.webix.webixStrings.onMouseOut
-  - typings.webix.webixStrings.onViewShow
+  - typingsSlinky.webix.webixStrings.onAfterAdd
+  - typingsSlinky.webix.webixStrings.onAfterContextMenu
+  - typingsSlinky.webix.webixStrings.onAfterDelete
+  - typingsSlinky.webix.webixStrings.onAfterLoad
+  - typingsSlinky.webix.webixStrings.onAfterRender
+  - typingsSlinky.webix.webixStrings.onAfterScroll
+  - typingsSlinky.webix.webixStrings.onAfterSort
+  - typingsSlinky.webix.webixStrings.onBeforeAdd
+  - typingsSlinky.webix.webixStrings.onBeforeContextMenu
+  - typingsSlinky.webix.webixStrings.onBeforeDelete
+  - typingsSlinky.webix.webixStrings.onBeforeLoad
+  - typingsSlinky.webix.webixStrings.onBeforeRender
+  - typingsSlinky.webix.webixStrings.onBeforeSort
+  - typingsSlinky.webix.webixStrings.onBindRequest
+  - typingsSlinky.webix.webixStrings.onDataRequest
+  - typingsSlinky.webix.webixStrings.onDataUpdate
+  - typingsSlinky.webix.webixStrings.onDestruct
+  - typingsSlinky.webix.webixStrings.onItemClick
+  - typingsSlinky.webix.webixStrings.onItemDblClick
+  - typingsSlinky.webix.webixStrings.onItemRender
+  - typingsSlinky.webix.webixStrings.onLoadError
+  - typingsSlinky.webix.webixStrings.onMouseMove
+  - typingsSlinky.webix.webixStrings.onMouseMoving
+  - typingsSlinky.webix.webixStrings.onMouseOut
+  - typingsSlinky.webix.webixStrings.onViewShow
 */
 trait timelineEventName extends js.Object
 

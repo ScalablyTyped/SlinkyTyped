@@ -1,19 +1,24 @@
 package typingsSlinky.parse.nodeMod
 
 import org.scalablytyped.runtime.Instantiable0
-import typingsSlinky.parse.parseMod._Global_.Parse.Attributes
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.AfterDeleteRequest
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.AfterFindRequest
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.AfterSaveRequest
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.BeforeDeleteRequest
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.BeforeFindRequest
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.BeforeSaveRequest
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.FunctionRequest
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.HTTPOptions
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.HttpResponse
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.JobRequest
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.RunOptions
-import typingsSlinky.parse.parseMod._Global_.Parse.Cloud.TriggerRequest
+import typingsSlinky.parse.mod._Global_.Parse.Attributes
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.AfterDeleteRequest
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.AfterFindRequest
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.AfterSaveRequest
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.BeforeDeleteRequest
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.BeforeFindRequest
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.BeforeSaveRequest
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.FunctionRequest
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.HTTPOptions
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.HttpResponse
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.JobRequest
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.Params
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.RunOptions
+import typingsSlinky.parse.mod._Global_.Parse.Cloud.TriggerRequest
+import typingsSlinky.parse.parseStrings.define
+import typingsSlinky.parse.parseStrings.run
+import typingsSlinky.std.Parameters
+import typingsSlinky.std.ReturnType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -33,7 +38,7 @@ object Cloud extends js.Object {
     *
     *     import Buffer = require("buffer").Buffer;
     */
-  var HTTPOptions: Instantiable0[typingsSlinky.parse.parseMod._Global_.Parse.Cloud.HTTPOptions] = js.native
+  var HTTPOptions: Instantiable0[typingsSlinky.parse.mod._Global_.Parse.Cloud.HTTPOptions] = js.native
   def afterDelete(arg1: js.Any): Unit = js.native
   def afterDelete(arg1: js.Any, func: js.Function1[/* request */ AfterDeleteRequest, js.Promise[Unit] | Unit]): Unit = js.native
   def afterFind(arg1: js.Any): Unit = js.native
@@ -48,33 +53,79 @@ object Cloud extends js.Object {
     func: js.Function1[
       /* request */ BeforeFindRequest, 
       (js.Promise[
-        typingsSlinky.parse.parseMod._Global_.Parse.Query[typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes]] | Unit
-      ]) | typingsSlinky.parse.parseMod._Global_.Parse.Query[typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes]] | Unit
+        typingsSlinky.parse.mod._Global_.Parse.Query[typingsSlinky.parse.mod._Global_.Parse.Object[Attributes]] | Unit
+      ]) | typingsSlinky.parse.mod._Global_.Parse.Query[typingsSlinky.parse.mod._Global_.Parse.Object[Attributes]] | Unit
     ]
   ): Unit = js.native
   def beforeLogin(): Unit = js.native
   def beforeLogin(func: js.Function1[/* request */ TriggerRequest, _]): Unit = js.native
   def beforeSave(arg1: js.Any): Unit = js.native
   def beforeSave(arg1: js.Any, func: js.Function1[/* request */ BeforeSaveRequest, js.Promise[Unit] | Unit]): Unit = js.native
-  def define(name: String): Unit = js.native
-  def define(name: String, func: js.Function1[/* request */ FunctionRequest, _]): Unit = js.native
+  def define(name: String, func: js.Function1[/* request */ FunctionRequest[Params], _]): Unit = js.native
+  @JSName("define")
+  def define_0[T /* <: js.Function1[
+    /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof std.Parameters<T>[0] ]: std.Parameters<T>[0][P]}
+    */ /* param */ define with Parameters[T], 
+    _
+  ] */](
+    name: String,
+    func: js.Function1[
+      /* request */ FunctionRequest[
+        /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<T>[0] */ js.Any
+      ], 
+      js.Promise[ReturnType[T]] | ReturnType[T]
+    ]
+  ): Unit = js.native
+  @JSName("define")
+  def define_T_Function0Wildcard[T /* <: js.Function0[_] */](
+    name: String,
+    func: js.Function1[
+      /* request */ FunctionRequest[js.Object], 
+      js.Promise[ReturnType[T]] | ReturnType[T]
+    ]
+  ): Unit = js.native
   /**
     * Gets job status by Id
     * @param jobStatusId The Id of Job Status.
     * @returns Status of Job.
     */
-  def getJobStatus(jobStatusId: String): js.Promise[typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes]] = js.native
+  def getJobStatus(jobStatusId: String): js.Promise[typingsSlinky.parse.mod._Global_.Parse.Object[Attributes]] = js.native
   /**
     * Gets data for the current set of cloud jobs.
     * @returns A promise that will be resolved with the result of the function.
     */
-  def getJobsData(): js.Promise[typingsSlinky.parse.parseMod._Global_.Parse.Object[Attributes]] = js.native
+  def getJobsData(): js.Promise[typingsSlinky.parse.mod._Global_.Parse.Object[Attributes]] = js.native
   def httpRequest(options: HTTPOptions): js.Promise[HttpResponse] = js.native
   def job(name: String): HttpResponse = js.native
   def job(name: String, func: js.Function1[/* request */ JobRequest, js.Promise[Unit] | Unit]): HttpResponse = js.native
   def run(name: String): js.Promise[_] = js.native
-  def run(name: String, data: js.Any): js.Promise[_] = js.native
-  def run(name: String, data: js.Any, options: RunOptions): js.Promise[_] = js.native
+  def run(name: String, data: Params): js.Promise[_] = js.native
+  def run(name: String, data: Params, options: RunOptions): js.Promise[_] = js.native
+  def run[T /* <: js.Function0[_] */](name: String, data: Null, options: RunOptions): js.Promise[ReturnType[T]] = js.native
+  @JSName("run")
+  def run_0[T /* <: js.Function1[
+    /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof std.Parameters<T>[0] ]: std.Parameters<T>[0][P]}
+    */ /* param */ run with Parameters[T], 
+    _
+  ] */](
+    name: String,
+    data: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<T>[0] */ js.Any
+  ): js.Promise[ReturnType[T]] = js.native
+  @JSName("run")
+  def run_0[T /* <: js.Function1[
+    /* import warning: importer.ImportType#apply c Unsupported type mapping: 
+  {[ P in keyof std.Parameters<T>[0] ]: std.Parameters<T>[0][P]}
+    */ /* param */ run with Parameters[T], 
+    _
+  ] */](
+    name: String,
+    data: /* import warning: importer.ImportType#apply Failed type conversion: std.Parameters<T>[0] */ js.Any,
+    options: RunOptions
+  ): js.Promise[ReturnType[T]] = js.native
+  @JSName("run")
+  def run_T_Function0Wildcard[T /* <: js.Function0[_] */](name: String): js.Promise[ReturnType[T]] = js.native
   /**
     * Starts a given cloud job, which will process asynchronously.
     * @param jobName The function name.
@@ -86,15 +137,13 @@ object Cloud extends js.Object {
   // Read preference describes how MongoDB driver route read operations to the members of a replica set.
   @js.native
   object ReadPreferenceOption extends js.Object {
-    /* "NEAREST" */ val Nearest: typingsSlinky.parse.parseMod._Global_.Parse.Cloud.ReadPreferenceOption.Nearest with String = js.native
-    /* "PRIMARY" */ val Primary: typingsSlinky.parse.parseMod._Global_.Parse.Cloud.ReadPreferenceOption.Primary with String = js.native
-    /* "PRIMARY_PREFERRED" */ val PrimaryPreferred: typingsSlinky.parse.parseMod._Global_.Parse.Cloud.ReadPreferenceOption.PrimaryPreferred with String = js.native
-    /* "SECONDARY" */ val Secondary: typingsSlinky.parse.parseMod._Global_.Parse.Cloud.ReadPreferenceOption.Secondary with String = js.native
-    /* "SECONDARY_PREFERRED" */ val SecondaryPreferred: typingsSlinky.parse.parseMod._Global_.Parse.Cloud.ReadPreferenceOption.SecondaryPreferred with String = js.native
+    /* "NEAREST" */ val Nearest: typingsSlinky.parse.mod._Global_.Parse.Cloud.ReadPreferenceOption.Nearest with String = js.native
+    /* "PRIMARY" */ val Primary: typingsSlinky.parse.mod._Global_.Parse.Cloud.ReadPreferenceOption.Primary with String = js.native
+    /* "PRIMARY_PREFERRED" */ val PrimaryPreferred: typingsSlinky.parse.mod._Global_.Parse.Cloud.ReadPreferenceOption.PrimaryPreferred with String = js.native
+    /* "SECONDARY" */ val Secondary: typingsSlinky.parse.mod._Global_.Parse.Cloud.ReadPreferenceOption.Secondary with String = js.native
+    /* "SECONDARY_PREFERRED" */ val SecondaryPreferred: typingsSlinky.parse.mod._Global_.Parse.Cloud.ReadPreferenceOption.SecondaryPreferred with String = js.native
     @JSBracketAccess
-    def apply(value: String): js.UndefOr[
-        typingsSlinky.parse.parseMod._Global_.Parse.Cloud.ReadPreferenceOption with String
-      ] = js.native
+    def apply(value: String): js.UndefOr[typingsSlinky.parse.mod._Global_.Parse.Cloud.ReadPreferenceOption with String] = js.native
   }
   
 }

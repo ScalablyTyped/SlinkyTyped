@@ -1,13 +1,13 @@
 package typingsSlinky.protractor
 
-import typingsSlinky.seleniumDashWebdriver.libByMod.ByHash
-import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.Alert
-import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.By
-import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.Condition
-import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.Locator
-import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.WebDriver
-import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.WebElement
-import typingsSlinky.seleniumDashWebdriver.seleniumDashWebdriverMod.WebElementCondition
+import typingsSlinky.seleniumWebdriver.byMod.ByHash
+import typingsSlinky.seleniumWebdriver.mod.Alert
+import typingsSlinky.seleniumWebdriver.mod.By
+import typingsSlinky.seleniumWebdriver.mod.Condition
+import typingsSlinky.seleniumWebdriver.mod.Locator
+import typingsSlinky.seleniumWebdriver.mod.WebDriver
+import typingsSlinky.seleniumWebdriver.mod.WebElement
+import typingsSlinky.seleniumWebdriver.mod.WebElementCondition
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

@@ -1,9 +1,9 @@
 package typingsSlinky.soundjs.createjs
 
-import typingsSlinky.createjsDashLib.createjs.Event
-import typingsSlinky.createjsDashLib.createjs.EventDispatcher
-import typingsSlinky.soundjs.Anon_EventObj
-import typingsSlinky.soundjs.Anon_EventObjHandleEvent
+import typingsSlinky.createjsLib.createjs.Event
+import typingsSlinky.createjsLib.createjs.EventDispatcher
+import typingsSlinky.soundjs.Anon0
+import typingsSlinky.soundjs.AnonHandleEvent
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -41,10 +41,10 @@ object Sound extends js.Object {
     listener: js.Function1[/* eventObj */ js.Object, Boolean | Unit],
     useCapture: Boolean
   ): js.Function = js.native
-  def addEventListener(`type`: String, listener: Anon_EventObj): js.Object = js.native
-  def addEventListener(`type`: String, listener: Anon_EventObjHandleEvent): js.Object = js.native
-  def addEventListener(`type`: String, listener: Anon_EventObjHandleEvent, useCapture: Boolean): js.Object = js.native
-  def addEventListener(`type`: String, listener: Anon_EventObj, useCapture: Boolean): js.Object = js.native
+  def addEventListener(`type`: String, listener: Anon0): js.Object = js.native
+  def addEventListener(`type`: String, listener: Anon0, useCapture: Boolean): js.Object = js.native
+  def addEventListener(`type`: String, listener: AnonHandleEvent): js.Object = js.native
+  def addEventListener(`type`: String, listener: AnonHandleEvent, useCapture: Boolean): js.Object = js.native
   // methods
   def createInstance(src: String): AbstractSoundInstance = js.native
   def dispatchEvent(eventObj: String): Boolean = js.native
@@ -69,10 +69,10 @@ object Sound extends js.Object {
     useCapture: Boolean
   ): Unit = js.native
   def off(`type`: String, listener: js.Function, useCapture: Boolean): Unit = js.native
-  def off(`type`: String, listener: Anon_EventObj): Unit = js.native
-  def off(`type`: String, listener: Anon_EventObjHandleEvent): Unit = js.native
-  def off(`type`: String, listener: Anon_EventObjHandleEvent, useCapture: Boolean): Unit = js.native
-  def off(`type`: String, listener: Anon_EventObj, useCapture: Boolean): Unit = js.native
+  def off(`type`: String, listener: Anon0): Unit = js.native
+  def off(`type`: String, listener: Anon0, useCapture: Boolean): Unit = js.native
+  def off(`type`: String, listener: AnonHandleEvent): Unit = js.native
+  def off(`type`: String, listener: AnonHandleEvent, useCapture: Boolean): Unit = js.native
    // It is necessary for "arguments.callee"
   def on(`type`: String, listener: js.Function1[/* eventObj */ js.Object, Boolean | Unit]): js.Function = js.native
   def on(`type`: String, listener: js.Function1[/* eventObj */ js.Object, Boolean | Unit], scope: js.Object): js.Function = js.native
@@ -97,25 +97,25 @@ object Sound extends js.Object {
     data: js.Any,
     useCapture: Boolean
   ): js.Function = js.native
-  def on(`type`: String, listener: Anon_EventObj): js.Object = js.native
-  def on(`type`: String, listener: Anon_EventObjHandleEvent): js.Object = js.native
-  def on(`type`: String, listener: Anon_EventObjHandleEvent, scope: js.Object): js.Object = js.native
-  def on(`type`: String, listener: Anon_EventObjHandleEvent, scope: js.Object, once: Boolean): js.Object = js.native
-  def on(`type`: String, listener: Anon_EventObjHandleEvent, scope: js.Object, once: Boolean, data: js.Any): js.Object = js.native
+  def on(`type`: String, listener: Anon0): js.Object = js.native
+  def on(`type`: String, listener: Anon0, scope: js.Object): js.Object = js.native
+  def on(`type`: String, listener: Anon0, scope: js.Object, once: Boolean): js.Object = js.native
+  def on(`type`: String, listener: Anon0, scope: js.Object, once: Boolean, data: js.Any): js.Object = js.native
   def on(
     `type`: String,
-    listener: Anon_EventObjHandleEvent,
+    listener: Anon0,
     scope: js.Object,
     once: Boolean,
     data: js.Any,
     useCapture: Boolean
   ): js.Object = js.native
-  def on(`type`: String, listener: Anon_EventObj, scope: js.Object): js.Object = js.native
-  def on(`type`: String, listener: Anon_EventObj, scope: js.Object, once: Boolean): js.Object = js.native
-  def on(`type`: String, listener: Anon_EventObj, scope: js.Object, once: Boolean, data: js.Any): js.Object = js.native
+  def on(`type`: String, listener: AnonHandleEvent): js.Object = js.native
+  def on(`type`: String, listener: AnonHandleEvent, scope: js.Object): js.Object = js.native
+  def on(`type`: String, listener: AnonHandleEvent, scope: js.Object, once: Boolean): js.Object = js.native
+  def on(`type`: String, listener: AnonHandleEvent, scope: js.Object, once: Boolean, data: js.Any): js.Object = js.native
   def on(
     `type`: String,
-    listener: Anon_EventObj,
+    listener: AnonHandleEvent,
     scope: js.Object,
     once: Boolean,
     data: js.Any,
@@ -157,10 +157,10 @@ object Sound extends js.Object {
     useCapture: Boolean
   ): Unit = js.native
   def removeEventListener(`type`: String, listener: js.Function, useCapture: Boolean): Unit = js.native
-  def removeEventListener(`type`: String, listener: Anon_EventObj): Unit = js.native
-  def removeEventListener(`type`: String, listener: Anon_EventObjHandleEvent): Unit = js.native
-  def removeEventListener(`type`: String, listener: Anon_EventObjHandleEvent, useCapture: Boolean): Unit = js.native
-  def removeEventListener(`type`: String, listener: Anon_EventObj, useCapture: Boolean): Unit = js.native
+  def removeEventListener(`type`: String, listener: Anon0): Unit = js.native
+  def removeEventListener(`type`: String, listener: Anon0, useCapture: Boolean): Unit = js.native
+  def removeEventListener(`type`: String, listener: AnonHandleEvent): Unit = js.native
+  def removeEventListener(`type`: String, listener: AnonHandleEvent, useCapture: Boolean): Unit = js.native
   def removeManifest(manifest: js.Array[_], basePath: String): js.Object = js.native
   def removeSound(src: String, basePath: String): Boolean = js.native
   def removeSound(src: js.Object, basePath: String): Boolean = js.native

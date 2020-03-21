@@ -1,8 +1,8 @@
 package typingsSlinky.grasp
 
-import typingsSlinky.node.Anon_EncodingFlag
-import typingsSlinky.node.Anon_EncodingFlagNull
-import typingsSlinky.node.Anon_EncodingFlagString
+import typingsSlinky.node.AnonEncodingFlag
+import typingsSlinky.node.AnonFlag
+import typingsSlinky.node.AnonFlagString
 import typingsSlinky.node.Buffer
 import typingsSlinky.node.NodeJS.ErrnoException
 import typingsSlinky.node.fsMod.PathLike
@@ -21,22 +21,22 @@ trait TypeofreadFile extends js.Object {
   def apply(
     path: Double,
     options: String,
-    callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
+    callback: js.Function2[ErrnoException | Null, Buffer | (/* data */ String), Unit]
   ): Unit = js.native
   def apply(path: Double, options: Null, callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]): Unit = js.native
   def apply(
     path: Double,
-    options: Anon_EncodingFlagNull,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String | Buffer, Unit]
-  ): Unit = js.native
-  def apply(
-    path: Double,
-    options: Anon_EncodingFlagString,
+    options: AnonEncodingFlag,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
   def apply(
     path: Double,
-    options: Anon_EncodingFlag,
+    options: AnonFlagString,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String | Buffer, Unit]
+  ): Unit = js.native
+  def apply(
+    path: Double,
+    options: AnonFlag,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
   ): Unit = js.native
   /**
@@ -53,7 +53,7 @@ trait TypeofreadFile extends js.Object {
   def apply(
     path: PathLike,
     options: String,
-    callback: js.Function2[ErrnoException | Null, Buffer | String, Unit]
+    callback: js.Function2[ErrnoException | Null, Buffer | (/* data */ String), Unit]
   ): Unit = js.native
   def apply(
     path: PathLike,
@@ -70,8 +70,8 @@ trait TypeofreadFile extends js.Object {
     */
   def apply(
     path: PathLike,
-    options: Anon_EncodingFlagNull,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String | Buffer, Unit]
+    options: AnonEncodingFlag,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
   ): Unit = js.native
   /**
     * Asynchronously reads the entire contents of a file.
@@ -83,8 +83,8 @@ trait TypeofreadFile extends js.Object {
     */
   def apply(
     path: PathLike,
-    options: Anon_EncodingFlagString,
-    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String, Unit]
+    options: AnonFlagString,
+    callback: js.Function2[/* err */ ErrnoException | Null, /* data */ String | Buffer, Unit]
   ): Unit = js.native
   /**
     * Asynchronously reads the entire contents of a file.
@@ -95,14 +95,14 @@ trait TypeofreadFile extends js.Object {
     */
   def apply(
     path: PathLike,
-    options: Anon_EncodingFlag,
+    options: AnonFlag,
     callback: js.Function2[/* err */ ErrnoException | Null, /* data */ Buffer, Unit]
   ): Unit = js.native
   def __promisify__(path: Double): js.Promise[Buffer] = js.native
   def __promisify__(path: Double, options: String): js.Promise[String] = js.native
-  def __promisify__(path: Double, options: Anon_EncodingFlag): js.Promise[Buffer] = js.native
-  def __promisify__(path: Double, options: Anon_EncodingFlagNull): js.Promise[String | Buffer] = js.native
-  def __promisify__(path: Double, options: Anon_EncodingFlagString): js.Promise[String] = js.native
+  def __promisify__(path: Double, options: AnonEncodingFlag): js.Promise[String] = js.native
+  def __promisify__(path: Double, options: AnonFlag): js.Promise[Buffer] = js.native
+  def __promisify__(path: Double, options: AnonFlagString): js.Promise[String | Buffer] = js.native
   /**
     * Asynchronously reads the entire contents of a file.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -120,8 +120,6 @@ trait TypeofreadFile extends js.Object {
     */
   def __promisify__(path: PathLike): js.Promise[Buffer] = js.native
   def __promisify__(path: PathLike, options: String): js.Promise[String] = js.native
-  def __promisify__(path: PathLike, options: Anon_EncodingFlag): js.Promise[Buffer] = js.native
-  def __promisify__(path: PathLike, options: Anon_EncodingFlagNull): js.Promise[String | Buffer] = js.native
   /**
     * Asynchronously reads the entire contents of a file.
     * @param path A path to a file. If a URL is provided, it must use the `file:` protocol.
@@ -130,6 +128,8 @@ trait TypeofreadFile extends js.Object {
     * @param options Either the encoding for the result, or an object that contains the encoding and an optional flag.
     * If a flag is not provided, it defaults to `'r'`.
     */
-  def __promisify__(path: PathLike, options: Anon_EncodingFlagString): js.Promise[String] = js.native
+  def __promisify__(path: PathLike, options: AnonEncodingFlag): js.Promise[String] = js.native
+  def __promisify__(path: PathLike, options: AnonFlag): js.Promise[Buffer] = js.native
+  def __promisify__(path: PathLike, options: AnonFlagString): js.Promise[String | Buffer] = js.native
 }
 

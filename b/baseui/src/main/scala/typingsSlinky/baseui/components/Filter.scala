@@ -5,7 +5,7 @@ import slinky.core.BuildingComponent
 import slinky.core.ExternalComponentWithAttributesWithRefType
 import slinky.core.TagMod
 import slinky.web.html.`*`.tag
-import typingsSlinky.baseui.Anon_Content
+import typingsSlinky.baseui.AnonContent
 import typingsSlinky.baseui.tableMod.FilterProps
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -23,7 +23,7 @@ object Filter
     active: js.UndefOr[Boolean] = js.undefined,
     onReset: () => _ = null,
     onSelectAll: () => _ = null,
-    overrides: Anon_Content = null,
+    overrides: AnonContent = null,
     _overrides: StringDictionary[js.Any] = null
   ): BuildingComponent[tag.type, js.Object] = {
     val __obj = js.Dynamic.literal()

@@ -1,7 +1,7 @@
 
 # Scala.js typings for storybook__addon-a11y
 
-Typings are for version 5.2.8
+Typings are for version 5.3.13
 
 ## Library description:
 a11y addon for storybook
@@ -10,9 +10,9 @@ a11y addon for storybook
 | ------------------ | :-------------: |
 | Full name          | @storybook/addon-a11y |
 | Keywords           | a11y, accessibility, addon, storybook, valid, verify |
-| # releases         | 427 |
-| # dependents       | 42 |
-| # downloads        | 5610447 |
+| # releases         | 426 |
+| # dependents       | 43 |
+| # downloads        | 5910899 |
 | # stars            | 0 |
 
 ## Links

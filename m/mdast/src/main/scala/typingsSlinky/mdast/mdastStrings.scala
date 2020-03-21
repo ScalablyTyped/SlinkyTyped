@@ -1,7 +1,7 @@
 package typingsSlinky.mdast
 
-import typingsSlinky.mdast.mdastMod.ReferenceType
-import typingsSlinky.mdast.mdastMod._AlignType
+import typingsSlinky.mdast.mod.ReferenceType
+import typingsSlinky.mdast.mod._AlignType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

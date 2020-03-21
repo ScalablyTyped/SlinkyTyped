@@ -1,8 +1,8 @@
 package typingsSlinky.recompose
 
-import typingsSlinky.recompose.recomposeMod.EventHandlerOf
-import typingsSlinky.recompose.recomposeMod.ObservableConfig
-import typingsSlinky.recompose.recomposeMod.Subscribable
+import typingsSlinky.recompose.mod.EventHandlerOf
+import typingsSlinky.recompose.mod.ObservableConfig
+import typingsSlinky.recompose.mod.Subscribable
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

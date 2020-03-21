@@ -1,9 +1,9 @@
 package typingsSlinky.polished
 
-import typingsSlinky.polished.libTypesInteractionStateMod._InteractionState
-import typingsSlinky.polished.libTypesModularScaleRatioMod._ModularScaleRatio
-import typingsSlinky.polished.libTypesSideKeywordMod.SideKeyword
-import typingsSlinky.polished.libTypesTimingFunctionMod.TimingFunction
+import typingsSlinky.polished.interactionStateMod._InteractionState
+import typingsSlinky.polished.modularScaleRatioMod._ModularScaleRatio
+import typingsSlinky.polished.sideKeywordMod.SideKeyword
+import typingsSlinky.polished.timingFunctionMod.TimingFunction
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

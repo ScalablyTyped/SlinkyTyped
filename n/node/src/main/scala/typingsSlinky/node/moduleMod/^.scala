@@ -1,8 +1,8 @@
 package typingsSlinky.node.moduleMod
 
-import typingsSlinky.node.NodeJS.Require
-import typingsSlinky.node.TypeofClassModule
-import typingsSlinky.node.urlMod.URL
+import typingsSlinky.node.NodeRequire
+import typingsSlinky.node.TypeofModule
+import typingsSlinky.node.urlMod.URL_
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -18,14 +18,14 @@ class ^ protected ()
 @JSImport("module", JSImport.Namespace)
 @js.native
 object ^ extends js.Object {
-  var Module: TypeofClassModule = js.native
+  var Module: TypeofModule = js.native
   var builtinModules: js.Array[String] = js.native
-  def createRequire(path: String): Require = js.native
-  def createRequire(path: URL): Require = js.native
+  def createRequire(path: String): NodeRequire = js.native
+  def createRequire(path: URL_): NodeRequire = js.native
   /**
     * @deprecated Deprecated since: v12.2.0. Please use createRequire() instead.
     */
-  def createRequireFromPath(path: String): Require = js.native
+  def createRequireFromPath(path: String): NodeRequire = js.native
   def runMain(): Unit = js.native
   def wrap(code: String): String = js.native
 }

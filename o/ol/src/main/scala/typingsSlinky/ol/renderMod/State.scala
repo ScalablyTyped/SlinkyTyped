@@ -1,8 +1,8 @@
 package typingsSlinky.ol.renderMod
 
 import org.scalajs.dom.raw.CanvasRenderingContext2D
-import typingsSlinky.ol.featureMod.FeatureLike
-import typingsSlinky.ol.geomSimpleGeometryMod.default
+import typingsSlinky.ol.olFeatureMod.FeatureLike
+import typingsSlinky.ol.simpleGeometryMod.default
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

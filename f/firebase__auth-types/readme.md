@@ -1,7 +1,7 @@
 
 # Scala.js typings for firebase__auth-types
 
-Typings are for version 0.9.3
+Typings are for version 0.9.5
 
 ## Library description:
 @firebase/auth Types
@@ -10,9 +10,9 @@ Typings are for version 0.9.3
 | ------------------ | :-------------: |
 | Full name          | @firebase/auth-types |
 | Keywords           | - |
-| # releases         | 905 |
+| # releases         | 916 |
 | # dependents       | 8 |
-| # downloads        | 16640705 |
+| # downloads        | 16863630 |
 | # stars            | 0 |
 
 ## Links

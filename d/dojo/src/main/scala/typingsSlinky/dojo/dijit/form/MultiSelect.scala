@@ -1,7 +1,7 @@
 package typingsSlinky.dojo.dijit.form
 
 import org.scalajs.dom.raw.HTMLElement
-import typingsSlinky.dojo.Anon_Unwatch
+import typingsSlinky.dojo.AnonUnwatch
 import typingsSlinky.dojo.dojoStrings.multiple
 import typingsSlinky.dojo.dojoStrings.size
 import typingsSlinky.dojo.dojoStrings.value
@@ -18,7 +18,7 @@ import scala.scalajs.js.annotation._
   */
 @JSGlobal("dijit.form.MultiSelect")
 @js.native
-class MultiSelect () extends _FormValueWidget {
+class MultiSelect () extends FormValueWidget {
   def this(params: js.Object) = this()
   def this(params: js.Object, srcNodeRef: HTMLElement) = this()
   /**
@@ -78,7 +78,7 @@ class MultiSelect () extends _FormValueWidget {
       /* newValue */ js.UndefOr[Boolean], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
   @JSName("watch")
   def watch_size(
     property: size,
@@ -88,6 +88,6 @@ class MultiSelect () extends _FormValueWidget {
       /* newValue */ js.UndefOr[Double], 
       Unit
     ]
-  ): Anon_Unwatch = js.native
+  ): AnonUnwatch = js.native
 }
 

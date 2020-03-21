@@ -7,7 +7,7 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 object Inliner
-  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.formol.formolMod.Inliner] {
+  extends ExternalComponentNoPropsWithAttributesWithRefType[tag.type, typingsSlinky.formol.mod.Inliner] {
   @JSImport("formol", "Inliner")
   @js.native
   object componentImport extends js.Object

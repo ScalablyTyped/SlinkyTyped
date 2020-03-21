@@ -1,7 +1,7 @@
 package typingsSlinky.aframe
 
-import typingsSlinky.aframe.aframeMod.PropertyTypes
-import typingsSlinky.aframe.aframeMod.SceneEvents
+import typingsSlinky.aframe.mod.PropertyTypes
+import typingsSlinky.aframe.mod.SceneEvents
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -9,6 +9,9 @@ import scala.scalajs.js.annotation._
 object aframeStrings {
   @js.native
   sealed trait MultiPropertySchema extends js.Object
+  
+  @js.native
+  sealed trait a extends js.Object
   
   @js.native
   sealed trait `a-scene` extends js.Object
@@ -60,6 +63,12 @@ object aframeStrings {
   
   @js.native
   sealed trait forwards extends js.Object
+  
+  @js.native
+  sealed trait fullscreenchange extends js.Object
+  
+  @js.native
+  sealed trait httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml extends js.Object
   
   @js.native
   sealed trait indefinite extends js.Object
@@ -136,6 +145,8 @@ object aframeStrings {
   @scala.inline
   def MultiPropertySchema: MultiPropertySchema = "MultiPropertySchema".asInstanceOf[MultiPropertySchema]
   @scala.inline
+  def a: a = "a".asInstanceOf[a]
+  @scala.inline
   def `a-scene`: `a-scene` = "a-scene".asInstanceOf[`a-scene`]
   @scala.inline
   def alternate: alternate = "alternate".asInstanceOf[alternate]
@@ -169,6 +180,10 @@ object aframeStrings {
   def `exit-vr`: `exit-vr` = "exit-vr".asInstanceOf[`exit-vr`]
   @scala.inline
   def forwards: forwards = "forwards".asInstanceOf[forwards]
+  @scala.inline
+  def fullscreenchange: fullscreenchange = "fullscreenchange".asInstanceOf[fullscreenchange]
+  @scala.inline
+  def httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml: httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml = "http://www.w3.org/1999/xhtml".asInstanceOf[httpColonSlashSlashwwwDotw3DotorgSlash1999Slashxhtml]
   @scala.inline
   def indefinite: indefinite = "indefinite".asInstanceOf[indefinite]
   @scala.inline

@@ -5,8 +5,22 @@ import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
 
 package object typesMod {
-  type Bits = js.Array[Bit]
-  type BooleanBits = js.Array[Boolean]
-  type Byte = js.Tuple8[Bit, Bit, Bit, Bit, Bit, Bit, Bit, Bit]
-  type Nibble = js.Tuple4[Bit, Bit, Bit, Bit]
+  type Bits = js.Array[typingsSlinky.bitwise.typesMod.Bit]
+  type BooleanBits = js.Array[scala.Boolean]
+  type Byte = js.Tuple8[
+    typingsSlinky.bitwise.typesMod.Bit, 
+    typingsSlinky.bitwise.typesMod.Bit, 
+    typingsSlinky.bitwise.typesMod.Bit, 
+    typingsSlinky.bitwise.typesMod.Bit, 
+    typingsSlinky.bitwise.typesMod.Bit, 
+    typingsSlinky.bitwise.typesMod.Bit, 
+    typingsSlinky.bitwise.typesMod.Bit, 
+    typingsSlinky.bitwise.typesMod.Bit
+  ]
+  type Nibble = js.Tuple4[
+    typingsSlinky.bitwise.typesMod.Bit, 
+    typingsSlinky.bitwise.typesMod.Bit, 
+    typingsSlinky.bitwise.typesMod.Bit, 
+    typingsSlinky.bitwise.typesMod.Bit
+  ]
 }

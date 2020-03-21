@@ -1,6 +1,6 @@
 package typingsSlinky.ionic.libProjectMod
 
-import typingsSlinky.ionic.libErrorsMod.BaseException
+import typingsSlinky.ionic.errorsMod.BaseException
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._

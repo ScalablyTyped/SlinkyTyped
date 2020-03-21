@@ -1,6 +1,6 @@
 package typingsSlinky.vexflow.Vex.Flow
 
-import typingsSlinky.vexflow.Anon_Leftshift
+import typingsSlinky.vexflow.AnonLeftshift
 import typingsSlinky.vexflow.Vex.Flow.Renderer.LineEndType
 import scala.scalajs.js
 import scala.scalajs.js.`|`
@@ -28,6 +28,6 @@ class StringNumber protected () extends Modifier {
 @js.native
 object StringNumber extends js.Object {
   val CATEGORY: String = js.native
-  def format(nums: js.Array[StringNumber], state: Anon_Leftshift): Boolean = js.native
+  def format(nums: js.Array[StringNumber], state: AnonLeftshift): Boolean = js.native
 }
 

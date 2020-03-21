@@ -1,8 +1,8 @@
 package typingsSlinky.lodash.fpMod
 
-import typingsSlinky.lodash.lodashMod.List
-import typingsSlinky.lodash.lodashMod.ListOfRecursiveArraysOrValues
-import typingsSlinky.lodash.lodashMod.__
+import typingsSlinky.lodash.mod.List
+import typingsSlinky.lodash.mod.ListOfRecursiveArraysOrValues
+import typingsSlinky.lodash.mod.__
 import scala.scalajs.js
 import scala.scalajs.js.`|`
 import scala.scalajs.js.annotation._
@@ -27,14 +27,16 @@ trait LodashFlatMapDepth extends js.Object {
   def apply[T](iteratee: __, depth: Double, collection: List[T]): LodashFlatMapDepth1x6[T] = js.native
   def apply[T /* <: js.Object */](iteratee: __, depth: __, collection: T): LodashFlatMapDepth2x4[T] = js.native
   def apply[T](iteratee: __, depth: __, collection: List[T]): LodashFlatMapDepth1x4[T] = js.native
-  def apply[T, TResult](iteratee: js.Function1[/* value */ T, ListOfRecursiveArraysOrValues[TResult] | TResult]): LodashFlatMapDepth1x1[T, TResult] = js.native
   def apply[T /* <: js.Object */, TResult](
     iteratee: js.Function1[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 
       ListOfRecursiveArraysOrValues[TResult] | TResult
-    ],
+    ]
+  ): LodashFlatMapDepth2x1[T, TResult] = js.native
+  def apply[T, TResult](
+    iteratee: js.Function1[/* value */ T, ListOfRecursiveArraysOrValues[TResult] | TResult],
     depth: Double
-  ): LodashFlatMapDepth2x3[T, TResult] = js.native
+  ): js.Array[TResult] = js.native
   def apply[T /* <: js.Object */, TResult](
     iteratee: js.Function1[
       /* import warning: importer.ImportType#apply Failed type conversion: T[keyof T] */ /* value */ js.Any, 

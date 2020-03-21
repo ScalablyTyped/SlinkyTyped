@@ -8,10 +8,10 @@ import scala.scalajs.js.annotation._
   * @deprecated ​ Deprecated. Use \`{@link JQuery.Event }\`.
   */
 /* import warning: RemoveMultipleInheritance.findNewParents newComments Dropped parents 
-- typings.std.Event because Already inherited
-- typings.jquery.BaseJQueryEventObject because Already inherited
-- typings.jquery.JQueryInputEventObject because Already inherited
-- typings.jquery.JQueryKeyEventObject because var conflicts: altKey, cancelBubble, ctrlKey, currentTarget, data, delegateTarget, metaKey, namespace, originalEvent, pageX, pageY, relatedTarget, result, returnValue, shiftKey, target, which. Inlined char, charCode, key, keyCode */ @js.native
+- typingsSlinky.std.Event_ because Already inherited
+- typingsSlinky.jquery.BaseJQueryEventObject because Already inherited
+- typingsSlinky.jquery.JQueryInputEventObject because Already inherited
+- typingsSlinky.jquery.JQueryKeyEventObject because var conflicts: altKey, cancelBubble, ctrlKey, currentTarget, data, delegateTarget, metaKey, namespace, originalEvent, pageX, pageY, relatedTarget, result, returnValue, shiftKey, target, which. Inlined char, charCode, key, keyCode */ @js.native
 trait JQueryEventObject extends JQueryMouseEventObject {
   /** @deprecated */
   var char: String = js.native
